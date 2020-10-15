@@ -1,0 +1,677 @@
+	-Player Stats-
+-HEALTH: 100
+-REGENERATION: 1/4s
+-ARMOUR: 0
+-STAMINA: 100
+-SPEED: 4(Walk), 6(Sprint)
+-MONEY: $250
+	-Player Inventory-
+-Primary - Standard Pistol(Normal) Nothing(Other)
+-SideArm - Nothing
+-Melee - Standard Melee
+-Support - Nothing
+-Medical - Medicine(Normal) Nothing(Other)
+-Vial - Nothing
+
+	-Player Reviving & Respawning-
+When players HEALTH reaches 0 they are dead. When all players are dead the mission is over.
+Players can respawn if:
+-An alive teammate revives them. Reviving Time: 5s. Revive Decay: 1s.
+-3 minutes have passed, alive players can purchase a Player Respawn for $3000 at the shop. Doing so increases time for next Player Respawn to become available by 1 minute.
+Respawned Players Spawn with:
+-Outbreak: 75% Health, 70% Money, 75% Ammo, Standard Pistol, Standard Melee
+-Epidemic: 50% Health, 50% Money, 75% Ammo, Standard Pistol, Standard Melee 
+-Pandemic: 50% Health, 50% Money, 50% Ammo, Standard Pistol, Standard Melee 
+-Apocalypse: 25% Health, 30% Money, 50% Ammo, Standard Melee
+
+	-Controls-
+		Keyboard	Controller
+-Left		Left		Left-Leftstick
+-Right		Right		Right-Leftstick
+-Crouch		Down		Down-Leftstick
+-Jump		Spacebar	A
+-Interact	Up		Up-Leftstick
+-Shoot		W		RT
+-Grenade	G		B
+-NextWeapon	E		RB
+-PrevWeapon	Q		LB
+-NextGear	X		Right-Dpad
+-PrevGear	Z		Left-Dpad
+Give/Revive	F		Y
+-Reload		R		X
+-Pause		Esc		Start
+
+	-Main Menu-
+-Play
+	GameMode
+	Map
+	Players
+	Difficulty
+	WinCondition
+-Extras
+	Statistics
+	Records
+	Zombology
+-Options
+	MasterVolume
+	SoundVolume
+	MusicVolume
+	Resolution
+	FullScreen
+	GoreLevel
+-Quit
+	Yes
+	No
+
+	-GameModes-
+-Skirmish
+	Gamemode starts with 1 zombie (+1 per player), killing zombies increases the max amount of zombies by 1.
+	Score/WinCondition: Kills
+-Horde
+	After every 4 seconds (-1 second per player) a zombie appears.
+	Score/WinCondition: Time Survived
+-Wave
+	Gamemode is wave based. First wave starts with 4 zombies (+1 per player) Wave size increases by 50% (rounded down) for each completed wave. Cooldown between waves 30 seconds.
+	Score/WinCondition: Waves Survived
+
+	-Difficulty-
+-Outbreak
+	-Recommended for New and Casual Players
+	-Enemy stats are normal
+	-Money gain is normal
+	-Player REGENERATION is normal
+	-Starting enemies: Limper
+-Epidemic
+	-Recommended for Experienced Players
+	-Enemy have more health and deal more damage
+	-Money gain is -1$
+	-Player REGENERATION increased from 4s to 5s
+	-Starting enemies: Limper
+-Pandemic
+	-Recommended for Players wanting a Challenge
+	-Enemy have even more health, deal even more damage and move faster
+	-Money gain is -2$
+	-Player REGENERATION increased from 4s to 6s
+	-Starting enemies: Limper and Rabid
+-Apocalypse
+	-Recommended for Players who have a Death Wish
+	-Enemy have a lot more health, deal a lot more damage and move faster
+	-Money gain is -3$
+	-Player REGENERATION increased from 4s to 7s
+	-Starting enemies: Limper, Rabid and Lard
+
+	-Weapon Statistics-
+-Tier 1-
+
+-Standard Melee
+	Type: Melee
+	Damage: 3
+	Ammo: 0/0 (0)
+	Firerate: 0.5
+	Accuracy: 1
+	Reload: 0s
+	Price: Free
+
+-Standard Pistol
+	Type: SideArm
+	Damage: 1
+	Ammo: 12/228 (240)
+	Firerate: 0.1
+	Accuracy: 0.9
+	Reload: 1.5s
+	Price: $250
+
+-Standard Rifle
+	Type: Primary
+	Damage: 1
+	Ammo: 30/270 (300)
+	Firerate: 0.1
+	Accuracy: 0.8
+	Reload: 2s
+	Price: $500
+
+-Standard Shotgun
+	Type: Primary
+	Damage: 1 x 5 (5)
+	Ammo: 8/72 (80)
+	Firerate: 1
+	Accuracy: 0.5
+	Reload: 1s per shot missing
+	Price: $750
+
+-Tier 2-
+
+-Advanced Melee
+	Type: Melee
+	Damage: 6
+	Ammo: 0/0 (0)
+	Firerate: 0.5
+	Accuracy: 1
+	Reload: 0s
+	Price: $1000
+
+-Advanced Pistol
+	Type: SideArm
+	Damage: 4
+	Ammo: 8/104 (112)
+	Firerate: 0.15
+	Accuracy :0.8
+	Reload: 2s
+	Price: $1250
+
+-Advanced Rifle
+	Type: Primary
+	Damage: 2
+	Ammo: 30/270 (300)
+	Firerate: 0.15
+	Accuracy: 0.75
+	Reload: 2.5s
+	Price: $1500
+
+-Advanced Shotgun
+	Type: Primary
+	Damage: 2 x 6 (12)
+	Ammo: 2/58 (60)
+	Firerate: 0.1
+	Accuracy: 0.3
+	Reload: 3s
+	Price: $1750
+
+-Tier 3-
+
+-Super Melee
+	Type: Melee
+	Damage: 9
+	Ammo: 0/0 (0)
+	Firerate: 0.5
+	Accuracy: 1
+	Reload: 0s
+	Price: $2000
+
+-Super Pistol
+	Type: SideArm
+	Damage: 8
+	Ammo: 6/84 (90)
+	Firerate: 0.3
+	Accuracy :0.8
+	Reload: 1s per shot missing
+	Price: $1250
+
+-Super Rifle
+	Type: Primary
+	Damage: 3
+	Ammo: 20/270 (300)
+	Firerate: 0.075
+	Accuracy: 0.8
+	Reload: 2.5s
+	Price: $2500
+
+-Super Shotgun
+	Type: Primary
+	Damage: 1 x 7 (7)
+	Ammo: 8/72 (80)
+	Firerate: 0.1
+	Accuracy: 0.5
+	Reload: 1s per shot missing
+	Price: $2750
+
+-Tier 4-
+
+-Flame Thrower
+	Type: Primary
+	Damage: 1
+	Ammo: 50/350 (400) 
+	Firerate: 0.1
+	Accuracy: 0.75
+	Reload: 3s
+	Price: $ 2000
+
+-Rocket Launcher
+	Type: Primary
+	Damage: Impact-30 Explosion-20
+	Ammo: 1/19 (20)
+	Firerate: 1
+	Accuracy: 1
+	Reload: 4s
+	Price: $2250
+
+-Tesla Rifle
+	Type: Primary
+	Damage: Impact-2 Chain-1
+	Ammo: 50/250 (300)
+	Firerate: 0.1
+	Accuracy: 1
+	Reload: 3s
+	Price: $2500
+
+-Bio Launcher
+	Type: Primary
+	Damage: Impact-5 Explosion-5 Explosion Applies Acid (2 Damage for 6 seconds)
+	Ammo: 5/35 (40)
+	Firerate: 0.2
+	Accuracy: 1
+	Reload: 3s
+	Price: $2750
+
+-Tier 5-
+
+-Purple Gun
+	Type: SideArm
+	Damage: 10 (-1 per pierce)
+	Ammo: 1/35 (40)
+	Firerate: 1
+	Accuracy: 1
+	Reload: 3s
+	Price: $3500
+
+-B.H. Darker
+	Type: Primary
+	Damage: Impact-5 (Black Hole damage = slain targets Max Health)
+	Ammo: 5/10 (15)
+	Firerate: 0.5
+	Accuracy: 1
+	Reload: 5s
+	Price: $5000
+
+	-Explosives-
+-Grenades
+	Damage: Impact-1 Explosion-10
+	Ammo: 5
+	FuseTime: 3s
+	Price: $750
+
+-Incendiary Bomb
+	Damage: Impact-5 Ground Fire-1
+	Ammo: 5
+	FuseTime: 0s
+	Price: $750
+
+-Mines
+	Damage: Impact-0 Explosion-20
+	Ammo: 5
+	FuseTime: 1s
+	Price: $750
+
+	-Buffs-
+-Regeneration Buff
+	-Reduce REGENERATION rate by 50%.
+	Price: $1500
+
+-Health Buff
+	-Increases Max HEALTH by 50%.
+	Price: $1500
+
+-Stamina Buff
+	-Increase Max STAMINA by 100%.
+	Price: $1500
+
+-Reload Buff
+	-Reduce Reload speeds greater than 1 seconds by 1 second.
+	Price: $1500
+
+-Agility Buff
+	-Increase Jog Speed by 1.
+	-Increase Sprint Speed by 2.
+	Price: $1500
+
+-Damage Buff
+	-Increased Bullet Damage by 1. (Pistol, Rifle)
+	-Increased Pellet Amount by 1. (Shotgun)
+	-Increase Melee Damage by 2. (Melee)
+	-Increase Explosive Damage by 5. (RocketLauncher,BioLauncher,Explosives)
+	Price: $1500
+
+-Critical Buff
+	-Gain 5% chance to deal double damage.
+	Price: $1500
+
+-Medic Buff
+	-Increase REGENERATION Health by 1 for teammates within 10 meters.
+	-50% Chance not to consume healing items.
+	Price: $1500
+
+-Scout Buff
+	-Gain the ability to see enemies Health.
+	-Disable enemies ability to cloak.
+	-Damage dealt to enemies below 50% Health increased by 1.
+	Price: $1500
+
+-Demo Buff
+	-Increasse maximum explosives by 2.
+	-35% chance to not consume explosives.
+	If hit with a lethal attack, explode and survive with 1 HEALTH. (90 second cooldown.)
+	Price: $1500
+
+	-Support Items-
+-Armour
+	-Grants 100 Armour Points
+	-Armour takes full damage, Health takes 50% damage dealt.
+	Price: $350
+
+-Ammo Crate
+	-Drop an Ammo Crate on the ground to supply you and your teammates with ammo.
+	Uses: 4
+	Price: $600
+
+-Heal Generator
+	-Drop on ground to provide a small area of effect heal for you and teammates.
+	Heals: 9/s
+	Duration: 6s
+	Price: 900
+
+Barricade
+	-Blocks oncoming enemies.
+	Health: 250
+	Price: $500
+
+Advanced Barricade
+	-Blocks and damages oncoming enemies.
+	Health: 500
+	Damage: 3
+	Price: $750
+
+Turret
+	-Blocks and shoots oncoming enemies.
+	Health: 400
+	Damage: 1
+	Price: $1500
+
+	-Medical Supplies-
+Medicine
+	Heals: 35
+	Uses: 1
+	UseTime: 1s
+	Cures: Bleed and Poison
+	Price: $250
+
+Med Syringe
+	Heals: 50
+	Uses: 2
+	UseTime: 2s
+	Cures: Bleed, Acid and Poison
+	Price: $500
+
+Med Kit
+	Heals: 80
+	Uses: 2
+	UseTime: 3s
+	Cures: Bleed and Injection
+	Price: $750
+
+Player Respawn
+	-Respawn a Player at the shop. Becomes available after 3 minutes (+1 minute per purchase) after a player dies.
+	Price: $3000
+
+-Shop Item Limit Per-Player
+	Armour: 3
+	AmmoCrate: 3
+	HealGenerator: 2
+	Barricade: 4
+	AdvancedBarricade: 3
+	Turrets: 2
+	Medicine: 4
+	MedSyringe: 3
+	MedKit: 2
+	PlayerRespawn: 0(+1per dead player)
+
+	-Vials-
+Adrenaline Vile
+	-Increase movement speed by 1. Increase interaction speed by 50%.
+	Duration: 6s
+	Cooldown: 60s
+	Price: $1250
+
+Strength Vile
+	-Increase melee damage by 100%%.
+	Duration: 8s
+	Cooldown: 75s
+	Price: $1250
+
+Mimicry Vile
+	-Enemies will not target or attack you.
+	Duration: 5s
+	Cooldown: 90s
+	Price: $1250
+
+Survivalist Vile
+	-HEALTH will not drop below 1.
+	Duration: 6s
+	Cooldown: 90s
+	Price: $1250
+
+Rapid Vile
+	-Double attack speed and firerate.
+	Duration: 5s
+	Cooldown: 120s
+	Price: $1250
+
+	-Enemy Statistics-
+
+-Common Zombies-
+Limper
+	Health: 4
+	Damage: 2
+	Speed: 2
+	Trait: Nothing
+
+Rabid
+	Health: 3
+	Damage: 3
+	Speed: 5
+	Trait: Nothing
+
+Lard
+	Health: 8
+	Damage: Melee-6 AcidImpact-0
+	Speed: 1
+	Trait: 50% chance to drops acidic blood when taking damage.
+
+-Uncommon Zombies-
+Grapple
+	Health: 5
+	Damage: 1
+	Speed: 4
+	Trait: Prevents players from moving or jumping.
+
+Ghost
+	Health: 4
+	Damage: 4
+	Speed: 3
+	Trait: Becomes invisible whne not attacking.
+
+Burster
+	Health: 6
+	Damage: Melee-8 Spikes-4
+	Speed: Walk-2 Sprint-4
+	Trait: At 50% Health, fires spikes all around all around it. Begins sprinting
+
+-Advanced Zombies-
+Twitcher
+	Health: 10
+	Damage: 2
+	Speed: 4
+	Trait: Leaps on players pinning them. Player must press left and right to break free.
+
+Spewer
+	Health: 16
+	Damage: Melee-8 AcidBallImpact-10 AcidBallExplosion-5
+	Speed: 1
+	Trait: When within players line of sight will attempt to shoot a Acid Ball at their feet.
+
+Injector
+	Health: 14
+	Damage: Melee-4 Inject-25
+	Speed: 4
+	Trait: Attempts to grab the player and inject them with poison.
+
+Blade
+	Health: 12
+	Damage: 10
+	Speed: 5
+	Trait: Attacks dealt to players apply bleeding and deals double damage to structures.
+
+-Super Zombies-
+Creeper
+	Health: 10
+	Damage: 16
+	Speed: 4
+	Trait: Spawn in groups of 10.
+
+Ripper
+	Health: 100
+	Damage: Melee-20 Gutter-1
+	Speed: 4
+	Trait: Nothing
+
+-Enemy Spawning-
+	New enemy types spawning is dependant on how many kills the players get. A new enemy will spawn every 20 kills.
+	Every 100 kills either a group of 10 Creepers or 1 Ripper will spawn.
+	After every 300 kills +1 Super Zombies will begin to spawn.
+
+-Enemy Strength Increases-
+	Every 500 kills a certain group of zombies will become stronger. Increasing their max health and damage by 50%.
+	This is signaled by a warming messaging saying: "The Enemy Grows Stronger", and the particular group of strengthened enemies eyes beginning to glow.
+	500 Kills - Common Zombies become strengthened.
+	1000 Kills - Uncommon Zombies become strengthened.
+	1500 Kills - Advanced Zombies become strengthened.
+	2000 Kills - Super Zombies become strengthened.
+
+	-Enemy Scaling-
+DamageMod 		Outbreak	Epidemic	Pandemic	Apocalypse
+-Limper   		2	  	+3	 	 +7		+12
+-Rabid    		3	  	+4	  	+9		+15
+-Lard     		6		+4		+9		+15
+-LardAcid 		0	 	+1	 	+3  	    	+6
+-Grapple  		1		+2		+5		+9
+-Ghost 			4		+5		+11		+18
+-Burster  		8		+5		+11		+18
+-BursterSpike		4		+3		+7		+12
+-Twitcher 		2		+1		+3		+6
+-Spewer   		8		+5		+11		+18
+-SpewerAcidBall 	10		+6		+13		+21
+-SpewerExplosion	5		+3		+7		+12
+-Injector 		4		+5		+11		+18
+-Inject			25		+0		+0		+0
+-Blade	  		10		+6		+13		+21
+-Creeper  		16		+9		+19		+30
+-Ripper	  		20		+11		+23		+36
+-RipperGutter		1		+1		+2		+3
+
+DamageMelee
+-Limper   2/5/9/14
+-Rabid	  3/7/12/18
+-Lard	  6/10/15/21
+-Grapple  1/3/6/10
+-Ghost	  4/9/15/22
+-Burster  8/13/19/26
+-Twitcher 2/3/5/8
+-Injector 4/9/15/22
+-Blade	  10/16/23/31
+-Spewer   8/13/19/26
+-Creeper  16/25/35/46
+-Ripper	  20/31/43/56
+
+DamageAbility
+-LardAcid        0/1/3/6
+-BursterSpike    4/7/11/16
+-Inject          25/25/25/25
+-SpewerAcidBall  10/16/23/31
+-SpewerExplosion 5/8/12/17
+-RipperGutter	 1/2/3/4
+
+HealthMod	Outbreak	Epidemic	Pandemic	Apocalypse
+-Limper		+0		+1	   	+2		+4
+-Rabid		+0	    	+1	   	+2		+4
+-Lard		+0	 	+2   		+4		+8
+-Grapple	+0	  	+1	   	+2		+4
+-Ghost		+0	 	+1	   	+2		+4
+-Burster	+0	  	+2     		+4		+8
+-Twitcher	+0		+2		+4		+8
+-Injector	+0		+3		+6		+12
+-Spewer		+0		+3		+6		+12
+-Blade		+0		+3		+6		+12
+-Creeper	+0		+2		+4		+8
+-Ripper		+0		+20		+40		+80
+
+PlayerMod	One		Two		Three		Four	x1.5
+-Creeper
+Numbers		+0   		+5		+10		+15	Outbreak
+		+0   		+5		+10		+15	Epidemic
+		+0   		+5		+10		+15	Pandemic
+		+0   		+5		+10		+15	Apocalypse
+PlayerMod	One		Two		Three		Four	x1.5
+-Ripper		+0   		+50		+100		+150	Outbreak
+Health	  	+0	   	+60   		+120		+180	Epidemic
+	 	+0	  	+70  		+140		+210	Pandemic
+	 	+0	   	+90    		+180		+270	Apocalypse
+
+Health
+-Limper		4/5/6/8
+-Rabid		3/4/5/7
+-Lard		8/10/12/16
+-Grapple	5/6/7/9
+-Ghost		4/5/6/8
+-Burster	6/8/10/14
+-Twitcher	10/12/14/18
+-Spewer		16/19/22/28
+-Injector	14/17/20/26
+-Blade		12/15/18/24
+-Creeper	10/12/14/18
+-Ripper		100/120/140/180
+
+-Creeper	Outbreak	Epidemic	Pandemic	Apocalypse
+One		10 x 10	(100)	12 x 10 (120)	14 x 10	(140)	18 x 10 (180)
+Two		10 x 15	(150)	12 x 15 (180)	14 x 15	(210)	18 x 15 (270)
+Three		10 x 20	(200)	12 x 20 (240)	14 x 20	(280)	18 x 20 (360)
+Four		10 x 25	(250)	12 x 25 (300)	14 x 25	(350)	18 x 25 (450)
+
+-Ripper		Outbreak	Epidemic	Pandemic	Apocalypse  
+One		100		120		140		180
+Two		150		180		210		270
+Three		200		240		280		360
+Four		250		300		350		450
+
+	-Debuffs-
+-Acid
+	Proc. chance on Lard Acid Blood: 50%.
+	Proc. chance on Spewer Acid Ball: 50%.
+	Proc. chance on Acid Ball Explosion: 25%.
+	Duration last for 12 seconds and deals 1 point of damage to the player per second.
+	Can be applied to all enemies except Lards and Spewers. Duration is reduced by 50%.
+	Can be cured by Medicine, Medical Syringe and Med Kits.
+
+-Bleed
+	Bleed is inflicted upon the player if they are hit by an attack from Blades.
+	Duration last for 10 seconds and deals 2 points of damage per two seconds.
+	While bleed is active players have -1 speed in Outbreak and Epidemic, and -2 speed on Pandemic and Apocalypse.
+	Cannot be applied to the player if they have armour.
+	Can be cured by Medicine and Med Kits.
+-Poison
+	Poison is inflicted upon the player if they are Injected by the Injector.
+	Duration lasts for 120s-Outbreak, 90s-Epidemic, 75s-Pandemic and 60s-Apocalypse.
+	If the poison timer runs out the player instantly dies.
+	Can be cured by Medicine, Medical Syringe and Med Kits.
+
+	-Money Distribution-
+	Dealing damage to enemies grants 5$ on Outbreak, 4$ on Epidemic, 3$ on Pandemic  and 2$ on Apocalypse.
+	Players can only carry a maximum of $5000.
+TotalCash
+-Limper		20/20/18/16
+-Rabid		15/16/15/14
+-Lard		40/40/36/32
+-Grapple	25/24/21/18
+-Ghost		20/20/18/16
+-Burster	30/32/30/28
+-Twitcher	50/48/42/36
+-Spewer		80/76/66/56
+-Injector	70/68/60/52
+-Blade		60/60/54/48
+-Creeper	50/48/42/36	
+-Ripper		500/480/420/360
+
+	-On Screen Kill Indicators-
+<Player> killed <Advanced Zombie> (x2+)		HIUFIGYO killed Spewer    HIUFIGYO killed Twitcher x2
+<Player> killed <Super Zombie> (x2+)		HIUFIGYO killed Ripper    HIUFIGYO killed Creeper x4
+<Enemy> killed <Player>				Lard killed HIUFIGYO
+<Player> healed <Player>			Odlaw0 healed HIUFIGYO
+<Player> gave an item to <Player>		HIUFIGYO gave an item to Odlaw0
