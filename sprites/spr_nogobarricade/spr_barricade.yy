@@ -64,7 +64,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_barricade","path":"sprites/spr_barricade/spr_barricade.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_barricade",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },
