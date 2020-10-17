@@ -21,6 +21,4 @@ friction = 0.75;
 
 isSprinting = false;
 
-player_inputID = 0
-
-if(Input_GetButton(player_inputID, ))
+player_inputID = 0;
