@@ -1,5 +1,5 @@
-var xThrow = keyboard_check(vk_right) - keyboard_check((vk_left));
-var yThrow = keyboard_check(vk_up);
+var xThrow = InputGetAxis(player_inputID, Axis.Horizontal);
+var yThrow = InputGetAxis(player_inputID, Axis.Verticle);
 var _inst;
 
 xSpeed += xThrow * acceleration;

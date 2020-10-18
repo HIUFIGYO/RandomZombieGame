@@ -21,4 +21,4 @@ friction = 0.75;
 
 isSprinting = false;
 
-player_inputID = 0;
+player_inputID = Controller.Gamepad1;
