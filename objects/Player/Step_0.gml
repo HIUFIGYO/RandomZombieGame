@@ -1,41 +1,69 @@
 var xThrow = InputGetAxis(player_inputID, Axis.Horizontal);
 var yThrow = InputGetAxis(player_inputID, Axis.Verticle);
-var _inst;
 
+//Calculate velocity
+var maxSpd = maxSpeed;
+if(InputGetButton(player_inputID, Button.Sprint))
+{
+	maxSpd = sprintSpeed;
+}
 xSpeed += xThrow * acceleration;
-xSpeed = clamp(xSpeed, -maxSpeed, maxSpeed);
-if(xThrow == 0)
-{
-	xSpeed = lerp(0, xSpeed, friction);
-}
-
-_inst = instance_place(x + xSpeed , y, BlockParent);
-if(_inst)
-{
-	if(xSpeed > 0)
-		x = _inst.bbox_left - sprite_get_bbox_left(sprite_index);
-	else
-		x = _inst.bbox_right + sprite_get_bbox_left(sprite_index);
-	xSpeed = 0;
-}
-else
-	x += xSpeed * DeltaTime();
+xSpeed = clamp(xSpeed, -maxSpd, maxSpd);
 
 ySpeed += grav;
 ySpeed = min(ySpeed, maxFallSpeed);
 
-if(yThrow != 0 and instance_place(x, y+ySpeed, BlockParent))
+//Friction/flip
+if(xThrow == 0)
+{
+	xSpeed = lerp(0, xSpeed, friction);
+}
+else
+{
+	image_xscale = sign(xThrow);
+}
+
+//Jump
+if(yThrow < 0 and place_meeting(x, y+1, BlockParent))
 {
 	ySpeed = -jumpSpeed;
 }
 
+//Collision
+if(place_meeting(x+xSpeed, y, BlockParent))
+{
+	while(!place_meeting(x+sign(xSpeed), y, BlockParent))
+	{
+		x += sign(xSpeed);
+	}
+	xSpeed = 0;
+}
+x += xSpeed * DeltaTime();
+
+if(place_meeting(x, y+ySpeed, BlockParent))
+{
+	while(!place_meeting(x, y+sign(ySpeed), BlockParent))
+	{
+		y += sign(ySpeed);
+	}
+	ySpeed = 0;
+}
 y += ySpeed * DeltaTime();
 
-if(instance_place(x, y, BlockParent))
+//shooting
+if(shootTimer > 0)
 {
-	y -= ySpeed;
-	if(instance_place(x, y+1, BlockParent))
-		ySpeed = 0;
-	else
-		ySpeed = 1;
+	shootTimer -= DeltaTime();
+	if(shootTimer <= 0)
+	{
+		canShoot = true;
+	}
+}
+
+if(canShoot and InputGetButton(player_inputID, Button.Shoot))
+{
+	canShoot = false;
+	shootTimer = shootTimerMax;
+	var inst = instance_create_layer(x, y - 64, "Instances", Bullet);
+	inst.xSpeed = image_xscale;
 }

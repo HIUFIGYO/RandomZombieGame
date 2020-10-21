@@ -19,6 +19,8 @@ acceleration = 0.5;
 grav = 0.981;
 friction = 0.75;
 
-isSprinting = false;
-
+//control
+canShoot = true;
+shootTimer = 0;
+shootTimerMax = 30;
 player_inputID = Controller.Gamepad1;

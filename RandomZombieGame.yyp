@@ -11,6 +11,7 @@
     {"id":{"name":"spr_playertorso_4","path":"sprites/spr_playertorso_4/spr_playertorso_4.yy",},"order":7,},
     {"id":{"name":"spr_playerrunning","path":"sprites/spr_playerrunning/spr_playerrunning.yy",},"order":8,},
     {"id":{"name":"spr_playerlegs","path":"sprites/spr_playerlegs/spr_playerlegs.yy",},"order":9,},
+    {"id":{"name":"Bullet","path":"objects/Bullet/Bullet.yy",},"order":7,},
     {"id":{"name":"spr_playerheads","path":"sprites/spr_playerheads/spr_playerheads.yy",},"order":10,},
     {"id":{"name":"spr_playerarms","path":"sprites/spr_playerarms/spr_playerarms.yy",},"order":11,},
     {"id":{"name":"spr_playermelee1","path":"sprites/spr_playermelee1/spr_playermelee1.yy",},"order":12,},
