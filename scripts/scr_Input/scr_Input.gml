@@ -2,7 +2,7 @@ enum Button
 {
 	Left,
 	Right,
-	Up,
+	Jump,
 	Crouch,
 	Interact,
 	Shoot,
@@ -21,7 +21,7 @@ enum Button
 enum Axis
 {
 	Horizontal = gp_axislh,
-	Verticle = gp_axislv
+	Vertical = gp_axislv
 }
 
 enum Controller
@@ -66,7 +66,7 @@ function InputGetAxis(_id, _axis)
 	{
 		var a, b;
 		a = Button.Crouch;
-		b = Button.Up;
+		b = Button.Jump;
 		if(_axis == Axis.Horizontal)
 		{
 			a = Button.Right;

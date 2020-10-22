@@ -145,7 +145,7 @@ Give/Revive	F		Y
 	Type: Melee
 	Damage: 6
 	Ammo: 0/0 (0)
-	Firerate: 0.5
+	Firerate: 0.55
 	Accuracy: 1
 	Reload: 0s
 	Price: $1000
@@ -183,7 +183,7 @@ Give/Revive	F		Y
 	Type: Melee
 	Damage: 9
 	Ammo: 0/0 (0)
-	Firerate: 0.5
+	Firerate: 0.6
 	Accuracy: 1
 	Reload: 0s
 	Price: $2000
@@ -195,7 +195,7 @@ Give/Revive	F		Y
 	Firerate: 0.3
 	Accuracy :0.8
 	Reload: 1s per shot missing
-	Price: $1250
+	Price: $2250
 
 -Super Rifle
 	Type: Primary
@@ -219,21 +219,21 @@ Give/Revive	F		Y
 
 -Flame Thrower
 	Type: Primary
-	Damage: 1
+	Damage: 1 +ignite
 	Ammo: 50/350 (400) 
 	Firerate: 0.1
 	Accuracy: 0.75
 	Reload: 3s
-	Price: $ 2000
+	Price: $ 3000
 
 -Rocket Launcher
 	Type: Primary
-	Damage: Impact-30 Explosion-20
+	Damage: Impact-20 Explosion-10
 	Ammo: 1/19 (20)
 	Firerate: 1
 	Accuracy: 1
 	Reload: 4s
-	Price: $2250
+	Price: $3250
 
 -Tesla Rifle
 	Type: Primary
@@ -242,18 +242,27 @@ Give/Revive	F		Y
 	Firerate: 0.1
 	Accuracy: 1
 	Reload: 3s
-	Price: $2500
+	Price: $3500
 
 -Bio Launcher
 	Type: Primary
-	Damage: Impact-5 Explosion-5 Explosion Applies Acid (2 Damage for 6 seconds)
+	Damage: Impact-15 Explosion-5 Explosion Applies Acid (2 Damage for 6 seconds)
 	Ammo: 5/35 (40)
 	Firerate: 0.2
 	Accuracy: 1
 	Reload: 3s
-	Price: $2750
+	Price: $3750
 
 -Tier 5-
+
+-Heated Blade
+	Type: Melee
+	Damage: 12 +ignite
+	Ammo: 0/0 (0)
+	Firerate: 0.65
+	Accuracy: 1
+	Reload: 0s
+	Price: $4000
 
 -Purple Gun
 	Type: SideArm
@@ -262,7 +271,7 @@ Give/Revive	F		Y
 	Firerate: 1
 	Accuracy: 1
 	Reload: 3s
-	Price: $3500
+	Price: $4500
 
 -B.H. Darker
 	Type: Primary

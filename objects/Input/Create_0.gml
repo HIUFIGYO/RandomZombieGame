@@ -11,9 +11,9 @@ buttonThreshold = 0.1;
 
 keyMap[Button.Left] = vk_left;
 keyMap[Button.Right] = vk_right;
-keyMap[Button.Up] = vk_up;
+keyMap[Button.Jump] = vk_up;
 keyMap[Button.Crouch] = vk_down;
-keyMap[Button.Interact] = ord("E");
+keyMap[Button.Interact] = vk_up;;
 keyMap[Button.Shoot] = vk_space;
 keyMap[Button.Grenade] = ord("Q");
 keyMap[Button.NextWeapon] = ord("D");
@@ -27,9 +27,9 @@ keyMap[Button.Pause] = vk_enter;
 
 gamepadMap[Button.Left] = gp_axislh;
 gamepadMap[Button.Right] = gp_axislh;
-gamepadMap[Button.Up] = gp_axislv;
+gamepadMap[Button.Jump] = gp_face1;
 gamepadMap[Button.Crouch] = gp_axislv;
-gamepadMap[Button.Interact] = gp_face1;
+gamepadMap[Button.Interact] = gp_axislv;
 gamepadMap[Button.Shoot] = gp_shoulderr;
 gamepadMap[Button.Grenade] = gp_shoulderl;
 gamepadMap[Button.NextWeapon] = gp_padr;

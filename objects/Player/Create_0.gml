@@ -7,7 +7,6 @@ maxHp = hp;
 maxArmour = armour;
 maxStamina = stamina;
 
-
 //movement
 xSpeed = 0;
 ySpeed = 0;
@@ -24,3 +23,22 @@ canShoot = true;
 shootTimer = 0;
 shootTimerMax = 30;
 player_inputID = Controller.Gamepad1;
+
+//sprites
+idle = spr_player;
+head = spr_playerheads;
+torso = spr_playertorso;
+arms = spr_playerarms;
+legs = spr_playerlegs;
+jumping = spr_playerjumping;
+
+head_color = c_white;
+arm_color = c_white;
+torso_color = c_green;
+leg_color = c_blue;
+
+isWalking = false;
+isJumping = false;
+
+torso_index = 0;
+walking_index = 0;
