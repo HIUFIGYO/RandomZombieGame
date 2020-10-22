@@ -3,7 +3,7 @@ if(InputGetButtonDown(player_inputID, Button.Interact))
 	instance_destroy(other);
 	var inst = noone;
 	var weapID = noone;
-	var type = DataBase.weapon[# WeapStat.Type, other.weapon_id];
+	var type = DataWeapon(other.weapon_id, WeapStat.Type);
 	if(type == WeapType.Primary)
 	{
 		if(weapon[0] != noone)

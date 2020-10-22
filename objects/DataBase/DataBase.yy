@@ -23,8 +23,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "PersistentObjects",
+    "path": "folders/Objects/PersistentObjects.yy",
   },
   "resourceVersion": "1.0",
   "name": "DataBase",

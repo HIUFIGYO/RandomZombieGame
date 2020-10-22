@@ -57,7 +57,7 @@ y += ySpeed * DeltaTime();
 //shooting
 if(shootTimer > 0)
 {
-	shootTimer -= DeltaTime();
+	shootTimer -= DeltaTime() / game_get_speed(gamespeed_fps);
 	if(shootTimer <= 0)
 	{
 		canShoot = true;
@@ -70,12 +70,12 @@ if(canShoot)
 	{
 		currentWeapon = !currentWeapon;
 	}
+	
 	if(InputGetButton(player_inputID, Button.Shoot))
 	{
 		canShoot = false;
-		shootTimer = shootTimerMax;
-		var inst = instance_create_layer(x, y - 64, "Instances", Bullet);
-		inst.xSpeed = image_xscale;
+		shootTimer = DataWeapon(weapon[currentWeapon], WeapStat.FireRate);
+		CreateBullet(x, y, weapon[currentWeapon], 1, image_xscale);
 	}	
 }
 
