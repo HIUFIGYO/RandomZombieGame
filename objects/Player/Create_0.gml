@@ -26,8 +26,8 @@ player_inputID = Controller.Gamepad1;
 
 //weapons
 currentWeapon = 0;
-weapon[0] = noone;
-weapon[1] = noone;
+weapon[0] = Weapon.Rifle;
+weapon[1] = Weapon.Pistol;
 meleeWeapon = Weapon.Knife;
 explosives = noone;
 

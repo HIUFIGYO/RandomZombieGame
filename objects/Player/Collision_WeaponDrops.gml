@@ -3,13 +3,13 @@ if(InputGetButtonDown(player_inputID, Button.Interact))
 	instance_destroy(other);
 	var inst = noone;
 	var weapID = noone;
-	var type = DataBase.weapon[# other.weapon_id, WeapStat.Type];
+	var type = DataBase.weapon[# WeapStat.Type, other.weapon_id];
 	if(type == WeapType.Primary)
 	{
 		if(weapon[0] != noone)
 			{
 				weapID = weapon[0];
-				inst = instance_create_layer(x, y, "Instances", WeaponDrops);
+				inst = instance_create_layer(x, y -100, "Instances", WeaponDrops);
 			}
 		weapon[0] = other.weapon_id;
 	}
@@ -18,7 +18,7 @@ if(InputGetButtonDown(player_inputID, Button.Interact))
 		if(weapon[1] != noone)
 		{
 			weapID = weapon[1];
-			inst = instance_create_layer(x, y, "Instances", WeaponDrops);
+			inst = instance_create_layer(x, y-100, "Instances", WeaponDrops);
 		}
 		weapon[1] = other.weapon_id;
 	}
@@ -27,7 +27,7 @@ if(InputGetButtonDown(player_inputID, Button.Interact))
 		if(meleeWeapon != noone)
 		{
 			weapID = meleeWeapon;
-			inst = instance_create_layer(x, y, "Instances", WeaponDrops);
+			inst = instance_create_layer(x, y-100, "Instances", WeaponDrops);
 		}
 		meleeWeapon = other.weapon_id;
 	}

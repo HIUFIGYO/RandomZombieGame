@@ -64,12 +64,19 @@ if(shootTimer > 0)
 	}
 }
 
-if(canShoot and InputGetButton(player_inputID, Button.Shoot))
+if(canShoot)
 {
-	canShoot = false;
-	shootTimer = shootTimerMax;
-	var inst = instance_create_layer(x, y - 64, "Instances", Bullet);
-	inst.xSpeed = image_xscale;
+	if(InputGetButtonDown(player_inputID, Button.ToggleWeapon))
+	{
+		currentWeapon = !currentWeapon;
+	}
+	if(InputGetButton(player_inputID, Button.Shoot))
+	{
+		canShoot = false;
+		shootTimer = shootTimerMax;
+		var inst = instance_create_layer(x, y - 64, "Instances", Bullet);
+		inst.xSpeed = image_xscale;
+	}	
 }
 
 //Animations
