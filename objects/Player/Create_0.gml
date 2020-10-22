@@ -24,6 +24,13 @@ shootTimer = 0;
 shootTimerMax = 30;
 player_inputID = Controller.Gamepad1;
 
+//weapons
+currentWeapon = 0;
+weapon[0] = noone;
+weapon[1] = noone;
+meleeWeapon = Weapon.Knife;
+explosives = noone;
+
 //sprites
 idle = spr_player;
 head = spr_playerheads;
@@ -40,5 +47,6 @@ leg_color = c_blue;
 isWalking = false;
 isJumping = false;
 
+head_index = 3;
 torso_index = 0;
 walking_index = 0;
