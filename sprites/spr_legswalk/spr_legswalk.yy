@@ -120,8 +120,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c7bd714a-7695-4027-937b-53fc5da09303","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Zombies",
+    "path": "folders/Sprites/Zombies.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_legswalk",

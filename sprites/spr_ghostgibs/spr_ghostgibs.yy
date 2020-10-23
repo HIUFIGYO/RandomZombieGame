@@ -81,7 +81,7 @@
   ],
   "parent": {
     "name": "Ghost",
-    "path": "folders/Sprites/Ghost.yy",
+    "path": "folders/Sprites/Zombies/Ghost.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ghostgibs",

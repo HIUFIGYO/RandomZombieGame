@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e5368466-a1a9-4a08-9f02-0b9a368cb565","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Shop",
+    "path": "folders/Sprites/Shop.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ammocase",

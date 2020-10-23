@@ -76,8 +76,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"aac718cf-92a5-4e70-9409-0a336b3386fa","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Player(s)",
+    "path": "folders/Sprites/Player(s).yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playermelee3",

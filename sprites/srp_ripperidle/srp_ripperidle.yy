@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Ripper",
-    "path": "folders/Sprites/Ripper.yy",
+    "path": "folders/Sprites/Zombies/Ripper.yy",
   },
   "resourceVersion": "1.0",
   "name": "srp_ripperidle",

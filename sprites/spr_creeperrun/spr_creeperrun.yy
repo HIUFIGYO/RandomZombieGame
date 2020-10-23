@@ -121,7 +121,7 @@
   ],
   "parent": {
     "name": "Creeper",
-    "path": "folders/Sprites/Creeper.yy",
+    "path": "folders/Sprites/Zombies/Creeper.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_creeperrun",

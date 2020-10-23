@@ -85,7 +85,7 @@
   ],
   "parent": {
     "name": "Spewer",
-    "path": "folders/Sprites/Spewer.yy",
+    "path": "folders/Sprites/Zombies/Spewer.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_spewergibs",

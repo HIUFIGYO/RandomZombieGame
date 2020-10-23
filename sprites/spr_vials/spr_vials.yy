@@ -84,8 +84,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ccd69375-c20e-45eb-82ab-56cf4ae14059","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Shop",
+    "path": "folders/Sprites/Shop.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_vials",

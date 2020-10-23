@@ -113,7 +113,7 @@
   ],
   "parent": {
     "name": "Blade",
-    "path": "folders/Sprites/Blade.yy",
+    "path": "folders/Sprites/Zombies/Blade.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_bladeatk1",

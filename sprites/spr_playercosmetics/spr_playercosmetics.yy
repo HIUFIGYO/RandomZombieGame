@@ -104,8 +104,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f25615e1-9423-47ae-a545-3c147f5a461b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Player(s)",
+    "path": "folders/Sprites/Player(s).yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playercosmetics",

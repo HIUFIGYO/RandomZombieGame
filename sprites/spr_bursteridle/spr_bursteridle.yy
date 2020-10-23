@@ -73,7 +73,7 @@
   ],
   "parent": {
     "name": "Burster",
-    "path": "folders/Sprites/Burster.yy",
+    "path": "folders/Sprites/Zombies/Burster.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_bursteridle",

@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Limper",
-    "path": "folders/Sprites/Limper.yy",
+    "path": "folders/Sprites/Zombies/Limper.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_limperidle",

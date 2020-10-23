@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6cc492ed-cfdf-4af3-9beb-9816744b29dd","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Shop",
+    "path": "folders/Sprites/Shop.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_turretplace",

@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Lard",
-    "path": "folders/Sprites/Lard.yy",
+    "path": "folders/Sprites/Zombies/Lard.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_lardidle",

@@ -109,7 +109,7 @@
   ],
   "parent": {
     "name": "Rabid",
-    "path": "folders/Sprites/Rabid.yy",
+    "path": "folders/Sprites/Zombies/Rabid.yy",
   },
   "resourceVersion": "1.0",
   "name": "srp_rabidatk1",

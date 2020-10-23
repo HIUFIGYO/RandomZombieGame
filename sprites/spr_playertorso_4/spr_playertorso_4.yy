@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2d94b043-849d-41b7-9a54-d27c76d2620d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Player(s)",
+    "path": "folders/Sprites/Player(s).yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playertorso_4",

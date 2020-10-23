@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c3197a70-7220-4996-8af2-fd3374af6f34","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Shop",
+    "path": "folders/Sprites/Shop.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_healgen",

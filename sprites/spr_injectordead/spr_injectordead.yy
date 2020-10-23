@@ -73,7 +73,7 @@
   ],
   "parent": {
     "name": "Injector",
-    "path": "folders/Sprites/Injector.yy",
+    "path": "folders/Sprites/Zombies/Injector.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_injectordead",

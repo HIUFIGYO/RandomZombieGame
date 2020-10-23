@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "Grapple",
-    "path": "folders/Sprites/Grapple.yy",
+    "path": "folders/Sprites/Zombies/Grapple.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_grappleidle",
