@@ -1,3 +1,4 @@
+var inst;
 var xThrow = InputGetAxis(player_inputID, Axis.Horizontal);
 
 //Calculate velocity
@@ -25,14 +26,15 @@ else
 }
 
 //Jump
-if(InputGetButton(player_inputID, Button.Jump) and place_meeting(x, y+1, BlockParent))
+if(InputGetButton(player_inputID, Button.Jump)and !isJumping and place_meeting(x, y+1, BlockParent))
 {
 	isJumping = true;
 	ySpeed = -jumpSpeed;
 }
 
 //Collision
-if(place_meeting(x+xSpeed, y, BlockParent))
+inst = instance_place(x+xSpeed, y, BlockParent);
+if(inst and !inst.isOneWay)
 {
 	while(!place_meeting(x+sign(xSpeed), y, BlockParent))
 	{
@@ -42,15 +44,30 @@ if(place_meeting(x+xSpeed, y, BlockParent))
 }
 x += xSpeed * DeltaTime();
 
-if(place_meeting(x, y+ySpeed, BlockParent))
+inst = instance_place(x, y + ySpeed, BlockParent);
+if(inst)
 {
-	if(ySpeed > 0)
-		isJumping = false;
-	while(!place_meeting(x, y+sign(ySpeed), BlockParent))
+	var collide = true;
+	if(inst.isOneWay)
 	{
-		y += sign(ySpeed);
+		if(ySpeed > 0 and y > inst.y)
+			collide = false;
+		if(ySpeed < 0)
+			collide = false;
 	}
-	ySpeed = 0;
+		
+	if(collide)
+	{
+		while(!place_meeting(x, y+sign(ySpeed), BlockParent))
+		{
+			y += sign(ySpeed);
+		}
+		if(ySpeed > 0)
+			isJumping = false;
+		ySpeed = 0;
+		if(inst.isOneWay and InputGetButtonDown(player_inputID, Button.Crouch))
+			ySpeed = 1;
+	}
 }
 y += ySpeed * DeltaTime();
 
@@ -87,6 +104,5 @@ if(isWalking)
 		walkingAnimSpeed = 1;
 	walking_index += walkingAnimSpeed;
 	if(walking_index >= sprite_get_number(legs))
-		walking_index = 0;
-	
+		walking_index = 0;	
 }

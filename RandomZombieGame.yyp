@@ -98,6 +98,7 @@
     {"id":{"name":"spr_twitcherevade","path":"sprites/spr_twitcherevade/spr_twitcherevade.yy",},"order":3,},
     {"id":{"name":"spr_twitcherpounch","path":"sprites/spr_twitcherpounch/spr_twitcherpounch.yy",},"order":4,},
     {"id":{"name":"spr_twitcherpin","path":"sprites/spr_twitcherpin/spr_twitcherpin.yy",},"order":5,},
+    {"id":{"name":"OneWayBlock","path":"objects/OneWayBlock/OneWayBlock.yy",},"order":4,},
     {"id":{"name":"spr_twitcherdead","path":"sprites/spr_twitcherdead/spr_twitcherdead.yy",},"order":6,},
     {"id":{"name":"spr_twitchergibs","path":"sprites/spr_twitchergibs/spr_twitchergibs.yy",},"order":7,},
     {"id":{"name":"rm_level01","path":"rooms/rm_level01/rm_level01.yy",},"order":0,},
@@ -120,6 +121,7 @@
     {"id":{"name":"spr_bladegibs","path":"sprites/spr_bladegibs/spr_bladegibs.yy",},"order":5,},
     {"id":{"name":"spr_speweridle","path":"sprites/spr_speweridle/spr_speweridle.yy",},"order":0,},
     {"id":{"name":"scr_Input","path":"scripts/scr_Input/scr_Input.yy",},"order":1,},
+    {"id":{"name":"spr_oneWayBlock","path":"sprites/spr_oneWayBlock/spr_oneWayBlock.yy",},"order":23,},
     {"id":{"name":"spr_spewerwalk","path":"sprites/spr_spewerwalk/spr_spewerwalk.yy",},"order":1,},
     {"id":{"name":"spr_spewerrun","path":"sprites/spr_spewerrun/spr_spewerrun.yy",},"order":2,},
     {"id":{"name":"spr_spewershoot","path":"sprites/spr_spewershoot/spr_spewershoot.yy",},"order":3,},
@@ -241,6 +243,7 @@
     {"folderPath":"folders/Sprites/Misc.yy","order":20,"resourceVersion":"1.0","name":"Misc","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Unused.yy","order":21,"resourceVersion":"1.0","name":"Unused","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Zombies.yy","order":22,"resourceVersion":"1.0","name":"Zombies","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Creeper.yy","order":0,"resourceVersion":"1.0","name":"Creeper","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
