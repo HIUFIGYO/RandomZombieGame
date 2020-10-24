@@ -58,12 +58,13 @@ if(inst)
 		
 	if(collide)
 	{
-		while(!place_meeting(x, y+sign(ySpeed), BlockParent))
-		{
-			y += sign(ySpeed);
-		}
 		if(ySpeed > 0)
+		{
 			isJumping = false;
+			y = inst.y;
+		}
+		if(ySpeed < 0)
+			y = inst.y + sprite_height + inst.sprite_height;
 		ySpeed = 0;
 		if(inst.isOneWay and InputGetButtonDown(player_inputID, Button.Crouch))
 			ySpeed = 1;
