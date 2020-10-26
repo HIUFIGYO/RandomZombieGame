@@ -68,7 +68,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_playermelee3","path":"sprites/spr_playermelee3/spr_playermelee3.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "spr_playermelee3",
     "tags": [],
     "resourceType": "GMSequence",
   },

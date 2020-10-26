@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
     {"id":{"name":"spr_playerjumping","path":"sprites/spr_playerjumping/spr_playerjumping.yy",},"order":8,},
+    {"id":{"name":"spr_playermelee4","path":"sprites/spr_playermelee4/spr_playermelee4.yy",},"order":21,},
     {"id":{"name":"Block","path":"objects/Block/Block.yy",},"order":0,},
     {"id":{"name":"spr_playercrouch","path":"sprites/spr_playercrouch/spr_playercrouch.yy",},"order":3,},
     {"id":{"name":"spr_legscrouch","path":"sprites/spr_legscrouch/spr_legscrouch.yy",},"order":20,},
