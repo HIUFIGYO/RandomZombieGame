@@ -108,7 +108,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_buffs","path":"sprites/spr_buffs/spr_buffs.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "spr_buffs",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -224,3 +224,59 @@ weapon[# WeapStat.Price, i] = 3750;
 weapon[# WeapStat.BulletSpeed, i] = noone;
 weapon[# WeapStat.xOffset, i] = 0;
 weapon[# WeapStat.yOffset, i] = 32;
+
+i++; //Heated Blade
+weapon[# WeapStat.Type, i] = WeapType.Melee;
+weapon[# WeapStat.Damage, i] = 12;
+weapon[# WeapStat.FireRate, i] = 0.65;
+weapon[# WeapStat.Mag, i] = noone;
+weapon[# WeapStat.Ammo, i] = noone;
+weapon[# WeapStat.Accuracy, i] = noone;
+weapon[# WeapStat.Range, i] = noone;
+weapon[# WeapStat.Reload, i] = noone;
+weapon[# WeapStat.Price, i] = 4000;
+weapon[# WeapStat.BulletSpeed, i] = noone;
+weapon[# WeapStat.xOffset, i] = 0;
+weapon[# WeapStat.yOffset, i] = 32;
+
+i++; //Purple Gun
+weapon[# WeapStat.Type, i] = WeapType.SideArm;
+weapon[# WeapStat.Damage, i] = 10;
+weapon[# WeapStat.FireRate, i] = 1;
+weapon[# WeapStat.Mag, i] = 1;
+weapon[# WeapStat.Ammo, i] = 39;
+weapon[# WeapStat.Accuracy, i] = 1;
+weapon[# WeapStat.Range, i] = 2;
+weapon[# WeapStat.Reload, i] = 3;
+weapon[# WeapStat.Price, i] = 4500;
+weapon[# WeapStat.BulletSpeed, i] = 80;
+weapon[# WeapStat.xOffset, i] = 0;
+weapon[# WeapStat.yOffset, i] = 32;
+
+i++; //Undead Drainer
+weapon[# WeapStat.Type, i] = WeapType.Primary;
+weapon[# WeapStat.Damage, i] = 0.5;
+weapon[# WeapStat.FireRate, i] = 0.25;
+weapon[# WeapStat.Mag, i] = 4;
+weapon[# WeapStat.Ammo, i] = 56;
+weapon[# WeapStat.Accuracy, i] = 0.95;
+weapon[# WeapStat.Range, i] = 1;
+weapon[# WeapStat.Reload, i] = 3.5;
+weapon[# WeapStat.Price, i] = 4500;
+weapon[# WeapStat.BulletSpeed, i] = 40;
+weapon[# WeapStat.xOffset, i] = 0;
+weapon[# WeapStat.yOffset, i] = 32;
+
+i++; //B.H. Darker
+weapon[# WeapStat.Type, i] = WeapType.Primary;
+weapon[# WeapStat.Damage, i] = 3;
+weapon[# WeapStat.FireRate, i] = 0.5;
+weapon[# WeapStat.Mag, i] = 5;
+weapon[# WeapStat.Ammo, i] = 10;
+weapon[# WeapStat.Accuracy, i] = 1;
+weapon[# WeapStat.Range, i] = 1;
+weapon[# WeapStat.Reload, i] = 5;
+weapon[# WeapStat.Price, i] = 5000;
+weapon[# WeapStat.BulletSpeed, i] = 40;
+weapon[# WeapStat.xOffset, i] = 0;
+weapon[# WeapStat.yOffset, i] = 32;
