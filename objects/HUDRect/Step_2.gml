@@ -1,3 +1,4 @@
+//auto align
 if(parent != noone)
 {
 	switch(align)
