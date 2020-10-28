@@ -67,6 +67,8 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"Block","path":"objects/Block/Block.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":8544.0,"y":576.0,"resourceVersion":"1.0","name":"inst_75D47AAA","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"Block","path":"objects/Block/Block.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":8544.0,"y":608.0,"resourceVersion":"1.0","name":"inst_35533941","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"Block","path":"objects/Block/Block.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":8512.0,"y":608.0,"resourceVersion":"1.0","name":"inst_4D19738C","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"RabidZombie","path":"objects/RabidZombie/RabidZombie.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":7616.0,"y":736.0,"resourceVersion":"1.0","name":"inst_C74A6AA","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"RabidZombie","path":"objects/RabidZombie/RabidZombie.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":8768.0,"y":736.0,"resourceVersion":"1.0","name":"inst_72CF5D22","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Players","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"Block","path":"objects/Block/Block.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":512.0,"y":832.0,"resourceVersion":"1.0","name":"inst_6B74C209","tags":[],"resourceType":"GMRInstance",},
@@ -2553,6 +2555,8 @@
     {"name":"inst_20F47D8A","path":"rooms/rm_level01/rm_level01.yy",},
     {"name":"inst_69C2D083","path":"rooms/rm_level01/rm_level01.yy",},
     {"name":"inst_6EF76837","path":"rooms/rm_level01/rm_level01.yy",},
+    {"name":"inst_C74A6AA","path":"rooms/rm_level01/rm_level01.yy",},
+    {"name":"inst_72CF5D22","path":"rooms/rm_level01/rm_level01.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
