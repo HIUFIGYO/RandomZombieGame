@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Script4",
+  "name": "scr_HUD",
   "tags": [],
   "resourceType": "GMScript",
 }
