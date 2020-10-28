@@ -21,8 +21,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "PersistentObjects",
-    "path": "folders/Objects/PersistentObjects.yy",
+    "name": "Control",
+    "path": "folders/Objects/Control.yy",
   },
   "resourceVersion": "1.0",
   "name": "BlockParent",

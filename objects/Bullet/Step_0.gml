@@ -21,9 +21,13 @@ if(count > 0)
 			instance_destroy();
 			break;
 		}
-		if(hit == "Damage")
+		if(hit == "ZombieParent")
 		{
+			if(hits[| i].isDead)
+				continue;
+			instance_destroy();
 			hits[| i].hp -= DataWeapon(weapon, WeapStat.Damage);
+			break;
 		}
 	}
 }
