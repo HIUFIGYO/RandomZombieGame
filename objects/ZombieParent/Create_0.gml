@@ -21,6 +21,7 @@ image_speed = 1;
 spriteIdle = noone;
 spriteWalk = noone;
 spriteAttack = noone;
+spriteSpecial = noone;
 spriteDead = noone;
 
 //game manager notify

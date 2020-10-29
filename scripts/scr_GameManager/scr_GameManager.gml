@@ -21,5 +21,5 @@ function GameRemoveZombie()
 function GameSpawnZombie()
 {
 	var spawnPoint = GameManager.spawn[irandom(GameManager.spawnNumber - 1)];
-	instance_create_layer(spawnPoint.x, spawnPoint.y, "Instances", choose(LimperZombie, RabidZombie));
+	instance_create_layer(spawnPoint.x, spawnPoint.y, "Instances", choose(LimperZombie, RabidZombie, LardZombie, GrappleZombie, GhostZombie, BursterZombie, TwitcherZombie, SpewerZombie, InjectorZombie, BladeZombie, RipperZombie));
 }

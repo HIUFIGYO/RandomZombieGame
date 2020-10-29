@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 0,
+  "origin": 7,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a96e229a-54c1-4e26-95fe-78cfac1de572","path":"sprites/srp_ripperidle/srp_ripperidle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a96e229a-54c1-4e26-95fe-78cfac1de572","path":"sprites/srp_ripperidle/srp_ripperidle.yy",},"LayerId":{"name":"c1686328-90e5-4152-b353-30d5a50c45a2","path":"sprites/srp_ripperidle/srp_ripperidle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"srp_ripperidle","path":"sprites/srp_ripperidle/srp_ripperidle.yy",},"resourceVersion":"1.0","name":"a96e229a-54c1-4e26-95fe-78cfac1de572","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a96e229a-54c1-4e26-95fe-78cfac1de572","path":"sprites/spr_ripperidle/spr_ripperidle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a96e229a-54c1-4e26-95fe-78cfac1de572","path":"sprites/spr_ripperidle/spr_ripperidle.yy",},"LayerId":{"name":"c1686328-90e5-4152-b353-30d5a50c45a2","path":"sprites/spr_ripperidle/spr_ripperidle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_ripperidle","path":"sprites/spr_ripperidle/spr_ripperidle.yy",},"resourceVersion":"1.0","name":"a96e229a-54c1-4e26-95fe-78cfac1de572","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"srp_ripperidle","path":"sprites/srp_ripperidle/srp_ripperidle.yy",},
+    "spriteId": {"name":"spr_ripperidle","path":"sprites/spr_ripperidle/spr_ripperidle.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"317c7941-9605-4a17-915f-a72a91555419","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a96e229a-54c1-4e26-95fe-78cfac1de572","path":"sprites/srp_ripperidle/srp_ripperidle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"317c7941-9605-4a17-915f-a72a91555419","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a96e229a-54c1-4e26-95fe-78cfac1de572","path":"sprites/spr_ripperidle/spr_ripperidle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -54,13 +54,13 @@
     "backdropHeight": 1080,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 0,
-    "yorigin": 0,
+    "xorigin": 29,
+    "yorigin": 118,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"srp_ripperidle","path":"sprites/srp_ripperidle/srp_ripperidle.yy",},
+    "parent": {"name":"spr_ripperidle","path":"sprites/spr_ripperidle/spr_ripperidle.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "spr_ripperidle",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -72,7 +72,7 @@
     "path": "folders/Sprites/Zombies/Ripper.yy",
   },
   "resourceVersion": "1.0",
-  "name": "srp_ripperidle",
+  "name": "spr_ripperidle",
   "tags": [],
   "resourceType": "GMSprite",
 }

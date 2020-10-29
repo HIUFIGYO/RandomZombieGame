@@ -22,3 +22,4 @@ else
 draw_sprite_ext(guns, index, x, y, image_xscale, 1, 0, c_white, 1);
 draw_sprite_ext(arms, index, x, y, image_xscale, 1, 0, arm_color, 1);
 draw_sprite_ext(head, head_index, x, y, image_xscale, 1, 0, head_color, 1);
+draw_sprite_ext(cosmetic, cosmetic_index, x, y, image_xscale, 1, 0, c_white, 1);

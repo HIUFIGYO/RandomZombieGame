@@ -40,6 +40,7 @@ arms = spr_playerjustarms;
 guns = spr_playerarms;
 legs = spr_playerlegs;
 jumping = spr_playerjumping;
+cosmetic = spr_playercosmetics;
 
 head_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 arm_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
@@ -51,4 +52,5 @@ isJumping = false;
 
 head_index = irandom(sprite_get_number(head));
 torso_index = irandom(sprite_get_number(torso));
+cosmetic_index = irandom(sprite_get_number(cosmetic));
 walking_index = 0;
