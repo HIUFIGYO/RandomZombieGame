@@ -86,12 +86,24 @@ if(canShoot)
 		currentWeapon = !currentWeapon;
 	}
 	
-	if(InputGetButton(player_inputID, Button.Shoot))
+	var auto = DataWeapon(weapon[currentWeapon], WeapStat.Auto);
+	var shoot = false;
+	if(!auto and InputGetButtonDown(player_inputID, Button.Shoot))
+	{
+		shoot = true;
+	}
+	
+	if(auto and InputGetButton(player_inputID, Button.Shoot))
+	{
+		shoot = true;
+	}
+	
+	if(shoot)
 	{
 		canShoot = false;
 		shootTimer = DataWeapon(weapon[currentWeapon], WeapStat.FireRate) * game_get_speed(gamespeed_fps);
-		CreateBullet(x, y, weapon[currentWeapon], 1, image_xscale);
-	}	
+		CreateBullet(x, y, weapon[currentWeapon], DataWeapon(weapon[currentWeapon], WeapStat.Burst), image_xscale);
+	}
 }
 
 //Animations

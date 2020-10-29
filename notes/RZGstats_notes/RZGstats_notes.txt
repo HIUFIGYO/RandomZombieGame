@@ -63,6 +63,65 @@ Give/Revive	F		Y
 	Yes
 	No
 
+	-Statistics-
+Total Kills
+Limper Kills
+Rabid Kills
+Grapple Kills
+Ghost Kills
+Burster Kills
+Twitcher Kills
+Spewer Kills
+Injector Kills
+Blade Kills
+Creeper Kills
+Ripper Kills
+Money Earned
+Money Spent
+Bullets Fired
+Damage Dealt
+Grenades Thrown
+Vials Used
+Most Damage Taken
+Total Damage Taken
+Deaths 
+Skirmish Played
+Horde Played
+Wave Played
+Plays on Outbreak
+Plays on Epidemic
+Plays on Pandemic
+Plays on Apocalypse
+
+	-Records-
+Most Kills in Skirmish (Outbreak)
+Most Kills in Skirmish (Epidemic)
+Most Kills in Skirmish (Pandemic)
+Most Kills in Skirmish (Apocalypse)
+Most Kills in Horde (Outbreak)
+Most Kills in Horde (Epidemic)
+Most Kills in Horde (Pandemic)
+Most Kills in Horde (Apocalypse)
+Longest Time Survived in Horde (Outbreak)
+Longest Time Survived in Horde (Epidemic)
+Longest Time Survived in Horde (Pandemic)
+Longest Time Survived in Horde (Apocalypse)
+Most Kills in Wave (Outbreak)
+Most Kills in Wave (Epidemic)
+Most Kills in Wave (Pandemic)
+Most Kills in Wave (Apocalypse)
+Most Waves survived (Outbreak)
+Most Waves survived (Epidemic)
+Most Waves survived (Pandemic)
+Most Waves survived (Apocalypse)
+
+	-Zombology-
+Name: Unlocks after 10 kills
+Kills/KilledBy: Unlocks after 25 kills
+Statistics: Unlocks after 50 kills
+Description: Unlocks after 100 kills
+
+
 	-GameModes-
 -Skirmish
 	Gamemode starts with 1 zombie (+1 per player), killing zombies increases the max amount of zombies by 1.
@@ -100,7 +159,7 @@ Give/Revive	F		Y
 	-Player REGENERATION increased from 4s to 7s
 	-Starting enemies: Limper, Rabid and Lard
 
-	-Weapon Statistics-
+	-Weapon Statistics- (Sell Price = 50% Price)
 -Tier 1-
 
 -Standard Melee
@@ -145,7 +204,7 @@ Give/Revive	F		Y
 	Type: Melee
 	Damage: 6
 	Ammo: 0/0 (0)
-	Firerate: 0.5
+	Firerate: 0.55
 	Accuracy: 1
 	Reload: 0s
 	Price: $1000
@@ -183,7 +242,7 @@ Give/Revive	F		Y
 	Type: Melee
 	Damage: 9
 	Ammo: 0/0 (0)
-	Firerate: 0.5
+	Firerate: 0.6
 	Accuracy: 1
 	Reload: 0s
 	Price: $2000
@@ -195,7 +254,7 @@ Give/Revive	F		Y
 	Firerate: 0.3
 	Accuracy :0.8
 	Reload: 1s per shot missing
-	Price: $1250
+	Price: $2250
 
 -Super Rifle
 	Type: Primary
@@ -219,21 +278,21 @@ Give/Revive	F		Y
 
 -Flame Thrower
 	Type: Primary
-	Damage: 1
+	Damage: 1 +ignite
 	Ammo: 50/350 (400) 
 	Firerate: 0.1
 	Accuracy: 0.75
 	Reload: 3s
-	Price: $ 2000
+	Price: $ 3000
 
 -Rocket Launcher
 	Type: Primary
-	Damage: Impact-30 Explosion-20
+	Damage: Impact-20 Explosion-10
 	Ammo: 1/19 (20)
 	Firerate: 1
 	Accuracy: 1
 	Reload: 4s
-	Price: $2250
+	Price: $3250
 
 -Tesla Rifle
 	Type: Primary
@@ -242,57 +301,81 @@ Give/Revive	F		Y
 	Firerate: 0.1
 	Accuracy: 1
 	Reload: 3s
-	Price: $2500
+	Price: $3500
 
 -Bio Launcher
 	Type: Primary
-	Damage: Impact-5 Explosion-5 Explosion Applies Acid (2 Damage for 6 seconds)
+	Damage: Impact-15 Explosion-5+acid
 	Ammo: 5/35 (40)
 	Firerate: 0.2
 	Accuracy: 1
 	Reload: 3s
-	Price: $2750
+	Price: $3750
 
 -Tier 5-
+
+-Heated Blade
+	Type: Melee
+	Damage: 12+ignite
+	Ammo: 0/0 (0)
+	Firerate: 0.65
+	Accuracy: 1
+	Reload: 0s
+	Price: $4000
 
 -Purple Gun
 	Type: SideArm
 	Damage: 10 (-1 per pierce)
-	Ammo: 1/35 (40)
+	Ammo: 1/39 (40)
 	Firerate: 1
 	Accuracy: 1
 	Reload: 3s
-	Price: $3500
+	Price: $4500
+
+-Undead Drainer
+	Type: Primary
+	Damage: 0.5+Bleed
+	Ammo: 4/56 (60)
+	Firerate: 0.25
+	Accuracy: 0.95
+	Reload: 3.5s
+	Price: $4500
 
 -B.H. Darker
 	Type: Primary
-	Damage: Impact-5 (Black Hole damage = slain targets Max Health)
+	Damage: Impact-3 (Black Hole damage = slain targets Max Health)
 	Ammo: 5/10 (15)
 	Firerate: 0.5
 	Accuracy: 1
 	Reload: 5s
 	Price: $5000
 
-	-Explosives-
+	-Explosives- (Can't be sold)
 -Grenades
 	Damage: Impact-1 Explosion-10
 	Ammo: 5
-	FuseTime: 3s
-	Price: $750
+	FuseTime: 2s
+	Price: $650
 
 -Incendiary Bomb
 	Damage: Impact-5 Ground Fire-1
 	Ammo: 5
 	FuseTime: 0s
-	Price: $750
+	Price: $650
 
 -Mines
 	Damage: Impact-0 Explosion-20
 	Ammo: 5
 	FuseTime: 1s
-	Price: $750
+	Price: $650
 
-	-Buffs-
+-B.H. Bomber
+	Damage: Impact-1 Shock-5 (Black Hole damage = slain targets Max Health)
+	Ammo: 5
+	FuseTime: 3s
+	Price: $4000
+
+	-Buffs- (No Refunds)
 -Regeneration Buff
 	-Reduce REGENERATION rate by 50%.
 	Price: $1500
@@ -315,10 +398,11 @@ Give/Revive	F		Y
 	Price: $1500
 
 -Damage Buff
-	-Increased Bullet Damage by 1. (Pistol, Rifle)
-	-Increased Pellet Amount by 1. (Shotgun)
-	-Increase Melee Damage by 2. (Melee)
-	-Increase Explosive Damage by 5. (RocketLauncher,BioLauncher,Explosives)
+	-Increase Fire damage by 0.5.
+	-Increase Bullet and Electric damage by 1.
+	-Increase Max Pellet damage by 1.
+	-Increase Melee damage by 2.
+	-Increase Explosive and Splash damage by 3.
 	Price: $1500
 
 -Critical Buff
@@ -339,25 +423,51 @@ Give/Revive	F		Y
 -Demo Buff
 	-Increasse maximum explosives by 2.
 	-35% chance to not consume explosives.
-	If hit with a lethal attack, explode and survive with 1 HEALTH. (90 second cooldown.)
+	-If hit with a lethal attack, explode and survive with 1 HEALTH. (180 second cooldown.)
 	Price: $1500
 
-	-Support Items-
+-Ammo Buff
+	-Increase magazine size by 50%.
+	-Increase total ammo by 30%
+	Price: $1500
+
+-Resistance Buff
+	-Reduce damage taken by 2 or 10%, whichever is higher. Damage taken can't be lower than 1.
+	Price: $1500
+
+	-Support Items- (No Refunds)
 -Armour
 	-Grants 100 Armour Points
 	-Armour takes full damage, Health takes 50% damage dealt.
 	Price: $350
 
--Ammo Crate
-	-Drop an Ammo Crate on the ground to supply you and your teammates with ammo.
-	Uses: 4
-	Price: $600
+-Supply Flare
+	-Throw a flare that calls a care package. Arrives in 1 minute.
+	-Item1: 80% Chance for tier 1 weapon, 10% chance for tier 2 weapon, 5% chance for tier 3 weapons, 4% chance for tier 4 weapon, 1% chance for tier 5 weapon.
+	-Item2: 25% chance for random support item (except supply flare), 25% for random medical item, 50% chance for nothing.
+	-Item3: $50 - $500
+	Price: $1000
 
 -Heal Generator
 	-Drop on ground to provide a small area of effect heal for you and teammates.
-	Heals: 9/s
-	Duration: 6s
-	Price: 900
+	Heals: 1 every 0.1 seconds
+	Duration: 5s
+	Price: $1100
+
+-Ammunition Crate
+	-Drop a crate on the ground that provides ammo for pistols, rifles, shotguns and grenades.
+	Uses: 4
+	Price: $1250
+
+-Heavy Weapons Crate
+	-Drop a crate on the ground that provides ammo for Explosives, beam weapons and grenades.
+	Uses: 4
+	Price: $2500
+
+-Otherworldly Crate
+	-Drop a crate on the ground that provides ammo experimental weapons.
+	Uses: 4
+	Price: $3750
 
 Barricade
 	-Blocks oncoming enemies.
@@ -372,11 +482,11 @@ Advanced Barricade
 
 Turret
 	-Blocks and shoots oncoming enemies.
-	Health: 400
+	Health: 325
 	Damage: 1
 	Price: $1500
 
-	-Medical Supplies-
+	-Medical Supplies- (No Refunds)
 Medicine
 	Heals: 35
 	Uses: 1
@@ -402,46 +512,56 @@ Player Respawn
 	-Respawn a Player at the shop. Becomes available after 3 minutes (+1 minute per purchase) after a player dies.
 	Price: $3000
 
--Shop Item Limit Per-Player
-	Armour: 3
-	AmmoCrate: 3
-	HealGenerator: 2
-	Barricade: 4
-	AdvancedBarricade: 3
-	Turrets: 2
-	Medicine: 4
-	MedSyringe: 3
-	MedKit: 2
+-Shop Item Limit
+	Weapons Tier1-4: 1 per player (Doesn't restock)
+	Weapons Tier5: 1 total (Doesn't restock)
+	Armour: 1 per player (Restocks 1 every 5 minutes)
+	HealGenerator: 1 (Restocks 1 every 5 minutes)
+	AmmunitionCrate: 2 (Restocks 1 every 5 minutes once all empty)
+	HeavyWeaponsCrate: 1 (Restocks every 5 minutes)
+	OtherworldlyCrate: 1 (Restocks every 5 minutes)
+	Barricade: 2 (Restocks 1 every 5 minutes) 
+	AdvancedBarricade: 2 (Doesn't restock)
+	Turrets: 2 (Doesn't restock)
+	Medicine: 2 + 1 per player (Restocks 1 every 5 minutes once all empty)
+	MedSyringe: 3 (Restocks 1 every 5 minutes once all empty)
+	MedKit: 2 (Doesn't restock)
 	PlayerRespawn: 0(+1per dead player)
 
-	-Vials-
+	-Vials- (No Refunds)
 Adrenaline Vile
-	-Increase movement speed by 1. Increase interaction speed by 50%.
-	Duration: 6s
+	-Increase movement speed by 1 and ncrease interaction speed by 50% for 6 seconds.
+	-Disables stamina regeneration for 12 seconds.
 	Cooldown: 60s
 	Price: $1250
 
 Strength Vile
-	-Increase melee damage by 100%%.
-	Duration: 8s
+	-Increase melee damage by 100% for 8 seconds.
+	-Can only use melee weapons for 16 seconds.
 	Cooldown: 75s
 	Price: $1250
 
 Mimicry Vile
-	-Enemies will not target or attack you.
-	Duration: 5s
+	-Enemies will not target or attack you for 5 seconds.
+	-Cannot use weapons or equipment for 10 seconds.
 	Cooldown: 90s
 	Price: $1250
 
 Survivalist Vile
-	-HEALTH will not drop below 1.
-	Duration: 6s
+	-Become immune to all damage for 6 seconds.
+	-Cannot sprint for 12 seconds.
 	Cooldown: 90s
 	Price: $1250
 
 Rapid Vile
-	-Double attack speed and firerate.
-	Duration: 5s
+	-Double attack speed and firerate for 5 seconds.
+	-Movement speed is reduced by 2 for 10 seconds.
+	Cooldown: 120s
+	Price: $1250
+
+Trade-Off Vile
+	-Primary and secondary damage dealt is doubled for 5 seconds.
+	-Damage taken is doubled for 10 seconds. 
 	Cooldown: 120s
 	Price: $1250
 
@@ -508,7 +628,7 @@ Blade
 	Health: 12
 	Damage: 10
 	Speed: 5
-	Trait: Attacks dealt to players apply bleeding and deals double damage to structures.
+	Trait: Attacks dealt to players apply bleeding and deals 50% more damage to structures.
 
 -Super Zombies-
 Creeper
@@ -632,24 +752,36 @@ Three		200		240		280		360
 Four		250		300		350		450
 
 	-Debuffs-
+-Ignite
+	Proc. chance on Flame Thrower: 100%
+	Proc. chance on Heated Blade: 35%
+	Proc. chance on Incendiary Bomb Impact: 100%
+	Proc. chance on Incendiary Bomb Ground Fire: 25% (Players) (50% Enemies)
+	Duration lasts for 5 seconds and deals 1 point of damage to enemies per second.
+	Can only be applied to enemies with the exception of Ground Fire which can be applied to both enemies and players.
+	Enemies with ignite have a 20% chance to apply ignite to players when damaged. 100% chance to players who are already ignited.
+	Stacks: Yes. Stack Effects: +1 damage, duration resets.
+	Cannot be cured.
 -Acid
-	Proc. chance on Lard Acid Blood: 50%.
-	Proc. chance on Spewer Acid Ball: 50%.
-	Proc. chance on Acid Ball Explosion: 25%.
-	Duration last for 12 seconds and deals 1 point of damage to the player per second.
+	Proc. chance on Lard Acid Blood: 100%.
+	Proc. chance on Spewer Acid Ball: 5% (+5% per difficulty).
+	Proc. chance on Acid Ball Explosion: 25% (+25% per difficulty).
+	Duration last for 10 seconds and deals 1 point of damage to the player per second. +1 damage to armour.
 	Can be applied to all enemies except Lards and Spewers. Duration is reduced by 50%.
+	Stacks: Yes. Stack Effects: Duration resets.
 	Can be cured by Medicine, Medical Syringe and Med Kits.
-
 -Bleed
-	Bleed is inflicted upon the player if they are hit by an attack from Blades.
-	Duration last for 10 seconds and deals 2 points of damage per two seconds.
-	While bleed is active players have -1 speed in Outbreak and Epidemic, and -2 speed on Pandemic and Apocalypse.
+	Proc. chance on  Blades: 100%
+	Proc. chance on Undead Drainer: 100%
+	Duration last for 4 seconds, deals 2 points of damage per second, reduces targets movement speed by 1 and disables Agility Buff.
 	Cannot be applied to the player if they have armour.
+	Stacks: Yes. Stack Effects: +1 damage, +2 duration.
 	Can be cured by Medicine and Med Kits.
 -Poison
 	Poison is inflicted upon the player if they are Injected by the Injector.
-	Duration lasts for 120s-Outbreak, 90s-Epidemic, 75s-Pandemic and 60s-Apocalypse.
+	Duration lasts for 120 seconds (-30 seconds per difficulty).
 	If the poison timer runs out the player instantly dies.
+	Stacks: No.
 	Can be cured by Medicine, Medical Syringe and Med Kits.
 
 	-Money Distribution-
@@ -669,9 +801,51 @@ TotalCash
 -Creeper	50/48/42/36	
 -Ripper		500/480/420/360
 
+	-Friendly Fire-
+Friendly Fire can only be applied from splash damage such as explosives and ground fire. It cannot be applied to teammates only self.
+-FF Weapons
+	Grenade Explosion
+	Incendiary Bomb Ground Fire
+	Mine Explosion
+	B.H. Bomber Shock/Blackhole
+	Rocket Launcher Explosion
+	Bio Launcher Explosion
+	B.H. Darker Black Hole
+-FF Scaling
+	Outbreak-x0
+	Epidemic-x0
+	Pandemic-x0.1
+	Apocalypse-x0.25
+Black Hole damage is an exception, it can be dealt to self and teammates across all difficulties.
+-BH FF Scaling
+	Outbreak-x0.1
+	Epidemic-x0.25
+	Pandemic-x0.35
+	Apocalypse-x0.5
+Friendly Fire damage is rounded down. (minimum 1 damage)
+
 	-On Screen Kill Indicators-
 <Player> killed <Advanced Zombie> (x2+)		HIUFIGYO killed Spewer    HIUFIGYO killed Twitcher x2
 <Player> killed <Super Zombie> (x2+)		HIUFIGYO killed Ripper    HIUFIGYO killed Creeper x4
-<Enemy> killed <Player>				Lard killed HIUFIGYO
+<Enemy> downed <Player>				Lard downed HIUFIGYO
 <Player> healed <Player>			Odlaw0 healed HIUFIGYO
 <Player> gave an item to <Player>		HIUFIGYO gave an item to Odlaw0
+
+	-Unique Death Messages-
+-Ignite
+	<Player> couldn't put out the fire
+-Acid
+	<Players> skin melted off
+-Bleeding
+	<Player> bled out
+-Poison
+	<Player> succame to an Injectors poison
+-Self Explosives
+	<Player> can't play with explosives safely
+-Self Ground Fire
+	<Player> likes to stand on hot fumes
+-Self Bio Launcher Explosion
+	<Player> was too close to the acidic explosion
+-Black Hole
+	<Player> turned themself into spaghetti
+	<Player> sent <Player> someplace no man has gone before

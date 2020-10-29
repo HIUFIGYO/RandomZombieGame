@@ -16,6 +16,10 @@ enum Weapon
 	Rocket,
 	Tesla,
 	Acid,
+	Knife4,
+	Purple,
+	Drainer,
+	BHDarker,
 	count
 }
 
@@ -33,6 +37,9 @@ enum WeapStat
 	BulletSpeed,
 	xOffset,
 	yOffset,
+	BulletImage,
+	Auto,
+	Burst,
 	count
 }
 
@@ -41,6 +48,18 @@ enum WeapType
 	Melee,
 	SideArm,
 	Primary
+}
+
+enum BulletImage
+{
+	Pistol,
+	Rifle,
+	Shotgun,
+	Rocket,
+	Acid,
+	Purple,
+	Drainer,
+	Particle
 }
 
 ///@ function DataWeapon(weapon, stat)
@@ -62,5 +81,8 @@ function CreateBullet(xx, yy, _weapon, _count, dir)
 		inst.weapon = _weapon;
 		inst.rangeTimer = DataWeapon(_weapon, WeapStat.Range) * game_get_speed(gamespeed_fps);
 		inst.xSpeed = dir;
+		inst.ySpeed = DataWeapon(_weapon, WeapStat.Accuracy) * random_range(-1, 1);
+		inst.image_xscale = dir;
+		inst.image_index = DataWeapon(_weapon, WeapStat.BulletImage);
 	}
 }

@@ -9,27 +9,30 @@ if(rangeTimer <= 0)
 
 //move
 x += xSpeed * spd * DeltaTime();
+y += ySpeed;
 var hits = ds_list_create();
 var count = collision_line_list(xprevious, yprevious, x, y, all, false, true, hits, false);
 if(count > 0)
 {
+	var destroy = false;
 	for(var i=0; i<count; i++)
 	{
 		var hit = object_get_name(object_get_parent(hits[| i].object_index));
-		if(hit == "BlockParent")
+		if(hit == "BlockParent" and !destroy)
 		{
-			instance_destroy();
-			break;
+			destroy = true;
 		}
 		if(hit == "ZombieParent")
 		{
 			if(hits[| i].isDead)
 				continue;
-			instance_destroy();
+			destroy = true;
 			hits[| i].hp -= DataWeapon(weapon, WeapStat.Damage);
 			break;
 		}
 	}
+	if(destroy)
+		instance_destroy();
 }
 
 ds_list_destroy(hits);

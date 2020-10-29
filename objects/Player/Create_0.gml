@@ -23,7 +23,6 @@ friction = 0.75;
 //control
 canShoot = true;
 shootTimer = 0;
-shootTimerMax = 30;
 player_inputID = Controller.Gamepad1;
 
 //weapons
@@ -42,7 +41,6 @@ guns = spr_playerarms;
 legs = spr_playerlegs;
 jumping = spr_playerjumping;
 
-randomize();
 head_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 arm_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 torso_color = make_color_rgb(irandom(255), irandom(255), irandom(255));

@@ -1,0 +1,5 @@
+-Weapon Accuracy
+-Fall/ Jump animation
+-Bullet collision Line
+-Delta Time rework
+-Plan out gamemodes
