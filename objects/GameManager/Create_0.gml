@@ -13,3 +13,5 @@ for(var i=0; i<spawnNumber; i++)
 //body clean up
 maxBodyCount = 100;
 bodyList = ds_queue_create();
+
+instance_create_layer(0, 0, "Instances", GameModeSkirmish);

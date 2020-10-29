@@ -17,3 +17,9 @@ function GameRemoveZombie()
 {
 	GameManager.totalZombies -= 1;
 }
+
+function GameSpawnZombie()
+{
+	var spawnPoint = GameManager.spawn[irandom(GameManager.spawnNumber - 1)];
+	instance_create_layer(spawnPoint.x, spawnPoint.y, "Instances", choose(LimperZombie, RabidZombie));
+}

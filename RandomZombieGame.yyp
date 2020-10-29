@@ -6,6 +6,7 @@
     {"id":{"name":"Block","path":"objects/Block/Block.yy",},"order":0,},
     {"id":{"name":"spr_playercrouch","path":"sprites/spr_playercrouch/spr_playercrouch.yy",},"order":3,},
     {"id":{"name":"spr_legscrouch","path":"sprites/spr_legscrouch/spr_legscrouch.yy",},"order":20,},
+    {"id":{"name":"StartUp","path":"objects/StartUp/StartUp.yy",},"order":5,},
     {"id":{"name":"spr_playertorso","path":"sprites/spr_playertorso/spr_playertorso.yy",},"order":16,},
     {"id":{"name":"spr_playertorso_2","path":"sprites/spr_playertorso_2/spr_playertorso_2.yy",},"order":17,},
     {"id":{"name":"scr_HUD","path":"scripts/scr_HUD/scr_HUD.yy",},"order":3,},
@@ -120,6 +121,7 @@
     {"id":{"name":"spr_injectorgrab","path":"sprites/spr_injectorgrab/spr_injectorgrab.yy",},"order":2,},
     {"id":{"name":"spr_injectorpull","path":"sprites/spr_injectorpull/spr_injectorpull.yy",},"order":3,},
     {"id":{"name":"spr_injectoratk1","path":"sprites/spr_injectoratk1/spr_injectoratk1.yy",},"order":4,},
+    {"id":{"name":"GameModeSkirmish","path":"objects/GameModeSkirmish/GameModeSkirmish.yy",},"order":0,},
     {"id":{"name":"spr_injectoratk2","path":"sprites/spr_injectoratk2/spr_injectoratk2.yy",},"order":5,},
     {"id":{"name":"spr_injectordead","path":"sprites/spr_injectordead/spr_injectordead.yy",},"order":6,},
     {"id":{"name":"spr_injectorgibs","path":"sprites/spr_injectorgibs/spr_injectorgibs.yy",},"order":7,},
@@ -135,6 +137,7 @@
     {"id":{"name":"spr_oneWayBlock","path":"sprites/spr_oneWayBlock/spr_oneWayBlock.yy",},"order":11,},
     {"id":{"name":"spr_spewerwalk","path":"sprites/spr_spewerwalk/spr_spewerwalk.yy",},"order":1,},
     {"id":{"name":"spr_spewerrun","path":"sprites/spr_spewerrun/spr_spewerrun.yy",},"order":2,},
+    {"id":{"name":"rm_startUp","path":"rooms/rm_startUp/rm_startUp.yy",},"order":1,},
     {"id":{"name":"spr_spewershoot","path":"sprites/spr_spewershoot/spr_spewershoot.yy",},"order":3,},
     {"id":{"name":"spr_debuffs","path":"sprites/spr_debuffs/spr_debuffs.yy",},"order":13,},
     {"id":{"name":"spr_spewermelee","path":"sprites/spr_spewermelee/spr_spewermelee.yy",},"order":4,},
@@ -219,6 +222,7 @@
     "children": [],
   },
   "RoomOrder": [
+    {"name":"rm_startUp","path":"rooms/rm_startUp/rm_startUp.yy",},
     {"name":"rm_level01","path":"rooms/rm_level01/rm_level01.yy",},
   ],
   "Folders": [
@@ -264,6 +268,7 @@
     {"folderPath":"folders/Objects/Control.yy","order":14,"resourceVersion":"1.0","name":"Control","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Zombies.yy","order":15,"resourceVersion":"1.0","name":"Zombies","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/HUD.yy","order":16,"resourceVersion":"1.0","name":"HUD","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/GameModes.yy","order":17,"resourceVersion":"1.0","name":"GameModes","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},

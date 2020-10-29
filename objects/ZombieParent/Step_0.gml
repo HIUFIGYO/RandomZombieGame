@@ -50,9 +50,9 @@ if(place_meeting(x + xSpeed, y, BlockParent))
 	{
 		x += sign(xSpeed);
 	}
-	xSpeed = 0;
-	if(!place_meeting(x+sign(xSpeed), y - 65, BlockParent))
+	if(place_meeting(x, y+1, BlockParent) and !place_meeting(x+sign(xSpeed), y - 64, BlockParent))
 		ySpeed = -jumpSpeed;
+	xSpeed = 0;
 }
 x += xSpeed;
 
