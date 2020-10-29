@@ -2,12 +2,15 @@ hp = 5;
 damage = 1;
 
 isDead = false;
+fadeOut = 0;
+fadeOutTime = 150;
 isAttacking = false;
 attackRange = 1;
 
 grav = 0.981;
 acceleration = 0.1;
 moveSpeed = 2;
+jumpSpeed = 7;
 maxFallSpeed = 12;
 xSpeed = 0;
 ySpeed = 0;
@@ -19,3 +22,6 @@ spriteIdle = noone;
 spriteWalk = noone;
 spriteAttack = noone;
 spriteDead = noone;
+
+//game manager notify
+GameAddZombie();

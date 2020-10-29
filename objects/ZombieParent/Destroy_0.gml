@@ -1,0 +1,4 @@
+if(!isDead)
+{
+	GameRemoveZombie();
+}

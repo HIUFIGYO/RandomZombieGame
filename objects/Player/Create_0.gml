@@ -37,18 +37,20 @@ explosives = noone;
 idle = spr_player;
 head = spr_playerheads;
 torso = spr_playertorso;
-arms = spr_playerarms;
+arms = spr_playerjustarms;
+guns = spr_playerarms;
 legs = spr_playerlegs;
 jumping = spr_playerjumping;
 
-head_color = c_white;
-arm_color = c_white;
-torso_color = c_green;
-leg_color = c_blue;
+randomize();
+head_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
+arm_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
+torso_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
+leg_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 
 isWalking = false;
 isJumping = false;
 
-head_index = 3;
-torso_index = 0;
+head_index = irandom(sprite_get_number(head));
+torso_index = irandom(sprite_get_number(torso));
 walking_index = 0;

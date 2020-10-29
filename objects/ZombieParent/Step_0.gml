@@ -1,10 +1,20 @@
 //health
 if(!isDead and hp <= 0)
 {
+	GameRemoveZombie();
+	GameZombieDead(id);
 	isDead = true;
 	hp = 0;
 	image_speed = 0;
 	sprite_index = spriteDead;
+}
+//fade out
+if(fadeOut > 0)
+{
+	fadeOut -= 1;
+	image_alpha = fadeOut / fadeOutTime;
+	if(fadeOut <= 0)
+		instance_destroy();
 }
 
 //movement/gravity
@@ -41,6 +51,8 @@ if(place_meeting(x + xSpeed, y, BlockParent))
 		x += sign(xSpeed);
 	}
 	xSpeed = 0;
+	if(!place_meeting(x+sign(xSpeed), y - 65, BlockParent))
+		ySpeed = -jumpSpeed;
 }
 x += xSpeed;
 
