@@ -7,14 +7,14 @@ maxHp = hp;
 maxArmour = armour;
 maxStamina = stamina;
 
-instance_create_layer(x, y, "Instances", PlayerHUD).playerID = id;
+instance_create_layer(x, y, GameManager.layerUI, PlayerHUD).playerID = id;
 
 //movement
 xSpeed = 0;
 ySpeed = 0;
-maxSpeed = 4;
-sprintSpeed = 6;
-jumpSpeed = 15;
+maxSpeed = 6;
+sprintSpeed = 8;
+jumpSpeed = 20;
 maxFallSpeed = 12;
 acceleration = 0.5;
 grav = 0.981;

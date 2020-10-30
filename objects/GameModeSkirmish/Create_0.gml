@@ -1,6 +1,4 @@
-zombieCount = instance_number(Player);
-
-totalKills = 0;
-currentZombies = GameManager.totalZombies;
+event_inherited();
+zombieCount = global.playerAmount;
 
 alarm[0] = 60;

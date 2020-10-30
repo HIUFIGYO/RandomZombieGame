@@ -1,7 +1,6 @@
 //health
 if(!isDead and hp <= 0)
 {
-	GameRemoveZombie();
 	GameZombieDead(id);
 	isDead = true;
 	hp = 0;

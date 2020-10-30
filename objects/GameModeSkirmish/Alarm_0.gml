@@ -1,5 +1,5 @@
 alarm[0] = 60;
-if(GameManager.totalZombies < zombieCount)
+if(totalZombies < zombieCount)
 {
 	GameSpawnZombie();
 }
