@@ -1,0 +1,10 @@
+xx = 0;
+yy = 0;
+width = 32;
+height = 32;
+paddingX = 0;
+paddingY = 0;
+parent = noone;
+align = RectAlign.None;
+drawTo = UIDrawTo.GUI;
+drawView = 0;

@@ -1,0 +1,1 @@
+zombieTotalText.text = "Zombies: " + string(totalZombies);

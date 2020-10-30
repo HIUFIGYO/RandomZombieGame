@@ -1,10 +1,13 @@
 {
   "spriteId": null,
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "UIRectParent",
+    "path": "objects/UIRectParent/UIRectParent.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -18,17 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"HUDRect","path":"objects/HUDRect/HUDRect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"parent":{"name":"HUDRect","path":"objects/HUDRect/HUDRect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"ImageUI","path":"objects/ImageUI/ImageUI.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Control",
-    "path": "folders/Objects/Control.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "HUDRect",
+  "name": "ImageUI",
   "tags": [],
   "resourceType": "GMObject",
 }
