@@ -47,6 +47,7 @@ leg_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 
 isWalking = false;
 isJumping = false;
+isGrounded = false;
 
 head_index = irandom(sprite_get_number(head));
 torso_index = irandom(sprite_get_number(torso));

@@ -42,6 +42,7 @@ if(place_meeting(x+xSpeed, y, BlockParent))
 }
 x += xSpeed * DeltaTime();
 
+isGrounded = false;
 if(place_meeting(x, y+ySpeed, BlockParent))
 {
 	while(!place_meeting(x, y+sign(ySpeed), BlockParent))
@@ -50,6 +51,7 @@ if(place_meeting(x, y+ySpeed, BlockParent))
 	}
 	if(ySpeed > 0)
 		isJumping = false;
+	isGrounded = true;
 	ySpeed = 0;
 }
 var oneWay = instance_place(x, y + ySpeed, OneWayBlock);
@@ -61,6 +63,7 @@ if(oneWay)
 		{
 			y += sign(ySpeed);
 		}
+		isGrounded = true;
 		ySpeed = 0;
 		isJumping = false;
 		if(InputGetButtonDown(player_inputID, Button.Crouch))

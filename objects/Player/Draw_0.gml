@@ -1,10 +1,10 @@
 var index;
 
-if(isWalking and !isJumping)
+if(isWalking and isGrounded)
 {
 	draw_sprite_ext(legs, round(walking_index), x, y, image_xscale, 1, 0, leg_color, 1);
 }
-else if(isJumping)
+else if(!isGrounded)
 {
 	index = 0;
 	if(ySpeed > 0)
