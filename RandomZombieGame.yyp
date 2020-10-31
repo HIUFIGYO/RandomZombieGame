@@ -175,7 +175,7 @@
     {"id":{"name":"srp_Acreepergibs","path":"sprites/srp_Acreepergibs/srp_Acreepergibs.yy",},"order":5,},
     {"id":{"name":"spr_Screeperidle","path":"sprites/spr_Screeperidle/spr_Screeperidle.yy",},"order":0,},
     {"id":{"name":"AnimationCurve1","path":"animcurves/AnimationCurve1/AnimationCurve1.yy",},"order":0,},
-    {"id":{"name":"PlayerHUD","path":"objects/PlayerHUD/PlayerHUD.yy",},"order":0,},
+    {"id":{"name":"HealthBarUI","path":"objects/HealthBarUI/HealthBarUI.yy",},"order":0,},
     {"id":{"name":"ZombieParent","path":"objects/ZombieParent/ZombieParent.yy",},"order":1,},
     {"id":{"name":"GhostZombie","path":"objects/GhostZombie/GhostZombie.yy",},"order":4,},
     {"id":{"name":"spr_Screeperrun","path":"sprites/spr_Screeperrun/spr_Screeperrun.yy",},"order":1,},

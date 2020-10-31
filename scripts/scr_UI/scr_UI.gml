@@ -13,13 +13,43 @@ function UICreateText(_x, _y, _text, _drawTo)
 	_text = is_undefined(_text) ? 0 : _text;
 	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
 	
-	var _inst = instance_create_layer(0, 0, GameManager.layerUI, TextUI);
-	_inst.xx = _x;
-	_inst.yy = _y;
-	_inst.text = _text;
-	_inst.drawTo = _drawTo;
+	var inst = instance_create_layer(0, 0, GameManager.layerUI, TextUI);
+	inst.xx = _x;
+	inst.yy = _y;
+	inst.text = _text;
+	inst.drawTo = _drawTo;
 	
-	return _inst;
+	return inst;
+}
+
+function UICreateImage(_x, _y, _sprite, _drawTo)
+{
+	_x = is_undefined(_x) ? 0 : _x;
+	_y = is_undefined(_y) ? 0 : _y;
+	_sprite = is_undefined(_sprite) ? 0 : _sprite;
+	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
+	
+	var inst = instance_create_layer(0, 0, GameManager.layerUI, ImageUI);
+	inst.xx = _x;
+	inst.yy = _y;
+	inst.sprite = _sprite;
+	inst.drawTo = _drawTo;
+	
+	return inst;
+}
+
+function UICreateHealthbar(_x, _y, _drawTo)
+{
+	_x = is_undefined(_x) ? 0 : _x;
+	_y = is_undefined(_y) ? 0 : _y;
+	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
+	
+	var inst = instance_create_layer(0, 0, GameManager.layerUI, HealthBarUI);
+	inst.xx = _x;
+	inst.yy = _y;
+	inst.drawTo = _drawTo;
+	
+	return inst;
 }
 
 function UISetRect(_UI, _x, _y, _width, _height, _padX, _padY)

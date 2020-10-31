@@ -1,9 +1,10 @@
-var value = playerID.hp/playerID.maxHp;
-draw_set_alpha(1);
-draw_set_color(c_black);
+if(drawTo == UIDrawTo.GUI) { exit; }
+
+draw_set_alpha(alpha);
+draw_set_color(color);
 draw_rectangle(x - width/2, y, x + width/2, y+height, false);
 if(value > 0)
 {
-	draw_set_color(make_color_rgb((1 - value)*255, value * 255, 0));
+	merge_color(color1, color2, value);
 	draw_rectangle(x - width/2, y, x - width/2 + width*value, y+height, false);
 }
