@@ -7,8 +7,6 @@ maxHp = hp;
 maxArmour = armour;
 maxStamina = stamina;
 
-instance_create_layer(x, y, GameManager.layerUI, PlayerHUD).playerID = id;
-
 //movement
 xSpeed = 0;
 ySpeed = 0;
