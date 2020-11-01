@@ -71,13 +71,14 @@ function DataWeapon(weapon, stat)
 
 ///@function CreateBullet(x, y, weapon, count, dir)
 
-function CreateBullet(xx, yy, _weapon, _count, dir)
+function CreateBullet(_id, xx, yy, _weapon, dir)
 {
-	repeat(_count)
+	repeat(DataWeapon(_weapon, WeapStat.Burst))
 	{
 		var xoff = DataWeapon(_weapon, WeapStat.xOffset) * dir;
 		var yoff = DataWeapon(_weapon, WeapStat.yOffset);
 		var inst = instance_create_layer(xx + xoff, yy - yoff, GameManager.layerObject, Bullet);
+		inst.playerID = _id;
 		inst.weapon = _weapon;
 		inst.rangeTimer = DataWeapon(_weapon, WeapStat.Range) * game_get_speed(gamespeed_fps);
 		inst.xSpeed = dir;

@@ -7,6 +7,8 @@ maxHp = hp;
 maxArmour = armour;
 maxStamina = stamina;
 
+kills = 0;
+
 //movement
 xSpeed = 0;
 ySpeed = 0;
@@ -23,6 +25,10 @@ canShoot = true;
 shootTimer = 0;
 player_inputID = Controller.Gamepad1;
 
+isWalking = false;
+isJumping = false;
+isGrounded = false;
+
 //weapons
 currentWeapon = 0;
 weapon[0] = Weapon.Rifle;
@@ -30,7 +36,7 @@ weapon[1] = Weapon.Pistol;
 meleeWeapon = Weapon.Knife;
 explosives = noone;
 
-//sprites
+//sprites and colors
 idle = spr_player;
 head = spr_playerheads;
 torso = spr_playertorso;
@@ -44,10 +50,6 @@ head_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 arm_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 torso_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 leg_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
-
-isWalking = false;
-isJumping = false;
-isGrounded = false;
 
 head_index = irandom(sprite_get_number(head));
 torso_index = irandom(sprite_get_number(torso));

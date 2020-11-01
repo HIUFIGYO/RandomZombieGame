@@ -105,7 +105,7 @@ if(canShoot)
 	{
 		canShoot = false;
 		shootTimer = DataWeapon(weapon[currentWeapon], WeapStat.FireRate) * game_get_speed(gamespeed_fps);
-		CreateBullet(x, y, weapon[currentWeapon], DataWeapon(weapon[currentWeapon], WeapStat.Burst), image_xscale);
+		CreateBullet(id, x, y, weapon[currentWeapon], image_xscale);
 	}
 }
 

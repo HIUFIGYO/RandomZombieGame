@@ -28,6 +28,8 @@ if(count > 0)
 				continue;
 			destroy = true;
 			hits[| i].hp -= DataWeapon(weapon, WeapStat.Damage);
+			if(hits[| i].hp <= 0)
+				playerID.kills += 1;
 			break;
 		}
 	}

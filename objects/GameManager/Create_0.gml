@@ -1,4 +1,5 @@
 //zombie spawns
+maxZombies = 1000;
 spawnNumber = instance_number(ZombieSpawner);
 for(var i=0; i<spawnNumber; i++)
 {

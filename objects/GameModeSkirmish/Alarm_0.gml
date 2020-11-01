@@ -1,5 +1,5 @@
 alarm[0] = 60;
-if(totalZombies < zombieCount)
+if(totalZombies < totalKills + additionalZombies)
 {
 	GameSpawnZombie();
 }
