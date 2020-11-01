@@ -21,15 +21,4 @@ layerZombie = layer_create(-300);
 layerPlayer = layer_create(-400);
 layerUI     = layer_create(-500);
 
-//spawn nessisary objects
-gameMode = GameSpawnGameMode();
-var count = instance_number(PlayerSpawner);
-var pos, inst_player;
-for(i=0; i<count; i++)
-{
-	if(i > global.playerAmount)
-		break;
-	pos = instance_find(PlayerSpawner, i);
-	inst_player = instance_create_layer(pos.x, pos.y, layerPlayer, Player);
-	GameSetUpPlayer(inst_player, i);
-}
+alarm[0] = 1;

@@ -1,3 +1,4 @@
+global.maxPlayers = 4;
 global.playerAmount = 2;
 global.selectedGameMode = GM.Skirmish;
 global.playerInput[0] = Controller.Keyboard;

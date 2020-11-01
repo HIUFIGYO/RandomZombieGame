@@ -46,4 +46,5 @@ function GameSpawnGameMode()
 function GameSetUpPlayer(_player, _num)
 {
 	_player.player_inputID = global.playerInput[_num];
+	WindowSetCamFollow(_num, _player);
 }

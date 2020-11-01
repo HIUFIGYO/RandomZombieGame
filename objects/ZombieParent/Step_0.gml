@@ -53,7 +53,7 @@ if(place_meeting(x + xSpeed, y, BlockParent))
 		ySpeed = -jumpSpeed;
 	xSpeed = 0;
 }
-x += xSpeed;
+x += xSpeed * DeltaTime();
 
 if(place_meeting(x, y + ySpeed, BlockParent))
 {
@@ -63,7 +63,7 @@ if(place_meeting(x, y + ySpeed, BlockParent))
 	}
 	ySpeed = 0;
 }
-y += ySpeed;
+y += ySpeed * DeltaTime();
 
 //attack
 if(!isDead and !isAttacking and target != noone)
