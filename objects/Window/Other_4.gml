@@ -20,9 +20,9 @@ switch(global.playerAmount)
 		break;
 	case 4:
 		camera[0] = camera_create_view(0, 0, w/2, h/2, 0, noone, -1, -1, w/4, h/4);
-		camera[0] = camera_create_view(0, 0, w/2, h/2, 0, noone, -1, -1, w/4, h/4);
-		camera[0] = camera_create_view(0, 0, w/2, h/2, 0, noone, -1, -1, w/4, h/4);
-		camera[0] = camera_create_view(0, 0, w/2, h/2, 0, noone, -1, -1, w/4, h/4);
+		camera[1] = camera_create_view(0, 0, w/2, h/2, 0, noone, -1, -1, w/4, h/4);
+		camera[2] = camera_create_view(0, 0, w/2, h/2, 0, noone, -1, -1, w/4, h/4);
+		camera[3] = camera_create_view(0, 0, w/2, h/2, 0, noone, -1, -1, w/4, h/4);
 		break;
 }
 

@@ -1,9 +1,11 @@
 if(Window.viewsBuilt)
 {
+	//game mode object
 	gameMode = GameSpawnGameMode();
-	var count = instance_number(PlayerSpawner);
+	
+	//players
 	var pos, inst_player;
-	for(var i=0; i<count; i++)
+	for(var i=0; i<instance_number(PlayerSpawner); i++)
 	{
 		if(i >= global.playerAmount)
 			break;
@@ -12,5 +14,5 @@ if(Window.viewsBuilt)
 		GameSetUpPlayer(inst_player, i);
 	}
 }
-else
+else//try again
 	alarm[0] = 1;
