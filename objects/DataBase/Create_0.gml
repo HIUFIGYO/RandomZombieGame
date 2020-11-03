@@ -17,6 +17,7 @@ weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = noone;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = noone;
+weapon[# WeaponStat.Pierce, i] = 0;
 
 i++; //Standard Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
@@ -34,6 +35,7 @@ weapon[# WeapStat.yOffset, i] = 45;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Pistol;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //Standard Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -51,6 +53,7 @@ weapon[# WeapStat.yOffset, i] = 41;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Rifle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //Standard Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -68,6 +71,7 @@ weapon[# WeapStat.yOffset, i] = 33;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Shotgun;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 5;
+weapon[# WeapStat.Pierce, i] = 1;
 
 i++; //Advanced Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
@@ -85,6 +89,7 @@ weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = noone;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = noone;
+weapon[# WeapStat.Pierce, i] = 1;
 
 i++; //Advanced Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
@@ -102,6 +107,7 @@ weapon[# WeapStat.yOffset, i] = 45;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Pistol;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //Advanced Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -119,6 +125,7 @@ weapon[# WeapStat.yOffset, i] = 36;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Rifle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //Advanced Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -136,6 +143,7 @@ weapon[# WeapStat.yOffset, i] = 36;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Shotgun;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 6;
+weapon[# WeapStat.Pierce, i] = 2;
 
 i++; //Super Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
@@ -153,6 +161,7 @@ weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = noone;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = noone;
+weapon[# WeapStat.Pierce, i] = 2;
 
 i++; //Super Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
@@ -170,6 +179,7 @@ weapon[# WeapStat.yOffset, i] = 45;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Pistol;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 1;
 
 i++; //Super Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -187,6 +197,7 @@ weapon[# WeapStat.yOffset, i] = 34;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Rifle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //Super Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -204,6 +215,7 @@ weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Shotgun;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 7;
+weapon[# WeapStat.Pierce, i] = 1;
 
 i++; //Flamethrower
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -221,6 +233,7 @@ weapon[# WeapStat.yOffset, i] = 36;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Particle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 1;
 
 i++; //Rocket Launcher
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -238,6 +251,7 @@ weapon[# WeapStat.yOffset, i] = 47;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Rocket;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //Tesla Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -255,6 +269,7 @@ weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Particle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //BioLauncher
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -272,6 +287,7 @@ weapon[# WeapStat.yOffset, i] = 34;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Acid;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //Heated Blade
 weapon[# WeapStat.Type, i] = WeapType.Melee;
@@ -289,6 +305,7 @@ weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = noone;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = noone;
+weapon[# WeapStat.Pierce, i] = 2;
 
 i++; //Purple Gun
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
@@ -306,6 +323,7 @@ weapon[# WeapStat.yOffset, i] = 34;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Purple;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 9;
 
 i++; //Undead Drainer
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -323,6 +341,7 @@ weapon[# WeapStat.yOffset, i] = 34;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Drainer;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //B.H. Darker
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -340,3 +359,4 @@ weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Particle;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
+weapon[# WeapStat.Pierce, i] = 0;

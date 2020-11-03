@@ -5,53 +5,75 @@
 -STAMINA: 100
 -SPEED: 4(Walk), 6(Sprint)
 -MONEY: $250
-	-Player Inventory-
--Primary - Standard Pistol(Normal) Nothing(Other)
--SideArm - Nothing
+	-Player Starting Inventory-
+-Primary - Nothing
+-SideArm - Standard Pistol(Outbreak) Nothing(Other)
 -Melee - Standard Melee
 -Support - Nothing
 -Medical - Medicine(Normal) Nothing(Other)
 -Vial - Nothing
 
 	-Player Reviving & Respawning-
-When players HEALTH reaches 0 they are dead. When all players are dead the mission is over.
+When players HEALTH reaches 0 they are downed. When all players are downed, they die and mission is over.
 Players can respawn if:
--An alive teammate revives them. Reviving Time: 5s. Revive Decay: 1s.
+-An alive teammate revives them. Reviving Time: 5s. Revive Decay: 1.5s.
 -3 minutes have passed, alive players can purchase a Player Respawn for $3000 at the shop. Doing so increases time for next Player Respawn to become available by 1 minute.
+Downed Players lose:
+-Outbreak: 30% Money
+-Epidemic: 40% Money, Drops weapon being held
+-Pandemic: 50% Money, Drops weapon being held
+-Apocalypse: 60% Money, Drops both weapons
+Revived Players recover:
+-Outbreak: 50% Health
+-Epidemic: 40% Health
+-Pandemic: 30% Health
+-Apocalypse: 25% Health
 Respawned Players Spawn with:
 -Outbreak: 75% Health, 70% Money, 75% Ammo, Standard Pistol, Standard Melee
--Epidemic: 50% Health, 50% Money, 75% Ammo, Standard Pistol, Standard Melee 
+-Epidemic: 65% Health, 50% Money, 75% Ammo, Standard Pistol, Standard Melee 
 -Pandemic: 50% Health, 50% Money, 50% Ammo, Standard Pistol, Standard Melee 
--Apocalypse: 25% Health, 30% Money, 50% Ammo, Standard Melee
+-Apocalypse: 35%% Health, 30% Money, 50% Ammo, Standard Melee
+
+	-Player Stamina-
+Stamina grants the player the ability to sprint.
+While sprinting the player consumes 1 Stamina every 0.1 seconds and recovers stamina at a rate of 1 Stamina every 0.05 seconds.
+If the player stops sprinting before stamina is completely depleted, stamina begins to recover after 0.5 seconds
+If the player depletes all their stamina from sprinting, stamina begins to recover after 1.5 seconds.
 
 	-Controls-
-		Keyboard	Controller
+		Keyboard		Controller
 -Left		Left		Left-Leftstick
 -Right		Right		Right-Leftstick
 -Crouch		Down		Down-Leftstick
 -Jump		Spacebar	A
--Interact	Up		Up-Leftstick
--Shoot		W		RT
--Grenade	G		B
--NextWeapon	E		RB
--PrevWeapon	Q		LB
--NextGear	X		Right-Dpad
--PrevGear	Z		Left-Dpad
-Give/Revive	F		Y
--Reload		R		X
--Pause		Esc		Start
+-Interact	Up			Up-Leftstick
+-Shoot		S			RT
+-Grenade	G			B
+-ToggleWeap	E			LB
+-Melee		Q			RB
+-NextGear	D			Right-Dpad
+-PrevGear	A			Left-Dpad
+Give/Revive	F			Y
+-Reload		R			X
+-Pause		Esc			Start
 
 	-Main Menu-
--Play
+-Survive Local
 	GameMode
-	Map
-	Players
-	Difficulty
 	WinCondition
--Extras
-	Statistics
-	Records
-	Zombology
+	Map
+	Difficulty
+-Survive Online
+	Host
+		GameMode
+		WinCondition
+		Map
+		Difficulty
+		Players
+	Join
+-Statistics
+-Records
+-Zombology
 -Options
 	MasterVolume
 	SoundVolume
@@ -65,6 +87,24 @@ Give/Revive	F		Y
 
 	-Statistics-
 Total Kills
+Melee Kills
+Money Earned
+Money Spent
+Shots Fired
+Most Damage Dealt
+Total Damage Dealt
+Grenades Thrown
+Vials Used
+Most Damage Taken
+Total Damage Taken
+Downs/ Deaths 
+Skirmish Played
+Horde Played
+Wave Played
+Plays on Outbreak
+Plays on Epidemic
+Plays on Pandemic
+Plays on Apocalypse
 Limper Kills
 Rabid Kills
 Grapple Kills
@@ -76,28 +116,16 @@ Injector Kills
 Blade Kills
 Creeper Kills
 Ripper Kills
-Money Earned
-Money Spent
-Bullets Fired
-Damage Dealt
-Grenades Thrown
-Vials Used
-Most Damage Taken
-Total Damage Taken
-Deaths 
-Skirmish Played
-Horde Played
-Wave Played
-Plays on Outbreak
-Plays on Epidemic
-Plays on Pandemic
-Plays on Apocalypse
 
 	-Records-
 Most Kills in Skirmish (Outbreak)
 Most Kills in Skirmish (Epidemic)
 Most Kills in Skirmish (Pandemic)
 Most Kills in Skirmish (Apocalypse)
+Most Total Kills in Skirmish (Outbreak)
+Most Total Kills in Skirmish (Epidemic)
+Most Total Kills in Skirmish (Pandemic)
+Most Total Kills in Skirmish (Apocalypse)
 Most Kills in Horde (Outbreak)
 Most Kills in Horde (Epidemic)
 Most Kills in Horde (Pandemic)
@@ -116,6 +144,7 @@ Most Waves survived (Pandemic)
 Most Waves survived (Apocalypse)
 
 	-Zombology-
+Portrait: Unlocks after 1 kill
 Name: Unlocks after 10 kills
 Kills/KilledBy: Unlocks after 25 kills
 Statistics: Unlocks after 50 kills
@@ -130,7 +159,7 @@ Description: Unlocks after 100 kills
 	After every 4 seconds (-1 second per player) a zombie appears.
 	Score/WinCondition: Time Survived
 -Wave
-	Gamemode is wave based. First wave starts with 4 zombies (+1 per player) Wave size increases by 50% (rounded down) for each completed wave. Cooldown between waves 30 seconds.
+	Gamemode is wave based. First wave starts with 4 zombies (+1 per player) Wave size increases by 50% (rounded down) for each completed wave. Cooldown between waves 20 seconds.
 	Score/WinCondition: Waves Survived
 
 	-Difficulty-
@@ -142,19 +171,19 @@ Description: Unlocks after 100 kills
 	-Starting enemies: Limper
 -Epidemic
 	-Recommended for Experienced Players
-	-Enemy have more health and deal more damage
+	-Enemies have more health and deal more damage
 	-Money gain is -1$
 	-Player REGENERATION increased from 4s to 5s
 	-Starting enemies: Limper
 -Pandemic
 	-Recommended for Players wanting a Challenge
-	-Enemy have even more health, deal even more damage and move faster
+	-Enemies have even more health, deal even more damage and move faster
 	-Money gain is -2$
 	-Player REGENERATION increased from 4s to 6s
 	-Starting enemies: Limper and Rabid
 -Apocalypse
 	-Recommended for Players who have a Death Wish
-	-Enemy have a lot more health, deal a lot more damage and move faster
+	-Enemies have a lot more health, deal a lot more damage and move faster
 	-Money gain is -3$
 	-Player REGENERATION increased from 4s to 7s
 	-Starting enemies: Limper, Rabid and Lard
@@ -400,7 +429,7 @@ Description: Unlocks after 100 kills
 -Damage Buff
 	-Increase Fire damage by 0.5.
 	-Increase Bullet and Electric damage by 1.
-	-Increase Max Pellet damage by 1.
+	-Increase Max Pellet count by 1.
 	-Increase Melee damage by 2.
 	-Increase Explosive and Splash damage by 3.
 	Price: $1500
@@ -455,12 +484,12 @@ Description: Unlocks after 100 kills
 	Price: $1100
 
 -Ammunition Crate
-	-Drop a crate on the ground that provides ammo for pistols, rifles, shotguns and grenades.
+	-Drop a crate on the ground that provides ammo for pistols, rifles, shotguns and explosives.
 	Uses: 4
 	Price: $1250
 
 -Heavy Weapons Crate
-	-Drop a crate on the ground that provides ammo for Explosives, beam weapons and grenades.
+	-Drop a crate on the ground that provides ammo for launchers, beam weapons and explosives.
 	Uses: 4
 	Price: $2500
 
@@ -521,7 +550,7 @@ Player Respawn
 	HeavyWeaponsCrate: 1 (Restocks every 5 minutes)
 	OtherworldlyCrate: 1 (Restocks every 5 minutes)
 	Barricade: 2 (Restocks 1 every 5 minutes) 
-	AdvancedBarricade: 2 (Doesn't restock)
+	AdvancedBarricade: 2 (Restocks 1 every 7 minutes once all empty)
 	Turrets: 2 (Doesn't restock)
 	Medicine: 2 + 1 per player (Restocks 1 every 5 minutes once all empty)
 	MedSyringe: 3 (Restocks 1 every 5 minutes once all empty)
@@ -658,24 +687,24 @@ Ripper
 
 	-Enemy Scaling-
 DamageMod 		Outbreak	Epidemic	Pandemic	Apocalypse
--Limper   		2	  	+3	 	 +7		+12
--Rabid    		3	  	+4	  	+9		+15
--Lard     		6		+4		+9		+15
--LardAcid 		0	 	+1	 	+3  	    	+6
--Grapple  		1		+2		+5		+9
--Ghost 			4		+5		+11		+18
--Burster  		8		+5		+11		+18
--BursterSpike		4		+3		+7		+12
--Twitcher 		2		+1		+3		+6
--Spewer   		8		+5		+11		+18
--SpewerAcidBall 	10		+6		+13		+21
--SpewerExplosion	5		+3		+7		+12
--Injector 		4		+5		+11		+18
--Inject			25		+0		+0		+0
--Blade	  		10		+6		+13		+21
--Creeper  		16		+9		+19		+30
--Ripper	  		20		+11		+23		+36
--RipperGutter		1		+1		+2		+3
+-Limper   		2	  		+3	 		 +7			+12
+-Rabid    		3	  		+4	  		+9			+15
+-Lard     		6			+4			+9			+15
+-LardAcid 		0			+1	 		+3  	   	+6
+-Grapple  		1			+2			+5			+9
+-Ghost 			4			+5			+11			+18
+-Burster  		8			+5			+11			+18
+-BursterSpike	4			+3			+7			+12
+-Twitcher 		2			+1			+3			+6
+-Spewer   		8			+5			+11			+18
+-SpewerAcidBall 10			+6			+13			+21
+-SpewerExplosion 5			+3			+7			+12
+-Injector 		4			+5			+11			+18
+-Inject			25			+0			+0			+0
+-Blade	  		10			+6			+13			+21
+-Creeper  		16			+9			+19			+30
+-Ripper	  		20			+11			+23			+36
+-RipperGutter	1			+1			+2			+3
 
 DamageMelee
 -Limper   2/5/9/14
@@ -700,30 +729,30 @@ DamageAbility
 -RipperGutter	 1/2/3/4
 
 HealthMod	Outbreak	Epidemic	Pandemic	Apocalypse
--Limper		+0		+1	   	+2		+4
--Rabid		+0	    	+1	   	+2		+4
--Lard		+0	 	+2   		+4		+8
--Grapple	+0	  	+1	   	+2		+4
--Ghost		+0	 	+1	   	+2		+4
--Burster	+0	  	+2     		+4		+8
--Twitcher	+0		+2		+4		+8
--Injector	+0		+3		+6		+12
--Spewer		+0		+3		+6		+12
--Blade		+0		+3		+6		+12
--Creeper	+0		+2		+4		+8
--Ripper		+0		+20		+40		+80
+-Limper		+0			+1	   		+2			+4
+-Rabid		+0	    	+1	   		+2			+4
+-Lard		+0	 		+2   		+4			+8
+-Grapple	+0	  		+1			+2			+4
+-Ghost		+0	 		+1			+2			+4
+-Burster	+0			+2     		+4			+8
+-Twitcher	+0			+2			+4			+8
+-Injector	+0			+3			+6			+12
+-Spewer		+0			+3			+6			+12
+-Blade		+0			+3			+6			+12
+-Creeper	+0			+2			+4			+8
+-Ripper		+0			+20			+40			+80
 
 PlayerMod	One		Two		Three		Four	x1.5
 -Creeper
-Numbers		+0   		+5		+10		+15	Outbreak
-		+0   		+5		+10		+15	Epidemic
-		+0   		+5		+10		+15	Pandemic
-		+0   		+5		+10		+15	Apocalypse
+Numbers		+0   	+5		+10			+15		Outbreak
+			+0   	+5		+10			+15		Epidemic
+			+0   	+5		+10			+15		Pandemic
+			+0   	+5		+10			+15		Apocalypse
 PlayerMod	One		Two		Three		Four	x1.5
--Ripper		+0   		+50		+100		+150	Outbreak
-Health	  	+0	   	+60   		+120		+180	Epidemic
-	 	+0	  	+70  		+140		+210	Pandemic
-	 	+0	   	+90    		+180		+270	Apocalypse
+-Ripper		+0   	+50		+100		+150	Outbreak
+Health	  	+0	   	+60   	+120		+180	Epidemic
+	 		+0	  	+70  	+140		+210	Pandemic
+	 		+0	   	+90    	+180		+270	Apocalypse
 
 Health
 -Limper		4/5/6/8
@@ -739,17 +768,17 @@ Health
 -Creeper	10/12/14/18
 -Ripper		100/120/140/180
 
--Creeper	Outbreak	Epidemic	Pandemic	Apocalypse
-One		10 x 10	(100)	12 x 10 (120)	14 x 10	(140)	18 x 10 (180)
-Two		10 x 15	(150)	12 x 15 (180)	14 x 15	(210)	18 x 15 (270)
+-Creeper	Outbreak		Epidemic		Pandemic		Apocalypse
+One			10 x 10	(100)	12 x 10 (120)	14 x 10	(140)	18 x 10 (180)
+Two			10 x 15	(150)	12 x 15 (180)	14 x 15	(210)	18 x 15 (270)
 Three		10 x 20	(200)	12 x 20 (240)	14 x 20	(280)	18 x 20 (360)
 Four		10 x 25	(250)	12 x 25 (300)	14 x 25	(350)	18 x 25 (450)
 
 -Ripper		Outbreak	Epidemic	Pandemic	Apocalypse  
-One		100		120		140		180
-Two		150		180		210		270
-Three		200		240		280		360
-Four		250		300		350		450
+One			100			120			140			180
+Two			150			180			210			270
+Three		200			240			280			360
+Four		250			300			350			450
 
 	-Debuffs-
 -Ignite

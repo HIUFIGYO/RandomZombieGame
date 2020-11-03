@@ -3,7 +3,7 @@
   "glyphOperations": 0,
   "interpreter": 0,
   "pointRounding": 0,
-  "fontName": "Arial",
+  "fontName": "Wingdings",
   "styleName": "Regular",
   "size": 12.0,
   "bold": false,

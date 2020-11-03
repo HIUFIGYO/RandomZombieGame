@@ -40,6 +40,7 @@ enum WeapStat
 	BulletImage,
 	Auto,
 	Burst,
+	Pierce,
 	count
 }
 
