@@ -24,13 +24,21 @@ if(count > 0)
 		}
 		if(hit == "ZombieParent")
 		{
-			if(hits[| i].isDead)
+			if(hits[| i].isDead or hits[| i].hp <= 0)
 				continue;
-			destroy = true;
+				
 			hits[| i].hp -= DataWeapon(weapon, WeapStat.Damage);
 			if(hits[| i].hp <= 0)
 				playerID.kills += 1;
-			break;
+				
+			pierce -= 1;
+			if(pierce > 0)
+				continue;
+			else
+			{
+				destroy = true;
+				break;
+			}
 		}
 	}
 	if(destroy)

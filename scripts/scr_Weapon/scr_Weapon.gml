@@ -81,7 +81,9 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 		var inst = instance_create_layer(xx + xoff, yy - yoff, GameManager.layerObject, Bullet);
 		inst.playerID = _id;
 		inst.weapon = _weapon;
+		inst.spd = DataWeapon(_weapon, WeapStat.BulletSpeed);
 		inst.rangeTimer = DataWeapon(_weapon, WeapStat.Range) * game_get_speed(gamespeed_fps);
+		inst.pierce = DataWeapon(_weapon, WeapStat.Pierce);
 		inst.image_xscale = flip;
 		inst.image_index = DataWeapon(_weapon, WeapStat.BulletImage);
 		

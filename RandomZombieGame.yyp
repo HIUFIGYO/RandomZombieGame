@@ -50,6 +50,7 @@
     {"id":{"name":"light_update","path":"scripts/light_update/light_update.yy",},"order":4,},
     {"id":{"name":"ZombieSpawner","path":"objects/ZombieSpawner/ZombieSpawner.yy",},"order":4,},
     {"id":{"name":"spr_support","path":"sprites/spr_support/spr_support.yy",},"order":13,},
+    {"id":{"name":"PhysicsObject","path":"objects/PhysicsObject/PhysicsObject.yy",},"order":7,},
     {"id":{"name":"spr_barricadeplace","path":"sprites/spr_barricadeplace/spr_barricadeplace.yy",},"order":7,},
     {"id":{"name":"spr_barricade","path":"sprites/spr_barricade/spr_barricade.yy",},"order":5,},
     {"id":{"name":"spr_melee2HB","path":"sprites/spr_melee2HB/spr_melee2HB.yy",},"order":1,},

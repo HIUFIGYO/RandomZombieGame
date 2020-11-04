@@ -34,8 +34,8 @@ if(InputGetButtonDown(player_inputID, Button.Interact))
 	
 	if(inst != noone)
 	{
-		inst.vspeed = -10;
-		inst.hspeed = irandom_range(-5, 5);
+		inst.ySpeed = -10;
+		inst.xSpeed = irandom_range(-5, 5);
 		inst.weapon_id = weapID;
 		inst.image_index = weapID;
 	}

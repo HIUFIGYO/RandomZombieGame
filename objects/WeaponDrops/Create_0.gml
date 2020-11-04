@@ -1,5 +1,5 @@
+event_inherited();
 image_speed = 0;
-gravity = 0.5;
 
 weapon_id = irandom(Weapon.count);
 

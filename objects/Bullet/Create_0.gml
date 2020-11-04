@@ -6,3 +6,4 @@ spd = 60;
 playerID = noone;
 weapon = noone;
 rangeTimer = 0
+pierce = 1;
