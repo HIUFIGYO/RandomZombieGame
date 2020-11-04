@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7343d710-91ac-4bfd-a5a6-5e2f1d4603e7","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "menu icons",
-    "path": "folders/Sprites/menu icons.yy",
+    "name": "Unused",
+    "path": "folders/Sprites/menu icons/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "extras_statistics",

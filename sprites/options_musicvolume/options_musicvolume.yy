@@ -72,8 +72,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1071946e-d66c-4b2c-8146-69de2dc4349b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "menu icons",
-    "path": "folders/Sprites/menu icons.yy",
+    "name": "Unused",
+    "path": "folders/Sprites/menu icons/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "options_musicvolume",

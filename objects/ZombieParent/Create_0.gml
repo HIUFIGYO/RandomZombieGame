@@ -17,7 +17,7 @@ ySpeed = 0;
 target = noone;
 friction = 0.3;
 
-image_speed = 1;
+image_speed = 0.5;
 spriteIdle = noone;
 spriteWalk = noone;
 spriteAttack = noone;
