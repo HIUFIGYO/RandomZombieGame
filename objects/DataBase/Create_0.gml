@@ -17,7 +17,7 @@ weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = noone;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = noone;
-weapon[# WeaponStat.Pierce, i] = 0;
+weapon[# WeapStat.Pierce, i] = 0;
 
 i++; //Standard Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;

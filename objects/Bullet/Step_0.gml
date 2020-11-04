@@ -9,7 +9,7 @@ if(rangeTimer <= 0)
 
 //move
 x += xSpeed * spd * DeltaTime();
-y += ySpeed;
+y += ySpeed * spd * DeltaTime();
 var hits = ds_list_create();
 var count = collision_line_list(xprevious, yprevious, x, y, all, false, true, hits, false);
 if(count > 0)

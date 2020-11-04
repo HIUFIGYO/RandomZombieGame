@@ -28,6 +28,7 @@ player_inputID = Controller.Gamepad1;
 isWalking = false;
 isJumping = false;
 isGrounded = false;
+isCrouching = false;
 
 //weapons
 currentWeapon = 0;
