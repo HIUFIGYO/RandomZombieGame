@@ -1,5 +1,6 @@
 if(Window.viewsBuilt)
 {
+	instance_create_layer(0, 0, layerCorpse, BloodGrinder);
 	//game mode object
 	gameMode = GameSpawnGameMode();
 	

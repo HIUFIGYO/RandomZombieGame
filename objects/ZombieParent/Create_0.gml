@@ -1,5 +1,6 @@
 hp = 5;
 damage = 1;
+acid = false;
 
 isDead = false;
 fadeOut = 0;

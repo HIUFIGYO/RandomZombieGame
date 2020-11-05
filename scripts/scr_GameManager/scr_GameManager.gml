@@ -59,3 +59,20 @@ function GameSetUpPlayer(_player, _num)
 	_player.player_inputID = global.playerInput[_num];
 	WindowSetCamFollow(_num, _player);
 }
+
+function GameSprayBlood(_x, _y, _acid, _flip)
+{
+	var inst;
+	repeat(global.bloodAmount + irandom(10))
+	{
+		inst = instance_create_layer(_x, _y, GameManager.layerCorpse, Blood);
+		if(_acid)
+		{
+			inst.isAcid = choose(false, true);
+			if(inst.isAcid)
+				inst.image_blend = c_lime;
+		}
+		inst.xSpeed = (10 + irandom(5)) * _flip;
+		inst.ySpeed = -10 + irandom(11);
+	}
+}

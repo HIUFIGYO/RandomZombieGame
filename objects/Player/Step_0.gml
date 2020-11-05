@@ -25,10 +25,19 @@ else
 }
 
 //Jump
-if(!isJumping and InputGetButton(player_inputID, Button.Jump) and(place_meeting(x, y+1, BlockParent)or place_meeting(x, y+1, OneWayBlock)))
+var fallThrough = false;
+if(!isJumping and InputGetButton(player_inputID, Button.Jump))
 {
-	isJumping = true;
-	ySpeed = -jumpSpeed;
+	if(isCrouching and place_meeting(x, y+1, OneWayBlock))
+	{
+		fallThrough = true;
+		ySpeed = 2;
+	}
+	else if(place_meeting(x, y+1, BlockParent)or place_meeting(x, y+1, OneWayBlock))
+	{
+		isJumping = true;
+		ySpeed = -jumpSpeed;
+	}
 }
 
 //Collision
@@ -40,7 +49,7 @@ if(place_meeting(x+xSpeed, y, BlockParent))
 	}
 	xSpeed = 0;
 }
-x += xSpeed * DeltaTime();
+x += clamp(xSpeed * DeltaTime(), -maxSpd, maxSpd);
 
 isGrounded = false;
 if(place_meeting(x, y+ySpeed, BlockParent))
@@ -64,13 +73,12 @@ if(oneWay)
 			y += sign(ySpeed);
 		}
 		isGrounded = true;
-		ySpeed = 0;
+		if(!fallThrough)
+			ySpeed = 0;
 		isJumping = false;
-		if(isCrouching and InputGetButtonDown(player_inputID, Button.Jump))
-			ySpeed = 2;
 	}
 }
-y += ySpeed * DeltaTime();
+y += clamp(ySpeed * DeltaTime(), -jumpSpeed, maxFallSpeed);
 
 //crouching
 if(InputGetButton(player_inputID, Button.Crouch) and isGrounded and !isWalking)

@@ -7,7 +7,7 @@ if(place_meeting(x+xSpeed, y, BlockParent))
 		x += sign(xSpeed);
 	xSpeed = -xSpeed * bounce;
 }
-x += xSpeed * DeltaTime();
+x += clamp(xSpeed * DeltaTime(), -maxSpeed, maxSpeed);
 
 if(place_meeting(x, y+ySpeed, BlockParent))
 {
@@ -16,4 +16,4 @@ if(place_meeting(x, y+ySpeed, BlockParent))
 	ySpeed = -ySpeed * bounce;
 	xSpeed = lerp(0, xSpeed, friction);
 }
-y += ySpeed * DeltaTime();
+y += clamp(ySpeed * DeltaTime(), -maxFallSpeed, maxFallSpeed);

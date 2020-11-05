@@ -40,6 +40,8 @@ if(count > 0)
 				continue;
 				
 			ds_list_add(targetsHit, hits[| i]);
+			
+			GameSprayBlood(x, y, hits[| i].acid, image_xscale);
 				
 			hits[| i].hp -= DataWeapon(weapon, WeapStat.Damage);
 			if(hits[| i].hp <= 0)
