@@ -239,6 +239,7 @@
     {"id":{"name":"lighting_post_composite","path":"scripts/lighting_post_composite/lighting_post_composite.yy",},"order":3,},
     {"id":{"name":"BugsAndToDoList","path":"notes/BugsAndToDoList/BugsAndToDoList.yy",},"order":3,},
     {"id":{"name":"spr_ammocaseplace2","path":"sprites/spr_ammocaseplace2/spr_ammocaseplace2.yy",},"order":23,},
+    {"id":{"name":"GameModeDebug","path":"objects/GameModeDebug/GameModeDebug.yy",},"order":2,},
     {"id":{"name":"spr_creeperatk2","path":"sprites/spr_creeperatk2/spr_creeperatk2.yy",},"order":3,},
     {"id":{"name":"spr_creeperrest","path":"sprites/spr_creeperrest/spr_creeperrest.yy",},"order":4,},
     {"id":{"name":"spr_creeperdead","path":"sprites/spr_creeperdead/spr_creeperdead.yy",},"order":5,},
@@ -248,6 +249,7 @@
     {"id":{"name":"sh_blend_light","path":"shaders/sh_blend_light/sh_blend_light.yy",},"order":0,},
     {"id":{"name":"spr_Acreeperrun","path":"sprites/spr_Acreeperrun/spr_Acreeperrun.yy",},"order":1,},
     {"id":{"name":"spr_Acreeperatk1","path":"sprites/spr_Acreeperatk1/spr_Acreeperatk1.yy",},"order":2,},
+    {"id":{"name":"rm_Debug","path":"rooms/rm_Debug/rm_Debug.yy",},"order":3,},
     {"id":{"name":"spr_Acreeperatk2","path":"sprites/spr_Acreeperatk2/spr_Acreeperatk2.yy",},"order":3,},
     {"id":{"name":"spr_Acreeperdead","path":"sprites/spr_Acreeperdead/spr_Acreeperdead.yy",},"order":4,},
     {"id":{"name":"Audio","path":"objects/Audio/Audio.yy",},"order":2,},
@@ -336,6 +338,7 @@
     {"name":"rm_startUp","path":"rooms/rm_startUp/rm_startUp.yy",},
     {"name":"rm_mainMenu","path":"rooms/rm_mainMenu/rm_mainMenu.yy",},
     {"name":"rm_level01","path":"rooms/rm_level01/rm_level01.yy",},
+    {"name":"rm_Debug","path":"rooms/rm_Debug/rm_Debug.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

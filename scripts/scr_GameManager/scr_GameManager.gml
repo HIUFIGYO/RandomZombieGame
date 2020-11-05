@@ -1,5 +1,6 @@
 enum GM
 {
+	Debug,
 	Skirmish
 }
 
@@ -43,6 +44,9 @@ function GameSpawnGameMode()
 	var inst;
 	switch(global.selectedGameMode)
 	{
+		case GM.Debug:
+			inst = instance_create_layer(0, 0, GameManager.layerDefault, GameModeDebug);
+			break;
 		case GM.Skirmish:
 			inst = instance_create_layer(0, 0, GameManager.layerDefault, GameModeSkirmish);
 			break;

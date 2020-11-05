@@ -18,7 +18,7 @@ if(count > 0)
 	for(var i=0; i<count; i++)
 	{
 		var hit = object_get_name(object_get_parent(hits[| i].object_index));
-		if(hit == "BlockParent" and !destroy)
+		if(hit == "BlockParent")
 		{
 			destroy = true;
 		}
@@ -26,6 +26,20 @@ if(count > 0)
 		{
 			if(hits[| i].isDead or hits[| i].hp <= 0)
 				continue;
+			var alreadyHit = false;
+			for(var zombieHit=0; zombieHit<ds_list_size(targetsHit); zombieHit++)
+			{
+				if(targetsHit[| zombieHit] == hits[| i])
+				{
+					alreadyHit = true;
+					break;
+				}
+			}
+			
+			if(alreadyHit)
+				continue;
+				
+			ds_list_add(targetsHit, hits[| i]);
 				
 			hits[| i].hp -= DataWeapon(weapon, WeapStat.Damage);
 			if(hits[| i].hp <= 0)
