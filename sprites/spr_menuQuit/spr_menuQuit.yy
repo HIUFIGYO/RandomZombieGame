@@ -17,8 +17,8 @@
   "width": 69,
   "height": 39,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texGroupMenu",
+    "path": "texturegroups/texGroupMenu",
   },
   "swatchColours": null,
   "gridX": 0,

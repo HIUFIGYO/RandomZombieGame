@@ -256,6 +256,7 @@
     {"id":{"name":"srp_Acreepergibs","path":"sprites/srp_Acreepergibs/srp_Acreepergibs.yy",},"order":5,},
     {"id":{"name":"light_ignore_shadow_caster","path":"scripts/light_ignore_shadow_caster/light_ignore_shadow_caster.yy",},"order":4,},
     {"id":{"name":"spr_Screeperidle","path":"sprites/spr_Screeperidle/spr_Screeperidle.yy",},"order":0,},
+    {"id":{"name":"Grenade","path":"objects/Grenade/Grenade.yy",},"order":2,},
     {"id":{"name":"AnimationCurve1","path":"animcurves/AnimationCurve1/AnimationCurve1.yy",},"order":0,},
     {"id":{"name":"HealthBarUI","path":"objects/HealthBarUI/HealthBarUI.yy",},"order":0,},
     {"id":{"name":"ZombieParent","path":"objects/ZombieParent/ZombieParent.yy",},"order":1,},
@@ -406,6 +407,7 @@
   ],
   "TextureGroups": [
     {"isScaled":false,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"texGroupMenu","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [
     {"CopyToMask":153157610357391598,"filePath":"datafiles","resourceVersion":"1.0","name":"Random Zombie Game 2020.txt","resourceType":"GMIncludedFile",},

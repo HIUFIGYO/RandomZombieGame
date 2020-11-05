@@ -8,6 +8,7 @@ enum Button
 	Shoot,
 	Grenade,
 	ToggleWeapon,
+	Melee,
 	NextGear,
 	PreviousGear,
 	Reload,
@@ -20,7 +21,7 @@ enum Button
 enum Axis
 {
 	Horizontal = gp_axislh,
-	Vertical = gp_axislv
+	Vertical = gp_axislv,
 }
 
 enum Controller

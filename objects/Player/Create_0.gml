@@ -9,6 +9,8 @@ maxStamina = stamina;
 
 kills = 0;
 
+grenadeAmount = 5;
+
 //movement
 xSpeed = 0;
 ySpeed = 0;
@@ -29,6 +31,12 @@ isWalking = false;
 isJumping = false;
 isGrounded = false;
 isCrouching = false;
+isMelee = false;
+isThrowing = false;
+
+meleeSubImage = 0;
+throwSubImage = 0;
+crouchOffset = 6;
 
 //weapons
 currentWeapon = 0;
@@ -46,6 +54,12 @@ guns = spr_playerarms;
 legs = spr_playerlegs;
 jumping = spr_playerjumping;
 cosmetic = spr_playercosmetics;
+crouch = spr_legscrouch;
+throwSprite = spr_playerthrow;
+melee[0] = spr_playermelee1;
+melee[1] = spr_playermelee2;
+melee[2] = spr_playermelee3;
+melee[3] = spr_playermelee4;
 
 head_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 arm_color = make_color_rgb(irandom(255), irandom(255), irandom(255));

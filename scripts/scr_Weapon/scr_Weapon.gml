@@ -70,7 +70,7 @@ function DataWeapon(weapon, stat)
 	return DataBase.weapon[# stat, weapon];
 }
 
-///@function CreateBullet(x, y, weapon, count, dir)
+///@function CreateBullet(id, x, y, weapon, flip, isCrouching)
 
 function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 {
@@ -89,8 +89,8 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 		
 		var accuracy = DataWeapon(_weapon, WeapStat.Accuracy);
 		if(crouch)
-			accuracy *= 1.25;
-		accuracy = clamp(accuracy, 0, 1);
+			accuracy *= 1.05;
+		accuracy = clamp(accuracy, 0, 0.97);
 		var bulletAngle = irandom((1 - accuracy) * 90);
 		inst.xSpeed = cos(bulletAngle * pi / 180) * flip;
 		inst.ySpeed = sin(bulletAngle * pi / 180) * choose(-1, 1);

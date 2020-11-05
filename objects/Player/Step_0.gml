@@ -66,11 +66,19 @@ if(oneWay)
 		isGrounded = true;
 		ySpeed = 0;
 		isJumping = false;
-		if(InputGetButtonDown(player_inputID, Button.Crouch))
+		if(isCrouching and InputGetButtonDown(player_inputID, Button.Jump))
 			ySpeed = 2;
 	}
 }
 y += ySpeed * DeltaTime();
+
+//crouching
+if(InputGetButton(player_inputID, Button.Crouch) and isGrounded and !isWalking)
+{
+	isCrouching = true;
+}
+else
+	isCrouching = false;
 
 //shooting
 if(shootTimer > 0)
@@ -84,9 +92,11 @@ if(shootTimer > 0)
 
 if(canShoot)
 {
+	var performedAction = false;
 	if(InputGetButtonDown(player_inputID, Button.ToggleWeapon))
 	{
 		currentWeapon = !currentWeapon;
+		performedAction = true;
 	}
 	
 	var auto = DataWeapon(weapon[currentWeapon], WeapStat.Auto);
@@ -101,11 +111,28 @@ if(canShoot)
 		shoot = true;
 	}
 	
-	if(shoot)
+	if(shoot and !performedAction)
 	{
+		performedAction = true;
 		canShoot = false;
 		shootTimer = DataWeapon(weapon[currentWeapon], WeapStat.FireRate) * game_get_speed(gamespeed_fps);
-		CreateBullet(id, x, y, weapon[currentWeapon], image_xscale, isCrouching);
+		var offset = 0;
+		if(isCrouching)
+			offset = crouchOffset;
+		CreateBullet(id, x, y + offset, weapon[currentWeapon], image_xscale, isCrouching);
+	}
+	
+	if(!performedAction and InputGetButtonDown(player_inputID, Button.Melee))
+	{
+		performedAction = true;
+		canShoot = false;
+		isMelee = true;
+	}
+	
+	if(!performedAction and InputGetButtonDown(player_inputID, Button.Grenade)and grenadeAmount > 0)
+	{
+		canShoot = false;
+		isThrowing = true;
 	}
 }
 
@@ -115,7 +142,41 @@ if(isWalking)
 	var walkingAnimSpeed = 0.6;
 	if(maxSpd == sprintSpeed)
 		walkingAnimSpeed = 1;
-	walking_index += walkingAnimSpeed;
+	walking_index += walkingAnimSpeed * DeltaTime();
 	if(walking_index >= sprite_get_number(legs))
 		walking_index = 0;	
+}
+
+if(isMelee)
+{
+	var index = 0;
+	if(meleeWeapon == Weapon.Knife2)
+		index = 1;
+	else if(meleeWeapon == Weapon.Knife3)
+		index = 2;
+	else if(meleeWeapon == Weapon.Knife4)
+		index = 3;
+		
+	meleeSubImage += DataWeapon(meleeWeapon, WeapStat.FireRate) * DeltaTime();
+	if(meleeSubImage >= sprite_get_number(melee[index]))
+	{
+		canShoot = true;
+		isMelee = false;
+		meleeSubImage = 0;
+	}
+}
+
+if(isThrowing)
+{
+	throwSubImage += DeltaTime();
+	if(throwSubImage >= sprite_get_number(throwSprite))
+	{
+		grenadeAmount -= 1;
+		canShoot = true;
+		isThrowing = false;
+		throwSubImage = 0;
+		var inst = instance_create_layer(x, y - 40, GameManager.layerObject, Grenade);
+		inst.xSpeed = image_xscale * 16;
+		inst.ySpeed = -10;
+	}
 }
