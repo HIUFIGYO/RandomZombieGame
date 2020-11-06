@@ -10,3 +10,9 @@ parent = noone;
 align = RectAlign.None;
 drawTo = UIDrawTo.GUI;
 drawView = 0;
+children = ds_list_create();
+
+UIRight = noone;
+UILeft = noone;
+UIUp = noone;
+UIDown = noone

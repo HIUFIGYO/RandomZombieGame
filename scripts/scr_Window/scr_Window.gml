@@ -1,9 +1,12 @@
 function WindowSetSize(width, height)
 {
 	Window.aspectRatio = width / height;
+	Window.width = width;
+	Window.height = height;
 	
 	window_set_size(width, height);
 	surface_resize(application_surface, width, height);
+	display_set_gui_size(width * Window.guiZoom, height * Window.guiZoom);
 	
 	WindowCenter();
 }

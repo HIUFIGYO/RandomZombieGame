@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Control",
-    "path": "folders/Objects/Control.yy",
+    "name": "Zombies",
+    "path": "folders/Objects/Zombies.yy",
   },
   "resourceVersion": "1.0",
   "name": "ZombieParent",

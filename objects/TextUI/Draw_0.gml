@@ -8,15 +8,15 @@ draw_set_valign(textVAlign);
 
 if(drawTo == UIDrawTo.Room)
 {
-	draw_text(x, y, text);
+	draw_text_ext(x, y, text, lineSeperation, width);
 }
 else if(drawTo == UIDrawTo.ViewPort)
 {
 	if(view_current == drawView)
-		draw_text(view_xport[drawView] + x, view_yport[drawView] + y, text);
+		draw_text_ext(view_xport[drawView] + x, view_yport[drawView] + y, text, lineSeperation, width);
 }
 else
 {
 	if(view_current == drawView)
-		draw_text(x, y, text);
+		draw_text_ext(x, y, text, lineSeperation, width);
 }

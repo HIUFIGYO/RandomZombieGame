@@ -1,4 +1,7 @@
 aspectRatio = 1;
+guiZoom = 1;
+width = 0;
+height = 0;
 var w = display_get_width();
 var h = display_get_height();
 WindowSetSize(w, h);

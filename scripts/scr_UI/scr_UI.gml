@@ -76,3 +76,43 @@ function UISetSize(_UI, _width, _height)
 	_UI.width = _width;
 	_UI.height = _height;
 }
+
+function UISetParent(_parent, _child)
+{
+	_child.parent = _parent;
+	ds_list_add(_parent.children, _child);
+}
+
+function UIRemoveParent(_child)
+{
+	if(_child.parent != noone)
+	{
+		for(var i=0; i<ds_list_size(_child.parent.children); i++)
+		{
+			if(_child.parent.children[| i] == _child)
+			{
+				ds_list_delete(_child.parent.children, i);
+				break;
+			}
+		}
+	}
+}
+
+function UIDestroy(_UIElement)
+{
+	var listOfUIToDestroy = ds_queue_create();
+	
+	ds_queue_enqueue(listOfUIToDestroy, _UIElement);
+	
+	while(ds_queue_size(listOfUIToDestroy) > 0)
+	{
+		var _checkForChildren = ds_queue_dequeue(listOfUIToDestroy);
+		for(var i=0; i<ds_list_size(_checkForChildren.children); i++)
+		{
+			ds_queue_enqueue(_checkForChildren.children[| i]);
+		}
+		instance_destroy(_checkForChildren);
+	}
+	
+	ds_queue_destroy(listOfUIToDestroy);
+}

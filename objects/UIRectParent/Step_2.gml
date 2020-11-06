@@ -1,31 +1,51 @@
-//auto align
+var autoX = 0, autoY = 0, autoW, autoH;
+
 if(parent != noone)
 {
-	switch(align)
-	{
-		case RectAlign.None:
-			x = parent.x + xx;
-			y = parent.y + yy;
-			break;
-			
-		case RectAlign.Horizontal:
-			x = parent.x + parent.width/2 - width/2;
-			y = parent.y + yy;
-			break;
-		
-		case RectAlign.Verticle:
-			x = parent.x + xx;
-			y = parent.y + parent.height/2 - height/2;
-			break;
-			
-		case RectAlign.Center:
-			x = parent.x + parent.width/2 - width/2;
-			y = parent.y + parent.height/2 - height/2;
-			break;
-	}
+	autoX = parent.x;
+	autoY = parent.y;
+	autoW = parent.width;
+	autoH = parent.height;
 }
 else
 {
-	x = xx;
-	y = yy;
+	if(drawTo == UIDrawTo.GUI)
+	{
+		autoW = display_get_gui_width();
+		autoH = display_get_gui_height();
+	}
+	else if(drawTo == UIDrawTo.ViewPort or drawTo == UIDrawTo.ViewPortRoom)
+	{
+		autoW = view_wport[drawView];
+		autoH = view_hport[drawView];
+	}
+	else
+	{
+		autoW = room_width;
+		autoH = room_height;
+	}
+}
+
+//auto align
+switch(align)
+{
+	case RectAlign.None:
+		x = autoX + xx + paddingX;
+		y = autoY + yy + paddingY;
+		break;
+			
+	case RectAlign.Horizontal:
+		x = autoX + autoW/2 - width/2 + paddingX;
+		y = autoY + yy + paddingY;
+		break;
+		
+	case RectAlign.Verticle:
+		x = autoX + xx + paddingX;
+		y = autoY + autoH/2 - height/2 + paddingY;
+		break;
+			
+	case RectAlign.Center:
+		x = autoX + autoW/2 - width/2 + paddingX;
+		y = autoY + autoH/2 - height/2 + paddingY;
+		break;
 }
