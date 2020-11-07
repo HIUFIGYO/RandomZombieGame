@@ -1,4 +1,4 @@
-var xThrow = InputGetAxis(player_inputID, Axis.Horizontal);
+var xThrow = InputGetButton(player_inputID, Button.Right) - InputGetButton(player_inputID, Button.Left);
 
 //Calculate velocity
 var maxSpd = maxSpeed;
@@ -188,3 +188,7 @@ if(isThrowing)
 		inst.ySpeed = -10;
 	}
 }
+
+//UI Elements
+hpBar.value = hp/maxHp;
+hpText.text = string(hp) + "/" + string(maxHp);

@@ -8,7 +8,17 @@ maxArmour = armour;
 maxStamina = stamina;
 
 kills = 0;
+money = 0;
 
+buffs = noone;
+deBuffs = noone;
+
+//weapons
+currentWeapon = 0;
+weapon[0] = Weapon.Rifle;
+weapon[1] = Weapon.Pistol;
+meleeWeapon = Weapon.Knife;
+explosives = noone;
 grenadeAmount = 5;
 
 //movement
@@ -38,13 +48,6 @@ meleeSubImage = 0;
 throwSubImage = 0;
 crouchOffset = 6;
 
-//weapons
-currentWeapon = 0;
-weapon[0] = Weapon.Rifle;
-weapon[1] = Weapon.Pistol;
-meleeWeapon = Weapon.Knife;
-explosives = noone;
-
 //sprites and colors
 idle = spr_player;
 head = spr_playerheads;
@@ -70,3 +73,12 @@ head_index = irandom(sprite_get_number(head));
 torso_index = irandom(sprite_get_number(torso));
 cosmetic_index = irandom(sprite_get_number(cosmetic));
 walking_index = 0;
+
+//UI Elements
+hpBar = UICreateHealthbar(8, 8, UIDrawTo.ViewPort);
+hpBar.drawView = player_inputID;
+hpBar.color = c_black;
+UISetSize(hpBar, 200, 16);
+
+hpText = UICreateText(8, 32, "", UIDrawTo.ViewPort);
+hpText.color = c_yellow;

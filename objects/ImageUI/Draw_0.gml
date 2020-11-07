@@ -17,5 +17,5 @@ else if(drawTo == UIDrawTo.ViewPortRoom)
 }
 else if(view_current == drawView)
 {
-	draw_sprite_ext(sprite, subImage, view_xport[drawView] + x, view_yport[drawView] + y, W, H, 0, color, alpha);
+	draw_sprite_ext(sprite, subImage, camera_get_view_x(Window.camera[drawView]) + x, camera_get_view_y(Window.camera[drawView]) + y, W, H, 0, color, alpha);
 }
