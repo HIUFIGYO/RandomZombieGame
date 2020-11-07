@@ -6,6 +6,14 @@ enum UIDrawTo
 	ViewPortRoom
 }
 
+enum RectAlign
+{
+	None,
+	Horizontal,
+	Verticle,
+	Center
+}
+
 function UICreateText(_x, _y, _text, _drawTo)
 {
 	_x = is_undefined(_x) ? 0 : _x;
@@ -30,6 +38,22 @@ function UICreateImage(_x, _y, _sprite, _drawTo)
 	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
 	
 	var inst = instance_create_layer(0, 0, GameManager.layerUI, ImageUI);
+	inst.xx = _x;
+	inst.yy = _y;
+	inst.sprite = _sprite;
+	inst.drawTo = _drawTo;
+	
+	return inst;
+}
+
+function UICreateButton(_x, _y, _sprite, _drawTo)
+{
+	_x = is_undefined(_x) ? 0 : _x;
+	_y = is_undefined(_y) ? 0 : _y;
+	_sprite = is_undefined(_sprite) ? 0 : _sprite;
+	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
+	
+	var inst = instance_create_layer(0, 0, GameManager.layerUI, ButtonUI);
 	inst.xx = _x;
 	inst.yy = _y;
 	inst.sprite = _sprite;

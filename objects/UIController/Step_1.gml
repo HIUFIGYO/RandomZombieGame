@@ -1,26 +1,29 @@
 for(var i=0; i<global.maxPlayers; i++)
 {
-	if(InputGetButtonDown(i, Button.Left))
+	if(select[i] != noone)
 	{
-		if(select[i] != noone and select[i].UILeft != noone)
+		var lastSelect = select[i];
+		if(select[i].UILeft != noone and InputGetButtonDown(i, Button.Left))
+		{
 			select[i] = select[i].UILeft;
-	}
+		}
 	
-	if(InputGetButtonDown(i, Button.Right))
-	{
-		if(select[i] != noone and select[i].UIRight != noone)
+		if(select[i].UIRight != noone and InputGetButtonDown(i, Button.Right))
+		{
 			select[i] = select[i].UIRight;
-	}
+		}
 	
-	if(InputGetButtonDown(i, Button.Interact))
-	{
-		if(select[i] != noone and select[i].UIUp != noone)
+		if(select[i].UIUp != noone and InputGetButtonDown(i, Button.Interact))
+		{
 			select[i] = select[i].UIUp;
-	}
+		}
 	
-	if(InputGetButtonDown(i, Button.Crouch))
-	{
-		if(select[i] != noone and select[i].UIDown != noone)
+		if(select[i].UIDown != noone and InputGetButtonDown(i, Button.Crouch))
+		{
 			select[i] = select[i].UIDown;
+		}
+		select[i].isSelected = true;
+		if(lastSelect != select[i])
+			lastSelect.isSelected = false;
 	}
 }

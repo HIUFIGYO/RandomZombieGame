@@ -16,3 +16,5 @@ UIRight = noone;
 UILeft = noone;
 UIUp = noone;
 UIDown = noone
+isSelected = false;
+isMouseOver = false;

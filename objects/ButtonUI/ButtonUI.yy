@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_menuSurviveLocal",
-    "path": "sprites/spr_menuSurviveLocal/spr_menuSurviveLocal.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -24,16 +21,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"MenuSurviveLocal","path":"objects/MenuSurviveLocal/MenuSurviveLocal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"ButtonUI","path":"objects/ButtonUI/ButtonUI.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"ButtonUI","path":"objects/ButtonUI/ButtonUI.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "MainMenu",
-    "path": "folders/Objects/MainMenu.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "MenuSurviveLocal",
+  "name": "ButtonUI",
   "tags": [],
   "resourceType": "GMObject",
 }
