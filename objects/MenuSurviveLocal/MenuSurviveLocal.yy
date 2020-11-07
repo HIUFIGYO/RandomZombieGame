@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "ImageUI",
-    "path": "objects/ImageUI/ImageUI.yy",
+    "name": "ButtonUI",
+    "path": "objects/ButtonUI/ButtonUI.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,6 +25,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"MenuSurviveLocal","path":"objects/MenuSurviveLocal/MenuSurviveLocal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"MenuSurviveLocal","path":"objects/MenuSurviveLocal/MenuSurviveLocal.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

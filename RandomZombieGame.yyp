@@ -96,6 +96,7 @@
     {"id":{"name":"UIRectParent","path":"objects/UIRectParent/UIRectParent.yy",},"order":1,},
     {"id":{"name":"spr_limperatk2","path":"sprites/spr_limperatk2/spr_limperatk2.yy",},"order":3,},
     {"id":{"name":"spr_explosives","path":"sprites/spr_explosives/spr_explosives.yy",},"order":16,},
+    {"id":{"name":"MenuDisplay","path":"objects/MenuDisplay/MenuDisplay.yy",},"order":12,},
     {"id":{"name":"point_in_polygon","path":"scripts/point_in_polygon/point_in_polygon.yy",},"order":6,},
     {"id":{"name":"spr_limperdead","path":"sprites/spr_limperdead/spr_limperdead.yy",},"order":4,},
     {"id":{"name":"spr_limperdeading","path":"sprites/spr_limperdeading/spr_limperdeading.yy",},"order":5,},
