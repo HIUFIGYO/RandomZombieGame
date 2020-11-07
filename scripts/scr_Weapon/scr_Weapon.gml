@@ -96,3 +96,14 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 		inst.ySpeed = sin(bulletAngle * pi / 180) * choose(-1, 1);
 	}
 }
+
+function DamagePlayer(_player, _damage)
+{
+	_player.hp -= _damage;
+	repeat(_damage)
+	{
+		var inst = instance_create_layer(_player.x, _player.y - 32, GameManager.layerCorpse, Blood);
+		inst.xSpeed = -10 + irandom(20);
+		inst.ySpeed = -10 - irandom(10);
+	}
+}
