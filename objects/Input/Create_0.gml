@@ -25,11 +25,11 @@ keyMap[Button.Sprint] = vk_lshift;
 keyMap[Button.Assist] = ord("F");
 keyMap[Button.Pause] = vk_enter;
 
-gamepadMap[Button.Left] = gp_padl;
-gamepadMap[Button.Right] = gp_padr;
+gamepadMap[Button.Left] = Axis.Left;
+gamepadMap[Button.Right] = Axis.Right;
 gamepadMap[Button.Jump] = gp_face1;
-gamepadMap[Button.Crouch] = gp_padd;
-gamepadMap[Button.Interact] = gp_padu;
+gamepadMap[Button.Crouch] = Axis.Down;
+gamepadMap[Button.Interact] = Axis.Up;
 gamepadMap[Button.Shoot] = gp_shoulderrb;
 gamepadMap[Button.Grenade] = gp_shoulderlb;
 gamepadMap[Button.ToggleWeapon] = gp_shoulderl;

@@ -22,6 +22,10 @@ enum Axis
 {
 	Horizontal = gp_axislh,
 	Vertical = gp_axislv,
+	Left = 1000,
+	Right = 1001,
+	Up = 1002,
+	Down = 1003
 }
 
 enum Controller
@@ -39,7 +43,31 @@ function InputGetButton(_id, _button)
 	{
 		return keyboard_check(Input.keyMap[_button]);
 	}
-	return gamepad_button_check(_id - 1, Input.gamepadMap[_button]);
+	var isPressed = false;
+	switch(Input.gamepadMap[_button])
+	{
+		case Axis.Left:
+			if(gamepad_axis_value(_id - 1, gp_axislh) < 0)
+				isPressed = true;
+			break;
+		case Axis.Right:
+			if(gamepad_axis_value(_id - 1, gp_axislh) > 0)
+				isPressed = true;
+			break;
+		case Axis.Up:
+			if(gamepad_axis_value(_id - 1, gp_axislv) < 0)
+				isPressed = true;
+			break;
+		case Axis.Down:
+			if(gamepad_axis_value(_id - 1, gp_axislv) > 0)
+				isPressed = true;
+			break;
+		default:
+			isPressed = gamepad_button_check(_id - 1, Input.gamepadMap[_button]);
+			break;
+	}
+		
+	return isPressed;
 }
 
 function InputGetButtonDown(_id, _button)
