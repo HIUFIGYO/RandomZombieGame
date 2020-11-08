@@ -20,6 +20,5 @@ layerCorpse = layer_create(-100);
 layerObject = layer_create(-200);
 layerZombie = layer_create(-300);
 layerPlayer = layer_create(-400);
-layerUI     = layer_create(-500);
 
 alarm[0] = 1;

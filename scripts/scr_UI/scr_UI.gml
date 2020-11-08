@@ -21,7 +21,7 @@ function UICreateText(_x, _y, _text, _drawTo)
 	_text = is_undefined(_text) ? 0 : _text;
 	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
 	
-	var inst = instance_create_layer(0, 0, GameManager.layerUI, TextUI);
+	var inst = instance_create_layer(0, 0, UIController.layerUI, TextUI);
 	inst.xx = _x;
 	inst.yy = _y;
 	inst.text = _text;
@@ -37,7 +37,7 @@ function UICreateImage(_x, _y, _sprite, _drawTo)
 	_sprite = is_undefined(_sprite) ? 0 : _sprite;
 	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
 	
-	var inst = instance_create_layer(0, 0, GameManager.layerUI, ImageUI);
+	var inst = instance_create_layer(0, 0, UIController.layerUI, ImageUI);
 	inst.xx = _x;
 	inst.yy = _y;
 	inst.sprite = _sprite;
@@ -53,7 +53,7 @@ function UICreateButton(_x, _y, _sprite, _drawTo)
 	_sprite = is_undefined(_sprite) ? 0 : _sprite;
 	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
 	
-	var inst = instance_create_layer(0, 0, GameManager.layerUI, ButtonUI);
+	var inst = instance_create_layer(0, 0, UIController.layerUI, ButtonUI);
 	inst.xx = _x;
 	inst.yy = _y;
 	inst.sprite = _sprite;
@@ -68,7 +68,7 @@ function UICreateHealthbar(_x, _y, _drawTo)
 	_y = is_undefined(_y) ? 0 : _y;
 	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
 	
-	var inst = instance_create_layer(0, 0, GameManager.layerUI, HealthBarUI);
+	var inst = instance_create_layer(0, 0, UIController.layerUI, HealthBarUI);
 	inst.xx = _x;
 	inst.yy = _y;
 	inst.drawTo = _drawTo;
@@ -139,4 +139,10 @@ function UIDestroy(_UIElement)
 	}
 	
 	ds_queue_destroy(listOfUIToDestroy);
+}
+
+function UISetDepth(_UIElement, _depth)
+{
+	_UIElement.sortDepth = _depth;
+	UIController.sortFlag = true;
 }

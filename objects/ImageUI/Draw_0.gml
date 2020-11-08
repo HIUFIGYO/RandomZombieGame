@@ -1,4 +1,4 @@
-if(drawTo == UIDrawTo.GUI) { exit; }
+if(drawTo == UIDrawTo.GUI or !global.drawUI) { exit; }
 var W = 1, H = 1;
 if(stretched)
 {
