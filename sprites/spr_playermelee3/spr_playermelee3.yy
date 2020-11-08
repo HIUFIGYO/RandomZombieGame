@@ -15,7 +15,7 @@
   "VTile": false,
   "For3D": false,
   "width": 61,
-  "height": 93,
+  "height": 69,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -63,7 +63,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 30,
-    "yorigin": 93,
+    "yorigin": 69,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_playermelee3","path":"sprites/spr_playermelee3/spr_playermelee3.yy",},

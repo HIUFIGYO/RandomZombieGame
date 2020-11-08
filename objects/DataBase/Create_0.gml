@@ -4,7 +4,7 @@ weapon = ds_grid_create(WeapStat.count, Weapon.count);
 i=0; //Standard Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
 weapon[# WeapStat.Damage, i] = 3;
-weapon[# WeapStat.FireRate, i] = 0.5;
+weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = noone;
 weapon[# WeapStat.Ammo, i] = noone;
 weapon[# WeapStat.Accuracy, i] = noone;
@@ -76,7 +76,7 @@ weapon[# WeapStat.Pierce, i] = 2;
 i++; //Advanced Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
 weapon[# WeapStat.Damage, i] = 6;
-weapon[# WeapStat.FireRate, i] = 0.55;
+weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = noone;
 weapon[# WeapStat.Ammo, i] = noone;
 weapon[# WeapStat.Accuracy, i] = noone;
@@ -148,7 +148,7 @@ weapon[# WeapStat.Pierce, i] = 2;
 i++; //Super Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
 weapon[# WeapStat.Damage, i] = 9;
-weapon[# WeapStat.FireRate, i] = 0.6;
+weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = noone;
 weapon[# WeapStat.Ammo, i] = noone;
 weapon[# WeapStat.Accuracy, i] = noone;
@@ -292,7 +292,7 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Heated Blade
 weapon[# WeapStat.Type, i] = WeapType.Melee;
 weapon[# WeapStat.Damage, i] = 12;
-weapon[# WeapStat.FireRate, i] = 0.65;
+weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = noone;
 weapon[# WeapStat.Ammo, i] = noone;
 weapon[# WeapStat.Accuracy, i] = noone;
