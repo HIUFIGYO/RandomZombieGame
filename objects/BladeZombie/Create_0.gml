@@ -6,5 +6,5 @@ spriteAttack = spr_bladeatk1;
 spriteDead = spr_bladedead;
 
 damage = 10;
-hp =  12;
+hp =  14;
 moveSpeed = 5;
