@@ -97,6 +97,8 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 	}
 }
 
+///@function DamagePlayer(player, damage)
+
 function DamagePlayer(_player, _damage)
 {
 	_player.hp -= _damage;

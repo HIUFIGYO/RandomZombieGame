@@ -37,6 +37,8 @@ enum Controller
 	Gamepad4
 }
 
+///@function InputGetButton(id, button)
+
 function InputGetButton(_id, _button)
 {
 	if(_id == 0)
@@ -70,6 +72,8 @@ function InputGetButton(_id, _button)
 	return isPressed;
 }
 
+///@function InputGetButtonDown(id, button)
+
 function InputGetButtonDown(_id, _button)
 {
 	if(_id == 0)
@@ -79,6 +83,8 @@ function InputGetButtonDown(_id, _button)
 	return gamepad_button_check_pressed(_id - 1, Input.gamepadMap[_button]);
 }
 
+///@function InputGetButtonUp(id, button)
+
 function InputGetButtonUp(_id, _button)
 {
 	if(_id == 0)
@@ -87,6 +93,8 @@ function InputGetButtonUp(_id, _button)
 	}
 	return gamepad_button_check_released(_id - 1, Input.gamepadMap[_button]);
 }
+
+///@function InputGetAxis(id, axis)
 
 function InputGetAxis(_id, _axis)
 {

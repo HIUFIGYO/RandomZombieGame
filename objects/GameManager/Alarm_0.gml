@@ -15,5 +15,5 @@ if(Window.viewsBuilt)
 		GameSetUpPlayer(inst_player, i);
 	}
 }
-else//try again
+else
 	alarm[0] = 1;

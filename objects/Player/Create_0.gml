@@ -36,6 +36,7 @@ friction = 0.75;
 canShoot = true;
 shootTimer = 0;
 player_inputID = Controller.Gamepad1;
+playerID = 0;
 
 isWalking = false;
 isJumping = false;

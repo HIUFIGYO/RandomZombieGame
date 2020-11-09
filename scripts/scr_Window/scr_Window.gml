@@ -1,3 +1,5 @@
+///@function WindowSetSize(width, height)
+
 function WindowSetSize(width, height)
 {
 	Window.aspectRatio = width / height;
@@ -10,6 +12,8 @@ function WindowSetSize(width, height)
 	
 	WindowCenter();
 }
+
+///@function WindowSetFullScreen(full)
 
 function WindowSetFullScreen(full)
 {
@@ -25,6 +29,8 @@ function WindowCenter()
 	window_set_position(xx, yy);
 }
 
+///@function WindowSetViewPort(view, x, y, width, height)
+
 function WindowSetViewPort(viewID, xx, yy, w, h)
 {
 	view_visible[viewID] = true;
@@ -34,6 +40,8 @@ function WindowSetViewPort(viewID, xx, yy, w, h)
 	view_hport[viewID] = h;
 	view_camera[viewID] = Window.camera[viewID];
 }
+
+///@function WindowSetCamFollow(camera, target)
 
 function WindowSetCamFollow(camID, inst)
 {

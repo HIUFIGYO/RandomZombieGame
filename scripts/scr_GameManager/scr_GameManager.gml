@@ -4,6 +4,8 @@ enum GM
 	Skirmish
 }
 
+///@function GameZombieDead(id)
+
 function GameZombieDead(_id)
 {
 	GameManager.gameMode.totalZombies -= 1;
@@ -54,11 +56,16 @@ function GameSpawnGameMode()
 	return inst;
 }
 
+///@function GameSetUpPlayer(player, num)
+
 function GameSetUpPlayer(_player, _num)
 {
 	_player.player_inputID = global.playerInput[_num];
+	_player.playerID = _num;
 	WindowSetCamFollow(_num, _player);
 }
+
+///@function GameSprayBlood(x, y, isAcid, flip)
 
 function GameSprayBlood(_x, _y, _acid, _flip)
 {
