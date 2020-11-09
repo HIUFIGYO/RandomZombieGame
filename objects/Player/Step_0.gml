@@ -190,5 +190,8 @@ if(isThrowing)
 }
 
 //UI Elements
-hpBar.value = hp/maxHp;
-hpText.text = string(hp) + "/" + string(maxHp);
+if(spawnedUI)
+{
+	UIHealthbarSetValue(hpBar, hp/maxHp);
+	UITextSet(hpText, string(hp) + "/" + string(maxHp));
+}

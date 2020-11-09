@@ -284,7 +284,6 @@ function UITextSetAlign(_UI, _hAlign, _vAlign)
 {
 	_UI.textHAlign = _hAlign;
 	_UI.textHAlign = _vAlign;
-	
 }
 
 ///@function UITextSetLineSep(UI, lineSep)

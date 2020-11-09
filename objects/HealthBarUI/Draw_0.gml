@@ -31,7 +31,7 @@ if(_draw)
 	draw_rectangle(_x, _y, _x + width, _y+height, false);
 	if(value > 0)
 	{
-		merge_color(color1, color2, value);
+		draw_set_color(merge_color(color1, color2, value));
 		draw_rectangle(_x, _y, _x + width*value, _y+height, false);
 	}
 }

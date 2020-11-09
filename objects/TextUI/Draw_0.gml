@@ -13,7 +13,7 @@ if(drawTo == UIDrawTo.Room)
 else if(drawTo == UIDrawTo.ViewPort)
 {
 	if(view_current == drawView)
-		draw_text_ext(view_xport[drawView] + x, view_yport[drawView] + y, text, lineSeperation, width);
+		draw_text_ext(camera_get_view_x(Window.camera[drawView]) + x, camera_get_view_y(Window.camera[drawView]) + y, text, lineSeperation, width);
 }
 else
 {

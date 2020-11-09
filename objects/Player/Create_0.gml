@@ -76,10 +76,5 @@ cosmetic_index = irandom(sprite_get_number(cosmetic));
 walking_index = 0;
 
 //UI Elements
-hpBar = UICreateHealthbar(8, 8, UIDrawTo.ViewPort);
-hpBar.drawView = player_inputID;
-hpBar.color = c_black;
-UISetSize(hpBar, 200, 16);
-
-hpText = UICreateText(8, 32, "", UIDrawTo.ViewPort);
-hpText.color = c_yellow;
+spawnedUI = false;
+alarm[0] = 5;

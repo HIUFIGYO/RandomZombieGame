@@ -102,6 +102,10 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 function DamagePlayer(_player, _damage)
 {
 	_player.hp -= _damage;
+	if(_player.hp < 0)
+	{
+		_player.hp = 0;
+	}
 	repeat(_damage)
 	{
 		var inst = instance_create_layer(_player.x, _player.y - 32, GameManager.layerCorpse, Blood);
