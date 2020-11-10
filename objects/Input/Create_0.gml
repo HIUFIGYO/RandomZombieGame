@@ -23,6 +23,8 @@ keyMap[Button.PreviousGear] = ord("A");
 keyMap[Button.Reload] = ord("R");
 keyMap[Button.Sprint] = vk_lshift;
 keyMap[Button.Assist] = ord("F");
+keyMap[Button.DropMoney] = ord("Z");
+keyMap[Button.DropWeap] = ord("X");
 keyMap[Button.Pause] = vk_enter;
 
 gamepadMap[Button.Left] = Axis.Left;
@@ -39,4 +41,6 @@ gamepadMap[Button.PreviousGear] = gp_padl;
 gamepadMap[Button.Reload] = gp_face3;
 gamepadMap[Button.Sprint] = gp_face2;
 gamepadMap[Button.Assist] = gp_face4;
+keyMap[Button.DropMoney] = Axis.Up;
+keyMap[Button.DropWeap] = Axis.Down;
 gamepadMap[Button.Pause] = gp_start;

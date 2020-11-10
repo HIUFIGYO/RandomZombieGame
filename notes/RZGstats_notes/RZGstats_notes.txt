@@ -46,15 +46,18 @@ If the player depletes all their stamina from sprinting, stamina begins to recov
 -Right		Right		Right-Leftstick
 -Crouch		Down		Down-Leftstick
 -Jump		Spacebar	A
+-Sprint		LShift		B
 -Interact	Up			Up-Leftstick
 -Shoot		S			RT
--Grenade	G			B
+-Grenade	G			LT
 -ToggleWeap	E			LB
 -Melee		Q			RB
 -NextGear	D			Right-Dpad
 -PrevGear	A			Left-Dpad
 Give/Revive	F			Y
 -Reload		R			X
+-DropMoney	Z			Up-Dpad
+-DropWeap	X			Down-Dpad
 -Pause		Esc			Start
 
 	-Main Menu-
@@ -118,30 +121,30 @@ Creeper Kills
 Ripper Kills
 
 	-Records-
-Most Kills in Skirmish (Outbreak)
-Most Kills in Skirmish (Epidemic)
-Most Kills in Skirmish (Pandemic)
-Most Kills in Skirmish (Apocalypse)
-Most Total Kills in Skirmish (Outbreak)
-Most Total Kills in Skirmish (Epidemic)
-Most Total Kills in Skirmish (Pandemic)
-Most Total Kills in Skirmish (Apocalypse)
-Most Kills in Horde (Outbreak)
-Most Kills in Horde (Epidemic)
-Most Kills in Horde (Pandemic)
-Most Kills in Horde (Apocalypse)
-Longest Time Survived in Horde (Outbreak)
-Longest Time Survived in Horde (Epidemic)
-Longest Time Survived in Horde (Pandemic)
-Longest Time Survived in Horde (Apocalypse)
-Most Kills in Wave (Outbreak)
-Most Kills in Wave (Epidemic)
-Most Kills in Wave (Pandemic)
-Most Kills in Wave (Apocalypse)
-Most Waves survived (Outbreak)
-Most Waves survived (Epidemic)
-Most Waves survived (Pandemic)
-Most Waves survived (Apocalypse)
+Most Kills in Skirmish (Outbreak) (Player Count)
+Most Kills in Skirmish (Epidemic) (Player Count)
+Most Kills in Skirmish (Pandemic) (Player Count)
+Most Kills in Skirmish (Apocalypse) (Player Count)
+Most Total Kills in Skirmish (Outbreak) (Player Count)
+Most Total Kills in Skirmish (Epidemic) (Player Count)
+Most Total Kills in Skirmish (Pandemic) (Player Count)
+Most Total Kills in Skirmish (Apocalypse) (Player Count)
+Most Kills in Horde (Outbreak) (Player Count)
+Most Kills in Horde (Epidemic) (Player Count)
+Most Kills in Horde (Pandemic) (Player Count)
+Most Kills in Horde (Apocalypse) (Player Count)
+Longest Time Survived in Horde (Outbreak) (Player Count)
+Longest Time Survived in Horde (Epidemic) (Player Count)
+Longest Time Survived in Horde (Pandemic) (Player Count)
+Longest Time Survived in Horde (Apocalypse) (Player Count)
+Most Kills in Wave (Outbreak) (Player Count)
+Most Kills in Wave (Epidemic) (Player Count)
+Most Kills in Wave (Pandemic) (Player Count)
+Most Kills in Wave (Apocalypse) (Player Count)
+Most Waves survived (Outbreak) (Player Count)
+Most Waves survived (Epidemic) (Player Count)
+Most Waves survived (Pandemic) (Player Count)
+Most Waves survived (Apocalypse) (Player Count)
 
 	-Zombology-
 Portrait: Unlocks after 1 kill
@@ -679,7 +682,7 @@ Ripper
 
 -Enemy Strength Increases-
 	Every 500 kills a certain group of zombies will become stronger. Increasing their max health and damage by 50%.
-	This is signaled by a warming messaging saying: "The Enemy Grows Stronger", and the particular group of strengthened enemies eyes beginning to glow.
+	This is signaled by a warming messaging saying: "[WARNING] Zombie strength has grown!", and the particular group of strengthened enemies eyes beginning to glow.
 	500 Kills - Common Zombies become strengthened.
 	1000 Kills - Uncommon Zombies become strengthened.
 	1500 Kills - Advanced Zombies become strengthened.
@@ -878,3 +881,21 @@ Friendly Fire damage is rounded down. (minimum 1 damage)
 -Black Hole
 	<Player> turned themself into spaghetti
 	<Player> sent <Player> someplace no man has gone before
+
+	-Unique MEssages-
+-Ripper Spawn
+	[WARNING] A Ripper has appeared!
+-Creeper Spawn
+	[WARNING] A Creeper clan has appeared!
+-Enemy Strength Increases
+	[WARNING] Zombie strength has grown!
+
+	-Post Game Report-
+Most Kills
+Most Assists
+Money Gained
+Money Spent
+Most Damage Dealt
+Most Damage Taken
+Creeper Kills
+Ripper Damage Dealt

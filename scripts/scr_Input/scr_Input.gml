@@ -14,6 +14,8 @@ enum Button
 	Reload,
 	Sprint,
 	Assist,
+	DropMoney,
+	DropWeap,
 	Pause,
 	count
 }
