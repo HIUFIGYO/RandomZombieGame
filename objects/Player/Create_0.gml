@@ -24,8 +24,8 @@ grenadeAmount = 5;
 //movement
 xSpeed = 0;
 ySpeed = 0;
-maxSpeed = 6;
-sprintSpeed = 8;
+maxSpeed = 4;
+sprintSpeed = 6;
 jumpSpeed = 20;
 maxFallSpeed = 20;
 acceleration = 0.5;
