@@ -5,3 +5,4 @@ maxSpeed = 20;
 maxFallSpeed = 15;
 friction = 0.75;
 bounce = 0;
+bounceCutOff = 1.2;

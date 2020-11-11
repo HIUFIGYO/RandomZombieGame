@@ -1,5 +1,12 @@
 var index, offset = 0;
 
+//dead
+if(isDead)
+{
+	draw_sprite_ext(dead, 0, x, y, image_xscale, 1, 0, c_white, 1);
+	exit;
+}
+
 //draw legs
 if(isWalking and isGrounded)
 {

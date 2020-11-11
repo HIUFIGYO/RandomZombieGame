@@ -105,6 +105,7 @@ function DamagePlayer(_player, _damage)
 	if(_player.hp < 0)
 	{
 		_player.hp = 0;
+		_player.isDead = true;
 	}
 	repeat(_damage)
 	{
@@ -112,4 +113,12 @@ function DamagePlayer(_player, _damage)
 		inst.xSpeed = -10 + irandom(20);
 		inst.ySpeed = -10 - irandom(10);
 	}
+}
+
+///@function RevivePlayer(player, startHp)
+
+function RevivePlayer(_player, _startHp)
+{
+	_player.isDead = false;
+	_player.hp = _startHp;
 }

@@ -44,6 +44,7 @@ isGrounded = false;
 isCrouching = false;
 isMelee = false;
 isThrowing = false;
+isDead = false;
 
 meleeSubImage = 0;
 throwSubImage = 0;
@@ -60,6 +61,7 @@ jumping = spr_playerjumping;
 cosmetic = spr_playercosmetics;
 crouch = spr_legscrouch;
 throwSprite = spr_playerthrow;
+dead = spr_playerdead;
 melee[0] = spr_playermelee1;
 melee[1] = spr_playermelee2;
 melee[2] = spr_playermelee3;

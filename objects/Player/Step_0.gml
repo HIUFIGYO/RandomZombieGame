@@ -6,7 +6,7 @@ if(InputGetButton(player_inputID, Button.Sprint))
 {
 	maxSpd = sprintSpeed;
 }
-xSpeed += xThrow * acceleration;
+xSpeed += xThrow * acceleration * !isDead;
 xSpeed = clamp(xSpeed, -maxSpd, maxSpd);
 
 ySpeed += grav;
@@ -26,7 +26,7 @@ else
 
 //Jump
 var fallThrough = false;
-if(!isJumping and InputGetButton(player_inputID, Button.Jump))
+if(!isDead and !isJumping and InputGetButton(player_inputID, Button.Jump))
 {
 	if(isCrouching and place_meeting(x, y+1, OneWayBlock))
 	{
@@ -81,7 +81,7 @@ if(oneWay)
 y += clamp(ySpeed * DeltaTime(), -jumpSpeed, maxFallSpeed);
 
 //crouching
-if(InputGetButton(player_inputID, Button.Crouch) and isGrounded and !isWalking)
+if(!isDead and InputGetButton(player_inputID, Button.Crouch) and isGrounded and !isWalking)
 {
 	isCrouching = true;
 }
@@ -98,7 +98,7 @@ if(shootTimer > 0)
 	}
 }
 
-if(canShoot)
+if(canShoot and !isDead)
 {
 	var performedAction = false;
 	if(InputGetButtonDown(player_inputID, Button.ToggleWeapon))
