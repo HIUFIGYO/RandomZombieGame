@@ -8,10 +8,11 @@ enum UIDrawTo
 
 enum RectAlign
 {
-	None,
-	Horizontal,
-	Verticle,
-	Center
+	Left,
+	Right,
+	Center,
+	Top,
+	Bottom
 }
 
 ///@function UICreateText(x(option), y(option), text(option), drawTo(option))
@@ -242,11 +243,12 @@ function UISetView(_UI, _view)
 	_UI.drawView = _view;
 }
 
-///@function UISetAlign(UI, align)
+///@function UISetAlign(UI, alignH, alignV)
 
-function UISetAlign(_UI, _align)
+function UISetAlign(_UI, _alignH, _alignV)
 {
-	_UI.align = _align;
+	_UI.alignH = _alignH;
+	_UI.alignV = _alignV;
 }
 
 ///@function UISetNeighbours(UI, left(option), right(option), up(option), down(option))
@@ -398,12 +400,20 @@ function UIGetDepth(_UI)
 	return _UI.sortDepth;
 }
 
-///@function UIGetAlign(UI)
+///@function UIGetAlignH(UI)
 
-function UIGetAlign(_UI)
+function UIGetAlignH(_UI)
 {
-	return _UI.align;
+	return _UI.alignH;
 }
+
+///@function UIGetAlignV(UI)
+
+function UIGetAlignV(_UI)
+{
+	return _UI.alignV;
+}
+
 
 ///@function UIGetDrawTo(UI)
 

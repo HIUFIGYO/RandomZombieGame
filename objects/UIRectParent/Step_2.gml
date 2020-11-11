@@ -27,25 +27,40 @@ else
 }
 
 //auto align
-switch(align)
+switch(alignH)
 {
-	case RectAlign.None:
+	case RectAlign.Left:
 		x = autoX + xx + paddingX;
-		y = autoY + yy + paddingY;
-		break;
-			
-	case RectAlign.Horizontal:
-		x = autoX + autoW/2 - width/2 + paddingX;
-		y = autoY + yy + paddingY;
-		break;
-		
-	case RectAlign.Verticle:
-		x = autoX + xx + paddingX;
-		y = autoY + autoH/2 - height/2 + paddingY;
 		break;
 			
 	case RectAlign.Center:
 		x = autoX + autoW/2 - width/2 + paddingX;
+		break;
+		
+	case RectAlign.Right:
+		x = autoX + autoW + xx - width- paddingX;
+		break;
+		
+	default:
+		x = 0;
+		break;
+}
+
+switch(alignV)
+{
+	case RectAlign.Top:
+		y = autoY + yy + paddingY;
+		break;
+			
+	case RectAlign.Center:
 		y = autoY + autoH/2 - height/2 + paddingY;
+		break;
+		
+	case RectAlign.Bottom:
+		y = autoY + autoH + xx - height - paddingY;
+		break;
+		
+	default:
+		y = 0;
 		break;
 }

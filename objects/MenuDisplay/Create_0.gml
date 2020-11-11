@@ -1,7 +1,6 @@
 event_inherited();
 
-sprite = sprite_index;
-width = sprite_get_width(sprite_index);
-
-paddingX = display_get_gui_width() - width - 64;
-paddingY = 192;
+UIImageSetSprite(id, sprite_index);
+UISetSize(id,sprite_get_width(sprite_index), sprite_get_height(sprite_index));
+UISetPadding(id, 64, 192);
+UISetAlign(id, RectAlign.Right, RectAlign.Top);

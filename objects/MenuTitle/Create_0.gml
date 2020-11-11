@@ -1,9 +1,6 @@
 event_inherited();
 
-align = RectAlign.Horizontal;
-drawTo = UIDrawTo.GUI;
-stretched = true;
-sprite = sprite_index;
-width = sprite_get_width(sprite_index);
-height = sprite_get_height(sprite_index);
-paddingY = 64;
+UISetSize(id, sprite_get_width(sprite_index), sprite_get_height(sprite_index));
+UIImageSetSprite(id, sprite_index, 0, true);
+UISetPadding(id, 64, 64);
+UISetAlign(id, RectAlign.Center, RectAlign.Top);
