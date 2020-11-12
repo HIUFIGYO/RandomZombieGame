@@ -1,7 +1,7 @@
 if(sprite_index == spriteAttack)
 {
 	isAttacking = false;
-	if(distance_to_object(target) <= attackRange)
+	if(target != noone and distance_to_object(target) <= attackRange)
 	{
 		DamagePlayer(target, damage);
 	}

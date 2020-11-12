@@ -24,7 +24,17 @@ else
 	image_xscale = sign(xThrow);
 }
 
-//Jump
+//crouching
+isGrounded = (place_meeting(x, y+1, BlockParent) or place_meeting(x, y+1, OneWayBlock));
+
+if(!isDead and InputGetButton(player_inputID, Button.Crouch) and isGrounded and !isWalking)
+{
+	isCrouching = true;
+}
+else
+	isCrouching = false;
+
+//Jump/fallthrough
 var fallThrough = false;
 if(!isDead and !isJumping and InputGetButton(player_inputID, Button.Jump))
 {
@@ -51,7 +61,6 @@ if(place_meeting(x+xSpeed, y, BlockParent))
 }
 x += clamp(xSpeed * DeltaTime(), -maxSpd, maxSpd);
 
-isGrounded = false;
 if(place_meeting(x, y+ySpeed, BlockParent))
 {
 	while(!place_meeting(x, y+sign(ySpeed), BlockParent))
@@ -60,7 +69,6 @@ if(place_meeting(x, y+ySpeed, BlockParent))
 	}
 	if(ySpeed > 0)
 		isJumping = false;
-	isGrounded = true;
 	ySpeed = 0;
 }
 var oneWay = instance_place(x, y + ySpeed, OneWayBlock);
@@ -72,7 +80,6 @@ if(oneWay)
 		{
 			y += sign(ySpeed);
 		}
-		isGrounded = true;
 		if(!fallThrough)
 			ySpeed = 0;
 		isJumping = false;
@@ -80,15 +87,47 @@ if(oneWay)
 }
 y += clamp(ySpeed * DeltaTime(), -jumpSpeed, maxFallSpeed);
 
-//crouching
-if(!isDead and InputGetButton(player_inputID, Button.Crouch) and isGrounded and !isWalking)
-{
-	isCrouching = true;
-}
-else
-	isCrouching = false;
-
 //shooting
+if(!isDead and InputGetButtonDown(player_inputID, Button.Reload)and mag[currentWeapon] != DataWeapon(weapon[currentWeapon], WeapStat.Mag))
+{
+	WeaponReload(id, weapon[currentWeapon]);
+}
+//reloading
+if(reloadTimer[currentWeapon] > 0)
+{
+	reloadTimer[currentWeapon] -= DeltaTimeSecond();
+	var clipSize, changeAmmo = false;
+	
+	if(reloadTimer[currentWeapon] < 0)
+	{
+		reloadTimer[currentWeapon] = 0;
+		ammo[currentWeapon] += mag[currentWeapon];
+		clipSize = DataWeapon(weapon[currentWeapon], WeapStat.Mag);
+		changeAmmo = true;
+	}
+	
+	if(!changeAmmo and InputGetButtonDown(player_inputID, Button.Shoot)and CanCancelReload(weapon[currentWeapon]))
+	{
+		clipSize = floor(reloadTimer[currentWeapon]);
+		reloadTimer[currentWeapon] = 0;
+		changeAmmo = true;
+	}
+	
+	if(changeAmmo)
+	{
+		if(clipSize <= ammo[currentWeapon])
+		{
+			mag[currentWeapon] = clipSize;
+			ammo[currentWeapon] -= clipSize;
+		}
+		else
+		{
+			mag[currentWeapon] = ammo[currentWeapon];
+			ammo[currentWeapon] = 0;
+		}
+	}
+}
+
 if(shootTimer > 0)
 {
 	shootTimer -= 1;
@@ -122,12 +161,20 @@ if(canShoot and !isDead)
 	if(shoot and !performedAction)
 	{
 		performedAction = true;
-		canShoot = false;
-		shootTimer = DataWeapon(weapon[currentWeapon], WeapStat.FireRate) * game_get_speed(gamespeed_fps);
-		var offset = 0;
-		if(isCrouching)
-			offset = crouchOffset;
-		CreateBullet(id, x, y + offset, weapon[currentWeapon], image_xscale, isCrouching);
+		if(mag[currentWeapon] > 0 and reloadTimer[currentWeapon] <= 0)
+		{
+			canShoot = false;
+			mag[currentWeapon] -= 1;
+			shootTimer = DataWeapon(weapon[currentWeapon], WeapStat.FireRate) * game_get_speed(gamespeed_fps);
+			var offset = 0;
+			if(isCrouching)
+				offset = crouchOffset;
+			CreateBullet(id, x, y + offset, weapon[currentWeapon], image_xscale, isCrouching);
+		}
+		else
+		{
+			WeaponReload(id, weapon[currentWeapon]);
+		}
 	}
 	
 	if(!performedAction and InputGetButtonDown(player_inputID, Button.Melee))
@@ -192,6 +239,24 @@ if(isThrowing)
 //UI Elements
 if(spawnedUI)
 {
+	//damage overlay
+	UISetAlpha(overlay, overlayAlpha);
+	if(overlayAlpha > 0)
+	{
+		overlayAlpha -= DeltaTimeSecond();
+	}
+	
+	//health bar
 	UIHealthbarSetValue(hpBar, hp/maxHp);
 	UITextSet(hpText, string(hp) + "/" + string(maxHp));
+	
+	//Ammo text
+	var _text = string(mag[currentWeapon]) + "/" + string(ammo[currentWeapon])
+	UITextSet(ammoText, _text);
+	UISetSize(ammoText, string_width(_text), 20);
+	
+	//Debug reload timer
+	var _text = string(reloadTimer[currentWeapon]);
+	UITextSet(reloadText, _text);
+	UISetSize(reloadText, string_width(_text), 20);
 }

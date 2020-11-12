@@ -266,18 +266,11 @@ function UISetNeighbours(_UI, _left, _right, _up, _down)
 	_UI.UIDown = _down;
 }
 
-///@function UITextSet(UI, text, hAlign(option), vAlign(option), lineSep(option))
+///@function UITextSet(UI, text)
 
-function UITextSet(_UI, _text, _hAlign, _vAlign, _lineSep)
+function UITextSet(_UI, _text)
 {
-	_hAlign = is_undefined(_hAlign) ? _UI.textHAlign : _hAlign;
-	_vAlign = is_undefined(_vAlign) ? _UI.textVAlign : _vAlign;
-	_lineSep = is_undefined(_lineSep) ? _UI.lineSeperation : _lineSep;
-	
 	_UI.text = _text;
-	_UI.textHAlign = _hAlign;
-	_UI.textVAlign = _vAlign;
-	_UI.lineSeperation = _lineSep;
 }
 
 ///@function UITextSetAlign(UI, hAlign, vAlign)
@@ -434,4 +427,11 @@ function UIGetView(_UI)
 function UIForceSort()
 {
 	UIController.sortFlag = true;
+}
+
+///@function UITextGetText(UI)
+
+function UITextGetText(_UI)
+{
+	return _UI.text;
 }

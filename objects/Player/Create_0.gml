@@ -16,7 +16,15 @@ deBuffs = noone;
 //weapons
 currentWeapon = 0;
 weapon[0] = Weapon.Rifle;
+ammo[0] = DataWeapon(weapon[0], WeapStat.Ammo);
+mag[0] = DataWeapon(weapon[0], WeapStat.Mag);
+reloadTimer[0] = 0;
+
 weapon[1] = Weapon.Pistol;
+ammo[1] = DataWeapon(weapon[1], WeapStat.Ammo);
+mag[1] = DataWeapon(weapon[1], WeapStat.Mag);
+reloadTimer[1] = 0;
+
 meleeWeapon = Weapon.Knife;
 explosives = noone;
 grenadeAmount = 5;
@@ -45,6 +53,7 @@ isCrouching = false;
 isMelee = false;
 isThrowing = false;
 isDead = false;
+canMove = true;
 
 meleeSubImage = 0;
 throwSubImage = 0;
@@ -66,6 +75,10 @@ melee[0] = spr_playermelee1;
 melee[1] = spr_playermelee2;
 melee[2] = spr_playermelee3;
 melee[3] = spr_playermelee4;
+melee[4] = spr_playermelee11;
+melee[5] = spr_playermelee21;
+melee[6] = spr_playermelee31;
+melee[7] = spr_playermelee41;
 
 head_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 arm_color = make_color_rgb(irandom(255), irandom(255), irandom(255));

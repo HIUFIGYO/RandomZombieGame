@@ -1,2 +1,3 @@
 //update UI
-killsTotalText.text = "Total Kills: " + string(totalKills);
+UITextSet(killsTotalText, "Total Kills: " + string(totalKills));
+UISetSize(killsTotalText, string_width(UITextGetText(killsTotalText)), 20);

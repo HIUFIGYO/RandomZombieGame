@@ -38,7 +38,7 @@ switch(alignH)
 		break;
 		
 	case RectAlign.Right:
-		x = autoX + autoW + xx - width- paddingX;
+		x = autoX + autoW + xx - width - paddingX;
 		break;
 		
 	default:

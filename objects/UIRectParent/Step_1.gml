@@ -12,6 +12,7 @@ switch(drawTo)
 	case UIDrawTo.ViewPort:
 		mouseX = window_view_mouse_get_x(drawView);
 		mouseY = window_view_mouse_get_y(drawView);
+		break;
 	case UIDrawTo.ViewPortRoom:
 		if(view_current == drawView)
 		{

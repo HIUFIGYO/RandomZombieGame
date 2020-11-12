@@ -54,6 +54,7 @@ if(isMelee)
 	else if(meleeWeapon == Weapon.Knife4)
 		index = 3;
 	draw_sprite_ext(melee[index], round(meleeSubImage), x, y + offset, image_xscale, 1, 0, arm_color, 1);
+	draw_sprite_ext(melee[4 + index], round(meleeSubImage), x, y + offset, image_xscale, 1, 0, c_white, 1);
 }
 
 if(isThrowing)

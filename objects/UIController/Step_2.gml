@@ -9,7 +9,7 @@ if(sortFlag)
 	{
 		var rect = instance_find(UIRectParent, i);
 		ds_grid_set(sortList, 0, i, rect);
-		ds_grid_set(sortList, 1, i, rect.sortDepth)
+		ds_grid_set(sortList, 1, i, rect.sortDepth);
 	}
 	
 	ds_grid_sort(sortList, 1, false);

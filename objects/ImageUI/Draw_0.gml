@@ -1,21 +1,21 @@
 if(drawTo == UIDrawTo.GUI or !global.drawUI) { exit; }
-var W = 1, H = 1;
+var W = sprite_get_width(sprite), H = sprite_get_height(sprite);
 if(stretched)
 {
-	W = width/sprite_get_width(sprite);
-	H = height/sprite_get_height(sprite);
+	W = width;
+	H = height;
 }
 
 if(drawTo == UIDrawTo.Room)
 {
-	draw_sprite_ext(sprite, subImage, x, y, W, H, 0, color, alpha);
+	draw_sprite_stretched_ext(sprite, subImage, x, y, W, H, color, alpha);
 }
 else if(drawTo == UIDrawTo.ViewPortRoom)
 {
 	if(view_current == drawView)
-		draw_sprite_ext(sprite, subImage, x, y, W, H, 0, color, alpha);
+		draw_sprite_stretched_ext(sprite, subImage, x, y, W, H, color, alpha);
 }
 else if(view_current == drawView)
 {
-	draw_sprite_ext(sprite, subImage, camera_get_view_x(Window.camera[drawView]) + x, camera_get_view_y(Window.camera[drawView]) + y, W, H, 0, color, alpha);
+	draw_sprite_stretched_ext(sprite, subImage, camera_get_view_x(Window.camera[drawView]) + x, camera_get_view_y(Window.camera[drawView]) + y, W, H, color, alpha);
 }

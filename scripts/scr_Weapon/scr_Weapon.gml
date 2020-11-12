@@ -97,12 +97,33 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 	}
 }
 
+///@function WeaponReload(player, weapon)
+
+function WeaponReload(_player, _weapon)
+{
+	if(_player.reloadTimer[_player.currentWeapon] <= 0)
+	{
+		var additionalTime = 0;
+		if(CanCancelReload(_weapon))
+			additionalTime = DataWeapon(_weapon, WeapStat.Mag) - _player.mag[_player.currentWeapon] - 1;
+		_player.reloadTimer[_player.currentWeapon] = DataWeapon(_weapon, WeapStat.Reload) + additionalTime;
+	}
+}
+
+///@function CanCancelReload(weapon)
+
+function CanCancelReload(_weapon)
+{
+	return (_weapon == Weapon.Shotgun or _weapon == Weapon.Shotgun3 or _weapon == Weapon.Pistol3);
+}
+
 ///@function DamagePlayer(player, damage)
 
 function DamagePlayer(_player, _damage)
 {
 	_player.hp -= _damage;
-	if(_player.hp < 0)
+	_player.overlayAlpha = 1;
+	if(_player.hp <= 0)
 	{
 		_player.hp = 0;
 		_player.isDead = true;
