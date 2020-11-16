@@ -63,13 +63,11 @@ Give/Revive	F			Y
 	-Main Menu-
 -Survive Local
 	GameMode
-	WinCondition
 	Map
 	Difficulty
 -Survive Online
 	Host
 		GameMode
-		WinCondition
 		Map
 		Difficulty
 		Players
@@ -108,6 +106,8 @@ Plays on Outbreak
 Plays on Epidemic
 Plays on Pandemic
 Plays on Apocalypse
+Games Ended With Extraction
+Games Ended As Deceased
 Limper Kills
 Rabid Kills
 Grapple Kills
@@ -121,30 +121,30 @@ Creeper Kills
 Ripper Kills
 
 	-Records-
-Most Kills in Skirmish (Outbreak) (Player Count)
-Most Kills in Skirmish (Epidemic) (Player Count)
-Most Kills in Skirmish (Pandemic) (Player Count)
-Most Kills in Skirmish (Apocalypse) (Player Count)
-Most Total Kills in Skirmish (Outbreak) (Player Count)
-Most Total Kills in Skirmish (Epidemic) (Player Count)
-Most Total Kills in Skirmish (Pandemic) (Player Count)
-Most Total Kills in Skirmish (Apocalypse) (Player Count)
-Most Kills in Horde (Outbreak) (Player Count)
-Most Kills in Horde (Epidemic) (Player Count)
-Most Kills in Horde (Pandemic) (Player Count)
-Most Kills in Horde (Apocalypse) (Player Count)
-Longest Time Survived in Horde (Outbreak) (Player Count)
-Longest Time Survived in Horde (Epidemic) (Player Count)
-Longest Time Survived in Horde (Pandemic) (Player Count)
-Longest Time Survived in Horde (Apocalypse) (Player Count)
-Most Kills in Wave (Outbreak) (Player Count)
-Most Kills in Wave (Epidemic) (Player Count)
-Most Kills in Wave (Pandemic) (Player Count)
-Most Kills in Wave (Apocalypse) (Player Count)
-Most Waves survived (Outbreak) (Player Count)
-Most Waves survived (Epidemic) (Player Count)
-Most Waves survived (Pandemic) (Player Count)
-Most Waves survived (Apocalypse) (Player Count)
+Most Kills in Skirmish (Outbreak) (Player Count) (Status)
+Most Kills in Skirmish (Epidemic) (Player Count) (Status)
+Most Kills in Skirmish (Pandemic) (Player Count) (Status)
+Most Kills in Skirmish (Apocalypse) (Player Count) (Status)
+Most Total Kills in Skirmish (Outbreak) (Player Count) (Status)
+Most Total Kills in Skirmish (Epidemic) (Player Count) (Status)
+Most Total Kills in Skirmish (Pandemic) (Player Count) (Status)
+Most Total Kills in Skirmish (Apocalypse) (Player Count) (Status)
+Most Kills in Horde (Outbreak) (Player Count) (Status)
+Most Kills in Horde (Epidemic) (Player Count) (Status)
+Most Kills in Horde (Pandemic) (Player Count) (Status)
+Most Kills in Horde (Apocalypse) (Player Count) (Status)
+Longest Time Survived in Horde (Outbreak) (Player Count) (Status)
+Longest Time Survived in Horde (Epidemic) (Player Count) (Status)
+Longest Time Survived in Horde (Pandemic) (Player Count) (Status)
+Longest Time Survived in Horde (Apocalypse) (Player Count) (Status)
+Most Kills in Wave (Outbreak) (Player Count) (Status)
+Most Kills in Wave (Epidemic) (Player Count) (Status)
+Most Kills in Wave (Pandemic) (Player Count) (Status)
+Most Kills in Wave (Apocalypse) (Player Count) (Status)
+Most Waves survived (Outbreak) (Player Count) (Status)
+Most Waves survived (Epidemic) (Player Count) (Status)
+Most Waves survived (Pandemic) (Player Count) (Status)
+Most Waves survived (Apocalypse) (Player Count) (Status)
 
 	-Zombology-
 Portrait: Unlocks after 1 kill
@@ -157,13 +157,13 @@ Description: Unlocks after 100 kills
 	-GameModes-
 -Skirmish
 	Gamemode starts with 1 zombie (+1 per player), killing zombies increases the max amount of zombies by 1.
-	Score/WinCondition: Kills
+	Score: Kills
 -Horde
 	After every 4 seconds (-1 second per player) a zombie appears.
-	Score/WinCondition: Time Survived
+	Score: Time Survived
 -Wave
 	Gamemode is wave based. First wave starts with 4 zombies (+1 per player) Wave size increases by 50% (rounded down) for each completed wave. Cooldown between waves 20 seconds.
-	Score/WinCondition: Waves Survived
+	Score: Waves Survived
 
 	-Difficulty-
 -Outbreak
@@ -518,6 +518,10 @@ Turret
 	Damage: 1
 	Price: $1500
 
+Call Extraction
+	-Close the shop and begin the escape sequence.
+	Price: $1800(1P), $900(2P), $600(3P), $450(4P)
+
 	-Medical Supplies- (No Refunds)
 Medicine
 	Heals: 35
@@ -555,10 +559,19 @@ Player Respawn
 	Barricade: 2 (Restocks 1 every 5 minutes) 
 	AdvancedBarricade: 2 (Restocks 1 every 7 minutes once all empty)
 	Turrets: 2 (Doesn't restock)
+	Call Extraction: 0 (+1per player. Stocks after 15 minutes)
 	Medicine: 2 + 1 per player (Restocks 1 every 5 minutes once all empty)
 	MedSyringe: 3 (Restocks 1 every 5 minutes once all empty)
 	MedKit: 2 (Doesn't restock)
 	PlayerRespawn: 0(+1per dead player)
+
+Extraction
+	-All players must purchase 'Call Extraction' in order for extraction to take place. Once extraction is occuring the shop closes and a holdout area appears around the shop that players must stand in to extract.
+	-In order to successfully extract players must charge the extraction zone from 0% to 100%.
+	-Extraction Zone charges +1% every 1.5 seconds(+1.5 per missing player) when players is standing within the zone
+	-Extraction Zone cannot charge if atleast 1 zombie is within the zone or no players are currently present in the zone.
+	-If a player standing within the zone kills a zombie that is outside the zone, zone percentage increases by 1%.
+	-Once Extraction reaches 100%, all players within the zone are extracted and are given a win. Players outside the zone when it reaches 100% are not extracted and are considered deceased.
 
 	-Vials- (No Refunds)
 Adrenaline Vile
