@@ -43,9 +43,7 @@ if(count > 0)
 			
 			GameSprayBlood(x, y, hits[| i].acid, image_xscale);
 				
-			hits[| i].hp -= DataWeapon(weapon, WeapStat.Damage);
-			if(hits[| i].hp <= 0)
-				playerID.kills += 1;
+			DamageZombie(playerID, hits[| i], DataWeapon(weapon, WeapStat.Damage));
 				
 			pierce -= 1;
 			if(pierce > 0)

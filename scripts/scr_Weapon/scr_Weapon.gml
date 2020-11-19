@@ -101,13 +101,19 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 
 function WeaponReload(_player, _weapon)
 {
-	if(_player.reloadTimer[_player.currentWeapon] <= 0)
+	if(_player.reloadTimer[_player.currentWeapon] > 0 or ammo[_player.currentWeapon] <= 0)
+		return;
+		
+	var additionalTime = 0;
+	if(CanCancelReload(_weapon))
 	{
-		var additionalTime = 0;
-		if(CanCancelReload(_weapon))
+		_player.reloadSingleShot[_player.currentWeapon] = 1;
+		if(DataWeapon(_weapon, WeapStat.Mag) <= _player.ammo[_player.currentWeapon])
 			additionalTime = DataWeapon(_weapon, WeapStat.Mag) - _player.mag[_player.currentWeapon] - 1;
-		_player.reloadTimer[_player.currentWeapon] = DataWeapon(_weapon, WeapStat.Reload) + additionalTime;
+		else
+			additionalTime = _player.ammo[_player.currentWeapon] - 1;
 	}
+	_player.reloadTimer[_player.currentWeapon] = DataWeapon(_weapon, WeapStat.Reload) + additionalTime;
 }
 
 ///@function CanCancelReload(weapon)
@@ -136,10 +142,36 @@ function DamagePlayer(_player, _damage)
 	}
 }
 
+///@function DamageZombie(playerID, zombie, damage)
+
+function DamageZombie(_playerID, _zombie, _damage)
+{
+	_zombie.hp -= _damage;
+	if(_zombie.hp <= 0)
+	{
+		_zombie.hp = 0;
+		_playerID.kills += 1;
+	}
+}
+
 ///@function RevivePlayer(player, startHp)
 
 function RevivePlayer(_player, _startHp)
 {
 	_player.isDead = false;
 	_player.hp = _startHp;
+}
+
+
+///@function CreateHitBox(playerID, x, y, sprite, subImage, damage)
+
+function CreateHitBox(_player, _x, _y, _sprite, _subImage, _damage)
+{
+	var inst = instance_create_layer(_x, _y, UIController.layerUI, HitBox);
+	inst.playerID = _player;
+	inst.sprite_index = _sprite;
+	inst.image_speed = 0;
+	inst.image_index = _subImage;
+	inst.damage = _damage;
+	return inst;
 }

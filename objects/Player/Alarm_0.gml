@@ -35,3 +35,10 @@ UISetView(reloadText, playerID);
 UISetColor(reloadText, c_yellow);
 UISetAlign(reloadText, RectAlign.Right, RectAlign.Bottom);
 UISetPadding(reloadText, 32, 64);
+
+//kills
+killsText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
+UISetView(killsText, playerID);
+UISetColor(killsText, c_yellow);
+UISetAlign(killsText, RectAlign.Left, RectAlign.Bottom);
+UISetPadding(killsText, 8, 48);

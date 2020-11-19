@@ -3,6 +3,11 @@ hp = 100;
 armour = 100;
 stamina = 100;
 
+hpRegeneration = 1;
+hpRegenerationRate = 4;
+
+staminaRegenerationRate = 0;
+
 maxHp = hp;
 maxArmour = armour;
 maxStamina = stamina;
@@ -19,13 +24,16 @@ weapon[0] = Weapon.Rifle;
 ammo[0] = DataWeapon(weapon[0], WeapStat.Ammo);
 mag[0] = DataWeapon(weapon[0], WeapStat.Mag);
 reloadTimer[0] = 0;
+reloadSingleShot[0] = 0;
 
 weapon[1] = Weapon.Pistol;
 ammo[1] = DataWeapon(weapon[1], WeapStat.Ammo);
 mag[1] = DataWeapon(weapon[1], WeapStat.Mag);
 reloadTimer[1] = 0;
+reloadSingleShot[1] = 0;
 
 meleeWeapon = Weapon.Knife;
+canSpawnMeleeHB = true;
 explosives = noone;
 grenadeAmount = 5;
 

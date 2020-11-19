@@ -87,34 +87,35 @@ if(oneWay)
 }
 y += clamp(ySpeed * DeltaTime(), -jumpSpeed, maxFallSpeed);
 
-//shooting
+//reloading
+
 if(!isDead and InputGetButtonDown(player_inputID, Button.Reload)and mag[currentWeapon] != DataWeapon(weapon[currentWeapon], WeapStat.Mag))
 {
 	WeaponReload(id, weapon[currentWeapon]);
 }
-//reloading
+
 if(reloadTimer[currentWeapon] > 0)
 {
 	reloadTimer[currentWeapon] -= DeltaTimeSecond();
-	var clipSize, changeAmmo = false;
+	reloadSingleShot[currentWeapon] -= DeltaTimeSecond();
+	var clipSize;
 	
-	if(reloadTimer[currentWeapon] < 0)
+	if(reloadSingleShot[currentWeapon] <= 0)
+	{
+		if(ammo[currentWeapon] > 1 and CanCancelReload(weapon[currentWeapon]))
+		{
+			ammo[currentWeapon] -= 1;
+			mag[currentWeapon] += 1;
+			if(mag[currentWeapon] < DataWeapon(weapon[currentWeapon], WeapStat.Mag))
+				reloadSingleShot[currentWeapon] = 1;
+		}
+	}
+	
+	if(reloadTimer[currentWeapon] <= 0)
 	{
 		reloadTimer[currentWeapon] = 0;
 		ammo[currentWeapon] += mag[currentWeapon];
 		clipSize = DataWeapon(weapon[currentWeapon], WeapStat.Mag);
-		changeAmmo = true;
-	}
-	
-	if(!changeAmmo and InputGetButtonDown(player_inputID, Button.Shoot)and CanCancelReload(weapon[currentWeapon]))
-	{
-		clipSize = floor(reloadTimer[currentWeapon]);
-		reloadTimer[currentWeapon] = 0;
-		changeAmmo = true;
-	}
-	
-	if(changeAmmo)
-	{
 		if(clipSize <= ammo[currentWeapon])
 		{
 			mag[currentWeapon] = clipSize;
@@ -126,7 +127,14 @@ if(reloadTimer[currentWeapon] > 0)
 			ammo[currentWeapon] = 0;
 		}
 	}
+	
+	if(InputGetButtonDown(player_inputID, Button.Shoot)and mag[currentWeapon] > 0 and CanCancelReload(weapon[currentWeapon]))
+	{
+		reloadTimer[currentWeapon] = 0;
+	}
 }
+
+//shooting
 
 if(shootTimer > 0)
 {
@@ -181,6 +189,8 @@ if(canShoot and !isDead)
 	{
 		performedAction = true;
 		canShoot = false;
+		meleeSubImage = 0;
+		canSpawnMeleeHB = true;
 		isMelee = true;
 	}
 	
@@ -213,7 +223,15 @@ if(isMelee)
 		index = 3;
 		
 	meleeSubImage += DataWeapon(meleeWeapon, WeapStat.FireRate) * DeltaTime();
-	if(meleeSubImage >= sprite_get_number(melee[index]))
+	
+	if(meleeSubImage >= 2 and canSpawnMeleeHB)
+	{
+		canSpawnMeleeHB = false;
+		var inst = CreateHitBox(id, x, y, spr_meleeHitBoxes, index, DataWeapon(meleeWeapon, WeapStat.Damage));
+		inst.pierce = DataWeapon(meleeWeapon, WeapStat.Pierce);
+		inst.image_xscale = image_xscale;
+	}
+	if(meleeSubImage >= sprite_get_number(melee[index]) - 1)
 	{
 		canShoot = true;
 		isMelee = false;
@@ -259,4 +277,9 @@ if(spawnedUI)
 	var _text = string(reloadTimer[currentWeapon]);
 	UITextSet(reloadText, _text);
 	UISetSize(reloadText, string_width(_text), 20);
+	
+	//Kills
+	var _text = string(kills);
+	UITextSet(killsText, _text);
+	UISetSize(killsText, string_width(_text), 20);
 }
