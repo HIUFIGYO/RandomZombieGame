@@ -12,6 +12,7 @@
     {"id":{"name":"spr_legscrouch","path":"sprites/spr_legscrouch/spr_legscrouch.yy",},"order":20,},
     {"id":{"name":"StartUp","path":"objects/StartUp/StartUp.yy",},"order":5,},
     {"id":{"name":"spr_playertorso","path":"sprites/spr_playertorso/spr_playertorso.yy",},"order":16,},
+    {"id":{"name":"scr_DifficultyScaling","path":"scripts/scr_DifficultyScaling/scr_DifficultyScaling.yy",},"order":11,},
     {"id":{"name":"spr_playertorso_2","path":"sprites/spr_playertorso_2/spr_playertorso_2.yy",},"order":17,},
     {"id":{"name":"spr_playertorso_3","path":"sprites/spr_playertorso_3/spr_playertorso_3.yy",},"order":18,},
     {"id":{"name":"Window","path":"objects/Window/Window.yy",},"order":3,},

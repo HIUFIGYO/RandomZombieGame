@@ -146,6 +146,11 @@ function DamagePlayer(_player, _damage)
 
 function DamageZombie(_playerID, _zombie, _damage)
 {
+	var moneyGained = _damage;
+	if(_damage > _zombie.hp)
+		moneyGained = _zombie.hp;
+	_playerID.money += moneyGained * (5 - global.difficulty);
+	
 	_zombie.hp -= _damage;
 	if(_zombie.hp <= 0)
 	{

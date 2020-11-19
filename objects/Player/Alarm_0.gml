@@ -12,6 +12,12 @@ UISetColor(hpText, c_yellow);
 UISetDepth(hpText, -1);
 UISetSize(hpText, 200, 16);
 
+//stamina bar
+staminaBar = UICreateHealthbar(8, 24, UIDrawTo.ViewPort);
+UISetView(staminaBar, playerID);
+UIHealthbarSetColor(staminaBar, c_black, c_yellow, c_yellow);
+UISetSize(staminaBar, 200, 8);
+
 //damage overlay
 overlay = UICreateImage();
 overlayAlpha = 0;
@@ -42,3 +48,10 @@ UISetView(killsText, playerID);
 UISetColor(killsText, c_yellow);
 UISetAlign(killsText, RectAlign.Left, RectAlign.Bottom);
 UISetPadding(killsText, 8, 48);
+
+//money
+moneyText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
+UISetView(moneyText, playerID);
+UISetColor(moneyText, c_yellow);
+UISetAlign(moneyText, RectAlign.Left, RectAlign.Bottom);
+UISetPadding(moneyText, 8, 32);

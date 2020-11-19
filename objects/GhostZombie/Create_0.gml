@@ -8,3 +8,5 @@ spriteDead = spr_ghostdead;
 damage = 4;
 hp =  3;
 moveSpeed = 3;
+
+image_alpha = 0.1;

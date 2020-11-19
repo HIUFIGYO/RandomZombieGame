@@ -1,12 +1,16 @@
-var xThrow = InputGetButton(player_inputID, Button.Right) - InputGetButton(player_inputID, Button.Left);
+var xThrow = (InputGetButton(player_inputID, Button.Right) - InputGetButton(player_inputID, Button.Left)) * !isDead;
 
-//Calculate velocity
+//sprinting
 var maxSpd = maxSpeed;
-if(InputGetButton(player_inputID, Button.Sprint))
+if(InputGetButton(player_inputID, Button.Sprint)and stamina > 0 and xThrow != 0)
 {
+	stamina -= 10 * DeltaTimeSecond();
+	staminaWaitTimer = staminaWaitTime;
 	maxSpd = sprintSpeed;
 }
-xSpeed += xThrow * acceleration * !isDead;
+
+//Calculate velocity
+xSpeed += xThrow * acceleration;
 xSpeed = clamp(xSpeed, -maxSpd, maxSpd);
 
 ySpeed += grav;
@@ -185,8 +189,9 @@ if(canShoot and !isDead)
 		}
 	}
 	
-	if(!performedAction and InputGetButtonDown(player_inputID, Button.Melee))
+	if(!performedAction and stamina >= 10 and InputGetButtonDown(player_inputID, Button.Melee))
 	{
+		stamina -= 10;
 		performedAction = true;
 		canShoot = false;
 		meleeSubImage = 0;
@@ -214,6 +219,7 @@ if(isWalking)
 
 if(isMelee)
 {
+	staminaWaitTimer = staminaWaitTime;
 	var index = 0;
 	if(meleeWeapon == Weapon.Knife2)
 		index = 1;
@@ -252,34 +258,4 @@ if(isThrowing)
 		inst.xSpeed = image_xscale * 16;
 		inst.ySpeed = -10;
 	}
-}
-
-//UI Elements
-if(spawnedUI)
-{
-	//damage overlay
-	UISetAlpha(overlay, overlayAlpha);
-	if(overlayAlpha > 0)
-	{
-		overlayAlpha -= DeltaTimeSecond();
-	}
-	
-	//health bar
-	UIHealthbarSetValue(hpBar, hp/maxHp);
-	UITextSet(hpText, string(hp) + "/" + string(maxHp));
-	
-	//Ammo text
-	var _text = string(mag[currentWeapon]) + "/" + string(ammo[currentWeapon])
-	UITextSet(ammoText, _text);
-	UISetSize(ammoText, string_width(_text), 20);
-	
-	//Debug reload timer
-	var _text = string(reloadTimer[currentWeapon]);
-	UITextSet(reloadText, _text);
-	UISetSize(reloadText, string_width(_text), 20);
-	
-	//Kills
-	var _text = string(kills);
-	UITextSet(killsText, _text);
-	UISetSize(killsText, string_width(_text), 20);
 }

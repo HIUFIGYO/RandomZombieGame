@@ -3,17 +3,20 @@ hp = 100;
 armour = 100;
 stamina = 100;
 
-hpRegeneration = 1;
-hpRegenerationRate = 4;
+hpRegenRate = 1;
+hpRegenTime = 4;
+hpRegenTimer = 0;
 
-staminaRegenerationRate = 0;
+staminaRegenRate = 20;//units per second
+staminaWaitTime = 0.5;//seconds
+staminaWaitTimer = 0;
 
 maxHp = hp;
 maxArmour = armour;
 maxStamina = stamina;
 
 kills = 0;
-money = 0;
+money = 250;
 
 buffs = noone;
 deBuffs = noone;

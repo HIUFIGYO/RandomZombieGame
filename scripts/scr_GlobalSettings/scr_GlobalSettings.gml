@@ -1,5 +1,14 @@
+enum GameDifficulty
+{
+	Easy,
+	Medium,
+	Hard,
+	VeryHard
+}
+
 global.maxPlayers = 4;
 global.playerAmount = 1;
+global.difficulty = GameDifficulty.Easy;
 global.selectedGameMode = GM.Skirmish;
 global.playerInput[0] = Controller.Keyboard;
 global.playerInput[1] = Controller.Gamepad1;

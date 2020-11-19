@@ -5,5 +5,6 @@ spriteWalk = spr_limperwalk;
 spriteAttack = spr_limperatk1;
 spriteDead = spr_limperdead;
 
-damage = 2;
-hp = 4;
+damage = SetZombieStat(2, 5, 9, 14);
+hp = SetZombieStat(4, 5, 6, 8);
+moveSpeed = SetZombieSpeed(2);

@@ -1,7 +1,7 @@
 /// @desc Zombie Has Died
 
 //add new zombies
-switch(totalKills)
+switch(totalKills + difficultyOffset)
 {
 	case 20:
 		ds_list_add(zombieSpawnList, RabidZombie);
