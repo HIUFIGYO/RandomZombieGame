@@ -3,7 +3,8 @@ enum GameDifficulty
 	Easy,
 	Medium,
 	Hard,
-	VeryHard
+	VeryHard,
+	count
 }
 
 global.maxPlayers = 4;

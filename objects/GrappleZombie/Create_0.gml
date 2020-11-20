@@ -5,6 +5,6 @@ spriteWalk = spr_grapplerun;
 spriteAttack = spr_grappleatk1;
 spriteDead = spr_grappledead;
 
-damage = 1;
-hp =  5;
-moveSpeed = 4;
+damage = SetZombieStat(1, 3, 6, 10);
+hp =  SetZombieStat(5, 6, 7, 9);
+moveSpeed = SetZombieSpeed(4);

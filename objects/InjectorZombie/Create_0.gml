@@ -5,6 +5,6 @@ spriteWalk = spr_injectorrun;
 spriteAttack = spr_injectoratk1;
 spriteDead = spr_injectordead;
 
-damage = 4;
-hp =  12;
-moveSpeed = 4;
+damage = SetZombieStat(4, 9, 15, 22);
+hp = SetZombieStat(12, 15, 18, 24);
+moveSpeed = SetZombieSpeed(4);

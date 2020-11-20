@@ -137,6 +137,7 @@
     {"id":{"name":"spr_lut_light_intensity_spot","path":"sprites/spr_lut_light_intensity_spot/spr_lut_light_intensity_spot.yy",},"order":3,},
     {"id":{"name":"spr_grappleidle","path":"sprites/spr_grappleidle/spr_grappleidle.yy",},"order":0,},
     {"id":{"name":"spr_grapplerun","path":"sprites/spr_grapplerun/spr_grapplerun.yy",},"order":1,},
+    {"id":{"name":"spr_difficultyIcons","path":"sprites/spr_difficultyIcons/spr_difficultyIcons.yy",},"order":20,},
     {"id":{"name":"rm_mainMenu","path":"rooms/rm_mainMenu/rm_mainMenu.yy",},"order":2,},
     {"id":{"name":"spr_grappleatk1","path":"sprites/spr_grappleatk1/spr_grappleatk1.yy",},"order":2,},
     {"id":{"name":"spr_meleeHitBoxes","path":"sprites/spr_meleeHitBoxes/spr_meleeHitBoxes.yy",},"order":6,},

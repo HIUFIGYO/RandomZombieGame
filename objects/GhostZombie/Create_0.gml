@@ -5,8 +5,8 @@ spriteWalk = spr_ghostwalk;
 spriteAttack = spr_ghostatk1;
 spriteDead = spr_ghostdead;
 
-damage = 4;
-hp =  3;
-moveSpeed = 3;
+damage = SetZombieStat(4, 9, 15, 22);
+hp = SetZombieStat(4, 5, 6, 8);
+moveSpeed = SetZombieSpeed(3);
 
 image_alpha = 0.1;

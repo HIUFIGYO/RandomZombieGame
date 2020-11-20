@@ -5,8 +5,8 @@ spriteWalk = spr_lardwalk;
 spriteAttack = spr_lardatk1;
 spriteDead = spr_larddead;
 
-damage = 6;
-hp =  8;
-moveSpeed = 1;
+damage = SetZombieStat(6, 10, 15, 21);
+hp =  SetZombieStat(8, 10, 12, 16);
+moveSpeed = SetZombieSpeed(1);
 
 acid = true;
