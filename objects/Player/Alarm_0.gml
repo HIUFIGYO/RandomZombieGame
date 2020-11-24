@@ -12,6 +12,12 @@ UISetColor(hpText, c_yellow);
 UISetDepth(hpText, -1);
 UISetSize(hpText, 200, 16);
 
+//armour bar
+armourBar = UICreateHealthbar(8, 0, UIDrawTo.ViewPort);
+UISetView(armourBar, playerID);
+UIHealthbarSetColor(armourBar, c_black, c_blue, c_blue);
+UISetSize(armourBar, 200, 8);
+
 //stamina bar
 staminaBar = UICreateHealthbar(8, 24, UIDrawTo.ViewPort);
 UISetView(staminaBar, playerID);

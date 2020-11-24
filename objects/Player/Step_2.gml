@@ -12,6 +12,10 @@ if(spawnedUI)
 	UIHealthbarSetValue(hpBar, hp/maxHp);
 	UITextSet(hpText, string(hp) + "/" + string(maxHp));
 	
+	//armour bar
+	UIHealthbarSetValue(armourBar, armour/maxArmour);
+	UISetAlpha(armourBar, armour > 0);
+	
 	//stamina bar
 	UIHealthbarSetValue(staminaBar, stamina/maxStamina);
 	
