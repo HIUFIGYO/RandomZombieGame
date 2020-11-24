@@ -910,5 +910,5 @@ Money Gained
 Money Spent
 Most Damage Dealt
 Most Damage Taken
-Creeper Kills
-Ripper Damage Dealt
+Advanced Threat Kills
+Damage To Major Threats
