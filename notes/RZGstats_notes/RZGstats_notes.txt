@@ -10,14 +10,14 @@
 -SideArm - Standard Pistol(Outbreak) Nothing(Other)
 -Melee - Standard Melee
 -Support - Nothing
--Medical - Medicine(Normal) Nothing(Other)
+-Medical - Nothing
 -Vial - Nothing
 
 	-Player Reviving & Respawning-
 When players HEALTH reaches 0 they are downed. When all players are downed, they die and mission is over.
 Players can respawn if:
 -An alive teammate revives them. Reviving Time: 5s. Revive Decay: 1.5s.
--3 minutes have passed, alive players can purchase a Player Respawn for $3000 at the shop. Doing so increases time for next Player Respawn to become available by 1 minute.
+-3 minutes have passed, alive players can purchase a Player Respawn for $2000 at the shop. Doing so increases time for next Player Respawn to become available by 1 minute.
 Downed Players lose:
 -Outbreak: 30% Money
 -Epidemic: 40% Money, Drops weapon being held
@@ -29,10 +29,10 @@ Revived Players recover:
 -Pandemic: 30% Health
 -Apocalypse: 25% Health
 Respawned Players Spawn with:
--Outbreak: 75% Health, 70% Money, 75% Ammo, Standard Pistol, Standard Melee
--Epidemic: 65% Health, 50% Money, 75% Ammo, Standard Pistol, Standard Melee 
--Pandemic: 50% Health, 50% Money, 50% Ammo, Standard Pistol, Standard Melee 
--Apocalypse: 35%% Health, 30% Money, 50% Ammo, Standard Melee
+-Outbreak: 75% Health, Standard Rifle(If they had a Primary), Standard Pistol, Standard Melee
+-Epidemic: 65% Health, Standard Rifle(If they had a Primary), Standard Pistol, Standard Melee 
+-Pandemic: 50% Health, Standard Rifle(If they had a Primary), Standard Pistol(If they had a SideArm), Standard Melee 
+-Apocalypse: 35%% Health, Standard Melee
 
 	-Player Stamina-
 Stamina grants the player the ability to sprint.
@@ -520,7 +520,7 @@ Turret
 
 Call Extraction
 	-Close the shop and begin the escape sequence.
-	Price: $1800(1P), $900(2P), $600(3P), $450(4P)
+	Price: Free
 
 	-Medical Supplies- (No Refunds)
 Medicine
@@ -559,7 +559,7 @@ Player Respawn
 	Barricade: 2 (Restocks 1 every 5 minutes) 
 	AdvancedBarricade: 2 (Restocks 1 every 7 minutes once all empty)
 	Turrets: 2 (Doesn't restock)
-	Call Extraction: 0 (+1per player. Stocks after 15 minutes)
+	Call Extraction: 0 (+1per player after total kills reaches 100)
 	Medicine: 2 + 1 per player (Restocks 1 every 5 minutes once all empty)
 	MedSyringe: 3 (Restocks 1 every 5 minutes once all empty)
 	MedKit: 2 (Doesn't restock)
