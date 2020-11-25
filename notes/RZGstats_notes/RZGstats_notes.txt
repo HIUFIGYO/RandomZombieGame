@@ -464,7 +464,7 @@ Description: Unlocks after 100 kills
 	Price: $1500
 
 -Resistance Buff
-	-Reduce damage taken by 2 or 10%, whichever is higher. Damage taken can't be lower than 1.
+	-Reduce damage taken by 20%, +20% for 2 seconds after taking damage.
 	Price: $1500
 
 	-Support Items- (No Refunds)
@@ -618,18 +618,21 @@ Limper
 	Damage: 2
 	Speed: 2
 	Trait: Nothing
+	ZombiologyDescription: Named after the way they walk, the Limper is among some of the most common if not the most common zombie survivors and mercs will encounter. A single Limper is not threatening, but do not underestimate them because they are slow and weak, as they make up for it in numbers. Any tier weapon is effective against them.
 
 Rabid
 	Health: 3
 	Damage: 3
 	Speed: 5
 	Trait: Nothing
+	ZombiologyDescription: As the name implies, Rabids are the most aggressive of the common zombies. They are among the fastest zombies you will encounter and can easily rush down unaware players and rip them apart. However they  are also one of the most fragile zombies so suspecting  player can deal with them easily before they can get close enough. Weapons with high base damage or fast fire rate are most effective against them.
 
 Lard
 	Health: 8
 	Damage: Melee-6 AcidImpact-0
 	Speed: 1
 	Trait: 50% chance to drops acidic blood when taking damage.
+	ZombiologyDescription: Lards can pose both a threat or none at all. They are the slowest zombie you will encounter but they have high health for common zombies. They will struggle getting close to player but if they can hit them, can deal a large amount of damage. They also can spray acidic blood at nearby players when damage, and cause an acidic explosion when slain. Most weapons are effective against them but high damage is prefered.
 
 -Uncommon Zombies-
 Grapple
@@ -637,18 +640,21 @@ Grapple
 	Damage: 1
 	Speed: 4
 	Trait: Prevents players from moving or jumping.
+	ZombiologyDescription: Grapple are another zombie that is not very threatening by itself, but a group of Grapples are also not threatening. These zombies have moderate speed and health but low damage. However they can prevent players from moving or jumping allowing other zombies to pile up and deal lots of damage to players. If this happens killing grapples will become more and more difficult. Long range and fast weapons are recommended for them.
 
 Ghost
 	Health: 4
 	Damage: 4
 	Speed: 3
 	Trait: Becomes invisible whne not attacking.
+	ZombiologyDescription: Interesting enough these are the first zombies you will encounter with noticable man made modifications to them. This zombie has the ability the go almost completely invisible sneaking up on unsuspecting players. However we noted that they have to decloak in order to attack players, use this to your advantage and take them out as soon as possible. Most weapons are effective against them.
 
 Burster
 	Health: 6
 	Damage: Melee-8 Spikes-4
 	Speed: Walk-2 Sprint-4
 	Trait: At 50% Health, fires spikes all around all around it. Begins sprinting
+	ZombiologyDescription: The only zombie that we have witnessed in the field that is more husk like than corpse like. The Burster displays a couple of unique traits about it. The first being able to completely shed all those deadly spikes on its body when it sustains a lot of damage, the second is after doing so will double in speed. We recommend using high damage weapons for them to prevent them from bursting.
 
 -Advanced Zombies-
 Twitcher
@@ -656,37 +662,43 @@ Twitcher
 	Damage: 2
 	Speed: 4
 	Trait: Leaps on players pinning them. Player must press left and right to break free.
+	ZombiologyDescription: The first of the most deadly zombies you will encounter. Twitchers have a lot of going on with them, they are fast have the ability to evade oncoming projectiles, but most importantly can leap onto survivors pinning them down dealing lots of damage. They will need to press both their movement buttons rapidly to escape or have a teammate help them. Slow firing weapons and low damage weapons are not recommended for them.
 
 Spewer
 	Health: 16
 	Damage: Melee-8 AcidBallImpact-10 AcidBallExplosion-5
 	Speed: 1
 	Trait: When within players line of sight will attempt to shoot a Acid Ball at their feet.
+	ZombiologyDescription: Spewers can be considered an upgrade to Lard zombies. Still slow, high damage, acid blood and one of the most resiliant zombies players will have to deal with. However their slow speed actually favors them as they posess the ability to shoot acidic balls at the player causing an acidic explosion dealing high damage as well as splash acid everywhere. Spewers should be prioritized so high damage and fire rate weapons are recommended.
 
 Injector
 	Health: 14
 	Damage: Melee-4 Inject-25
 	Speed: 4
 	Trait: Attempts to grab the player and inject them with poison.
+	ZombiologyDescription: Injectors are a strange breed. We can't confirm under that hoodie if they are undead or humans posing or working with the zombies, either way they aren't on our side. They are equiped with a claw that can extend quite far grabbing and pulling in survivors. Survivors can escape this by pressing both tier movement buttons rapidly. If the Injector manages to pull them in, they will inject the survivor with a deadly poison that kill them in a matter of seconds. If the poison isn't cured with healing items the survivor will die. High damage weapons are recommended for them.
 
 Blade
 	Health: 12
 	Damage: 10
 	Speed: 5
 	Trait: Attacks dealt to players apply bleeding and deals 50% more damage to structures.
+	ZombiologyDescription: Whoever came up with the idea to slap a large blade on a zombie should be shot. Blades are very similar to Rabids in regards to their speed, but with larger sustain and insane damage. That blade is also very sharp so surivors are susceptible to bleeding. Blades have also been seen breaking apart structures with ease due to this blade of theirs. High damage and rate of fire weapons are recommended for them.
 
--Super Zombies-
+-Major Zombies-
 Creeper
 	Health: 10
-	Damage: 16
-	Speed: 4
-	Trait: Spawn in groups of 10.
+	Damage: Alpha-16 Creeper-8 Stray-4
+	Speed: 3
+	Trait: Spawn in groups of 10. One Alpha Creeper leads the pack and the rest follow it and attack the same target as it. When the Alpha Creeper dies another takes it place as the Alpha Creeper. Every 15 seconds the Alpha Creeper is alive, all creepers gain +1 speed (Max 5).
+	ZombiologyDescription: 
 
 Ripper
 	Health: 100
 	Damage: Melee-20 Gutter-1
 	Speed: 4
 	Trait: Nothing
+	ZombiologyDescription: 
 
 -Enemy Spawning-
 	New enemy types spawning is dependant on how many kills the players get. A new enemy will spawn every 20 kills.
@@ -718,7 +730,9 @@ DamageMod 		Outbreak	Epidemic	Pandemic	Apocalypse
 -Injector 		4			+5			+11			+18
 -Inject			25			+0			+0			+0
 -Blade	  		10			+6			+13			+21
--Creeper  		16			+9			+19			+30
+-Creeper-Alpha		16			+9			+19			+30
+-Creeper-Normal		8			+5			+11			+18
+-Creeper-Stray		4			+3			+7			+12
 -Ripper	  		20			+11			+23			+36
 -RipperGutter	1			+1			+2			+3
 
@@ -733,7 +747,9 @@ DamageMelee
 -Injector 4/9/15/22
 -Blade	  10/16/23/31
 -Spewer   8/13/19/26
--Creeper  16/25/35/46
+-CreeperA 16/25/35/46
+-CreeperN 8/13/19/27
+-CreeperS 4/7/11/16
 -Ripper	  20/31/43/56
 
 DamageAbility
