@@ -1,3 +1,5 @@
+///@desc Set Up UI Elements
+
 spawnedUI = true;
 
 //health bar/text
@@ -39,14 +41,13 @@ ammoText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
 UISetView(ammoText, playerID);
 UISetColor(ammoText, c_yellow);
 UISetAlign(ammoText, RectAlign.Right, RectAlign.Bottom);
-UISetPadding(ammoText, 32, 32);
+UISetPadding(ammoText, 8, 8);
 
-//TODO: reload timer debug
-reloadText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
-UISetView(reloadText, playerID);
-UISetColor(reloadText, c_yellow);
-UISetAlign(reloadText, RectAlign.Right, RectAlign.Bottom);
-UISetPadding(reloadText, 32, 64);
+//reload circle
+reloadImage = UICreateImage(0, 0, spr_reloadCircle, UIDrawTo.ViewPort);
+UISetView(reloadImage, playerID);
+UISetAlign(reloadImage, RectAlign.Right, RectAlign.Bottom);
+UISetPadding(reloadImage, 8, 32);
 
 //kills
 killsText = UICreateText(0, 0, "", UIDrawTo.ViewPort);

@@ -59,6 +59,11 @@ function UICreateImage(_x, _y, _sprite, _drawTo)
 	inst.yy = _y;
 	inst.sprite = _sprite;
 	inst.drawTo = _drawTo;
+	if(_sprite != noone)
+	{
+		inst.width = sprite_get_width(_sprite);
+		inst.height = sprite_get_height(_sprite);
+	}
 	
 	return inst;
 }
@@ -298,6 +303,13 @@ function UIImageSetSprite(_UI, _sprite, _sub, _stretched)
 	_UI.sprite = _sprite;
 	_UI.subImage = _sub;
 	_UI.stretched = _stretched;
+}
+
+///@function UIImageSetSubImage(UI, subImage)
+
+function UIImageSetSubImage(_UI, _subImage)
+{
+	_UI.subImage = _subImage;
 }
 
 ///@function UIHealthbarSetColor(UI, background, color1, color2)

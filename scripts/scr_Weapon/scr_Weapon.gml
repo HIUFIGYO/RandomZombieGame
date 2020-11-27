@@ -127,8 +127,14 @@ function CanCancelReload(_weapon)
 
 function DamagePlayer(_player, _damage)
 {
-	var damageToArmour = floor(_damage * 0.8);
+	var damageToArmour = min(floor(_damage * 0.8), 1);
 	var damageToHealth = floor(_damage * 0.2);
+	
+	if(_player.armour <= 0)
+	{
+		damageToArmour = 0;
+		damageToHealth = _damage;
+	}
 	
 	if(_player.armour >= damageToArmour)
 		_player.armour -= damageToArmour;
@@ -146,7 +152,7 @@ function DamagePlayer(_player, _damage)
 		_player.hp = 0;
 		_player.isDead = true;
 	}
-	repeat(_damage)
+	repeat(damageToHealth)
 	{
 		var inst = instance_create_layer(_player.x, _player.y - 32, GameManager.layerCorpse, Blood);
 		inst.xSpeed = -10 + irandom(20);

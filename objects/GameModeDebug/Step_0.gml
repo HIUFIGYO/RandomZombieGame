@@ -63,18 +63,15 @@ if(godMode)
 //cycle difficulty levels
 currentSelection = global.difficulty;
 
-if (keyboard_check_pressed(vk_numpad9))
+if(keyboard_check_pressed(vk_numpad9))
     global.difficulty += 1;
-if global.difficulty > GameDifficulty.VeryHard
-    global.difficulty =GameDifficulty.Easy;
+if(global.difficulty > GameDifficulty.VeryHard)
+    global.difficulty = GameDifficulty.Easy;
 	
-	if(currentSelection != global.difficulty)
+if(currentSelection != global.difficulty)
 {
     UIImageSetSprite(difficultyImage, spr_difficultyIcons, global.difficulty, false);
 }
-
-if(global.difficulty > difficultyImage - 1)
-    global.difficulty = 0;
 
 //show/hide controls
 if(keyboard_check_pressed(vk_numpad8))

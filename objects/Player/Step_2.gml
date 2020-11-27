@@ -24,10 +24,10 @@ if(spawnedUI)
 	UITextSet(ammoText, _text);
 	UISetSize(ammoText, string_width(_text), 20);
 	
-	//Debug reload timer
-	var _text = string(reloadTimer[currentWeapon]);
-	UITextSet(reloadText, _text);
-	UISetSize(reloadText, string_width(_text), 20);
+	//reload timer
+	var index = floor(reloadTimer[currentWeapon] / DataWeapon(weapon[currentWeapon], WeapStat.Reload) * sprite_get_number(spr_reloadCircle));
+	UIImageSetSubImage(reloadImage, index);
+	UISetAlpha(reloadImage, reloadTimer[currentWeapon] > 0);
 	
 	//Kills
 	var _text = "Kills: " + string(kills);

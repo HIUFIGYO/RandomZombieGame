@@ -61,6 +61,7 @@
     {"id":{"name":"spr_melee2HB","path":"sprites/spr_melee2HB/spr_melee2HB.yy",},"order":1,},
     {"id":{"name":"spr_barricadedebris","path":"sprites/spr_barricadedebris/spr_barricadedebris.yy",},"order":6,},
     {"id":{"name":"spr_advbarricadeplace","path":"sprites/spr_advbarricadeplace/spr_advbarricadeplace.yy",},"order":2,},
+    {"id":{"name":"Debugger","path":"objects/Debugger/Debugger.yy",},"order":21,},
     {"id":{"name":"spr_advbarricade","path":"sprites/spr_advbarricade/spr_advbarricade.yy",},"order":0,},
     {"id":{"name":"spr_advbarricadedebris","path":"sprites/spr_advbarricadedebris/spr_advbarricadedebris.yy",},"order":1,},
     {"id":{"name":"spr_turretplace","path":"sprites/spr_turretplace/spr_turretplace.yy",},"order":11,},
@@ -190,6 +191,7 @@
     {"id":{"name":"spr_twitcheratk1","path":"sprites/spr_twitcheratk1/spr_twitcheratk1.yy",},"order":2,},
     {"id":{"name":"spr_twitcherevade","path":"sprites/spr_twitcherevade/spr_twitcherevade.yy",},"order":3,},
     {"id":{"name":"spr_twitcherpounch","path":"sprites/spr_twitcherpounch/spr_twitcherpounch.yy",},"order":4,},
+    {"id":{"name":"rm_startUp","path":"rooms/rm_startUp/rm_startUp.yy",},"order":5,},
     {"id":{"name":"lighting_set_dirty","path":"scripts/lighting_set_dirty/lighting_set_dirty.yy",},"order":8,},
     {"id":{"name":"spr_twitcherpin","path":"sprites/spr_twitcherpin/spr_twitcherpin.yy",},"order":5,},
     {"id":{"name":"OneWayBlock","path":"objects/OneWayBlock/OneWayBlock.yy",},"order":4,},
@@ -232,7 +234,6 @@
     {"id":{"name":"spr_spewerwalk","path":"sprites/spr_spewerwalk/spr_spewerwalk.yy",},"order":1,},
     {"id":{"name":"light_add_to_world","path":"scripts/light_add_to_world/light_add_to_world.yy",},"order":4,},
     {"id":{"name":"spr_spewerrun","path":"sprites/spr_spewerrun/spr_spewerrun.yy",},"order":2,},
-    {"id":{"name":"rm_startUp","path":"rooms/rm_startUp/rm_startUp.yy",},"order":1,},
     {"id":{"name":"GameModeParent","path":"objects/GameModeParent/GameModeParent.yy",},"order":1,},
     {"id":{"name":"spr_playerarmsBACKUP","path":"sprites/spr_playerarmsBACKUP/spr_playerarmsBACKUP.yy",},"order":28,},
     {"id":{"name":"polygon_from_path","path":"scripts/polygon_from_path/polygon_from_path.yy",},"order":6,},
@@ -354,11 +355,8 @@
     "name": "Default",
     "children": [],
   },
-  "RoomOrderNodes": [
-    {"roomId":{"name":"rm_startUp","path":"rooms/rm_startUp/rm_startUp.yy",},},
-    {"roomId":{"name":"rm_mainMenu","path":"rooms/rm_mainMenu/rm_mainMenu.yy",},},
-    {"roomId":{"name":"rm_level01","path":"rooms/rm_level01/rm_level01.yy",},},
-    {"roomId":{"name":"rm_Debug","path":"rooms/rm_Debug/rm_Debug.yy",},},
+  "RoomOrder": [
+    {"name":"rm_startUp","path":"rooms/rm_startUp/rm_startUp.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -426,16 +424,16 @@
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
   ],
   "TextureGroups": [
-    {"isScaled":false,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
-    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":461609314234257646,"resourceVersion":"1.0","name":"texGroupMenu","resourceType":"GMTextureGroup",},
+    {"isScaled":false,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"texGroupMenu","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [
     {"CopyToMask":153157610357391598,"filePath":"datafiles","resourceVersion":"1.0","name":"Random Zombie Game 2020.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2.3.1.536",
+    "IDEVersion": "2.3.0.529",
   },
-  "resourceVersion": "1.4",
+  "resourceVersion": "1.3",
   "name": "RandomZombieGame",
   "tags": [],
   "resourceType": "GMProject",
