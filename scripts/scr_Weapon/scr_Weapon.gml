@@ -151,6 +151,8 @@ function DamagePlayer(_player, _damage)
 	{
 		_player.hp = 0;
 		_player.isDead = true;
+		with(GameManager.gameMode)
+			event_perform(ev_other, ev_user1);
 	}
 	repeat(damageToHealth)
 	{
