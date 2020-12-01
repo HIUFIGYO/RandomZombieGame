@@ -19,6 +19,14 @@ if(spawnedUI)
 	//stamina bar
 	UIHealthbarSetValue(staminaBar, stamina/maxStamina);
 	
+	//revive bar
+	UISetAlpha(reviveBar, isDead);
+	if(isDead)
+	{
+		UIHealthbarSetValue(reviveBar, (reviveTime - reviveTimer) / reviveTime);
+		UISetPosition(reviveBar, x - 32, y - 64);
+	}
+	
 	//Ammo text
 	var _text = string(mag[currentWeapon]) + "/" + string(ammo[currentWeapon])
 	UITextSet(ammoText, _text);

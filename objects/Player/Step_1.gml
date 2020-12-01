@@ -16,6 +16,31 @@ if(staminaWaitTimer <= 0)
 	stamina = clamp(stamina, 0, maxStamina);
 }
 
+//revive
+if(revivingPlayer != noone)
+{
+	if(revivingPlayer.isDead)
+		revivingPlayer.reviveTimer -= DeltaTimeSecond();
+	if(InputGetButtonUp(player_inputID, Button.Interact)or !instance_place(x, y, revivingPlayer))
+	{
+		revivingPlayer.revivePlayerCount--;
+		revivingPlayer = noone;
+	}
+}
+
+if(revivePlayerCount == 0 and reviveTimer < reviveTime)
+{
+	reviveTimer += DeltaTimeSecond();
+	reviveTimer = clamp(reviveTimer, 0, reviveTime);
+}
+
+if(reviveTimer <= 0)
+{
+	var startHealth = maxHp * 0.75;//TODO: difficulty effects start health
+	RevivePlayer(id, startHealth);
+	reviveTimer = reviveTime;
+}
+
 //interact with objects
 if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 {
@@ -60,7 +85,8 @@ if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 		switch(object_get_name(returnObject.object_index))
 		{
 			case "Player":
-				RevivePlayer(returnObject, maxHp);
+				revivingPlayer = returnObject;
+				revivingPlayer.revivePlayerCount++;
 				break;
 				
 			case "WeaponDrops":

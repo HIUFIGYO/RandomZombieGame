@@ -26,6 +26,11 @@ UISetView(staminaBar, playerID);
 UIHealthbarSetColor(staminaBar, c_black, c_yellow, c_yellow);
 UISetSize(staminaBar, 200, 8);
 
+//Revive Bar
+reviveBar = UICreateHealthbar(0, 0, UIDrawTo.Room);
+UIHealthbarSetColor(reviveBar, c_black, c_white, c_white);
+UISetSize(reviveBar, 64, 8);
+
 //damage overlay
 overlay = UICreateImage();
 overlayAlpha = 0;

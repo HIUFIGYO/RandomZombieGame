@@ -40,6 +40,12 @@ canSpawnMeleeHB = true;
 explosives = noone;
 grenadeAmount = 5;
 
+//reviving
+revivingPlayer = noone;
+revivePlayerCount = 0;
+reviveTime = 8;
+reviveTimer = reviveTime;
+
 //movement
 xSpeed = 0;
 ySpeed = 0;
