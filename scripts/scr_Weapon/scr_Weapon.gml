@@ -127,7 +127,7 @@ function CanCancelReload(_weapon)
 
 function DamagePlayer(_player, _damage)
 {
-	var damageToArmour = min(floor(_damage * 0.8), 1);
+	var damageToArmour = max(floor(_damage * 0.8), 1);
 	var damageToHealth = floor(_damage * 0.2);
 	
 	if(_player.armour <= 0)

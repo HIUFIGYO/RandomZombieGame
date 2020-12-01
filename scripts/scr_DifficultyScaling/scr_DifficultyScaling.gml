@@ -1,25 +1,25 @@
-///@function SetZombieStat(easy, med, hard, veryHard)
+///@function SetStat(easy, med, hard, veryHard)
 
-function SetZombieStat(_easy, _med, _hard, _veryHard)
+function SetStat(_easy, _med, _hard, _veryHard)
 {
-	var _damage = 2;
+	var _stat = 2;
 	switch(global.difficulty)
 	{
 		case GameDifficulty.Easy:
-			_damage = _easy;
+			_stat = _easy;
 			break;
 		case GameDifficulty.Medium:
-			_damage = _med;
+			_stat = _med;
 			break;
 		case GameDifficulty.Hard:
-			_damage = _hard;
+			_stat = _hard;
 			break;
 		case GameDifficulty.VeryHard:
-			_damage = _veryHard;
+			_stat = _veryHard;
 			break;
 	}
 	
-	return _damage;
+	return _stat;
 }
 
 ///@function SetZombieSpeed(speed)

@@ -43,7 +43,7 @@ grenadeAmount = 5;
 //reviving
 revivingPlayer = noone;
 revivePlayerCount = 0;
-reviveTime = 8;
+reviveTime = 3;
 reviveTimer = reviveTime;
 
 //movement

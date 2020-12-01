@@ -36,7 +36,7 @@ if(revivePlayerCount == 0 and reviveTimer < reviveTime)
 
 if(reviveTimer <= 0)
 {
-	var startHealth = maxHp * 0.75;//TODO: difficulty effects start health
+	var startHealth = maxHp * SetStat(0.5, 0.4, 0.3, 0.25);
 	RevivePlayer(id, startHealth);
 	reviveTimer = reviveTime;
 }

@@ -5,8 +5,8 @@ spriteWalk = spr_spewerwalk;
 spriteAttack = spr_spewermelee;
 spriteDead = spr_spewerdead;
 
-damage = SetZombieStat(8, 13, 19, 26);
-hp = SetZombieStat(16, 20, 24, 32);
+damage = SetStat(8, 13, 19, 26);
+hp = SetStat(16, 20, 24, 32);
 moveSpeed = SetZombieSpeed(1);
 
 acid = true;
