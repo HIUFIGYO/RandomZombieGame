@@ -18,8 +18,10 @@ maxStamina = stamina;
 kills = 0;
 money = 250;
 
-buffs = noone;
-deBuffs = noone;
+for(var i=0; i<Buff.count; i++)
+	buff[i] = false;
+for(i=0; i<DeBuff.count; i++)
+	deBuff[i] = false;
 
 //weapons
 currentWeapon = 0;
