@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/Objects/UI.yy",
+    "name": "UISystem",
+    "path": "folders/Objects/UISystem.yy",
   },
   "resourceVersion": "1.0",
   "name": "UIRectParent",
