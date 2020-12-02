@@ -5,6 +5,6 @@ spriteWalk = spr_twitcherrun;
 spriteAttack = spr_twitcheratk1;
 spriteDead = spr_twitcherdead;
 
-damage = SetZombieStat(2, 3, 5, 8);
-hp = SetZombieStat(10, 12, 14, 18);
+damage = SetStat(2, 3, 5, 8);
+hp = SetStat(10, 12, 14, 18);
 moveSpeed = SetZombieSpeed(4);

@@ -16,6 +16,7 @@
     {"id":{"name":"spr_playertorso_2","path":"sprites/spr_playertorso_2/spr_playertorso_2.yy",},"order":17,},
     {"id":{"name":"spr_playertorso_3","path":"sprites/spr_playertorso_3/spr_playertorso_3.yy",},"order":18,},
     {"id":{"name":"Window","path":"objects/Window/Window.yy",},"order":3,},
+    {"id":{"name":"spr_zombieSeasonalHats","path":"sprites/spr_zombieSeasonalHats/spr_zombieSeasonalHats.yy",},"order":13,},
     {"id":{"name":"spr_playertorso_4","path":"sprites/spr_playertorso_4/spr_playertorso_4.yy",},"order":19,},
     {"id":{"name":"spr_playerrunning","path":"sprites/spr_playerrunning/spr_playerrunning.yy",},"order":14,},
     {"id":{"name":"spr_lut_light_intensity_linear","path":"sprites/spr_lut_light_intensity_linear/spr_lut_light_intensity_linear.yy",},"order":2,},

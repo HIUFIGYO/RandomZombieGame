@@ -51,8 +51,7 @@ UISetPadding(ammoText, 8, 8);
 //reload circle
 reloadImage = UICreateImage(0, 0, spr_reloadCircle, UIDrawTo.ViewPort);
 UISetView(reloadImage, playerID);
-UISetAlign(reloadImage, RectAlign.Right, RectAlign.Bottom);
-UISetPadding(reloadImage, 8, 32);
+UISetAlign(reloadImage, RectAlign.Center, RectAlign.Center);
 
 //kills
 killsText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
