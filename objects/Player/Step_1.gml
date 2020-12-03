@@ -24,7 +24,7 @@ if(revivingPlayer != noone)
 {
 	if(revivingPlayer.isDead)
 		revivingPlayer.reviveTimer -= DeltaTimeSecond();
-	if(InputGetButtonUp(player_inputID, Button.Interact)or !instance_place(x, y, revivingPlayer))
+	if(InputGetButtonUp(player_inputID, Button.Interact)or !instance_place(x, y, revivingPlayer)or isDead)
 	{
 		revivingPlayer.revivePlayerCount--;
 		revivingPlayer = noone;

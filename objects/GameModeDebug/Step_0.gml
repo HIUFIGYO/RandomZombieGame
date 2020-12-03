@@ -88,6 +88,12 @@ if(keyboard_check_pressed(vk_delete))
 	with(WeaponDrops)
 		instance_destroy();
 	ds_queue_clear(GameManager.bodyList);
+	with(BloodGrinder)
+	{
+		surface_set_target(bloodSurf);
+		draw_clear_alpha(0, 0);
+		surface_reset_target();
+	}
 }
 
 //control text

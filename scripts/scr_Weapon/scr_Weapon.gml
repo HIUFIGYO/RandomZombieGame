@@ -167,13 +167,14 @@ function DamagePlayer(_player, _damage)
 
 function DamageZombie(_playerID, _zombie, _damage)
 {
-	if(CheckBuff(_playerID, Buff.Critical)and random(1) >= DataBase.criticalBuffEffect)
+	if(CheckBuff(_playerID, Buff.Critical)and random(1) <= DataBase.criticalBuffEffect)
 		_damage *= 2;
 		
 	var moneyGained = _damage;
 	if(_damage > _zombie.hp)
 		moneyGained = _zombie.hp;
 	_playerID.money += moneyGained * (5 - global.difficulty);
+	_playerID.money  = clamp(_playerID.money, 0, DataBase.maxMoney);
 	
 	_zombie.hp -= _damage;
 	if(_zombie.hp <= 0)

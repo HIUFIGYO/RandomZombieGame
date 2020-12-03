@@ -20,7 +20,7 @@ money = 250;
 
 //buffs/debuffs
 
-buff[0] = Buff.Regeneration;
+buff[0] = Buff.Critical;
 buff[1] = noone;
 
 for(var i=0; i<DeBuff.count; i++)

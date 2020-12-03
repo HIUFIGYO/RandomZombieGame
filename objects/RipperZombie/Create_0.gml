@@ -5,6 +5,6 @@ spriteWalk = spr_ripperrun;
 spriteAttack = spr_ripperatk1;
 spriteDead = spr_ripperdead;
 
-damage = 20;
-hp =  100;
-moveSpeed = 4;
+damage = SetStat(20, 31, 43, 56);
+hp = SetStat(100, 120, 140, 180);
+moveSpeed = SetZombieSpeed(4);

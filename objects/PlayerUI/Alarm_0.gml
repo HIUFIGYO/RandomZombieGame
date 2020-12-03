@@ -45,6 +45,18 @@ UISetView(overlay, playerID);
 UISetAlpha(overlay, 0);
 UISetSize(overlay, view_wport[playerID], view_hport[playerID]);
 
+//grenades
+grenadeText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
+UISetView(grenadeText, playerID);
+UISetAlign(grenadeText, RectAlign.Right, RectAlign.Bottom);
+UISetPadding(grenadeText, 8, 20);
+UISetColor(grenadeText, c_yellow);
+
+grenadeIcon = UICreateImage(0, 0, spr_grenades, UIDrawTo.ViewPort);
+UISetView(grenadeIcon, playerID);
+UISetParent(grenadeText, grenadeIcon);
+UISetPadding(grenadeIcon, -16, 4);
+
 //ammo/mag
 ammoText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
 UISetView(ammoText, playerID);
@@ -62,11 +74,11 @@ killsText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
 UISetView(killsText, playerID);
 UISetColor(killsText, c_yellow);
 UISetAlign(killsText, RectAlign.Left, RectAlign.Bottom);
-UISetPadding(killsText, 8, 48);
+UISetPadding(killsText, 8, 24);
 
 //money
 moneyText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
 UISetView(moneyText, playerID);
 UISetColor(moneyText, c_yellow);
 UISetAlign(moneyText, RectAlign.Left, RectAlign.Bottom);
-UISetPadding(moneyText, 8, 32);
+UISetPadding(moneyText, 8, 8);

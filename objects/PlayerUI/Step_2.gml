@@ -32,6 +32,9 @@ if(player.isDead)
 	UIHealthbarSetValue(reviveBar, (player.reviveTime - player.reviveTimer) / player.reviveTime);
 	UISetPosition(reviveBar, player.x - 32, player.y - 64);
 }
+
+//grenades
+UITextSet(grenadeText, " x " + string(player.grenadeAmount));
 	
 //Ammo text
 var _text = string(player.mag[player.currentWeapon]) + "/" + string(player.ammo[player.currentWeapon])

@@ -5,6 +5,7 @@ if(gameOverTimer > 0)
 	gameOverTimer -= DeltaTimeSecond();
 	if(gameOverTimer <= 0)
 	{
-		room_goto(rm_mainMenu);
+		var roomGoto = Debugger.startedInDebug ? rm_Debug : rm_mainMenu;
+		room_goto(roomGoto);
 	}
 }

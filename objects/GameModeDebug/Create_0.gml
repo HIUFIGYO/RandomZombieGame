@@ -2,7 +2,7 @@ event_inherited();
 
 //UI
 zombieSelect = 0;
-zombieMaxSelect = 9;
+zombieMaxSelect = 10;
 
 zombieSprite[0] = spr_limperidle;
 zombieSprite[1] = spr_rabididle;
@@ -14,6 +14,7 @@ zombieSprite[6] = spr_twitcheridle;
 zombieSprite[7] = spr_speweridle;
 zombieSprite[8] = spr_injectoridle;
 zombieSprite[9] = spr_bladeidle;
+zombieSprite[10] = spr_ripperidle;
 
 zombie[0] = LimperZombie;
 zombie[1] = RabidZombie;
@@ -25,6 +26,7 @@ zombie[6] = TwitcherZombie;
 zombie[7] = SpewerZombie;
 zombie[8] = InjectorZombie;
 zombie[9] = BladeZombie;
+zombie[10] = RipperZombie;
 
 weaponSelect = 0;
 
@@ -46,6 +48,7 @@ UISetPadding(weaponImage, 16, 144);
 UISetSize(weaponImage, 64, 128);
 
 difficultyImage = UICreateImage(0, 0, spr_difficultyIcons, UIDrawTo.GUI);
+UIImageSetSubImage(difficultyImage, global.difficulty);
 UISetAlign(difficultyImage, RectAlign.Right, RectAlign.Top);
 UISetPadding(difficultyImage, 16, 176);
 UISetSize(difficultyImage, 64, 128);

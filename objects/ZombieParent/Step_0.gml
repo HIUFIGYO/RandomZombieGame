@@ -62,8 +62,12 @@ ySpeed = min(ySpeed, maxFallSpeed);
 if(!isDead and !isAttacking)
 {
 	image_xscale = sign(xSpeed);
+	image_speed = 0.5;
 	if(xSpeed == 0)
+	{
+		image_speed = 0;
 		sprite_index = spriteIdle;
+	}
 	else
 		sprite_index = spriteWalk;
 }
