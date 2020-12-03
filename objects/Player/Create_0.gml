@@ -18,10 +18,17 @@ maxStamina = stamina;
 kills = 0;
 money = 250;
 
-for(var i=0; i<Buff.count; i++)
-	buff[i] = false;
-for(i=0; i<DeBuff.count; i++)
+//buffs/debuffs
+
+buff[0] = false;
+buff[1] = false;
+
+for(var i=0; i<DeBuff.count; i++)
+{
 	deBuff[i] = false;
+	deBuffStack[i] = 0;
+	deBuffTimer[i] = 0;
+}
 
 //weapons
 currentWeapon = 0;
@@ -108,7 +115,3 @@ head_index = irandom(sprite_get_number(head));
 torso_index = irandom(sprite_get_number(torso));
 cosmetic_index = irandom(sprite_get_number(cosmetic));
 walking_index = 0;
-
-//UI Elements
-spawnedUI = false;
-alarm[0] = 5;

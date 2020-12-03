@@ -62,6 +62,7 @@ function GameSetUpPlayer(_player, _num)
 {
 	_player.player_inputID = global.playerInput[_num];
 	_player.playerID = _num;
+	_player.UI = HUDCreatePlayerUI(_player);
 	WindowSetCamFollow(_num, _player);
 }
 

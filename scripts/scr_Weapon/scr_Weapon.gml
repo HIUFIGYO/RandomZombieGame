@@ -146,7 +146,7 @@ function DamagePlayer(_player, _damage)
 	}
 	
 	_player.hp -= damageToHealth;
-	_player.overlayAlpha = 1;
+	_player.UI.overlayAlpha = 1;
 	if(_player.hp <= 0)
 	{
 		_player.hp = 0;

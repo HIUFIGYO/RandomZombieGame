@@ -227,6 +227,7 @@
     {"id":{"name":"Shop","path":"objects/Shop/Shop.yy",},"order":2,},
     {"id":{"name":"spr_bladegibs","path":"sprites/spr_bladegibs/spr_bladegibs.yy",},"order":5,},
     {"id":{"name":"SpewerZombie","path":"objects/SpewerZombie/SpewerZombie.yy",},"order":7,},
+    {"id":{"name":"PlayerUI","path":"objects/PlayerUI/PlayerUI.yy",},"order":21,},
     {"id":{"name":"spr_speweridle","path":"sprites/spr_speweridle/spr_speweridle.yy",},"order":0,},
     {"id":{"name":"scr_Input","path":"scripts/scr_Input/scr_Input.yy",},"order":1,},
     {"id":{"name":"spr_menuSettingBox","path":"sprites/spr_menuSettingBox/spr_menuSettingBox.yy",},"order":22,},

@@ -22,3 +22,13 @@ function HUDCreateShop(_playerID)
 	UISetSize(panel, 200, 208);
 	UISetPadding(panel, 8, 8);
 }
+
+///@function HUDCreatePlayerUI(player)
+
+function HUDCreatePlayerUI(_player)
+{
+	var inst = instance_create_layer(0, 0, UIController.layerUI, PlayerUI);
+	inst.playerID = _player.playerID;
+	inst.player = _player;
+	return inst;
+}

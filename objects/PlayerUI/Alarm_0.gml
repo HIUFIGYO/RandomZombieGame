@@ -3,25 +3,25 @@
 spawnedUI = true;
 
 //health bar/text
-hpBar = UICreateHealthbar(8, 8, UIDrawTo.ViewPort);
+hpBar = UICreateHealthbar(8, 16, UIDrawTo.ViewPort);
 UISetView(hpBar, playerID);
 UISetColor(hpBar, c_black);
 UISetSize(hpBar, 200, 16);
 
-hpText = UICreateText(8, 8, "", UIDrawTo.ViewPort);
+hpText = UICreateText(8, 16, "", UIDrawTo.ViewPort);
 UISetView(hpText, playerID);
 UISetColor(hpText, c_yellow);
 UISetDepth(hpText, -1);
 UISetSize(hpText, 200, 16);
 
 //armour bar
-armourBar = UICreateHealthbar(8, 0, UIDrawTo.ViewPort);
+armourBar = UICreateHealthbar(8, 8, UIDrawTo.ViewPort);
 UISetView(armourBar, playerID);
 UIHealthbarSetColor(armourBar, c_black, c_blue, c_blue);
 UISetSize(armourBar, 200, 8);
 
 //stamina bar
-staminaBar = UICreateHealthbar(8, 24, UIDrawTo.ViewPort);
+staminaBar = UICreateHealthbar(8, 32, UIDrawTo.ViewPort);
 UISetView(staminaBar, playerID);
 UIHealthbarSetColor(staminaBar, c_black, c_yellow, c_yellow);
 UISetSize(staminaBar, 200, 8);
