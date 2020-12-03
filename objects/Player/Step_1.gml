@@ -5,7 +5,10 @@ if(hpRegenTimer <= 0)
 {
 	hp += hpRegenRate;
 	hp = clamp(hp, 0, maxHp);
-	hpRegenTimer = hpRegenTime + global.difficulty;
+	var bonus = 1;
+	if(CheckBuff(id, Buff.Regeneration))
+		bonus = DataBase.regenBuffEffect;
+	hpRegenTimer = (hpRegenTime + global.difficulty) * bonus;
 }
 
 //stamina regen
@@ -39,6 +42,24 @@ if(reviveTimer <= 0)
 	var startHealth = maxHp * SetStat(0.5, 0.4, 0.3, 0.25);
 	RevivePlayer(id, startHealth);
 	reviveTimer = reviveTime;
+}
+
+//debuffs
+for(var i=0; i<DeBuff.count; i++)
+{
+	if(!deBuff[i])
+		continue;
+		
+	deBuffTimer[i] -= DeltaTimeSecond();
+	if(!deBuff[i] == DeBuff.Poison)
+		DamagePlayer(id, DataBase.deBuffDamage[i]);
+		
+	if(deBuffTimer <= 0)
+	{
+		deBuff[i] = false;
+		if(deBuff[i] == DeBuff.Poison)
+			DamagePlayer(id, DataBase.deBuffDamage[i]);
+	}
 }
 
 //interact with objects

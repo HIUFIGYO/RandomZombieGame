@@ -20,6 +20,10 @@ UISetAlpha(armourBar, player.armour > 0);
 	
 //stamina bar
 UIHealthbarSetValue(staminaBar, player.stamina/player.maxStamina);
+
+//buff
+var index = player.buff[0] == noone ? 0 : player.buff[0] + 1;
+UIImageSetSubImage(buffIcon, index);
 	
 //revive bar
 UISetAlpha(reviveBar, player.isDead);

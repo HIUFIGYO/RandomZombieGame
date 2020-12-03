@@ -26,6 +26,10 @@ UISetView(staminaBar, playerID);
 UIHealthbarSetColor(staminaBar, c_black, c_yellow, c_yellow);
 UISetSize(staminaBar, 200, 8);
 
+//buff icon
+buffIcon = UICreateImage(8, 48, spr_buffs, UIDrawTo.ViewPort);
+UISetView(buffIcon, playerID);
+
 //Revive Bar
 reviveBar = UICreateHealthbar(0, 0, UIDrawTo.Room);
 UIHealthbarSetColor(reviveBar, c_black, c_white, c_white);

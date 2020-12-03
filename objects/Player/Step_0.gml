@@ -1,12 +1,15 @@
 var xThrow = (InputGetButton(player_inputID, Button.Right) - InputGetButton(player_inputID, Button.Left)) * !isDead;
 
 //sprinting
-var maxSpd = maxSpeed;
+var bonus = false;
+if(CheckBuff(id, Buff.Agility)and !deBuff[DeBuff.Bleed])
+	bonus = true;
+var maxSpd = maxSpeed + (bonus * DataBase.agilityBuffJogSpeed) - deBuff[DeBuff.Bleed];
 if(InputGetButton(player_inputID, Button.Sprint)and stamina > 0 and xThrow != 0)
 {
 	stamina -= 10 * DeltaTimeSecond();
 	staminaWaitTimer = staminaWaitTime;
-	maxSpd = sprintSpeed;
+	maxSpd = sprintSpeed + (bonus * DataBase.agilityBuffSprintSpeed) - deBuff[DeBuff.Bleed];
 }
 
 //Calculate velocity

@@ -113,7 +113,8 @@ function WeaponReload(_player, _weapon)
 		else
 			additionalTime = _player.ammo[_player.currentWeapon] - 1;
 	}
-	_player.reloadTimer[_player.currentWeapon] = DataWeapon(_weapon, WeapStat.Reload) + additionalTime;
+	var bonus = CheckBuff(_player, Buff.Reload);
+	_player.reloadTimer[_player.currentWeapon] = max(1, (DataWeapon(_weapon, WeapStat.Reload) + additionalTime) - (bonus * DataBase.reloadBuffEffect));
 }
 
 ///@function CanCancelReload(weapon)
@@ -166,6 +167,9 @@ function DamagePlayer(_player, _damage)
 
 function DamageZombie(_playerID, _zombie, _damage)
 {
+	if(CheckBuff(_playerID, Buff.Critical)and random(1) >= DataBase.criticalBuffEffect)
+		_damage *= 2;
+		
 	var moneyGained = _damage;
 	if(_damage > _zombie.hp)
 		moneyGained = _zombie.hp;

@@ -23,3 +23,10 @@ enum DeBuff
 	Poison,
 	count
 }
+
+///@function CheckBuff(player, buff)
+
+function CheckBuff(_player, _buff)
+{
+	return(_player.buff[0] == _buff or _player.buff[1] == _buff);
+}

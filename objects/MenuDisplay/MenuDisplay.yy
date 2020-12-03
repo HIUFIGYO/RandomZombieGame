@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "MainMenu",
-    "path": "folders/Objects/MainMenu.yy",
+    "path": "folders/Objects/HUD/MainMenu.yy",
   },
   "resourceVersion": "1.0",
   "name": "MenuDisplay",
