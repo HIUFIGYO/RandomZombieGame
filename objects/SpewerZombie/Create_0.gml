@@ -7,6 +7,7 @@ spriteDead = spr_spewerdead;
 
 damage = SetStat(8, 13, 19, 26);
 hp = SetStat(16, 20, 24, 32);
+maxHp = hp;
 moveSpeed = SetZombieSpeed(1);
 
 acid = true;

@@ -1,3 +1,10 @@
+///@function  HealPlayer(player, amount)
+
+function HealPlayer(_player, _amount)
+{
+	_player.hp = clamp(_player.hp + _amount, 0, GetMaxHealth(_player));
+}
+
 ///@function DamagePlayer(player, damage)
 
 function DamagePlayer(_player, _damage)
@@ -24,10 +31,30 @@ function DamagePlayer(_player, _damage)
 	_player.UI.overlayAlpha = 1;
 	if(_player.hp <= 0)
 	{
-		_player.hp = 0;
-		_player.isDead = true;
-		with(GameManager.gameMode)
-			event_perform(ev_other, ev_user1);
+		var _die = false;
+		if(CheckBuff(_player, Buff.Demo))
+		{
+			var index = 0;
+			if(_player.buff[1] == Buff.Demo)
+				index = 1;
+			if(_player.buffCooldown[index] <= 0)
+			{
+				_player.hp = 1;
+				CreateExplosionPlayer(_player);
+				_player.buffCooldown[index] = DataBase.demoBuffCooldown;
+			}
+			else
+				_die = true;
+		}
+		else
+			_die = true;
+		if(_die)
+		{
+			_player.hp = 0;
+			_player.isDead = true;
+			with(GameManager.gameMode)
+				event_perform(ev_other, ev_user1);
+		}
 	}
 	//TODO: make this a function dammit
 	repeat(damageToHealth)
@@ -60,6 +87,14 @@ function DamageZombie(_playerID, _zombie, _damage)
 {
 	if(CheckBuff(_playerID, Buff.Critical)and random(1) <= DataBase.criticalBuffEffect)
 		_damage *= 2;
+		
+	if(CheckBuff(_playerID, Buff.Scout))
+	{
+		_zombie.showHealth = true;
+		_zombie.showHealthTimer = DataBase.scoutBuffShowHealthTime;
+		if(_zombie.hp <= _zombie.maxHp * DataBase.scoutBuffHealthRate)
+			_damage += DataBase.scoutBuffDamage;
+	}
 		
 	var moneyGained = _damage;
 	if(_damage > _zombie.hp)
@@ -127,4 +162,14 @@ function GetMaxAmmo(_player)
 function GetMaxMag(_player)
 {
 	return DataWeapon(_player.weapon[_player.currentWeapon], WeapStat.Mag);
+}
+
+///@function GetMaxGrenades(player)
+
+function GetMaxGrenades(_player)
+{
+	var _value = DataBase.explosionMaxAmmo;
+	if(CheckBuff(_player, Buff.Demo))
+		_value += DataBase.demoBuffAddGrenade;
+	return _value;
 }

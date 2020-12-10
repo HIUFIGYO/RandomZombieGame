@@ -7,6 +7,7 @@ spriteDead = spr_larddead;
 
 damage = SetStat(6, 10, 15, 21);
 hp =  SetStat(8, 10, 12, 16);
+maxHp = hp;
 moveSpeed = SetZombieSpeed(1);
 
 acid = true;

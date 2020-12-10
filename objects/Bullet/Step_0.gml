@@ -10,6 +10,8 @@ if(rangeTimer <= 0)
 //move
 x += xSpeed * spd * DeltaTime();
 y += ySpeed * spd * DeltaTime();
+
+//check collisions
 var hits = ds_list_create();
 var count = collision_line_list(xprevious, yprevious, x, y, all, false, true, hits, false);
 if(count > 0)
@@ -42,8 +44,33 @@ if(count > 0)
 			ds_list_add(targetsHit, hits[| i]);
 			
 			GameSprayBlood(x, y, hits[| i].acid, image_xscale);
+			
+			var _damage = DataWeapon(weapon, WeapStat.Damage);
+			if(CheckBuff(playerID, Buff.Damage))
+			{
+				switch(weapon)
+				{
+					case Weapon.BHDarker:
+					case Weapon.Purple:
+					case Weapon.Drainer:
+						break;
+						
+					case Weapon.Flame:
+						_damage += DataBase.damageBuffFire;
+						break;
+					
+					case Weapon.Tesla:
+						_damage += DataBase.damageBuffElectric;
+						break;
+					
+					default:
+						if(DataWeapon(weapon, WeapStat.Burst) <= 1)
+							_damage += DataBase.damageBuffBullet;
+						break;
+				}
+			}
 				
-			DamageZombie(playerID, hits[| i], DataWeapon(weapon, WeapStat.Damage));
+			DamageZombie(playerID, hits[| i], _damage);
 				
 			pierce -= 1;
 			if(pierce > 0)

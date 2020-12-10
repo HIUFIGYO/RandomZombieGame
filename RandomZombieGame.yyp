@@ -333,6 +333,7 @@
     {"id":{"name":"PlayerSpawner","path":"objects/PlayerSpawner/PlayerSpawner.yy",},"order":6,},
     {"id":{"name":"options_soundvolume","path":"sprites/options_soundvolume/options_soundvolume.yy",},"order":13,},
     {"id":{"name":"options_gore","path":"sprites/options_gore/options_gore.yy",},"order":9,},
+    {"id":{"name":"scr_Support","path":"scripts/scr_Support/scr_Support.yy",},"order":14,},
     {"id":{"name":"spr_ammocase2","path":"sprites/spr_ammocase2/spr_ammocase2.yy",},"order":21,},
     {"id":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},"order":0,},
     {"id":{"name":"options_screen","path":"sprites/options_screen/options_screen.yy",},"order":12,},

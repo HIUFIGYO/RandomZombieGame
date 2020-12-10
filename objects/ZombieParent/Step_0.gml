@@ -33,6 +33,12 @@ if(!isDead and hp <= 0)
 	image_speed = 0;
 	sprite_index = spriteDead;
 }
+if(showHealth)
+{
+	showHealthTimer -= DeltaTimeSecond();
+	if(showHealthTimer <= 0)
+		showHealth = false;
+}
 //fade out
 if(fadeOut > 0)
 {

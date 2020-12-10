@@ -7,6 +7,9 @@ spriteDead = spr_ghostdead;
 
 damage = SetStat(4, 9, 15, 22);
 hp = SetStat(4, 5, 6, 8);
+maxHp = hp;
 moveSpeed = SetZombieSpeed(3);
 
-image_alpha = 0.1;
+cloak = SetStat(0.1, 0.05, 0.025, 0.01);
+
+image_alpha = 0;

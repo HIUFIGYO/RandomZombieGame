@@ -37,7 +37,7 @@ damageBuffBullet = 1;
 damageBuffElectric = 1;
 damageBuffShotgun = 1;
 damageBuffMelee = 2;
-damageBuffExlosive = 3;
+damageBuffExplosive = 3;
 
 //critical Buff
 buffPrice[Buff.Critical] = 1500;
@@ -47,12 +47,14 @@ criticalBuffEffect = 0.05;
 buffPrice[Buff.Scout] = 1500;
 scoutBuffHealthRate = 0.5;
 scoutBuffDamage = 1;
+scoutBuffShowHealthTime = 2.5;
 
 //medic Buff
 buffPrice[Buff.Medic] = 1500;
-medicBuffRange = 5;//radius in world units
-medicBuffRegenHealth = 2;
+medicBuffRange = 5 *  global.worldUnit;//radius in world units
+medicBuffRegenHealth = 1;
 medicBuffChanceItemNotConsume = 0.5;
+medicBuffReviveFactor = 2;
 
 //demo Buff
 buffPrice[Buff.Demo] = 1500;

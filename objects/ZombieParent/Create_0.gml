@@ -1,4 +1,5 @@
 hp = 5;
+maxHp = 5;
 damage = 1;
 acid = false;
 
@@ -24,6 +25,9 @@ spriteWalk = noone;
 spriteAttack = noone;
 spriteSpecial = noone;
 spriteDead = noone;
+
+showHealth = false;
+showHealthTimer = 0;
 
 //game manager notify
 GameAddZombie();

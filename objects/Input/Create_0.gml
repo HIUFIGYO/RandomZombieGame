@@ -6,7 +6,7 @@ for(i=0; i<12; i++)
 	gameInput[i] = noone;
 }
 
-axisDeadZone = 0.25;
+axisDeadZone = 0.5;
 buttonThreshold = 0.1;
 
 keyMap[Button.Left] = vk_left;

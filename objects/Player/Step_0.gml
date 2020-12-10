@@ -204,8 +204,14 @@ if(canShoot and !isDead)
 	
 	if(!performedAction and InputGetButtonDown(player_inputID, Button.Grenade)and grenadeAmount > 0)
 	{
+		performedAction = true;
 		canShoot = false;
 		isThrowing = true;
+	}
+	
+	if(!performedAction and InputGetButtonDown(player_inputID, Button.Assist))
+	{
+		HealingUse(id, id);
 	}
 }
 
@@ -254,6 +260,8 @@ if(isThrowing)
 	if(throwSubImage >= sprite_get_number(throwSprite))
 	{
 		grenadeAmount -= 1;
+		if(CheckBuff(id, Buff.Demo)and random(1) <= DataBase.demoBuffChanceGrenadeNotConsume)
+			grenadeAmount += 1;
 		canShoot = true;
 		isThrowing = false;
 		throwSubImage = 0;

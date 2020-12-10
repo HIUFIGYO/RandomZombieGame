@@ -7,4 +7,5 @@ spriteDead = spr_ripperdead;
 
 damage = SetStat(20, 31, 43, 56);
 hp = SetStat(100, 120, 140, 180);
+maxHp = hp;
 moveSpeed = SetZombieSpeed(4);

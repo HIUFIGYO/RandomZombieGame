@@ -3,8 +3,16 @@ if(!isDead)
 	hpRegenTimer -= DeltaTimeSecond();
 if(hpRegenTimer <= 0)
 {
-	hp += hpRegenRate;
-	var bonus = 1;
+	var bonus = 0;
+	var _playerCount = instance_number(Player);
+	for(var i=0; i<_playerCount; i++)
+	{
+		var _player = instance_find(Player, i);
+		if(_player != id and CheckBuff(_player, Buff.Medic)and distance_to_object(_player) <= DataBase.medicBuffRange)
+			bonus += DataBase.medicBuffRegenHealth;
+	}
+	HealPlayer(id, hpRegenRate + bonus);
+	bonus = 1;
 	if(CheckBuff(id, Buff.Regeneration))
 		bonus = DataBase.regenBuffEffect;
 	hpRegenTimer = (hpRegenTime + global.difficulty) * bonus;
@@ -22,8 +30,11 @@ if(staminaWaitTimer <= 0)
 //revive
 if(revivingPlayer != noone)
 {
+	var bonus = 1;
+	if(CheckBuff(id, Buff.Medic))
+		bonus = DataBase.medicBuffReviveFactor;
 	if(revivingPlayer.isDead)
-		revivingPlayer.reviveTimer -= DeltaTimeSecond();
+		revivingPlayer.reviveTimer -= DeltaTimeSecond() * bonus;
 	if(InputGetButtonUp(player_inputID, Button.Interact)or !instance_place(x, y, revivingPlayer)or isDead)
 	{
 		revivingPlayer.revivePlayerCount--;
@@ -42,6 +53,13 @@ if(reviveTimer <= 0)
 	var startHealth = GetMaxHealth(id) * SetStat(0.8, 0.6, 0.4, 0.2);
 	RevivePlayer(id, startHealth);
 	reviveTimer = reviveTime;
+}
+
+//buff cool downs
+for(var i=0; i<2; i++)
+{
+	if(buffCooldown[i] > 0)
+		buffCooldown[i] -= DeltaTimeSecond();
 }
 
 //debuffs

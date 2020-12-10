@@ -82,7 +82,11 @@ function DataWeapon(weapon, stat)
 
 function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 {
-	repeat(DataWeapon(_weapon, WeapStat.Burst))
+	var _burst = DataWeapon(_weapon, WeapStat.Burst);
+	if(_burst > 1 and CheckBuff(_id, Buff.Damage))
+		_burst += 1;
+	
+	repeat(_burst)
 	{
 		var xoff = DataWeapon(_weapon, WeapStat.xOffset) * flip;
 		var yoff = DataWeapon(_weapon, WeapStat.yOffset);
@@ -164,6 +168,16 @@ function CreateExplosion(_instance)
 	inst.playerID = _instance.playerID;
 	inst.grenadeType = _instance.grenadeType;
 	inst.sprite_index = ExplosionGetSize(_instance.grenadeType);
+}
+
+///@function CreateExplosionPlayer(instance)
+
+function CreateExplosionPlayer(_player)
+{
+	var inst = instance_create_layer(_player.x, _player.y, GameManager.layerObject, Explosion);
+	inst.playerID = _player;
+	inst.grenadeType = _player.grenadeType;
+	inst.sprite_index = spr_HBexplosionlarge;
 }
 
 ///@function ExplosionGetDamage(grenadeType)
