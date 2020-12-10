@@ -269,6 +269,7 @@
     {"id":{"name":"sh_blend_light","path":"shaders/sh_blend_light/sh_blend_light.yy",},"order":0,},
     {"id":{"name":"spr_Acreeperrun","path":"sprites/spr_Acreeperrun/spr_Acreeperrun.yy",},"order":1,},
     {"id":{"name":"spr_Acreeperatk1","path":"sprites/spr_Acreeperatk1/spr_Acreeperatk1.yy",},"order":2,},
+    {"id":{"name":"scr_Stats","path":"scripts/scr_Stats/scr_Stats.yy",},"order":13,},
     {"id":{"name":"rm_Debug","path":"rooms/rm_Debug/rm_Debug.yy",},"order":3,},
     {"id":{"name":"spr_Acreeperatk2","path":"sprites/spr_Acreeperatk2/spr_Acreeperatk2.yy",},"order":3,},
     {"id":{"name":"ButtonUI","path":"objects/ButtonUI/ButtonUI.yy",},"order":4,},

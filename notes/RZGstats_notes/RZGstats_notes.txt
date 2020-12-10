@@ -574,39 +574,39 @@ Extraction
 	-Once Extraction reaches 100%, all players within the zone are extracted and are given a win. Players outside the zone when it reaches 100% are not extracted and are considered deceased.
 
 	-Vials- (No Refunds)
-Adrenaline Vile
-	-Increase movement speed by 1 and ncrease interaction speed by 50% for 6 seconds.
+Adrenaline Vial
+	-Increase movement speed by 1 and increase interaction speed by 50% for 6 seconds.
 	-Disables stamina regeneration for 12 seconds.
 	Cooldown: 60s
 	Price: $1250
 
-Strength Vile
+Strength Vial
 	-Increase melee damage by 100% for 8 seconds.
 	-Can only use melee weapons for 16 seconds.
 	Cooldown: 75s
 	Price: $1250
 
-Mimicry Vile
+Mimicry Vial
 	-Enemies will not target or attack you for 5 seconds.
-	-Cannot use weapons or equipment for 10 seconds.
+	-Turrets will target you and friendly-fire is 100% for 10 seconds.
 	Cooldown: 90s
 	Price: $1250
 
-Survivalist Vile
+Survivalist Vial
 	-Become immune to all damage for 6 seconds.
-	-Cannot sprint for 12 seconds.
+	-Damage dealt is reduced by 75% for 12 seconds.
 	Cooldown: 90s
 	Price: $1250
 
-Rapid Vile
+Rapid Vial
 	-Double attack speed and firerate for 5 seconds.
 	-Movement speed is reduced by 2 for 10 seconds.
 	Cooldown: 120s
 	Price: $1250
 
-Trade-Off Vile
+Trade-Off Vial
 	-Primary and secondary damage dealt is doubled for 5 seconds.
-	-Damage taken is doubled for 10 seconds. 
+	-Damage taken is quadrupled for 10 seconds. 
 	Cooldown: 120s
 	Price: $1250
 
