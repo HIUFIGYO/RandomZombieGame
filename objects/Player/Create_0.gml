@@ -20,7 +20,7 @@ money = 250;
 
 //buffs/debuffs
 
-buff[0] = Buff.Critical;
+buff[0] = Buff.Stamina;
 buff[1] = noone;
 
 for(var i=0; i<DeBuff.count; i++)
@@ -46,8 +46,8 @@ reloadSingleShot[1] = 0;
 
 meleeWeapon = Weapon.Knife;
 canSpawnMeleeHB = true;
-explosives = noone;
-grenadeAmount = 5;
+grenadeType = ExplosiveType.Grenade;
+grenadeAmount = 3;
 
 //reviving
 revivingPlayer = noone;

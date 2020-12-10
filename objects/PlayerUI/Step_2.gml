@@ -11,15 +11,15 @@ if(overlayAlpha > 0)
 }
 	
 //health bar
-UIHealthbarSetValue(hpBar, player.hp/player.maxHp);
-UITextSet(hpText, string(player.hp) + "/" + string(player.maxHp));
+UIHealthbarSetValue(hpBar, player.hp/GetMaxHealth(player));
+UITextSet(hpText, string(player.hp) + "/" + string(GetMaxHealth(player)));
 	
 //armour bar
-UIHealthbarSetValue(armourBar, player.armour/player.maxArmour);
+UIHealthbarSetValue(armourBar, player.armour/GetMaxArmour(player));
 UISetAlpha(armourBar, player.armour > 0);
 	
 //stamina bar
-UIHealthbarSetValue(staminaBar, player.stamina/player.maxStamina);
+UIHealthbarSetValue(staminaBar, player.stamina/GetMaxStamina(player));
 
 //buff
 var index = player.buff[0] == noone ? 0 : player.buff[0] + 1;

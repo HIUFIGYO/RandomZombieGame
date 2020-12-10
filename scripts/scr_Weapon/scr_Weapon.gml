@@ -63,6 +63,14 @@ enum BulletImage
 	Particle
 }
 
+enum ExplosiveType
+{
+	Grenade,
+	Incendiary,
+	Mine,
+	BHBomber
+}
+
 ///@ function DataWeapon(weapon, stat)
 
 function DataWeapon(weapon, stat)
@@ -135,4 +143,39 @@ function CreateHitBox(_player, _x, _y, _sprite, _subImage, _damage)
 	inst.image_index = _subImage;
 	inst.damage = _damage;
 	return inst;
+}
+
+///@function CreateGrenade(player)
+
+function CreateGrenade(_player)
+{
+	var inst = instance_create_layer(_player.x, _player.y - 40, GameManager.layerObject, Grenade);
+	inst.xSpeed = _player.image_xscale * 16;
+	inst.ySpeed = -10;
+	inst.grenadeType = _player.grenadeType;
+	inst.playerID = _player;
+}
+
+///@function CreateExplosion(instance)
+
+function CreateExplosion(_instance)
+{
+	var inst = instance_create_layer(_instance.x, _instance.y, GameManager.layerObject, Explosion);
+	inst.playerID = _instance.playerID;
+	inst.grenadeType = _instance.grenadeType;
+	inst.sprite_index = ExplosionGetSize(_instance.grenadeType);
+}
+
+///@function ExplosionGetDamage(grenadeType)
+
+function ExplosionGetDamage(_grenadeType)
+{
+	return DataBase.explosionDamage[_grenadeType];
+}
+
+///@function ExplosionGetSize(grenadeType)
+
+function ExplosionGetSize(_grenadeType)
+{
+	return DataBase.explosionSize[_grenadeType];
 }

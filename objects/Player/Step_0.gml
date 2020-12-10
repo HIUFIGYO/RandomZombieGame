@@ -257,8 +257,6 @@ if(isThrowing)
 		canShoot = true;
 		isThrowing = false;
 		throwSubImage = 0;
-		var inst = instance_create_layer(x, y - 40, GameManager.layerObject, Grenade);
-		inst.xSpeed = image_xscale * 16;
-		inst.ySpeed = -10;
+		CreateGrenade(id);
 	}
 }

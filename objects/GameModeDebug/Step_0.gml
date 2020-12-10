@@ -56,7 +56,7 @@ if(godMode)
 {
 	with(Player)
 	{
-		RevivePlayer(id, maxHp);
+		RevivePlayer(id, GetMaxHealth(id));
 	}
 }
 

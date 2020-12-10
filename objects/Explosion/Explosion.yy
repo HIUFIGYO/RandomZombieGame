@@ -1,14 +1,8 @@
 {
-  "spriteId": {
-    "name": "Spr_explosion",
-    "path": "sprites/Spr_explosion/Spr_explosion.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
-  "spriteMaskId": {
-    "name": "spr_HBexplosionmedium",
-    "path": "sprites/spr_HBexplosionmedium/spr_HBexplosionmedium.yy",
-  },
+  "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

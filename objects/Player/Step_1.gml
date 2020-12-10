@@ -4,19 +4,19 @@ if(!isDead)
 if(hpRegenTimer <= 0)
 {
 	hp += hpRegenRate;
-	hp = clamp(hp, 0, maxHp);
 	var bonus = 1;
 	if(CheckBuff(id, Buff.Regeneration))
 		bonus = DataBase.regenBuffEffect;
 	hpRegenTimer = (hpRegenTime + global.difficulty) * bonus;
 }
+hp = clamp(hp, 0, GetMaxHealth(id));
 
 //stamina regen
 staminaWaitTimer -= DeltaTimeSecond();
 if(staminaWaitTimer <= 0)
 {
 	stamina += staminaRegenRate * DeltaTimeSecond();
-	stamina = clamp(stamina, 0, maxStamina);
+	stamina = clamp(stamina, 0, GetMaxStamina(id));
 }
 
 //revive
@@ -39,7 +39,7 @@ if(revivePlayerCount == 0 and reviveTimer < reviveTime)
 
 if(reviveTimer <= 0)
 {
-	var startHealth = maxHp * SetStat(0.5, 0.4, 0.3, 0.25);
+	var startHealth = GetMaxHealth(id) * SetStat(0.8, 0.6, 0.4, 0.2);
 	RevivePlayer(id, startHealth);
 	reviveTimer = reviveTime;
 }
