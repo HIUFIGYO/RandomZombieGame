@@ -581,7 +581,7 @@ Adrenaline Vial
 	Price: $1250
 
 Strength Vial
-	-Increase melee damage by 100% for 8 seconds.
+	-Increase melee damage by 100% and melee attacks don't consume stamina for 8 seconds.
 	-Can only use melee weapons for 16 seconds.
 	Cooldown: 75s
 	Price: $1250
@@ -599,7 +599,7 @@ Survivalist Vial
 	Price: $1250
 
 Rapid Vial
-	-Double attack speed and firerate for 5 seconds.
+	-Gain infinite ammo, double attack speed and firerate for 5 seconds.
 	-Movement speed is reduced by 2 for 10 seconds.
 	Cooldown: 120s
 	Price: $1250
