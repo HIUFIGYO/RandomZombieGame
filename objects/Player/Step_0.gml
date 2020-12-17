@@ -113,7 +113,7 @@ if(reloadTimer[currentWeapon] > 0)
 		{
 			ammo[currentWeapon] -= 1;
 			mag[currentWeapon] += 1;
-			if(mag[currentWeapon] < DataWeapon(weapon[currentWeapon], WeapStat.Mag))
+			if(mag[currentWeapon] < GetMaxMag(id))
 				reloadSingleShot[currentWeapon] = 1;
 		}
 	}
@@ -122,7 +122,7 @@ if(reloadTimer[currentWeapon] > 0)
 	{
 		reloadTimer[currentWeapon] = 0;
 		ammo[currentWeapon] += mag[currentWeapon];
-		clipSize = DataWeapon(weapon[currentWeapon], WeapStat.Mag);
+		clipSize = GetMaxMag(id);
 		if(clipSize <= ammo[currentWeapon])
 		{
 			mag[currentWeapon] = clipSize;
@@ -222,7 +222,7 @@ if(isWalking)
 	if(maxSpd == sprintSpeed)
 		walkingAnimSpeed = 1;
 	walking_index += walkingAnimSpeed * DeltaTime();
-	if(walking_index >= sprite_get_number(legs))
+	if(walking_index >= sprite_get_number(spriteLegs))
 		walking_index = 0;	
 }
 
@@ -246,7 +246,7 @@ if(isMelee)
 		inst.pierce = DataWeapon(meleeWeapon, WeapStat.Pierce);
 		inst.image_xscale = image_xscale;
 	}
-	if(meleeSubImage >= sprite_get_number(melee[index]) - 1)
+	if(meleeSubImage >= sprite_get_number(spriteMelee[index]) - 1)
 	{
 		canShoot = true;
 		isMelee = false;
@@ -257,7 +257,7 @@ if(isMelee)
 if(isThrowing)
 {
 	throwSubImage += DeltaTime();
-	if(throwSubImage >= sprite_get_number(throwSprite))
+	if(throwSubImage >= sprite_get_number(spriteThrow))
 	{
 		grenadeAmount -= 1;
 		if(CheckBuff(id, Buff.Demo)and random(1) <= DataBase.demoBuffChanceGrenadeNotConsume)

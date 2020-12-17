@@ -87,7 +87,7 @@
     {"id":{"name":"cross_product","path":"scripts/cross_product/cross_product.yy",},"order":0,},
     {"id":{"name":"spr_menuRecords","path":"sprites/spr_menuRecords/spr_menuRecords.yy",},"order":18,},
     {"id":{"name":"spr_medical","path":"sprites/spr_medical/spr_medical.yy",},"order":17,},
-    {"id":{"name":"character_example","path":"sprites/character_example/character_example.yy",},"order":0,},
+    {"id":{"name":"character_example","path":"sprites/character_example/character_example.yy",},"order":2,},
     {"id":{"name":"spr_legswalk","path":"sprites/spr_legswalk/spr_legswalk.yy",},"order":12,},
     {"id":{"name":"spr_shop","path":"sprites/spr_shop/spr_shop.yy",},"order":18,},
     {"id":{"name":"polygon_create","path":"scripts/polygon_create/polygon_create.yy",},"order":4,},
@@ -447,6 +447,7 @@
   "TextureGroups": [
     {"isScaled":false,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":461609314234257646,"resourceVersion":"1.0","name":"texGroupMenu","resourceType":"GMTextureGroup",},
+    {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":461609314234257646,"resourceVersion":"1.0","name":"texGroupUnused","resourceType":"GMTextureGroup",},
   ],
   "IncludedFiles": [
     {"CopyToMask":153157610357391598,"filePath":"datafiles","resourceVersion":"1.0","name":"Random Zombie Game 2020.txt","resourceType":"GMIncludedFile",},

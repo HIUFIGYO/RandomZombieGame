@@ -20,10 +20,11 @@ money = 250;
 
 //buffs/debuffs
 
-buff[0] = Buff.Demo;
+buff[0] = Buff.Resistance;
 buff[1] = noone;
 buffCooldown[0] = 0;
 buffCooldown[1] = 0;
+damageResistanceTimer = 0;
 
 for(var i=0; i<DeBuff.count; i++)
 {
@@ -90,32 +91,37 @@ throwSubImage = 0;
 crouchOffset = 6;
 
 //sprites and colors
-idle = spr_player;
-head = spr_playerheads;
-torso = spr_playertorso;
-arms = spr_playerjustarms;
-guns = spr_playerarms;
-legs = spr_playerlegs;
-jumping = spr_playerjumping;
-cosmetic = spr_playercosmetics;
-crouch = spr_legscrouch;
-throwSprite = spr_playerthrow;
-dead = choose(spr_playerdead, spr_playerincapacitated);
-melee[0] = spr_playermelee1;
-melee[1] = spr_playermelee2;
-melee[2] = spr_playermelee3;
-melee[3] = spr_playermelee4;
-melee[4] = spr_playermelee11;
-melee[5] = spr_playermelee21;
-melee[6] = spr_playermelee31;
-melee[7] = spr_playermelee41;
+spriteIdle = spr_player;
+spriteHead = spr_playerheads;
+spriteTorso = spr_playertorso;
+spriteArms = spr_playerjustarms;
+spriteGuns = spr_playerarms;
+spriteLegs = spr_playerlegs;
+spriteJumping = spr_playerjumping;
+spriteCosmetic = spr_playercosmetics;
+spriteCrouch = spr_legscrouch;
+spriteThrow = spr_playerthrow;
+
+spriteDeadHead = spr_playerincapacitated_Head;
+spriteDeadTorso = spr_playerincapacitated_Torso;
+spriteDeadArms = spr_playerincapacitated_Arms;
+spriteDeadLegs = spr_playerincapacitated_Legs;
+
+spriteMelee[0] = spr_playermelee1;
+spriteMelee[1] = spr_playermelee2;
+spriteMelee[2] = spr_playermelee3;
+spriteMelee[3] = spr_playermelee4;
+spriteMelee[4] = spr_playermelee11;
+spriteMelee[5] = spr_playermelee21;
+spriteMelee[6] = spr_playermelee31;
+spriteMelee[7] = spr_playermelee41;
 
 head_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 arm_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 torso_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 leg_color = make_color_rgb(irandom(255), irandom(255), irandom(255));
 
-head_index = irandom(sprite_get_number(head));
-torso_index = irandom(sprite_get_number(torso));
-cosmetic_index = irandom(sprite_get_number(cosmetic));
+head_index = irandom(sprite_get_number(spriteHead));
+torso_index = irandom(sprite_get_number(spriteTorso));
+cosmetic_index = irandom(sprite_get_number(spriteCosmetic));
 walking_index = 0;

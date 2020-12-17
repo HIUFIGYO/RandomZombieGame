@@ -11,6 +11,8 @@ healthBuffEffect = 1.5;
 //resistenceBuff
 buffPrice[Buff.Resistance] = 1500;
 resistBuffEffect = 0.2;
+resistBuffCooldown = 2.5;
+resistBuffEffectDuration = 2.5;
 
 //staminaBuff
 buffPrice[Buff.Stamina] = 1500;

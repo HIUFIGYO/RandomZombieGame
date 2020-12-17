@@ -17,8 +17,8 @@
   "width": 108,
   "height": 118,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "texGroupUnused",
+    "path": "texturegroups/texGroupUnused",
   },
   "swatchColours": null,
   "gridX": 0,
@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f6d70ef9-f0b5-47f3-a303-fb3c75fc4d6e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Unused",
+    "path": "folders/Sprites/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "character_example",

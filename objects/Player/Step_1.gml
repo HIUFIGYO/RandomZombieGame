@@ -58,8 +58,17 @@ if(reviveTimer <= 0)
 //buff cool downs
 for(var i=0; i<2; i++)
 {
-	if(buffCooldown[i] > 0)
+	if(buffCooldown[i] > 0 and !isDead)
 		buffCooldown[i] -= DeltaTimeSecond();
+}
+if(damageResistanceTimer > 0)
+{
+	damageResistanceTimer -= DeltaTimeSecond();
+	if(damageResistanceTimer <= 0)
+	{
+		var _slot = GetBuffSlot(id, Buff.Resistance);
+		buffCooldown[_slot] = DataBase.resistBuffCooldown;
+	}
 }
 
 //debuffs

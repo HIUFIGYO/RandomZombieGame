@@ -24,6 +24,17 @@ UIHealthbarSetValue(staminaBar, player.stamina/GetMaxStamina(player));
 //buff
 var index = player.buff[0] == noone ? 0 : player.buff[0] + 1;
 UIImageSetSubImage(buffIcon, index);
+
+var maxCoolDDown = 1;
+index = player.buffCooldown[0];
+if(player.buff[0] == Buff.Demo)
+	maxCoolDDown = DataBase.demoBuffCooldown;
+else if(player.buff[0] == Buff.Resistance)
+	maxCoolDDown = DataBase.resistBuffCooldown;
+else
+	index = 0;
+index = (index / maxCoolDDown) * sprite_get_number(spr_buffDurationRing);
+UIImageSetSubImage(buffCooldown, index);
 	
 //revive bar
 UISetAlpha(reviveBar, player.isDead);

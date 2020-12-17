@@ -160,24 +160,14 @@ function CreateGrenade(_player)
 	inst.playerID = _player;
 }
 
-///@function CreateExplosion(instance)
+///@function CreateExplosion(instance, playerID)
 
-function CreateExplosion(_instance)
+function CreateExplosion(_instance, _playerID)
 {
 	var inst = instance_create_layer(_instance.x, _instance.y, GameManager.layerObject, Explosion);
-	inst.playerID = _instance.playerID;
-	inst.grenadeType = _instance.grenadeType;
-	inst.sprite_index = ExplosionGetSize(_instance.grenadeType);
-}
-
-///@function CreateExplosionPlayer(instance)
-
-function CreateExplosionPlayer(_player)
-{
-	var inst = instance_create_layer(_player.x, _player.y, GameManager.layerObject, Explosion);
-	inst.playerID = _player;
-	inst.grenadeType = _player.grenadeType;
-	inst.sprite_index = spr_HBexplosionlarge;
+	inst.playerID = _playerID;
+	inst.grenadeType = _playerID.grenadeType;
+	inst.sprite_index = ExplosionGetSize(_playerID.grenadeType);
 }
 
 ///@function ExplosionGetDamage(grenadeType)

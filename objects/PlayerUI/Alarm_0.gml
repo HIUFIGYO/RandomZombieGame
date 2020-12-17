@@ -31,6 +31,10 @@ UISetSize(staminaBar, 96, 8);
 buffIcon = UICreateImage(8, 40, spr_buffs, UIDrawTo.ViewPort);
 UISetView(buffIcon, playerID);
 
+buffCooldown = UICreateImage(8, 40, spr_buffDurationRing, UIDrawTo.ViewPort);
+UISetView(buffCooldown, playerID);
+UISetDepth(buffCooldown, -1);
+
 //Revive Bar
 reviveBar = UICreateHealthbar(0, 0, UIDrawTo.Room);
 UIHealthbarSetColor(reviveBar, c_black, c_white, c_white);

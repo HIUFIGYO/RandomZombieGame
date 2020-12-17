@@ -9,6 +9,19 @@ function HealPlayer(_player, _amount)
 
 function DamagePlayer(_player, _damage)
 {
+	if(CheckBuff(_player, Buff.Resistance))
+	{
+		_damage *= 1 - DataBase.resistBuffEffect;
+		var _slot = GetBuffSlot(_player, Buff.Resistance);
+		if(_player.buffCooldown[_slot] <= 0)
+		{
+			if(_player.damageResistanceTimer <= 0)
+				_player.damageResistanceTimer = DataBase.resistBuffEffectDuration;
+			else
+				_damage *= 1 - DataBase.resistBuffEffect;
+		}
+	}
+	_damage = round(_damage);
 	var damageToArmour = max(floor(_damage * 0.8), 1);
 	var damageToHealth = floor(_damage * 0.2);
 	
@@ -29,32 +42,15 @@ function DamagePlayer(_player, _damage)
 	
 	_player.hp -= damageToHealth;
 	_player.UI.overlayAlpha = 1;
+	
 	if(_player.hp <= 0)
 	{
-		var _die = false;
-		if(CheckBuff(_player, Buff.Demo))
-		{
-			var index = 0;
-			if(_player.buff[1] == Buff.Demo)
-				index = 1;
-			if(_player.buffCooldown[index] <= 0)
-			{
-				_player.hp = 1;
-				CreateExplosionPlayer(_player);
-				_player.buffCooldown[index] = DataBase.demoBuffCooldown;
-			}
-			else
-				_die = true;
-		}
-		else
-			_die = true;
-		if(_die)
-		{
-			_player.hp = 0;
-			_player.isDead = true;
-			with(GameManager.gameMode)
-				event_perform(ev_other, ev_user1);
-		}
+		_player.hp = 0;
+		_player.isDead = true;
+		with(_player)
+			event_perform(ev_other, ev_user0);
+		with(GameManager.gameMode)
+			event_perform(ev_other, ev_user1);
 	}
 	//TODO: make this a function dammit
 	repeat(damageToHealth)
@@ -154,14 +150,20 @@ function GetMaxStamina(_player)
  
 function GetMaxAmmo(_player)
 {
-	return DataWeapon(_player.weapon[_player.currentWeapon], WeapStat.Ammo);
+	var _value = DataWeapon(_player.weapon[_player.currentWeapon], WeapStat.Ammo);
+	if(CheckBuff(_player, Buff.Ammo))
+		_value *= DataBase.ammoBuffAmmo;
+	return ceil(_value);
 }
 
 ///@function GetMaxMag(player)
  
 function GetMaxMag(_player)
 {
-	return DataWeapon(_player.weapon[_player.currentWeapon], WeapStat.Mag);
+	var _value = DataWeapon(_player.weapon[_player.currentWeapon], WeapStat.Mag);
+	if(CheckBuff(_player, Buff.Ammo))
+		_value *= DataBase.ammoBuffMag;
+	return floor(_value);
 }
 
 ///@function GetMaxGrenades(player)
