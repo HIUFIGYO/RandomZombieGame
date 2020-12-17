@@ -1,8 +1,19 @@
 /// @description OnPlayerDeath
 
-if(CheckBuff(id, Buff.Demo)and buffCooldown[0] <= 0)
+var _slot = GetBuffSlot(id, Buff.Demo);
+if(CheckBuff(id, Buff.Demo)and buffCooldown[_slot] <= 0)
 {
-	buffCooldown[0] = DataBase.demoBuffCooldown;
+	buffCooldown[_slot] = DataBase.demoBuffCooldown;
 	RevivePlayer(id, 1);
 	CreateExplosion(id, id);
+}
+
+if(isDead)
+{
+	money *= SetStat(0.7, 0.6, 0.5, 0.4);
+	
+	if(buff[1] != noone)
+		buff[1] = noone;
+	else
+		buff[0] = noone;
 }

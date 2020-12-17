@@ -28,17 +28,39 @@ UIHealthbarSetColor(staminaBar, c_black, c_yellow, c_yellow);
 UISetSize(staminaBar, 96, 8);
 
 //buff icon
-buffIcon = UICreateImage(8, 40, spr_buffs, UIDrawTo.ViewPort);
-UISetView(buffIcon, playerID);
+buffIcon[0] = UICreateImage(8, 40, spr_buffs, UIDrawTo.ViewPort);
+UISetView(buffIcon[0], playerID);
 
-buffCooldown = UICreateImage(8, 40, spr_buffDurationRing, UIDrawTo.ViewPort);
-UISetView(buffCooldown, playerID);
-UISetDepth(buffCooldown, -1);
+buffIcon[1] = UICreateImage(48, 40, spr_buffs, UIDrawTo.ViewPort);
+UISetView(buffIcon[1], playerID);
+
+buffPassive[0] = UICreateImage(8, 80, spr_buffPassiveIcons, UIDrawTo.ViewPort);
+UISetView(buffPassive[0], playerID);
+
+buffPassive[1] = UICreateImage(48, 80, spr_buffPassiveIcons, UIDrawTo.ViewPort);
+UISetView(buffPassive[1], playerID);
+
+buffCooldown[0] = UICreateImage(8, 40, spr_buffDurationRing, UIDrawTo.ViewPort);
+UISetView(buffCooldown[0], playerID);
+UISetDepth(buffCooldown[0], -1);
+
+buffCooldown[1] = UICreateImage(48, 40, spr_buffDurationRing, UIDrawTo.ViewPort);
+UISetView(buffCooldown[1], playerID);
+UISetDepth(buffCooldown[1], -1);
+
+buffCooldownP[0] = UICreateImage(8, 80, spr_buffDurationRing, UIDrawTo.ViewPort);
+UISetView(buffCooldownP[0], playerID);
+UISetDepth(buffCooldownP[0], -1);
+
+buffCooldownP[1] = UICreateImage(48, 80, spr_buffDurationRing, UIDrawTo.ViewPort);
+UISetView(buffCooldownP[1], playerID);
+UISetDepth(buffCooldownP[1], -1);
 
 //Revive Bar
 reviveBar = UICreateHealthbar(0, 0, UIDrawTo.Room);
 UIHealthbarSetColor(reviveBar, c_black, c_white, c_white);
 UISetSize(reviveBar, 64, 8);
+UISetAlpha(reviveBar, 0);
 
 //damage overlay
 overlay = UICreateImage();

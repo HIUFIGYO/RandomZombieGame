@@ -1,6 +1,6 @@
 //stats
 hp = 100;
-armour = 100;
+armour = 0;
 stamina = 100;
 
 hpRegenRate = 1;
@@ -12,7 +12,7 @@ staminaWaitTime = 0.5;//seconds
 staminaWaitTimer = 0;
 
 maxHp = hp;
-maxArmour = armour;
+maxArmour = 100;
 maxStamina = stamina;
 
 kills = 0;
@@ -21,7 +21,7 @@ money = 250;
 //buffs/debuffs
 
 buff[0] = Buff.Resistance;
-buff[1] = noone;
+buff[1] = Buff.Demo;
 buffCooldown[0] = 0;
 buffCooldown[1] = 0;
 damageResistanceTimer = 0;

@@ -9,6 +9,9 @@ function HealPlayer(_player, _amount)
 
 function DamagePlayer(_player, _damage)
 {
+	if(_player.isDead)
+		return;
+		
 	if(CheckBuff(_player, Buff.Resistance))
 	{
 		_damage *= 1 - DataBase.resistBuffEffect;

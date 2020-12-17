@@ -107,6 +107,7 @@ if(!isDead and !isAttacking and target != noone)
 	if(distance_to_object(target) <= attackRange)
 	{
 		isAttacking = true;
+		image_speed  = 0.5
 		sprite_index = spriteAttack;
 	}
 }

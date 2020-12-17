@@ -22,24 +22,57 @@ UISetAlpha(armourBar, player.armour > 0);
 UIHealthbarSetValue(staminaBar, player.stamina/GetMaxStamina(player));
 
 //buff
-var index = player.buff[0] == noone ? 0 : player.buff[0] + 1;
-UIImageSetSubImage(buffIcon, index);
-
-var maxCoolDDown = 1;
-index = player.buffCooldown[0];
-if(player.buff[0] == Buff.Demo)
-	maxCoolDDown = DataBase.demoBuffCooldown;
-else if(player.buff[0] == Buff.Resistance)
-	maxCoolDDown = DataBase.resistBuffCooldown;
-else
-	index = 0;
-index = (index / maxCoolDDown) * sprite_get_number(spr_buffDurationRing);
-UIImageSetSubImage(buffCooldown, index);
+var index;
+UISetAlpha(buffCooldown[0], 0);
+UISetAlpha(buffCooldown[1], 0);
+UISetAlpha(buffPassive[0], 0);
+UISetAlpha(buffPassive[1], 0);
+UISetAlpha(buffCooldownP[0], 0);
+UISetAlpha(buffCooldownP[1], 0);
+for(var i=0; i<2; i++)
+{
+	var index = player.buff[i] == noone ? 0 : player.buff[i] + 1;
+	UIImageSetSubImage(buffIcon[i], index);
+	
+	if(player.buff[i] == Buff.Demo)
+	{
+		if(player.buffCooldown[i] > 0)
+		{
+			UISetAlpha(buffCooldown[i], 1);
+			UISetAlpha(buffPassive[i], 1);
+			UISetAlpha(buffCooldownP[i], 1);
+			UIImageSetSubImage(buffCooldown[i], 0);
+			UIImageSetSubImage(buffPassive[i], 0);
+			index = (player.buffCooldown[i] / DataBase.demoBuffCooldown) * sprite_get_number(spr_buffDurationRing);
+			UIImageSetSubImage(buffCooldownP[i], index);
+		}
+	}
+	
+	if(player.buff[i] == Buff.Resistance)
+	{
+		if(player.buffCooldown[i] > 0)
+		{
+			UISetAlpha(buffCooldown[i], 1);
+			index = (player.buffCooldown[i] / DataBase.resistBuffCooldown) * sprite_get_number(spr_buffDurationRing);
+			UIImageSetSubImage(buffCooldown[i], index);
+		}
+		
+		if(player.damageResistanceTimer > 0)
+		{
+			UISetAlpha(buffPassive[i], 1);
+			UISetAlpha(buffCooldownP[i], 1);
+			UIImageSetSubImage(buffPassive[i], 1);
+			index = (player.damageResistanceTimer / DataBase.resistBuffEffectDuration) * sprite_get_number(spr_buffDurationRing);
+			UIImageSetSubImage(buffCooldownP[i], index);
+		}
+	}
+}
 	
 //revive bar
-UISetAlpha(reviveBar, player.isDead);
+UISetAlpha(reviveBar, 0);
 if(player.isDead)
 {
+	UISetAlpha(reviveBar, 0.6);
 	UIHealthbarSetValue(reviveBar, (player.reviveTime - player.reviveTimer) / player.reviveTime);
 	UISetPosition(reviveBar, player.x - 32, player.y - 64);
 }
