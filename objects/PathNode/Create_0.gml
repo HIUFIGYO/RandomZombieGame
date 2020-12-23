@@ -1,0 +1,1 @@
+connectedNodes = ds_list_create();
