@@ -71,6 +71,7 @@ UISetDepth(overlay, 1);
 UISetView(overlay, playerID);
 UISetAlpha(overlay, 0);
 UISetSize(overlay, view_wport[playerID], view_hport[playerID]);
+UISetColor(overlay, c_red);
 
 //grenades
 grenadeText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
