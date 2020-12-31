@@ -1,0 +1,1 @@
+UpdateDebuffs(id, false);

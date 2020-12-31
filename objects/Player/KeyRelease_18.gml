@@ -1,3 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-buff[0] = irandom(Buff.count);
+var index = irandom(DeBuff.count);
+while(index == DeBuff.Poison)
+	index = irandom(DeBuff.count);
+deBuff[index] = true;
+deBuffTimer[index] = 4;
+deBuffStack[index] = 1;

@@ -26,12 +26,7 @@ buffCooldown[0] = 0;
 buffCooldown[1] = 0;
 damageResistanceTimer = 0;
 
-for(var i=0; i<DeBuff.count; i++)
-{
-	deBuff[i] = false;
-	deBuffStack[i] = 0;
-	deBuffTimer[i] = 0;
-}
+InitDebuffs(id);
 
 //weapons
 currentWeapon = 0;

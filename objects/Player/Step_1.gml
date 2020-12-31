@@ -72,22 +72,7 @@ if(damageResistanceTimer > 0)
 }
 
 //debuffs
-for(var i=0; i<DeBuff.count; i++)
-{
-	if(!deBuff[i])
-		continue;
-		
-	deBuffTimer[i] -= DeltaTimeSecond();
-	if(!deBuff[i] == DeBuff.Poison)
-		DamagePlayer(id, DataBase.deBuffDamage[i]);
-		
-	if(deBuffTimer <= 0)
-	{
-		deBuff[i] = false;
-		if(deBuff[i] == DeBuff.Poison)
-			DamagePlayer(id, DataBase.deBuffDamage[i]);
-	}
-}
+UpdateDebuffs(id, true);
 
 //interact with objects
 if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
