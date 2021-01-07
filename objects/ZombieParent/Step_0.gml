@@ -28,6 +28,7 @@ if(!isDead)
 if(!isDead and hp <= 0)
 {
 	GameZombieDead(id);
+	GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) / 2, acid, 0);
 	isDead = true;
 	hp = 0;
 	image_speed = 0;

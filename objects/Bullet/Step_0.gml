@@ -43,8 +43,6 @@ if(count > 0)
 				
 			ds_list_add(targetsHit, hits[| i]);
 			
-			GameSprayBlood(x, y, hits[| i].acid, image_xscale);
-			
 			var _damage = DataWeapon(weapon, WeapStat.Damage);
 			if(CheckBuff(playerID, Buff.Damage))
 			{
@@ -71,6 +69,10 @@ if(count > 0)
 			}
 				
 			DamageZombie(playerID, hits[| i], _damage);
+			GameSprayBlood(GameGetBloodAmount(), x, y, hits[| i].acid, image_xscale);
+			
+			if(weapon == Weapon.Drainer)
+				DebuffApply(hits[| i], DeBuff.Bleed, playerID);
 				
 			pierce -= 1;
 			if(pierce > 0)

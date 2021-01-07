@@ -8,4 +8,4 @@ if(CheckBuff(other.playerID, Buff.Damage) and _damage > 0)
 DamageZombie(other.playerID, id, _damage);
 
 if(_damage > 0)
-	GameSprayBlood(other.x, other.y, acid, image_xscale);
+	GameSprayBlood(_damage, other.x, other.y, acid, 0);

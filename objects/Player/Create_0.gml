@@ -20,11 +20,12 @@ money = 250;
 
 //buffs/debuffs
 
-buff[0] = Buff.Resistance;
-buff[1] = Buff.Demo;
+buff[0] = noone;
+buff[1] = noone;
 buffCooldown[0] = 0;
 buffCooldown[1] = 0;
 damageResistanceTimer = 0;
+bleedMaxTimer = 0;
 
 InitDebuffs(id);
 

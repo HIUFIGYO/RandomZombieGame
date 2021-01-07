@@ -41,7 +41,7 @@
     {"id":{"name":"Explosion","path":"objects/Explosion/Explosion.yy",},"order":3,},
     {"id":{"name":"spr_playerdead","path":"sprites/spr_playerdead/spr_playerdead.yy",},"order":4,},
     {"id":{"name":"BloodGrinder","path":"objects/BloodGrinder/BloodGrinder.yy",},"order":8,},
-    {"id":{"name":"WeaponDrops","path":"objects/WeaponDrops/WeaponDrops.yy",},"order":1,},
+    {"id":{"name":"WeaponDrops","path":"objects/WeaponDrops/WeaponDrops.yy",},"order":12,},
     {"id":{"name":"spr_playerincapacitated","path":"sprites/spr_playerincapacitated/spr_playerincapacitated.yy",},"order":7,},
     {"id":{"name":"spr_playerdead_Torso","path":"sprites/spr_playerdead_Torso/spr_playerdead_Torso.yy",},"order":32,},
     {"id":{"name":"obj_shadow_caster","path":"objects/obj_shadow_caster/obj_shadow_caster.yy",},"order":3,},

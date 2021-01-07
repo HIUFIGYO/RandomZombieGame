@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Weapons",
-    "path": "folders/Objects/Weapons.yy",
+    "name": "Zombies",
+    "path": "folders/Objects/Zombies.yy",
   },
   "resourceVersion": "1.0",
   "name": "WeaponDrops",

@@ -9,4 +9,4 @@ if(CheckBuff(other.playerID, Buff.Damage))
 	_damage += DataBase.damageBuffMelee;
 
 DamageZombie(other.playerID, id, _damage);
-GameSprayBlood(other.x, other.y, acid, image_xscale);
+GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) /2, acid, image_xscale);

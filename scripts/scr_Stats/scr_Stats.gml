@@ -55,13 +55,8 @@ function DamagePlayer(_player, _damage)
 		with(GameManager.gameMode)
 			event_perform(ev_other, ev_user1);
 	}
-	//TODO: make this a function dammit
-	repeat(damageToHealth)
-	{
-		var inst = instance_create_layer(_player.x, _player.y - 32, GameManager.layerCorpse, Blood);
-		inst.xSpeed = -10 + irandom(20);
-		inst.ySpeed = -10 - irandom(10);
-	}
+	
+	GameSprayBlood(damageToHealth, x, y - (bbox_bottom - bbox_top) / 2, false, 0);
 }
 
 ///@function DamagePlayerArmour(player, damage)

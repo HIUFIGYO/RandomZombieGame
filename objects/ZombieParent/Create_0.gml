@@ -33,8 +33,8 @@ showHealthTimer = 0;
 GameAddZombie();
 
 //cosmetic
-cosmetic = spr_zombieSeasonalHats;
-cosmetic_index = irandom(sprite_get_number(cosmetic));
+//cosmetic = spr_zombieSeasonalHats;
+//cosmetic_index = irandom(sprite_get_number(cosmetic));
 
 //debuffs
 deBuffPlayerID = noone;

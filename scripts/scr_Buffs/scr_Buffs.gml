@@ -52,6 +52,48 @@ function InitDebuffs(_id)
 	}
 }
 
+///@function DebuffApply(id, debuff, playerIDoptional)
+
+function DebuffApply(_id, _debuff, _playerID)
+{
+	if(!is_undefined(_playerID))
+		_id.deBuffPlayerID = _playerID;
+	
+	if(_id.deBuff[_debuff])
+	{
+		switch(_debuff)
+		{
+			case DeBuff.Ignite:
+				_id.deBuffStack[_debuff] += 1;
+				_id.deBuffTimer[_debuff] = DataBase.deBuffDuration[_debuff];
+				break;
+				
+			case DeBuff.Acid:
+				_id.deBuffTimer[_debuff] = DataBase.deBuffDuration[_debuff];
+				break;
+				
+			case DeBuff.Bleed:
+				_id.deBuffStack[_debuff] += 1;
+				_id.deBuffTimer[_debuff] += 2;
+				if(is_undefined(_playerID))
+					_id.bleedMaxTimer += 2;
+				break;
+		}
+	}
+	else
+	{
+		_id.deBuff[_debuff] = true;
+		_id.deBuffStack[_debuff] = 1;
+		_id.deBuffTimer[_debuff] = DataBase.deBuffDuration[_debuff];
+		if(_debuff == DeBuff.Bleed)
+		{
+			_id.deBuffStack[_debuff] = 2;
+			if(is_undefined(_playerID))
+				_id.bleedMaxTimer = DataBase.deBuffDuration[_debuff];
+		}
+	}
+}
+
 ///@function UpdateDebuffs(id, isPlayer)
 
 function UpdateDebuffs(_id, _isPlayer)
@@ -63,11 +105,14 @@ function UpdateDebuffs(_id, _isPlayer)
 			
 		var doDamage = floor(_id.deBuffTimer[i]);
 		_id.deBuffTimer[i] -= DeltaTimeSecond();
+		if(_id.deBuffTimer[i] < 0)
+			_id.deBuffTimer[i] = 0;
 		if(doDamage != floor(_id.deBuffTimer[i]))
 		{
 			switch(i)
 			{
 				case DeBuff.Ignite:
+				case DeBuff.Bleed:
 					if(_isPlayer)
 						DamagePlayer(_id, _id.deBuffStack[i]);
 					else
@@ -78,7 +123,6 @@ function UpdateDebuffs(_id, _isPlayer)
 					break;
 					
 				case DeBuff.Acid:
-				case DeBuff.Bleed:
 					if(_isPlayer)
 						DamagePlayer(_id, DataBase.deBuffDamage[i]);
 					else
@@ -98,7 +142,7 @@ function UpdateDebuffs(_id, _isPlayer)
 			_id.deBuff[i] = false;
 			_id.deBuffStack[i] = 0;
 			if(i == DeBuff.Poison)
-				DamagePlayerHealth(_id, DataBase.deBuffDamage[DeBuff.Poison]);
+				DamagePlayerHealth(_id, SetStat(DataBase.deBuffDamageEasy, DataBase.deBuffDamageMed, DataBase.deBuffDamageHard, DataBase.deBuffDamageVeryHard));
 		}
 	}
 }
@@ -134,7 +178,22 @@ function DrawDebuffs(_id, _view)
 		var _xx = _startX - (_width / 2) + i * (_sprWidth + _padding) + _padding;
 		draw_sprite(spr_debuffs, _deBuffIcon[i], _xx, _startY);
 		
-		var index = (_id.deBuffTimer[_deBuffIcon[i]] / DataBase.deBuffDuration[_deBuffIcon[i]]) * sprite_get_number(spr_debuffDurationRing);
+		var _stackCorrect = _id.deBuffStack[_deBuffIcon[i]];
+		var _maxDuration = DataBase.deBuffDuration[_deBuffIcon[i]];
+		if(_deBuffIcon[i] == DeBuff.Bleed)
+		{
+			_stackCorrect -= 1;
+			_maxDuration = _id.bleedMaxTimer;
+		}
+		
+		var index = (_id.deBuffTimer[_deBuffIcon[i]] / _maxDuration) * sprite_get_number(spr_debuffDurationRing);
 		draw_sprite(spr_debuffDurationRing, floor(index), _xx, _startY);
+		
+		if(_stackCorrect > 1)
+		{
+			draw_set_color(c_yellow);
+			draw_set_alpha(1);
+			draw_text(_xx, _startY, string(_stackCorrect));	
+		}
 	}
 }

@@ -66,12 +66,17 @@ function GameSetUpPlayer(_player, _num)
 	WindowSetCamFollow(_num, _player);
 }
 
-///@function GameSprayBlood(x, y, isAcid, flip)
+///@function GameSprayBlood(amount, x, y, isAcid, flip)
 
-function GameSprayBlood(_x, _y, _acid, _flip)
-{
-	var inst;
-	repeat(global.bloodAmount + irandom(10))
+function GameSprayBlood(_amount, _x, _y, _acid, _flip)
+{	
+	var inst, _repeatCount;
+	if(_acid)
+		_repeatCount = _amount;
+	else
+		_repeatCount = round(_amount * global.bloodAmount);
+	
+	repeat(_repeatCount)
 	{
 		inst = instance_create_layer(_x, _y, GameManager.layerCorpse, Blood);
 		if(_acid)
@@ -80,7 +85,23 @@ function GameSprayBlood(_x, _y, _acid, _flip)
 			if(inst.isAcid)
 				inst.image_blend = c_lime;
 		}
-		inst.xSpeed = (10 + irandom(5)) * _flip;
-		inst.ySpeed = -10 + irandom(11);
+		if(_flip == 0)
+		{
+			inst.xSpeed = -10 + irandom(20);
+			inst.ySpeed = -10 - irandom(10);
+		}
+		else
+		{
+			inst.xSpeed = (10 + irandom(5)) * _flip;
+			inst.ySpeed = -10 + irandom(11);
+		}
 	}
 }
+
+///@function GameGetBloodAmount()
+
+function GameGetBloodAmount()
+{
+	return irandom_range(round(10 * global.bloodAmount), round(20 * global.bloodAmount));
+}
+	
