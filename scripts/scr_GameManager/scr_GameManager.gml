@@ -21,15 +21,21 @@ function GameZombieDead(_id)
 		event_perform(ev_other, ev_user0);
 }
 
+///@function GameAddZombie()
+
 function GameAddZombie()
 {
 	GameManager.gameMode.totalZombies += 1;
 }
 
+///@function GameRemoveZombie()
+
 function GameRemoveZombie()
 {
 	GameManager.gameMode.totalZombies -= 1;
 }
+
+///@function GameSpawnZombie()
 
 function GameSpawnZombie()
 {
@@ -40,6 +46,8 @@ function GameSpawnZombie()
 		instance_create_layer(spawnPoint.x, spawnPoint.y, GameManager.layerZombie, GameManager.gameMode.zombieSpawnList[| zedIndex]);
 	}
 }
+
+///@function GameSpawnGameMode()
 
 function GameSpawnGameMode()
 {
@@ -102,6 +110,6 @@ function GameSprayBlood(_amount, _x, _y, _acid, _flip)
 
 function GameGetBloodAmount()
 {
-	return irandom_range(round(10 * global.bloodAmount), round(20 * global.bloodAmount));
+	return irandom_range(10 , 20);
 }
 	

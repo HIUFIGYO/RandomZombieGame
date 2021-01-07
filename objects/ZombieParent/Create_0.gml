@@ -19,6 +19,7 @@ ySpeed = 0;
 target = noone;
 friction = 0.3;
 
+color = c_white;
 image_speed = 0.5;
 spriteIdle = noone;
 spriteWalk = noone;

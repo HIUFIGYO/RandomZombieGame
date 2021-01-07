@@ -44,6 +44,7 @@ function GetBuffSlot(_player, _buff)
 
 function InitDebuffs(_id)
 {
+	_id.deBuffTick = 1;
 	for(var i=0; i<DeBuff.count; i++)
 	{
 		_id.deBuff[i] = false;
@@ -57,7 +58,21 @@ function InitDebuffs(_id)
 function DebuffApply(_id, _debuff, _playerID)
 {
 	if(!is_undefined(_playerID))
+	{
 		_id.deBuffPlayerID = _playerID;
+		switch(_debuff)
+		{
+			case DeBuff.Ignite:
+				_id.color = c_orange;
+				break;
+			case DeBuff.Acid:
+				_id.color = c_lime;
+				break;
+			case DeBuff.Bleed:
+				_id.color = c_red;
+				break;
+		}
+	}
 	
 	if(_id.deBuff[_debuff])
 	{
@@ -79,6 +94,7 @@ function DebuffApply(_id, _debuff, _playerID)
 					_id.bleedMaxTimer += 2;
 				break;
 		}
+		_id.deBuffStack[_debuff] = clamp(_id.deBuffStack[_debuff], 0, 10);
 	}
 	else
 	{
@@ -91,6 +107,8 @@ function DebuffApply(_id, _debuff, _playerID)
 			if(is_undefined(_playerID))
 				_id.bleedMaxTimer = DataBase.deBuffDuration[_debuff];
 		}
+		if(_debuff == DeBuff.Poison)
+			_id.deBuffTimer[_debuff] -= SetStat(0, 30, 60, 90);
 	}
 }
 
@@ -98,16 +116,20 @@ function DebuffApply(_id, _debuff, _playerID)
 
 function UpdateDebuffs(_id, _isPlayer)
 {
+	if(_id.deBuffTick > 0)
+	{
+		_id.deBuffTick -= DeltaTimeSecond();
+		if(_id.deBuffTick <= 0)
+			_id.deBuffTick = 0;
+	}
+	
 	for(var i=0; i<DeBuff.count; i++)
 	{
 		if(!_id.deBuff[i])
 			continue;
 			
-		var doDamage = floor(_id.deBuffTimer[i]);
 		_id.deBuffTimer[i] -= DeltaTimeSecond();
-		if(_id.deBuffTimer[i] < 0)
-			_id.deBuffTimer[i] = 0;
-		if(doDamage != floor(_id.deBuffTimer[i]))
+		if(_id.deBuffTick == 0)
 		{
 			switch(i)
 			{
@@ -127,8 +149,8 @@ function UpdateDebuffs(_id, _isPlayer)
 						DamagePlayer(_id, DataBase.deBuffDamage[i]);
 					else
 					{
-						if(deBuffPlayerID != noone)
-							DamageZombie(deBuffPlayerID, _id, DataBase.deBuffDamage[i]);
+						DamageZombie(deBuffPlayerID, _id, DataBase.deBuffDamage[i]);
+						GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) / 2, _id.acid, 0);
 					}
 					break;
 					
@@ -143,8 +165,13 @@ function UpdateDebuffs(_id, _isPlayer)
 			_id.deBuffStack[i] = 0;
 			if(i == DeBuff.Poison)
 				DamagePlayerHealth(_id, SetStat(DataBase.deBuffDamageEasy, DataBase.deBuffDamageMed, DataBase.deBuffDamageHard, DataBase.deBuffDamageVeryHard));
+			if(!_isPlayer)
+				_id.color = c_white;
 		}
 	}
+	
+	if(_id.deBuffTick == 0)
+		_id.deBuffTick = 1;
 }
 
 ///@function DrawDebuffs(id, view)
@@ -185,6 +212,8 @@ function DrawDebuffs(_id, _view)
 			_stackCorrect -= 1;
 			_maxDuration = _id.bleedMaxTimer;
 		}
+		if(_deBuffIcon[i] == DeBuff.Poison)
+			_maxDuration = DataBase.deBuffDuration[_deBuffIcon[i]] - (global.difficulty * 30);
 		
 		var index = (_id.deBuffTimer[_deBuffIcon[i]] / _maxDuration) * sprite_get_number(spr_debuffDurationRing);
 		draw_sprite(spr_debuffDurationRing, floor(index), _xx, _startY);

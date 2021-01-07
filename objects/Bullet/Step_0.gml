@@ -67,6 +67,9 @@ if(count > 0)
 						break;
 				}
 			}
+			
+			if(weapon == Weapon.Flame)
+				DebuffApply(hits[| i], DeBuff.Ignite, playerID);
 				
 			DamageZombie(playerID, hits[| i], _damage);
 			GameSprayBlood(GameGetBloodAmount(), x, y, hits[| i].acid, image_xscale);

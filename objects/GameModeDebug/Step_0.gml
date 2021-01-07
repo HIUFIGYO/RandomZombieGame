@@ -48,7 +48,7 @@ if(keyboard_check_pressed(vk_numpad2))
 	inst.image_index = weaponSelect;
 }
 
-//toggle demi god mode
+//toggle god mode
 if(keyboard_check_pressed(vk_numpad7))
 	godMode = !godMode;
 	
@@ -57,6 +57,10 @@ if(godMode)
 	with(Player)
 	{
 		RevivePlayer(id, GetMaxHealth(id));
+		stamina = GetMaxStamina(id);
+		grenadeAmount = 5;
+		mag[currentWeapon] = DataWeapon(weapon[currentWeapon], WeapStat.Mag);
+		money = 9999;
 	}
 }
 

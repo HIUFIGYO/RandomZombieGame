@@ -50,6 +50,7 @@ function DamagePlayer(_player, _damage)
 	{
 		_player.hp = 0;
 		_player.isDead = true;
+		InitDebuffs(_player);
 		with(_player)
 			event_perform(ev_other, ev_user0);
 		with(GameManager.gameMode)
@@ -72,32 +73,45 @@ function DamagePlayerArmour(_player, _damage)
 function DamagePlayerHealth(_player, _damage)
 {
 	_player.hp -= _damage;
-	_player.hp = clamp(_player.hp, 0, GetMaxHealth(_player));
+	GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) / 2, false, 0);
+	if(_player.hp <= 0)
+	{
+		_player.hp = 0;
+		_player.isDead = true;
+		InitDebuffs(_player);
+		with(_player)
+			event_perform(ev_other, ev_user0);
+		with(GameManager.gameMode)
+			event_perform(ev_other, ev_user1);
+	}
 }
 
 ///@function DamageZombie(playerID, zombie, damage)
 
 function DamageZombie(_playerID, _zombie, _damage)
 {
-	if(CheckBuff(_playerID, Buff.Critical)and random(1) <= DataBase.criticalBuffEffect)
-		_damage *= 2;
-		
-	if(CheckBuff(_playerID, Buff.Scout))
+	if(_playerID != noone)
 	{
-		_zombie.showHealth = true;
-		_zombie.showHealthTimer = DataBase.scoutBuffShowHealthTime;
-		if(_zombie.hp <= _zombie.maxHp * DataBase.scoutBuffHealthRate)
-			_damage += DataBase.scoutBuffDamage;
-	}
+		if(CheckBuff(_playerID, Buff.Critical)and random(1) <= DataBase.criticalBuffEffect)
+			_damage *= 2;
 		
-	var moneyGained = _damage;
-	if(_damage > _zombie.hp)
-		moneyGained = _zombie.hp;
-	_playerID.money += moneyGained * (5 - global.difficulty);
-	_playerID.money  = clamp(_playerID.money, 0, DataBase.maxMoney);
+		if(CheckBuff(_playerID, Buff.Scout))
+		{
+			_zombie.showHealth = true;
+			_zombie.showHealthTimer = DataBase.scoutBuffShowHealthTime;
+			if(_zombie.hp <= _zombie.maxHp * DataBase.scoutBuffHealthRate)
+				_damage += DataBase.scoutBuffDamage;
+		}
+		
+		var moneyGained = _damage;
+		if(_damage > _zombie.hp)
+			moneyGained = _zombie.hp;
+		_playerID.money += moneyGained * (5 - global.difficulty);
+		_playerID.money  = clamp(_playerID.money, 0, DataBase.maxMoney);
+	}
 	
 	_zombie.hp -= _damage;
-	if(_zombie.hp <= 0)
+	if(_playerID != noone and _zombie.hp <= 0 and !_zombie.isDead)
 	{
 		_zombie.hp = 0;
 		_playerID.kills += 1;

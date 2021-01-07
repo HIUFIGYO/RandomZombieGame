@@ -1,1 +1,2 @@
-UpdateDebuffs(id, false);
+if(!isDead)
+	UpdateDebuffs(id, false);

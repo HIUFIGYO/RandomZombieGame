@@ -31,6 +31,7 @@ if(!isDead and hp <= 0)
 	GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) / 2, acid, 0);
 	isDead = true;
 	hp = 0;
+	color = c_white;
 	image_speed = 0;
 	sprite_index = spriteDead;
 }

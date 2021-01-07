@@ -1,0 +1,1 @@
+/// @description immune to acid

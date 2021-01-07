@@ -20,7 +20,7 @@ money = 250;
 
 //buffs/debuffs
 
-buff[0] = noone;
+buff[0] = Buff.Scout;
 buff[1] = noone;
 buffCooldown[0] = 0;
 buffCooldown[1] = 0;

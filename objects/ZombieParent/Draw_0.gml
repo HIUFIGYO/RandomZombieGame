@@ -1,6 +1,4 @@
-var offset = 0;
-
-draw_self();
+draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, 1, 0, color, image_alpha);
 
 //draw healthbar
 if(!isDead)
