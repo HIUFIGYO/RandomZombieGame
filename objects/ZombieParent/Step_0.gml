@@ -81,6 +81,16 @@ if(!isDead and !isAttacking)
 }
 
 //collisions
+var checkForBarricade = instance_place(x + xSpeed, y, Barricade);
+if(checkForBarricade and checkForBarricade.canCollideZombie)
+{
+	while(!place_meeting(x + sign(xSpeed), y, Barricade))
+	{
+		x += sign(xSpeed);
+	}
+	xSpeed = 0;
+}
+
 if(place_meeting(x + xSpeed, y, BlockParent))
 {
 	while(!place_meeting(x + sign(xSpeed), y, BlockParent))

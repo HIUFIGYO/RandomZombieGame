@@ -58,6 +58,16 @@ if(!isDead and !isJumping and InputGetButton(player_inputID, Button.Jump))
 }
 
 //Collision
+var checkForBarricade = instance_place(x+xSpeed, y, Barricade);
+if(checkForBarricade and checkForBarricade.canCollidePlayer)
+{
+	while(!place_meeting(x+sign(xSpeed), y, Barricade))
+	{
+		x += sign(xSpeed);
+	}
+	xSpeed = 0;
+}
+
 if(place_meeting(x+xSpeed, y, BlockParent))
 {
 	while(!place_meeting(x+sign(xSpeed), y, BlockParent))

@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "spr_doorB",
-    "path": "sprites/spr_doorB/spr_doorB.yy",
+    "name": "spr_advbarricade",
+    "path": "sprites/spr_advbarricade/spr_advbarricade.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "Barricade",
+    "path": "objects/Barricade/Barricade.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,16 +24,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"Wooden_Door","path":"objects/Wooden_Door/Wooden_Door.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"AdvBarricade","path":"objects/AdvBarricade/AdvBarricade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Props",
-    "path": "folders/Objects/Props.yy",
+    "name": "Support",
+    "path": "folders/Objects/Support.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Wooden_Door",
+  "name": "AdvBarricade",
   "tags": [],
   "resourceType": "GMObject",
 }

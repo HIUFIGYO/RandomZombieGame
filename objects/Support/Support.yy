@@ -1,13 +1,13 @@
 {
-  "spriteId": {
-    "name": "spr_nogobarricade",
-    "path": "sprites/spr_nogobarricade/spr_nogobarricade.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "PhysicsObject",
+    "path": "objects/PhysicsObject/PhysicsObject.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -20,15 +20,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"Support","path":"objects/Support/Support.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Props",
-    "path": "folders/Objects/Props.yy",
+    "name": "Support",
+    "path": "folders/Objects/Support.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Nogo_Barricade",
+  "name": "Support",
   "tags": [],
   "resourceType": "GMObject",
 }
