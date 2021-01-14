@@ -24,8 +24,17 @@ if(count > 0)
 		{
 			destroy = true;
 		}
+		
+		if(hit == "Barricade")
+		{
+			if(hits[| i].canCollideBullet and hits[| i].canCollidePlayer)
+				destroy = true;
+		}
+		
 		if(hit == "ZombieParent")
 		{
+			if(!ds_exists(targetsHit, ds_type_list))
+				targetsHit = ds_list_create();
 			if(hits[| i].isDead or hits[| i].hp <= 0)
 				continue;
 			var alreadyHit = false;

@@ -67,6 +67,11 @@ if(checkForBarricade and checkForBarricade.canCollidePlayer)
 	}
 	xSpeed = 0;
 }
+if(checkForBarricade and InputGetButtonDown(player_inputID, Button.Interact))
+{
+	with(checkForBarricade)
+		event_perform(ev_other, ev_user0);
+}
 
 if(place_meeting(x+xSpeed, y, BlockParent))
 {

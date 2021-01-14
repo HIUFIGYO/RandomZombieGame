@@ -81,15 +81,20 @@ if(!isDead and !isAttacking)
 }
 
 //collisions
-var checkForBarricade = instance_place(x + xSpeed, y, Barricade);
+var checkForBarricade = instance_place(x + xSpeed + image_xscale, y, Barricade);
 if(checkForBarricade and checkForBarricade.canCollideZombie)
 {
-	while(!place_meeting(x + sign(xSpeed), y, Barricade))
+	if(barricadeID == noone)
+		DamageZombie(checkForBarricade.playerID, id, checkForBarricade.damage);
+	barricadeID = checkForBarricade;
+	while(xSpeed != 0 and !place_meeting(x + sign(xSpeed), y, Barricade))
 	{
 		x += sign(xSpeed);
 	}
 	xSpeed = 0;
 }
+else
+	barricadeID = noone;
 
 if(place_meeting(x + xSpeed, y, BlockParent))
 {
@@ -114,9 +119,16 @@ if(place_meeting(x, y + ySpeed, BlockParent))
 y += ySpeed * DeltaTime();
 
 //attack
+
 if(!isDead and !isAttacking and target != noone)
 {
 	if(distance_to_object(target) <= attackRange)
+	{
+		isAttacking = true;
+		image_speed  = 0.5
+		sprite_index = spriteAttack;
+	}
+	else if(barricadeID != noone)
 	{
 		isAttacking = true;
 		image_speed  = 0.5

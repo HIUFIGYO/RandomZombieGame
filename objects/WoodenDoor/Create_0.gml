@@ -1,8 +1,9 @@
 event_inherited();
 
-hp = 100;
+hp = 125;
 toggle = true;
 canCollidePlayer = true;
 canCollideZombie = true;
+canCollideBullet = true;
 
 image_speed =  0;

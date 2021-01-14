@@ -30,6 +30,8 @@ spriteDead = noone;
 showHealth = false;
 showHealthTimer = 0;
 
+barricadeID = noone;
+
 //game manager notify
 GameAddZombie();
 

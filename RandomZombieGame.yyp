@@ -142,6 +142,7 @@
     {"id":{"name":"light_draw_shadow_map","path":"scripts/light_draw_shadow_map/light_draw_shadow_map.yy",},"order":1,},
     {"id":{"name":"spr_lardatk1","path":"sprites/spr_lardatk1/spr_lardatk1.yy",},"order":2,},
     {"id":{"name":"spr_playerjustarms","path":"sprites/spr_playerjustarms/spr_playerjustarms.yy",},"order":22,},
+    {"id":{"name":"scr_Maths","path":"scripts/scr_Maths/scr_Maths.yy",},"order":16,},
     {"id":{"name":"light_maintain_shadow_map","path":"scripts/light_maintain_shadow_map/light_maintain_shadow_map.yy",},"order":2,},
     {"id":{"name":"spr_playermelee41","path":"sprites/spr_playermelee41/spr_playermelee41.yy",},"order":27,},
     {"id":{"name":"spr_larddead","path":"sprites/spr_larddead/spr_larddead.yy",},"order":3,},
