@@ -56,6 +56,13 @@ if(!isMelee and !isThrowing)
 			index = 21;
 			if(supportItem == "Flare")
 				index = 23;
+			draw_sprite_ext(DataBase.supportSprite[supportItem], !canPlaceSupport, x+supportXOffset * image_xscale, y+supportYOffset, image_xscale, 1, 0, c_white, 0.7);
+			
+			var _x = x+supportXOffset * image_xscale,
+			_y = y+supportYOffset;
+			draw_set_color(c_blue);
+			draw_rectangle(_x, _y, _x+sprite_get_width(DataBase.supportSprite[supportItem])*image_xscale, _y-sprite_get_height((DataBase.supportSprite[supportItem])), true)
+			
 			break;
 	}
 	

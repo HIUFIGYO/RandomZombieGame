@@ -158,21 +158,21 @@ function GetMaxStamina(_player)
 	return _value;
 }
 
-///@function GetMaxAmmo(player)
+///@function GetMaxAmmo(player, weaponSlot)
  
-function GetMaxAmmo(_player)
+function GetMaxAmmo(_player, _weaponSlot)
 {
-	var _value = DataWeapon(_player.weapon[_player.currentWeapon], WeapStat.Ammo);
+	var _value = DataWeapon(_player.weapon[_weaponSlot], WeapStat.Ammo);
 	if(CheckBuff(_player, Buff.Ammo))
 		_value *= DataBase.ammoBuffAmmo;
 	return ceil(_value);
 }
 
-///@function GetMaxMag(player)
+///@function GetMaxMag(player, weaponSlot)
  
-function GetMaxMag(_player)
+function GetMaxMag(_player, _weaponSlot)
 {
-	var _value = DataWeapon(_player.weapon[_player.currentWeapon], WeapStat.Mag);
+	var _value = DataWeapon(_player.weapon[_weaponSlot], WeapStat.Mag);
 	if(CheckBuff(_player, Buff.Ammo))
 		_value *= DataBase.ammoBuffMag;
 	return floor(_value);

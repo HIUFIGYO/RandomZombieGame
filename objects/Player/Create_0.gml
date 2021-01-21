@@ -21,7 +21,7 @@ money = 250;
 //buffs/debuffs
 
 buff[0] = Buff.Scout;
-buff[1] = noone;
+buff[1] = Buff.Ammo;
 buffCooldown[0] = 0;
 buffCooldown[1] = 0;
 damageResistanceTimer = 0;
@@ -59,7 +59,11 @@ grenadeAmount = 3;
 healingItem = noone;
 healingItemAmount = 0;
 vial = 1;
-supportItem = 1;
+supportItem = SupportType.Barricade;
+
+canPlaceSupport = false;
+supportXOffset = 32;
+supportYOffset = 10;
 
 
 //reviving

@@ -74,6 +74,15 @@ if(damageResistanceTimer > 0)
 //debuffs
 UpdateDebuffs(id, true);
 
+//check support item collision
+if (equipmentCycle = EquipCycle.Support)
+{
+	var _x = x+supportXOffset * image_xscale,
+		_y = y+supportYOffset;
+	var _collision = collision_rectangle(_x, _y, _x+sprite_get_width(DataBase.supportSprite[supportItem])*image_xscale, _y-sprite_get_height((DataBase.supportSprite[supportItem])), all, false, true);
+	canPlaceSupport = (_collision == noone or object_get_name(_collision.object_index) == "Player") ? true : false;
+}
+
 //interact with objects
 if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 {
@@ -106,7 +115,7 @@ if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 					priority = 1;
 				}
 			}
-			else if(_name == "AmmoCrate")
+			else if(_name == "AmmoCrate" or _name == "HeavyCrate" or _name == "MythicCrate")
 			{
 				if(priority < 1)
 				{
@@ -193,6 +202,8 @@ if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 				break;
 				
 			case "AmmoCrate":
+			case "HeavyCrate":
+			case "MythicCrate":
 				returnObject.lastPlayerUse = id;
 				with(returnObject)
 					event_perform(ev_other, ev_user0);

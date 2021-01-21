@@ -2,8 +2,6 @@
 if(uses <= 0)
 	exit;
 
-uses -= 1;
-
 event_perform(ev_other, ev_user1);
 lastPlayerUse = noone;
 

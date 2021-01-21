@@ -2,14 +2,13 @@
 
 var usedCrate = false;
 
-if(lastPlayerUse.grenadeType != ExplosiveType.BHBomber and lastPlayerUse.grenadeAmount < GetMaxGrenades(lastPlayerUse))
+if(lastPlayerUse.grenadeType == ExplosiveType.BHBomber and lastPlayerUse.grenadeAmount < GetMaxGrenades(lastPlayerUse))
 {
 	lastPlayerUse.grenadeAmount = GetMaxGrenades(lastPlayerUse);
 	usedCrate = true;
 }
 
-var _tier = DataWeapon(lastPlayerUse.weapon[0], WeapStat.Tier);
-if(_tier == Tier.One or _tier == Tier.Two or _tier == Tier.Three)
+if(DataWeapon(lastPlayerUse.weapon[0], WeapStat.Tier) == Tier.Five)
 {
 	if(lastPlayerUse.mag[0] < GetMaxMag(lastPlayerUse, 0))
 	{
@@ -23,8 +22,7 @@ if(_tier == Tier.One or _tier == Tier.Two or _tier == Tier.Three)
 	}
 }
 
-_tier = DataWeapon(lastPlayerUse.weapon[1], WeapStat.Tier);
-if(_tier == Tier.One or _tier == Tier.Two or _tier == Tier.Three)
+if(DataWeapon(lastPlayerUse.weapon[1], WeapStat.Tier) == Tier.Five)
 {
 	if(lastPlayerUse.mag[1] < GetMaxMag(lastPlayerUse, 1))
 	{

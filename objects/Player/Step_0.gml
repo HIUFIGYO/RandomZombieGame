@@ -48,7 +48,9 @@ if(!isDead and !isJumping and InputGetButton(player_inputID, Button.Jump))
 	if(isCrouching and place_meeting(x, y+1, OneWayBlock))
 	{
 		fallThrough = true;
-		ySpeed = 2;
+		isJumping = true;
+		if(ySpeed == grav)
+			ySpeed = 2;
 	}
 	else if(place_meeting(x, y+1, BlockParent)or place_meeting(x, y+1, OneWayBlock))
 	{
@@ -101,6 +103,8 @@ if(oneWay)
 			ySpeed = 0;
 		isJumping = false;
 	}
+	else
+		isGrounded = false;
 }
 y += clamp(ySpeed * DeltaTime(), -jumpSpeed, maxFallSpeed);
 
@@ -123,7 +127,7 @@ if(equipmentCycle == EquipCycle.Weapon and reloadTimer[currentWeapon] > 0)
 		{
 			ammo[currentWeapon] -= 1;
 			mag[currentWeapon] += 1;
-			if(mag[currentWeapon] < GetMaxMag(id))
+			if(mag[currentWeapon] < GetMaxMag(id, currentWeapon))
 				reloadSingleShot[currentWeapon] = 1;
 		}
 	}
@@ -132,7 +136,7 @@ if(equipmentCycle == EquipCycle.Weapon and reloadTimer[currentWeapon] > 0)
 	{
 		reloadTimer[currentWeapon] = 0;
 		ammo[currentWeapon] += mag[currentWeapon];
-		clipSize = GetMaxMag(id);
+		clipSize = GetMaxMag(id, currentWeapon);
 		if(clipSize <= ammo[currentWeapon])
 		{
 			mag[currentWeapon] = clipSize;
