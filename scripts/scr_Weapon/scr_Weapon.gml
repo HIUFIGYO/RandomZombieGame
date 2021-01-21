@@ -26,6 +26,7 @@ enum Weapon
 enum WeapStat
 {
 	Type,
+	Tier,
 	Damage,
 	FireRate,
 	Mag,
@@ -71,6 +72,15 @@ enum ExplosiveType
 	BHBomber
 }
 
+enum Tier
+{
+	One,
+	Two,
+	Three,
+	Four,
+	Five
+}
+
 ///@ function DataWeapon(weapon, stat)
 
 function DataWeapon(weapon, stat)
@@ -113,6 +123,9 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 
 function WeaponReload(_player, _weapon)
 {
+	if(_player.equipmentCycle != EquipCycle.Weapon)
+		return;
+		
 	if(_player.reloadTimer[_player.currentWeapon] > 0 or ammo[_player.currentWeapon] <= 0)
 		return;
 		

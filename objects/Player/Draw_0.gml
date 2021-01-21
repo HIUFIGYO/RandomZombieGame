@@ -35,10 +35,30 @@ draw_sprite_ext(spriteTorso, torso_index, x, y + offset, image_xscale, 1, 0, tor
 //draw arms
 if(!isMelee and !isThrowing)
 {
-	if(weapon[currentWeapon] == noone)
-		index = 0;
-	else
-		index = weapon[currentWeapon] + 1;
+	switch(equipmentCycle)
+	{
+		case EquipCycle.Weapon:
+			if(weapon[currentWeapon] == noone)
+				index = 0;
+			else
+				index = weapon[currentWeapon] + 1;
+			break;
+			
+		case EquipCycle.Med:
+			index = 24 + healingItem;
+			break;
+			
+		case EquipCycle.Vial:
+			index = 27;
+			break;
+			
+		case EquipCycle.Support:
+			index = 21;
+			if(supportItem == "Flare")
+				index = 23;
+			break;
+	}
+	
 	draw_sprite_ext(spriteGuns, index, x, y + offset, image_xscale, 1, 0, c_white, 1);
 	draw_sprite_ext(spriteArms, index, x, y + offset, image_xscale, 1, 0, arm_color, 1);
 }

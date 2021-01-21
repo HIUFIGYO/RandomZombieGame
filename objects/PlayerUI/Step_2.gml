@@ -88,7 +88,7 @@ UISetSize(ammoText, string_width(_text), 20);
 //reload timer
 var index = floor(player.reloadTimer[player.currentWeapon] / DataWeapon(player.weapon[player.currentWeapon], WeapStat.Reload) * sprite_get_number(spr_reloadCircle));
 UIImageSetSubImage(reloadImage, index);
-UISetAlpha(reloadImage, player.reloadTimer[player.currentWeapon] > 0);
+UISetAlpha(reloadImage, player.reloadTimer[player.currentWeapon] > 0 and player.equipmentCycle == EquipCycle.Weapon);
 	
 //Kills
 var _text = "Kills: " + string(player.kills);

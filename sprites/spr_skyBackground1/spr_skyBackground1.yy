@@ -11,7 +11,7 @@
   "bbox_right": 127,
   "bbox_top": 0,
   "bbox_bottom": 71,
-  "HTile": false,
+  "HTile": true,
   "VTile": false,
   "For3D": false,
   "width": 128,

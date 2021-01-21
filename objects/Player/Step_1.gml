@@ -77,6 +77,11 @@ UpdateDebuffs(id, true);
 //interact with objects
 if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 {
+	var _door = instance_nearest(x, y, WoodenDoor);
+	if(DistanceToObject(id, _door, 32))
+		with(_door)
+			event_perform(ev_other, ev_user0);
+	
 	var returnObject = noone;
 	var priority = 0;
 
@@ -95,10 +100,18 @@ if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 			}
 			else if(_name == "WeaponDrops")
 			{
-				if(priority == 0)
+				if(priority < 2)
 				{
 					returnObject = objList[| i];
 					priority = 1;
+				}
+			}
+			else if(_name == "AmmoCrate")
+			{
+				if(priority < 1)
+				{
+					returnObject = objList[| i];
+					priority = 2;
 				}
 			}
 			else if(_name == "Shop")
@@ -177,6 +190,12 @@ if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 						inst.image_index = weapID;
 					}
 				}
+				break;
+				
+			case "AmmoCrate":
+				returnObject.lastPlayerUse = id;
+				with(returnObject)
+					event_perform(ev_other, ev_user0);
 				break;
 				
 			case "Shop":

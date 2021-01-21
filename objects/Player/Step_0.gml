@@ -67,11 +67,6 @@ if(checkForBarricade and checkForBarricade.canCollidePlayer)
 	}
 	xSpeed = 0;
 }
-if(checkForBarricade and InputGetButtonDown(player_inputID, Button.Interact))
-{
-	with(checkForBarricade)
-		event_perform(ev_other, ev_user0);
-}
 
 if(place_meeting(x+xSpeed, y, BlockParent))
 {
@@ -116,7 +111,7 @@ if(!isDead and InputGetButtonDown(player_inputID, Button.Reload)and mag[currentW
 	WeaponReload(id, weapon[currentWeapon]);
 }
 
-if(reloadTimer[currentWeapon] > 0)
+if(equipmentCycle == EquipCycle.Weapon and reloadTimer[currentWeapon] > 0)
 {
 	reloadTimer[currentWeapon] -= DeltaTimeSecond();
 	reloadSingleShot[currentWeapon] -= DeltaTimeSecond();
@@ -172,39 +167,26 @@ if(canShoot and !isDead)
 	var performedAction = false;
 	if(InputGetButtonDown(player_inputID, Button.ToggleWeapon))
 	{
-		currentWeapon = !currentWeapon;
 		performedAction = true;
-	}
-	
-	var auto = DataWeapon(weapon[currentWeapon], WeapStat.Auto);
-	var shoot = false;
-	if(!auto and InputGetButtonDown(player_inputID, Button.Shoot))
-	{
-		shoot = true;
-	}
-	
-	if(auto and InputGetButton(player_inputID, Button.Shoot))
-	{
-		shoot = true;
-	}
-	
-	if(shoot and !performedAction)
-	{
-		performedAction = true;
-		if(mag[currentWeapon] > 0 and reloadTimer[currentWeapon] <= 0)
-		{
-			canShoot = false;
-			mag[currentWeapon] -= 1;
-			shootTimer = DataWeapon(weapon[currentWeapon], WeapStat.FireRate) * game_get_speed(gamespeed_fps);
-			var offset = 0;
-			if(isCrouching)
-				offset = crouchOffset;
-			CreateBullet(id, x, y + offset, weapon[currentWeapon], image_xscale, isCrouching);
-		}
+		if(equipmentCycle == EquipCycle.Weapon)
+			currentWeapon = !currentWeapon;
 		else
+			equipmentCycle = EquipCycle.Weapon;
+	}
+	
+	if(!performedAction)
+	{
+		var cycle = InputGetButtonDown(player_inputID, Button.NextGear) - InputGetButtonDown(player_inputID, Button.PreviousGear);
+		if(cycle != 0)
 		{
-			WeaponReload(id, weapon[currentWeapon]);
+			performedAction = true;
+			CycleGear(id, cycle);
 		}
+	}
+	
+	if(!performedAction)
+	{
+		performedAction = ProcessEquipment(id);
 	}
 	
 	if(!performedAction and stamina >= 10 and InputGetButtonDown(player_inputID, Button.Melee))

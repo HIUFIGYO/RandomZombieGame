@@ -30,6 +30,9 @@ bleedMaxTimer = 0;
 InitDebuffs(id);
 
 //weapons
+equipmentCycle = EquipCycle.Weapon;
+
+//primary
 currentWeapon = 0;
 weapon[0] = Weapon.Rifle;
 ammo[0] = DataWeapon(weapon[0], WeapStat.Ammo);
@@ -37,18 +40,27 @@ mag[0] = DataWeapon(weapon[0], WeapStat.Mag);
 reloadTimer[0] = 0;
 reloadSingleShot[0] = 0;
 
+//secondary
 weapon[1] = Weapon.Pistol;
 ammo[1] = DataWeapon(weapon[1], WeapStat.Ammo);
 mag[1] = DataWeapon(weapon[1], WeapStat.Mag);
 reloadTimer[1] = 0;
 reloadSingleShot[1] = 0;
 
+//melee weapon
 meleeWeapon = Weapon.Knife;
 canSpawnMeleeHB = true;
+
+//grenade
 grenadeType = ExplosiveType.Grenade;
 grenadeAmount = 3;
-healingItem = HealingType.Medicine;
-healingItemAmount = 1;
+
+//gear
+healingItem = noone;
+healingItemAmount = 0;
+vial = 1;
+supportItem = 1;
+
 
 //reviving
 revivingPlayer = noone;

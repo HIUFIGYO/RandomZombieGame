@@ -1,9 +1,9 @@
 
-///@function DistanceToObject(object, distance)
+///@function DistanceToObject(object1, object2, distance)
 
 function DistanceToObject(_object1, _object2, _distance)
 {
-	return (sqr(_object1.x - _object2.x) + sqr(_object1.y - _object2.y)) <= _distance * _distance;
+	return (sqr(_object1.x - _object2.x) + sqr(_object1.y - _object2.y)) <= sqr(_distance);
 }
 
 ///@function AABBCollision(object1, object2)
