@@ -226,7 +226,7 @@
     {"id":{"name":"spr_injectorrun","path":"sprites/spr_injectorrun/spr_injectorrun.yy",},"order":1,},
     {"id":{"name":"Barricade","path":"objects/Barricade/Barricade.yy",},"order":1,},
     {"id":{"name":"spr_injectorgrab","path":"sprites/spr_injectorgrab/spr_injectorgrab.yy",},"order":2,},
-    {"id":{"name":"Background_Controller","path":"objects/Background_Controller/Background_Controller.yy",},"order":9,},
+    {"id":{"name":"BackgroundController","path":"objects/BackgroundController/BackgroundController.yy",},"order":9,},
     {"id":{"name":"spr_injectorpull","path":"sprites/spr_injectorpull/spr_injectorpull.yy",},"order":3,},
     {"id":{"name":"spr_injectoratk1","path":"sprites/spr_injectoratk1/spr_injectoratk1.yy",},"order":4,},
     {"id":{"name":"GameModeSkirmish","path":"objects/GameModeSkirmish/GameModeSkirmish.yy",},"order":0,},
