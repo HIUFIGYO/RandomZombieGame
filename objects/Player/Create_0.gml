@@ -59,11 +59,11 @@ grenadeAmount = 3;
 healingItem = noone;
 healingItemAmount = 0;
 vial = 1;
-supportItem = SupportType.Barricade;
+supportItem = noone;
 
 canPlaceSupport = false;
 supportXOffset = 32;
-supportYOffset = 10;
+supportYOffset = 8;
 
 
 //reviving

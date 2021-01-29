@@ -156,7 +156,7 @@ function ProcessEquipment(_id)
 		case EquipCycle.Support:
 			if (_id.canPlaceSupport and InputGetButtonDown(_id.player_inputID, Button.Shoot))
 			{
-				var _inst = instance_create_layer(x+_id.supportXOffset * image_xscale, y+_id.supportYOffset, GameManager.layerObject, Barricade);
+				var _inst = instance_create_layer(x+_id.supportXOffset * image_xscale, y+_id.supportYOffset, GameManager.layerObject, DataBase.supportObject[_id.supportItem]);
 				_inst.image_xscale = image_xscale;
 				_id.supportItem = noone;
 				CycleGear(_id, 1);

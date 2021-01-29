@@ -11,11 +11,11 @@ if(isDead)
 }
 
 //draw legs
-if(isWalking and isGrounded)
+if(isWalking and ySpeed == 0)
 {
 	draw_sprite_ext(spriteLegs, round(walking_index), x, y, image_xscale, 1, 0, leg_color, 1);
 }
-else if(!isGrounded)
+else if(ySpeed != 0)
 {
 	index = 0;
 	if(ySpeed > 0)
@@ -56,13 +56,7 @@ if(!isMelee and !isThrowing)
 			index = 21;
 			if(supportItem == "Flare")
 				index = 23;
-			draw_sprite_ext(DataBase.supportSprite[supportItem], !canPlaceSupport, x+supportXOffset * image_xscale, y+supportYOffset, image_xscale, 1, 0, c_white, 0.7);
-			
-			var _x = x+supportXOffset * image_xscale,
-			_y = y+supportYOffset;
-			draw_set_color(c_blue);
-			draw_rectangle(_x, _y, _x+sprite_get_width(DataBase.supportSprite[supportItem])*image_xscale, _y-sprite_get_height((DataBase.supportSprite[supportItem])), true)
-			
+			draw_sprite_ext(DataBase.supportSprite[supportItem], !canPlaceSupport, x+supportXOffset * image_xscale, y+supportYOffset, image_xscale, 1, 0, c_white, 0.7);			
 			break;
 	}
 	

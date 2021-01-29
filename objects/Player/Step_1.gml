@@ -78,16 +78,50 @@ UpdateDebuffs(id, true);
 if (equipmentCycle = EquipCycle.Support)
 {
 	var _x = x+supportXOffset * image_xscale,
-		_y = y+supportYOffset;
-	var _collision = collision_rectangle(_x, _y, _x+sprite_get_width(DataBase.supportSprite[supportItem])*image_xscale, _y-sprite_get_height((DataBase.supportSprite[supportItem])), all, false, true);
-	canPlaceSupport = (_collision == noone or object_get_name(_collision.object_index) == "Player") ? true : false;
+		_y = y+supportYOffset,
+		_sprite = DataBase.supportSprite[supportItem],
+		_left = sprite_get_bbox_left(_sprite),
+		_right = sprite_get_bbox_right(_sprite),
+		_up = -sprite_get_bbox_top(_sprite),
+		_down = -sprite_get_height(_sprite) + sprite_get_bbox_bottom(_sprite);
+		
+	if(image_xscale < 0)
+	{
+		_left = -sprite_get_width(_sprite) + sprite_get_bbox_left(_sprite);
+		_right = -sprite_get_width(_sprite) + sprite_get_bbox_right(_sprite);
+	}
+	canPlaceSupport = true;
+	var hits = ds_list_create();
+	var _collisions = collision_rectangle_list(_x+_left, _y+_up, _x+_right, _y+_down, all, false, true, hits, false);
+	
+	if(_collisions > 0)
+	{
+		for(var i=0; i<_collisions; i++)
+		{
+			var _objectName = object_get_name(hits[| i].object_index);
+			if(_objectName == "Bullet" or _objectName == "Player" or _objectName == "Grenade" or _objectName == "WeaponDrops")
+				continue;
+			
+			if(object_get_name(object_get_parent(hits[| i].object_index)) == "ZombieParent")
+			{
+				if(hits[| i].isDead)
+					continue;
+				canPlaceSupport = false;
+				break;
+			}	
+			canPlaceSupport = false;
+			break;
+		}
+	}
+	
+	ds_list_destroy(hits);
 }
 
 //interact with objects
 if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 {
 	var _door = instance_nearest(x, y, WoodenDoor);
-	if(DistanceToObject(id, _door, 32))
+	if(_door and DistanceToObject(id, _door, 32))
 		with(_door)
 			event_perform(ev_other, ev_user0);
 	

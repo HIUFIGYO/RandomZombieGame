@@ -110,7 +110,7 @@ y += clamp(ySpeed * DeltaTime(), -jumpSpeed, maxFallSpeed);
 
 //reloading
 
-if(!isDead and InputGetButtonDown(player_inputID, Button.Reload)and mag[currentWeapon] != DataWeapon(weapon[currentWeapon], WeapStat.Mag))
+if(!isDead and InputGetButtonDown(player_inputID, Button.Reload)and mag[currentWeapon] != GetMaxMag(id, currentWeapon))
 {
 	WeaponReload(id, weapon[currentWeapon]);
 }

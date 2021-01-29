@@ -1,6 +1,6 @@
 if(Window.viewsBuilt)
 {
-	instance_create_layer(0, 0, layerCorpse, BloodGrinder);
+	instance_create_layer(0, 0, layerBloodGrinder, BloodGrinder);
 	//game mode object
 	gameMode = GameSpawnGameMode();
 	
@@ -14,6 +14,7 @@ if(Window.viewsBuilt)
 		inst_player = instance_create_layer(pos.x, pos.y, layerPlayer, Player);
 		GameSetUpPlayer(inst_player, i);
 	}
+	ready = true;
 }
 else
 	alarm[0] = 1;

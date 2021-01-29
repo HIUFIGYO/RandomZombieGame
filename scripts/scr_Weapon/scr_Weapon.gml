@@ -134,7 +134,7 @@ function WeaponReload(_player, _weapon)
 	{
 		_player.reloadSingleShot[_player.currentWeapon] = 1;
 		if(DataWeapon(_weapon, WeapStat.Mag) <= _player.ammo[_player.currentWeapon])
-			additionalTime = DataWeapon(_weapon, WeapStat.Mag) - _player.mag[_player.currentWeapon] - 1;
+			additionalTime = GetMaxMag(_player, _player.currentWeapon) - _player.mag[_player.currentWeapon] - 1;
 		else
 			additionalTime = _player.ammo[_player.currentWeapon] - 1;
 	}
