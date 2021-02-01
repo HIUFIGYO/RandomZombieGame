@@ -59,7 +59,7 @@ grenadeAmount = 3;
 healingItem = noone;
 healingItemAmount = 0;
 vial = 1;
-supportItem = noone;
+supportItem = SupportType.AdvBarricade;
 
 canPlaceSupport = false;
 supportXOffset = 32;
