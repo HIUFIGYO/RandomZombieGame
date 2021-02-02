@@ -56,11 +56,13 @@ grenadeType = ExplosiveType.Grenade;
 grenadeAmount = 3;
 
 //gear
-healingItem = noone;
-healingItemAmount = 0;
-vial = 1;
-supportItem = SupportType.AdvBarricade;
+healingItem = HealingType.Syringe;
+healingItemAmount = 1;
+healingItemTimer = 0;
 
+vial = 1;
+
+supportItem = SupportType.AdvBarricade;
 canPlaceSupport = false;
 supportXOffset = 32;
 supportYOffset = 8;

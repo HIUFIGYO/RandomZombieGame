@@ -148,6 +148,12 @@ function ProcessEquipment(_id)
 			break;
 			
 		case EquipCycle.Med:
+			if(_id.healingItemTimer <= 0 and InputGetButtonDown(_id.player_inputID, Button.Shoot))
+			{
+				_id.canShoot = false;
+				_id.healingItemTimer = DataBase.healingTimer[_id.healingItem];
+				return true;
+			}
 			break;
 			
 		case EquipCycle.Vial:

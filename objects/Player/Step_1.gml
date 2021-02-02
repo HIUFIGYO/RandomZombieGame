@@ -74,6 +74,25 @@ if(damageResistanceTimer > 0)
 //debuffs
 UpdateDebuffs(id, true);
 
+//medical item use
+if(healingItemTimer > 0)
+{
+	healingItemTimer -= DeltaTimeSecond();
+	if(healingItemTimer <= 0)
+	{
+		healingItemTimer = 0;
+		HealPlayer(id, DataBase.healingAmount[healingItem]);
+		HealDebuffs(id, healingItem);
+		canShoot = true;
+		healingItemAmount -= 1;
+		if(healingItemAmount <= 0)
+		{
+			healingItem = noone;
+			CycleGear(id, 1);
+		}
+	}
+}
+
 //check support item collision
 if (equipmentCycle = EquipCycle.Support)
 {

@@ -5,6 +5,30 @@ function HealPlayer(_player, _amount)
 	_player.hp = clamp(_player.hp + _amount, 0, GetMaxHealth(_player));
 }
 
+///@function HealDebuffs(id, healingType)
+
+function HealDebuffs(_id, _healType)
+{
+	switch(_healType)
+	{
+		case HealingType.Medicine:
+			_id.deBuff[DeBuff.Bleed] = false;
+			_id.deBuff[DeBuff.Poison] = false;
+			break;
+			
+		case HealingType.Syringe:
+			_id.deBuff[DeBuff.Bleed] = false;
+			_id.deBuff[DeBuff.Acid] = false;
+			_id.deBuff[DeBuff.Poison] = false;
+			break;
+			
+		case HealingType.MedKit:
+			_id.deBuff[DeBuff.Bleed] = false;
+			_id.deBuff[DeBuff.Ignite] = false;
+			break;
+	}
+}
+
 ///@function DamagePlayer(player, damage)
 
 function DamagePlayer(_player, _damage)
