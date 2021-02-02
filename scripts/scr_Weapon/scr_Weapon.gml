@@ -171,6 +171,8 @@ function CreateGrenade(_player)
 	inst.ySpeed = -10;
 	inst.grenadeType = _player.grenadeType;
 	inst.playerID = _player;
+	with(inst)
+		event_perform(ev_other, ev_user0);
 }
 
 ///@function CreateExplosion(instance, playerID)

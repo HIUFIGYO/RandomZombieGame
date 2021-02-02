@@ -78,6 +78,7 @@ if(player.isDead)
 }
 
 //grenades
+UIImageSetSubImage(grenadeIcon, player.grenadeType);
 UITextSet(grenadeText, " x " + string(player.grenadeAmount));
 	
 //Ammo text
