@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Limper";
+
 spriteIdle = spr_limperidle;
 spriteWalk = spr_limperwalk;
 spriteAttack = spr_limperatk1;

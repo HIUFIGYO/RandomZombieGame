@@ -2,7 +2,8 @@
 
 function HealPlayer(_player, _amount)
 {
-	_player.hp = clamp(_player.hp + _amount, 0, GetMaxHealth(_player));
+	if(!_player.isDead)
+		_player.hp = clamp(_player.hp + _amount, 0, GetMaxHealth(_player));
 }
 
 ///@function HealDebuffs(id, healingType)
@@ -139,6 +140,7 @@ function DamageZombie(_playerID, _zombie, _damage)
 	{
 		_zombie.hp = 0;
 		_playerID.kills += 1;
+		MessageAddAll(_playerID.name + " has killed " + _zombie.name, MessageFilter.PlayerKill);
 	}
 }
 

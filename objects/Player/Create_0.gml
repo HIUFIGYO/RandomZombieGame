@@ -1,3 +1,5 @@
+name = "Player";
+
 //stats
 hp = 100;
 armour = 0;

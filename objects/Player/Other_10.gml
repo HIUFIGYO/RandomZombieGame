@@ -10,6 +10,7 @@ if(CheckBuff(id, Buff.Demo)and buffCooldown[_slot] <= 0)
 
 if(isDead)
 {
+	MessageAddAll(name + " has went down!", MessageFilter.PlayerDown);
 	money *= SetStat(0.7, 0.6, 0.5, 0.4);
 	
 	if(buff[1] != noone)

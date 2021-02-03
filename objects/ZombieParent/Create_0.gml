@@ -1,3 +1,5 @@
+name = "Zombie";
+
 hp = 5;
 maxHp = 5;
 damage = 1;

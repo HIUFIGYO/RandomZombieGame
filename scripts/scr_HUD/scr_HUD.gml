@@ -32,3 +32,13 @@ function HUDCreatePlayerUI(_player)
 	inst.player = _player;
 	return inst;
 }
+
+///@function HUDCreateMessageController(player)
+
+function HUDCreateMessageController(_player)
+{
+	var inst = instance_create_layer(0, 0, UIController.layerUI, MessageController);
+	inst.playerID = _player.playerID;
+	inst.player = _player;
+	return inst;
+}
