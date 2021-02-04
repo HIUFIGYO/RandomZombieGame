@@ -30,6 +30,7 @@
     {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"parent":{"name":"Grenade","path":"objects/Grenade/Grenade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"WoodenDoor","path":"objects/WoodenDoor/WoodenDoor.yy",},"parent":{"name":"Grenade","path":"objects/Grenade/Grenade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"parent":{"name":"Grenade","path":"objects/Grenade/Grenade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Explosion","path":"objects/Explosion/Explosion.yy",},"parent":{"name":"Grenade","path":"objects/Grenade/Grenade.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

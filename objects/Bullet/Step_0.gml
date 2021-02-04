@@ -31,6 +31,43 @@ if(count > 0)
 				destroy = true;
 		}
 		
+		if(object_get_name(hits[| i].object_index) == "Player")
+		{
+			if(CheckVialNegative(hits[| i], VialType.Mimicry))
+			{
+				if(!ds_exists(targetsHit, ds_type_list))
+					targetsHit = ds_list_create();
+				if(hits[| i].isDead or hits[| i].hp <= 0)
+					continue;
+					
+				var alreadyHit = false;
+				for(var playerHit=0; playerHit<ds_list_size(targetsHit); playerHit++)
+				{
+					if(targetsHit[| playerHit] == hits[| i])
+					{
+						alreadyHit = true;
+						break;
+					}
+				}
+			
+				if(alreadyHit)
+					continue;
+				
+				ds_list_add(targetsHit, hits[| i]);
+			
+				if(weapon == Weapon.Flame)
+					DebuffApply(hits[| i], DeBuff.Ignite, playerID);
+				if(weapon == Weapon.Drainer)
+					DebuffApply(hits[| i], DeBuff.Bleed, playerID);
+				
+				DamagePlayer(hits[| i], DataWeapon(weapon, WeapStat.Damage), "FriendlyFire", playerID.name);
+				GameSprayBlood(GameGetBloodAmount(), x, y, false, image_xscale);
+				continue;
+			}
+			else
+				continue;
+		}
+		
 		if(hit == "ZombieParent")
 		{
 			if(!ds_exists(targetsHit, ds_type_list))

@@ -90,6 +90,10 @@ function MessageGetDamageTag(_tag)
 		case "Zombie":
 			var _word = choose("murdered", "downed", "incapacitated", "crippled", "maimed", "dunked on", "assassinated", "excecuted", "slaughtered", "eradicated", "killed");
 			return " was " + _word + " by a ";
+			
+		case "FriendlyFire":
+			var _word = choose("was mistaken for a zombie", "was betrayed", "was deceived", "was sold down the river", "was double-crossed", "used Mimicry at a bad time then got shot");
+			return " " + _word + " by ";
 	}
 	return " has been downed.";
 }
