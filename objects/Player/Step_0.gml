@@ -4,13 +4,14 @@ var xThrow = (InputGetButton(player_inputID, Button.Right) - InputGetButton(play
 var bonus = false;
 if(CheckBuff(id, Buff.Agility)and !deBuff[DeBuff.Bleed])
 	bonus = true;
-var maxSpd = maxSpeed + (bonus * DataBase.agilityBuffJogSpeed) - deBuff[DeBuff.Bleed];
+var maxSpd = maxSpeed;
 if(InputGetButton(player_inputID, Button.Sprint)and stamina > 0 and xThrow != 0)
 {
 	stamina -= 10 * DeltaTimeSecond();
 	staminaWaitTimer = staminaWaitTime;
-	maxSpd = sprintSpeed + (bonus * DataBase.agilityBuffSprintSpeed) - deBuff[DeBuff.Bleed];
+	maxSpd = sprintSpeed;
 }
+maxSpd += (bonus * DataBase.agilityBuffJogSpeed) - deBuff[DeBuff.Bleed] + CheckVialPositive(id, VialType.Adrenaline);
 
 //Calculate velocity
 xSpeed += xThrow * acceleration;
@@ -33,6 +34,8 @@ else
 
 //crouching
 isGrounded = (place_meeting(x, y+1, BlockParent) or place_meeting(x, y+1, OneWayBlock));
+if(isGrounded)
+	jumpCount = 0;
 
 if(!isDead and InputGetButton(player_inputID, Button.Crouch) and isGrounded and !isWalking)
 {
@@ -170,7 +173,15 @@ if(shootTimer > 0)
 if(canShoot and !isDead)
 {
 	var performedAction = false;
-	if(InputGetButtonDown(player_inputID, Button.ToggleWeapon))
+	
+	if(CheckVialNegative(id, VialType.Strength))
+	{
+		performedAction = true;
+		if(stamina >= 10 and InputGetButtonDown(player_inputID, Button.Melee))
+			PlayerMelee(id);
+	}
+	
+	if(!performedAction and InputGetButtonDown(player_inputID, Button.ToggleWeapon))
 	{
 		performedAction = true;
 		if(equipmentCycle == EquipCycle.Weapon)
@@ -196,12 +207,8 @@ if(canShoot and !isDead)
 	
 	if(!performedAction and stamina >= 10 and InputGetButtonDown(player_inputID, Button.Melee))
 	{
-		stamina -= 10;
 		performedAction = true;
-		canShoot = false;
-		meleeSubImage = 0;
-		canSpawnMeleeHB = true;
-		isMelee = true;
+		PlayerMelee(id);
 	}
 	
 	if(!performedAction and InputGetButtonDown(player_inputID, Button.Grenade)and grenadeAmount > 0)
@@ -243,8 +250,11 @@ if(isMelee)
 	
 	if(meleeSubImage >= 2 and canSpawnMeleeHB)
 	{
+		var bonus = 1;
+		if(CheckVialPositive(id, VialType.Strength))
+			bonus = 2;
 		canSpawnMeleeHB = false;
-		var inst = CreateHitBox(id, x, y, spr_meleeHitBoxes, index, DataWeapon(meleeWeapon, WeapStat.Damage));
+		var inst = CreateHitBox(id, x, y, spr_meleeHitBoxes, index, DataWeapon(meleeWeapon, WeapStat.Damage) * bonus);
 		inst.pierce = DataWeapon(meleeWeapon, WeapStat.Pierce);
 		inst.image_xscale = image_xscale;
 	}

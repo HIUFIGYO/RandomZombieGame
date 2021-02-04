@@ -23,7 +23,10 @@ hp = clamp(hp, 0, GetMaxHealth(id));
 staminaWaitTimer -= DeltaTimeSecond();
 if(staminaWaitTimer <= 0)
 {
-	stamina += staminaRegenRate * DeltaTimeSecond();
+	var bonus = 1;
+	if(CheckVialNegative(id, VialType.Adrenaline))
+		bonus = 0;
+	stamina += staminaRegenRate * DeltaTimeSecond() * bonus;
 	stamina = clamp(stamina, 0, GetMaxStamina(id));
 }
 

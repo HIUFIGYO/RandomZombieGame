@@ -13,7 +13,7 @@ if(sprite_index == spriteAttack)
 		exit;
 	}
 	
-	if(barricadeID != noone)
+	if(barricadeID != noone and instance_exists(barricadeID))
 	{
 		barricadeID.hp -= damage;
 		if(barricadeID.hp < 0)

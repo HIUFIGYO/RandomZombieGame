@@ -64,13 +64,13 @@ healingItem = HealingType.Syringe;
 healingItemAmount = 1;
 healingItemTimer = 0;
 
-vial = VialType.Adrenaline;
+vial = VialType.Mimicry;
 vialActive = false;
 vialCooldown = 0;
 vialPositiveTimer = 0;
 vialNegativeTimer = 0;
 
-supportItem = SupportType.AdvBarricade;
+supportItem = SupportType.Barricade;
 canPlaceSupport = false;
 supportXOffset = 32;
 supportYOffset = 8;
@@ -96,6 +96,7 @@ friction = 0.75;
 
 //control
 canShoot = true;
+autoFire = false;
 shootTimer = 0;
 player_inputID = Controller.Gamepad1;
 playerID = 0;

@@ -14,7 +14,7 @@ if(!isDead)
 	target = noone;
 	for(i=0; i<targetCount; i++)
 	{
-		if(!targets[# 0, i].isDead)
+		if(!targets[# 0, i].isDead and !CheckVialPositive(targets[# 0, i], VialType.Mimicry))
 		{
 			target = targets[# 0, i];
 			break;
@@ -69,7 +69,8 @@ ySpeed = min(ySpeed, maxFallSpeed);
 //handle sprites/flipping
 if(!isDead and !isAttacking)
 {
-	image_xscale = sign(xSpeed);
+	if(xSpeed != 0)
+		image_xscale = sign(xSpeed);
 	image_speed = 0.5;
 	if(xSpeed == 0)
 	{

@@ -115,16 +115,21 @@ function ProcessEquipment(_id)
 	switch(_id.equipmentCycle)
 	{
 		case EquipCycle.Weapon:
-			var auto = DataWeapon(_id.weapon[_id.currentWeapon], WeapStat.Auto);
 			var shoot = false;
-			if(!auto and InputGetButtonDown(_id.player_inputID, Button.Shoot))
+			if(InputGetButtonDown(_id.player_inputID, Button.Shoot))
 			{
+				_id.autoFire = DataWeapon(_id.weapon[_id.currentWeapon], WeapStat.Auto);
 				shoot = true;
 			}
 	
-			if(auto and InputGetButton(_id.player_inputID, Button.Shoot))
+			if(_id.autoFire and InputGetButton(_id.player_inputID, Button.Shoot))
 			{
 				shoot = true;
+			}
+			
+			if(InputGetButtonUp(_id.player_inputID, Button.Shoot))
+			{
+				_id.autoFire = false;
 			}
 	
 			if(shoot)
@@ -169,7 +174,7 @@ function ProcessEquipment(_id)
 				_id.vialCooldown = DataBase.vialCooldown[_id.vial];
 				_id.vialPositiveTimer = DataBase.vialTimer[_id.vial];
 				_id.vialNegativeTimer = DataBase.vialTimer[_id.vial] * 2;
-				CycleGear(_id, 1);
+				_id.equipmentCycle = EquipCycle.Weapon;
 				return true;	
 			}
 			break;
@@ -188,4 +193,16 @@ function ProcessEquipment(_id)
 	}
 	
 	return false;
+}
+
+///@function PlayerMelee(player)
+
+function PlayerMelee(_player)
+{
+	if(!CheckVialPositive(_player, VialType.Strength))
+		_player.stamina -= 10;
+	_player.canShoot = false;
+	_player.meleeSubImage = 0;
+	_player.canSpawnMeleeHB = true;
+	_player.isMelee = true;
 }

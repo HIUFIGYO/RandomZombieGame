@@ -60,6 +60,18 @@ if(!isMelee and !isThrowing)
 			break;
 	}
 	
+	if(CheckVialNegative(id, VialType.Strength))
+	{
+		if(meleeWeapon == Weapon.Knife)
+			index = 1;
+		else if(meleeWeapon == Weapon.Knife2)
+			index = 5;
+		else if(meleeWeapon == Weapon.Knife3)
+			index = 9;
+		else
+			index = 17;
+	}
+	
 	draw_sprite_ext(spriteGuns, index, x, y + offset, image_xscale, 1, 0, c_white, 1);
 	draw_sprite_ext(spriteArms, index, x, y + offset, image_xscale, 1, 0, arm_color, 1);
 }
