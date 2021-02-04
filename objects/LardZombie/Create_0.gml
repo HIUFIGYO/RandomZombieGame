@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Lard";
+
 spriteIdle = spr_lardidle;
 spriteWalk = spr_lardwalk;
 spriteAttack = spr_lardatk1;

@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Ghost";
+
 spriteIdle = spr_ghostidle;
 spriteWalk = spr_ghostwalk;
 spriteAttack = spr_ghostatk1;

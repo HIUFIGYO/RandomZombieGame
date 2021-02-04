@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Injector";
+
 spriteIdle = spr_injectoridle;
 spriteWalk = spr_injectorrun;
 spriteAttack = spr_injectoratk1;

@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Grapple";
+
 spriteIdle = spr_grappleidle;
 spriteWalk = spr_grapplerun;
 spriteAttack = spr_grappleatk1;

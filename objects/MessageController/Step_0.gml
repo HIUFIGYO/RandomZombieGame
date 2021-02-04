@@ -6,4 +6,5 @@ if(fadeOut <= 0)
 {
 	fadeOut = fadeOutTime;
 	ds_list_delete(messageList, 0);
+	ds_list_delete(messageColor, 0);
 }

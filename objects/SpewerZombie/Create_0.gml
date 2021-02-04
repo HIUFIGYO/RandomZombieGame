@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Spewer";
+
 spriteIdle = spr_speweridle;
 spriteWalk = spr_spewerwalk;
 spriteAttack = spr_spewermelee;

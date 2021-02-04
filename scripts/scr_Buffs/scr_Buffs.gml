@@ -135,8 +135,11 @@ function UpdateDebuffs(_id, _isPlayer)
 			{
 				case DeBuff.Ignite:
 				case DeBuff.Bleed:
+					var _tag = "Bleed";
+					if(i == DeBuff.Ignite)
+						_tag = "Ignite";
 					if(_isPlayer)
-						DamagePlayer(_id, _id.deBuffStack[i]);
+						DamagePlayer(_id, _id.deBuffStack[i], _tag);
 					else
 					{
 						if(deBuffPlayerID != noone)
@@ -146,7 +149,7 @@ function UpdateDebuffs(_id, _isPlayer)
 					
 				case DeBuff.Acid:
 					if(_isPlayer)
-						DamagePlayer(_id, DataBase.deBuffDamage[i]);
+						DamagePlayer(_id, DataBase.deBuffDamage[i], "Acid");
 					else
 					{
 						DamageZombie(deBuffPlayerID, _id, DataBase.deBuffDamage[i]);
@@ -164,7 +167,7 @@ function UpdateDebuffs(_id, _isPlayer)
 			_id.deBuff[i] = false;
 			_id.deBuffStack[i] = 0;
 			if(i == DeBuff.Poison)
-				DamagePlayerHealth(_id, SetStat(DataBase.deBuffDamageEasy, DataBase.deBuffDamageMed, DataBase.deBuffDamageHard, DataBase.deBuffDamageVeryHard));
+				DamagePlayerHealth(_id, SetStat(DataBase.deBuffDamageEasy, DataBase.deBuffDamageMed, DataBase.deBuffDamageHard, DataBase.deBuffDamageVeryHard), "Poison");
 			if(!_isPlayer)
 				_id.color = c_white;
 		}

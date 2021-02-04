@@ -152,6 +152,7 @@
     {"id":{"name":"spr_larddead","path":"sprites/spr_larddead/spr_larddead.yy",},"order":3,},
     {"id":{"name":"spr_lardgibs","path":"sprites/spr_lardgibs/spr_lardgibs.yy",},"order":4,},
     {"id":{"name":"spr_HBexplosionsmall","path":"sprites/spr_HBexplosionsmall/spr_HBexplosionsmall.yy",},"order":3,},
+    {"id":{"name":"scr_Vials","path":"scripts/scr_Vials/scr_Vials.yy",},"order":18,},
     {"id":{"name":"spr_lut_light_intensity_spot","path":"sprites/spr_lut_light_intensity_spot/spr_lut_light_intensity_spot.yy",},"order":3,},
     {"id":{"name":"spr_grappleidle","path":"sprites/spr_grappleidle/spr_grappleidle.yy",},"order":0,},
     {"id":{"name":"spr_grapplerun","path":"sprites/spr_grapplerun/spr_grapplerun.yy",},"order":1,},

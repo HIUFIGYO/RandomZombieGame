@@ -43,7 +43,7 @@ else
 
 //Jump/fallthrough
 var fallThrough = false;
-if(!isDead and !isJumping and InputGetButton(player_inputID, Button.Jump))
+if(!isDead and InputGetButtonDown(player_inputID, Button.Jump))
 {
 	if(isCrouching and place_meeting(x, y+1, OneWayBlock))
 	{
@@ -52,8 +52,9 @@ if(!isDead and !isJumping and InputGetButton(player_inputID, Button.Jump))
 		if(ySpeed == grav)
 			ySpeed = 2;
 	}
-	else if(place_meeting(x, y+1, BlockParent)or place_meeting(x, y+1, OneWayBlock))
+	else if(jumpCount < 1 + CheckVialPositive(id, VialType.Adrenaline))
 	{
+		jumpCount++;
 		isJumping = true;
 		ySpeed = -jumpSpeed;
 	}

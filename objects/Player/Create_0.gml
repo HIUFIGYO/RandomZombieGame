@@ -1,4 +1,6 @@
 name = "Player";
+damageTag = "";
+zombieTag = "";
 
 //stats
 hp = 100;
@@ -54,7 +56,7 @@ meleeWeapon = Weapon.Knife;
 canSpawnMeleeHB = true;
 
 //grenade
-grenadeType = ExplosiveType.Grenade;
+grenadeType = ExplosiveType.Mine;
 grenadeAmount = 3;
 
 //gear
@@ -62,7 +64,11 @@ healingItem = HealingType.Syringe;
 healingItemAmount = 1;
 healingItemTimer = 0;
 
-vial = 1;
+vial = VialType.Adrenaline;
+vialActive = false;
+vialCooldown = 0;
+vialPositiveTimer = 0;
+vialNegativeTimer = 0;
 
 supportItem = SupportType.AdvBarricade;
 canPlaceSupport = false;
@@ -82,6 +88,7 @@ ySpeed = 0;
 maxSpeed = 4;
 sprintSpeed = 6;
 jumpSpeed = 20;
+jumpCount = 0;
 maxFallSpeed = 20;
 acceleration = 0.5;
 grav = 0.981;

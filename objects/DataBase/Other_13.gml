@@ -1,5 +1,7 @@
 /// @description References
 
+maxMoney = 5000;
+
 healingAmount[HealingType.Medicine] = 35;
 healingTimer[HealingType.Medicine] = 1; //in seconds
 healingUses[HealingType.Medicine] = 1;

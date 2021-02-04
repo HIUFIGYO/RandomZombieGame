@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Blade";
+
 spriteIdle = spr_bladeidle;
 spriteWalk = spr_bladerun;
 spriteAttack = spr_bladeatk1;

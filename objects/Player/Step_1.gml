@@ -93,6 +93,22 @@ if(healingItemTimer > 0)
 	}
 }
 
+//vials
+if(vialCooldown > 0)
+{
+	var tick = DeltaTimeSecond();
+	vialCooldown -= tick;
+	if(vialPositiveTimer > 0)
+		vialPositiveTimer -= tick;
+	if(vialNegativeTimer > 0)
+		vialNegativeTimer -= tick;
+	if(vialCooldown <= 0)
+	{
+		vialActive = false;
+		vialCooldown = 0;
+	}
+}
+
 //check support item collision
 if (equipmentCycle = EquipCycle.Support)
 {

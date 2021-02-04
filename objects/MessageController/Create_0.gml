@@ -1,9 +1,9 @@
 messageList = ds_list_create();
+messageColor = ds_list_create();
 messageMaxSize = 10;
 
 fadeOutTime = 3;
 fadeOut = fadeOutTime;
-textColor = c_white;
 
 xPadding = 8;
 yPadding = 96;

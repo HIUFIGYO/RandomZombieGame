@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Twitcher";
+
 spriteIdle = spr_twitcheridle;
 spriteWalk = spr_twitcherrun;
 spriteAttack = spr_twitcheratk1;

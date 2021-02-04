@@ -30,9 +30,9 @@ function HealDebuffs(_id, _healType)
 	}
 }
 
-///@function DamagePlayer(player, damage)
+///@function DamagePlayer(player, damage, tag, zombieTag)
 
-function DamagePlayer(_player, _damage)
+function DamagePlayer(_player, _damage, _tag, _zombieTag)
 {
 	if(_player.isDead)
 		return;
@@ -73,6 +73,8 @@ function DamagePlayer(_player, _damage)
 	
 	if(_player.hp <= 0)
 	{
+		_player.damageTag = _tag;
+		_player.zombieTag = is_undefined(_zombieTag) ? "" : _zombieTag;
 		_player.hp = 0;
 		_player.isDead = true;
 		InitDebuffs(_player);
@@ -93,14 +95,16 @@ function DamagePlayerArmour(_player, _damage)
 	_player.armour = clamp(_player.armour, 0, GetMaxArmour(_player));
 }
 
-///@function DamagePlayerHealth(player, damage)
+///@function DamagePlayerHealth(player, damage, tag, zombieTag)
 
-function DamagePlayerHealth(_player, _damage)
+function DamagePlayerHealth(_player, _damage, _tag, _zombieTag)
 {
 	_player.hp -= _damage;
 	GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) / 2, false, 0);
 	if(_player.hp <= 0)
 	{
+		_player.damageTag = _tag;
+		_player.zombieTag = is_undefined(_zombieTag) ? "" : _zombieTag;
 		_player.hp = 0;
 		_player.isDead = true;
 		InitDebuffs(_player);
@@ -140,7 +144,7 @@ function DamageZombie(_playerID, _zombie, _damage)
 	{
 		_zombie.hp = 0;
 		_playerID.kills += 1;
-		MessageAddAll(_playerID.name + " has killed " + _zombie.name, MessageFilter.PlayerKill);
+		MessageAddPlayer(_playerID, _playerID.name + " has killed a " + _zombie.name, c_white, MessageFilter.PlayerKill);
 	}
 }
 

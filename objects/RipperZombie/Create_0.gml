@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Ripper";
+
 spriteIdle = spr_ripperidle;
 spriteWalk = spr_ripperrun;
 spriteAttack = spr_ripperatk1;

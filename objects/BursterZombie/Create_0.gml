@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Burster";
+
 spriteIdle = spr_bursteridle;
 spriteWalk = spr_bursterwalk;
 spriteAttack = spr_bursteratk1;

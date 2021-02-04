@@ -13,7 +13,7 @@ var h = 0;
 for(var i=ds_list_size(messageList) - 1; i>=0; i--)
 {
 	h += string_height(messageList[| i]);
-	draw_set_color(textColor);
+	draw_set_color(messageColor[| i]);
 	if(i == 0)
 		draw_set_alpha(fadeOut/fadeOutTime);
 	else

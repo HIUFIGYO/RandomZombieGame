@@ -157,6 +157,21 @@ function ProcessEquipment(_id)
 			break;
 			
 		case EquipCycle.Vial:
+			if(_id.vialActive or _id.vialCooldown > 0)
+			{
+				CycleGear(_id, 1);
+				break;
+			}
+			
+			if(InputGetButtonDown(_id.player_inputID, Button.Shoot))
+			{
+				_id.vialActive = true;
+				_id.vialCooldown = DataBase.vialCooldown[_id.vial];
+				_id.vialPositiveTimer = DataBase.vialTimer[_id.vial];
+				_id.vialNegativeTimer = DataBase.vialTimer[_id.vial] * 2;
+				CycleGear(_id, 1);
+				return true;	
+			}
 			break;
 			
 		case EquipCycle.Support:

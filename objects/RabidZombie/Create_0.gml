@@ -1,5 +1,7 @@
 event_inherited();
 
+name = "Rabid";
+
 spriteIdle = spr_rabididle;
 spriteWalk = spr_rabidrun;
 spriteAttack = spr_rabidatk1;
