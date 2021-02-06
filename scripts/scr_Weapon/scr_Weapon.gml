@@ -204,7 +204,7 @@ function ExplosionGetSize(_grenadeType)
 function ExplosionPush(_id, _explosion, _force)
 {
 	var velocityX = _id.x - _explosion.x,
-		velocityY = (_id.y - _explosion.y) - _force;
+		velocityY = (_id.y - _explosion.y) - 10;
 		
 	var _length = sqrt(sqr(velocityX) + sqr(velocityY));
 	
@@ -215,5 +215,5 @@ function ExplosionPush(_id, _explosion, _force)
 	}
 	
 	_id.xSpeed = velocityX * _force*_force;
-	_id.ySpeed = velocityY * _force;
+	_id.ySpeed = velocityY * _force * 2;
 }

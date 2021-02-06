@@ -58,7 +58,8 @@ if(target != noone and !isDead and !isAttacking)
 }
 else
 {
-	xSpeed = lerp(0, xSpeed, friction);
+	if(xSpeed != 0 and instance_place(x, y+1, BlockParent))
+		xSpeed = lerp(0, xSpeed, friction);
 }
 
 xSpeed = clamp(xSpeed, -moveSpeed, moveSpeed);

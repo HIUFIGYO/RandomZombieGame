@@ -8,7 +8,7 @@ for(var i=0; i<count; i++)
 	
 	if(hit == "ZombieParent")
 	{
-		ExplosionPush(hits[| i], id, 32);
+		ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
 		
 		if(hits[| i].isDead)
 			continue;
@@ -57,7 +57,7 @@ for(var i=0; i<count; i++)
 				continue;
 		}
 		
-		ExplosionPush(hits[| i], id, 32);
+		ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
 		
 		if(hits[| i].isDead)
 			continue;
