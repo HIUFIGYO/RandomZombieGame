@@ -137,8 +137,13 @@ function ProcessEquipment(_id)
 				if(_id.mag[_id.currentWeapon] > 0 and _id.reloadTimer[_id.currentWeapon] <= 0)
 				{
 					_id.canShoot = false;
-					_id.mag[_id.currentWeapon] -= 1;
+					if(!CheckVialPositive(_id, VialType.Rapid))
+						_id.mag[_id.currentWeapon] -= 1;
 					_id.shootTimer = DataWeapon(_id.weapon[_id.currentWeapon], WeapStat.FireRate) * game_get_speed(gamespeed_fps);
+					
+					if(CheckVialPositive(_id, VialType.Rapid))
+						_id.shootTimer /= 2;
+					
 					var offset = 0;
 					if(_id.isCrouching)
 						offset = _id.crouchOffset;

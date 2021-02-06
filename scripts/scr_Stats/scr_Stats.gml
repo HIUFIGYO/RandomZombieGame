@@ -37,6 +37,9 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 	if(_player.isDead)
 		return;
 		
+	if(CheckVialPositive(_player, VialType.Survivalist))
+		return;
+		
 	if(CheckBuff(_player, Buff.Resistance))
 	{
 		_damage *= 1 - DataBase.resistBuffEffect;
@@ -49,6 +52,10 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 				_damage *= 1 - DataBase.resistBuffEffect;
 		}
 	}
+	
+	if(CheckVialNegative(_player, VialType.TradeOff))
+		_damage *= 4;
+	
 	_damage = round(_damage);
 	var damageToArmour = max(floor(_damage * 0.8), 1);
 	var damageToHealth = floor(_damage * 0.2);
@@ -99,6 +106,15 @@ function DamagePlayerArmour(_player, _damage)
 
 function DamagePlayerHealth(_player, _damage, _tag, _zombieTag)
 {
+	if(_player.isDead)
+		return;
+	
+	if(CheckVialPositive(_player, VialType.Survivalist))
+		return;
+		
+	if(CheckVialNegative(_player, VialType.TradeOff))
+		_damage *= 4;
+	
 	_player.hp -= _damage;
 	GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) / 2, false, 0);
 	if(_player.hp <= 0)
@@ -121,6 +137,7 @@ function DamageZombie(_playerID, _zombie, _damage)
 {
 	if(_playerID != noone)
 	{
+		//bonuses
 		if(CheckBuff(_playerID, Buff.Critical)and random(1) <= DataBase.criticalBuffEffect)
 			_damage *= 2;
 		
@@ -131,6 +148,10 @@ function DamageZombie(_playerID, _zombie, _damage)
 			if(_zombie.hp <= _zombie.maxHp * DataBase.scoutBuffHealthRate)
 				_damage += DataBase.scoutBuffDamage;
 		}
+		
+		//penalties
+		if(CheckVialNegative(_playerID, VialType.Survivalist))
+			_damage *= 0.25;
 		
 		var moneyGained = _damage;
 		if(_damage > _zombie.hp)

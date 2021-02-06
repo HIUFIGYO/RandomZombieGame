@@ -11,7 +11,7 @@ if(InputGetButton(player_inputID, Button.Sprint)and stamina > 0 and xThrow != 0)
 	staminaWaitTimer = staminaWaitTime;
 	maxSpd = sprintSpeed;
 }
-maxSpd += (bonus * DataBase.agilityBuffJogSpeed) - deBuff[DeBuff.Bleed] + CheckVialPositive(id, VialType.Adrenaline);
+maxSpd += (bonus * DataBase.agilityBuffJogSpeed) - deBuff[DeBuff.Bleed] + CheckVialPositive(id, VialType.Adrenaline) - CheckVialNegative(id, VialType.Rapid);
 
 //Calculate velocity
 xSpeed += xThrow * acceleration;

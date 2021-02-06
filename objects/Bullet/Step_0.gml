@@ -114,14 +114,16 @@ if(count > 0)
 				}
 			}
 			
+			if(CheckVialPositive(playerID, VialType.TradeOff))
+				_damage *= 2;
+			
 			if(weapon == Weapon.Flame)
 				DebuffApply(hits[| i], DeBuff.Ignite, playerID);
+			if(weapon == Weapon.Drainer)
+				DebuffApply(hits[| i], DeBuff.Bleed, playerID);
 				
 			DamageZombie(playerID, hits[| i], _damage);
 			GameSprayBlood(GameGetBloodAmount(), x, y, hits[| i].acid, image_xscale);
-			
-			if(weapon == Weapon.Drainer)
-				DebuffApply(hits[| i], DeBuff.Bleed, playerID);
 				
 			pierce -= 1;
 			if(pierce > 0)
