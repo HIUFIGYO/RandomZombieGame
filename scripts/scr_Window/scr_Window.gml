@@ -1,31 +1,31 @@
 ///@function WindowSetSize(width, height)
 
-function WindowSetSize(width, height)
+function WindowSetSize(_width, _height)
 {
-	Window.aspectRatio = width / height;
-	Window.width = width;
-	Window.height = height;
-	
-	window_set_size(width, height);
-	surface_resize(application_surface, width, height);
-	display_set_gui_size(width * Window.guiZoom, height * Window.guiZoom);
-	
-	WindowCenter();
+	Window.aspectRatio = _width / _height;
+	Window.width = _width;
+	Window.height = _height;
+	Window.windowResize = true;
+	Window.windowResizeTimer = 0;
+	Window.wasFullScreen = window_get_fullscreen();
+	WindowSetFullScreen(false);
+	with(Window)
+		event_perform(ev_other, ev_user0);
 }
 
 ///@function WindowSetFullScreen(full)
 
-function WindowSetFullScreen(full)
+function WindowSetFullScreen(_full)
 {
-	window_set_fullscreen(full);
+	window_set_fullscreen(_full);
 }
 
 function WindowCenter()
 {
-	var width = window_get_width();
-	var height = window_get_height();
-	var xx = (display_get_width() - width) / 2;
-	var yy = (display_get_height() - height) /2;
+	var _width = window_get_width();
+	var _height = window_get_height();
+	var xx = (display_get_width() - _width) / 2;
+	var yy = (display_get_height() - _height) /2;
 	window_set_position(xx, yy);
 }
 

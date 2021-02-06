@@ -1,13 +1,13 @@
 aspectRatio = 1;
 guiZoom = 1;
-width = 0;
-height = 0;
-var w = display_get_width();
-var h = display_get_height();
-WindowSetSize(w, h);
-WindowSetFullScreen(true);
+width = display_get_width();
+height = display_get_height();
 
 for(var i=0; i<global.maxPlayers; i++)
 	camera[i] = noone;
 	
 viewsBuilt = false;
+
+windowResize = false;
+windowResizeTimer = 0;
+wasFullScreen = false;

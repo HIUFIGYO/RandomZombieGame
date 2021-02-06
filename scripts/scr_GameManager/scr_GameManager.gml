@@ -114,4 +114,18 @@ function GameGetBloodAmount()
 {
 	return irandom_range(10 , 20);
 }
-	
+
+///@function GameBloodGrinderDrawSelf(id)
+
+function GameBloodGrinderDrawSelf(_id)
+{
+	with(_id)
+	{
+		if(!surface_exists(BloodGrinder.bloodSurf))
+			return;
+		
+		surface_set_target(BloodGrinder.bloodSurf);
+		draw_self();
+		surface_reset_target();
+	}
+}
