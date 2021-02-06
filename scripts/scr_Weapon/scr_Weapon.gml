@@ -198,3 +198,22 @@ function ExplosionGetSize(_grenadeType)
 {
 	return DataBase.explosionSize[_grenadeType];
 }
+
+///@function ExplosionPush(id, explosion, force)
+
+function ExplosionPush(_id, _explosion, _force)
+{
+	var velocityX = _id.x - _explosion.x,
+		velocityY = (_id.y - _explosion.y) - _force;
+		
+	var _length = sqrt(sqr(velocityX) + sqr(velocityY));
+	
+	if(_length != 0)
+	{
+		velocityX /= _length;
+		velocityY /= _length;
+	}
+	
+	_id.xSpeed = velocityX * _force*_force;
+	_id.ySpeed = velocityY * _force;
+}

@@ -56,7 +56,7 @@ meleeWeapon = Weapon.Knife;
 canSpawnMeleeHB = true;
 
 //grenade
-grenadeType = ExplosiveType.Mine;
+grenadeType = ExplosiveType.Grenade;
 grenadeAmount = 3;
 
 //gear
