@@ -114,3 +114,30 @@ function InputGetAxis(_id, _axis)
 	}
 	return gamepad_axis_value(_id - 1, _axis)
 }
+
+///@function InputPlayerGetButtonDown(id, button)
+
+function InputPlayerGetButtonDown(_id, _button)
+{
+	if(isDead or !canMove)
+		return false;
+	return InputGetButtonDown(_id, _button);
+}
+
+///@function InputPlayerGetButtonUp(id, button)
+
+function InputPlayerGetButtonUp(_id, _button)
+{
+	if(isDead or !canMove)
+		return false;
+	return InputGetButtonUp(_id, _button);
+}
+
+///@function InputPlayerGetButton(id, button)
+
+function InputPlayerGetButton(_id, _button)
+{
+	if(isDead or !canMove)
+		return false;
+	return InputGetButton(_id, _button);
+}

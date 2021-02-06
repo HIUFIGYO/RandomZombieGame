@@ -40,6 +40,9 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 	if(CheckVialPositive(_player, VialType.Survivalist))
 		return;
 		
+	if(_player.isInMenu)
+		HUDCloseShop(_player);
+		
 	if(CheckBuff(_player, Buff.Resistance))
 	{
 		_damage *= 1 - DataBase.resistBuffEffect;
@@ -98,6 +101,12 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 
 function DamagePlayerArmour(_player, _damage)
 {
+	if(_player.isDead)
+		return;
+	
+	if(_player.isInMenu)
+		HUDCloseShop(_player);
+	
 	_player.armour -= _damage;
 	_player.armour = clamp(_player.armour, 0, GetMaxArmour(_player));
 }
@@ -111,6 +120,9 @@ function DamagePlayerHealth(_player, _damage, _tag, _zombieTag)
 	
 	if(CheckVialPositive(_player, VialType.Survivalist))
 		return;
+		
+	if(_player.isInMenu)
+		HUDCloseShop(_player);
 		
 	if(CheckVialNegative(_player, VialType.TradeOff))
 		_damage *= 4;

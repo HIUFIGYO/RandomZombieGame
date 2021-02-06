@@ -156,7 +156,7 @@ if (equipmentCycle = EquipCycle.Support)
 }
 
 //interact with objects
-if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
+if(InputPlayerGetButtonDown(player_inputID, Button.Interact))
 {
 	var _door = instance_nearest(x, y, WoodenDoor);
 	if(_door and DistanceToObject(id, _door, 32))
@@ -285,7 +285,8 @@ if(InputGetButtonDown(player_inputID, Button.Interact)and !isDead)
 				if(canMove)
 				{
 					canMove = false;
-					HUDCreateShop(playerID);
+					isInMenu = true;
+					HUDCreateShop(id);
 				}
 				break;
 		}

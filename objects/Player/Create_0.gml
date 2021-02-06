@@ -59,17 +59,19 @@ canSpawnMeleeHB = true;
 grenadeType = ExplosiveType.Grenade;
 grenadeAmount = 3;
 
-//gear
+//med item
 healingItem = HealingType.Syringe;
 healingItemAmount = 1;
 healingItemTimer = 0;
 
-vial = VialType.TradeOff;
+//vials
+vial = VialType.Mimicry;
 vialActive = false;
 vialCooldown = 0;
 vialPositiveTimer = 0;
 vialNegativeTimer = 0;
 
+//support
 supportItem = SupportType.Barricade;
 canPlaceSupport = false;
 supportXOffset = 32;
@@ -108,6 +110,7 @@ isCrouching = false;
 isMelee = false;
 isThrowing = false;
 isDead = false;
+isInMenu = false;
 canMove = true;
 
 meleeSubImage = 0;

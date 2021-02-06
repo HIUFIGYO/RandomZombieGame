@@ -1,11 +1,11 @@
-var xThrow = (InputGetButton(player_inputID, Button.Right) - InputGetButton(player_inputID, Button.Left)) * !isDead;
+var xThrow = (InputPlayerGetButton(player_inputID, Button.Right) - InputPlayerGetButton(player_inputID, Button.Left));
 
 //sprinting
 var bonus = false;
 if(CheckBuff(id, Buff.Agility)and !deBuff[DeBuff.Bleed])
 	bonus = true;
 var maxSpd = maxSpeed;
-if(InputGetButton(player_inputID, Button.Sprint)and stamina > 0 and xThrow != 0)
+if(InputPlayerGetButton(player_inputID, Button.Sprint)and stamina > 0 and xThrow != 0)
 {
 	stamina -= 10 * DeltaTimeSecond();
 	staminaWaitTimer = staminaWaitTime;
@@ -37,7 +37,7 @@ isGrounded = (place_meeting(x, y+1, BlockParent) or place_meeting(x, y+1, OneWay
 if(isGrounded)
 	jumpCount = 0;
 
-if(!isDead and InputGetButton(player_inputID, Button.Crouch) and isGrounded and !isWalking)
+if(InputPlayerGetButton(player_inputID, Button.Crouch) and isGrounded and !isWalking)
 {
 	isCrouching = true;
 }
@@ -46,7 +46,7 @@ else
 
 //Jump/fallthrough
 var fallThrough = false;
-if(!isDead and InputGetButtonDown(player_inputID, Button.Jump))
+if(InputPlayerGetButtonDown(player_inputID, Button.Jump))
 {
 	if(isCrouching and place_meeting(x, y+1, OneWayBlock))
 	{
@@ -114,7 +114,7 @@ y += clamp(ySpeed * DeltaTime(), -jumpSpeed, maxFallSpeed);
 
 //reloading
 
-if(!isDead and InputGetButtonDown(player_inputID, Button.Reload)and mag[currentWeapon] != GetMaxMag(id, currentWeapon))
+if(InputPlayerGetButtonDown(player_inputID, Button.Reload)and mag[currentWeapon] != GetMaxMag(id, currentWeapon))
 {
 	WeaponReload(id, weapon[currentWeapon]);
 }
@@ -153,7 +153,7 @@ if(equipmentCycle == EquipCycle.Weapon and reloadTimer[currentWeapon] > 0)
 		}
 	}
 	
-	if(InputGetButtonDown(player_inputID, Button.Shoot)and mag[currentWeapon] > 0 and CanCancelReload(weapon[currentWeapon]))
+	if(InputPlayerGetButtonDown(player_inputID, Button.Shoot)and mag[currentWeapon] > 0 and CanCancelReload(weapon[currentWeapon]))
 	{
 		reloadTimer[currentWeapon] = 0;
 	}

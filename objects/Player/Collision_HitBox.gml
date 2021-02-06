@@ -1,4 +1,4 @@
-if(isDead or other.pierce <= 0 or !CheckVialNegative(id, VialType.Mimicry)or other.playerID == id)
+if(isDead or other.pierce <= 0 or other.playerID == id or !CheckVialNegative(id, VialType.Mimicry))
 	exit;
 
 other.pierce -= 1;
