@@ -64,7 +64,7 @@ healingItem = HealingType.Syringe;
 healingItemAmount = 1;
 healingItemTimer = 0;
 
-vial = VialType.Mimicry;
+vial = VialType.TradeOff;
 vialActive = false;
 vialCooldown = 0;
 vialPositiveTimer = 0;
