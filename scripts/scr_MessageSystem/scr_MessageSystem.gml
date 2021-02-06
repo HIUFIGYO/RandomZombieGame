@@ -2,7 +2,8 @@ enum MessageFilter
 {
 	PlayerDown = 1,
 	PlayerKill = 2,
-	SpecialZombie = 4
+	SpecialZombie = 4,
+	Debug = 8
 }
 
 ///@function MessageCheckFilter(messageController, filter)
@@ -86,6 +87,9 @@ function MessageGetDamageTag(_tag)
 			
 		case "Poison":
 			return " succumbed to Injector poison";
+			
+		case "Explosion":
+			return " was blown to bits";
 			
 		case "Zombie":
 			var _word = choose("murdered", "downed", "incapacitated", "crippled", "maimed", "dunked on", "assassinated", "excecuted", "slaughtered", "eradicated", "killed");
