@@ -47,8 +47,8 @@ criticalBuffEffect = 0.05;
 
 //scout Buff
 buffPrice[Buff.Scout] = 1500;
-scoutBuffHealthRate = 0.5;
-scoutBuffDamage = 1;
+scoutBuffHealthRate = 0.35;
+scoutBuffDamage = 0.5;
 scoutBuffShowHealthTime = 2.5;
 
 //medic Buff

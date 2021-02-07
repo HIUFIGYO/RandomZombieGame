@@ -95,6 +95,7 @@
     {"id":{"name":"character_example","path":"sprites/character_example/character_example.yy",},"order":2,},
     {"id":{"name":"spr_legswalk","path":"sprites/spr_legswalk/spr_legswalk.yy",},"order":12,},
     {"id":{"name":"spr_shop","path":"sprites/spr_shop/spr_shop.yy",},"order":18,},
+    {"id":{"name":"StrayCreeperZombie","path":"objects/StrayCreeperZombie/StrayCreeperZombie.yy",},"order":12,},
     {"id":{"name":"polygon_create","path":"scripts/polygon_create/polygon_create.yy",},"order":4,},
     {"id":{"name":"spr_shopname","path":"sprites/spr_shopname/spr_shopname.yy",},"order":19,},
     {"id":{"name":"DataBase","path":"objects/DataBase/DataBase.yy",},"order":0,},
