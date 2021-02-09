@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"composite_shadow_map","path":"scripts/composite_shadow_map/composite_shadow_map.yy",},"order":4,},
+    {"id":{"name":"scr_Shop","path":"scripts/scr_Shop/scr_Shop.yy",},"order":19,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
     {"id":{"name":"spr_playerjumping","path":"sprites/spr_playerjumping/spr_playerjumping.yy",},"order":8,},
     {"id":{"name":"BursterZombie","path":"objects/BursterZombie/BursterZombie.yy",},"order":5,},

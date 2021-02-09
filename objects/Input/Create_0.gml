@@ -11,6 +11,8 @@ buttonThreshold = 0.1;
 
 keyMap[Button.Left] = vk_left;
 keyMap[Button.Right] = vk_right;
+keyMap[Button.Up] = vk_up;
+keyMap[Button.Down] = vk_down;
 keyMap[Button.Jump] = vk_space;
 keyMap[Button.Crouch] = vk_down;
 keyMap[Button.Interact] = ord("E");
@@ -29,6 +31,8 @@ keyMap[Button.Pause] = vk_enter;
 
 gamepadMap[Button.Left] = Axis.Left;
 gamepadMap[Button.Right] = Axis.Right;
+gamepadMap[Button.Up] = Axis.Up;
+gamepadMap[Button.Down] = Axis.Down;
 gamepadMap[Button.Jump] = gp_face1;
 gamepadMap[Button.Crouch] = Axis.Down;
 gamepadMap[Button.Interact] = gp_padu;
@@ -41,6 +45,6 @@ gamepadMap[Button.PreviousGear] = gp_padl;
 gamepadMap[Button.Reload] = gp_face3;
 gamepadMap[Button.Sprint] = gp_face2;
 gamepadMap[Button.Assist] = gp_face4;
-keyMap[Button.DropMoney] = Axis.Up;
-keyMap[Button.DropWeap] = Axis.Down;
+gamepadMap[Button.DropMoney] = Axis.Up;
+gamepadMap[Button.DropWeap] = Axis.Down;
 gamepadMap[Button.Pause] = gp_start;

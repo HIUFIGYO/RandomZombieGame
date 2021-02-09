@@ -2,6 +2,8 @@ enum Button
 {
 	Left,
 	Right,
+	Up,
+	Down,
 	Jump,
 	Crouch,
 	Interact,
