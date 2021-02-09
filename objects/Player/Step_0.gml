@@ -33,7 +33,7 @@ else
 }
 
 //crouching
-isGrounded = (place_meeting(x, y+1, BlockParent) or place_meeting(x, y+1, OneWayBlock));
+isGrounded = (place_meeting(x, y+1, BlockParent) or place_meeting(x, y+1, OneWayBlock)) and ySpeed >= 0;
 if(isGrounded)
 	jumpCount = 0;
 
@@ -74,9 +74,10 @@ if(checkForBarricade and checkForBarricade.canCollidePlayer)
 	xSpeed = 0;
 }
 
-if(place_meeting(x+xSpeed, y, BlockParent))
+var block = instance_place(x+xSpeed, y, BlockParent);
+if(block)
 {
-	while(!place_meeting(x+sign(xSpeed), y, BlockParent))
+	while(!place_meeting(x+sign(xSpeed), y, block))
 	{
 		x += sign(xSpeed);
 	}
@@ -84,9 +85,10 @@ if(place_meeting(x+xSpeed, y, BlockParent))
 }
 x += clamp(xSpeed * DeltaTime(), -maxSpd, maxSpd);
 
-if(place_meeting(x, y+ySpeed, BlockParent))
+block = instance_place(x, y+ySpeed, BlockParent);
+if(block)
 {
-	while(!place_meeting(x, y+sign(ySpeed), BlockParent))
+	while(!place_meeting(x, y+sign(ySpeed), block))
 	{
 		y += sign(ySpeed);
 	}
@@ -99,7 +101,7 @@ if(oneWay)
 {
 	if(ySpeed > 0 and floor(y) <= oneWay.y)
 	{
-		while(!place_meeting(x, y+sign(ySpeed), OneWayBlock))
+		while(!place_meeting(x, y+sign(ySpeed), oneWay))
 		{
 			y += sign(ySpeed);
 		}

@@ -57,6 +57,9 @@ function InitDebuffs(_id)
 
 function DebuffApply(_id, _debuff, _playerID)
 {
+	if(_id.isDead)
+		return;
+	
 	if(!is_undefined(_playerID))
 	{
 		_id.deBuffPlayerID = _playerID;

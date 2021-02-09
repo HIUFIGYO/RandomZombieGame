@@ -98,9 +98,10 @@ if(checkForBarricade and checkForBarricade.canCollideZombie)
 else
 	barricadeID = noone;
 
-if(place_meeting(x + xSpeed, y, BlockParent))
+var block = place_meeting(x + xSpeed, y, BlockParent);
+if(block)
 {
-	while(!place_meeting(x + sign(xSpeed), y, BlockParent))
+	while(!place_meeting(x + sign(xSpeed), y, block))
 	{
 		x += sign(xSpeed);
 	}
@@ -110,9 +111,10 @@ if(place_meeting(x + xSpeed, y, BlockParent))
 }
 x += xSpeed * DeltaTime();
 
-if(place_meeting(x, y + ySpeed, BlockParent))
+block = place_meeting(x, y + ySpeed, BlockParent);
+if(block)
 {
-	while(!place_meeting(x, y + sign(ySpeed), BlockParent))
+	while(!place_meeting(x, y + sign(ySpeed), block))
 	{
 		y += sign(ySpeed);
 	}
@@ -121,7 +123,6 @@ if(place_meeting(x, y + ySpeed, BlockParent))
 y += ySpeed * DeltaTime();
 
 //attack
-
 if(!isDead and !isAttacking and target != noone)
 {
 	if(distance_to_object(target) <= attackRange)

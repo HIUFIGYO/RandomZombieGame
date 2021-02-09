@@ -2,10 +2,11 @@ ySpeed += grav;
 ySpeed = min(ySpeed, maxFallSpeed);
 collision = false;
 
-if(place_meeting(x+xSpeed, y, BlockParent))
+var block = instance_place(x+xSpeed, y, BlockParent);
+if(block)
 {
 	collision = true;
-	while(!place_meeting(x+sign(xSpeed), y, BlockParent))
+	while(!place_meeting(x+sign(xSpeed), y, block))
 		x += sign(xSpeed);
 	var bounceSpd = -lerp(0, xSpeed, bounce);
 	if(bounceSpd >= -bounceCutOff and bounceSpd <= bounceCutOff)
@@ -14,10 +15,11 @@ if(place_meeting(x+xSpeed, y, BlockParent))
 }
 x += clamp(xSpeed * DeltaTime(), -maxSpeed, maxSpeed);
 
-if(place_meeting(x, y+ySpeed, BlockParent))
+block = instance_place(x, y+ySpeed, BlockParent);
+if(block)
 {
 	collision = true;
-	while(!place_meeting(x, y+sign(ySpeed), BlockParent))
+	while(!place_meeting(x, y+sign(ySpeed), block))
 		y += sign(ySpeed);
 	var bounceSpd = -lerp(0, ySpeed, bounce);
 	if(bounceSpd >= -bounceCutOff and bounceSpd <= bounceCutOff)
