@@ -81,7 +81,7 @@ UpdateDebuffs(id, true);
 if(healingItemTimer > 0)
 {
 	healingItemTimer -= DeltaTimeSecond();
-	if(healingItemTimer <= 0)
+	if(healingItemTimer <= 0 and healingItem != noone)
 	{
 		healingItemTimer = 0;
 		HealPlayer(id, DataBase.healingAmount[healingItem]);

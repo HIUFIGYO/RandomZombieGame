@@ -168,8 +168,8 @@ function DamageZombie(_playerID, _zombie, _damage)
 		var moneyGained = _damage;
 		if(_damage > _zombie.hp)
 			moneyGained = _zombie.hp;
-		_playerID.money += moneyGained * (5 - global.difficulty);
-		_playerID.money  = clamp(_playerID.money, 0, DataBase.maxMoney);
+		moneyGained *= (5 - global.difficulty);
+		PlayerGiveMoney(_playerID, moneyGained);
 	}
 	
 	_zombie.hp -= _damage;
@@ -249,4 +249,12 @@ function GetMaxGrenades(_player)
 	if(CheckBuff(_player, Buff.Demo))
 		_value += DataBase.demoBuffAddGrenade;
 	return _value;
+}
+
+///@function PlayerGiveMoney(player, amount)
+
+function PlayerGiveMoney(_playerID, _amount)
+{
+	_playerID.money += _amount;
+	_playerID.money  = clamp(_playerID.money, 0, DataBase.maxMoney);
 }

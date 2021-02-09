@@ -4,6 +4,8 @@ function HUDCreateShop(_playerID)
 {
 	var _shop = instance_create_layer(0, 0, UIController.layerUI, ShopUI);
 	_shop.player = _playerID;
+	ShopBuildSellList(_shop);
+	ShopSetDescription(_shop);
 }
 
 ///@function HUDCloseShop(playerID)

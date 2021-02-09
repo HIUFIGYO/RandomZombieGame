@@ -4,6 +4,8 @@ enum Button
 	Right,
 	Up,
 	Down,
+	Confirm,
+	Cancel,
 	Jump,
 	Crouch,
 	Interact,

@@ -1,18 +1,25 @@
-/// @description References
+/// @description Support
 
-maxMoney = 5000;
+supportName[SupportType.Barricade] = "Barricade";
+supportDescription[SupportType.Barricade] = "";
 
-healingAmount[HealingType.Medicine] = 35;
-healingTimer[HealingType.Medicine] = 1; //in seconds
-healingUses[HealingType.Medicine] = 1;
+supportName[SupportType.AdvBarricade] = "Advance Barricade";
+supportDescription[SupportType.AdvBarricade] = "";
 
-healingAmount[HealingType.Syringe] = 50;
-healingTimer[HealingType.Syringe] = 2; //in seconds
-healingUses[HealingType.Syringe] = 2;
+supportName[SupportType.Turret] = "Turret";
+supportDescription[SupportType.Turret] = "";
 
-healingAmount[HealingType.MedKit] = 80;
-healingTimer[HealingType.MedKit] = 3; //in seconds
-healingUses[HealingType.MedKit] = 2;
+supportName[SupportType.HealGenerator] = "Heal Generator";
+supportDescription[SupportType.HealGenerator] = "";
+
+supportName[SupportType.AmmoCrate] = "Ammo Crate";
+supportDescription[SupportType.AmmoCrate] = "";
+
+supportName[SupportType.HeavyCrate] = "Heavy Crate";
+supportDescription[SupportType.HeavyCrate] = "";
+
+supportName[SupportType.MythicCrate] = "Mythic Crate";
+supportDescription[SupportType.MythicCrate] = "";
 
 supportSprite[0] = spr_barricadeplace;
 supportSprite[1] = spr_advbarricadeplace;

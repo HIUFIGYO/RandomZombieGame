@@ -6,6 +6,8 @@ weapon = ds_grid_create(WeapStat.count, Weapon.count);
 i=0; //Standard Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
 weapon[# WeapStat.Tier, i] = Tier.One;
+weapon[# WeapStat.Name, i] = "Standard Melee";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 3;
 weapon[# WeapStat.FireRate, i] = 0.25;
 weapon[# WeapStat.Mag, i] = noone;
@@ -25,6 +27,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Standard Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
 weapon[# WeapStat.Tier, i] = Tier.One;
+weapon[# WeapStat.Name, i] = "Standard Pistol";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 1;
 weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = 12;
@@ -44,6 +48,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Standard Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.One;
+weapon[# WeapStat.Name, i] = "Standard Rifle";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 1;
 weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = 30;
@@ -63,6 +69,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Standard Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.One;
+weapon[# WeapStat.Name, i] = "Standard Shotgun";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 1;
 weapon[# WeapStat.FireRate, i] = 1;
 weapon[# WeapStat.Mag, i] = 8;
@@ -82,6 +90,8 @@ weapon[# WeapStat.Pierce, i] = 2;
 i++; //Advanced Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
 weapon[# WeapStat.Tier, i] = Tier.Two;
+weapon[# WeapStat.Name, i] = "Advanced Melee";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 6;
 weapon[# WeapStat.FireRate, i] = 0.25;
 weapon[# WeapStat.Mag, i] = noone;
@@ -101,6 +111,8 @@ weapon[# WeapStat.Pierce, i] = 2;
 i++; //Advanced Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
 weapon[# WeapStat.Tier, i] = Tier.Two;
+weapon[# WeapStat.Name, i] = "Advanced Pistol";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 4;
 weapon[# WeapStat.FireRate, i] = 0.15;
 weapon[# WeapStat.Mag, i] = 8;
@@ -120,6 +132,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Advanced Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Two;
+weapon[# WeapStat.Name, i] = "Advanced Rifle";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 2;
 weapon[# WeapStat.FireRate, i] = 0.15;
 weapon[# WeapStat.Mag, i] = 30;
@@ -139,6 +153,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Advanced Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Two;
+weapon[# WeapStat.Name, i] = "Advanced Shotgun";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 2;
 weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = 2;
@@ -158,6 +174,8 @@ weapon[# WeapStat.Pierce, i] = 2;
 i++; //Super Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
 weapon[# WeapStat.Tier, i] = Tier.Three;
+weapon[# WeapStat.Name, i] = "Super Melee";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 9;
 weapon[# WeapStat.FireRate, i] = 0.25;
 weapon[# WeapStat.Mag, i] = noone;
@@ -177,6 +195,8 @@ weapon[# WeapStat.Pierce, i] = 3;
 i++; //Super Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
 weapon[# WeapStat.Tier, i] = Tier.Three;
+weapon[# WeapStat.Name, i] = "Super Pistol";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 8;
 weapon[# WeapStat.FireRate, i] = 0.3;
 weapon[# WeapStat.Mag, i] = 6;
@@ -196,6 +216,8 @@ weapon[# WeapStat.Pierce, i] = 2;
 i++; //Super Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Three;
+weapon[# WeapStat.Name, i] = "Super Rifle";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 3;
 weapon[# WeapStat.FireRate, i] = 0.075;
 weapon[# WeapStat.Mag, i] = 20;
@@ -215,6 +237,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Super Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Three;
+weapon[# WeapStat.Name, i] = "Super Shotgun";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 1;
 weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = 8;
@@ -234,6 +258,8 @@ weapon[# WeapStat.Pierce, i] = 2;
 i++; //Flamethrower
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Four;
+weapon[# WeapStat.Name, i] = "Flamethrower";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 0.5;
 weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = 50;
@@ -253,6 +279,8 @@ weapon[# WeapStat.Pierce, i] = 2;
 i++; //Rocket Launcher
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Four;
+weapon[# WeapStat.Name, i] = "Rocket Launcher";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 20;
 weapon[# WeapStat.FireRate, i] = 1;
 weapon[# WeapStat.Mag, i] = 1;
@@ -272,6 +300,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Tesla Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Four;
+weapon[# WeapStat.Name, i] = "Tesla Rifle";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 2;
 weapon[# WeapStat.FireRate, i] = 0.2;
 weapon[# WeapStat.Mag, i] = 50;
@@ -291,6 +321,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //BioLauncher
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Four;
+weapon[# WeapStat.Name, i] = "BioLauncher";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 15;
 weapon[# WeapStat.FireRate, i] = 0.2;
 weapon[# WeapStat.Mag, i] = 5;
@@ -310,6 +342,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Heated Blade
 weapon[# WeapStat.Type, i] = WeapType.Melee;
 weapon[# WeapStat.Tier, i] = Tier.Five;
+weapon[# WeapStat.Name, i] = "Heated Blade";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 12;
 weapon[# WeapStat.FireRate, i] = 0.25;
 weapon[# WeapStat.Mag, i] = noone;
@@ -329,6 +363,8 @@ weapon[# WeapStat.Pierce, i] = 3;
 i++; //Purple Gun
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
 weapon[# WeapStat.Tier, i] = Tier.Five;
+weapon[# WeapStat.Name, i] = "Purple Gun";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 10;
 weapon[# WeapStat.FireRate, i] = 1;
 weapon[# WeapStat.Mag, i] = 1;
@@ -348,6 +384,8 @@ weapon[# WeapStat.Pierce, i] = 10;
 i++; //Undead Drainer
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Five;
+weapon[# WeapStat.Name, i] = "Undead Drainer";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 0.5;
 weapon[# WeapStat.FireRate, i] = 0.25;
 weapon[# WeapStat.Mag, i] = 4;
@@ -367,6 +405,8 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //B.H. Darker
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Five;
+weapon[# WeapStat.Name, i] = "B.H. Darker";
+weapon[# WeapStat.Description, i] = "";
 weapon[# WeapStat.Damage, i] = 3;
 weapon[# WeapStat.FireRate, i] = 0.5;
 weapon[# WeapStat.Mag, i] = 5;

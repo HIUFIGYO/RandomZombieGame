@@ -27,6 +27,8 @@ enum WeapStat
 {
 	Type,
 	Tier,
+	Name,
+	Description,
 	Damage,
 	FireRate,
 	Mag,

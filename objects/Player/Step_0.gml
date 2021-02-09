@@ -172,7 +172,7 @@ if(shootTimer > 0)
 	}
 }
 
-if(canShoot and !isDead)
+if(canShoot and !isDead and !isInMenu)
 {
 	var performedAction = false;
 	

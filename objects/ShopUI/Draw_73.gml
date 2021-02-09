@@ -45,3 +45,11 @@ for(i=0; i<size; i++)
 	draw_set_color(listSelect == i ? c_yellow : c_white);
 	draw_text(_x, _y + i*_padding, itemList[tabSelect][| i]);
 }
+
+//name/description
+w = 480;
+_x = xx + viewWidth - w - 8;
+_y = yy + 128;
+
+draw_text(_x, _y, itemName);
+draw_text_ext(_x, _y+48, itemDescription, 20, w);
