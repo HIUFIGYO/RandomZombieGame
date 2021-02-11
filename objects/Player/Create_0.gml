@@ -37,8 +37,8 @@ InitDebuffs(id);
 equipmentCycle = EquipCycle.Weapon;
 
 //primary
-currentWeapon = 0;
-weapon[0] = Weapon.Rifle;
+currentWeapon = 1;
+weapon[0] = noone;
 ammo[0] = DataWeapon(weapon[0], WeapStat.Ammo);
 mag[0] = DataWeapon(weapon[0], WeapStat.Mag);
 reloadTimer[0] = 0;

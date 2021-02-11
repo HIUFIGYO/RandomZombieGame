@@ -2,6 +2,8 @@
 
 if(!spawnedUI)
 	exit;
+	
+var index, _alpha;
 
 //damage overlay
 UISetAlpha(overlay, overlayAlpha);
@@ -22,7 +24,6 @@ UISetAlpha(armourBar, player.armour > 0);
 UIHealthbarSetValue(staminaBar, player.stamina/GetMaxStamina(player));
 
 //buff
-var index;
 UISetAlpha(buffCooldown[0], 0);
 UISetAlpha(buffCooldown[1], 0);
 UISetAlpha(buffPassive[0], 0);
@@ -31,7 +32,7 @@ UISetAlpha(buffCooldownP[0], 0);
 UISetAlpha(buffCooldownP[1], 0);
 for(var i=0; i<2; i++)
 {
-	var index = player.buff[i] == noone ? 0 : player.buff[i] + 1;
+	index = player.buff[i] == noone ? 0 : player.buff[i] + 1;
 	UIImageSetSubImage(buffIcon[i], index);
 	
 	if(player.buff[i] == Buff.Demo)
@@ -78,8 +79,11 @@ if(player.isDead)
 }
 
 //grenades
+_alpha = player.grenadeType != noone;
 UIImageSetSubImage(grenadeIcon, player.grenadeType);
 UITextSet(grenadeText, " x " + string(player.grenadeAmount));
+UISetAlpha(grenadeIcon, _alpha);
+UISetAlpha(grenadeText, _alpha);
 	
 //Ammo text
 var _text = string(player.mag[player.currentWeapon]) + "/" + string(player.ammo[player.currentWeapon])
@@ -87,9 +91,16 @@ UITextSet(ammoText, _text);
 UISetSize(ammoText, string_width(_text), 20);
 	
 //reload timer
-var index = floor(player.reloadTimer[player.currentWeapon] / DataWeapon(player.weapon[player.currentWeapon], WeapStat.Reload) * sprite_get_number(spr_reloadCircle));
+_alpha = player.reloadTimer[player.currentWeapon] > 0 and player.equipmentCycle == EquipCycle.Weapon;
+if(player.weapon[player.currentWeapon] != noone)
+	index = floor(player.reloadTimer[player.currentWeapon] / DataWeapon(player.weapon[player.currentWeapon], WeapStat.Reload) * sprite_get_number(spr_reloadCircle));
+else
+{
+	index = 0;
+	_alpha = 0;
+}
 UIImageSetSubImage(reloadImage, index);
-UISetAlpha(reloadImage, player.reloadTimer[player.currentWeapon] > 0 and player.equipmentCycle == EquipCycle.Weapon);
+UISetAlpha(reloadImage, _alpha);
 	
 //Kills
 var _text = "Kills: " + string(player.kills);

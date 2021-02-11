@@ -225,6 +225,9 @@ function GetMaxStamina(_player)
  
 function GetMaxAmmo(_player, _weaponSlot)
 {
+	if(_player.weapon[_weaponSlot] == noone)
+		return 0;
+	
 	var _value = DataWeapon(_player.weapon[_weaponSlot], WeapStat.Ammo);
 	if(CheckBuff(_player, Buff.Ammo))
 		_value *= DataBase.ammoBuffAmmo;
@@ -235,6 +238,9 @@ function GetMaxAmmo(_player, _weaponSlot)
  
 function GetMaxMag(_player, _weaponSlot)
 {
+	if(_player.weapon[_weaponSlot] == noone)
+		return 0;
+	
 	var _value = DataWeapon(_player.weapon[_weaponSlot], WeapStat.Mag);
 	if(CheckBuff(_player, Buff.Ammo))
 		_value *= DataBase.ammoBuffMag;
@@ -245,6 +251,9 @@ function GetMaxMag(_player, _weaponSlot)
 
 function GetMaxGrenades(_player)
 {
+	if(_player.grenadeType == noone)
+		return 0;
+	
 	var _value = DataBase.explosionMaxAmmo;
 	if(CheckBuff(_player, Buff.Demo))
 		_value += DataBase.demoBuffAddGrenade;

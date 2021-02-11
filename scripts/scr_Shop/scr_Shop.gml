@@ -77,7 +77,8 @@ function ShopSellItem(_shop)
 			
 		case ShopTab.Grenades:
 			_amount = DataBase.explosionPrice[_shop.player.grenadeType];
-			_shop.player.grenadeType = noone; 
+			_shop.player.grenadeType = noone;
+			_shop.player.grenadeAmount = 0;
 			break;
 			
 		case ShopTab.Buffs:

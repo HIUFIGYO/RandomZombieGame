@@ -22,7 +22,7 @@ enum SupportType
 	AmmoCrate,
 	HeavyCrate,
 	MythicCrate,
-	SupplyFlare
+	Armour
 }
 
 ///@function HealingUse(playerFrom, playerTo)

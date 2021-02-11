@@ -1,0 +1,2 @@
+scene = noone;
+isChangingRoom = false;

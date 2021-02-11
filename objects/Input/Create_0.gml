@@ -33,8 +33,8 @@ keyMap[Button.Pause] = vk_enter;
 
 gamepadMap[Button.Left] = Axis.Left;
 gamepadMap[Button.Right] = Axis.Right;
-gamepadMap[Button.Up] = Axis.Up;
-gamepadMap[Button.Down] = Axis.Down;
+gamepadMap[Button.Up] = gp_padu;
+gamepadMap[Button.Down] = gp_padd;
 gamepadMap[Button.Confirm] = gp_face1;
 gamepadMap[Button.Cancel] = gp_face2;
 gamepadMap[Button.Jump] = gp_face1;

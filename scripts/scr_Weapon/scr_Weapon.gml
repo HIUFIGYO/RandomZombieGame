@@ -125,6 +125,9 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 
 function WeaponReload(_player, _weapon)
 {
+	if(_weapon == noone)
+		return;
+	
 	if(_player.equipmentCycle != EquipCycle.Weapon)
 		return;
 		

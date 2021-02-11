@@ -14,5 +14,5 @@ if(isSelected and InputGetButtonDown(0, Button.Jump))
 if(buttonPressed)
 {
 	global.playerAmount = 2;
-	room_goto(rm_stage01);
+	RoomGoto(rm_stage01);
 }
