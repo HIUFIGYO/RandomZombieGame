@@ -1,3 +1,6 @@
+if(!hasControl)
+	exit;
+
 //close shop
 if(InputGetButtonDown(player.player_inputID, Button.Cancel))
 	HUDCloseShop(player);
@@ -81,4 +84,5 @@ if(listButtonDown)
 if(InputGetButtonDown(player.player_inputID, Button.Confirm))
 {
 	ShopProcessSelection(id);
+	ShopSetDescription(id);
 }

@@ -51,5 +51,6 @@ w = 480;
 _x = xx + viewWidth - w - 8;
 _y = yy + 128;
 
+draw_set_color(c_white);
 draw_text(_x, _y, itemName);
 draw_text_ext(_x, _y+48, itemDescription, 20, w);

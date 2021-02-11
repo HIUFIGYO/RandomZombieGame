@@ -44,6 +44,7 @@ function ShopBuyItem(_shop)
 		case ShopTab.Vials:
 			break;
 		case ShopTab.Support:
+			ShopBuySupport(_shop);
 			break;
 		case ShopTab.Special:
 			break;
@@ -82,11 +83,21 @@ function ShopSellItem(_shop)
 			break;
 			
 		case ShopTab.Buffs:
-			
+			var index = noone;
+			if(_shop.player.buff[0] != noone and DataBase.buffName[_shop.player.buff[0]] == _shop.itemList[ShopTab.Sell][| listSelect])
+				index = 0;
+			else if(_shop.player.buff[1] != noone and DataBase.buffName[_shop.player.buff[1]] == _shop.itemList[ShopTab.Sell][| listSelect])
+				index = 1;
+				
+			if(index != noone)
+			{
+				_amount = DataBase.buffPrice[_shop.player.buff[index]];
+				_shop.player.buff[index] = noone;
+			}
 			break;
 			
 		case ShopTab.Medical:
-			_amount = 0;
+			_amount = DataBase.healingPrice[_shop.player.healingItem];
 			_shop.player.healingItem = noone;
 			break;
 			
@@ -96,8 +107,8 @@ function ShopSellItem(_shop)
 			break;
 			
 		case ShopTab.Support:
-			_amount = 0;
-			_shop.player.support = noone;
+			_amount = DataBase.supportPrice[_shop.player.supportItem];
+			_shop.player.supportItem = noone;
 			break;
 	}
 	
@@ -141,20 +152,18 @@ function ShopGetPrice(_shop)
 
 function ShopSetDescription(_shop)
 {
+	_shop.itemName = _shop.itemList[_shop.tabSelect][| _shop.listSelect];
 	switch(_shop.tabSelect)
 	{
 		case ShopTab.Primary:
-			_shop.itemName = DataWeapon(_shop.player.weapon[0], WeapStat.Name);
 			_shop.itemDescription = DataWeapon(_shop.player.weapon[0], WeapStat.Description);
 			break;
 			
 		case ShopTab.Secondary:
-			_shop.itemName = DataWeapon(_shop.player.weapon[1], WeapStat.Name);
 			_shop.itemDescription = DataWeapon(_shop.player.weapon[1], WeapStat.Description);
 			break;
 			
 		case ShopTab.Melee:
-			_shop.itemName = DataWeapon(_shop.player.meleeWeapon, WeapStat.Name);
 			_shop.itemDescription = DataWeapon(_shop.player.meleeWeapon, WeapStat.Description);
 			break;
 			
@@ -200,14 +209,14 @@ function ShopBuildSellList(_shop)
 	}
 	//buffs
 	item = _shop.player.buff[0];
-	if(item != noone)
+	if(item != noone and _shop.player.buffCooldown[0] == 0)
 	{
 		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.buffName[item]);
 		ds_list_add(_shop.sellList, ShopTab.Buffs);
 	}
 	
 	item = _shop.player.buff[1];
-	if(item != noone)
+	if(item != noone and _shop.player.buffCooldown[1] == 0)
 	{
 		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.buffName[item]);
 		ds_list_add(_shop.sellList, ShopTab.Buffs);
@@ -233,4 +242,22 @@ function ShopBuildSellList(_shop)
 		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.supportName[item]);
 		ds_list_add(_shop.sellList, ShopTab.Support);
 	}
+}
+
+///@function ShopBuySupport(shop)
+
+function ShopBuySupport(_shop)
+{
+	var price;
+	switch(_shop.itemList[ShopTab.Support][| _shop.listSelect])
+	{
+		case "Armour":
+			price = DataBase.supportPrice[SupportType.Armour];
+			if(_shop.player.money >= price)
+			{
+				_shop.player.money -= price;
+				_shop.player.armour = _shop.player.maxArmour;
+			}
+			break;
+	}	
 }

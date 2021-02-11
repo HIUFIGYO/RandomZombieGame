@@ -115,6 +115,9 @@ function ProcessEquipment(_id)
 	switch(_id.equipmentCycle)
 	{
 		case EquipCycle.Weapon:
+			if(_id.weapon[_id.currentWeapon] == noone)
+				break;
+			
 			var shoot = false;
 			if(InputGetButtonDown(_id.player_inputID, Button.Shoot))
 			{
@@ -211,3 +214,28 @@ function PlayerMelee(_player)
 	_player.canSpawnMeleeHB = true;
 	_player.isMelee = true;
 }
+
+///@function GiveMedical(player, item)
+
+function GiveMedical(_player, _item)
+{
+	_player.healingItem = _item;
+	_player.healingItemAmount = DataBase.healingAmount[_item];
+	_player.healingItemTimer = DataBase.healingTimer[_item];
+	
+}
+
+///@function GiveVial(player, item)
+
+function GiveVial(_player, _item)
+{
+	_player.vial = _item;
+}
+
+///@function GiveSupport(player, item)
+
+function GiveSupport(_player, _item)
+{
+	_player.supportItem = _item;
+}
+

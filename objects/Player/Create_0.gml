@@ -24,8 +24,8 @@ money = 250;
 
 //buffs/debuffs
 
-buff[0] = Buff.Scout;
-buff[1] = Buff.Ammo;
+buff[0] = noone;
+buff[1] = noone;
 buffCooldown[0] = 0;
 buffCooldown[1] = 0;
 damageResistanceTimer = 0;
@@ -60,19 +60,22 @@ grenadeType = ExplosiveType.Grenade;
 grenadeAmount = 3;
 
 //med item
-healingItem = HealingType.Syringe;
+healingItem = noone;
 healingItemAmount = 1;
 healingItemTimer = 0;
 
+if(global.difficulty == GameDifficulty.Easy)
+	GiveMedical(id, HealingType.Medicine);
+
 //vials
-vial = VialType.Mimicry;
+vial = noone;
 vialActive = false;
 vialCooldown = 0;
 vialPositiveTimer = 0;
 vialNegativeTimer = 0;
 
 //support
-supportItem = SupportType.Barricade;
+supportItem = noone;
 canPlaceSupport = false;
 supportXOffset = 32;
 supportYOffset = 8;

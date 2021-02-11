@@ -19,7 +19,7 @@ maxFallSpeed = 20;
 xSpeed = 0;
 ySpeed = 0;
 target = noone;
-friction = 0.9;
+friction = 0.3;
 
 color = c_white;
 image_speed = 0.5;

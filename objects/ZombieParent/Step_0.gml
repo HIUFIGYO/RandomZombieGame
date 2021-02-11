@@ -34,6 +34,7 @@ if(!isDead and hp <= 0)
 	color = c_white;
 	image_speed = 0;
 	sprite_index = spriteDead;
+	friction = 0.9;
 }
 if(showHealth)
 {

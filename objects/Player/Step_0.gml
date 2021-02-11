@@ -51,7 +51,6 @@ if(InputPlayerGetButtonDown(player_inputID, Button.Jump))
 	if(isCrouching and place_meeting(x, y+1, OneWayBlock))
 	{
 		fallThrough = true;
-		isJumping = true;
 		if(ySpeed == grav)
 			ySpeed = 2;
 	}
@@ -207,7 +206,7 @@ if(canShoot and !isDead and !isInMenu)
 		performedAction = ProcessEquipment(id);
 	}
 	
-	if(!performedAction and stamina >= 10 and InputGetButtonDown(player_inputID, Button.Melee))
+	if(!performedAction and stamina >= 10 and InputGetButtonDown(player_inputID, Button.Melee)and meleeWeapon != noone)
 	{
 		performedAction = true;
 		PlayerMelee(id);
