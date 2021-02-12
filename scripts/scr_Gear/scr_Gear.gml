@@ -10,7 +10,8 @@ enum HealingType
 {
 	Medicine,
 	Syringe,
-	MedKit
+	MedKit,
+	count
 }
 
 enum SupportType
@@ -22,7 +23,8 @@ enum SupportType
 	AmmoCrate,
 	HeavyCrate,
 	MythicCrate,
-	Armour
+	Armour,
+	count
 }
 
 ///@function HealingUse(playerFrom, playerTo)
@@ -237,5 +239,20 @@ function GiveVial(_player, _item)
 function GiveSupport(_player, _item)
 {
 	_player.supportItem = _item;
+}
+
+///@function DropMoney(player, amount)
+
+function DropMoney(_player, _amount)
+{
+	if(_player.money < _amount)
+		return;
+	
+	var inst = instance_create_layer(_player.x, _player.y - 32, GameManager.layerObject, CashDrop);
+	inst.playerID = _player;
+	inst.xSpeed = _player.image_xscale * 10;
+	inst.ySpeed = -8;
+	inst.value = _amount;
+	_player.money -= _amount;
 }
 

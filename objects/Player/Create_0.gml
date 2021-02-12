@@ -21,6 +21,7 @@ maxStamina = stamina;
 
 kills = 0;
 money = 250;
+bankedMoney = 0;
 
 //buffs/debuffs
 

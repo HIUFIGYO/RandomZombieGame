@@ -5,7 +5,8 @@ enum VialType
 	Mimicry,
 	Survivalist,
 	Rapid,
-	TradeOff
+	TradeOff,
+	count
 }
 
 ///@function CheckVialPositive(player, vial)

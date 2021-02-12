@@ -260,10 +260,45 @@ function GetMaxGrenades(_player)
 	return _value;
 }
 
+///@function PlayerGetMoney(player)
+
+function PlayerGetMoney(_player)
+{
+	return _player.money + _player.bankedMoney;
+}
+
+///@function PlayerBankMoney(player, amount)
+
+function PlayerBankMoney(_playerID, _amount)
+{
+	_playerID.bankedMoney += _amount;
+	_playerID.bankedMoney = clamp(_playerID.bankedMoney, 0, DataBase.maxBankedMoney);
+}
+
 ///@function PlayerGiveMoney(player, amount)
 
 function PlayerGiveMoney(_playerID, _amount)
 {
 	_playerID.money += _amount;
-	_playerID.money  = clamp(_playerID.money, 0, DataBase.maxMoney);
+	if(_playerID.money >= DataBase.maxMoney)
+	{
+		_playerID.money = DataBase.maxMoney;
+		instance_find(Shop, 0).unlockBank = true;
+	}
 }
+
+///@function PlayerSpendMoney(player, amount)
+
+function PlayerSpendMoney(_player, _amount)
+{
+	if(_amount <= _player.bankedMoney)
+		_player.bankedMoney -= _amount;
+	else
+	{
+		_amount -= _player.bankedMoney;
+		_player.bankedMoney = 0;
+		_player.money -= _amount;
+	}
+}
+
+

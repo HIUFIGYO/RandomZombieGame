@@ -1,4 +1,6 @@
 maxMoney = 5000;
+maxBankedMoney = 2000;
+moneyDropAmount = 100;
 
 event_perform(ev_other, ev_user0);
 event_perform(ev_other, ev_user1);

@@ -221,7 +221,13 @@ if(canShoot and !isDead and !isInMenu)
 	
 	if(!performedAction and InputGetButtonDown(player_inputID, Button.Assist))
 	{
+		performedAction = true;
 		HealingUse(id, id);
+	}
+	
+	if(!performedAction and InputGetButtonDown(player_inputID, Button.DropMoney))
+	{
+		DropMoney(id, DataBase.moneyDropAmount);
 	}
 }
 
