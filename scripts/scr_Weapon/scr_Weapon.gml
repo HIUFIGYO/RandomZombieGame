@@ -71,7 +71,8 @@ enum ExplosiveType
 	Grenade,
 	Incendiary,
 	Mine,
-	BHBomber
+	BHBomber,
+	count
 }
 
 enum Tier

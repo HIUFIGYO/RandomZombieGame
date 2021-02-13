@@ -30,70 +30,72 @@ for(var i=0; i<ShopTab.count; i++)
 
 sellList = ds_list_create();
 
+itemData = ds_map_create();
+
 //populate lists
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Rifle, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Shotgun, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Rifle2, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Shotgun2, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Rifle3, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Shotgun3, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Flame, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Rocket, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Tesla, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Acid, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.Drainer, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Primary], DataWeapon(Weapon.BHDarker, WeapStat.Name));
+ds_list_add(itemList[ShopTab.Primary], Weapon.Rifle);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Shotgun);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Rifle2);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Shotgun2);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Rifle3);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Shotgun3);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Flame);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Rocket);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Tesla);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Acid);
+ds_list_add(itemList[ShopTab.Primary], Weapon.Drainer);
+ds_list_add(itemList[ShopTab.Primary], Weapon.BHDarker);
 
-ds_list_add(itemList[ShopTab.Secondary], DataWeapon(Weapon.Pistol, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Secondary], DataWeapon(Weapon.Pistol2, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Secondary], DataWeapon(Weapon.Pistol3, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Secondary], DataWeapon(Weapon.Purple, WeapStat.Name));
+ds_list_add(itemList[ShopTab.Secondary], Weapon.Pistol);
+ds_list_add(itemList[ShopTab.Secondary], Weapon.Pistol2);
+ds_list_add(itemList[ShopTab.Secondary], Weapon.Pistol3);
+ds_list_add(itemList[ShopTab.Secondary], Weapon.Purple);
 
-ds_list_add(itemList[ShopTab.Melee], DataWeapon(Weapon.Knife, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Melee], DataWeapon(Weapon.Knife2, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Melee], DataWeapon(Weapon.Knife3, WeapStat.Name));
-ds_list_add(itemList[ShopTab.Melee], DataWeapon(Weapon.Knife4, WeapStat.Name));
+ds_list_add(itemList[ShopTab.Melee], Weapon.Knife);
+ds_list_add(itemList[ShopTab.Melee], Weapon.Knife2);
+ds_list_add(itemList[ShopTab.Melee], Weapon.Knife3);
+ds_list_add(itemList[ShopTab.Melee], Weapon.Knife4);
 
-ds_list_add(itemList[ShopTab.Grenades], DataBase.explosionName[ExplosiveType.Grenade]);
-ds_list_add(itemList[ShopTab.Grenades], DataBase.explosionName[ExplosiveType.Incendiary]);
-ds_list_add(itemList[ShopTab.Grenades], DataBase.explosionName[ExplosiveType.Mine]);
-ds_list_add(itemList[ShopTab.Grenades], DataBase.explosionName[ExplosiveType.BHBomber]);
+ds_list_add(itemList[ShopTab.Grenades], ExplosiveType.Grenade);
+ds_list_add(itemList[ShopTab.Grenades], ExplosiveType.Incendiary);
+ds_list_add(itemList[ShopTab.Grenades], ExplosiveType.Mine);
+ds_list_add(itemList[ShopTab.Grenades], ExplosiveType.BHBomber);
 
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Regeneration]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Health]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Resistance]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Stamina]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Agility]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Reload]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Ammo]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Damage]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Critical]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Scout]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Medic]);
-ds_list_add(itemList[ShopTab.Buffs], DataBase.buffName[Buff.Demo]);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Regeneration);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Health);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Resistance);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Stamina);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Agility);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Reload);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Ammo);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Damage);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Critical);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Scout);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Medic);
+ds_list_add(itemList[ShopTab.Buffs], Buff.Demo);
 
-ds_list_add(itemList[ShopTab.Medical], DataBase.healingName[HealingType.Medicine]);
-ds_list_add(itemList[ShopTab.Medical], DataBase.healingName[HealingType.Syringe]);
-ds_list_add(itemList[ShopTab.Medical], DataBase.healingName[HealingType.MedKit]);
+ds_list_add(itemList[ShopTab.Medical], HealingType.Medicine);
+ds_list_add(itemList[ShopTab.Medical], HealingType.Syringe);
+ds_list_add(itemList[ShopTab.Medical], HealingType.MedKit);
 
-ds_list_add(itemList[ShopTab.Vials], DataBase.vialName[VialType.Adrenaline]);
-ds_list_add(itemList[ShopTab.Vials], DataBase.vialName[VialType.Strength]);
-ds_list_add(itemList[ShopTab.Vials], DataBase.vialName[VialType.Mimicry]);
-ds_list_add(itemList[ShopTab.Vials], DataBase.vialName[VialType.Survivalist]);
-ds_list_add(itemList[ShopTab.Vials], DataBase.vialName[VialType.Rapid]);
-ds_list_add(itemList[ShopTab.Vials], DataBase.vialName[VialType.TradeOff]);
+ds_list_add(itemList[ShopTab.Vials], VialType.Adrenaline);
+ds_list_add(itemList[ShopTab.Vials], VialType.Strength);
+ds_list_add(itemList[ShopTab.Vials], VialType.Mimicry);
+ds_list_add(itemList[ShopTab.Vials], VialType.Survivalist);
+ds_list_add(itemList[ShopTab.Vials], VialType.Rapid);
+ds_list_add(itemList[ShopTab.Vials], VialType.TradeOff);
 
-ds_list_add(itemList[ShopTab.Support], DataBase.supportName[SupportType.Armour]);
-ds_list_add(itemList[ShopTab.Support], DataBase.supportName[SupportType.Barricade]);
-ds_list_add(itemList[ShopTab.Support], DataBase.supportName[SupportType.AdvBarricade]);
-ds_list_add(itemList[ShopTab.Support], DataBase.supportName[SupportType.Turret]);
-ds_list_add(itemList[ShopTab.Support], DataBase.supportName[SupportType.HealGenerator]);
-ds_list_add(itemList[ShopTab.Support], DataBase.supportName[SupportType.AmmoCrate]);
-ds_list_add(itemList[ShopTab.Support], DataBase.supportName[SupportType.HeavyCrate]);
-ds_list_add(itemList[ShopTab.Support], DataBase.supportName[SupportType.MythicCrate]);
+ds_list_add(itemList[ShopTab.Support], SupportType.Armour);
+ds_list_add(itemList[ShopTab.Support], SupportType.Barricade);
+ds_list_add(itemList[ShopTab.Support], SupportType.AdvBarricade);
+ds_list_add(itemList[ShopTab.Support], SupportType.Turret);
+ds_list_add(itemList[ShopTab.Support], SupportType.HealGenerator);
+ds_list_add(itemList[ShopTab.Support], SupportType.AmmoCrate);
+ds_list_add(itemList[ShopTab.Support], SupportType.HeavyCrate);
+ds_list_add(itemList[ShopTab.Support], SupportType.MythicCrate);
 
 
-
+ShopSetDescription(id);
 
 
 

@@ -1,5 +1,7 @@
 image_speed = 0;
 
+global.shopID = id;
+
 hasBank = false;
 
 unlockBankOption = false;
@@ -27,4 +29,9 @@ for(i=0; i<VialType.count; i++)
 for(i=0; i<Buff.count; i++)
 {
 	stockBuff[i] = global.playerAmount;
+}
+
+for(i=0; i<ExplosiveType.count; i++)
+{
+	stockExplosion[i] = global.playerAmount;
 }

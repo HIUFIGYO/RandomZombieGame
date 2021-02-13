@@ -13,6 +13,14 @@ enum ShopTab
 	count
 }
 
+enum ShopKey
+{
+	Name,
+	Description,
+	Price,
+	Stock
+}
+
 ///@function ShopProcessSelection(shop)
 
 function ShopProcessSelection(_shop)
@@ -118,58 +126,100 @@ function ShopSellItem(_shop)
 	ShopBuildSellList(_shop);
 }
 
-///@function ShopGetSelectedPrice(shop)
+///@function ShopBuildItemData(shop, index)
 
-function ShopGetPrice(_shop)
+function ShopBuildItemData(_shop, _index)
 {
+	ds_map_clear(_shop.itemData);
+	
 	switch(_shop.tabSelect)
 	{
 		case ShopTab.Primary:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, DataWeapon(_shop.itemList[ShopTab.Primary][| _index], WeapStat.Name));
+			ds_map_add(_shop.itemData, ShopKey.Description, DataWeapon(_shop.itemList[ShopTab.Primary][| _index], WeapStat.Description));
+			ds_map_add(_shop.itemData, ShopKey.Price, DataWeapon(_shop.itemList[ShopTab.Primary][| _index], WeapStat.Price));
+			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockWeapon[_index]);
+			break;
+			
 		case ShopTab.Secondary:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, DataWeapon(_shop.itemList[ShopTab.Secondary][| _index], WeapStat.Name));
+			ds_map_add(_shop.itemData, ShopKey.Description, DataWeapon(_shop.itemList[ShopTab.Secondary][| _index], WeapStat.Description));
+			ds_map_add(_shop.itemData, ShopKey.Price, DataWeapon(_shop.itemList[ShopTab.Secondary][| _index], WeapStat.Price));
+			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockWeapon[_index]);
+			break;
+			
 		case ShopTab.Melee:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, DataWeapon(_shop.itemList[ShopTab.Melee][| _index], WeapStat.Name));
+			ds_map_add(_shop.itemData, ShopKey.Description, DataWeapon(_shop.itemList[ShopTab.Melee][| _index], WeapStat.Description));
+			ds_map_add(_shop.itemData, ShopKey.Price, DataWeapon(_shop.itemList[ShopTab.Melee][| _index], WeapStat.Price));
+			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockWeapon[_index]);
+			break;
+			
 		case ShopTab.Grenades:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.explosionName[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.explosionDescription[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.explosionPrice[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockExplosion[_index]);
+			break;
+			
 		case ShopTab.Buffs:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.buffName[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.buffDescription[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.buffPrice[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockBuff[_index]);
+			break;
+			
 		case ShopTab.Medical:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.healingName[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.healingDescription[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.healingPrice[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockMedical[_index]);
+			break;
+			
 		case ShopTab.Vials:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.vialName[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.vialDescription[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.vialPrice[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockVial[_index]);
+			break;
+			
 		case ShopTab.Support:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.supportName[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.supportDescription[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.supportPrice[_index]);
+			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockSupport[_index]);
+			break;
+			
 		case ShopTab.Special:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, "X");
+			ds_map_add(_shop.itemData, ShopKey.Description, "X");
+			ds_map_add(_shop.itemData, ShopKey.Price, 0);
+			ds_map_add(_shop.itemData, ShopKey.Stock, 1);
+			break;
+			
 		case ShopTab.Sell:
-			return 0;
+			ds_map_add(_shop.itemData, ShopKey.Name, _shop.itemList[ShopTab.Sell][| _index]);
+			ds_map_add(_shop.itemData, ShopKey.Description, "X");
+			ds_map_add(_shop.itemData, ShopKey.Price, 0);
+			ds_map_add(_shop.itemData, ShopKey.Stock, 1);
+			break;
 	}
-	return 0;
 }
 
-///@function ShopGetDescription(shop)
+///@function ShopGetItemData(shop, key)
+
+function ShopGetItemData(_shop, _key)
+{
+	return _shop.itemData[? _key];
+}
+
+///@function ShopSetDescription(shop)
 
 function ShopSetDescription(_shop)
 {
-	_shop.itemName = _shop.itemList[_shop.tabSelect][| _shop.listSelect];
-	switch(_shop.tabSelect)
-	{
-		case ShopTab.Primary:
-			_shop.itemDescription = DataWeapon(_shop.player.weapon[0], WeapStat.Description);
-			break;
-			
-		case ShopTab.Secondary:
-			_shop.itemDescription = DataWeapon(_shop.player.weapon[1], WeapStat.Description);
-			break;
-			
-		case ShopTab.Melee:
-			_shop.itemDescription = DataWeapon(_shop.player.meleeWeapon, WeapStat.Description);
-			break;
-			
-		case ShopTab.Grenades:
-			break;
-	}
+	ShopBuildItemData(_shop, _shop.listSelect);
+	_shop.itemName = ShopGetItemData(_shop, ShopKey.Name);
+	_shop.itemDescription = ShopGetItemData(_shop, ShopKey.Description);
 }
 
 ///@function ShopBuildSellList(shop)
@@ -242,6 +292,9 @@ function ShopBuildSellList(_shop)
 		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.supportName[item]);
 		ds_list_add(_shop.sellList, ShopTab.Support);
 	}
+	
+	if(_shop.listSelect > ds_list_size(_shop.sellList) - 1)
+		_shop.listSelect = ds_list_size(_shop.sellList) - 1;
 }
 
 ///@function ShopBuySupport(shop)

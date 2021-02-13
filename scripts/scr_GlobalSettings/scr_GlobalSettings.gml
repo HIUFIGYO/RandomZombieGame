@@ -25,3 +25,5 @@ global.playerInput[2] = Controller.Keyboard;
 global.playerInput[3] = Controller.Gamepad3;
 
 global.bloodAmount = 1;
+
+global.shopID = noone;
