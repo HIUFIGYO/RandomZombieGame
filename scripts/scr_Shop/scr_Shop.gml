@@ -17,8 +17,7 @@ enum ShopKey
 {
 	Name,
 	Description,
-	Price,
-	Stock
+	Price
 }
 
 ///@function ShopProcessSelection(shop)
@@ -35,6 +34,10 @@ function ShopProcessSelection(_shop)
 
 function ShopBuyItem(_shop)
 {
+	var item = ShopGetItemID(_shop);
+	var price = ShopGetItemData(item, ShopKey.Price);
+	var sellPrice = 0;
+	
 	switch(_shop.tabSelect)
 	{
 		case ShopTab.Primary:
@@ -52,7 +55,21 @@ function ShopBuyItem(_shop)
 		case ShopTab.Vials:
 			break;
 		case ShopTab.Support:
-			ShopBuySupport(_shop);
+			if(item == SupportType.Armour)
+			{
+				if(ShopCanAffordAndBuy(_shop.player, item, 0))
+				{
+					_shop.player.armour = _shop.player.maxArmour;
+				}
+			}
+			else
+			{
+				sellPrice = ShopGetSellPrice(_shop.player.supportItem);
+				if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
+				{
+					_shop.player.supportItem = item;
+				}
+			}
 			break;
 		case ShopTab.Special:
 			break;
@@ -65,161 +82,87 @@ function ShopBuyItem(_shop)
 
 function ShopSellItem(_shop)
 {
-	var _amount = 0;
+	var item = ShopGetItemID(_shop),
+		_player = _shop.player;
+		
+	PlayerGiveMoney(_player, ShopGetSellPrice(item));
+		
+	if(_player.weapon[0] == item)
+		_player.weapon[0] = noone;
+	else if(_player.weapon[1] == item)
+		_player.weapon[1] = noone;
+	else if(_player.meleeWeapon == item)
+		_player.meleeWeapon = noone;
+	else if(_player.grenadeType == item)
+		_player.grenadeType = noone;
+	else if(_player.buff[0] == item)
+		_player.buff[0] = noone;
+	else if(_player.buff[1] == item)
+		_player.buff[1] = noone;
+	else if(_player.healingItem == item)
+		_player.healingItem = noone;
+	else if(_player.vial == item)
+		_player.vial = noone;
+	else
+		_player.supportItem = noone;
 	
-	switch(sellList[| listSelect])
-	{
-		case ShopTab.Primary:
-			_amount = DataWeapon(_shop.player.weapon[0], WeapStat.Price);
-			_shop.player.weapon[0] = noone;
-			break;
-			
-		case ShopTab.Secondary:
-			_amount = DataWeapon(_shop.player.weapon[1], WeapStat.Price);
-			_shop.player.weapon[1] = noone;
-			break;
-			
-		case ShopTab.Melee:
-			_amount = DataWeapon(_shop.player.meleeWeapon, WeapStat.Price);
-			_shop.player.meleeWeapon = noone;
-			break;
-			
-		case ShopTab.Grenades:
-			_amount = DataBase.explosionPrice[_shop.player.grenadeType];
-			_shop.player.grenadeType = noone;
-			_shop.player.grenadeAmount = 0;
-			break;
-			
-		case ShopTab.Buffs:
-			var index = noone;
-			if(_shop.player.buff[0] != noone and DataBase.buffName[_shop.player.buff[0]] == _shop.itemList[ShopTab.Sell][| listSelect])
-				index = 0;
-			else if(_shop.player.buff[1] != noone and DataBase.buffName[_shop.player.buff[1]] == _shop.itemList[ShopTab.Sell][| listSelect])
-				index = 1;
-				
-			if(index != noone)
-			{
-				_amount = DataBase.buffPrice[_shop.player.buff[index]];
-				_shop.player.buff[index] = noone;
-			}
-			break;
-			
-		case ShopTab.Medical:
-			_amount = DataBase.healingPrice[_shop.player.healingItem];
-			_shop.player.healingItem = noone;
-			break;
-			
-		case ShopTab.Vials:
-			_amount = DataBase.vialPrice[_shop.player.vial];
-			_shop.player.vial = noone;
-			break;
-			
-		case ShopTab.Support:
-			_amount = DataBase.supportPrice[_shop.player.supportItem];
-			_shop.player.supportItem = noone;
-			break;
-	}
-	
-	_amount /= 2;
-	
-	PlayerGiveMoney(_shop.player, _amount);
 	ShopBuildSellList(_shop);
-}
-
-///@function ShopBuildItemData(shop, index)
-
-function ShopBuildItemData(_shop, _index)
-{
-	ds_map_clear(_shop.itemData);
 	
-	switch(_shop.tabSelect)
-	{
-		case ShopTab.Primary:
-			ds_map_add(_shop.itemData, ShopKey.Name, DataWeapon(_shop.itemList[ShopTab.Primary][| _index], WeapStat.Name));
-			ds_map_add(_shop.itemData, ShopKey.Description, DataWeapon(_shop.itemList[ShopTab.Primary][| _index], WeapStat.Description));
-			ds_map_add(_shop.itemData, ShopKey.Price, DataWeapon(_shop.itemList[ShopTab.Primary][| _index], WeapStat.Price));
-			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockWeapon[_index]);
-			break;
-			
-		case ShopTab.Secondary:
-			ds_map_add(_shop.itemData, ShopKey.Name, DataWeapon(_shop.itemList[ShopTab.Secondary][| _index], WeapStat.Name));
-			ds_map_add(_shop.itemData, ShopKey.Description, DataWeapon(_shop.itemList[ShopTab.Secondary][| _index], WeapStat.Description));
-			ds_map_add(_shop.itemData, ShopKey.Price, DataWeapon(_shop.itemList[ShopTab.Secondary][| _index], WeapStat.Price));
-			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockWeapon[_index]);
-			break;
-			
-		case ShopTab.Melee:
-			ds_map_add(_shop.itemData, ShopKey.Name, DataWeapon(_shop.itemList[ShopTab.Melee][| _index], WeapStat.Name));
-			ds_map_add(_shop.itemData, ShopKey.Description, DataWeapon(_shop.itemList[ShopTab.Melee][| _index], WeapStat.Description));
-			ds_map_add(_shop.itemData, ShopKey.Price, DataWeapon(_shop.itemList[ShopTab.Melee][| _index], WeapStat.Price));
-			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockWeapon[_index]);
-			break;
-			
-		case ShopTab.Grenades:
-			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.explosionName[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.explosionDescription[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.explosionPrice[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockExplosion[_index]);
-			break;
-			
-		case ShopTab.Buffs:
-			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.buffName[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.buffDescription[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.buffPrice[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockBuff[_index]);
-			break;
-			
-		case ShopTab.Medical:
-			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.healingName[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.healingDescription[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.healingPrice[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockMedical[_index]);
-			break;
-			
-		case ShopTab.Vials:
-			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.vialName[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.vialDescription[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.vialPrice[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockVial[_index]);
-			break;
-			
-		case ShopTab.Support:
-			ds_map_add(_shop.itemData, ShopKey.Name, DataBase.supportName[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Description, DataBase.supportDescription[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Price, DataBase.supportPrice[_index]);
-			ds_map_add(_shop.itemData, ShopKey.Stock, global.shopID.stockSupport[_index]);
-			break;
-			
-		case ShopTab.Special:
-			ds_map_add(_shop.itemData, ShopKey.Name, "X");
-			ds_map_add(_shop.itemData, ShopKey.Description, "X");
-			ds_map_add(_shop.itemData, ShopKey.Price, 0);
-			ds_map_add(_shop.itemData, ShopKey.Stock, 1);
-			break;
-			
-		case ShopTab.Sell:
-			ds_map_add(_shop.itemData, ShopKey.Name, _shop.itemList[ShopTab.Sell][| _index]);
-			ds_map_add(_shop.itemData, ShopKey.Description, "X");
-			ds_map_add(_shop.itemData, ShopKey.Price, 0);
-			ds_map_add(_shop.itemData, ShopKey.Stock, 1);
-			break;
-	}
+	if(ds_list_size(_shop.itemList[ShopTab.Sell]) == 0)
+		_shop.tabSelect = ShopTab.Primary;
 }
 
-///@function ShopGetItemData(shop, key)
+///@function ShopGetItemData(itemIndex, shopKey)
 
-function ShopGetItemData(_shop, _key)
+function ShopGetItemData(_itemIndex, _shopKey)
 {
-	return _shop.itemData[? _key];
+	return DataBase.shop[_itemIndex, _shopKey];
+}
+
+///@function ShopGetStock(itemIndex)
+
+function ShopGetStock(_itemIndex)
+{
+	return global.shopID.stock[_itemIndex];
+}
+
+///@function ShopGetSellPrice(itemIndex)
+
+function ShopGetSellPrice(_itemIndex)
+{
+	if(_itemIndex == noone)
+		return 0;
+	return ShopGetItemData(_itemIndex, ShopKey.Price) / 2;
+}
+
+///@function ShopCanAffordAndBuy(player, itemIndex, sellPrice)
+
+function ShopCanAffordAndBuy(_player, _itemIndex, _sellPrice)
+{
+	
+	if(PlayerGetMoney(_player) >= ShopGetItemData(_itemIndex, ShopKey.Price) - _sellPrice)
+	{
+		PlayerSpendMoney(_player, ShopGetItemData(_itemIndex, ShopKey.Price) - _sellPrice);
+		return true;
+	}
+	return false;
 }
 
 ///@function ShopSetDescription(shop)
 
 function ShopSetDescription(_shop)
 {
-	ShopBuildItemData(_shop, _shop.listSelect);
-	_shop.itemName = ShopGetItemData(_shop, ShopKey.Name);
-	_shop.itemDescription = ShopGetItemData(_shop, ShopKey.Description);
+	var item = ShopGetItemID(_shop);
+	_shop.itemName = ShopGetItemData(item, ShopKey.Name);
+	_shop.itemDescription = ShopGetItemData(item, ShopKey.Description);
+	_shop.itemPrice = ShopGetItemData(item, ShopKey.Price);
+}
+
+///@function ShopGetItemID(shop)
+
+function ShopGetItemID(_shop)
+{
+	return _shop.itemList[_shop.tabSelect][| _shop.listSelect];
 }
 
 ///@function ShopBuildSellList(shop)
@@ -227,90 +170,44 @@ function ShopSetDescription(_shop)
 function ShopBuildSellList(_shop)
 {
 	ds_list_clear(_shop.itemList[ShopTab.Sell]);
-	ds_list_clear(_shop.sellList);
 	
 	//primary
 	var item = _shop.player.weapon[0];
 	if(item != noone)
-	{
-		ds_list_add(_shop.itemList[ShopTab.Sell], DataWeapon(item, WeapStat.Name));
-		ds_list_add(_shop.sellList, ShopTab.Primary);
-	}
+		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	//secondary
 	item = _shop.player.weapon[1];
 	if(item != noone)
-	{
-		ds_list_add(_shop.itemList[ShopTab.Sell], DataWeapon(item, WeapStat.Name));
-		ds_list_add(_shop.sellList, ShopTab.Secondary);
-	}
+		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	//melee
 	item = _shop.player.meleeWeapon;
 	if(item != noone)
-	{
-		ds_list_add(_shop.itemList[ShopTab.Sell], DataWeapon(item, WeapStat.Name));
-		ds_list_add(_shop.sellList, ShopTab.Melee);
-	}
+		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	//grenades
 	item = _shop.player.grenadeType;
 	if(item != noone)
-	{
-		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.explosionName[item]);
-		ds_list_add(_shop.sellList, ShopTab.Grenades);
-	}
+		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	//buffs
 	item = _shop.player.buff[0];
 	if(item != noone and _shop.player.buffCooldown[0] == 0)
-	{
-		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.buffName[item]);
-		ds_list_add(_shop.sellList, ShopTab.Buffs);
-	}
+		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	
 	item = _shop.player.buff[1];
 	if(item != noone and _shop.player.buffCooldown[1] == 0)
-	{
-		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.buffName[item]);
-		ds_list_add(_shop.sellList, ShopTab.Buffs);
-	}
+		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	//medical
 	item = _shop.player.healingItem;
 	if(item != noone)
-	{
-		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.healingName[item]);
-		ds_list_add(_shop.sellList, ShopTab.Medical);
-	}
+		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	//vial
 	item = _shop.player.vial;
 	if(item != noone)
-	{
-		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.vialName[item]);
-		ds_list_add(_shop.sellList, ShopTab.Vials);
-	}
+		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	//support
 	item = _shop.player.supportItem;
 	if(item != noone)
-	{
-		ds_list_add(_shop.itemList[ShopTab.Sell], DataBase.supportName[item]);
-		ds_list_add(_shop.sellList, ShopTab.Support);
-	}
+		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	
-	if(_shop.listSelect > ds_list_size(_shop.sellList) - 1)
-		_shop.listSelect = ds_list_size(_shop.sellList) - 1;
-}
-
-///@function ShopBuySupport(shop)
-
-function ShopBuySupport(_shop)
-{
-	var price;
-	switch(_shop.itemList[ShopTab.Support][| _shop.listSelect])
-	{
-		case "Armour":
-			price = DataBase.supportPrice[SupportType.Armour];
-			if(_shop.player.money >= price)
-			{
-				_shop.player.money -= price;
-				_shop.player.armour = _shop.player.maxArmour;
-			}
-			break;
-	}	
+	if(_shop.listSelect > ds_list_size(_shop.itemList[ShopTab.Sell]) - 1)
+		_shop.listSelect = ds_list_size(_shop.itemList[ShopTab.Sell]) - 1;
 }

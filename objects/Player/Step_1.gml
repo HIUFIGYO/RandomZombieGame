@@ -117,7 +117,7 @@ if (equipmentCycle = EquipCycle.Support)
 {
 	var _x = x+supportXOffset * image_xscale,
 		_y = y+supportYOffset,
-		_sprite = DataBase.supportSprite[supportItem],
+		_sprite = SupportGetSprite(supportItem),
 		_left = sprite_get_bbox_left(_sprite),
 		_right = sprite_get_bbox_right(_sprite),
 		_up = -sprite_get_bbox_top(_sprite),

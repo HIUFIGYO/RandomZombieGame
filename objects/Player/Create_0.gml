@@ -25,7 +25,7 @@ bankedMoney = 0;
 
 //buffs/debuffs
 
-buff[0] = noone;
+buff[0] = Buff.Ammo;
 buff[1] = noone;
 buffCooldown[0] = 0;
 buffCooldown[1] = 0;
@@ -61,7 +61,7 @@ grenadeType = ExplosiveType.Grenade;
 grenadeAmount = 3;
 
 //med item
-healingItem = noone;
+healingItem = HealingType.Medicine;
 healingItemAmount = 1;
 healingItemTimer = 0;
 
@@ -69,14 +69,14 @@ if(global.difficulty == GameDifficulty.Easy)
 	GiveMedical(id, HealingType.Medicine);
 
 //vials
-vial = noone;
+vial = VialType.Adrenaline;
 vialActive = false;
 vialCooldown = 0;
 vialPositiveTimer = 0;
 vialNegativeTimer = 0;
 
 //support
-supportItem = noone;
+supportItem = SupportType.Turret;
 canPlaceSupport = false;
 supportXOffset = 32;
 supportYOffset = 8;

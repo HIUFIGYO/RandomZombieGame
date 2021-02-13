@@ -6,27 +6,6 @@ enum EquipCycle
 	Support
 }
 
-enum HealingType
-{
-	Medicine,
-	Syringe,
-	MedKit,
-	count
-}
-
-enum SupportType
-{
-	Barricade,
-	AdvBarricade,
-	Turret,
-	HealGenerator,
-	AmmoCrate,
-	HeavyCrate,
-	MythicCrate,
-	Armour,
-	count
-}
-
 ///@function HealingUse(playerFrom, playerTo)
 
 function HealingUse(_playerFrom, _playerTo)
@@ -98,7 +77,7 @@ function CycleGear(_id, _cycle)
 				break;
 			
 			case EquipCycle.Vial:
-				if(_id.vial != noone)
+				if(_id.vialCooldown <= 0)
 					keepCycling = false;
 				break;
 			
@@ -192,7 +171,7 @@ function ProcessEquipment(_id)
 		case EquipCycle.Support:
 			if (_id.canPlaceSupport and InputGetButtonDown(_id.player_inputID, Button.Shoot))
 			{
-				var _inst = instance_create_layer(x+_id.supportXOffset * image_xscale, y+_id.supportYOffset, GameManager.layerObject, DataBase.supportObject[_id.supportItem]);
+				var _inst = instance_create_layer(x+_id.supportXOffset * image_xscale, y+_id.supportYOffset, GameManager.layerObject, SupportGetObject(_id.supportItem));
 				_inst.image_xscale = image_xscale;
 				_inst.playerID = _id;
 				_id.supportItem = noone;

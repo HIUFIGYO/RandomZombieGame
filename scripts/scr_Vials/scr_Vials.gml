@@ -1,14 +1,3 @@
-enum VialType
-{
-	Adrenaline,
-	Strength,
-	Mimicry,
-	Survivalist,
-	Rapid,
-	TradeOff,
-	count
-}
-
 ///@function CheckVialPositive(player, vial)
 
 function CheckVialPositive(_player, _vial)

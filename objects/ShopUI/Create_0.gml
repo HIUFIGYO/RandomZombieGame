@@ -21,16 +21,13 @@ listButtonDown = false;
 
 itemName = "";
 itemDescription = "";
+itemPrice = 0;
 
 //create lists
 for(var i=0; i<ShopTab.count; i++)
 {
 	itemList[i] = ds_list_create();
 }
-
-sellList = ds_list_create();
-
-itemData = ds_map_create();
 
 //populate lists
 ds_list_add(itemList[ShopTab.Primary], Weapon.Rifle);

@@ -1,28 +1,3 @@
-enum Weapon
-{
-	Knife,
-	Pistol,
-	Rifle,
-	Shotgun,
-	Knife2,
-	Pistol2,
-	Rifle2,
-	Shotgun2,
-	Knife3,
-	Pistol3,
-	Rifle3,
-	Shotgun3,
-	Flame,
-	Rocket,
-	Tesla,
-	Acid,
-	Knife4,
-	Purple,
-	Drainer,
-	BHDarker,
-	count
-}
-
 enum WeapStat
 {
 	Type,
@@ -64,15 +39,6 @@ enum BulletImage
 	Purple,
 	Drainer,
 	Particle
-}
-
-enum ExplosiveType
-{
-	Grenade,
-	Incendiary,
-	Mine,
-	BHBomber,
-	count
 }
 
 enum Tier

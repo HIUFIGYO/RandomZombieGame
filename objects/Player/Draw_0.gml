@@ -56,7 +56,7 @@ if(!isMelee and !isThrowing)
 			index = 21;
 			if(supportItem == "Flare")
 				index = 23;
-			draw_sprite_ext(DataBase.supportSprite[supportItem], !canPlaceSupport, x+supportXOffset * image_xscale, y+supportYOffset, image_xscale, 1, 0, c_white, 0.7);			
+			draw_sprite_ext(SupportGetSprite(supportItem), !canPlaceSupport, x+supportXOffset * image_xscale, y+supportYOffset, image_xscale, 1, 0, c_white, 0.7);			
 			break;
 	}
 	

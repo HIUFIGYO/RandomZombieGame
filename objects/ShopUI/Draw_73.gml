@@ -42,9 +42,8 @@ _padding = 20;
 
 for(i=0; i<size; i++)
 {
-	ShopBuildItemData(id, i);
 	draw_set_color(listSelect == i ? c_yellow : c_white);
-	draw_text(_x, _y + i*_padding, ShopGetItemData(id, ShopKey.Name));
+	draw_text(_x, _y + i*_padding, ShopGetItemData(id, ShopKey.Name, i));
 }
 
 //name/description
