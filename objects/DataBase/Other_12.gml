@@ -37,4 +37,4 @@ explosionDescription[ExplosiveType.BHBomber] = "Damage: Impact-1 Explosion-5\nFu
 explosionDamage[ExplosiveType.BHBomber] = 0;
 explosionSize[ExplosiveType.BHBomber] = spr_HBexplosionsmall;
 explosionFuseTime[ExplosiveType.BHBomber] = 3;
-explosionPrice[ExplosiveType.BHBomber] = 4000;
+explosionPrice[ExplosiveType.BHBomber] = 4250;
