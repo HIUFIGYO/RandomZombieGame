@@ -223,3 +223,7 @@ shop[SupportType.MythicCrate, ShopKey.Price] = 3750;
 shop[SupportType.Armour, ShopKey.Name] = "Armour";
 shop[SupportType.Armour, ShopKey.Description] = "Gain an armour vest\nArmour takes 80% of total damage taken";
 shop[SupportType.Armour, ShopKey.Price] = 350;
+
+//SPECIAL ITEMS
+
+//fill out later

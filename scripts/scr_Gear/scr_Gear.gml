@@ -172,6 +172,8 @@ function ProcessEquipment(_id)
 			if (_id.canPlaceSupport and InputGetButtonDown(_id.player_inputID, Button.Shoot))
 			{
 				var _inst = instance_create_layer(x+_id.supportXOffset * image_xscale, y+_id.supportYOffset, GameManager.layerObject, SupportGetObject(_id.supportItem));
+				if(_id.supportItem == SupportType.Turret)
+					_inst.laserColor = _id.head_color;
 				_inst.image_xscale = image_xscale;
 				_inst.playerID = _id;
 				_id.supportItem = noone;
@@ -218,6 +220,13 @@ function GiveVial(_player, _item)
 function GiveSupport(_player, _item)
 {
 	_player.supportItem = _item;
+}
+
+///@function GiveArmour(player)
+
+function GiveArmour(_player)
+{
+	_player.armour = _player.maxArmour;
 }
 
 ///@function DropMoney(player, amount)

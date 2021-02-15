@@ -22,6 +22,7 @@ listButtonDown = false;
 itemName = "";
 itemDescription = "";
 itemPrice = 0;
+sellPrice = 0;
 
 //create lists
 for(var i=0; i<ShopTab.count; i++)
@@ -90,31 +91,4 @@ ds_list_add(itemList[ShopTab.Support], SupportType.HealGenerator);
 ds_list_add(itemList[ShopTab.Support], SupportType.AmmoCrate);
 ds_list_add(itemList[ShopTab.Support], SupportType.HeavyCrate);
 ds_list_add(itemList[ShopTab.Support], SupportType.MythicCrate);
-
-
-ShopSetDescription(id);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

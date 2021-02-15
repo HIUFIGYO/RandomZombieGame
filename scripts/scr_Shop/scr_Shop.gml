@@ -57,7 +57,7 @@ function ShopBuyItem(_shop)
 		case ShopTab.Support:
 			if(item == SupportType.Armour)
 			{
-				if(ShopCanAffordAndBuy(_shop.player, item, 0))
+				if(_shop.player.armour < _shop.player.armour and ShopCanAffordAndBuy(_shop.player, item, 0))
 				{
 					_shop.player.armour = _shop.player.maxArmour;
 				}
@@ -139,10 +139,10 @@ function ShopGetSellPrice(_itemIndex)
 
 function ShopCanAffordAndBuy(_player, _itemIndex, _sellPrice)
 {
-	
-	if(PlayerGetMoney(_player) >= ShopGetItemData(_itemIndex, ShopKey.Price) - _sellPrice)
+	var _price = ShopGetItemData(_itemIndex, ShopKey.Price) - _sellPrice;
+	if(PlayerGetMoney(_player) >= _price)
 	{
-		PlayerSpendMoney(_player, ShopGetItemData(_itemIndex, ShopKey.Price) - _sellPrice);
+		PlayerSpendMoney(_player, _price);
 		return true;
 	}
 	return false;
@@ -156,6 +156,33 @@ function ShopSetDescription(_shop)
 	_shop.itemName = ShopGetItemData(item, ShopKey.Name);
 	_shop.itemDescription = ShopGetItemData(item, ShopKey.Description);
 	_shop.itemPrice = ShopGetItemData(item, ShopKey.Price);
+	_shop.sellPrice = ShopGetSellPrice(ShopGetPlayerItem(_shop));
+}
+
+///@function ShopGetPlayerItem(shop)
+
+function ShopGetPlayerItem(_shop)
+{
+	switch(_shop.tabSelect)
+	{
+		case ShopTab.Primary:
+			return _shop.player.weapon[0];
+		case ShopTab.Secondary:
+			return _shop.player.weapon[1];
+		case ShopTab.Melee:
+			return _shop.player.meleeWeapon;
+		case ShopTab.Grenades:
+			return _shop.player.grenadeType;
+		case ShopTab.Medical:
+			return _shop.player.healingItem;
+		case ShopTab.Vials:
+			return _shop.player.vial;
+		case ShopTab.Support:
+			return _shop.player.supportItem;
+		default:
+			return noone;
+	}
+	return noone;
 }
 
 ///@function ShopGetItemID(shop)

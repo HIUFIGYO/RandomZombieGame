@@ -43,7 +43,7 @@ _padding = 20;
 for(i=0; i<size; i++)
 {
 	draw_set_color(listSelect == i ? c_yellow : c_white);
-	draw_text(_x, _y + i*_padding, ShopGetItemData(id, ShopKey.Name, i));
+	draw_text(_x, _y + i*_padding, ShopGetItemData(itemList[tabSelect][| i], ShopKey.Name));
 }
 
 //name/description
@@ -54,3 +54,14 @@ _y = yy + 128;
 draw_set_color(c_white);
 draw_text(_x, _y, itemName);
 draw_text_ext(_x, _y+48, itemDescription, 20, w);
+
+//price
+var _str = "";
+_y = yy + viewHeight - 64;
+if(sellPrice > 0)
+	_str = " - " + string(sellPrice) + " = " + string(itemPrice - sellPrice);
+
+if(tabSelect != ShopTab.Sell)
+	draw_text(_x, _y, "Price: " + string(itemPrice)+_str);
+else
+	draw_text(_x, _y, "Sell: " + string(sellPrice));

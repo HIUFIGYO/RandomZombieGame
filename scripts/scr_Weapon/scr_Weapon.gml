@@ -2,8 +2,6 @@ enum WeapStat
 {
 	Type,
 	Tier,
-	Name,
-	Description,
 	Damage,
 	FireRate,
 	Mag,
@@ -11,7 +9,6 @@ enum WeapStat
 	Accuracy,
 	Range,
 	Reload,
-	Price,
 	BulletSpeed,
 	xOffset,
 	yOffset,
