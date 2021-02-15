@@ -192,8 +192,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"aebde68c-e731-49b9-b20e-4b496df50fc8","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "HUD",
+    "path": "folders/Sprites/HUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_buffDurationRing",

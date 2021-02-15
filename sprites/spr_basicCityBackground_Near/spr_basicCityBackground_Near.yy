@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bede3cb7-2c3e-40ff-9e26-8847257e4300","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Backgrounds",
+    "path": "folders/Sprites/Detail/Backgrounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_basicCityBackground_Near",

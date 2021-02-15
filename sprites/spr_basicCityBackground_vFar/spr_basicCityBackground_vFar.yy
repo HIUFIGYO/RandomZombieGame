@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"36dd75a6-5b90-4006-8626-fbbe82d6e363","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Backgrounds",
+    "path": "folders/Sprites/Detail/Backgrounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_basicCityBackground_vFar",

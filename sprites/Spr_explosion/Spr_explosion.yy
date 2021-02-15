@@ -184,8 +184,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f364dc97-23aa-43fb-ac71-f004098b69e1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Unused",
+    "path": "folders/Sprites/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "Spr_explosion",
