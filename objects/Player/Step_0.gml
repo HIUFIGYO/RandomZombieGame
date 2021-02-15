@@ -4,14 +4,14 @@ var xThrow = (InputPlayerGetButton(player_inputID, Button.Right) - InputPlayerGe
 var bonus = false;
 if(CheckBuff(id, Buff.Agility)and !deBuff[DeBuff.Bleed])
 	bonus = true;
-var maxSpd = maxSpeed;
+var maxSpd = maxSpeed + (bonus * DataBase.agilityBuffJogSpeed);
 if(InputPlayerGetButton(player_inputID, Button.Sprint)and stamina > 0 and xThrow != 0)
 {
 	stamina -= 10 * DeltaTimeSecond();
 	staminaWaitTimer = staminaWaitTime;
-	maxSpd = sprintSpeed;
+	maxSpd = sprintSpeed + (bonus * DataBase.agilityBuffSprintSpeed);
 }
-maxSpd += (bonus * DataBase.agilityBuffJogSpeed) - deBuff[DeBuff.Bleed] + CheckVialPositive(id, VialType.Adrenaline) - CheckVialNegative(id, VialType.Rapid);
+maxSpd += CheckVialPositive(id, VialType.Adrenaline) - CheckVialNegative(id, VialType.Rapid) - deBuff[DeBuff.Bleed];
 
 //Calculate velocity
 xSpeed += xThrow * acceleration;

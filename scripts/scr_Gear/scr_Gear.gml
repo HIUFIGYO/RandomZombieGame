@@ -160,9 +160,9 @@ function ProcessEquipment(_id)
 			if(InputGetButtonDown(_id.player_inputID, Button.Shoot))
 			{
 				_id.vialActive = true;
-				_id.vialCooldown = DataBase.vialCooldown[_id.vial];
-				_id.vialPositiveTimer = DataBase.vialTimer[_id.vial];
-				_id.vialNegativeTimer = DataBase.vialTimer[_id.vial] * 2;
+				_id.vialCooldown = VialGetCooldown(_id.vial);
+				_id.vialPositiveTimer = VialGetTimer(_id.vial);
+				_id.vialNegativeTimer = VialGetTimer(_id.vial) * 2;
 				_id.equipmentCycle = EquipCycle.Weapon;
 				return true;	
 			}
@@ -196,6 +196,38 @@ function PlayerMelee(_player)
 	_player.meleeSubImage = 0;
 	_player.canSpawnMeleeHB = true;
 	_player.isMelee = true;
+}
+
+///@function GiveWeapon(player, item, slot)
+
+function GiveWeapon(_player, _item, _slot)
+{
+	_player.weapon[_slot] = _item;
+	_player.ammo[_slot] = DataWeapon(_item, WeapStat.Ammo);
+	_player.mag[_slot] = DataWeapon(_item, WeapStat.Mag);
+	_player.reloadTimer[_slot] = 0;
+}
+
+///@function GiveMelee(player, item)
+
+function GiveMelee(_player, _item)
+{
+	_player.meleeWeapon = _item;
+}
+
+///@function GiveBuff(player, buff, slot)
+
+function GiveBuff(_player, _buff, _slot)
+{
+	_player.buff[_slot] = _buff;
+}
+
+///@function GiveExplosive(player, item)
+
+function GiveExplosive(_player, _item)
+{
+	_player.grenadeType = _item;
+	_player.grenadeAmount = DataBase.explosionMaxAmmo;
 }
 
 ///@function GiveMedical(player, item)
@@ -233,8 +265,11 @@ function GiveArmour(_player)
 
 function DropMoney(_player, _amount)
 {
-	if(_player.money < _amount)
+	if(_player.money <= 0)
 		return;
+	
+	if(_player.money < _amount)
+		_amount = _player.money;
 	
 	var inst = instance_create_layer(_player.x, _player.y - 32, GameManager.layerObject, CashDrop);
 	inst.playerID = _player;

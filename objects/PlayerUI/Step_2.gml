@@ -32,7 +32,7 @@ UISetAlpha(buffCooldownP[0], 0);
 UISetAlpha(buffCooldownP[1], 0);
 for(var i=0; i<2; i++)
 {
-	index = player.buff[i] == noone ? 0 : player.buff[i] + 1;
+	index = player.buff[i] == noone ? 0 : player.buff[i] + 1 - Buff.Regeneration;
 	UIImageSetSubImage(buffIcon[i], index);
 	
 	if(player.buff[i] == Buff.Demo)

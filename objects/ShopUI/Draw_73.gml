@@ -56,12 +56,18 @@ draw_text(_x, _y, itemName);
 draw_text_ext(_x, _y+48, itemDescription, 20, w);
 
 //price
-var _str = "";
+var _str = "Price: " + string(itemPrice);
 _y = yy + viewHeight - 64;
 if(sellPrice > 0)
-	_str = " - " + string(sellPrice) + " = " + string(itemPrice - sellPrice);
+	_str += " - " + string(sellPrice) + " = " + string(itemPrice - sellPrice);
+	
+if(tabSelect == ShopTab.Buffs)
+{
+	if(player.buff[0] != noone and player.buff[1] != noone)
+		_str = "Please sell a buff before purchasing another.";
+}
 
 if(tabSelect != ShopTab.Sell)
-	draw_text(_x, _y, "Price: " + string(itemPrice)+_str);
+	draw_text(_x, _y, _str);
 else
 	draw_text(_x, _y, "Sell: " + string(sellPrice));

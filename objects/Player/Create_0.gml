@@ -26,7 +26,7 @@ bankedMoney = 0;
 //buffs/debuffs
 
 buff[0] = Buff.Ammo;
-buff[1] = noone;
+buff[1] = Buff.Health;
 buffCooldown[0] = 0;
 buffCooldown[1] = 0;
 damageResistanceTimer = 0;
@@ -40,17 +40,18 @@ equipmentCycle = EquipCycle.Weapon;
 //primary
 currentWeapon = 1;
 weapon[0] = noone;
-ammo[0] = DataWeapon(weapon[0], WeapStat.Ammo);
-mag[0] = DataWeapon(weapon[0], WeapStat.Mag);
+ammo[0] = 0;
+mag[0] = 0;
 reloadTimer[0] = 0;
 reloadSingleShot[0] = 0;
 
 //secondary
-weapon[1] = Weapon.Pistol;
-ammo[1] = DataWeapon(weapon[1], WeapStat.Ammo);
-mag[1] = DataWeapon(weapon[1], WeapStat.Mag);
+weapon[1] = noone;
+ammo[1] = 0;
+mag[1] = 0;
 reloadTimer[1] = 0;
 reloadSingleShot[1] = 0;
+GiveWeapon(id, Weapon.Pistol, 1);
 
 //melee weapon
 meleeWeapon = Weapon.Knife;

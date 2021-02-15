@@ -35,31 +35,74 @@ function ShopProcessSelection(_shop)
 function ShopBuyItem(_shop)
 {
 	var item = ShopGetItemID(_shop);
-	var price = ShopGetItemData(item, ShopKey.Price);
 	var sellPrice = 0;
 	
 	switch(_shop.tabSelect)
 	{
 		case ShopTab.Primary:
+			sellPrice = ShopGetSellPrice(_shop.player.weapon[0]);
+			if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
+			{
+				GiveWeapon(_shop.player, item, 0);
+			}
 			break;
 		case ShopTab.Secondary:
+			sellPrice = ShopGetSellPrice(_shop.player.weapon[1]);
+			if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
+			{
+				GiveWeapon(_shop.player, item, 1);
+			}
 			break;
 		case ShopTab.Melee:
+			sellPrice = ShopGetSellPrice(_shop.player.meleeWeapon);
+			if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
+			{
+				GiveMelee(_shop.player, item);
+			}
 			break;
 		case ShopTab.Grenades:
+			sellPrice = ShopGetSellPrice(_shop.player.grenadeType);
+			if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
+			{
+				GiveExplosive(_shop.player, item);
+			}
 			break;
 		case ShopTab.Buffs:
+			if(_shop.player.buff[0] == noone)
+			{
+				if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
+				{
+					GiveBuff(_shop.player, item, 0);
+				}
+			}
+			else if(_shop.player.buff[1] == noone)
+			{
+				if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
+				{
+					GiveBuff(_shop.player, item, 1);
+				}
+			}
 			break;
 		case ShopTab.Medical:
+			sellPrice = ShopGetSellPrice(_shop.player.healingItem);
+			if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
+			{
+				GiveMedical(_shop.player, item);
+			}
 			break;
 		case ShopTab.Vials:
+			sellPrice = ShopGetSellPrice(_shop.player.vial);
+			if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
+			{
+				GiveVial(_shop.player, item);
+			}
 			break;
 		case ShopTab.Support:
 			if(item == SupportType.Armour)
 			{
 				if(_shop.player.armour < _shop.player.armour and ShopCanAffordAndBuy(_shop.player, item, 0))
 				{
-					_shop.player.armour = _shop.player.maxArmour;
+					GiveArmour(_shop.player);
 				}
 			}
 			else
@@ -67,7 +110,7 @@ function ShopBuyItem(_shop)
 				sellPrice = ShopGetSellPrice(_shop.player.supportItem);
 				if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
 				{
-					_shop.player.supportItem = item;
+					GiveSupport(_shop.player, item);
 				}
 			}
 			break;
@@ -109,7 +152,10 @@ function ShopSellItem(_shop)
 	ShopBuildSellList(_shop);
 	
 	if(ds_list_size(_shop.itemList[ShopTab.Sell]) == 0)
+	{
 		_shop.tabSelect = ShopTab.Primary;
+		_shop.listSelect = 0;
+	}
 }
 
 ///@function ShopGetItemData(itemIndex, shopKey)
@@ -235,6 +281,9 @@ function ShopBuildSellList(_shop)
 	if(item != noone)
 		ds_list_add(_shop.itemList[ShopTab.Sell], item);
 	
-	if(_shop.listSelect > ds_list_size(_shop.itemList[ShopTab.Sell]) - 1)
-		_shop.listSelect = ds_list_size(_shop.itemList[ShopTab.Sell]) - 1;
+	if(_shop.tabSelect == ShopTab.Sell)
+	{
+		if(_shop.listSelect > ds_list_size(_shop.itemList[ShopTab.Sell]) - 1)
+			_shop.listSelect = ds_list_size(_shop.itemList[ShopTab.Sell]) - 1;
+	}
 }

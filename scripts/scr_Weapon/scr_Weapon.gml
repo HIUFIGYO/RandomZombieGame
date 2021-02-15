@@ -60,7 +60,7 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 {
 	var _burst = DataWeapon(_weapon, WeapStat.Burst);
 	if(_burst > 1 and CheckBuff(_id, Buff.Damage))
-		_burst += 1;
+		_burst += DataBase.damageBuffShotgun;
 	
 	repeat(_burst)
 	{

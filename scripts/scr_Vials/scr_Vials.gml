@@ -48,3 +48,17 @@ function DrawVialIcons(_player)
 		draw_sprite(spr_debuffDurationRing, _index, xx, yy);
 	}
 }
+
+///@function VialGetCooldown(vial)
+
+function VialGetCooldown(_vial)
+{
+	return DataBase.vialCooldown[_vial - VialType.Adrenaline];
+}
+
+///@function VialGetTimer(vial)
+
+function VialGetTimer(_vial)
+{
+	return DataBase.vialTimer[_vial - VialType.Adrenaline];
+}
