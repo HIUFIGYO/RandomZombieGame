@@ -13,12 +13,12 @@ for(var i=0; i<global.maxPlayers; i++)
 			select[i] = select[i].UIRight;
 		}
 	
-		if(select[i].UIUp != noone and InputGetButtonDown(i, Button.Interact))
+		if(select[i].UIUp != noone and InputGetButtonDown(i, Button.Up))
 		{
 			select[i] = select[i].UIUp;
 		}
 	
-		if(select[i].UIDown != noone and InputGetButtonDown(i, Button.Crouch))
+		if(select[i].UIDown != noone and InputGetButtonDown(i, Button.Down))
 		{
 			select[i] = select[i].UIDown;
 		}

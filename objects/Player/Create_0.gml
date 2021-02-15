@@ -62,7 +62,7 @@ grenadeType = ExplosiveType.Grenade;
 grenadeAmount = 3;
 
 //med item
-healingItem = HealingType.Medicine;
+healingItem = noone;
 healingItemAmount = 1;
 healingItemTimer = 0;
 
@@ -70,14 +70,14 @@ if(global.difficulty == GameDifficulty.Easy)
 	GiveMedical(id, HealingType.Medicine);
 
 //vials
-vial = VialType.Adrenaline;
+vial = noone;
 vialActive = false;
 vialCooldown = 0;
 vialPositiveTimer = 0;
 vialNegativeTimer = 0;
 
 //support
-supportItem = SupportType.Turret;
+supportItem = noone;
 canPlaceSupport = false;
 supportXOffset = 32;
 supportYOffset = 8;

@@ -31,20 +31,20 @@ function DrawVialIcons(_player)
 	if(_player.vialPositiveTimer > 0)
 	{
 		draw_sprite(spr_vialIcons, _player.vial * 2, xx, yy - 40);
-		_index = (_player.vialPositiveTimer / DataBase.vialTimer[_player.vial]) * sprite_get_number(spr_buffDurationRing);
+		_index = (_player.vialPositiveTimer / VialGetTimer(_player.vial)) * sprite_get_number(spr_buffDurationRing);
 		draw_sprite(spr_buffDurationRing, _index, xx, yy - 40);
 	}
 	
 	if(_player.vialNegativeTimer > 0)
 	{
 		draw_sprite(spr_vialIcons, _player.vial * 2 + 1, xx, yy);
-		_index = (_player.vialNegativeTimer / (DataBase.vialTimer[_player.vial] * 2)) * sprite_get_number(spr_debuffDurationRing);
+		_index = (_player.vialNegativeTimer / (VialGetTimer(_player.vial) * 2)) * sprite_get_number(spr_debuffDurationRing);
 		draw_sprite(spr_debuffDurationRing, _index, xx, yy);
 	}
 	else
 	{
 		draw_sprite(spr_vials, _player.vial, xx, yy);
-		_index = (_player.vialCooldown / DataBase.vialCooldown[_player.vial]) * sprite_get_number(spr_debuffDurationRing);
+		_index = (_player.vialCooldown / VialGetCooldown(_player.vial)) * sprite_get_number(spr_debuffDurationRing);
 		draw_sprite(spr_debuffDurationRing, _index, xx, yy);
 	}
 }

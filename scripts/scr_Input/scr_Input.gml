@@ -43,6 +43,24 @@ enum Controller
 	Gamepad4
 }
 
+///@function InputResetAxisPress()
+
+function InputResetAxisPress()
+{
+	for(var i=0; i<global.maxPlayers; i++)
+	{
+		Input.axisDownLeft[i] = false;
+		Input.axisDownRight[i] = false;
+		Input.axisDownUp[i] = false;
+		Input.axisDownDown[i] = false;
+		
+		Input.axisUpLeft[i] = false;
+		Input.axisUpRight[i] = false;
+		Input.axisUpUp[i] = false;
+		Input.axisUpDown[i] = false;
+	}
+}
+
 ///@function InputGetButton(id, button)
 
 function InputGetButton(_id, _button)
@@ -51,6 +69,7 @@ function InputGetButton(_id, _button)
 	{
 		return keyboard_check(Input.keyMap[_button]);
 	}
+	
 	var isPressed = false;
 	switch(Input.gamepadMap[_button])
 	{
@@ -86,7 +105,31 @@ function InputGetButtonDown(_id, _button)
 	{
 		return keyboard_check_pressed(Input.keyMap[_button]);
 	}
-	return gamepad_button_check_pressed(_id - 1, Input.gamepadMap[_button]);
+	
+	var isPressed = false;
+	switch(Input.gamepadMap[_button])
+	{
+		case Axis.Left:
+			if(Input.axisDownLeft[_id - 1])
+				isPressed = true;
+			break;
+		case Axis.Right:
+			if(Input.axisDownRight[_id - 1])
+				isPressed = true;
+			break;
+		case Axis.Up:
+			if(Input.axisDownUp[_id - 1])
+				isPressed = true;
+			break;
+		case Axis.Down:
+			if(Input.axisDownDown[_id - 1])
+				isPressed = true;
+			break;
+		default:
+			isPressed = gamepad_button_check_pressed(_id - 1, Input.gamepadMap[_button]);
+			break;
+	}
+	return isPressed;
 }
 
 ///@function InputGetButtonUp(id, button)
@@ -97,7 +140,31 @@ function InputGetButtonUp(_id, _button)
 	{
 		return keyboard_check_released(Input.keyMap[_button]);
 	}
-	return gamepad_button_check_released(_id - 1, Input.gamepadMap[_button]);
+	
+	var isPressed = false;
+	switch(Input.gamepadMap[_button])
+	{
+		case Axis.Left:
+			if(Input.axisUpLeft[_id - 1])
+				isPressed = true;
+			break;
+		case Axis.Right:
+			if(Input.axisUpRight[_id - 1])
+				isPressed = true;
+			break;
+		case Axis.Up:
+			if(Input.axisUpUp[_id - 1])
+				isPressed = true;
+			break;
+		case Axis.Down:
+			if(Input.axisUpDown[_id - 1])
+				isPressed = true;
+			break;
+		default:
+			isPressed = gamepad_button_check_released(_id - 1, Input.gamepadMap[_button]);
+			break;
+	}
+	return isPressed;
 }
 
 ///@function InputGetAxis(id, axis)

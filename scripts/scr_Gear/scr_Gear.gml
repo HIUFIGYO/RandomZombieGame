@@ -77,7 +77,7 @@ function CycleGear(_id, _cycle)
 				break;
 			
 			case EquipCycle.Vial:
-				if(_id.vialCooldown <= 0)
+				if(_id.vial != noone and _id.vialCooldown <= 0)
 					keepCycling = false;
 				break;
 			

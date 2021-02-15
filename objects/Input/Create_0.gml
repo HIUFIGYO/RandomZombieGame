@@ -5,6 +5,12 @@ for(i=0; i<12; i++)
 {
 	gameInput[i] = noone;
 }
+for(i=0; i<global.maxPlayers; i++)
+{
+	axisH[i] = 0;
+	axisV[i] = 0;
+}
+InputResetAxisPress();
 
 axisDeadZone = 0.5;
 buttonThreshold = 0.1;
@@ -33,8 +39,8 @@ keyMap[Button.Pause] = vk_enter;
 
 gamepadMap[Button.Left] = Axis.Left;
 gamepadMap[Button.Right] = Axis.Right;
-gamepadMap[Button.Up] = gp_padu;
-gamepadMap[Button.Down] = gp_padd;
+gamepadMap[Button.Up] = Axis.Up;
+gamepadMap[Button.Down] = Axis.Down;
 gamepadMap[Button.Confirm] = gp_face1;
 gamepadMap[Button.Cancel] = gp_face2;
 gamepadMap[Button.Jump] = gp_face1;
@@ -49,6 +55,6 @@ gamepadMap[Button.PreviousGear] = gp_padl;
 gamepadMap[Button.Reload] = gp_face3;
 gamepadMap[Button.Sprint] = gp_face2;
 gamepadMap[Button.Assist] = gp_face4;
-gamepadMap[Button.DropMoney] = Axis.Up;
+gamepadMap[Button.DropMoney] = Axis.Down;
 gamepadMap[Button.DropWeap] = Axis.Down;
 gamepadMap[Button.Pause] = gp_start;
