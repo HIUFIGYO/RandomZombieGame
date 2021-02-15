@@ -11,7 +11,7 @@ global.worldUnit = 32; //in pixels
 
 global.maxPlayers = 4;
 global.playerAmount = 1;
-global.difficulty = GameDifficulty.VeryHard;
+global.difficulty = GameDifficulty.Easy;
 global.selectedGameMode = GM.Skirmish;
 
 global.playerName[0] = "Player1";

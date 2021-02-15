@@ -1,3 +1,5 @@
+visible = debug_mode;
+
 image_speed = 0;
 
 var index = 0;

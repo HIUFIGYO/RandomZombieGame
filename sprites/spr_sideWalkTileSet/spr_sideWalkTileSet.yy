@@ -8,25 +8,25 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 95,
+  "bbox_right": 255,
   "bbox_top": 0,
-  "bbox_bottom": 95,
+  "bbox_bottom": 191,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 160,
-  "height": 96,
+  "width": 256,
+  "height": 192,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
   },
   "swatchColours": null,
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 32,
+  "gridY": 32,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cb080117-31a9-4155-945b-3377a74baf4f","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cb080117-31a9-4155-945b-3377a74baf4f","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"LayerId":{"name":"50683964-2f7f-43a5-80bd-682a5b2792f4","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_sideWalkTileSet","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"resourceVersion":"1.0","name":"cb080117-31a9-4155-945b-3377a74baf4f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"22067afa-d659-4400-8445-39222aab5fca","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"22067afa-d659-4400-8445-39222aab5fca","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"LayerId":{"name":"4fd5e9c2-494c-40e4-96ba-f8e9fdd160ee","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_sideWalkTileSet","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"resourceVersion":"1.0","name":"22067afa-d659-4400-8445-39222aab5fca","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_sideWalkTileSet","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"ab3b063e-e956-44b8-ac38-b4e783578a72","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cb080117-31a9-4155-945b-3377a74baf4f","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d8efc083-caed-4685-956d-2fbbc33b2cff","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"22067afa-d659-4400-8445-39222aab5fca","path":"sprites/spr_sideWalkTileSet/spr_sideWalkTileSet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"50683964-2f7f-43a5-80bd-682a5b2792f4","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4fd5e9c2-494c-40e4-96ba-f8e9fdd160ee","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "Tileset",

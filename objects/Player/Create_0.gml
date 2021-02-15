@@ -25,8 +25,8 @@ bankedMoney = 0;
 
 //buffs/debuffs
 
-buff[0] = Buff.Ammo;
-buff[1] = Buff.Health;
+buff[0] = noone;
+buff[1] = noone;
 buffCooldown[0] = 0;
 buffCooldown[1] = 0;
 damageResistanceTimer = 0;
