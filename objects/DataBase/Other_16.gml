@@ -226,4 +226,10 @@ shop[SupportType.Armour, ShopKey.Price] = 350;
 
 //SPECIAL ITEMS
 
-//fill out later
+shop[SpecialType.Bank, ShopKey.Name] = "Bank";
+shop[SpecialType.Bank, ShopKey.Description] = "Adds banking functionality to the shop.\nThrow money at the shop to deposit money.\nCan deposit a maximum of $2000";
+shop[SpecialType.Bank, ShopKey.Price] = 2000;
+
+shop[SpecialType.Revive, ShopKey.Name] = "Revive ";
+shop[SpecialType.Revive, ShopKey.Description] = "Revive with full health.";
+shop[SpecialType.Revive, ShopKey.Price] = 2000;

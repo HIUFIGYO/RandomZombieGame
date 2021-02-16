@@ -8,3 +8,16 @@ if(target)
 	else
 		image_index = 1;
 }
+
+if(restockTimer > 0)
+{
+	restockTimer -= DeltaTimeSecond();
+	if(restockTimer <= 0)
+	{
+		restockTimer = restockTime;
+		for(var i=0; i<SupportType.count; i++)
+		{
+			ShopAddStock(i);
+		}
+	}
+}

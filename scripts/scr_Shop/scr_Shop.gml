@@ -37,6 +37,9 @@ function ShopBuyItem(_shop)
 	var item = ShopGetItemID(_shop);
 	var sellPrice = 0;
 	
+	if(_shop.tabSelect < ShopTab.Special and ShopGetStock(item) <= 0)
+		return;
+	
 	switch(_shop.tabSelect)
 	{
 		case ShopTab.Primary:
@@ -100,7 +103,7 @@ function ShopBuyItem(_shop)
 		case ShopTab.Support:
 			if(item == SupportType.Armour)
 			{
-				if(_shop.player.armour < _shop.player.armour and ShopCanAffordAndBuy(_shop.player, item, 0))
+				if(_shop.player.armour < _shop.player.maxArmour and ShopCanAffordAndBuy(_shop.player, item, 0))
 				{
 					GiveArmour(_shop.player);
 				}
@@ -115,6 +118,24 @@ function ShopBuyItem(_shop)
 			}
 			break;
 		case ShopTab.Special:
+			if(item == SpecialType.Revive)
+			{
+				if(ShopCanAffordAndBuy(_shop.player, item, -global.shopID.revivePriceAdd))
+				{
+					var _player = global.shopID.reviveList[| _shop.listSelect];
+					RevivePlayer(_player, GetMaxHealth(_player));
+					global.shopID.revivePriceAdd += global.shopID.reviveAddAmount;
+					ShopBuildSpecialList(_shop);
+				}
+			}
+			else if(item == SpecialType.Bank)
+			{
+				if(ShopCanAffordAndBuy(_shop.player, item, 0))
+				{
+					global.shopID.hasBank = true;
+					ShopBuildSpecialList(_shop);
+				}
+			}
 			break;
 	}
 	
@@ -149,6 +170,7 @@ function ShopSellItem(_shop)
 	else
 		_player.supportItem = noone;
 	
+	ShopAddStock(item);
 	ShopBuildSellList(_shop);
 	
 	if(ds_list_size(_shop.itemList[ShopTab.Sell]) == 0)
@@ -172,6 +194,21 @@ function ShopGetStock(_itemIndex)
 	return global.shopID.stock[_itemIndex];
 }
 
+///@function ShopRemoveStock(itemIndex)
+
+function ShopRemoveStock(_itemIndex)
+{
+	global.shopID.stock[_itemIndex] -= 1;
+}
+
+///@function ShopAddStock(itemIndex)
+
+function ShopAddStock(_itemIndex)
+{
+	if(global.shopID.stock[_itemIndex] < global.shopID.stockMax[_itemIndex])
+		global.shopID.stock[_itemIndex] += 1;
+}
+
 ///@function ShopGetSellPrice(itemIndex)
 
 function ShopGetSellPrice(_itemIndex)
@@ -189,6 +226,7 @@ function ShopCanAffordAndBuy(_player, _itemIndex, _sellPrice)
 	if(PlayerGetMoney(_player) >= _price)
 	{
 		PlayerSpendMoney(_player, _price);
+		ShopRemoveStock(_itemIndex);
 		return true;
 	}
 	return false;
@@ -199,6 +237,7 @@ function ShopCanAffordAndBuy(_player, _itemIndex, _sellPrice)
 function ShopSetDescription(_shop)
 {
 	var item = ShopGetItemID(_shop);
+	show_debug_message(item);
 	_shop.itemName = ShopGetItemData(item, ShopKey.Name);
 	_shop.itemDescription = ShopGetItemData(item, ShopKey.Description);
 	_shop.itemPrice = ShopGetItemData(item, ShopKey.Price);
@@ -285,5 +324,49 @@ function ShopBuildSellList(_shop)
 	{
 		if(_shop.listSelect > ds_list_size(_shop.itemList[ShopTab.Sell]) - 1)
 			_shop.listSelect = ds_list_size(_shop.itemList[ShopTab.Sell]) - 1;
+	}
+}
+
+///@function ShopUpdateSpecials()
+
+function ShopUpdateSpecials()
+{
+	with(ShopUI)
+	{
+		ShopBuildSpecialList(id);
+	}
+}
+
+///@function ShopBuildSpecialList(shop)
+
+function ShopBuildSpecialList(_shop)
+{
+	var _list = _shop.itemList[ShopTab.Special];
+	ds_list_clear(_list);
+	ds_list_clear(global.shopID.reviveList);
+	
+	for(var i=0; i<global.playerAmount; i++)
+	{
+		var _player = instance_find(Player, i);
+		if(_player.isDead)
+		{
+			ds_list_add(_list, SpecialType.Revive);
+			ds_list_add(global.shopID.reviveList, _player);
+		}
+	}
+	
+	if(!global.shopID.hasBank and global.shopID.unlockBankOption)
+		ds_list_add(_list, SpecialType.Bank);
+	
+	if(_shop.tabSelect == ShopTab.Special)
+	{
+		if(ds_list_size(_list) == 0)
+		{
+			_shop.tabSelect -= 1;
+			_shop.listSelect = 0;
+		}
+	
+		if(_shop.listSelect > ds_list_size(_shop.itemList[_shop.tabSelect]) - 1)
+			_shop.listSelect = ds_list_size(_shop.itemList[_shop.tabSelect]) - 1;
 	}
 }

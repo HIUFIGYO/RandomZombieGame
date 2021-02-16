@@ -91,4 +91,3 @@ ds_list_add(itemList[ShopTab.Support], SupportType.HealGenerator);
 ds_list_add(itemList[ShopTab.Support], SupportType.AmmoCrate);
 ds_list_add(itemList[ShopTab.Support], SupportType.HeavyCrate);
 ds_list_add(itemList[ShopTab.Support], SupportType.MythicCrate);
-

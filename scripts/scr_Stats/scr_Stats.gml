@@ -283,7 +283,12 @@ function PlayerGiveMoney(_playerID, _amount)
 	if(_playerID.money >= DataBase.maxMoney)
 	{
 		_playerID.money = DataBase.maxMoney;
-		instance_find(Shop, 0).unlockBank = true;
+		if(!global.shopID.unlockBankOption)
+		{
+			global.shopID.unlockBankOption = true;
+			ShopUpdateSpecials();
+			MessageAddAll("Bank feature unlocked in shop!", c_red, MessageFilter.Notification);
+		}
 	}
 }
 

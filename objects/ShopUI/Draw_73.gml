@@ -6,6 +6,8 @@ var xx = camera_get_view_x(Window.camera[player.playerID]),
 
 var viewWidth = camera_get_view_width(Window.camera[player.playerID]),
 	viewHeight = camera_get_view_height(Window.camera[player.playerID]);
+	
+var _str;
 
 //background
 draw_set_alpha(0.8);
@@ -40,10 +42,13 @@ _x = xx + 8;
 _y = yy + 128;
 _padding = 20;
 
+_str = "";
 for(i=0; i<size; i++)
 {
+	if(tabSelect < ShopTab.Special)
+		_str = " x " + string(ShopGetStock(itemList[tabSelect][| i]));
 	draw_set_color(listSelect == i ? c_yellow : c_white);
-	draw_text(_x, _y + i*_padding, ShopGetItemData(itemList[tabSelect][| i], ShopKey.Name));
+	draw_text(_x, _y + i*_padding, ShopGetItemData(itemList[tabSelect][| i], ShopKey.Name) + _str);
 }
 
 //name/description
@@ -51,12 +56,15 @@ w = 480;
 _x = xx + viewWidth - w - 8;
 _y = yy + 128;
 
+_str = "";
+if(ShopGetItemID(id) == SpecialType.Revive)
+	_str = global.shopID.reviveList[| listSelect].name;
 draw_set_color(c_white);
-draw_text(_x, _y, itemName);
+draw_text(_x, _y, itemName + _str);
 draw_text_ext(_x, _y+48, itemDescription, 20, w);
 
 //price
-var _str = "Price: " + string(itemPrice);
+_str = "Price: " + string(itemPrice);
 _y = yy + viewHeight - 64;
 if(sellPrice > 0)
 	_str += " - " + string(sellPrice) + " = " + string(itemPrice - sellPrice);
@@ -70,4 +78,20 @@ if(tabSelect == ShopTab.Buffs)
 if(tabSelect != ShopTab.Sell)
 	draw_text(_x, _y, _str);
 else
-	draw_text(_x, _y, "Sell: " + string(sellPrice));
+	draw_text(_x, _y, "Sell: " + string(ShopGetSellPrice(ShopGetItemID(id))));
+	
+//players money
+_str = "";
+_x = xx + 8;
+_y = yy + viewHeight - 64;
+
+if(global.shopID.hasBank)
+	_str = "Bank: $"+string(player.bankedMoney);
+
+draw_text(_x, _y, _str + "\nCash: $"+string(player.money));
+
+
+
+
+
+

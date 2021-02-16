@@ -12,6 +12,8 @@ if(isDead)
 {
 	var _str = MessageGetDamageTag(damageTag);
 	MessageAddAll(name + _str + zombieTag, c_red, MessageFilter.PlayerDown);
+	ShopUpdateSpecials();
+	
 	money *= SetStat(0.7, 0.6, 0.5, 0.4);
 	
 	if(buff[1] != noone)

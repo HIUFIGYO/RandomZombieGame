@@ -3,7 +3,8 @@ enum MessageFilter
 	PlayerDown = 1,
 	PlayerKill = 2,
 	SpecialZombie = 4,
-	Debug = 8
+	Notification = 8,
+	Debug = 16
 }
 
 ///@function MessageCheckFilter(messageController, filter)

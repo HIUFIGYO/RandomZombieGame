@@ -45,7 +45,7 @@ if(!isMelee and !isThrowing)
 			break;
 			
 		case EquipCycle.Med:
-			index = 24 + healingItem;
+			index = 24 + healingItem - HealingType.Medicine;
 			break;
 			
 		case EquipCycle.Vial:

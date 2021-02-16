@@ -80,3 +80,9 @@ enum SupportType
 	Armour,//moving armour in a different order may cause a little error
 	count
 }
+
+enum SpecialType
+{
+	Bank = SupportType.count,
+	Revive
+}
