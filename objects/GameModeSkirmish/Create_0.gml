@@ -1,7 +1,7 @@
 event_inherited();
-additionalZombies = global.playerAmount;
+additionalZombies = global.playerAmount * 4 + (global.difficulty * 2);
 
-alarm[0] = 60;
+alarm[0] = 300 - (global.playerAmount * 60);
 
 killsTotalText = UICreateText(0, 0, "", UIDrawTo.GUI);
 UISetAlign(killsTotalText, RectAlign.Center, RectAlign.Top);
