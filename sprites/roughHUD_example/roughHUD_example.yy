@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d3ce31be-0c4b-40be-8f9b-c869ed160e68","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "tilesets",
-    "path": "folders/Sprites/tilesets.yy",
+    "name": "Unused",
+    "path": "folders/Sprites/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "roughHUD_example",
