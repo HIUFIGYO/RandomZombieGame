@@ -89,6 +89,7 @@ UISetAlpha(grenadeText, _alpha);
 var _text = string(player.mag[player.currentWeapon]) + "/" + string(player.ammo[player.currentWeapon])
 UITextSet(ammoText, _text);
 UISetSize(ammoText, string_width(_text), 20);
+UISetAlpha(ammoText, player.weapon[player.currentWeapon] != noone);
 	
 //reload timer
 _alpha = player.reloadTimer[player.currentWeapon] > 0 and player.equipmentCycle == EquipCycle.Weapon;

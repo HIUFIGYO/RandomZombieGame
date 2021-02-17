@@ -212,7 +212,7 @@ if(canShoot and !isDead and !isInMenu)
 		PlayerMelee(id);
 	}
 	
-	if(!performedAction and InputGetButtonDown(player_inputID, Button.Grenade)and grenadeAmount > 0)
+	if(!performedAction and grenadeType != noone and InputGetButtonDown(player_inputID, Button.Grenade)and grenadeAmount > 0)
 	{
 		performedAction = true;
 		canShoot = false;

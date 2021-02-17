@@ -220,6 +220,7 @@ function GiveMelee(_player, _item)
 function GiveBuff(_player, _buff, _slot)
 {
 	_player.buff[_slot] = _buff;
+	_player.buffCooldown[_slot] = 0;
 }
 
 ///@function GiveExplosive(player, item)

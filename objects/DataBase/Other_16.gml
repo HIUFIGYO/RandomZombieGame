@@ -115,7 +115,7 @@ shop[Buff.Resistance, ShopKey.Description] = "Reduce damage taken by 20%\n+20% d
 shop[Buff.Resistance, ShopKey.Price] = 1500;
 
 shop[Buff.Stamina, ShopKey.Name] = "Stamina Buff";
-shop[Buff.Stamina, ShopKey.Description] = "Increas max stamina by 100%";
+shop[Buff.Stamina, ShopKey.Description] = "Increase max stamina by 100%";
 shop[Buff.Stamina, ShopKey.Price] = 1500;
 
 shop[Buff.Agility, ShopKey.Name] = "Agility Buff";
@@ -209,11 +209,11 @@ shop[SupportType.HealGenerator, ShopKey.Description] = "Heals everyone within a 
 shop[SupportType.HealGenerator, ShopKey.Price] = 1100;
 
 shop[SupportType.AmmoCrate, ShopKey.Name] = "Ammunition Crate";
-shop[SupportType.AmmoCrate, ShopKey.Description] = "Provides ammo for pistols, rifles, shotguns and explosivesUses: 4";
+shop[SupportType.AmmoCrate, ShopKey.Description] = "Provides ammo for pistols, rifles, shotguns and explosives\nUses: 4";
 shop[SupportType.AmmoCrate, ShopKey.Price] = 1250;
 
 shop[SupportType.HeavyCrate, ShopKey.Name] = "Heavy Weapons Crate";
-shop[SupportType.HeavyCrate, ShopKey.Description] = "Provides ammo for launchers, beam weapons and explosivesUses: 4";
+shop[SupportType.HeavyCrate, ShopKey.Description] = "Provides ammo for launchers, beam weapons and explosives\nUses: 4";
 shop[SupportType.HeavyCrate, ShopKey.Price] = 2500;
 
 shop[SupportType.MythicCrate, ShopKey.Name] = "Otherworldly Crate";
@@ -221,7 +221,7 @@ shop[SupportType.MythicCrate, ShopKey.Description] = "Provides ammo for experime
 shop[SupportType.MythicCrate, ShopKey.Price] = 3750;
 
 shop[SupportType.Armour, ShopKey.Name] = "Armour";
-shop[SupportType.Armour, ShopKey.Description] = "Gain an armour vest\nArmour takes 80% of total damage taken";
+shop[SupportType.Armour, ShopKey.Description] = "Gain an armour vest\nArmour takes 80% of total damage taken\nAcid damages armour";
 shop[SupportType.Armour, ShopKey.Price] = 350;
 
 //SPECIAL ITEMS

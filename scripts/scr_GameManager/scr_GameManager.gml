@@ -4,21 +4,35 @@ enum GM
 	Skirmish
 }
 
-///@function GameZombieDead(id)
+///@function GameZombieDead(id, player)
 
-function GameZombieDead(_id)
+function GameZombieDead(_id, _player)
 {
-	GameManager.gameMode.totalZombies -= 1;
-	GameManager.gameMode.totalKills += 1;
+	GameRemoveZombie();
+	
 	_id.layer = GameManager.layerCorpse;
+	_id.hp = 0;
+	_id.isDead = true;
+	_id.color = c_white;
+	_id.image_speed = 0;
+	_id.sprite_index = _id.spriteDead;
+	_id.friction = 0.9;
+	
 	ds_queue_enqueue(GameManager.bodyList, _id);
 	if(ds_queue_size(GameManager.bodyList) > GameManager.maxBodyCount)
 	{
 		var inst = ds_queue_dequeue(GameManager.bodyList);
 		inst.fadeOut = inst.fadeOutTime;
 	}
-	with(GameManager.gameMode)
-		event_perform(ev_other, ev_user0);
+	
+	if(_player != noone)
+	{
+		_player.kills += 1;
+		GameManager.gameMode.totalKills += 1;
+		MessageAddPlayer(_player, _player.name + " has killed a " + _id.name, c_white, MessageFilter.PlayerKill);
+		with(GameManager.gameMode)
+			event_perform(ev_other, ev_user0);
+	}
 }
 
 ///@function GameAddZombie()

@@ -24,18 +24,6 @@ if(!isDead)
 	ds_grid_destroy(targets);
 }
 
-//health
-if(!isDead and hp <= 0)
-{
-	GameZombieDead(id);
-	GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) / 2, acid, 0);
-	isDead = true;
-	hp = 0;
-	color = c_white;
-	image_speed = 0;
-	sprite_index = spriteDead;
-	friction = 0.9;
-}
 if(showHealth)
 {
 	showHealthTimer -= DeltaTimeSecond();

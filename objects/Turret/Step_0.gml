@@ -31,7 +31,6 @@ if(_shoot)
 	if(fireTimer >= fireRate)
 	{
 		fireTimer = 0;
-		playerID = instance_nearest(x, y, Player);
 		//Fire bullet
 		if(playerID != noone)
 		{

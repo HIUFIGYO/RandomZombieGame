@@ -71,14 +71,14 @@ function ShopBuyItem(_shop)
 			}
 			break;
 		case ShopTab.Buffs:
-			if(_shop.player.buff[0] == noone)
+			if(_shop.player.buff[0] == noone and _shop.player.buff[1] != item)
 			{
 				if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
 				{
 					GiveBuff(_shop.player, item, 0);
 				}
 			}
-			else if(_shop.player.buff[1] == noone)
+			else if(_shop.player.buff[1] == noone and _shop.player.buff[0] != item)
 			{
 				if(ShopCanAffordAndBuy(_shop.player, item, sellPrice))
 				{

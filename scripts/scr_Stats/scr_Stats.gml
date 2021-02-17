@@ -165,6 +165,7 @@ function DamageZombie(_playerID, _zombie, _damage)
 		if(CheckVialNegative(_playerID, VialType.Survivalist))
 			_damage *= 0.25;
 		
+		//money
 		var moneyGained = _damage;
 		if(_damage > _zombie.hp)
 			moneyGained = _zombie.hp;
@@ -173,11 +174,10 @@ function DamageZombie(_playerID, _zombie, _damage)
 	}
 	
 	_zombie.hp -= _damage;
-	if(_playerID != noone and _zombie.hp <= 0 and !_zombie.isDead)
+	if(_zombie.hp <= 0 and !_zombie.isDead)
 	{
-		_zombie.hp = 0;
-		_playerID.kills += 1;
-		MessageAddPlayer(_playerID, _playerID.name + " has killed a " + _zombie.name, c_white, MessageFilter.PlayerKill);
+		GameZombieDead(_zombie, _playerID);
+		GameSprayBlood(GameGetBloodAmount(), _zombie.x, _zombie.y - (_zombie.bbox_bottom - _zombie.bbox_top) / 2, _zombie.acid, 0);
 	}
 }
 
