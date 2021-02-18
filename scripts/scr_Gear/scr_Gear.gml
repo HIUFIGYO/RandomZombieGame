@@ -160,6 +160,7 @@ function ProcessEquipment(_id)
 			if(InputGetButtonDown(_id.player_inputID, Button.Shoot))
 			{
 				_id.vialActive = true;
+				_id.currentVial = _id.vial;
 				_id.vialCooldown = VialGetCooldown(_id.vial);
 				_id.vialPositiveTimer = VialGetTimer(_id.vial);
 				_id.vialNegativeTimer = VialGetTimer(_id.vial) * 2;
@@ -206,6 +207,14 @@ function GiveWeapon(_player, _item, _slot)
 	_player.ammo[_slot] = DataWeapon(_item, WeapStat.Ammo);
 	_player.mag[_slot] = DataWeapon(_item, WeapStat.Mag);
 	_player.reloadTimer[_slot] = 0;
+	
+	if(CheckBuff(_player, Buff.Ammo))
+	{
+		var _ammo = ceil((DataBase.ammoBuffAmmo - 1) * DataWeapon(_player.weapon[_slot], WeapStat.Ammo));
+		var _mag = floor((DataBase.ammoBuffMag - 1) * DataWeapon(_player.weapon[_slot], WeapStat.Mag));
+		_player.ammo[_slot] += _ammo;
+		_player.mag[_slot] += _mag;
+	}
 }
 
 ///@function GiveMelee(player, item)
@@ -219,8 +228,90 @@ function GiveMelee(_player, _item)
 
 function GiveBuff(_player, _buff, _slot)
 {
+	RemoveBuff(_player, _slot);
+	
 	_player.buff[_slot] = _buff;
 	_player.buffCooldown[_slot] = 0;
+	
+	switch(_buff)
+	{
+		case Buff.Health:
+			HealPlayer(_player, (DataBase.healthBuffEffect - 1) * _player.maxHp);
+			break;
+			
+		case Buff.Ammo:
+			for(var i=0; i<2; i++)
+			{
+				if(_player.weapon[i] == noone)
+					continue;
+				var _ammo = ceil((DataBase.ammoBuffAmmo - 1) * DataWeapon(_player.weapon[i], WeapStat.Ammo));
+				var _mag = floor((DataBase.ammoBuffMag - 1) * DataWeapon(_player.weapon[i], WeapStat.Mag));
+				_player.ammo[i] += _ammo;
+				_player.mag[i] += _mag;
+				
+				if(_player.ammo[i] > GetMaxAmmo(_player, i))
+					_player.ammo[i] = GetMaxAmmo(_player, i);
+				if(_player.mag[i] > GetMaxMag(_player, i))
+					_player.mag[i] = GetMaxMag(_player, i);
+			}
+			break;
+			
+		case Buff.Demo:
+			if(_player.grenadeType != noone)
+			{
+				_player.grenadeAmount += DataBase.demoBuffAddGrenade;
+				if(_player.grenadeAmount > GetMaxGrenades(_player))
+					_player.grenadeAmount = GetMaxGrenades(_player);
+			}
+			break;
+			
+		case Buff.Stamina:
+			_player.stamina = GetMaxStamina(_player);
+			break;
+	}
+}
+
+///@function RemoveBuff(player, slot)
+
+function RemoveBuff(_player, _slot)
+{
+	if(_player.buff[_slot] == noone)
+		return;
+	
+	switch(_player.buff[_slot])
+	{
+		case Buff.Health:
+			_player.hp -= (DataBase.healthBuffEffect - 1) * _player.maxHp;
+			break;
+			
+		case Buff.Ammo:
+			for(var i=0; i<2; i++)
+			{
+				if(_player.weapon[i] == noone)
+					continue;
+				
+				if(_player.ammo[i] > DataWeapon(_player.weapon[i], WeapStat.Ammo))
+					_player.ammo[i] = DataWeapon(_player.weapon[i], WeapStat.Ammo);
+				if(_player.mag[i] > DataWeapon(_player.weapon[i], WeapStat.Mag))
+					_player.mag[i] = DataWeapon(_player.weapon[i], WeapStat.Mag);
+			}
+			break
+			
+		case Buff.Demo:
+			if(_player.grenadeType != noone)
+			{
+				if(_player.grenadeAmount > DataBase.explosionMaxAmmo)
+					_player.grenadeAmount = DataBase.explosionMaxAmmo;
+			}
+			break;
+			
+		case Buff.Stamina:
+			if(_player.stamina > _player.maxStamina)
+				_player.stamina = _player.maxStamina;
+			break;
+	}
+	
+	_player.buff[_slot] = noone;
 }
 
 ///@function GiveExplosive(player, item)
@@ -237,8 +328,7 @@ function GiveMedical(_player, _item)
 {
 	_player.healingItem = _item;
 	_player.healingItemAmount = DataBase.healingAmount[_item];
-	_player.healingItemTimer = DataBase.healingTimer[_item];
-	
+	_player.healingItemAmount = DataBase.healingUses[_item];
 }
 
 ///@function GiveVial(player, item)

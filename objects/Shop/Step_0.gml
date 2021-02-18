@@ -14,9 +14,12 @@ if(restockTimer > 0)
 	restockTimer -= DeltaTimeSecond();
 	if(restockTimer <= 0)
 	{
+		MessageAddAll("Shop has restocked!", MessageFilter.Notification);
 		restockTimer = restockTime;
 		for(var i=0; i<SupportType.count; i++)
 		{
+			if(i < Weapon.count and DataWeapon(i, WeapStat.Tier) == Tier.Five)
+				continue;
 			ShopAddStock(i);
 		}
 	}

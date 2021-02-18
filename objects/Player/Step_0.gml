@@ -178,7 +178,7 @@ if(canShoot and !isDead and !isInMenu)
 	if(CheckVialNegative(id, VialType.Strength))
 	{
 		performedAction = true;
-		if(stamina >= 10 and InputGetButtonDown(player_inputID, Button.Melee))
+		if(stamina >= 10 and InputGetButtonDown(player_inputID, Button.Melee)and meleeWeapon != noone)
 			PlayerMelee(id);
 	}
 	

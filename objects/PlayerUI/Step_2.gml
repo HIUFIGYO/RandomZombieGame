@@ -14,7 +14,7 @@ if(overlayAlpha > 0)
 	
 //health bar
 UIHealthbarSetValue(hpBar, player.hp/GetMaxHealth(player));
-UITextSet(hpText, string(player.hp) + "/" + string(GetMaxHealth(player)));
+UITextSet(hpText, string(round(player.hp)) + "/" + string(GetMaxHealth(player)));
 	
 //armour bar
 UIHealthbarSetValue(armourBar, player.armour/GetMaxArmour(player));
@@ -109,6 +109,6 @@ UITextSet(killsText, _text);
 UISetSize(killsText, string_width(_text), 20);
 	
 //money
-var _text = "$" + string(player.money);
+var _text = "$" + string(round(player.money));
 UITextSet(moneyText, _text);
 UISetSize(moneyText, string_width(_text), 20);

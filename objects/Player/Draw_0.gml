@@ -68,8 +68,10 @@ if(!isMelee and !isThrowing)
 			index = 5;
 		else if(meleeWeapon == Weapon.Knife3)
 			index = 9;
-		else
+		else if(meleeWeapon == Weapon.Knife4)
 			index = 17;
+		else
+			index = 0;
 	}
 	
 	draw_sprite_ext(spriteGuns, index, x, y + offset, image_xscale, 1, 0, c_white, 1);

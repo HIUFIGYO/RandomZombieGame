@@ -25,7 +25,7 @@ function HealDebuffs(_id, _healType)
 			
 		case HealingType.MedKit:
 			_id.deBuff[DeBuff.Bleed] = false;
-			_id.deBuff[DeBuff.Ignite] = false;
+			_id.deBuff[DeBuff.Poison] = false;
 			break;
 	}
 }
@@ -188,6 +188,7 @@ function RevivePlayer(_player, _startHp)
 	_player.isDead = false;
 	_player.hp = _startHp;
 	_player.hp = clamp(_player.hp, 0, GetMaxHealth(_player));
+	ShopUpdateSpecials();
 }
 
 ///@function GetMaxHealth(player)
@@ -287,7 +288,7 @@ function PlayerGiveMoney(_playerID, _amount)
 		{
 			global.shopID.unlockBankOption = true;
 			ShopUpdateSpecials();
-			MessageAddAll("Bank feature unlocked in shop!", c_red, MessageFilter.Notification);
+			MessageAddAll("Bank feature unlocked in shop!", MessageFilter.Notification);
 		}
 	}
 }

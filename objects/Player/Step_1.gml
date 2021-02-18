@@ -53,7 +53,7 @@ if(revivePlayerCount == 0 and reviveTimer < reviveTime)
 
 if(reviveTimer <= 0)
 {
-	var startHealth = GetMaxHealth(id) * SetStat(0.8, 0.6, 0.4, 0.2);
+	var startHealth = GetMaxHealth(id) * SetStat(0.5, 0.4, 0.3, 0.2);
 	RevivePlayer(id, startHealth);
 	reviveTimer = reviveTime;
 }

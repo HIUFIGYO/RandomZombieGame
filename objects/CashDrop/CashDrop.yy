@@ -28,6 +28,7 @@
     {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"parent":{"name":"CashDrop","path":"objects/CashDrop/CashDrop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Player","path":"objects/Player/Player.yy",},"parent":{"name":"CashDrop","path":"objects/CashDrop/CashDrop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"Shop","path":"objects/Shop/Shop.yy",},"parent":{"name":"CashDrop","path":"objects/CashDrop/CashDrop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":2,"collisionObjectId":null,"parent":{"name":"CashDrop","path":"objects/CashDrop/CashDrop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

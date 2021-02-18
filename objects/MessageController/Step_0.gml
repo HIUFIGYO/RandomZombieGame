@@ -1,5 +1,8 @@
 if(ds_list_size(messageList) == 0)
+{
+	fadeOut = fadeOutTime;
 	exit;
+}
 	
 fadeOut -= DeltaTimeSecond();
 if(fadeOut <= 0)

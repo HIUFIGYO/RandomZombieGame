@@ -5,7 +5,7 @@ global.shopID = id;
 hasBank = false;
 unlockBankOption = false;
 
-restockTime = 5 * 60; //mins * 60 secs
+restockTime = 0.2 * 60; //mins * 60 secs
 restockTimer = restockTime;
 
 reviveList = ds_list_create();
@@ -21,6 +21,7 @@ for(var i=0; i<SupportType.count; i++)
 		if(i >= SupportType.Barricade and i < SupportType.count)
 		{
 			stock[i] = global.maxPlayers;
+			stockMax[i] = stock[i];
 			continue;
 		}
 		stock[i] = global.playerAmount;

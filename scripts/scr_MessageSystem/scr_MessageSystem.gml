@@ -14,9 +14,9 @@ function MessageCheckFilter(_messageController, _filter)
 	return _messageController.messageFilter & _filter == _filter;
 }
 
-///@function MessageAddAll(message, color, filter)
+///@function MessageAddAll(message, filter)
 
-function MessageAddAll(_message, _color, _filter)
+function MessageAddAll(_message, _filter)
 {
 	var _player = noone;
 	for(var i=0; i<global.playerAmount; i++)
@@ -28,24 +28,38 @@ function MessageAddAll(_message, _color, _filter)
 		
 		if(MessageCheckFilter(_player.messageController, _filter))
 		{
+			var _color = MessageGetColor(_filter);
 			ds_list_add(_player.messageController.messageList, _message);
 			ds_list_add(_player.messageController.messageColor, _color);
 		}
 	}
 }
 
-///@function MessageAddPlayer(player, message, color, filter)
+///@function MessageAddPlayer(player, message, filter)
 
-function MessageAddPlayer(_player, _message, _color, _filter)
+function MessageAddPlayer(_player, _message, _filter)
 {
 	if(MessageControllerFull(_player.messageController))
 		return;
 	
 	if(MessageCheckFilter(_player.messageController, _filter))
 	{
+		var _color = MessageGetColor(_filter);
 		ds_list_add(_player.messageController.messageList, _message);
 		ds_list_add(_player.messageController.messageColor, _color);
 	}
+}
+
+///@function MessageGetColor(messageFilter)
+function MessageGetColor(_messageFilter)
+{
+	switch(_messageFilter)
+	{
+		case MessageFilter.Notification:
+			return c_aqua;
+	}
+	
+	return c_white;
 }
 
 ///@function MessageAddFilter(messageController, filter)

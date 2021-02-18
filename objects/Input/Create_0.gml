@@ -55,6 +55,6 @@ gamepadMap[Button.PreviousGear] = gp_padl;
 gamepadMap[Button.Reload] = gp_face3;
 gamepadMap[Button.Sprint] = gp_face2;
 gamepadMap[Button.Assist] = gp_face4;
-gamepadMap[Button.DropMoney] = Axis.Down;
+gamepadMap[Button.DropMoney] = gp_padd;
 gamepadMap[Button.DropWeap] = Axis.Down;
 gamepadMap[Button.Pause] = gp_start;

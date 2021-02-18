@@ -63,7 +63,7 @@ grenadeAmount = 3;
 
 //med item
 healingItem = noone;
-healingItemAmount = 1;
+healingItemAmount = 0;
 healingItemTimer = 0;
 
 if(global.difficulty == GameDifficulty.Easy)
@@ -71,6 +71,7 @@ if(global.difficulty == GameDifficulty.Easy)
 
 //vials
 vial = noone;
+currentVial = noone;
 vialActive = false;
 vialCooldown = 0;
 vialPositiveTimer = 0;

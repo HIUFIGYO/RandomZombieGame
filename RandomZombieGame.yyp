@@ -343,6 +343,7 @@
     {"id":{"name":"spr_ripperatk1","path":"sprites/spr_ripperatk1/spr_ripperatk1.yy",},"order":2,},
     {"id":{"name":"spr_supplydrop","path":"sprites/spr_supplydrop/spr_supplydrop.yy",},"order":12,},
     {"id":{"name":"spr_ripperatk2","path":"sprites/spr_ripperatk2/spr_ripperatk2.yy",},"order":3,},
+    {"id":{"name":"Music1","path":"sounds/Music1/Music1.yy",},"order":0,},
     {"id":{"name":"spr_ripperatk3","path":"sprites/spr_ripperatk3/spr_ripperatk3.yy",},"order":4,},
     {"id":{"name":"spr_bullets","path":"sprites/spr_bullets/spr_bullets.yy",},"order":3,},
     {"id":{"name":"ZombieBarricade","path":"objects/ZombieBarricade/ZombieBarricade.yy",},"order":5,},

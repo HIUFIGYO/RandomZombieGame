@@ -183,11 +183,11 @@ shop[VialType.Survivalist, ShopKey.Description] = "Become immune to all damage f
 shop[VialType.Survivalist, ShopKey.Price] = 1250;
 
 shop[VialType.Rapid, ShopKey.Name] = "Rapid Vial";
-shop[VialType.Rapid, ShopKey.Description] = "Firerate and attack speed is doubled for 5 seconds\nMovement Speed is reduced by 2 for 10 secpnds\nCooldown: 150 seconds";
+shop[VialType.Rapid, ShopKey.Description] = "Firerate and attack speed is doubled\nGain infinite ammo for 5 seconds\nMovement Speed is reduced by 2 for 10 seconds\nCooldown: 150 seconds";
 shop[VialType.Rapid, ShopKey.Price] = 1250;
 
 shop[VialType.TradeOff, ShopKey.Name] = "Trade-Off Vial";
-shop[VialType.TradeOff, ShopKey.Description] = "Damage dealth is doubled for 7 seconds\nDamage taken is quadrupled for 14 seconds\nCooldown 120 seconds";
+shop[VialType.TradeOff, ShopKey.Description] = "Damage dealt is doubled for 7 seconds\nDamage taken is quadrupled for 14 seconds\nCooldown 120 seconds";
 shop[VialType.TradeOff, ShopKey.Price] = 1250;
 
 //SUPPORT ITEMS
