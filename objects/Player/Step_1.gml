@@ -1,3 +1,11 @@
+//invinciblity
+if(invincible > 0)
+{
+	invincible -= DeltaTimeSecond();
+	if(invincible <= 0)
+		invincible = 0;
+}
+
 //health regen
 if(!isDead)
 	hpRegenTimer -= DeltaTimeSecond();
@@ -54,7 +62,7 @@ if(revivePlayerCount == 0 and reviveTimer < reviveTime)
 if(reviveTimer <= 0)
 {
 	var startHealth = GetMaxHealth(id) * SetStat(0.5, 0.4, 0.3, 0.2);
-	RevivePlayer(id, startHealth);
+	RevivePlayer(id, startHealth, 3);
 	reviveTimer = reviveTime;
 }
 

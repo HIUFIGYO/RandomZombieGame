@@ -4,7 +4,7 @@ var _slot = GetBuffSlot(id, Buff.Demo);
 if(CheckBuff(id, Buff.Demo)and buffCooldown[_slot] <= 0)
 {
 	buffCooldown[_slot] = DataBase.demoBuffCooldown;
-	RevivePlayer(id, 1);
+	RevivePlayer(id, 1, 1);
 	CreateExplosion(id, id);
 }
 

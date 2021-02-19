@@ -3,6 +3,7 @@ damageTag = "";
 zombieTag = "";
 
 //stats
+invincible = 0;
 hp = 100;
 armour = 0;
 stamina = 100;

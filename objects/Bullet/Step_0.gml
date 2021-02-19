@@ -90,7 +90,7 @@ if(count > 0)
 			ds_list_add(targetsHit, hits[| i]);
 			
 			var _damage = DataWeapon(weapon, WeapStat.Damage);
-			if(CheckBuff(playerID, Buff.Damage))
+			if(!ignoreBuffs and CheckBuff(playerID, Buff.Damage))
 			{
 				switch(weapon)
 				{
@@ -114,15 +114,15 @@ if(count > 0)
 				}
 			}
 			
-			if(CheckVialPositive(playerID, VialType.TradeOff))
-				_damage *= 2;
-			
 			if(weapon == Weapon.Flame)
 				DebuffApply(hits[| i], DeBuff.Ignite, playerID);
 			if(weapon == Weapon.Drainer)
 				DebuffApply(hits[| i], DeBuff.Bleed, playerID);
 				
-			DamageZombie(playerID, hits[| i], _damage);
+			if(!ignoreBuffs and CheckVialPositive(playerID, VialType.TradeOff))
+				_damage *= 2;
+				
+			DamageZombie(playerID, hits[| i], _damage, ignoreBuffs);
 			GameSprayBlood(GameGetBloodAmount(), x, y, hits[| i].acid, image_xscale);
 				
 			pierce -= 1;

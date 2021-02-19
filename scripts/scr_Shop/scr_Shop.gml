@@ -131,7 +131,7 @@ function ShopBuyItem(_shop)
 				if(ShopCanAffordAndBuy(_shop.player, item, -global.shopID.revivePriceAdd))
 				{
 					var _player = global.shopID.reviveList[| _shop.listSelect];
-					RevivePlayer(_player, GetMaxHealth(_player));
+					RevivePlayer(_player, GetMaxHealth(_player), 3);
 					global.shopID.revivePriceAdd += global.shopID.reviveAddAmount;
 					_player.x = _player.xstart;
 					_player.y = _player.ystart;

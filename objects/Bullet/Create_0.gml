@@ -7,5 +7,6 @@ playerID = noone;
 weapon = noone;
 rangeTimer = 0
 pierce = 1;
+ignoreBuffs = false;
 
 targetsHit = ds_list_create();

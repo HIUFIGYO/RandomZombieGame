@@ -34,7 +34,7 @@ function HealDebuffs(_id, _healType)
 
 function DamagePlayer(_player, _damage, _tag, _zombieTag)
 {
-	if(_player.isDead)
+	if(_player.isDead or _player.invincible > 0)
 		return;
 		
 	if(CheckVialPositive(_player, VialType.Survivalist))
@@ -101,7 +101,7 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 
 function DamagePlayerArmour(_player, _damage)
 {
-	if(_player.isDead)
+	if(_player.isDead or _player.invincible > 0)
 		return;
 	
 	if(_player.isInMenu)
@@ -115,7 +115,7 @@ function DamagePlayerArmour(_player, _damage)
 
 function DamagePlayerHealth(_player, _damage, _tag, _zombieTag)
 {
-	if(_player.isDead)
+	if(_player.isDead or _player.invincible > 0)
 		return;
 	
 	if(CheckVialPositive(_player, VialType.Survivalist))
@@ -143,27 +143,32 @@ function DamagePlayerHealth(_player, _damage, _tag, _zombieTag)
 	}
 }
 
-///@function DamageZombie(playerID, zombie, damage)
+///@function DamageZombie(playerID, zombie, damage, ignoreBuffs)
 
-function DamageZombie(_playerID, _zombie, _damage)
+function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 {
+	ignoreBuffs = is_undefined(ignoreBuffs) ? false : ignoreBuffs;
+	
 	if(_playerID != noone)
 	{
-		//bonuses
-		if(CheckBuff(_playerID, Buff.Critical)and random(1) <= DataBase.criticalBuffEffect)
-			_damage *= 2;
-		
-		if(CheckBuff(_playerID, Buff.Scout))
+		if(!ignoreBuffs)
 		{
-			_zombie.showHealth = true;
-			_zombie.showHealthTimer = DataBase.scoutBuffShowHealthTime;
-			if(_zombie.hp <= _zombie.maxHp * DataBase.scoutBuffHealthRate)
-				_damage += DataBase.scoutBuffDamage;
-		}
+			//bonuses			
+			if(CheckBuff(_playerID, Buff.Critical)and random(1) <= DataBase.criticalBuffEffect)
+				_damage *= 2;
 		
-		//penalties
-		if(CheckVialNegative(_playerID, VialType.Survivalist))
-			_damage *= 0.25;
+			if(CheckBuff(_playerID, Buff.Scout))
+			{
+				_zombie.showHealth = true;
+				_zombie.showHealthTimer = DataBase.scoutBuffShowHealthTime;
+				if(_zombie.hp <= _zombie.maxHp * DataBase.scoutBuffHealthRate)
+					_damage += DataBase.scoutBuffDamage;
+			}
+		
+			//penalties
+			if(CheckVialNegative(_playerID, VialType.Survivalist))
+				_damage *= 0.25;
+		}
 		
 		//money
 		var moneyGained = _damage;
@@ -181,13 +186,14 @@ function DamageZombie(_playerID, _zombie, _damage)
 	}
 }
 
-///@function RevivePlayer(player, startHp)
+///@function RevivePlayer(player, startHp, invincibleTime)
 
-function RevivePlayer(_player, _startHp)
+function RevivePlayer(_player, _startHp, _invincibleTime)
 {
 	_player.isDead = false;
 	_player.hp = _startHp;
 	_player.hp = clamp(_player.hp, 0, GetMaxHealth(_player));
+	_player.invincible = _invincibleTime;
 	ShopUpdateSpecials();
 }
 
