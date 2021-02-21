@@ -15,7 +15,7 @@ shop[Weapon.Rifle, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1\nF
 shop[Weapon.Rifle, ShopKey.Price] = 500;
 
 shop[Weapon.Shotgun, ShopKey.Name] = "Standard Shotgun";
-shop[Weapon.Shotgun, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1*5\nFirerate: 1\nAccuracy: 80%\nMag Size: 8\nMax Ammo: 72\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nA strong but slow early weapon that deals with both singular enemies and groups.";
+shop[Weapon.Shotgun, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1*5\nFirerate: 0.8\nAccuracy: 80%\nMag Size: 8\nMax Ammo: 72\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nA strong but slow early weapon that deals with both singular enemies and groups.";
 shop[Weapon.Shotgun, ShopKey.Price] = 750;
 
 shop[Weapon.Knife2, ShopKey.Name] = "Advanced Melee";
@@ -23,15 +23,15 @@ shop[Weapon.Knife2, ShopKey.Description] = "Tier Two Melee Weapon\nDamage: 6\nAt
 shop[Weapon.Knife2, ShopKey.Price] = 1000;
 
 shop[Weapon.Pistol2, ShopKey.Name] = "Advanced Pistol";
-shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 4\nFirerate: 0.15\nAccuracy: 95%\nMag Size: 8\nMax Ammo: 104\nReload Time: 2 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA strong sidearm that can dispatch most weak enemies in only a couple shots.";
+shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 4\nFirerate: 0.15\nAccuracy: 95%\nMag Size: 8\nMax Ammo: 112\nReload Time: 2 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA strong sidearm that can dispatch most weak enemies in only a couple shots.";
 shop[Weapon.Pistol2, ShopKey.Price] = 1250;
 
 shop[Weapon.Rifle2, ShopKey.Name] = "Advanced Rifle";
-shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 2\nFirerate: 0.15\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
+shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 2\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
 shop[Weapon.Rifle2, ShopKey.Price] = 1500;
 
 shop[Weapon.Shotgun2, ShopKey.Name] = "Advanced Shotgun";
-shop[Weapon.Shotgun2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 2*6\nFirerate: 0.1\nAccuracy: 75%\nMag Size: 2\nMax Ammo: 58\nReload Time: 3 Seconds\nPenetration: 1\nFire Mode: Semi-Auto\nA powerful but slow double-barreled shotgun that can clear an entire room of enemies quickly.";
+shop[Weapon.Shotgun2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.5*7\nFirerate: 0.2\nAccuracy: 75%\nMag Size: 2\nMax Ammo: 58\nReload Time: 2.5 Seconds\nPenetration: 1\nFire Mode: Semi-Auto\nA powerful but slow double-barreled shotgun that can clear an entire room of enemies quickly.";
 shop[Weapon.Shotgun2, ShopKey.Price] = 1750;
 
 shop[Weapon.Knife3, ShopKey.Name] = "Super Melee";
@@ -39,31 +39,31 @@ shop[Weapon.Knife3, ShopKey.Description] = "Tier Three Melee Weapon\nDamage: 9\n
 shop[Weapon.Knife3, ShopKey.Price] = 2000;
 
 shop[Weapon.Pistol3, ShopKey.Name] = "Super Pistol";
-shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 8\nFirerate: 0.3\nAccuracy: 95.5%\nMag Size: 6\nMax Ammo: 84\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
+shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 8\nFirerate: 0.3\nAccuracy: 92.5%\nMag Size: 6\nMax Ammo: 84\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
 shop[Weapon.Pistol3, ShopKey.Price] = 2250;
 
 shop[Weapon.Rifle3, ShopKey.Name] = "Super Rifle";
-shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 3\nFirerate: 0.075\nAccuracy: 95%\nMag Size: 20\nMax Ammo: 280\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nThe best assault rifle we got for you, with excellent cround control and single target damage.";
+shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2.5\nFirerate: 0.08\nAccuracy: 95%\nMag Size: 20\nMax Ammo: 280\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nThe best assault rifle we got for you, with excellent cround control and single target damage.";
 shop[Weapon.Rifle3, ShopKey.Price] = 2500;
 
 shop[Weapon.Shotgun3, ShopKey.Name] = "Super Shotgun";
-shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*7\nFirerate: 0.1\nAccuracy: 80%\nMag Size: 8\nMax Ammo: 72\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
+shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*9\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 70\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
 shop[Weapon.Shotgun3, ShopKey.Price] = 2750;
 
 shop[Weapon.Flame, ShopKey.Name] = "Flame Thrower";
-shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 0.5\nFirerate: 0.1\nAccuracy: 85%\nMag Size: 50\nMax Ammo: 350\nReload Time: 3 Seconds\nPenetration: 1\nFire Mode: Full-Auto\n100% chance to apply IGNITE\nIf you like the smell of flesh burning then look no further than to buy this here Flame Thrower.";
+shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 0.5\nFirerate: 0.1\nAccuracy: 85%\nMag Size: 50\nMax Ammo: 350\nReload Time: 3 Seconds\nPenetration: 0\nFire Mode: Full-Auto\n100% chance to apply IGNITE\nIf you like the smell of flesh burning then look no further than to buy this here Flame Thrower.";
 shop[Weapon.Flame, ShopKey.Price] = 3000;
 
 shop[Weapon.Rocket, ShopKey.Name] = "Rocket Launcher";
-shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-20 Explosion-10\nFirerate: 1\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 19\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nOne of the strongest weapons here we have to offer. Just be mindful of when you fire, you will be reloading a lot.";
+shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-15 Explosion-10\nFirerate: 1\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 19\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nOne of the strongest weapons here we have to offer. Just be mindful of when you fire, you will be reloading a lot.";
 shop[Weapon.Rocket, ShopKey.Price] = 3250;
 
 shop[Weapon.Tesla, ShopKey.Name] = "Tesla Rifle";
-shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 2\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 250\nReload Time: 3 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
+shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 2\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 250\nReload Time: 2.5 Seconds\nPenetration: 4\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
 shop[Weapon.Tesla, ShopKey.Price] = 3500;
 
 shop[Weapon.Acid, ShopKey.Name] = "Bio Launcher";
-shop[Weapon.Acid, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-15 Explosion-5\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 5\nMax Ammo: 35\nReload Time: 3 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nWe modified a boring old grenade launcher to fire acidic rounds to melt your enemies. It's shown to be less effective against acidic opponents though.";
+shop[Weapon.Acid, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-10 Explosion-5\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 5\nMax Ammo: 35\nReload Time: 3 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nWe modified a boring old grenade launcher to fire acidic rounds to melt your enemies. It's shown to be less effective against acidic opponents though.";
 shop[Weapon.Acid, ShopKey.Price] = 3750;
 
 shop[Weapon.Knife4, ShopKey.Name] = "Heated Blade";
@@ -71,11 +71,11 @@ shop[Weapon.Knife4, ShopKey.Description] = "Tier Five Melee Weapon\nDamage: 12\n
 shop[Weapon.Knife4, ShopKey.Price] = 4000;
 
 shop[Weapon.Purple, ShopKey.Name] = "Purple Gun";
-shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 1\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 3 Seconds\nPenetration: 9\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
+shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 1\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 3 Seconds\nPenetration: 5\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
 shop[Weapon.Purple, ShopKey.Price] = 4500;
 
 shop[Weapon.Drainer, ShopKey.Name] = "Undead Drainer";
-shop[Weapon.Drainer, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 0.5\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 4\nMax Ammo: 56\nReload Time: 3.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\n100% chance to apply BLEED\nThis experimental weapon fires modified projectiles that attach to and drain all the blood from their victim. Best used on single targets.";
+shop[Weapon.Drainer, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 2\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 4\nMax Ammo: 56\nReload Time: 3.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\n100% chance to apply BLEED\nThis experimental weapon fires modified projectiles that attach to and drain all the blood from their victim. Best used on single targets.";
 shop[Weapon.Drainer, ShopKey.Price] = 4500;
 
 shop[Weapon.BHDarker, ShopKey.Name] = "B.H. Darker";

@@ -133,7 +133,7 @@ i++; //Advanced Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Two;
 weapon[# WeapStat.Damage, i] = 1.5;
-weapon[# WeapStat.FireRate, i] = 0.25;
+weapon[# WeapStat.FireRate, i] = 0.2;
 weapon[# WeapStat.Mag, i] = 2;
 weapon[# WeapStat.Ammo, i] = 58;
 weapon[# WeapStat.Accuracy, i] = 0.75;
@@ -171,7 +171,7 @@ weapon[# WeapStat.Tier, i] = Tier.Three;
 weapon[# WeapStat.Damage, i] = 8;
 weapon[# WeapStat.FireRate, i] = 0.3;
 weapon[# WeapStat.Mag, i] = 6;
-weapon[# WeapStat.Ammo, i] = 90;
+weapon[# WeapStat.Ammo, i] = 84;
 weapon[# WeapStat.Accuracy, i] = 0.925;
 weapon[# WeapStat.Range, i] = 1.5;
 weapon[# WeapStat.Reload, i] = 1;
@@ -325,7 +325,7 @@ weapon[# WeapStat.yOffset, i] = 34;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Purple;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
-weapon[# WeapStat.Pierce, i] = 5;
+weapon[# WeapStat.Pierce, i] = 6;
 
 i++; //Undead Drainer
 weapon[# WeapStat.Type, i] = WeapType.Primary;
