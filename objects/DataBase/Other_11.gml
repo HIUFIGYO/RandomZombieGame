@@ -34,7 +34,7 @@ damageBuffMelee = 2;
 damageBuffExplosive = 3;
 
 //critical Buff
-criticalBuffEffect = 0.05;
+criticalBuffEffect = 0.1;
 
 //scout Buff
 scoutBuffHealthRate = 0.35;
