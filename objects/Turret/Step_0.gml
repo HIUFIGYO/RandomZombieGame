@@ -46,7 +46,7 @@ if(ammo > 0)
 				inst.weapon = Weapon.Rifle;
 				inst.spd = 64;
 				inst.rangeTimer = DataWeapon(inst.weapon, WeapStat.Range) * game_get_speed(gamespeed_fps);
-				inst.pierce = 2;
+				inst.pierce = 1;
 				inst.ignoreBuffs = true;
 				inst.image_xscale = image_xscale;
 				inst.image_index = DataWeapon(inst.weapon, WeapStat.BulletImage);

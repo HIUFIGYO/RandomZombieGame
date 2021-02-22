@@ -43,7 +43,7 @@ i++; //Standard Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.One;
 weapon[# WeapStat.Damage, i] = 1;
-weapon[# WeapStat.FireRate, i] = 0.09;
+weapon[# WeapStat.FireRate, i] = 0.1;
 weapon[# WeapStat.Mag, i] = 30;
 weapon[# WeapStat.Ammo, i] = 270;
 weapon[# WeapStat.Accuracy, i] = 0.95;
