@@ -5,14 +5,14 @@ image_index = grenadeType;
 switch(grenadeType)
 {
 	case ExplosiveType.Grenade:
-		fuseTime = 2;
-		bounce = 0.75;
+		fuseTime = DataBase.explosionFuseTime[ExplosiveType.Grenade];
+		bounce = 0.65;
 		break;
 		
 	case ExplosiveType.Incendiary:
-		fuseTime = 0;
+		fuseTime = DataBase.explosionFuseTime[ExplosiveType.Incendiary];
 		bounce = 0;
-		ySpeed *= 0.5;
+		ySpeed *= 0.8;
 		break;
 		
 	case ExplosiveType.Mine:
@@ -23,7 +23,7 @@ switch(grenadeType)
 		break;
 		
 	case ExplosiveType.BHBomber:
-		fuseTime = 3;
+		fuseTime = DataBase.explosionFuseTime[ExplosiveType.BHBomber];
 		bounce = 0.5;
 		xSpeed *= 0.75;
 		ySpeed *= 0.75;

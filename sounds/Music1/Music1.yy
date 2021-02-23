@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Music1.mp3",
-  "duration": 201.6703,
+  "soundFile": "Music1.ogg",
+  "duration": 301.7193,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
