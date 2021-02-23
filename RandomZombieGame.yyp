@@ -290,6 +290,7 @@
     {"id":{"name":"BlockParent","path":"objects/BlockParent/BlockParent.yy",},"order":0,},
     {"id":{"name":"light_static_get_array","path":"scripts/light_static_get_array/light_static_get_array.yy",},"order":0,},
     {"id":{"name":"InjectorZombie","path":"objects/InjectorZombie/InjectorZombie.yy",},"order":8,},
+    {"id":{"name":"GroundFireHitBox","path":"objects/GroundFireHitBox/GroundFireHitBox.yy",},"order":5,},
     {"id":{"name":"HealGenerator","path":"objects/HealGenerator/HealGenerator.yy",},"order":6,},
     {"id":{"name":"spr_creeperidle","path":"sprites/spr_creeperidle/spr_creeperidle.yy",},"order":0,},
     {"id":{"name":"spr_creeperrun","path":"sprites/spr_creeperrun/spr_creeperrun.yy",},"order":1,},
