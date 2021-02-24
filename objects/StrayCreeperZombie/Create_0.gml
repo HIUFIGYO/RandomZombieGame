@@ -8,9 +8,6 @@ spriteAttack = spr_Screeperatk1;
 spriteDead = spr_Screeperdead;
 
 damage = SetStat(16, 24, 36, 48);
-hp = SetStat(10 * (global.playerAmount - 1) * 1.25,
-			 12 * (global.playerAmount - 1) * 1.25,
-			 14 * (global.playerAmount - 1) * 1.25,
-			 18 * (global.playerAmount - 1) * 1.25);
+hp = SetStat(10, 12, 14, 18);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
