@@ -43,7 +43,7 @@ function DrawVialIcons(_player)
 	}
 	else
 	{
-		draw_sprite(spr_vials, (_player.currentVial - VialType.Adrenaline), xx, yy);
+		draw_sprite(spr_vialUsedIcon, (_player.currentVial - VialType.Adrenaline), xx, yy);
 		_index = (_player.vialCooldown / VialGetCooldown(_player.currentVial)) * sprite_get_number(spr_debuffDurationRing);
 		draw_sprite(spr_debuffDurationRing, _index, xx, yy);
 	}

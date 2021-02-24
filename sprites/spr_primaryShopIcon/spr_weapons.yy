@@ -136,7 +136,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_weapons","path":"sprites/spr_weapons/spr_weapons.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_weapons",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },
