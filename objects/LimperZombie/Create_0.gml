@@ -4,7 +4,8 @@ name = "Limper";
 
 spriteIdle = spr_limperidle;
 spriteWalk = spr_limperwalk;
-spriteAttack = spr_limperatk1;
+spriteAttack[0] = spr_limperatk1;
+spriteAttack[1] = spr_limperatk2;
 spriteDead = spr_limperdead;
 
 damage = SetStat(2, 5, 9, 14);

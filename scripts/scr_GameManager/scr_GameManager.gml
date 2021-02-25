@@ -16,6 +16,7 @@ function GameZombieDead(_id, _player)
 	_id.color = c_white;
 	_id.image_speed = 0;
 	_id.sprite_index = _id.spriteDead;
+	_id.image_index = irandom(sprite_get_number(_id.spriteDead) - 1);
 	_id.friction = 0.9;
 	
 	ds_queue_enqueue(GameManager.bodyList, _id);

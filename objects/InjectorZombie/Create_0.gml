@@ -4,7 +4,7 @@ name = "Injector";
 
 spriteIdle = spr_injectoridle;
 spriteWalk = spr_injectorrun;
-spriteAttack = spr_injectoratk1;
+spriteAttack[0] = spr_injectoratk1;
 spriteDead = spr_injectordead;
 
 damage = SetStat(4, 9, 15, 22);

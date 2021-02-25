@@ -4,7 +4,7 @@ name = "Grapple";
 
 spriteIdle = spr_grappleidle;
 spriteWalk = spr_grapplerun;
-spriteAttack = spr_grappleatk1;
+spriteAttack[0] = spr_grappleatk1;
 spriteDead = spr_grappledead;
 
 damage = SetStat(1, 3, 6, 10);

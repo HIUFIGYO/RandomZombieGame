@@ -2,4 +2,4 @@ event_inherited();
 
 image_speed = 0;
 fuseTime = 0;
-impactDamage = true;
+groundFireAmount = 3 + irandom(3);

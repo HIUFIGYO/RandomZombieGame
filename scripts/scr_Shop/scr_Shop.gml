@@ -251,6 +251,7 @@ function ShopSetDescription(_shop)
 {
 	var item = ShopGetItemID(_shop);
 	show_debug_message(item);
+	_shop.itemIconIndex = item;
 	_shop.itemName = ShopGetItemData(item, ShopKey.Name);
 	_shop.itemDescription = ShopGetItemData(item, ShopKey.Description);
 	_shop.itemPrice = ShopGetItemData(item, ShopKey.Price);

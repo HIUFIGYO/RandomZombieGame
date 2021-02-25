@@ -154,6 +154,19 @@ function CreateExplosion(_instance, _playerID)
 	inst.sprite_index = ExplosionGetSize(_playerID.grenadeType);
 }
 
+///@function CreateGroundFire(player, x, y, amount)
+
+function CreateGroundFire(_player, _x, _y, _amount)
+{
+	repeat(_amount)
+	{
+		var inst = instance_create_layer(_x, _y, GameManager.layerObject, GroundFireHitBox);
+		inst.playerID = _player;
+		inst.xSpeed = irandom_range(-10, 10);
+		inst.ySpeed = -irandom_range(4, 10);
+	}
+}
+
 ///@function ExplosionGetDamage(grenadeType)
 
 function ExplosionGetDamage(_grenadeType)

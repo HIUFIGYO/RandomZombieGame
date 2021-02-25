@@ -114,16 +114,13 @@ y += ySpeed * DeltaTime();
 //attack
 if(!isDead and !isAttacking and target != noone)
 {
-	if(distance_to_object(target) <= attackRange)
+	if(distance_to_object(target) <= attackRange or barricadeID != noone)
 	{
 		isAttacking = true;
-		image_speed  = 0.5
-		sprite_index = spriteAttack;
-	}
-	else if(barricadeID != noone)
-	{
-		isAttacking = true;
-		image_speed  = 0.5
-		sprite_index = spriteAttack;
+		image_speed  = 0.5;
+		var index = 0;
+		if(spriteAttack[1] != noone)
+			index = irandom(1);
+		sprite_index = spriteAttack[index];
 	}
 }

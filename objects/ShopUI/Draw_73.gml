@@ -51,9 +51,15 @@ for(i=0; i<size; i++)
 	draw_text(_x, _y + i*_padding, ShopGetItemData(itemList[tabSelect][| i], ShopKey.Name) + _str);
 }
 
-//name/description
+//icon
 w = 480;
 _x = xx + viewWidth - w - 8;
+_y = yy + 70;
+
+if(itemIconIndex != noone)
+	draw_sprite(spr_shopIcons, itemIconIndex, _x, _y);
+//name/description
+
 _y = yy + 128;
 
 _str = "";

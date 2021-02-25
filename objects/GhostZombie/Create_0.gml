@@ -4,7 +4,8 @@ name = "Ghost";
 
 spriteIdle = spr_ghostidle;
 spriteWalk = spr_ghostwalk;
-spriteAttack = spr_ghostatk1;
+spriteAttack[0] = spr_ghostatk1;
+spriteAttack[1] = spr_ghostatk2;
 spriteDead = spr_ghostdead;
 
 damage = SetStat(4, 9, 15, 22);

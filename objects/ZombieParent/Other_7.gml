@@ -1,4 +1,4 @@
-if(sprite_index == spriteAttack)
+if(sprite_index == spriteAttack[0] or sprite_index == spriteAttack[1])
 {
 	isAttacking = false;
 	

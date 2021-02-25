@@ -4,7 +4,7 @@ name = "Spewer";
 
 spriteIdle = spr_speweridle;
 spriteWalk = spr_spewerwalk;
-spriteAttack = spr_spewermelee;
+spriteAttack[0] = spr_spewermelee;
 spriteDead = spr_spewerdead;
 
 damage = SetStat(8, 16, 25, 33);	//old stats (8, 13, 19, 26)

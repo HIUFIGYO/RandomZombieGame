@@ -4,6 +4,9 @@ var count = instance_place_list(x, y, all, hits, false);
 
 for(var i=0; i<count; i++)
 {
+	if( maxHits <= 0 )
+		break;
+	
 	var hit = object_get_name(object_get_parent(hits[| i].object_index));
 	
 	if(hit == "ZombieParent")
@@ -28,6 +31,7 @@ for(var i=0; i<count; i++)
 			continue;
 			
 		ds_list_add(targetsAlreadyHit, hits[| i]);
+		maxHits -= 1;
 		
 		var _damage = ExplosionGetDamage(grenadeType);
 
@@ -45,7 +49,8 @@ for(var i=0; i<count; i++)
 	
 	if(hit == "PhysicsObject")
 	{
-		ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
+		if(hits[| i].canPush)
+			ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
 		continue;
 	}
 	
@@ -77,6 +82,7 @@ for(var i=0; i<count; i++)
 			continue;
 			
 		ds_list_add(targetsAlreadyHit, hits[| i]);
+		maxHits -= 1;
 		
 		var _damage = ExplosionGetDamage(grenadeType);
 

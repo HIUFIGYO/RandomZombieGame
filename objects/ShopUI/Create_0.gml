@@ -19,6 +19,7 @@ listSelect = 0;
 listTimer = 0;
 listButtonDown = false;
 
+itemIconIndex = noone;
 itemName = "";
 itemDescription = "";
 itemPrice = 0;

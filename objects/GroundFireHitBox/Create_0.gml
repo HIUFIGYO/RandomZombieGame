@@ -5,4 +5,6 @@ alarm[0] = 3 * 60; // seconds * fps
 fadeOutTime = 2 * 60; //seconds * fps
 fadeOut = fadeOutTime;
 
-impactDamage = true;
+canPush = false;
+
+targetsHit = ds_list_create();

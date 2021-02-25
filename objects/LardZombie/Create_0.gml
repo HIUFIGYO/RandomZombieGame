@@ -4,7 +4,7 @@ name = "Lard";
 
 spriteIdle = spr_lardidle;
 spriteWalk = spr_lardwalk;
-spriteAttack = spr_lardatk1;
+spriteAttack[0] = spr_lardatk1;
 spriteDead = spr_larddead;
 
 damage = SetStat(6, 12, 19, 27);	//old stats (6, 10, 15, 21)

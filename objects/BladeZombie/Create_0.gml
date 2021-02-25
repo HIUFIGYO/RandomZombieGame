@@ -4,7 +4,8 @@ name = "Blade";
 
 spriteIdle = spr_bladeidle;
 spriteWalk = spr_bladerun;
-spriteAttack = spr_bladeatk1;
+spriteAttack[0] = spr_bladeatk1;
+spriteAttack[1] = spr_bladeatk2;
 spriteDead = spr_bladedead;
 
 damage = SetStat(10, 15, 25, 35);	//old stats (10, 16, 23, 31)
