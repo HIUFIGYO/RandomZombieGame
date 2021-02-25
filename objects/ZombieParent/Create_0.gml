@@ -11,6 +11,8 @@ fadeOutTime = 150;
 isAttacking = false;
 attackRange = 1;
 
+specialActive = false;
+
 grav = 0.981;
 acceleration = 0.1;
 moveSpeed = 2;

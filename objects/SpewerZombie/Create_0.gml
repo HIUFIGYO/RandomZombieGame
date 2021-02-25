@@ -13,3 +13,9 @@ maxHp = hp;
 moveSpeed = SetZombieSpeed(1);
 
 acid = true;
+
+specialUsed = false;
+specialCooldown = 0;
+cooldownTime = 10;
+specialMinRange = 128;
+specialMaxRange = 640;

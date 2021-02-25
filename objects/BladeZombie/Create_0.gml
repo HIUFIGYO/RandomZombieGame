@@ -12,3 +12,5 @@ damage = SetStat(10, 15, 25, 35);	//old stats (10, 16, 23, 31)
 hp = SetStat(14, 17, 20, 26);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(5);
+
+structureBonusDamage = 1.5;

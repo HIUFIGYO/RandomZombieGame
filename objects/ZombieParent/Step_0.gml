@@ -24,12 +24,14 @@ if(!isDead)
 	ds_grid_destroy(targets);
 }
 
+//show health
 if(showHealth)
 {
 	showHealthTimer -= DeltaTimeSecond();
 	if(showHealthTimer <= 0)
 		showHealth = false;
 }
+
 //fade out
 if(fadeOut > 0)
 {
@@ -40,7 +42,7 @@ if(fadeOut > 0)
 }
 
 //movement/gravity
-if(target != noone and !isDead and !isAttacking)
+if(target != noone and !isDead and !isAttacking and !specialActive)
 {
 	var dir = sign(target.x - x);
 	xSpeed += acceleration * dir;
@@ -57,7 +59,7 @@ ySpeed += grav;
 ySpeed = min(ySpeed, maxFallSpeed);
 
 //handle sprites/flipping
-if(!isDead and !isAttacking)
+if(!isDead and !isAttacking and !specialActive)
 {
 	if(xSpeed != 0)
 		image_xscale = sign(xSpeed);
@@ -112,7 +114,7 @@ if(block)
 y += ySpeed * DeltaTime();
 
 //attack
-if(!isDead and !isAttacking and target != noone)
+if(!isDead and !isAttacking and target != noone and !specialActive)
 {
 	if(distance_to_object(target) <= attackRange or barricadeID != noone)
 	{
