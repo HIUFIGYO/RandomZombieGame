@@ -12,3 +12,4 @@ damage = SetStat(20, 30, 45, 60);
 hp = SetStat(50, 60, 70 , 90) * (1 + ((global.playerAmount - 1) * 0.5));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
+attackRange = 16;

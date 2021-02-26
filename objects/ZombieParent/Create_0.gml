@@ -28,7 +28,6 @@ image_speed = 0.5;
 spriteIdle = noone;
 spriteWalk = noone;
 spriteRun = noone;
-spriteSpecial = noone;
 spriteDead = noone;
 spriteAttack[0] = noone;
 spriteAttack[1] = noone;

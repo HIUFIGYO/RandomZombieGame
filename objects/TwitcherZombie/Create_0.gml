@@ -11,3 +11,4 @@ damage = SetStat(1, 3, 6, 10);	//old stats (2, 3, 5, 8)
 hp = SetStat(10, 12, 14, 18);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
+attackRange = 4;
