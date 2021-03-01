@@ -5,5 +5,5 @@ if(sprite_index = spr_spewershoot)
 	sprite_index = !isDead ? spriteIdle : spriteDead;
 	specialActive = false;
 	specialCooldown = cooldownTime;
-	ZombieCreateBurst(id, 10);
+	instance_create_layer(id.x, id.y - (id.bbox_bottom - id.bbox_top) / 2, GameManager.layerObject, SpewerProjectile);
 }

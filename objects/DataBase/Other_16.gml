@@ -135,7 +135,7 @@ shop[Buff.Damage, ShopKey.Description] = "Increase flame damage by 0.5\nIncrease
 shop[Buff.Damage, ShopKey.Price] = 1500;
 
 shop[Buff.Critical, ShopKey.Name] = "Critical Buff";
-shop[Buff.Critical, ShopKey.Description] = "Gain 5% chance to deal double damage";
+shop[Buff.Critical, ShopKey.Description] = "Gain 10% chance to deal double damage";
 shop[Buff.Critical, ShopKey.Price] = 1500;
 
 shop[Buff.Scout, ShopKey.Name] = "Scout Buff";
@@ -201,7 +201,7 @@ shop[SupportType.AdvBarricade, ShopKey.Description] = "Blocks and damages oncomi
 shop[SupportType.AdvBarricade, ShopKey.Price] = 750;
 
 shop[SupportType.Turret, ShopKey.Name] = "Turret";
-shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\nHealth: 375\nDamage: 1\nFirerate: 0.25\n Accuracy: 95%";
+shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\nHealth: 375\nDamage: 1\nFirerate: 0.25\n Accuracy: 95%\nMag Size: 50\nReload Time: 4 seconds";
 shop[SupportType.Turret, ShopKey.Price] = 1500;
 
 shop[SupportType.HealGenerator, ShopKey.Name] = "Heal Generator";
@@ -230,6 +230,6 @@ shop[SpecialType.Bank, ShopKey.Name] = "Bank";
 shop[SpecialType.Bank, ShopKey.Description] = "Adds banking functionality to the shop.\nThrow money at the shop to deposit money.\nCan deposit a maximum of $2000";
 shop[SpecialType.Bank, ShopKey.Price] = 2000;
 
-shop[SpecialType.Revive, ShopKey.Name] = "Revive ";
+shop[SpecialType.Revive, ShopKey.Name] = "Revive";
 shop[SpecialType.Revive, ShopKey.Description] = "Revive with full health.";
 shop[SpecialType.Revive, ShopKey.Price] = 2000;

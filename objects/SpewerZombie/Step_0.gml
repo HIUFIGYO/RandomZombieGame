@@ -1,6 +1,6 @@
 event_inherited();
 
-if(!specialUsed and specialCooldown == 0 and target != noone)
+if(!specialUsed and specialCooldown == 0 and target != noone and !isDead)
 {
 	var range = sqr(x - target.x) + sqr(y - target.y);
 	if(range >= sqr(specialMinRange) and range <= sqr(specialMaxRange))

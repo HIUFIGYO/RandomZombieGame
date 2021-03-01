@@ -1,0 +1,1 @@
+GameBloodGrinderDrawSelf(id);
