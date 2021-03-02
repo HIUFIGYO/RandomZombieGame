@@ -201,7 +201,7 @@ shop[SupportType.AdvBarricade, ShopKey.Description] = "Blocks and damages oncomi
 shop[SupportType.AdvBarricade, ShopKey.Price] = 750;
 
 shop[SupportType.Turret, ShopKey.Name] = "Turret";
-shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\nHealth: 375\nDamage: 1\nFirerate: 0.25\n Accuracy: 95%\nMag Size: 50\nReload Time: 4 seconds";
+shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\nHealth: 375\nDamage: 1\nFirerate: 0.2\n Accuracy: 95%\nMag Size: 50\nReload Time: 5 seconds";
 shop[SupportType.Turret, ShopKey.Price] = 1500;
 
 shop[SupportType.HealGenerator, ShopKey.Name] = "Heal Generator";
