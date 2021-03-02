@@ -29,6 +29,8 @@ enum ExplosiveType
 	Incendiary,
 	Mine,
 	BHBomber,
+	Rocket,
+	Acid,
 	count
 }
 

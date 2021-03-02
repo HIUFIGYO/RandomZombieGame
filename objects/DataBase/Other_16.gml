@@ -7,7 +7,7 @@ shop[Weapon.Knife, ShopKey.Description] = "Tier One Melee Weapon\nDamage: 3\nAtt
 shop[Weapon.Knife, ShopKey.Price] = 0;
 
 shop[Weapon.Pistol, ShopKey.Name] = "Standard Pistol";
-shop[Weapon.Pistol, ShopKey.Description] = "Tier One Secondary Weapon\nDamage: 1\nFirerate: 0.1\nAccuracy: 95%\nMag Size: 12\nMax Ammo: 228\nReload Time: 1.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA cheap and reliable side arm capable of dealing with weak singular enemies.";
+shop[Weapon.Pistol, ShopKey.Description] = "Tier One Secondary Weapon\nDamage: 1\nFirerate: 0.1\nAccuracy: 95%\nMag Size: 12\nMax Ammo: 168\nReload Time: 1.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA cheap and reliable side arm capable of dealing with weak singular enemies.";
 shop[Weapon.Pistol, ShopKey.Price] = 250;
 
 shop[Weapon.Rifle, ShopKey.Name] = "Standard Rifle";
@@ -19,7 +19,7 @@ shop[Weapon.Shotgun, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1*
 shop[Weapon.Shotgun, ShopKey.Price] = 750;
 
 shop[Weapon.Knife2, ShopKey.Name] = "Advanced Melee";
-shop[Weapon.Knife2, ShopKey.Description] = "Tier Two Melee Weapon\nDamage: 6\nAttack Speed: 0.25\nPenetration: 1\nA machete that can deal with most weak enemies in a single strike and has improved cleave.";
+shop[Weapon.Knife2, ShopKey.Description] = "Tier Two Melee Weapon\nDamage: 5\nAttack Speed: 0.25\nPenetration: 1\nA machete that can deal with most weak enemies in a single strike and has improved cleave.";
 shop[Weapon.Knife2, ShopKey.Price] = 1000;
 
 shop[Weapon.Pistol2, ShopKey.Name] = "Advanced Pistol";
@@ -35,7 +35,7 @@ shop[Weapon.Shotgun2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1
 shop[Weapon.Shotgun2, ShopKey.Price] = 1750;
 
 shop[Weapon.Knife3, ShopKey.Name] = "Super Melee";
-shop[Weapon.Knife3, ShopKey.Description] = "Tier Three Melee Weapon\nDamage: 9\nAttack Speed: 0.25\nPenetration: 2\nA sword with even better cleave and damage that can easily dispatch all weak and most moderate strengthened enemies.";
+shop[Weapon.Knife3, ShopKey.Description] = "Tier Three Melee Weapon\nDamage: 7\nAttack Speed: 0.25\nPenetration: 2\nA sword with even better cleave and damage that can easily dispatch all weak and most moderate strengthened enemies.";
 shop[Weapon.Knife3, ShopKey.Price] = 2000;
 
 shop[Weapon.Pistol3, ShopKey.Name] = "Super Pistol";
@@ -59,7 +59,7 @@ shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Im
 shop[Weapon.Rocket, ShopKey.Price] = 3250;
 
 shop[Weapon.Tesla, ShopKey.Name] = "Tesla Rifle";
-shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 2\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 250\nReload Time: 2.5 Seconds\nPenetration: 4\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
+shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 2\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 250\nReload Time: 2.5 Seconds\nPenetration: 2\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
 shop[Weapon.Tesla, ShopKey.Price] = 3500;
 
 shop[Weapon.Acid, ShopKey.Name] = "Bio Launcher";
@@ -67,7 +67,7 @@ shop[Weapon.Acid, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impa
 shop[Weapon.Acid, ShopKey.Price] = 3750;
 
 shop[Weapon.Knife4, ShopKey.Name] = "Heated Blade";
-shop[Weapon.Knife4, ShopKey.Description] = "Tier Five Melee Weapon\nDamage: 12\nAttack Speed: 0.25\nPenetration: 2\n35% chance to apply IGNITE\nA powerful experimental blade so hot it can cut through flesh easily, and if it doesn't the heat will cause their flesh to burn.";
+shop[Weapon.Knife4, ShopKey.Description] = "Tier Five Melee Weapon\nDamage: 9\nAttack Speed: 0.25\nPenetration: 2\n35% chance to apply IGNITE\nA powerful experimental blade so hot it can cut through flesh easily, and if it doesn't the heat will cause their flesh to burn.";
 shop[Weapon.Knife4, ShopKey.Price] = 4000;
 
 shop[Weapon.Purple, ShopKey.Name] = "Purple Gun";
