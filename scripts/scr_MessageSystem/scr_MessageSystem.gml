@@ -55,8 +55,16 @@ function MessageGetColor(_messageFilter)
 {
 	switch(_messageFilter)
 	{
+		case MessageFilter.PlayerDown:
+			return c_red;
+		case MessageFilter.PlayerKill:
+			return c_white;
+		case MessageFilter.SpecialZombie:
+			return c_orange;
 		case MessageFilter.Notification:
 			return c_aqua;
+		case MessageFilter.Debug:
+			return c_lime;
 	}
 	
 	return c_white;

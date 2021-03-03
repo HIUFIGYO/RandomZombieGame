@@ -1,6 +1,7 @@
 event_inherited();
 
 name = "Ripper";
+MessageAddAll("A saw can be heard in the distance...", MessageFilter.SpecialZombie)
 
 spriteIdle = spr_ripperidle;
 spriteWalk = spr_ripperrun;

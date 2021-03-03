@@ -1,7 +1,11 @@
 event_inherited();
 additionalZombies = global.playerAmount * 4 + (global.difficulty * 2);
 
-alarm[0] = 300 - (global.playerAmount * 60);
+zombieSpawnRate = 300;
+maxSpawnRate = zombieSpawnRate;
+
+alarm[0] = maxSpawnRate - (global.playerAmount * 60);
+alarm[1] = 27000; //7 minutes 30 seconds
 
 killsTotalText = UICreateText(0, 0, "", UIDrawTo.GUI);
 UISetAlign(killsTotalText, RectAlign.Center, RectAlign.Top);

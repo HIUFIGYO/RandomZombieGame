@@ -1,6 +1,7 @@
 event_inherited();
 
 name = "Alpha Creeper";
+MessageAddAll("Faint creepy groans begin to grow louder...", MessageFilter.SpecialZombie)
 
 spriteIdle = spr_Acreeperidle;
 spriteWalk = spr_Acreeperrun;
