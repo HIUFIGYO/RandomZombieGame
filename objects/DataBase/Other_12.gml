@@ -32,17 +32,3 @@ explosionDamage[ExplosiveType.BHBomber] = 0;
 explosionSize[ExplosiveType.BHBomber] = spr_HBexplosionsmall;
 explosionFuseTime[ExplosiveType.BHBomber] = 3;
 explosionPierce[ExplosiveType.BHBomber] = 3;
-
-//Rocket Launcher Explosion
-explosionImpact[ExplosiveType.Rocket] = 0;
-explosionDamage[ExplosiveType.Rocket] = 10;
-explosionSize[ExplosiveType.Rocket] = spr_HBexplosionlarge;
-explosionFuseTime[ExplosiveType.Rocket] = 0;
-explosionPierce[ExplosiveType.Rocket] = 8;
-
-//Bio Launcher Explosion
-explosionImpact[ExplosiveType.Acid] = 0;
-explosionDamage[ExplosiveType.Acid] = 5;
-explosionSize[ExplosiveType.Acid] = spr_HBexplosionmedium;
-explosionFuseTime[ExplosiveType.Acid] = 0;
-explosionPierce[ExplosiveType.Acid] = 5;
