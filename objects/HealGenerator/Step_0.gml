@@ -6,7 +6,7 @@ if(healingDuration > 0)
 	var healGen = id;
 	with(Player)
 	{
-		if(DistanceToObject(id, healGen, healGen.healingRange))
+		if(DistanceToObjectOffset(id, healGen, healGen.healingRange, sprite_get_width(sprite_index)/2, 0))
 		{
 			HealPlayer(id, healGen.healAmount * DeltaTimeSecond());
 		}

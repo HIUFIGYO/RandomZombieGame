@@ -92,12 +92,16 @@ _x = xx + 8;
 _y = yy + viewHeight - 64;
 
 if(global.shopID.hasBank)
-	_str = "Bank: $"+string(player.bankedMoney);
+	_str = "Bank: $"+string(round(player.bankedMoney));
 
-draw_text(_x, _y, _str + "\nCash: $"+string(player.money));
+draw_text(_x, _y, _str + "\nCash: $"+string(round(player.money)));
 
+//reload cost
+_str = "Refill Cost: " + string(round(reloadCost[0] + reloadCost[1] + reloadCostGrenade));
+_x = xx + viewWidth / 2;
+_y = yy + viewHeight - 64;
 
-
+draw_text(_x - string_width(_str)/2, _y, _str);
 
 
 

@@ -1,29 +1,3 @@
-//find target
-if(!isDead)
-{
-	var targetCount = instance_number(Player);
-	var targets = ds_grid_create(2, targetCount);
-	for(var i=0; i<targetCount; i++)
-	{
-		var _player = instance_find(Player, i);
-		ds_grid_add(targets, 0, i, _player);
-		ds_grid_add(targets, 1, i, distance_to_object(_player));
-	}
-	ds_grid_sort(targets, 1, true);
-
-	target = noone;
-	for(i=0; i<targetCount; i++)
-	{
-		if(!targets[# 0, i].isDead and !CheckVialPositive(targets[# 0, i], VialType.Mimicry))
-		{
-			target = targets[# 0, i];
-			break;
-		}
-	}
-
-	ds_grid_destroy(targets);
-}
-
 //show health
 if(showHealth)
 {

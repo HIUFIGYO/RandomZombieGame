@@ -23,7 +23,8 @@ function GameZombieDead(_id, _player)
 	if(ds_queue_size(GameManager.bodyList) > GameManager.maxBodyCount)
 	{
 		var inst = ds_queue_dequeue(GameManager.bodyList);
-		inst.fadeOut = inst.fadeOutTime;
+		if(instance_exists(inst))
+			inst.fadeOut = inst.fadeOutTime;
 	}
 	
 	if(_player != noone)

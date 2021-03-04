@@ -15,5 +15,12 @@ maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 attackRange = 8;
 
-repeat(SetStat(4, 5, 6, 8))
-	instance_create_layer(x,y,GameManager.layerZombie, CreeperZombie);
+invincible = true;
+
+creeperCount = SetStat(4, 5, 6, 8);
+creeperDied = noone;
+for(var i=0; i<creeperCount; i++)
+{
+	creeperID[i] = instance_create_layer(x + irandom_range(-32, 32), y, GameManager.layerZombie, CreeperZombie);
+	creeperID[i].alphaCreeperID = id;
+}

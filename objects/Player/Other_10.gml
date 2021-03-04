@@ -10,6 +10,7 @@ if(CheckBuff(id, Buff.Demo)and buffCooldown[_slot] <= 0)
 
 if(isDead)
 {
+	isGrabbed = false;
 	var _str = MessageGetDamageTag(damageTag);
 	MessageAddAll(name + _str + zombieTag, MessageFilter.PlayerDown);
 	ShopUpdateSpecials();

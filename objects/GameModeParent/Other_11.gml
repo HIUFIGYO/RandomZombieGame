@@ -11,4 +11,6 @@ with(Player)
 if(gameEnd)
 {
 	gameOverTimer = gameOverTime;
+	with(GameManager)
+		event_perform(ev_other, ev_user0);
 }

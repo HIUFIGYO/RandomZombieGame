@@ -30,3 +30,16 @@ layerPlayer = layer_create(-500);
 //layerUI is -600
 
 alarm[0] = 1;
+
+gameOver = false;
+
+timeString = "";
+timeSeconds = 0;
+timeMinutes = 0;
+timeHours = 0;
+
+timeUI = UICreateText(0, 0, "00 : 00 : 00", UIDrawTo.GUI);
+UISetSize(timeUI, string_width("00 : 00 : 00"), 32);
+UISetAlign(timeUI, RectAlign.Right, RectAlign.Top);
+UISetPadding(timeUI, 16, 16);
+UITextSetAlign(timeUI, fa_right, fa_top);

@@ -1,17 +1,16 @@
 if(sprite_index == spriteAttack[0])
 {	
 	if(target != noone and distance_to_object(target) <= attackRange)
-	{
-		var _id = grabTarget;
-		with(GrappleZombie)
+	{	
+		if(!target.isGrabbed)
 		{
-			if(grabTarget == _id)
-				event_perform(ev_other, ev_user1);
+			target.isGrabbed = true;
+			specialActive = true;
+			grabTarget = target;
+			grabX = grabTarget.x;
+			image_speed = 0;
+			image_index = 8;
 		}
-		specialActive = true;
-		grabTarget = target;
-		image_speed = 0;
-		image_index = 8;
 		
 		if(deBuff[DeBuff.Ignite])
 		{

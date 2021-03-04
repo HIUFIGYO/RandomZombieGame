@@ -1,5 +1,6 @@
 name = "Zombie";
 
+invincible = false;
 hp = 5;
 maxHp = 5;
 damage = 1;

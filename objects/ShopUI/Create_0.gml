@@ -25,6 +25,11 @@ itemDescription = "";
 itemPrice = 0;
 sellPrice = 0;
 
+recalculateReloadCost = true;
+reloadCost[0] = 0;
+reloadCost[1] = 0;
+reloadCostGrenade = 0;
+
 //create lists
 for(var i=0; i<ShopTab.count; i++)
 {

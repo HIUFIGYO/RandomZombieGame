@@ -105,3 +105,5 @@ if(updateText)
 {
 	UITextSet(controlText, textMessage[showControls]);
 }
+
+UITextSet(totalZombieText, "Total Zombies: " + string(totalZombies));

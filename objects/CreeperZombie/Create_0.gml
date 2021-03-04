@@ -13,3 +13,10 @@ hp = SetStat(10, 10, 10, 10) * (1 + ((global.playerAmount - 1) * 0.5));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(5);
 attackRange = 8;
+
+protectAlpha = choose(false, true);
+switchTargetMin = 3;
+switchTargetMax = 5;
+switchTimer = random_range(switchTargetMin, switchTargetMax);
+
+alphaCreeperID = noone;

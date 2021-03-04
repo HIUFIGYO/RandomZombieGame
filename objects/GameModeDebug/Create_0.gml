@@ -59,7 +59,13 @@ UISetSize(difficultyImage, 64, 128);
 
 controlText = UICreateText(0, 0, textMessage[0], UIDrawTo.GUI);
 UISetAlign(controlText, RectAlign.Center, RectAlign.Top);
-UISetPadding(controlText, 16, 16);
+UISetPadding(controlText, 16, 48);
 UISetSize(controlText, 480, 480);
 UITextSetAlign(controlText, fa_right, fa_top);
 UITextSetLineSep(controlText, 16);
+
+totalZombieText = UICreateText(0, 0, "", UIDrawTo.GUI);
+UISetAlign(totalZombieText, RectAlign.Center, RectAlign.Top);
+UISetPadding(totalZombieText, 16, 16);
+UISetSize(totalZombieText, 256, 32);
+UITextSetAlign(totalZombieText, fa_center, fa_top);

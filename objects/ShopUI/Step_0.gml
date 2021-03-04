@@ -1,5 +1,34 @@
 if(!hasControl)
 	exit;
+	
+//calculate reload cost
+if(recalculateReloadCost)
+{
+	recalculateReloadCost = false;
+	reloadCost[0] = 0;
+	reloadCost[1] = 0;
+	reloadCostGrenade = 0;
+	var item, _size, _maxSize;
+
+	for(var i=0; i<2; i++)
+	{
+		item = player.weapon[i];
+		if(item != noone)
+		{
+			_size = player.mag[i] + player.ammo[i];
+			_maxSize = GetMaxMag(player, i) + GetMaxAmmo(player, i);
+			reloadCost[i] = (1 - (_size / _maxSize)) * ShopGetSellPrice(item);
+		}
+	}
+	
+	item = player.grenadeType;
+	if(item != noone)
+	{
+		_size = player.grenadeAmount;
+		_maxSize = GetMaxGrenades(player);
+		reloadCostGrenade = (1 - (_size / _maxSize)) * ShopGetSellPrice(item);
+	}
+}
 
 //close shop
 if(InputGetButtonDown(player.player_inputID, Button.Cancel))
@@ -8,8 +37,23 @@ if(InputGetButtonDown(player.player_inputID, Button.Cancel))
 //refill ammo
 if(InputGetButtonDown(player.player_inputID, Button.Reload))
 {
-	//calculate cost
-	//reload if funds sufficient
+	recalculateReloadCost = true;
+	
+	for(var i=0; i<2; i++)
+	{
+		if(reloadCost[i] > 0 and PlayerGetMoney(player) >= reloadCost[i])
+		{
+			PlayerSpendMoney(player, reloadCost[i]);
+			player.mag[i] = GetMaxMag(player, i);
+			player.ammo[i] = GetMaxAmmo(player, i);
+		}
+	}
+	
+	if(reloadCostGrenade > 0 and PlayerGetMoney(player) >= reloadCostGrenade)
+	{
+		PlayerSpendMoney(player, reloadCostGrenade);
+		player.grenadeAmount = GetMaxGrenades(player);
+	}
 }
 	
 //switch tabs
@@ -85,4 +129,5 @@ if(InputGetButtonDown(player.player_inputID, Button.Confirm))
 {
 	ShopProcessSelection(id);
 	ShopSetDescription(id);
+	recalculateReloadCost = true;
 }

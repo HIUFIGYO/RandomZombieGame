@@ -13,3 +13,4 @@ maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 
 grabTarget = noone;
+grabX = 0;

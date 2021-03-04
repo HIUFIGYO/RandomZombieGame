@@ -109,6 +109,7 @@ autoFire = false;
 shootTimer = 0;
 player_inputID = Controller.Gamepad1;
 playerID = 0;
+isGrabbed = false;
 
 isWalking = false;
 isJumping = false;
