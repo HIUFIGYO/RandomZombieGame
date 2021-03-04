@@ -50,8 +50,8 @@ function TraceLaser(_id, _flip, _startX, _startY)
 	
 		_startX += 16 * image_xscale;
 	}
+	return 0;
 }
-return 0;
 
 ///@function CycleGear(id, cycle)
 

@@ -5,7 +5,7 @@ global.shopID = id;
 hasBank = false;
 unlockBankOption = false;
 
-restockTime = 5 * 60; //mins * 60 secs
+restockTime = 10 * 60; //mins * 60 secs
 restockTimer = restockTime;
 
 reviveList = ds_list_create();
