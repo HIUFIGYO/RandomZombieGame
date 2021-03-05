@@ -38,8 +38,16 @@ timeSeconds = 0;
 timeMinutes = 0;
 timeHours = 0;
 
+//timer
 timeUI = UICreateText(0, 0, "00 : 00 : 00", UIDrawTo.GUI);
 UISetSize(timeUI, string_width("00 : 00 : 00"), 32);
 UISetAlign(timeUI, RectAlign.Right, RectAlign.Top);
 UISetPadding(timeUI, 16, 16);
 UITextSetAlign(timeUI, fa_right, fa_top);
+
+//difficultyIcon
+difficultyImage = UICreateImage(0, 0, spr_difficultyIcons, UIDrawTo.GUI);
+UIImageSetSubImage(difficultyImage, global.difficulty);
+UISetAlign(difficultyImage, RectAlign.Right, RectAlign.Top);
+UISetPadding(difficultyImage, 136, 8);
+UISetSize(difficultyImage, 32, 32);
