@@ -61,7 +61,7 @@ i++; //Standard Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.One;
 weapon[# WeapStat.Damage, i] = 1;
-weapon[# WeapStat.FireRate, i] = 0.8;
+weapon[# WeapStat.FireRate, i] = 0.75;
 weapon[# WeapStat.Mag, i] = 8;
 weapon[# WeapStat.Ammo, i] = 72;
 weapon[# WeapStat.Accuracy, i] = 0.8;
@@ -114,7 +114,7 @@ weapon[# WeapStat.Pierce, i] = 1;
 i++; //Advanced Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Two;
-weapon[# WeapStat.Damage, i] = 2;
+weapon[# WeapStat.Damage, i] = 1.5;
 weapon[# WeapStat.FireRate, i] = 0.12;
 weapon[# WeapStat.Mag, i] = 30;
 weapon[# WeapStat.Ammo, i] = 270;
@@ -138,7 +138,7 @@ weapon[# WeapStat.Mag, i] = 2;
 weapon[# WeapStat.Ammo, i] = 58;
 weapon[# WeapStat.Accuracy, i] = 0.75;
 weapon[# WeapStat.Range, i] = 1;
-weapon[# WeapStat.Reload, i] = 2.5;
+weapon[# WeapStat.Reload, i] = 1.5;
 weapon[# WeapStat.BulletSpeed, i] = 56;
 weapon[# WeapStat.xOffset, i] = 23;
 weapon[# WeapStat.yOffset, i] = 36;

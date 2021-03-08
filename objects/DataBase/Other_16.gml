@@ -15,7 +15,7 @@ shop[Weapon.Rifle, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1\nF
 shop[Weapon.Rifle, ShopKey.Price] = 500;
 
 shop[Weapon.Shotgun, ShopKey.Name] = "Standard Shotgun";
-shop[Weapon.Shotgun, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1*5\nFirerate: 0.8\nAccuracy: 80%\nMag Size: 8\nMax Ammo: 72\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nA strong but slow early weapon that deals with both singular enemies and groups.";
+shop[Weapon.Shotgun, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1*5\nFirerate: 0.75\nAccuracy: 80%\nMag Size: 8\nMax Ammo: 72\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nA strong but slow early weapon that deals with both singular enemies and groups.";
 shop[Weapon.Shotgun, ShopKey.Price] = 750;
 
 shop[Weapon.Knife2, ShopKey.Name] = "Advanced Melee";
@@ -27,11 +27,11 @@ shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 
 shop[Weapon.Pistol2, ShopKey.Price] = 1250;
 
 shop[Weapon.Rifle2, ShopKey.Name] = "Advanced Rifle";
-shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 2\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
+shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.5\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
 shop[Weapon.Rifle2, ShopKey.Price] = 1500;
 
 shop[Weapon.Shotgun2, ShopKey.Name] = "Advanced Shotgun";
-shop[Weapon.Shotgun2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.5*7\nFirerate: 0.2\nAccuracy: 75%\nMag Size: 2\nMax Ammo: 58\nReload Time: 2.5 Seconds\nPenetration: 1\nFire Mode: Semi-Auto\nA powerful but slow double-barreled shotgun that can clear an entire room of enemies quickly.";
+shop[Weapon.Shotgun2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.5*7\nFirerate: 0.2\nAccuracy: 75%\nMag Size: 2\nMax Ammo: 58\nReload Time: 1.5 Seconds\nPenetration: 1\nFire Mode: Semi-Auto\nA powerful but slow double-barreled shotgun that can clear an entire room of enemies quickly.";
 shop[Weapon.Shotgun2, ShopKey.Price] = 1750;
 
 shop[Weapon.Knife3, ShopKey.Name] = "Super Melee";
@@ -85,7 +85,7 @@ shop[Weapon.BHDarker, ShopKey.Price] = 5000;
 //GRENADES
 
 shop[ExplosiveType.Grenade, ShopKey.Name] = "Explosive Grenades";
-shop[ExplosiveType.Grenade, ShopKey.Description] = "Damage: Impact-1 Explosion-10\nFuse Time: 2 seconds\n Explosion Size: Medium";
+shop[ExplosiveType.Grenade, ShopKey.Description] = "Damage: Impact-0.5 Explosion-12\nFuse Time: 1.5 seconds\n Explosion Size: Medium";
 shop[ExplosiveType.Grenade, ShopKey.Price] = 650;
 
 shop[ExplosiveType.Incendiary, ShopKey.Name] = "Incendiary Bombs";
@@ -93,7 +93,7 @@ shop[ExplosiveType.Incendiary, ShopKey.Description] = "Damage: Explosion-5 Groun
 shop[ExplosiveType.Incendiary, ShopKey.Price] = 650;
 
 shop[ExplosiveType.Mine, ShopKey.Name] = "Mines";
-shop[ExplosiveType.Mine, ShopKey.Description] = "Damage: 20\nFuse Time: 1 second\n Explosion Size: Large";
+shop[ExplosiveType.Mine, ShopKey.Description] = "Damage: 15\nFuse Time: 0.5 second\n Explosion Size: Large";
 shop[ExplosiveType.Mine, ShopKey.Price] = 650;
 
 shop[ExplosiveType.BHBomber, ShopKey.Name] = "B.H. Bomber";
@@ -123,7 +123,7 @@ shop[Buff.Agility, ShopKey.Description] = "Increase jog speed by 1\nIncrease spr
 shop[Buff.Agility, ShopKey.Price] = 1500;
 
 shop[Buff.Reload, ShopKey.Name] = "Reload Buff";
-shop[Buff.Reload, ShopKey.Description] = "Reduce reload speeds by 1 second (Minimum 1 second reloads)";
+shop[Buff.Reload, ShopKey.Description] = "Reduce weapon reload time by 1 second, down to a minimum of 1 second";
 shop[Buff.Reload, ShopKey.Price] = 1500;
 
 shop[Buff.Ammo, ShopKey.Name] = "Ammo Buff";
@@ -226,10 +226,10 @@ shop[SupportType.Armour, ShopKey.Price] = 350;
 
 //SPECIAL ITEMS
 
-shop[SpecialType.Bank, ShopKey.Name] = "Bank";
+shop[SpecialType.Bank, ShopKey.Name] = "Shop Bank";
 shop[SpecialType.Bank, ShopKey.Description] = "Adds banking functionality to the shop.\nThrow money at the shop to deposit money.\nCan deposit a maximum of $2000";
 shop[SpecialType.Bank, ShopKey.Price] = 2000;
 
-shop[SpecialType.Revive, ShopKey.Name] = "Revive";
-shop[SpecialType.Revive, ShopKey.Description] = "Revive with full health.";
+shop[SpecialType.Revive, ShopKey.Name] = "Player Revive";
+shop[SpecialType.Revive, ShopKey.Description] = "Revive a downed player to full health and teleport them to the spawn.\n Price increases by $500 after every purchase";
 shop[SpecialType.Revive, ShopKey.Price] = 2000;

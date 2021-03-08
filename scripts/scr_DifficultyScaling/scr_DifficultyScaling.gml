@@ -27,7 +27,9 @@ function SetStat(_easy, _med, _hard, _veryHard)
 function SetZombieSpeed(_speed)
 {
 	var _value = _speed;
-	if(global.difficulty > GameDifficulty.Medium)
+	if(global.difficulty = GameDifficulty.Hard)
+		_value += 0.5;
+	if(global.difficulty = GameDifficulty.VeryHard)
 		_value += 1;
 	return _value;
 }

@@ -11,7 +11,7 @@ spriteDead = spr_bladedead;
 damage = SetStat(10, 15, 25, 35);
 hp = SetStat(14, 17, 20, 26) * (1 + ((global.playerAmount - 1) * 0.25));
 maxHp = hp;
-moveSpeed = SetZombieSpeed(5);
+moveSpeed = SetZombieSpeed(4.5);
 attackRange = 16;
 
 structureBonusDamage = 1.5;
