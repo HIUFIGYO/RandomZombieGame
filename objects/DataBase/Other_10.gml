@@ -235,7 +235,7 @@ weapon[# WeapStat.yOffset, i] = 36;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Particle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
-weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Pierce, i] = 2;
 
 i++; //Rocket Launcher
 weapon[# WeapStat.Type, i] = WeapType.Primary;

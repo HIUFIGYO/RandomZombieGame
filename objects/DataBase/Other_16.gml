@@ -51,7 +51,7 @@ shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage:
 shop[Weapon.Shotgun3, ShopKey.Price] = 2750;
 
 shop[Weapon.Flame, ShopKey.Name] = "Flame Thrower";
-shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 0.5\nFirerate: 0.1\nAccuracy: 85%\nMag Size: 50\nMax Ammo: 350\nReload Time: 3 Seconds\nPenetration: 0\nFire Mode: Full-Auto\n100% chance to apply IGNITE\nIf you like the smell of flesh burning then look no further than to buy this here Flame Thrower.";
+shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 0.5\nFirerate: 0.1\nAccuracy: 85%\nMag Size: 50\nMax Ammo: 350\nReload Time: 3 Seconds\nPenetration: 1\nFire Mode: Full-Auto\n100% chance to apply IGNITE\nIf you like the smell of flesh burning then look no further than to buy this here Flame Thrower.";
 shop[Weapon.Flame, ShopKey.Price] = 3000;
 
 shop[Weapon.Rocket, ShopKey.Name] = "Rocket Launcher";

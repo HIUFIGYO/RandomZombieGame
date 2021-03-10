@@ -1,7 +1,7 @@
 /// @description Took Damage
 event_inherited();
 
-f(hp <= maxHp * 0.75 and speedBonus == 0)
+if(hp <= maxHp * 0.75 and speedBonus == 0)
 {
 	moveSpeed += 1;
 	speedBonus = 1;

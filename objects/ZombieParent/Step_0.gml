@@ -37,7 +37,7 @@ if(!isDead and !isAttacking and !specialActive)
 {
 	if(xSpeed != 0)
 		image_xscale = sign(xSpeed);
-	image_speed = 0.5;
+	image_speed = min(moveSpeed * 0.2, 0.5);
 	if(xSpeed == 0)
 	{
 		image_speed = 0;
