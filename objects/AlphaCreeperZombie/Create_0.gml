@@ -15,6 +15,8 @@ maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 attackRange = 8;
 
+speedBonus = 0;
+
 invincible = true;
 
 creeperCount = SetStat(4, 5, 6, 8);
