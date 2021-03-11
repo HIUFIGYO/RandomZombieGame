@@ -23,7 +23,7 @@ enum Weapon
 	count
 }
 
-enum ExplosiveType
+enum GrenadeType
 {
 	Grenade = Weapon.count,
 	Incendiary,
@@ -34,7 +34,7 @@ enum ExplosiveType
 
 enum Buff
 {
-	Regeneration = ExplosiveType.count,
+	Regeneration = GrenadeType.count,
 	Health,
 	Resistance,
 	Stamina,
@@ -85,4 +85,14 @@ enum SpecialType
 {
 	Bank = SupportType.count,
 	Revive
+}
+
+enum ExplosionType
+{
+	Grenade = GrenadeType.Grenade,
+	Incendiary = GrenadeType.Incendiary,
+	Mine = GrenadeType.Mine,
+	BHBomber = GrenadeType.BHBomber,
+	Rocket = Weapon.Rocket,
+	Acid = Weapon.Acid
 }

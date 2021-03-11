@@ -2,7 +2,7 @@
 
 var usedCrate = false;
 
-if(lastPlayerUse.grenadeType == ExplosiveType.BHBomber and lastPlayerUse.grenadeAmount < GetMaxGrenades(lastPlayerUse))
+if(lastPlayerUse.grenadeType == GrenadeType.BHBomber and lastPlayerUse.grenadeAmount < GetMaxGrenades(lastPlayerUse))
 {
 	lastPlayerUse.grenadeAmount = GetMaxGrenades(lastPlayerUse);
 	usedCrate = true;

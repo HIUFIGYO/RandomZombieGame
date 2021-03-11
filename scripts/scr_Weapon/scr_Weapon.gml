@@ -68,11 +68,11 @@ function ExplosionGetDamage(_grenadeType)
 	return DataBase.explosionDamage[_grenadeType];
 }
 
-///@function ExplosionGetSize(grenadeType)
+///@function ExplosionGetSize(explosion)
 
-function ExplosionGetSize(_grenadeType)
+function ExplosionGetSize(_explosionType)
 {
-	return DataBase.explosionSize[_grenadeType];
+	return DataBase.explosionSize[_explosionType];
 }
 
 ///@function ExplosionPush(id, explosion, force)

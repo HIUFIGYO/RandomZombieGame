@@ -84,21 +84,21 @@ shop[Weapon.BHDarker, ShopKey.Price] = 5000;
 
 //GRENADES
 
-shop[ExplosiveType.Grenade, ShopKey.Name] = "Explosive Grenades";
-shop[ExplosiveType.Grenade, ShopKey.Description] = "Damage: Impact-0.5 Explosion-12\nFuse Time: 1.5 seconds\n Explosion Size: Medium";
-shop[ExplosiveType.Grenade, ShopKey.Price] = 650;
+shop[GrenadeType.Grenade, ShopKey.Name] = "Explosive Grenades";
+shop[GrenadeType.Grenade, ShopKey.Description] = "Damage: Impact-0.5 Explosion-12\nFuse Time: 1.5 seconds\n Explosion Size: Medium";
+shop[GrenadeType.Grenade, ShopKey.Price] = 650;
 
-shop[ExplosiveType.Incendiary, ShopKey.Name] = "Incendiary Bombs";
-shop[ExplosiveType.Incendiary, ShopKey.Description] = "Damage: Explosion-5 Ground Fire-1\nFuse Time: 0 seconds\n Explosion Size: Small";
-shop[ExplosiveType.Incendiary, ShopKey.Price] = 650;
+shop[GrenadeType.Incendiary, ShopKey.Name] = "Incendiary Bombs";
+shop[GrenadeType.Incendiary, ShopKey.Description] = "Damage: Explosion-5 Ground Fire-1\nFuse Time: 0 seconds\n Explosion Size: Small";
+shop[GrenadeType.Incendiary, ShopKey.Price] = 650;
 
-shop[ExplosiveType.Mine, ShopKey.Name] = "Mines";
-shop[ExplosiveType.Mine, ShopKey.Description] = "Damage: 15\nFuse Time: 0.5 second\n Explosion Size: Large";
-shop[ExplosiveType.Mine, ShopKey.Price] = 650;
+shop[GrenadeType.Mine, ShopKey.Name] = "Mines";
+shop[GrenadeType.Mine, ShopKey.Description] = "Damage: 15\nFuse Time: 0.5 second\n Explosion Size: Large";
+shop[GrenadeType.Mine, ShopKey.Price] = 650;
 
-shop[ExplosiveType.BHBomber, ShopKey.Name] = "B.H. Bomber";
-shop[ExplosiveType.BHBomber, ShopKey.Description] = "Damage: Impact-1 Explosion-5\nFuse Time: 3 seconds\n Explosion Size: Small";
-shop[ExplosiveType.BHBomber, ShopKey.Price] = 4250;
+shop[GrenadeType.BHBomber, ShopKey.Name] = "B.H. Bomber";
+shop[GrenadeType.BHBomber, ShopKey.Description] = "Damage: Impact-1 Explosion-5\nFuse Time: 3 seconds\n Explosion Size: Small";
+shop[GrenadeType.BHBomber, ShopKey.Price] = 4250;
 
 //BUFFS
 

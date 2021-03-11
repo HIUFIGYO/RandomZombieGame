@@ -70,6 +70,15 @@ function GameSpawnZombie()
 	}
 }
 
+///@function GameSpawnSpecial()
+
+function GameSpawnSpecial()
+{
+	var _zombie = choose(RipperZombie, AlphaCreeperZombie);
+	var spawnPoint = GameManager.spawn[irandom(GameManager.spawnNumber - 1)];
+	instance_create_layer(spawnPoint.x, spawnPoint.y, GameManager.layerZombie, _zombie);
+}
+
 ///@function GameSpawnGameMode()
 
 function GameSpawnGameMode()

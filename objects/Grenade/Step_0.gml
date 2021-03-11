@@ -1,6 +1,6 @@
 event_inherited();
 
-if(grenadeType == ExplosiveType.Incendiary and collision)
+if(grenadeType == GrenadeType.Incendiary and collision)
 	instance_destroy();
 
 if(fuseTime > 0)

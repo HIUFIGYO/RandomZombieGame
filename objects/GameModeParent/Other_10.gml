@@ -1,5 +1,17 @@
 /// @desc Zombie Has Died
 
+//spawn special zombies
+
+if(totalKills mod 100 == 0)
+{
+	GameSpawnSpecial();
+	//spawn special
+	if(totalKills >= 400)
+		GameSpawnSpecial();
+	if(totalKills >= 700)
+		GameSpawnSpecial();
+}
+
 //add new zombies
 switch(totalKills + difficultyOffset)
 {

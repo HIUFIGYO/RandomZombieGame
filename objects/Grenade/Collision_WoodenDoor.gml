@@ -1,6 +1,6 @@
 if(other.canCollidePlayer)
 {
 	xSpeed = 0;
-	if(grenadeType == ExplosiveType.Incendiary)
+	if(grenadeType == GrenadeType.Incendiary)
 		instance_destroy();
 }	

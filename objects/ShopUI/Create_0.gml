@@ -60,10 +60,10 @@ ds_list_add(itemList[ShopTab.Melee], Weapon.Knife2);
 ds_list_add(itemList[ShopTab.Melee], Weapon.Knife3);
 ds_list_add(itemList[ShopTab.Melee], Weapon.Knife4);
 
-ds_list_add(itemList[ShopTab.Grenades], ExplosiveType.Grenade);
-ds_list_add(itemList[ShopTab.Grenades], ExplosiveType.Incendiary);
-ds_list_add(itemList[ShopTab.Grenades], ExplosiveType.Mine);
-ds_list_add(itemList[ShopTab.Grenades], ExplosiveType.BHBomber);
+ds_list_add(itemList[ShopTab.Grenades], GrenadeType.Grenade);
+ds_list_add(itemList[ShopTab.Grenades], GrenadeType.Incendiary);
+ds_list_add(itemList[ShopTab.Grenades], GrenadeType.Mine);
+ds_list_add(itemList[ShopTab.Grenades], GrenadeType.BHBomber);
 
 ds_list_add(itemList[ShopTab.Buffs], Buff.Regeneration);
 ds_list_add(itemList[ShopTab.Buffs], Buff.Health);

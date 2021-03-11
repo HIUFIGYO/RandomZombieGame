@@ -3,32 +3,40 @@
 explosionMaxAmmo = 5;
 
 //grenade
-explosionImpact[ExplosiveType.Grenade] = 0.5;
-explosionDamage[ExplosiveType.Grenade] = 12;
-explosionSize[ExplosiveType.Grenade] = spr_HBexplosionmedium;
-explosionFuseTime[ExplosiveType.Grenade] = 1.5;
-explosionPierce[ExplosiveType.Grenade] = 8;
+explosionImpact[GrenadeType.Grenade] = 0.5;
+explosionDamage[GrenadeType.Grenade] = 12;
+explosionSize[GrenadeType.Grenade] = spr_HBexplosionmedium;
+explosionFuseTime[GrenadeType.Grenade] = 1.5;
+explosionPierce[GrenadeType.Grenade] = 8;
 
 //incendiary
 incendiaryGroundFire = 1;
 incendiaryIgniteChance = 0.5;
-explosionImpact[ExplosiveType.Incendiary] = 0;
-explosionDamage[ExplosiveType.Incendiary] = 5;
-explosionSize[ExplosiveType.Incendiary] = spr_HBexplosionsmall;
-explosionFuseTime[ExplosiveType.Incendiary] = 0;
-explosionPierce[ExplosiveType.Incendiary] = 3;
+explosionImpact[GrenadeType.Incendiary] = 0;
+explosionDamage[GrenadeType.Incendiary] = 5;
+explosionSize[GrenadeType.Incendiary] = spr_HBexplosionsmall;
+explosionFuseTime[GrenadeType.Incendiary] = 0;
+explosionPierce[GrenadeType.Incendiary] = 3;
 
 //mines
-explosionImpact[ExplosiveType.Mine] = 0;
-explosionDamage[ExplosiveType.Mine] = 15;
-explosionSize[ExplosiveType.Mine] = spr_HBexplosionlarge;
-explosionFuseTime[ExplosiveType.Mine] = 0.5;
-explosionPierce[ExplosiveType.Mine] = 5;
+explosionImpact[GrenadeType.Mine] = 0;
+explosionDamage[GrenadeType.Mine] = 15;
+explosionSize[GrenadeType.Mine] = spr_HBexplosionlarge;
+explosionFuseTime[GrenadeType.Mine] = 0.5;
+explosionPierce[GrenadeType.Mine] = 5;
 
 //BH Bomber
 bomberShock = 5;
-explosionImpact[ExplosiveType.BHBomber] = 1;
-explosionDamage[ExplosiveType.BHBomber] = 5;
-explosionSize[ExplosiveType.BHBomber] = spr_HBexplosionsmall;
-explosionFuseTime[ExplosiveType.BHBomber] = 3;
-explosionPierce[ExplosiveType.BHBomber] = 3;
+explosionImpact[GrenadeType.BHBomber] = 1;
+explosionDamage[GrenadeType.BHBomber] = 5;
+explosionSize[GrenadeType.BHBomber] = spr_HBexplosionsmall;
+explosionFuseTime[GrenadeType.BHBomber] = 3;
+explosionPierce[GrenadeType.BHBomber] = 3;
+
+//rocket
+explosionDamage[ExplosionType.Rocket] = 10;
+explosionSize[ExplosionType.Rocket] = spr_HBexplosionlarge;
+
+//bio launcher
+explosionDamage[ExplosionType.Acid] = 5;
+explosionSize[ExplosionType.Acid] = spr_HBexplosionmedium;

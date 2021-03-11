@@ -1,4 +1,4 @@
-CreateExplosion(id, playerID);
+CreateExplosion(id, playerID, grenadeType);
 
-if (grenadeType == ExplosiveType.Incendiary)
+if (grenadeType == GrenadeType.Incendiary)
 	CreateGroundFire(playerID, x, y - 5, groundFireAmount);

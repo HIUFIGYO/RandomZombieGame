@@ -59,7 +59,7 @@ meleeWeapon = Weapon.Knife;
 canSpawnMeleeHB = true;
 
 //grenade
-grenadeType = ExplosiveType.Grenade;
+grenadeType = GrenadeType.Grenade;
 grenadeAmount = 3;
 
 //med item
@@ -160,5 +160,3 @@ head_index = irandom(sprite_get_number(spriteHead));
 torso_index = irandom(sprite_get_number(spriteTorso));
 cosmetic_index = irandom(sprite_get_number(spriteCosmetic));
 walking_index = 0;
-
-GiveSupport(id, SupportType.Turret);

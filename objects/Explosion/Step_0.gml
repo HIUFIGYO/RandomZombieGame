@@ -10,7 +10,7 @@ for(var i=0; i<count; i++)
 	var hit = object_get_name(object_get_parent(hits[| i].object_index));
 	
 	if(hit == "ZombieParent")
-	{
+	{		
 		ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
 		
 		if(hits[| i].isDead)
@@ -34,14 +34,16 @@ for(var i=0; i<count; i++)
 		maxHits -= 1;
 		
 		var _damage = ExplosionGetDamage(grenadeType);
-
-		if(CheckBuff(playerID, Buff.Damage) and _damage > 0)
-			_damage += DataBase.damageBuffExplosive;
+		
+		if(_damage > 0)
+		{
+			GameSprayBlood(_damage, x, y, hits[| i].acid, 0);
+			if(CheckBuff(playerID, Buff.Damage))
+				_damage += DataBase.damageBuffExplosive;
+		}
 	
 		DamageZombie(playerID, hits[| i], _damage);
 
-		if(_damage > 0)
-			GameSprayBlood(_damage, x, y, hits[| i].acid, 0);
 		continue;
 	}
 	

@@ -27,21 +27,14 @@ function CreateGrenade(_player)
 
 ///@function CreateExplosion(instance, playerID)
 
-function CreateExplosion(_instance, _playerID)
+function CreateExplosion(_instance, _playerID, _explosionType)
 {
 	var inst = instance_create_layer(_instance.x, _instance.y, GameManager.layerObject, Explosion);
 	inst.playerID = _playerID;
-	inst.grenadeType = _playerID.grenadeType;
-	inst.sprite_index = ExplosionGetSize(_playerID.grenadeType);
-}
-
-///@function CreateRocketExplosion(instance, playerID)
-
-function CreateRocketExplosion(_instance, _playerID)
-{
-	var inst = instance_create_layer(_instance.x, _instance.y, GameManager.layerObject, Explosion);
-	inst.playerID = _playerID;
-	inst.sprite_index = spr_HBexplosionlarge;
+	inst.grenadeType = _explosionType;
+	inst.sprite_index = ExplosionGetSize(_explosionType);
+	if(_explosionType == ExplosionType.Acid)
+		inst.acid = true;
 }
 
 ///@function CreateGroundFire(player, x, y, amount)
