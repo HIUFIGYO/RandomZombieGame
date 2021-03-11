@@ -160,3 +160,5 @@ head_index = irandom(sprite_get_number(spriteHead));
 torso_index = irandom(sprite_get_number(spriteTorso));
 cosmetic_index = irandom(sprite_get_number(spriteCosmetic));
 walking_index = 0;
+
+GiveSupport(id, SupportType.Turret);

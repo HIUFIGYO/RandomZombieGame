@@ -2,7 +2,7 @@
 
 function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 {
-	if(_zombie.invincible)
+	if(_zombie.invincible or _damage == 0)
 		return;
 	
 	ignoreBuffs = is_undefined(ignoreBuffs) ? false : ignoreBuffs;

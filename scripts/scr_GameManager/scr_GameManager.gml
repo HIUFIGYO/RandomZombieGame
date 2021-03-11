@@ -31,7 +31,14 @@ function GameZombieDead(_id, _player)
 	{
 		_player.kills += 1;
 		GameManager.gameMode.totalKills += 1;
-		MessageAddPlayer(_player, _player.name + " has killed a " + _id.name, MessageFilter.PlayerKill);
+		if(_id.name == "Ripper" or _id.name == "Alpha Creeper")
+		{
+			MessageAddAll(_player.name + " finished off a " + _id.name, MessageFilter.SpecialZombie);
+		}
+		else
+		{
+			MessageAddPlayer(_player, _player.name + " has killed a " + _id.name, MessageFilter.PlayerKill);
+		}
 		with(GameManager.gameMode)
 			event_perform(ev_other, ev_user0);
 	}
