@@ -43,8 +43,8 @@ if(keyboard_check_pressed(vk_numpad2))
 	var player = instance_find(Player, 0);
 	var inst = instance_create_layer(player.x, player.y - 72, GameManager.layerObject, WeaponDrops);
 	inst.weapon_id = weaponSelect;
-	inst.ammo = DataWeapon(weaponSelect, WeapStat.Ammo);
-	inst.mag = DataWeapon(weaponSelect, WeapStat.Mag);
+	inst.ammo = DataBaseGetWeapon(weaponSelect, WeapStat.Ammo);
+	inst.mag = DataBaseGetWeapon(weaponSelect, WeapStat.Mag);
 	inst.image_index = weaponSelect;
 }
 
@@ -59,7 +59,7 @@ if(godMode)
 		RevivePlayer(id, GetMaxHealth(id));
 		stamina = GetMaxStamina(id);
 		grenadeAmount = 5;
-		mag[currentWeapon] = DataWeapon(weapon[currentWeapon], WeapStat.Mag);
+		mag[currentWeapon] = DataBaseGetWeapon(weapon[currentWeapon], WeapStat.Mag);
 		PlayerGiveMoney(id, DataBase.maxMoney);
 	}
 }

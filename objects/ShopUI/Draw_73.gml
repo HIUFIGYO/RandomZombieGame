@@ -48,7 +48,7 @@ for(i=0; i<size; i++)
 	if(tabSelect < ShopTab.Special)
 		_str = " x " + string(ShopGetStock(itemList[tabSelect][| i]));
 	draw_set_color(listSelect == i ? c_yellow : c_white);
-	draw_text(_x, _y + i*_padding, ShopGetItemData(itemList[tabSelect][| i], ShopKey.Name) + _str);
+	draw_text(_x, _y + i*_padding, DataBaseShopGetInfo(itemList[tabSelect][| i], ShopKey.Name) + _str);
 }
 
 //icon

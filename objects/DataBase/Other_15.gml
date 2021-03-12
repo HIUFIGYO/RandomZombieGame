@@ -1,13 +1,16 @@
 /// @description Medical
 
-healingAmount[HealingType.Medicine] = 35;
-healingTimer[HealingType.Medicine] = 1; //in seconds
-healingUses[HealingType.Medicine] = 1;
+//medicine
+healingAmount[0] = 35;
+healingTimer[0] = 1; //in seconds
+healingUses[0] = 1;
 
-healingAmount[HealingType.Syringe] = 50;
-healingTimer[HealingType.Syringe] = 2; //in seconds
-healingUses[HealingType.Syringe] = 2;
+//syringe
+healingAmount[1] = 50;
+healingTimer[1] = 2; //in seconds
+healingUses[1] = 2;
 
-healingAmount[HealingType.MedKit] = 80;
-healingTimer[HealingType.MedKit] = 3; //in seconds
-healingUses[HealingType.MedKit] = 2;
+//med-kit
+healingAmount[2] = 80;
+healingTimer[2] = 3; //in seconds
+healingUses[2] = 2;

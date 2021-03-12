@@ -8,7 +8,7 @@ if(lastPlayerUse.grenadeType == GrenadeType.BHBomber and lastPlayerUse.grenadeAm
 	usedCrate = true;
 }
 
-if(DataWeapon(lastPlayerUse.weapon[0], WeapStat.Tier) == Tier.Five)
+if(DataBaseGetWeapon(lastPlayerUse.weapon[0], WeapStat.Tier) == Tier.Five)
 {
 	if(lastPlayerUse.mag[0] < GetMaxMag(lastPlayerUse, 0))
 	{
@@ -22,7 +22,7 @@ if(DataWeapon(lastPlayerUse.weapon[0], WeapStat.Tier) == Tier.Five)
 	}
 }
 
-if(DataWeapon(lastPlayerUse.weapon[1], WeapStat.Tier) == Tier.Five)
+if(DataBaseGetWeapon(lastPlayerUse.weapon[1], WeapStat.Tier) == Tier.Five)
 {
 	if(lastPlayerUse.mag[1] < GetMaxMag(lastPlayerUse, 1))
 	{

@@ -27,14 +27,14 @@ function HealingUse(_playerFrom, _playerTo)
 function GiveWeapon(_player, _item, _slot)
 {
 	_player.weapon[_slot] = _item;
-	_player.ammo[_slot] = DataWeapon(_item, WeapStat.Ammo);
-	_player.mag[_slot] = DataWeapon(_item, WeapStat.Mag);
+	_player.ammo[_slot] = DataBaseGetWeapon(_item, WeapStat.Ammo);
+	_player.mag[_slot] = DataBaseGetWeapon(_item, WeapStat.Mag);
 	_player.reloadTimer[_slot] = 0;
 	
 	if(CheckBuff(_player, Buff.Ammo))
 	{
-		var _ammo = ceil((DataBase.ammoBuffAmmo - 1) * DataWeapon(_player.weapon[_slot], WeapStat.Ammo));
-		var _mag = floor((DataBase.ammoBuffMag - 1) * DataWeapon(_player.weapon[_slot], WeapStat.Mag));
+		var _ammo = ceil((DataBase.ammoBuffAmmo - 1) * DataBaseGetWeapon(_player.weapon[_slot], WeapStat.Ammo));
+		var _mag = floor((DataBase.ammoBuffMag - 1) * DataBaseGetWeapon(_player.weapon[_slot], WeapStat.Mag));
 		_player.ammo[_slot] += _ammo;
 		_player.mag[_slot] += _mag;
 	}
@@ -67,8 +67,8 @@ function GiveBuff(_player, _buff, _slot)
 			{
 				if(_player.weapon[i] == noone)
 					continue;
-				var _ammo = ceil((DataBase.ammoBuffAmmo - 1) * DataWeapon(_player.weapon[i], WeapStat.Ammo));
-				var _mag = floor((DataBase.ammoBuffMag - 1) * DataWeapon(_player.weapon[i], WeapStat.Mag));
+				var _ammo = ceil((DataBase.ammoBuffAmmo - 1) * DataBaseGetWeapon(_player.weapon[i], WeapStat.Ammo));
+				var _mag = floor((DataBase.ammoBuffMag - 1) * DataBaseGetWeapon(_player.weapon[i], WeapStat.Mag));
 				_player.ammo[i] += _ammo;
 				_player.mag[i] += _mag;
 				
@@ -113,10 +113,10 @@ function RemoveBuff(_player, _slot)
 				if(_player.weapon[i] == noone)
 					continue;
 				
-				if(_player.ammo[i] > DataWeapon(_player.weapon[i], WeapStat.Ammo))
-					_player.ammo[i] = DataWeapon(_player.weapon[i], WeapStat.Ammo);
-				if(_player.mag[i] > DataWeapon(_player.weapon[i], WeapStat.Mag))
-					_player.mag[i] = DataWeapon(_player.weapon[i], WeapStat.Mag);
+				if(_player.ammo[i] > DataBaseGetWeapon(_player.weapon[i], WeapStat.Ammo))
+					_player.ammo[i] = DataBaseGetWeapon(_player.weapon[i], WeapStat.Ammo);
+				if(_player.mag[i] > DataBaseGetWeapon(_player.weapon[i], WeapStat.Mag))
+					_player.mag[i] = DataBaseGetWeapon(_player.weapon[i], WeapStat.Mag);
 			}
 			break
 			
@@ -150,8 +150,7 @@ function GiveExplosive(_player, _item)
 function GiveMedical(_player, _item)
 {
 	_player.healingItem = _item;
-	_player.healingItemAmount = DataBase.healingAmount[_item];
-	_player.healingItemAmount = DataBase.healingUses[_item];
+	_player.healingItemAmount = DataBaseMedicalGetUses(_item);
 }
 
 ///@function GiveVial(player, item)

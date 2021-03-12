@@ -94,7 +94,7 @@ UISetAlpha(ammoText, player.weapon[player.currentWeapon] != noone);
 //reload timer
 _alpha = player.reloadTimer[player.currentWeapon] > 0 and player.equipmentCycle == EquipCycle.Weapon;
 if(player.weapon[player.currentWeapon] != noone)
-	index = floor(player.reloadTimer[player.currentWeapon] / DataWeapon(player.weapon[player.currentWeapon], WeapStat.Reload) * sprite_get_number(spr_reloadCircle));
+	index = floor(player.reloadTimer[player.currentWeapon] / DataBaseGetWeapon(player.weapon[player.currentWeapon], WeapStat.Reload) * sprite_get_number(spr_reloadCircle));
 else
 {
 	index = 0;

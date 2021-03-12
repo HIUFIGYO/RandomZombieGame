@@ -92,7 +92,7 @@ if(healingItemTimer > 0)
 	if(healingItemTimer <= 0 and healingItem != noone)
 	{
 		healingItemTimer = 0;
-		HealPlayer(id, DataBase.healingAmount[healingItem]);
+		HealPlayer(id, DataBaseMedicalGetAmount(healingItem));
 		HealDebuffs(id, healingItem);
 		canShoot = true;
 		healingItemAmount -= 1;
@@ -125,7 +125,7 @@ if (equipmentCycle = EquipCycle.Support)
 {
 	var _x = x+supportXOffset * image_xscale,
 		_y = y+supportYOffset,
-		_sprite = SupportGetSprite(supportItem),
+		_sprite = DataBaseSupportGetSprite(supportItem),
 		_left = sprite_get_bbox_left(_sprite),
 		_right = sprite_get_bbox_right(_sprite),
 		_up = -sprite_get_bbox_top(_sprite),
@@ -232,7 +232,7 @@ if(InputPlayerGetButtonDown(player_inputID, Button.Interact))
 					var weapID = noone;
 					var weapMag = 0;
 					var weapAmmo = 0;
-					var type = DataWeapon(returnObject.weapon_id, WeapStat.Type);
+					var type = DataBaseGetWeapon(returnObject.weapon_id, WeapStat.Type);
 					if(type == WeapType.Primary)
 					{
 						if(weapon[0] != noone)
@@ -300,3 +300,5 @@ if(InputPlayerGetButtonDown(player_inputID, Button.Interact))
 		}
 	}
 }
+
+object_is_ancestor()

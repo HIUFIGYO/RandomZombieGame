@@ -17,7 +17,7 @@ if(isDead)
 	
 	money *= SetStat(0.7, 0.6, 0.5, 0.4);
 	
-	if(buff[1] != noone)
+	if(PlayerGetBuff(id, 1) != noone)
 		RemoveBuff(id, 1);
 	else
 		RemoveBuff(id, 0);

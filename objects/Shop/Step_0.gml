@@ -18,7 +18,7 @@ if(restockTimer > 0)
 		restockTimer = restockTime;
 		for(var i=0; i<SupportType.count; i++)
 		{
-			if(i < Weapon.count and DataWeapon(i, WeapStat.Tier) == Tier.Five)
+			if(i < Weapon.count and DataBaseGetWeapon(i, WeapStat.Tier) == Tier.Five)
 				continue;
 			ShopAddStock(i);
 		}

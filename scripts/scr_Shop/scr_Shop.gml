@@ -1,25 +1,3 @@
-enum ShopTab
-{
-	Primary,
-	Secondary,
-	Melee,
-	Grenades,
-	Buffs,
-	Medical,
-	Vials,
-	Support,
-	Special,
-	Sell,
-	count
-}
-
-enum ShopKey
-{
-	Name,
-	Description,
-	Price
-}
-
 ///@function ShopProcessSelection(shop)
 
 function ShopProcessSelection(_shop)
@@ -193,13 +171,6 @@ function ShopSellItem(_shop)
 	}
 }
 
-///@function ShopGetItemData(itemIndex, shopKey)
-
-function ShopGetItemData(_itemIndex, _shopKey)
-{
-	return DataBase.shop[_itemIndex, _shopKey];
-}
-
 ///@function ShopGetStock(itemIndex)
 
 function ShopGetStock(_itemIndex)
@@ -228,14 +199,14 @@ function ShopGetSellPrice(_itemIndex)
 {
 	if(_itemIndex == noone)
 		return 0;
-	return ShopGetItemData(_itemIndex, ShopKey.Price) / 2;
+	return DataBaseShopGetInfo(_itemIndex, ShopKey.Price) / 2;
 }
 
 ///@function ShopCanAffordAndBuy(player, itemIndex, sellPrice)
 
 function ShopCanAffordAndBuy(_player, _itemIndex, _sellPrice)
 {
-	var _price = ShopGetItemData(_itemIndex, ShopKey.Price) - _sellPrice;
+	var _price = DataBaseShopGetInfo(_itemIndex, ShopKey.Price) - _sellPrice;
 	if(PlayerGetMoney(_player) >= _price)
 	{
 		PlayerSpendMoney(_player, _price);
@@ -252,9 +223,9 @@ function ShopSetDescription(_shop)
 	var item = ShopGetItemID(_shop);
 	show_debug_message(item);
 	_shop.itemIconIndex = item;
-	_shop.itemName = ShopGetItemData(item, ShopKey.Name);
-	_shop.itemDescription = ShopGetItemData(item, ShopKey.Description);
-	_shop.itemPrice = ShopGetItemData(item, ShopKey.Price);
+	_shop.itemName = DataBaseShopGetInfo(item, ShopKey.Name);
+	_shop.itemDescription = DataBaseShopGetInfo(item, ShopKey.Description);
+	_shop.itemPrice = DataBaseShopGetInfo(item, ShopKey.Price);
 	_shop.sellPrice = ShopGetSellPrice(ShopGetPlayerItem(_shop));
 	if(item == SpecialType.Revive)
 		_shop.itemPrice += global.shopID.revivePriceAdd;

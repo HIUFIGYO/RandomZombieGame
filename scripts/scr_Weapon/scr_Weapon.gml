@@ -47,13 +47,6 @@ enum Tier
 	Five
 }
 
-///@ function DataWeapon(weapon, stat)
-
-function DataWeapon(weapon, stat)
-{
-	return DataBase.weapon[# stat, weapon];
-}
-
 ///@function CanCancelReload(weapon)
 
 function CanCancelReload(_weapon)

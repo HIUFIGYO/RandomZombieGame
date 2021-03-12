@@ -76,6 +76,7 @@ deBuffCurable[DeBuff.Bleed] = true;
 deBuffStack[DeBuff.Poison] = false;
 deBuffDuration[DeBuff.Poison] = 120;
 deBuffCurable[DeBuff.Poison] = true;
+
 deBuffDamageEasy = 33;
 deBuffDamageMed = 66;
 deBuffDamageHard = 99;

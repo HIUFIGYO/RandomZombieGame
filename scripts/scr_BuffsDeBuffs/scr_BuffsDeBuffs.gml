@@ -23,16 +23,16 @@ function GetBuffSlot(_player, _buff)
 	return 1;
 }
 
-///@function InitDebuffs(id)
+///@function InitDebuffs()
 
-function InitDebuffs(_id)
+function InitDebuffs()
 {
-	_id.deBuffTick = 1;
+	deBuffTick = 1;
 	for(var i=0; i<DeBuff.count; i++)
 	{
-		_id.deBuff[i] = false;
-		_id.deBuffStack[i] = 0;
-		_id.deBuffTimer[i] = 0;
+		deBuff[i] = false;
+		deBuffStack[i] = 0;
+		deBuffTimer[i] = 0;
 	}
 }
 

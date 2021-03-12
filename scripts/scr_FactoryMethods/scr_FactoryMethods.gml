@@ -54,24 +54,24 @@ function CreateGroundFire(_player, _x, _y, _amount)
 
 function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 {
-	var _burst = DataWeapon(_weapon, WeapStat.Burst);
+	var _burst = DataBaseGetWeapon(_weapon, WeapStat.Burst);
 	if(_burst > 1 and CheckBuff(_id, Buff.Damage))
 		_burst += DataBase.damageBuffShotgun;
 	
 	repeat(_burst)
 	{
-		var xoff = DataWeapon(_weapon, WeapStat.xOffset) * flip;
-		var yoff = DataWeapon(_weapon, WeapStat.yOffset);
+		var xoff = DataBaseGetWeapon(_weapon, WeapStat.xOffset) * flip;
+		var yoff = DataBaseGetWeapon(_weapon, WeapStat.yOffset);
 		var inst = instance_create_layer(xx + xoff, yy - yoff, GameManager.layerObject, Bullet);
 		inst.playerID = _id;
 		inst.weapon = _weapon;
-		inst.spd = DataWeapon(_weapon, WeapStat.BulletSpeed);
-		inst.rangeTimer = DataWeapon(_weapon, WeapStat.Range) * game_get_speed(gamespeed_fps);
-		inst.pierce = DataWeapon(_weapon, WeapStat.Pierce);
+		inst.spd = DataBaseGetWeapon(_weapon, WeapStat.BulletSpeed);
+		inst.rangeTimer = DataBaseGetWeapon(_weapon, WeapStat.Range) * game_get_speed(gamespeed_fps);
+		inst.pierce = DataBaseGetWeapon(_weapon, WeapStat.Pierce);
 		inst.image_xscale = flip;
-		inst.image_index = DataWeapon(_weapon, WeapStat.BulletImage);
+		inst.image_index = DataBaseGetWeapon(_weapon, WeapStat.BulletImage);
 		
-		var accuracy = DataWeapon(_weapon, WeapStat.Accuracy);
+		var accuracy = DataBaseGetWeapon(_weapon, WeapStat.Accuracy);
 		if(crouch)
 			accuracy *= 1.05;
 		accuracy = clamp(accuracy, 0, 0.97);
@@ -85,7 +85,7 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 
 function CreateSupportItem(_player)
 {
-	var _inst = instance_create_layer(_player.x+_player.supportXOffset * _player.image_xscale, _player.y+_player.supportYOffset, GameManager.layerObject, SupportGetObject(_player.supportItem));
+	var _inst = instance_create_layer(_player.x+_player.supportXOffset * _player.image_xscale, _player.y+_player.supportYOffset, GameManager.layerObject, DataBaseSupportGetObject(_player.supportItem));
 	_inst.image_xscale = _player.image_xscale;
 	_inst.playerID = _player;
 	if(_player.supportItem == SupportType.Turret)

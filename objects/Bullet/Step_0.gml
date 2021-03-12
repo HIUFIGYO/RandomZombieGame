@@ -60,7 +60,7 @@ if(count > 0)
 				if(weapon == Weapon.Drainer)
 					DebuffApply(hits[| i], DeBuff.Bleed, playerID);
 				
-				DamagePlayer(hits[| i], DataWeapon(weapon, WeapStat.Damage), "FriendlyFire", playerID.name);
+				DamagePlayer(hits[| i], DataBaseGetWeapon(weapon, WeapStat.Damage), "FriendlyFire", playerID.name);
 				GameSprayBlood(GameGetBloodAmount(), x, y, false, image_xscale);
 				continue;
 			}
@@ -89,7 +89,7 @@ if(count > 0)
 				
 			ds_list_add(targetsHit, hits[| i]);
 			
-			var _damage = DataWeapon(weapon, WeapStat.Damage);
+			var _damage = DataBaseGetWeapon(weapon, WeapStat.Damage);
 			if(!ignoreBuffs and CheckBuff(playerID, Buff.Damage))
 			{
 				switch(weapon)
@@ -108,7 +108,7 @@ if(count > 0)
 						break;
 					
 					default:
-						if(DataWeapon(weapon, WeapStat.Burst) <= 1)
+						if(DataBaseGetWeapon(weapon, WeapStat.Burst) <= 1)
 							_damage += DataBase.damageBuffBullet;
 						break;
 				}

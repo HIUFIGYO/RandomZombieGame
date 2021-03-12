@@ -8,7 +8,7 @@ if(lastPlayerUse.grenadeType != GrenadeType.BHBomber and lastPlayerUse.grenadeAm
 	usedCrate = true;
 }
 
-var _tier = DataWeapon(lastPlayerUse.weapon[0], WeapStat.Tier);
+var _tier = DataBaseGetWeapon(lastPlayerUse.weapon[0], WeapStat.Tier);
 if(_tier == Tier.One or _tier == Tier.Two or _tier == Tier.Three)
 {
 	if(lastPlayerUse.mag[0] < GetMaxMag(lastPlayerUse, 0))
@@ -23,7 +23,7 @@ if(_tier == Tier.One or _tier == Tier.Two or _tier == Tier.Three)
 	}
 }
 
-_tier = DataWeapon(lastPlayerUse.weapon[1], WeapStat.Tier);
+_tier = DataBaseGetWeapon(lastPlayerUse.weapon[1], WeapStat.Tier);
 if(_tier == Tier.One or _tier == Tier.Two or _tier == Tier.Three)
 {
 	if(lastPlayerUse.mag[1] < GetMaxMag(lastPlayerUse, 1))

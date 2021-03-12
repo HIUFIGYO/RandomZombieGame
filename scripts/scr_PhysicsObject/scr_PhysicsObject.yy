@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "PhysicsObject",
+    "path": "folders/Scripts/PhysicsObject.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_Player",
+  "name": "scr_PhysicsObject",
   "tags": [],
   "resourceType": "GMScript",
 }

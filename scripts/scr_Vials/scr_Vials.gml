@@ -31,34 +31,20 @@ function DrawVialIcons(_player)
 	if(_player.vialPositiveTimer > 0)
 	{
 		draw_sprite(spr_vialIcons, (_player.currentVial - VialType.Adrenaline) * 2, xx, yy - 40);
-		_index = (_player.vialPositiveTimer / VialGetTimer(_player.currentVial)) * sprite_get_number(spr_buffDurationRing);
+		_index = (_player.vialPositiveTimer / DataBaseVialGetTimer(_player.currentVial)) * sprite_get_number(spr_buffDurationRing);
 		draw_sprite(spr_buffDurationRing, _index, xx, yy - 40);
 	}
 	
 	if(_player.vialNegativeTimer > 0)
 	{
 		draw_sprite(spr_vialIcons, (_player.currentVial - VialType.Adrenaline) * 2 + 1, xx, yy);
-		_index = (_player.vialNegativeTimer / (VialGetTimer(_player.currentVial) * 2)) * sprite_get_number(spr_debuffDurationRing);
+		_index = (_player.vialNegativeTimer / (DataBaseVialGetTimer(_player.currentVial) * 2)) * sprite_get_number(spr_debuffDurationRing);
 		draw_sprite(spr_debuffDurationRing, _index, xx, yy);
 	}
 	else
 	{
 		draw_sprite(spr_vialUsedIcon, (_player.currentVial - VialType.Adrenaline), xx, yy);
-		_index = (_player.vialCooldown / VialGetCooldown(_player.currentVial)) * sprite_get_number(spr_debuffDurationRing);
+		_index = (_player.vialCooldown / DataBaseVialGetCooldown(_player.currentVial)) * sprite_get_number(spr_debuffDurationRing);
 		draw_sprite(spr_debuffDurationRing, _index, xx, yy);
 	}
-}
-
-///@function VialGetCooldown(vial)
-
-function VialGetCooldown(_vial)
-{
-	return DataBase.vialCooldown[_vial - VialType.Adrenaline];
-}
-
-///@function VialGetTimer(vial)
-
-function VialGetTimer(_vial)
-{
-	return DataBase.vialTimer[_vial - VialType.Adrenaline];
 }

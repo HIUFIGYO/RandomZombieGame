@@ -194,7 +194,7 @@ function GetMaxAmmo(_player, _weaponSlot)
 	if(_player.weapon[_weaponSlot] == noone)
 		return 0;
 	
-	var _value = DataWeapon(_player.weapon[_weaponSlot], WeapStat.Ammo);
+	var _value = DataBaseGetWeapon(_player.weapon[_weaponSlot], WeapStat.Ammo);
 	if(CheckBuff(_player, Buff.Ammo))
 		_value *= DataBase.ammoBuffAmmo;
 	return ceil(_value);
@@ -207,7 +207,7 @@ function GetMaxMag(_player, _weaponSlot)
 	if(_player.weapon[_weaponSlot] == noone)
 		return 0;
 	
-	var _value = DataWeapon(_player.weapon[_weaponSlot], WeapStat.Mag);
+	var _value = DataBaseGetWeapon(_player.weapon[_weaponSlot], WeapStat.Mag);
 	if(CheckBuff(_player, Buff.Ammo))
 		_value *= DataBase.ammoBuffMag;
 	return floor(_value);
