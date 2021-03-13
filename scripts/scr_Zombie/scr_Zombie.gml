@@ -94,9 +94,9 @@ function ZombieCreateSpewerExplosion(_id)
 	instance_create_layer(_id.x, _id.y, GameManager.layerObject, SpewerExplosion);
 }
 
-///@function ZombieFindTarget(zombie)
+///@function ZombieFindTarget()
 
-function ZombieFindTarget(_zombie)
+function ZombieFindTarget()
 {
 	var targetCount = instance_number(Player);
 	var targets = ds_grid_create(2, targetCount);
@@ -108,12 +108,12 @@ function ZombieFindTarget(_zombie)
 	}
 	ds_grid_sort(targets, 1, true);
 
-	_zombie.target = noone;
+	target = noone;
 	for(i=0; i<targetCount; i++)
 	{
-		if(!targets[# 0, i].isDead and !CheckVialPositive(targets[# 0, i], VialType.Mimicry))
+		if(!IsDead(targets[# 0, i]) and !CheckVialPositive(targets[# 0, i], VialType.Mimicry))
 		{
-			_zombie.target = targets[# 0, i];
+			target = targets[# 0, i];
 			break;
 		}
 	}

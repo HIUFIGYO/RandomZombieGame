@@ -1,5 +1,5 @@
 if(!isDead)
 {
 	UpdateDebuffs(id, false);
-	ZombieFindTarget(id);
+	ZombieFindTarget();
 }

@@ -1,5 +1,7 @@
 event_inherited();
 
+ZombieAttack();
+
 if(!specialUsed and specialCooldown == 0 and target != noone and !isDead)
 {
 	var range = sqr(x - target.x) + sqr(y - target.y);

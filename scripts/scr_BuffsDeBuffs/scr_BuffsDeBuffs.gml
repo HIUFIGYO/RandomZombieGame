@@ -40,7 +40,7 @@ function InitDebuffs()
 
 function DebuffApply(_id, _debuff, _playerID)
 {
-	if(_id.isDead)
+	if(IsDead(_id))
 		return;
 	
 	if(!is_undefined(_playerID))
