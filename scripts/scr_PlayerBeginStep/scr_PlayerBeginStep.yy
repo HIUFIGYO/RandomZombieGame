@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Zombie",
-    "path": "folders/Scripts/Zombie.yy",
+    "name": "Player",
+    "path": "folders/Scripts/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_Zombie",
+  "name": "scr_PlayerBeginStep",
   "tags": [],
   "resourceType": "GMScript",
 }

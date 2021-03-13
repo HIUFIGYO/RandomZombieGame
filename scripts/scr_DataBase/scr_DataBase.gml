@@ -54,6 +54,41 @@ function DataBaseMedicalGetUses(_medItem)
 	return DataBase.healingUses[_medItem - HealingType.Medicine];
 }
 
+///@function DataBaseBuffMedicRange()
+
+function DataBaseBuffMedicRange()
+{
+	return DataBase.medicBuffRange;
+}
+
+///@function DataBaseBuffRegenHealth()
+
+function DataBaseBuffRegenHealth()
+{
+	return DataBase.medicBuffRegenHealth;
+}
+
+///@function DataBaseBuffRegenEffect()
+
+function DataBaseBuffRegenEffect()
+{
+	return DataBase.regenBuffEffect;
+}
+
+///@function DataBaseBuffReviveFactor()
+
+function DataBaseBuffReviveFactor()
+{
+	return DataBase.medicBuffReviveFactor;
+}
+
+///@function DataBaseBuffResistCooldown()
+
+function DataBaseBuffResistCooldown()
+{
+	return DataBase.resistBuffCooldown;
+}
+
 ///@function DataBaseShopGetInfo(itemType, shopKey)
 
 function DataBaseShopGetInfo(_itemType, _shopKey)

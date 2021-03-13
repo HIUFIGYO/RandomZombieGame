@@ -272,4 +272,9 @@ function PlayerSpendMoney(_player, _amount)
 	}
 }
 
+///@function IsDead(id)
 
+function IsDead(_id)
+{
+	return _id.isDead;
+}
