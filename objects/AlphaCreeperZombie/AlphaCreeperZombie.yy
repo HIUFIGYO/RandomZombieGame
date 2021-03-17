@@ -6,8 +6,8 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "spr_limperidle",
-    "path": "sprites/spr_limperidle/spr_limperidle.yy",
+    "name": "spr_zombieCollision",
+    "path": "sprites/spr_zombieCollision/spr_zombieCollision.yy",
   },
   "persistent": false,
   "parentObjectId": {
