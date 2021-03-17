@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_limperidle","path":"sprites/spr_limperidle/spr_limperidle.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_limperidle",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },
