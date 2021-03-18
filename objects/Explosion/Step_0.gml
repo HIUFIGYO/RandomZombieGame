@@ -7,16 +7,16 @@ for(var i=0; i<count; i++)
 	if( maxHits <= 0 )
 		break;
 	
-	var hit = object_get_name(object_get_parent(hits[| i].object_index));
-	
-	if(hit == "ZombieParent")
+	if(object_is_ancestor(hits[| i].object_index, ZombieParent))
 	{		
 		ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
 		
-		if(hits[| i].isDead)
+		if(IsDead(hits[| i]))
 			continue;
+			
 		if(!ds_exists(targetsAlreadyHit, ds_type_list))
 			targetsAlreadyHit = ds_list_create();
+			
 		var alreadyHit = false;
 		for(var targetHit=0; targetHit<ds_list_size(targetsAlreadyHit); targetHit++)
 		{
@@ -43,20 +43,26 @@ for(var i=0; i<count; i++)
 		}
 	
 		DamageZombie(playerID, hits[| i], _damage);
+		
+		if(!spawnedBH and IsDead(hits[| i]))
+		{
+			spawnBH = true;
+			CreateBlackHole(playerID, ZombieGetMaxHealth(hits[| i]));
+		}
 
 		continue;
 	}
 	
 	
 	
-	if(hit == "PhysicsObject")
+	if(object_is_ancestor(hits[| i].object_index, PhysicsObject))
 	{
 		if(hits[| i].canPush)
 			ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
 		continue;
 	}
 	
-	if(object_get_name(hits[| i].object_index) == "Player")
+	if(hits[| i].object_index == Player)
 	{
 		if(!CheckVialNegative(hits[| i], VialType.Mimicry))
 		{
@@ -91,7 +97,7 @@ for(var i=0; i<count; i++)
 		if(CheckBuff(playerID, Buff.Damage) and _damage > 0)
 			_damage += DataBase.damageBuffExplosive;
 	
-		DamagePlayer(playerID, _damage, "Explosion");
+		DamagePlayer(playerID, _damage * SetStat(0.5, 1, 2, 4), "Explosion");
 
 		if(_damage > 0)
 			GameSprayBlood(_damage, x, y, false, 0);

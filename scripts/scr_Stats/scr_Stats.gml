@@ -59,7 +59,6 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 	if(CheckVialNegative(_player, VialType.TradeOff))
 		_damage *= 4;
 	
-	_damage = round(_damage);
 	var damageToArmour = max(floor(_damage * 0.8), 1);
 	var damageToHealth = floor(_damage * 0.2);
 	

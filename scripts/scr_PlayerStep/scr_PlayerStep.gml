@@ -70,6 +70,8 @@ function PlayerJump()
 {
 	if(InputPlayerGetButtonDown(player_inputID, Button.Jump))
 	{
+		if(isCrouching and place_meeting(x, y+1, OneWayBlock))
+			return;
 		
 		if(jumpCount < 1 + CheckVialPositive(id, VialType.Adrenaline))
 		{

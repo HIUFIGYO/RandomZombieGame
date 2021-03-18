@@ -27,7 +27,7 @@ function ZombieFadeOut()
 
 function ZombieAddVelocity()
 {
-	if(target != noone and !isDead and !isAttacking and !specialActive)
+	if(instance_exists(target) and !isDead and !isAttacking and !specialActive)
 	{
 		var dir = sign(target.x - x);
 		xSpeed += acceleration * dir;

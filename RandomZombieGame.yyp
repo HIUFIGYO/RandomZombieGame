@@ -254,6 +254,7 @@
     {"id":{"name":"spr_twitcherpounch","path":"sprites/spr_twitcherpounch/spr_twitcherpounch.yy",},"order":4,},
     {"id":{"name":"rm_startUp","path":"rooms/rm_startUp/rm_startUp.yy",},"order":5,},
     {"id":{"name":"lighting_set_dirty","path":"scripts/lighting_set_dirty/lighting_set_dirty.yy",},"order":8,},
+    {"id":{"name":"scr_ZombieGetters","path":"scripts/scr_ZombieGetters/scr_ZombieGetters.yy",},"order":2,},
     {"id":{"name":"spr_twitcherpin","path":"sprites/spr_twitcherpin/spr_twitcherpin.yy",},"order":5,},
     {"id":{"name":"OneWayBlock","path":"objects/OneWayBlock/OneWayBlock.yy",},"order":4,},
     {"id":{"name":"spr_twitcherdead","path":"sprites/spr_twitcherdead/spr_twitcherdead.yy",},"order":6,},

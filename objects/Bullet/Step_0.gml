@@ -60,7 +60,7 @@ if(count > 0)
 				if(weapon == Weapon.Drainer)
 					DebuffApply(hits[| i], DeBuff.Bleed, playerID);
 				
-				DamagePlayer(hits[| i], DataBaseGetWeapon(weapon, WeapStat.Damage), "FriendlyFire", playerID.name);
+				DamagePlayer(hits[| i], DataBaseGetWeapon(weapon, WeapStat.Damage) * SetStat(0.5, 1, 2, 4), "FriendlyFire", playerID.name);
 				GameSprayBlood(GameGetBloodAmount(), x, y, false, image_xscale);
 				continue;
 			}
@@ -123,6 +123,11 @@ if(count > 0)
 				_damage *= 2;
 				
 			DamageZombie(playerID, hits[| i], _damage, ignoreBuffs);
+			
+			if(weapon == Weapon.BHDarker and IsDead(hits[| i]))
+			{
+				CreateBlackHole(playerID, ZombieGetMaxHealth(hits[| i]));
+			}
 			GameSprayBlood(GameGetBloodAmount(), x, y, hits[| i].acid, image_xscale);
 				
 			pierce -= 1;

@@ -114,6 +114,9 @@ function MessageGetDamageTag(_tag)
 		case "Explosion":
 			return " was blown to bits";
 			
+		case "BlackHole":
+			return " was turned into spaghetti";
+			
 		case "Zombie":
 			var _word = choose("murdered", "downed", "incapacitated", "crippled", "maimed", "dunked on", "assassinated", "excecuted", "slaughtered", "eradicated", "killed");
 			return " was " + _word + " by a ";

@@ -91,3 +91,12 @@ function CreateSupportItem(_player)
 	if(_player.supportItem == SupportType.Turret)
 		_inst.laserColor = _player.head_color;
 }
+
+///@function CreateBlackHole(player, damage)
+
+function CreateBlackHole(player, damage)
+{
+	var inst = instance_create_layer(x, y, GameManager.layerObject, BlackHole);
+	inst.playerID = player;
+	inst.damage = damage;
+}

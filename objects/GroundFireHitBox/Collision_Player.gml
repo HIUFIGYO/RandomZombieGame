@@ -18,7 +18,7 @@ for(var i=0; i<ds_list_size(targetsHit);  i++)
 if(doDamage)
 {
 	ds_list_add(targetsHit, other);
-	DamagePlayer(other, DataBase.incendiaryGroundFire, "FriendlyFire", other.name);
+	DamagePlayer(other, DataBase.incendiaryGroundFire * SetStat(0.5, 1, 2, 4), "FriendlyFire", other.name);
 	if(random(1) <= DataBase.incendiaryIgniteChance / 2)
 	{
 		DebuffApply(other, DeBuff.Ignite);
