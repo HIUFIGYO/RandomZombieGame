@@ -4,12 +4,20 @@
 
 if(totalKills mod 100 == 0)
 {
+	specialSpawnCount = 0;
 	GameSpawnSpecial();
 	//spawn special
 	if(totalKills >= 400)
-		GameSpawnSpecial();
+		specialSpawnCount++;
 	if(totalKills >= 700)
-		GameSpawnSpecial();
+		specialSpawnCount++;
+	if(totalKills >= 1000)
+		specialSpawnCount++;
+	if(random(1) <= 0.1) and (global.difficulty != GameDifficulty.Easy)
+		specialSpawnCount++;
+		
+	if(specialSpawnCount > 0)
+		alarm[0] = specialSpawnDelay;
 }
 
 //add new zombies

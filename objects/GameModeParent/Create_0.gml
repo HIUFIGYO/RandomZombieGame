@@ -8,6 +8,9 @@ zombieSpawnList = ds_list_create();
 gameOverTime = 5;
 gameOverTimer = 0;
 
+specialSpawnCount = 0;
+specialSpawnDelay = 60; // frames
+
 ds_list_add(zombieSpawnList, LimperZombie);
 
 switch(global.difficulty)

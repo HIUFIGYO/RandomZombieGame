@@ -13,8 +13,8 @@
   "soundFile": "Music_MatchEnd.ogg",
   "duration": 225.235764,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Music",
+    "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
   "name": "Music_MatchEnd",

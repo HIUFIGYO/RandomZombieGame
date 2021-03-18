@@ -85,7 +85,7 @@ function ZombieCheckCollision()
 	var block = place_meeting(x + xSpeed, y, BlockParent);
 	if(block)
 	{
-		while(!place_meeting(x + sign(xSpeed), y, block))
+		while(xSpeed != 0 and !place_meeting(x + sign(xSpeed), y, block))
 		{
 			x += sign(xSpeed);
 		}
@@ -97,7 +97,7 @@ function ZombieCheckCollision()
 	block = place_meeting(x, y + ySpeed, BlockParent);
 	if(block)
 	{
-		while(!place_meeting(x, y + sign(ySpeed), block))
+		while(ySpeed != 0 and !place_meeting(x, y + sign(ySpeed), block))
 		{
 			y += sign(ySpeed);
 		}

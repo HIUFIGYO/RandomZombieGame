@@ -13,8 +13,8 @@
   "soundFile": "Music_Action2.ogg",
   "duration": 348.005,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Music",
+    "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
   "name": "Music_Action2",

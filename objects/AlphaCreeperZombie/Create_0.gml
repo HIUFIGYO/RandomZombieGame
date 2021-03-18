@@ -25,4 +25,11 @@ for(var i=0; i<creeperCount; i++)
 {
 	creeperID[i] = instance_create_layer(x + irandom_range(-32, 32), y, GameManager.layerZombie, CreeperZombie);
 	creeperID[i].alphaCreeperID = id;
+	with(creeperID[i])
+	{
+		while(place_meeting(x, y, BlockParent) or x < 0 or x > room_width)
+		{
+			x = alphaCreeperID.x + irandom_range(-32, 32);
+		}
+	}
 }
