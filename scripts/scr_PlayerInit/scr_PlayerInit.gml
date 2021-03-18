@@ -154,8 +154,8 @@ function PlayerInitSprites()
 	spriteIdle = spr_player;
 	spriteHead = spr_playerheads;
 	spriteTorso = spr_playertorso;
-	spriteArms = spr_playerjustarms;
-	spriteGuns = spr_playerarms;
+	spriteArms = spr_playerArms;
+	spriteGuns = spr_playerArmsGuns;
 	spriteLegs = spr_playerlegs;
 	spriteJumping = spr_playerjumping;
 	spriteCosmetic = spr_playercosmetics;
@@ -167,14 +167,14 @@ function PlayerInitSprites()
 	spriteDeadArms = spr_playerincapacitated_Arms;
 	spriteDeadLegs = spr_playerincapacitated_Legs;
 
-	spriteMelee[0] = spr_playermelee1;
-	spriteMelee[1] = spr_playermelee2;
-	spriteMelee[2] = spr_playermelee3;
-	spriteMelee[3] = spr_playermelee4;
-	spriteMelee[4] = spr_playermelee11;
-	spriteMelee[5] = spr_playermelee21;
-	spriteMelee[6] = spr_playermelee31;
-	spriteMelee[7] = spr_playermelee41;
+	spriteMelee[0] = spr_playerMelee1Arms;
+	spriteMelee[1] = spr_playerMelee2Arms;
+	spriteMelee[2] = spr_playerMelee3Arms;
+	spriteMelee[3] = spr_playerMelee4Arms;
+	spriteMelee[4] = spr_playerMelee1Weapon;
+	spriteMelee[5] = spr_playerMelee2Weapon;
+	spriteMelee[6] = spr_playerMelee3Weapon;
+	spriteMelee[7] = spr_playerMelee4Weapon;
 
 	head_index = irandom(sprite_get_number(spriteHead));
 	torso_index = irandom(sprite_get_number(spriteTorso));

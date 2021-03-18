@@ -1,6 +1,6 @@
 event_inherited();
 
-moveSpeed = 32;
+moveSpeed = 28;
 damage = SetStat(5, 10, 16, 23);
 grav = 0;
 

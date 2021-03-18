@@ -83,7 +83,7 @@ function ZombieCreateSpewShot(_zombie)
 	}
 	else
 	{
-		inst.xSpeed = 20 * image_xscale;
+		inst.xSpeed = 28 * image_xscale;
 		inst.ySpeed = 0;
 	}
 }

@@ -44,7 +44,7 @@ for(var i=0; i<count; i++)
 	
 		DamageZombie(playerID, hits[| i], _damage);
 		
-		if(!spawnedBH and IsDead(hits[| i]))
+		if(grenadeType == ExplosionType.BHBomber and !spawnedBH and IsDead(hits[| i]))
 		{
 			spawnBH = true;
 			CreateBlackHole(playerID, ZombieGetMaxHealth(hits[| i]));

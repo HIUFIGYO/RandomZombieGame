@@ -1,6 +1,6 @@
 event_inherited();
 
-hp = 125;
+hp = 200;
 toggle = true;
 canCollidePlayer = true;
 canCollideZombie = true;
