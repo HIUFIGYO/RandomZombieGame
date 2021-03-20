@@ -14,4 +14,5 @@ if(other.playerID.meleeWeapon == Weapon.Knife4 and random(1) <= 0.35)
 }
 
 DamageZombie(other.playerID, id, _damage);
+audio_play_sound(Sound_MeleeHit, 0 , false);
 GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) /2, acid, image_xscale);

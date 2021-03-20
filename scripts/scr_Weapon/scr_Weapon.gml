@@ -16,6 +16,7 @@ enum WeapStat
 	Auto,
 	Burst,
 	Pierce,
+	Sound,
 	count
 }
 

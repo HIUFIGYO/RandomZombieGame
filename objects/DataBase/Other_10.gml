@@ -20,6 +20,7 @@ weapon[# WeapStat.BulletImage, i] = noone;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = noone;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = Sound_Melee1;
 
 i++; //Standard Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
@@ -38,6 +39,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Pistol;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = Sound_Pistol1;
 
 i++; //Standard Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -56,6 +58,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Rifle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = Sound_Rifle1;
 
 i++; //Standard Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -74,6 +77,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Shotgun;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 5;
 weapon[# WeapStat.Pierce, i] = 2;
+weapon[# WeapStat.Sound, i] = Sound_ShotGun1;
 
 i++; //Advanced Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
@@ -92,6 +96,7 @@ weapon[# WeapStat.BulletImage, i] = noone;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = noone;
 weapon[# WeapStat.Pierce, i] = 2;
+weapon[# WeapStat.Sound, i] = Sound_Melee2;
 
 i++; //Advanced Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
@@ -110,6 +115,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Pistol;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = Sound_Pistol2;
 
 i++; //Advanced Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -128,6 +134,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Rifle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = Sound_Rifle2;
 
 i++; //Advanced Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -146,6 +153,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Shotgun;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 7;
 weapon[# WeapStat.Pierce, i] = 2;
+weapon[# WeapStat.Sound, i] = Sound_ShotGun2;
 
 i++; //Super Melee
 weapon[# WeapStat.Type, i] = WeapType.Melee;
@@ -164,6 +172,7 @@ weapon[# WeapStat.BulletImage, i] = noone;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = noone;
 weapon[# WeapStat.Pierce, i] = 3;
+weapon[# WeapStat.Sound, i] = Sound_Melee3;
 
 i++; //Super Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
@@ -182,6 +191,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Pistol;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 2;
+weapon[# WeapStat.Sound, i] = Sound_Pistol3;
 
 i++; //Super Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -200,6 +210,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Rifle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = Sound_Rifle3;
 
 i++; //Super Shotgun
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -218,6 +229,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Shotgun;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 9;
 weapon[# WeapStat.Pierce, i] = 2;
+weapon[# WeapStat.Sound, i] = Sound_ShotGun3;
 
 i++; //Flamethrower
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -236,6 +248,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Particle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 2;
+weapon[# WeapStat.Sound, i] = noone;
 
 i++; //Rocket Launcher
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -254,6 +267,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Rocket;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = noone;
 
 i++; //Tesla Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -272,6 +286,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Particle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 3;
+weapon[# WeapStat.Sound, i] = noone;
 
 i++; //BioLauncher
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -290,6 +305,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Acid;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = noone;
 
 i++; //Heated Blade
 weapon[# WeapStat.Type, i] = WeapType.Melee;
@@ -308,6 +324,7 @@ weapon[# WeapStat.BulletImage, i] = noone;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = noone;
 weapon[# WeapStat.Pierce, i] = 3;
+weapon[# WeapStat.Sound, i] = Sound_Melee4;
 
 i++; //Purple Gun
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
@@ -326,6 +343,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Purple;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 6;
+weapon[# WeapStat.Sound, i] = noone;
 
 i++; //Undead Drainer
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -344,6 +362,7 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Drainer;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = noone;
 
 i++; //B.H. Darker
 weapon[# WeapStat.Type, i] = WeapType.Primary;
@@ -362,3 +381,4 @@ weapon[# WeapStat.BulletImage, i] = BulletImage.Particle;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
 weapon[# WeapStat.Pierce, i] = 1;
+weapon[# WeapStat.Sound, i] = noone;

@@ -76,7 +76,7 @@ function GameSpawnSpecial()
 {
 	var _zombie = choose(RipperZombie, AlphaCreeperZombie);
 	var spawnPoint = GameManager.spawn[irandom(GameManager.spawnNumber - 1)];
-	instance_create_layer(spawnPoint.x + irandom_range(-48, 48), spawnPoint.y, GameManager.layerZombie, _zombie);
+	instance_create_layer(spawnPoint.x + irandom_range(-32, 32), spawnPoint.y, GameManager.layerZombie, _zombie);
 }
 
 ///@function GameSpawnGameMode()

@@ -41,6 +41,7 @@ function ProcessEquipment()
 					if(isCrouching)
 						offset = crouchOffset;
 					CreateBullet(id, x, y + offset, weapon[currentWeapon], image_xscale, isCrouching);
+					audio_play_sound(DataBaseGetWeapon(weapon[currentWeapon], WeapStat.Sound), 0, false);
 				}
 				else
 				{
