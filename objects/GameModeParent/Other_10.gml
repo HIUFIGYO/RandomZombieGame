@@ -7,11 +7,9 @@ if(totalKills mod 100 == 0)
 	specialSpawnCount = 0;
 	GameSpawnSpecial();
 	//spawn special
-	if(totalKills >= 400)
+	if(totalKills >= 600)
 		specialSpawnCount++;
-	if(totalKills >= 700)
-		specialSpawnCount++;
-	if(totalKills >= 1000)
+	if(totalKills >= 1100)
 		specialSpawnCount++;
 	if(random(1) <= 0.1) and (global.difficulty != GameDifficulty.Easy)
 		specialSpawnCount++;
