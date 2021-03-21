@@ -8,7 +8,7 @@ spriteAttack[0] = spr_creeperatk1;
 spriteAttack[1] = spr_creeperatk2;
 spriteDead = spr_creeperdead;
 
-damage = SetStat(20, 30, 45, 60);
+damage = SetStat(10, 15, 20, 25);
 hp = SetStat(10, 10, 10, 10) * (1 + ((global.playerAmount - 1) * 0.5));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(5);

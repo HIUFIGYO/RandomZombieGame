@@ -342,7 +342,7 @@ weapon[# WeapStat.yOffset, i] = 34;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Purple;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
-weapon[# WeapStat.Pierce, i] = 6;
+weapon[# WeapStat.Pierce, i] = 8;
 weapon[# WeapStat.Sound, i] = noone;
 
 i++; //Undead Drainer
