@@ -11,6 +11,31 @@ if(overlayAlpha > 0)
 {
 	overlayAlpha -= DeltaTimeSecond();
 }
+
+//danger overlay
+UISetAlpha(dangerOverlay, dangerOverlayAlpha);
+if(player.hp >= 51)
+	dangerOverlayAlpha = 0;
+if(player.hp <= 50)
+	dangerOverlayAlpha = 0.1;
+if(player.hp <= 45)
+	dangerOverlayAlpha = 0.2;
+if(player.hp <= 40)
+	dangerOverlayAlpha = 0.3;
+if(player.hp <= 35)
+	dangerOverlayAlpha = 0.4;
+if(player.hp <= 30)
+	dangerOverlayAlpha = 0.5;
+if(player.hp <= 25)
+	dangerOverlayAlpha = 0.6;
+if(player.hp <= 20)
+	dangerOverlayAlpha = 0.7;
+if(player.hp <= 15)
+	dangerOverlayAlpha = 0.8;
+if(player.hp <= 10)
+	dangerOverlayAlpha = 0.9;
+if(player.hp <= 5)
+	dangerOverlayAlpha = 1;
 	
 //health bar
 UIHealthbarSetValue(hpBar, player.hp/GetMaxHealth(player));

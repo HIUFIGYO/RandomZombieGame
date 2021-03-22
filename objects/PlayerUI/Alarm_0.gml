@@ -73,6 +73,17 @@ UISetAlpha(overlay, 0);
 UISetSize(overlay, view_wport[playerID], view_hport[playerID]);
 UISetColor(overlay, c_red);
 
+//danger overlay
+dangerOverlay = UICreateImage();
+dangerOverlayAlpha = 0;
+UIImageSetSprite(dangerOverlay, spr_Damaged, 0, true);
+UISetDrawTo(dangerOverlay, UIDrawTo.ViewPort);
+UISetDepth(dangerOverlay, 1);
+UISetView(dangerOverlay, playerID);
+UISetAlpha(dangerOverlay, 0);
+UISetSize(dangerOverlay, view_wport[playerID], view_hport[playerID]);
+UISetColor(dangerOverlay, c_black);
+
 //grenades
 grenadeText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
 UISetView(grenadeText, playerID);
