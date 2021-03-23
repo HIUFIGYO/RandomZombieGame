@@ -1,3 +1,5 @@
+num = 0;
+
 ready = false;
 
 //spawn background controller

@@ -15,7 +15,7 @@ if(totalKills mod 100 == 0)
 		specialSpawnCount++;
 		
 	if(specialSpawnCount > 0)
-		alarm[0] = specialSpawnDelay;
+		alarm[2] = specialSpawnDelay;
 }
 
 //add new zombies

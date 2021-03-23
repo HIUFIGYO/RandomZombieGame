@@ -9,7 +9,7 @@ gameOverTime = 5;
 gameOverTimer = 0;
 
 specialSpawnCount = 0;
-specialSpawnDelay = 60; // frames
+specialSpawnDelay = irandom_range(60, 180); // frames
 
 ds_list_add(zombieSpawnList, LimperZombie);
 

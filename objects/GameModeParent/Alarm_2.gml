@@ -4,4 +4,4 @@ specialSpawnCount--;
 GameSpawnSpecial();
 
 if(specialSpawnCount > 0)
-	alarm[0] = specialSpawnDelay;
+	alarm[2] = specialSpawnDelay;
