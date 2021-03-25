@@ -1,11 +1,11 @@
 if(canPickUp and other.hasBank)
 {
-	if(playerID.bankedMoney == DataBase.maxBankedMoney)
+	if(playerID.bankedMoney == DataBaseGetMaxBankedMoney())
 		exit;
 	
-	if(playerID.bankedMoney + value > DataBase.maxBankedMoney)
+	if(playerID.bankedMoney + value > DataBaseGetMaxBankedMoney())
 	{
-		value = DataBase.maxBankedMoney - playerID.bankedMoney;
+		value = DataBaseGetMaxBankedMoney() - playerID.bankedMoney;
 	}
 	else
 	{

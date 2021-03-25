@@ -16,5 +16,5 @@ if(global.playerAmount == 4)
 {
 	UISetAlign(killsTotalText, RectAlign.Right, RectAlign.Top);
 	UITextSetAlign(killsTotalText, fa_right, fa_top);
-	UISetPadding(killsTotalText, 16, 16);
+	UISetPadding(killsTotalText, 16, 48);
 }

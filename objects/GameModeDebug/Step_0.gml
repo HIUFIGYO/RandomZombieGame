@@ -60,7 +60,7 @@ if(godMode)
 		stamina = GetMaxStamina(id);
 		grenadeAmount = 5;
 		mag[currentWeapon] = DataBaseGetWeapon(weapon[currentWeapon], WeapStat.Mag);
-		PlayerGiveMoney(id, DataBase.maxMoney);
+		PlayerGiveMoney(id, DataBaseGetMaxMoney());
 	}
 }
 

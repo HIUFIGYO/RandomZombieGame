@@ -9,8 +9,10 @@ enum GameDifficulty
 
 global.worldUnit = 32; //in pixels
 
+global.startingPlayerAmount = 2;
 global.maxPlayers = 4;
 global.playerAmount = 1;
+
 global.difficulty = GameDifficulty.Hard;
 global.selectedGameMode = GM.Skirmish;
 

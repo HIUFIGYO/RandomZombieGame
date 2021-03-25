@@ -9,7 +9,7 @@ for(var i=0; i<count; i++)
 	
 	if(object_is_ancestor(hits[| i].object_index, ZombieParent))
 	{		
-		ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
+		ExplosionPush(hits[| i], id, ExplosionGetDamage(explosionType));
 		
 		if(IsDead(hits[| i]))
 			continue;
@@ -33,7 +33,7 @@ for(var i=0; i<count; i++)
 		ds_list_add(targetsAlreadyHit, hits[| i]);
 		maxHits -= 1;
 		
-		var _damage = ExplosionGetDamage(grenadeType);
+		var _damage = ExplosionGetDamage(explosionType);
 		
 		if(_damage > 0)
 		{
@@ -42,23 +42,27 @@ for(var i=0; i<count; i++)
 				_damage += DataBase.damageBuffExplosive;
 		}
 	
-		DamageZombie(playerID, hits[| i], _damage);
+		DamageZombie(playerID, hits[| i], _damage, false);
 		
-		if(grenadeType == ExplosionType.BHBomber and !spawnedBH and IsDead(hits[| i]))
+		if(acid)
+			DebuffApply(hits[| i], DeBuff.Acid, playerID);
+		
+		if(explosionType == ExplosionType.BHBomber and !spawnedBH and IsDead(hits[| i]))
 		{
-			spawnBH = true;
+			spawnedBH = true;
 			CreateBlackHole(playerID, ZombieGetMaxHealth(hits[| i]));
 		}
 
 		continue;
 	}
 	
-	
+	if(object_is_ancestor(hits[| i].object_index, Support))
+		continue;
 	
 	if(object_is_ancestor(hits[| i].object_index, PhysicsObject))
 	{
 		if(hits[| i].canPush)
-			ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
+			ExplosionPush(hits[| i], id, ExplosionGetDamage(explosionType));
 		continue;
 	}
 	
@@ -70,10 +74,11 @@ for(var i=0; i<count; i++)
 				continue;
 		}
 		
-		ExplosionPush(hits[| i], id, ExplosionGetDamage(grenadeType));
+		ExplosionPush(hits[| i], id, ExplosionGetDamage(explosionType));
 		
-		if(hits[| i].isDead)
+		if(IsDead(hits[| i]))
 			continue;
+			
 		if(!ds_exists(targetsAlreadyHit, ds_type_list))
 			targetsAlreadyHit = ds_list_create();
 		var alreadyHit = false;
@@ -92,12 +97,12 @@ for(var i=0; i<count; i++)
 		ds_list_add(targetsAlreadyHit, hits[| i]);
 		maxHits -= 1;
 		
-		var _damage = ExplosionGetDamage(grenadeType);
+		var _damage = ExplosionGetDamage(explosionType);
 
 		if(CheckBuff(playerID, Buff.Damage) and _damage > 0)
 			_damage += DataBase.damageBuffExplosive;
-	
-		DamagePlayer(playerID, _damage * SetStat(0.5, 1, 2, 4), "Explosion");
+		
+		DamagePlayer(hits[| i], _damage * SetStat(0.5, 1, 2, 4), "Explosion");
 
 		if(_damage > 0)
 			GameSprayBlood(_damage, x, y, false, 0);

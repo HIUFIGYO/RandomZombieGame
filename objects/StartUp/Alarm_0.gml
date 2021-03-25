@@ -4,7 +4,7 @@ if(!debug_mode)
 	RoomGoto(rm_mainMenu);
 else
 {
-	global.playerAmount = 2;
+	global.playerAmount = global.startingPlayerAmount;
 	global.selectedGameMode = GM.Debug;
 	RoomGoto(rm_Debug);
 }

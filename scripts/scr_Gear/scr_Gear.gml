@@ -123,8 +123,8 @@ function RemoveBuff(_player, _slot)
 		case Buff.Demo:
 			if(_player.grenadeType != noone)
 			{
-				if(_player.grenadeAmount > DataBase.explosionMaxAmmo)
-					_player.grenadeAmount = DataBase.explosionMaxAmmo;
+				if(_player.grenadeAmount > GetMaxGrenades(_player))
+					_player.grenadeAmount = GetMaxGrenades(_player);
 			}
 			break;
 			
@@ -142,7 +142,7 @@ function RemoveBuff(_player, _slot)
 function GiveExplosive(_player, _item)
 {
 	_player.grenadeType = _item;
-	_player.grenadeAmount = DataBase.explosionMaxAmmo;
+	_player.grenadeAmount = GetMaxGrenades(_player);
 }
 
 ///@function GiveMedical(player, item)

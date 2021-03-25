@@ -134,6 +134,7 @@ function CycleGear(_cycle)
 
 function PlayerMelee()
 {
+	audio_play_sound(DataBaseGetWeapon(meleeWeapon, WeapStat.Sound), 0, false);
 	if(!CheckVialPositive(id, VialType.Strength))
 		stamina -= 10;
 	canShoot = false;

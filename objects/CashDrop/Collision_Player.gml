@@ -1,11 +1,11 @@
 if(canPickUp)
 {
-	if(other.money == DataBase.maxMoney)
+	if(other.money == DataBaseGetMaxMoney())
 		exit;
 	
-	if(other.money + value > DataBase.maxMoney)
+	if(other.money + value > DataBaseGetMaxMoney())
 	{
-		value = DataBase.maxMoney - other.money;
+		value = DataBaseGetMaxMoney() - other.money;
 	}
 	else
 	{

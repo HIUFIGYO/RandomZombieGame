@@ -5,7 +5,7 @@ if(CheckBuff(id, Buff.Demo)and buffCooldown[_slot] <= 0)
 {
 	buffCooldown[_slot] = DataBase.demoBuffCooldown;
 	RevivePlayer(id, 1, 1);
-	CreateExplosion(id, id);
+	CreateExplosion(id, id, ExplosionType.Grenade);
 }
 
 if(isDead)

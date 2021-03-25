@@ -11,3 +11,10 @@ function PlayerGetName(_player)
 {
 	return _player.name;
 }
+
+///@function PlayerGetHealth(player)
+
+function PlayerGetHealth(_player)
+{
+	return _player.hp;
+}

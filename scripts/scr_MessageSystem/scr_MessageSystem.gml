@@ -18,13 +18,19 @@ function MessageCheckFilter(_messageController, _filter)
 
 function MessageAddAll(_message, _filter)
 {
+	if(is_undefined(_filter))
+		_filter = MessageFilter.Debug;
+	
 	var _player = noone;
 	for(var i=0; i<global.playerAmount; i++)
 	{
 		_player = instance_find(Player, i);
 		
 		if(MessageControllerFull(_player.messageController))
-			continue;
+		{
+			ds_list_delete(_player.messageController.messageList, 0);
+			ds_list_delete(_player.messageController.messageColor, 0);
+		}
 		
 		if(MessageCheckFilter(_player.messageController, _filter))
 		{
@@ -39,8 +45,14 @@ function MessageAddAll(_message, _filter)
 
 function MessageAddPlayer(_player, _message, _filter)
 {
+	if(is_undefined(_filter))
+		_filter = MessageFilter.Debug;
+	
 	if(MessageControllerFull(_player.messageController))
-		return;
+	{
+		ds_list_delete(_player.messageController.messageList, 0);
+		ds_list_delete(_player.messageController.messageColor, 0);
+	}
 	
 	if(MessageCheckFilter(_player.messageController, _filter))
 	{

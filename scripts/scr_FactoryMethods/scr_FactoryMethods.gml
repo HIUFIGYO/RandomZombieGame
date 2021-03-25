@@ -16,22 +16,21 @@ function CreateHitBox(_player, _x, _y, _sprite, _subImage, _damage)
 function CreateGrenade(_player)
 {
 	var inst = instance_create_layer(_player.x, _player.y - 40, GameManager.layerObject, Grenade);
-	inst.xSpeed = _player.image_xscale * 16;
-	inst.ySpeed = -10;
+	PhysicsObjectSetSpeed(inst, _player.image_xscale * 16, -10);
 	inst.grenadeType = _player.grenadeType;
 	inst.playerID = _player;
-	inst.pierce = DataBase.explosionPierce[inst.grenadeType];
 	with(inst)
 		event_perform(ev_other, ev_user0);
 }
 
-///@function CreateExplosion(instance, playerID)
+///@function CreateExplosion(instance, playerID, explosionType)
 
 function CreateExplosion(_instance, _playerID, _explosionType)
 {
 	var inst = instance_create_layer(_instance.x, _instance.y, GameManager.layerObject, Explosion);
 	inst.playerID = _playerID;
-	inst.grenadeType = _explosionType;
+	inst.explosionType = _explosionType;
+	inst.maxHits = ExplosionGetPierce(_explosionType);
 	inst.sprite_index = ExplosionGetSize(_explosionType);
 	if(_explosionType == ExplosionType.Acid)
 		inst.acid = true;
@@ -62,7 +61,15 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 	{
 		var xoff = DataBaseGetWeapon(_weapon, WeapStat.xOffset) * flip;
 		var yoff = DataBaseGetWeapon(_weapon, WeapStat.yOffset);
-		var inst = instance_create_layer(xx + xoff, yy - yoff, GameManager.layerObject, Bullet);
+		
+		if(collision_line(xx + xoff, yy - yoff, xx, yy - yoff, BlockParent, false, true))
+			continue;
+		
+		var inst = collision_line(xx + xoff, yy - yoff, xx, yy - yoff, WoodenDoor, false, true);
+		if(inst and inst.toggle)
+			continue;
+			
+		inst = instance_create_layer(xx + xoff, yy - yoff, GameManager.layerObject, Bullet);
 		inst.playerID = _id;
 		inst.weapon = _weapon;
 		inst.spd = DataBaseGetWeapon(_weapon, WeapStat.BulletSpeed);
@@ -78,6 +85,8 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 		var bulletAngle = irandom((1 - accuracy) * 90);
 		inst.xSpeed = cos(bulletAngle * pi / 180) * flip;
 		inst.ySpeed = sin(bulletAngle * pi / 180) * choose(-1, 1);
+		inst.xPrevious = _id.x;
+		inst.yPrevious = _id.y;
 	}
 }
 

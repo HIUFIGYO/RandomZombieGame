@@ -228,7 +228,6 @@ function PlayerPerformAction()
 		if(CheckVialNegative(id, VialType.Strength))
 		{
 			if(stamina >= 10 and InputGetButtonDown(player_inputID, Button.Melee)and meleeWeapon != noone)
-				audio_play_sound(DataBaseGetWeapon(weapon[meleeWeapon], WeapStat.Sound), 0, false);
 				PlayerMelee();
 			return;
 		}
@@ -273,7 +272,7 @@ function PlayerPerformAction()
 	
 		if(InputGetButtonDown(player_inputID, Button.DropMoney))
 		{
-			DropMoney(id, DataBase.moneyDropAmount);
+			DropMoney(id, DataBaseGetMoneyDropAmount());
 			return;
 		}
 	}

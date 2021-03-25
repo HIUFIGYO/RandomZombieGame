@@ -171,7 +171,7 @@ shop[VialType.Adrenaline, ShopKey.Description] = "Increases movement speed by 1 
 shop[VialType.Adrenaline, ShopKey.Price] = 1250;
 
 shop[VialType.Strength, ShopKey.Name] = "Strength Vial";
-shop[VialType.Strength, ShopKey.Description] = "Increases mmelee damage by 100% and melee attacks don't consume stamina for 9 seconds\nCan only use melee weapons for 18 seconds\nCooldown 60 seconds";
+shop[VialType.Strength, ShopKey.Description] = "Increases melee damage by 100% and melee attacks don't consume stamina for 9 seconds\nCan only use melee weapons for 18 seconds\nCooldown 60 seconds";
 shop[VialType.Strength, ShopKey.Price] = 1250;
 
 shop[VialType.Mimicry, ShopKey.Name] = "Mimicry Vial";

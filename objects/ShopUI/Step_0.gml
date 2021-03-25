@@ -17,7 +17,8 @@ if(recalculateReloadCost)
 		{
 			_size = player.mag[i] + player.ammo[i];
 			_maxSize = GetMaxMag(player, i) + GetMaxAmmo(player, i);
-			reloadCost[i] = (1 - (_size / _maxSize)) * ShopGetSellPrice(item);
+			if(_maxSize != 0)
+				reloadCost[i] = (1 - (_size / _maxSize)) * ShopGetSellPrice(item);
 		}
 	}
 	
@@ -26,7 +27,8 @@ if(recalculateReloadCost)
 	{
 		_size = player.grenadeAmount;
 		_maxSize = GetMaxGrenades(player);
-		reloadCostGrenade = (1 - (_size / _maxSize)) * ShopGetSellPrice(item);
+		if(_maxSize != 0)
+			reloadCostGrenade = (1 - (_size / _maxSize)) * ShopGetSellPrice(item);
 	}
 }
 

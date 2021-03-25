@@ -89,10 +89,10 @@ enum SpecialType
 
 enum ExplosionType
 {
-	Grenade = GrenadeType.Grenade,
-	Incendiary = GrenadeType.Incendiary,
-	Mine = GrenadeType.Mine,
-	BHBomber = GrenadeType.BHBomber,
-	Rocket = Weapon.Rocket,
-	Acid = Weapon.Acid
+	Grenade,
+	Incendiary,
+	Mine,
+	BHBomber,
+	Rocket,
+	Acid
 }

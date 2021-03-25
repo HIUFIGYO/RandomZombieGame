@@ -219,7 +219,7 @@ function GetMaxGrenades(_player)
 	if(_player.grenadeType == noone)
 		return 0;
 	
-	var _value = DataBase.explosionMaxAmmo;
+	var _value = DataBase.grenadeMaxAmmo;
 	if(CheckBuff(_player, Buff.Demo))
 		_value += DataBase.demoBuffAddGrenade;
 	return _value;
@@ -237,7 +237,7 @@ function PlayerGetMoney(_player)
 function PlayerBankMoney(_playerID, _amount)
 {
 	_playerID.bankedMoney += _amount;
-	_playerID.bankedMoney = clamp(_playerID.bankedMoney, 0, DataBase.maxBankedMoney);
+	_playerID.bankedMoney = clamp(_playerID.bankedMoney, 0, DataBaseGetMaxBankedMoney());
 }
 
 ///@function PlayerGiveMoney(player, amount)
@@ -245,9 +245,9 @@ function PlayerBankMoney(_playerID, _amount)
 function PlayerGiveMoney(_playerID, _amount)
 {
 	_playerID.money += _amount;
-	if(_playerID.money >= DataBase.maxMoney)
+	if(_playerID.money >= DataBaseGetMaxMoney())
 	{
-		_playerID.money = DataBase.maxMoney;
+		_playerID.money = DataBaseGetMaxMoney();
 		if(!global.shopID.unlockBankOption)
 		{
 			global.shopID.unlockBankOption = true;

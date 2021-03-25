@@ -96,4 +96,37 @@ function DataBaseShopGetInfo(_itemType, _shopKey)
 	return DataBase.shop[_itemType, _shopKey];
 }
 
+///@function DataBaseGetMaxMoney()
 
+function DataBaseGetMaxMoney()
+{
+	return DataBase.maxMoney;
+}
+
+///@function DataBaseGetMaxBankedMoney()
+
+function DataBaseGetMaxBankedMoney()
+{
+	return DataBase.maxBankedMoney;
+}
+
+///@function DataBaseGetMoneyDropAmount()
+
+function DataBaseGetMoneyDropAmount()
+{
+	return DataBase.moneyDropAmount;
+}
+
+///@function DataBaseIncendiaryGroundFire()
+
+function DataBaseIncendiaryGroundFire()
+{
+	return DataBase.incendiaryGroundFire;
+}
+
+///@function DataBaseIncendiaryIgniteChance()
+
+function DataBaseIncendiaryIgniteChance()
+{
+	return DataBase.incendiaryIgniteChance;
+}

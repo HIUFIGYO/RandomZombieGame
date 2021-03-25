@@ -55,18 +55,39 @@ function CanCancelReload(_weapon)
 	return (_weapon == Weapon.Shotgun or _weapon == Weapon.Shotgun3 or _weapon == Weapon.Pistol3);
 }
 
-///@function ExplosionGetDamage(grenadeType)
+///@function ExplosionGetDamage(explosionType)
 
-function ExplosionGetDamage(_grenadeType)
+function ExplosionGetDamage(_explosionType)
 {
-	return DataBase.explosionDamage[_grenadeType];
+	return DataBase.explosionDamage[_explosionType];
 }
 
-///@function ExplosionGetSize(explosion)
+///@function ExplosionGetSize(explosionType)
 
 function ExplosionGetSize(_explosionType)
 {
 	return DataBase.explosionSize[_explosionType];
+}
+
+///@function ExplosionGetPierce(explosionType)
+
+function ExplosionGetPierce(_explosionType)
+{
+	return DataBase.explosionPierce[_explosionType];
+}
+
+///@function GrenadeGetFuseTime(grenadeType)
+
+function GrenadeGetFuseTime(_grenadeType)
+{
+	return DataBase.grenadeFuseTime[_grenadeType - GrenadeType.Grenade];
+}
+
+///@function GrenadeGetImpact(grenadeType)
+
+function GrenadeGetImpact(_grenadeType)
+{
+	return DataBase.grenadeImpact[_grenadeType - GrenadeType.Grenade];
 }
 
 ///@function ExplosionPush(id, explosion, force)

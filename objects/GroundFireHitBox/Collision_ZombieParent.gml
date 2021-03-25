@@ -12,8 +12,8 @@ for(var i=0; i<ds_list_size(targetsHit);  i++)
 if(doDamage)
 {
 	ds_list_add(targetsHit, other);
-	DamageZombie(playerID, other, DataBase.incendiaryGroundFire);
-	if(random(1) <= DataBase.incendiaryIgniteChance)
+	DamageZombie(playerID, other, DataBaseIncendiaryGroundFire());
+	if(random(1) <= DataBaseIncendiaryIgniteChance())
 	{
 		DebuffApply(other, DeBuff.Ignite, playerID);
 	}
