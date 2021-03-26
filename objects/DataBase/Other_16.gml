@@ -55,7 +55,7 @@ shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 0.5
 shop[Weapon.Flame, ShopKey.Price] = 3000;
 
 shop[Weapon.Rocket, ShopKey.Name] = "Rocket Launcher";
-shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-15 Explosion-10\nFirerate: 1\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 19\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nOne of the strongest weapons here we have to offer. Just be mindful of when you fire, you will be reloading a lot.";
+shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-20 Explosion-10\nFirerate: 0.8\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 19\nReload Time: 3 Seconds\nPenetration: Impact-0 Explosion-8\nFire Mode: Semi-Auto\nOne of the strongest weapons here we have to offer. Just be mindful of when you fire, you will be reloading a lot.";
 shop[Weapon.Rocket, ShopKey.Price] = 3250;
 
 shop[Weapon.Tesla, ShopKey.Name] = "Tesla Rifle";
@@ -63,7 +63,7 @@ shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 2\n
 shop[Weapon.Tesla, ShopKey.Price] = 3500;
 
 shop[Weapon.Acid, ShopKey.Name] = "Bio Launcher";
-shop[Weapon.Acid, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-10 Explosion-5\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 5\nMax Ammo: 35\nReload Time: 3 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nWe modified a boring old grenade launcher to fire acidic rounds to melt your enemies. It's shown to be less effective against acidic opponents though.";
+shop[Weapon.Acid, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-10 Explosion-5\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 5\nMax Ammo: 35\nReload Time: 3 Seconds\nPenetration: Impact-0 Explosion-5\nFire Mode: Semi-Auto\n100% chance to apply ACID on explosion\nWe modified a grenade launcher to fire acidic rounds to melt your enemies. It's shown to be less effective against acidic opponents though.";
 shop[Weapon.Acid, ShopKey.Price] = 3750;
 
 shop[Weapon.Knife4, ShopKey.Name] = "Heated Blade";
@@ -71,33 +71,33 @@ shop[Weapon.Knife4, ShopKey.Description] = "Tier Five Melee Weapon\nDamage: 9\nA
 shop[Weapon.Knife4, ShopKey.Price] = 4000;
 
 shop[Weapon.Purple, ShopKey.Name] = "Purple Gun";
-shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 1\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 3 Seconds\nPenetration: 5\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
+shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 0.66\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 3 Seconds\nPenetration: 8\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
 shop[Weapon.Purple, ShopKey.Price] = 4500;
 
 shop[Weapon.Drainer, ShopKey.Name] = "Undead Drainer";
-shop[Weapon.Drainer, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 2\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 4\nMax Ammo: 56\nReload Time: 3.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\n100% chance to apply BLEED\nThis experimental weapon fires modified projectiles that attach to and drain all the blood from their victim. Best used on single targets.";
+shop[Weapon.Drainer, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 2\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 4\nMax Ammo: 56\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\n100% chance to apply BLEED\nThis experimental weapon fires modified projectiles that attach to and drain all the blood from their victim. Best used on single targets.";
 shop[Weapon.Drainer, ShopKey.Price] = 4500;
 
 shop[Weapon.BHDarker, ShopKey.Name] = "B.H. Darker";
-shop[Weapon.BHDarker, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 3\nFirerate: 0.5\nAccuracy: 100%\nMag Size: 5\nMax Ammo: 10\nReload Time: 5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nThis weapon is without description...";
+shop[Weapon.BHDarker, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 3\nFirerate: 0.5\nAccuracy: 100%\nMag Size: 5\nMax Ammo: 10\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nThis weapon is without description...";
 shop[Weapon.BHDarker, ShopKey.Price] = 5000;
 
 //GRENADES
 
 shop[GrenadeType.Grenade, ShopKey.Name] = "Explosive Grenades";
-shop[GrenadeType.Grenade, ShopKey.Description] = "Damage: Impact-0.5 Explosion-12\nFuse Time: 1.5 seconds\n Explosion Size: Medium";
+shop[GrenadeType.Grenade, ShopKey.Description] = "Damage: Impact-0.5 Explosion-12\nFuse Time: 1.5 seconds\nPenetration: 5\n Explosion Size: Medium";
 shop[GrenadeType.Grenade, ShopKey.Price] = 650;
 
 shop[GrenadeType.Incendiary, ShopKey.Name] = "Incendiary Bombs";
-shop[GrenadeType.Incendiary, ShopKey.Description] = "Damage: Explosion-5 Ground Fire-1\nFuse Time: 0 seconds\n Explosion Size: Small";
+shop[GrenadeType.Incendiary, ShopKey.Description] = "Damage: Explosion-5 Ground Fire-1\nFuse Time: 0 seconds\nPenetration: 3\n Explosion Size: Small";
 shop[GrenadeType.Incendiary, ShopKey.Price] = 650;
 
-shop[GrenadeType.Mine, ShopKey.Name] = "Mines";
-shop[GrenadeType.Mine, ShopKey.Description] = "Damage: 15\nFuse Time: 0.5 second\n Explosion Size: Large";
+shop[GrenadeType.Mine, ShopKey.Name] = "Land Mines";
+shop[GrenadeType.Mine, ShopKey.Description] = "Damage: 15\nFuse Time: 0.5 second\nPenetration: 8\n Explosion Size: Large";
 shop[GrenadeType.Mine, ShopKey.Price] = 650;
 
 shop[GrenadeType.BHBomber, ShopKey.Name] = "B.H. Bomber";
-shop[GrenadeType.BHBomber, ShopKey.Description] = "Damage: Impact-1 Explosion-5\nFuse Time: 3 seconds\n Explosion Size: Small";
+shop[GrenadeType.BHBomber, ShopKey.Description] = "Damage: Impact-1 Explosion-5\nFuse Time: 3 seconds\nPenetration: 3\n Explosion Size: Small";
 shop[GrenadeType.BHBomber, ShopKey.Price] = 4250;
 
 //BUFFS
@@ -221,7 +221,7 @@ shop[SupportType.MythicCrate, ShopKey.Description] = "Provides ammo for experime
 shop[SupportType.MythicCrate, ShopKey.Price] = 3750;
 
 shop[SupportType.Armour, ShopKey.Name] = "Armour";
-shop[SupportType.Armour, ShopKey.Description] = "Gain an armour vest\nArmour takes 80% of total damage taken\nAcid damages armour";
+shop[SupportType.Armour, ShopKey.Description] = "Gain an armour vest\nArmour takes 80% of total damage taken\nAcid damage to armour is doubled";
 shop[SupportType.Armour, ShopKey.Price] = 350;
 
 //SPECIAL ITEMS

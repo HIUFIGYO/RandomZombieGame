@@ -5,4 +5,6 @@ maxHits = 5;
 acid = false;
 spawnedBH = false;
 
+InitDebuffs()
+
 audio_play_sound(Sound_Explosion1, 0 , false);
