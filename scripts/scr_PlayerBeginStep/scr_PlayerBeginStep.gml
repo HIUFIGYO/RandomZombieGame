@@ -59,7 +59,7 @@ function PlayerProcessRevive()
 		var bonus = 1;
 		if(CheckBuff(id, Buff.Medic))
 			bonus = DataBaseBuffReviveFactor();
-		if(revivingPlayer.isDead)
+		if(IsDead(revivingPlayer))
 			revivingPlayer.reviveTimer -= DeltaTimeSecond() * bonus;
 		if(InputGetButtonUp(player_inputID, Button.Interact)or !instance_place(x, y, revivingPlayer)or isDead)
 		{
@@ -106,21 +106,25 @@ function PlayerBuffCooldown()
 
 function PlayerUseMedicalItem()
 {
-	if(healingItemTimer > 0)
+	if(healingItemTimer <= 0)
+		return;
+		
+	healingItemTimer -= DeltaTimeSecond();
+	if(healingItemTimer <= 0 and healingItem != noone)
 	{
-		healingItemTimer -= DeltaTimeSecond();
-		if(healingItemTimer <= 0 and healingItem != noone)
+		canShoot = true;
+		healingItemTimer = 0;
+		
+		if(healingID == noone)
+			return;
+		
+		HealPlayer(healingID, DataBaseMedicalGetAmount(healingItem));
+		HealDebuffs(healingID, healingItem);
+		healingItemAmount -= 1;
+		if(healingItemAmount <= 0)
 		{
-			healingItemTimer = 0;
-			HealPlayer(id, DataBaseMedicalGetAmount(healingItem));
-			HealDebuffs(id, healingItem);
-			canShoot = true;
-			healingItemAmount -= 1;
-			if(healingItemAmount <= 0)
-			{
-				healingItem = noone;
-				CycleGear(1);
-			}
+			healingItem = noone;
+			CycleGear(1);
 		}
 	}
 }

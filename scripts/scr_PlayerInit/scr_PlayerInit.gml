@@ -79,6 +79,7 @@ function PlayerInitGear()
 	healingItem = noone;
 	healingItemAmount = 0;
 	healingItemTimer = 0;
+	healingID = noone;
 	
 	//vials
 	vial = noone;

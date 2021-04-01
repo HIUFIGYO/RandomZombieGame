@@ -81,11 +81,21 @@ for(var i=0; i<2; i++)
 	
 //revive bar
 UISetAlpha(reviveBar, 0);
-if(player.isDead)
+if(IsDead(player))
 {
 	UISetAlpha(reviveBar, 0.6);
 	UIHealthbarSetValue(reviveBar, (player.reviveTime - player.reviveTimer) / player.reviveTime);
 	UISetPosition(reviveBar, player.x - 32, player.y - 64);
+}
+
+//heal meter
+UISetAlpha(healMeter, 0);
+if(player.healingItemTimer > 0)
+{
+	UISetAlpha(healMeter, 0.6);
+	var maxTime = DataBaseMedicalGetTimer(player.healingItem);
+	UIHealthbarSetValue(healMeter, (maxTime - player.healingItemTimer) / maxTime);
+	UISetPosition(healMeter, player.healingID.x - 32, player.healingID.y - 96);
 }
 
 //grenades

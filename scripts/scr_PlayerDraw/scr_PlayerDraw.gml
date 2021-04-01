@@ -43,49 +43,57 @@ function PlayerDrawTorso(offset)
 function PlayerDrawArms(offset)
 {
 	var index;
-	if(!isMelee and !isThrowing)
+	if(isMelee or isThrowing)
+		return;
+		
+	switch(equipmentCycle)
 	{
-		switch(equipmentCycle)
-		{
-			case EquipCycle.Weapon:
-				if(weapon[currentWeapon] == noone)
-					index = 0;
-				else
-					index = weapon[currentWeapon] + 1;
-				break;
-			
-			case EquipCycle.Med:
-				index = 24 + healingItem - HealingType.Medicine;
-				break;
-			
-			case EquipCycle.Vial:
-				index = 27;
-				break;
-			
-			case EquipCycle.Support:
-				index = 21;
-				if(supportItem == "Flare")
-					index = 23;
-				draw_sprite_ext(DataBaseSupportGetSprite(supportItem), !canPlaceSupport, x+supportXOffset * image_xscale, y+supportYOffset, image_xscale, 1, 0, c_white, 0.7);			
-				break;
-		}
-	
-		if(CheckVialNegative(id, VialType.Strength))
-		{
-			if(meleeWeapon == Weapon.Knife)
-				index = 1;
-			else if(meleeWeapon == Weapon.Knife2)
-				index = 5;
-			else if(meleeWeapon == Weapon.Knife3)
-				index = 9;
-			else if(meleeWeapon == Weapon.Knife4)
-				index = 17;
-			else
+		case EquipCycle.Weapon:
+			if(weapon[currentWeapon] == noone)
 				index = 0;
-		}
+			else
+				index = weapon[currentWeapon] + 1;
+			break;
+			
+		case EquipCycle.Med:
+			index = 24 + healingItem - HealingType.Medicine;
+			break;
+			
+		case EquipCycle.Vial:
+			index = 27;
+			break;
+			
+		case EquipCycle.Support:
+			index = 21;
+			if(supportItem == "Flare")
+				index = 23;
+			draw_sprite_ext(DataBaseSupportGetSprite(supportItem), !canPlaceSupport, x+supportXOffset * image_xscale, y+supportYOffset, image_xscale, 1, 0, c_white, 0.7);			
+			break;
+	}
 	
+	if(CheckVialNegative(id, VialType.Strength))
+	{
+		if(meleeWeapon == Weapon.Knife)
+			index = 1;
+		else if(meleeWeapon == Weapon.Knife2)
+			index = 5;
+		else if(meleeWeapon == Weapon.Knife3)
+			index = 9;
+		else if(meleeWeapon == Weapon.Knife4)
+			index = 17;
+		else
+			index = 0;
+	}
+	
+	if(reloadTimer[currentWeapon] <= 0)
+	{
 		draw_sprite_ext(spriteGuns, index, x, y + offset, image_xscale, 1, 0, c_white, 1);
 		draw_sprite_ext(spriteArms, index, x, y + offset, image_xscale, 1, 0, arm_color, 1);
+	}
+	else
+	{
+		draw_sprite_ext(spr_playerReloadGuns, index - 1, x, y + offset, image_xscale, 1, 0, c_white, 1);
+		draw_sprite_ext(spr_playerReloadArms, index - 1, x, y + offset, image_xscale, 1, 0, arm_color, 1);
 	}
 }
 

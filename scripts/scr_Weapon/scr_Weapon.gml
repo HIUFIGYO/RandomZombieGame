@@ -108,3 +108,20 @@ function ExplosionPush(_id, _explosion, _force)
 	_id.xSpeed = velocityX * _force*_force;
 	_id.ySpeed = velocityY * _force * 2;
 }
+
+///@function TeslaDealDamage()
+
+function TeslaDealDamage()
+{
+	var hits = ds_list_create();
+	
+	var count = collision_circle_list(x, y, teslaRadius, ZombieParent, false, true, hits, false);
+	
+	for(var i=0; i<count; i++)
+	{
+		DamageZombie(playerID, hits[| i], DataBaseGetWeapon(Weapon.Tesla, WeapStat.Damage) / 2, false);
+		//CreateTelsaZappyEffect();
+	}
+	
+	ds_list_destroy(hits);
+}

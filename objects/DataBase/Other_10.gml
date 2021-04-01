@@ -285,7 +285,7 @@ weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Particle;
 weapon[# WeapStat.Auto, i] = true;
 weapon[# WeapStat.Burst, i] = 1;
-weapon[# WeapStat.Pierce, i] = 3;
+weapon[# WeapStat.Pierce, i] = 1;
 weapon[# WeapStat.Sound, i] = noone;
 
 i++; //BioLauncher

@@ -62,6 +62,12 @@ UIHealthbarSetColor(reviveBar, c_black, c_white, c_white);
 UISetSize(reviveBar, 64, 8);
 UISetAlpha(reviveBar, 0);
 
+//Healing meter
+healMeter = UICreateHealthbar(0, 0, UIDrawTo.Room);
+UIHealthbarSetColor(healMeter, c_black, c_aqua, c_blue);
+UISetSize(healMeter, 64, 8);
+UISetAlpha(healMeter, 0);
+
 //damage overlay
 overlay = UICreateImage();
 overlayAlpha = 0;

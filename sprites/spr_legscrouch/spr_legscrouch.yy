@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1c9d496f-783c-4018-ac52-d856b5a8185f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Player(s)",
-    "path": "folders/Sprites/Player(s).yy",
+    "name": "Player",
+    "path": "folders/Sprites/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_legscrouch",

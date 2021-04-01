@@ -52,10 +52,29 @@ function ProcessEquipment()
 			break;
 			
 		case EquipCycle.Med:
-			if(healingItemTimer <= 0 and InputGetButtonDown(player_inputID, Button.Shoot))
+			if(healingItemTimer > 0)
+				break;
+				
+			var canHeal = false, inst = id;
+				
+			if(InputGetButtonDown(player_inputID, Button.Assist))
+			{
+				inst = collision_circle(x, y, 32, Player, false, true);
+				if(inst)
+					canHeal = true;
+			}
+		
+			if(InputGetButtonDown(player_inputID, Button.Shoot))
+			{
+				canHeal = true;
+				inst = id;
+			}
+			
+			if(canHeal)
 			{
 				canShoot = false;
 				healingItemTimer = DataBaseMedicalGetTimer(healingItem);
+				healingID = inst;
 				return true;
 			}
 			break;

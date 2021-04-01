@@ -10,3 +10,5 @@ pierce = 1;
 ignoreBuffs = false;
 
 targetsHit = ds_list_create();
+
+teslaRadius = 64;

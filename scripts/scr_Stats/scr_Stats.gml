@@ -2,8 +2,9 @@
 
 function HealPlayer(_player, _amount)
 {
-	if(!_player.isDead)
-		_player.hp = clamp(_player.hp + _amount, 0, GetMaxHealth(_player));
+	if(IsDead(_player))
+		return;
+	_player.hp = clamp(_player.hp + _amount, 0, GetMaxHealth(_player));
 }
 
 ///@function HealDebuffs(id, healingType)

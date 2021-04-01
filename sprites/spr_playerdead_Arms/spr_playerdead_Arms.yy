@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cc267608-0a41-421f-bcaf-428b7a64cae9","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Player(s)",
-    "path": "folders/Sprites/Player(s).yy",
+    "name": "Player",
+    "path": "folders/Sprites/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playerdead_Arms",

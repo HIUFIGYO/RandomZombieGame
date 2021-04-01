@@ -84,8 +84,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"306fea8d-bddf-4c18-a284-e67a2760bf8e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Player(s)",
-    "path": "folders/Sprites/Player(s).yy",
+    "name": "Player",
+    "path": "folders/Sprites/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playerthrow",

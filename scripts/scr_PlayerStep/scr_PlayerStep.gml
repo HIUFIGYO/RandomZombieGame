@@ -168,8 +168,6 @@ function PlayerProcessReloading()
 	{
 		reloadTimer[currentWeapon] -= DeltaTimeSecond();
 		reloadSingleShot[currentWeapon] -= DeltaTimeSecond();
-		spriteArms = spr_playerReloadArms;
-		spriteGuns = spr_playerReloadGuns;
 		var clipSize;
 	
 		if(reloadSingleShot[currentWeapon] <= 0)
@@ -186,8 +184,6 @@ function PlayerProcessReloading()
 		if(reloadTimer[currentWeapon] <= 0)
 		{
 			reloadTimer[currentWeapon] = 0
-			spriteArms = spr_playerArms;
-			spriteGuns = spr_playerArmsGuns;
 			ammo[currentWeapon] += mag[currentWeapon];
 			clipSize = GetMaxMag(id, currentWeapon);
 			if(clipSize <= ammo[currentWeapon])
@@ -239,7 +235,7 @@ function PlayerPerformAction()
 		if(InputGetButtonDown(player_inputID, Button.ToggleWeapon))
 		{
 			if(equipmentCycle == EquipCycle.Weapon)
-				currentWeapon = !currentWeapon;
+				currentWeapon = currentWeapon == 0 ? 1 : 0;
 			else
 				equipmentCycle = EquipCycle.Weapon;
 			return;

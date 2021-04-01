@@ -84,8 +84,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bb1266cd-eaa4-430c-b7a5-67b7885298f5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Player(s)",
-    "path": "folders/Sprites/Player(s).yy",
+    "name": "Player",
+    "path": "folders/Sprites/Player.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_playerMelee2Arms",

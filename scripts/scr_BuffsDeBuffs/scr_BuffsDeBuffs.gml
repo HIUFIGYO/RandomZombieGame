@@ -43,26 +43,6 @@ function DebuffApply(_id, _debuff, _playerID)
 	if(IsDead(_id))
 		return;
 	
-	if(!is_undefined(_playerID))
-	{
-		_id.deBuffPlayerID = _playerID;
-		switch(_debuff)
-		{
-			case DeBuff.Ignite:
-				_id.color = c_orange;
-				break;
-			case DeBuff.Acid:
-				_id.color = c_lime;
-				_id.deBuffTimer[DeBuff.Acid] /= 2;
-				break;
-			case DeBuff.Bleed:
-				_id.color = c_red;
-				break;
-		}
-	}
-	else
-		_id.deBuffPlayerID = noone;
-	
 	if(_id.deBuff[_debuff])
 	{
 		switch(_debuff)
@@ -98,6 +78,24 @@ function DebuffApply(_id, _debuff, _playerID)
 		}
 		if(_debuff == DeBuff.Poison)
 			_id.deBuffTimer[_debuff] -= SetStat(0, 30, 60, 90);
+	}
+	
+	if(!is_undefined(_playerID))
+	{
+		_id.deBuffPlayerID = _playerID;
+		switch(_debuff)
+		{
+			case DeBuff.Ignite:
+				_id.color = c_orange;
+				break;
+			case DeBuff.Acid:
+				_id.color = c_lime;
+				_id.deBuffTimer[DeBuff.Acid] /= 2;
+				break;
+			case DeBuff.Bleed:
+				_id.color = c_red;
+				break;
+		}
 	}
 }
 

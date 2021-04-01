@@ -10,8 +10,8 @@ if(isCrouching)
 
 PlayerDrawLegs();
 PlayerDrawTorso(offset);
-PlayerDrawArms(offset);
 PlayerDrawHead(offset);
+PlayerDrawArms(offset);
 
 
 if(isMelee)
