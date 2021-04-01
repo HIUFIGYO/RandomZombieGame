@@ -8,7 +8,7 @@ spriteAttack[0] = spr_spewermelee;
 spriteDead = spr_spewerdead;
 
 damage = SetStat(8, 15, 23, 32);
-hp = SetStat(16, 20, 24, 32);
+hp = SetStat(13, 16, 19, 25);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(1.5);
 attackRange = 4;

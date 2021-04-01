@@ -120,7 +120,7 @@ weapon[# WeapStat.Sound, i] = Sound_Pistol2;
 i++; //Advanced Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Two;
-weapon[# WeapStat.Damage, i] = 1.5;
+weapon[# WeapStat.Damage, i] = 1.75;
 weapon[# WeapStat.FireRate, i] = 0.12;
 weapon[# WeapStat.Mag, i] = 30;
 weapon[# WeapStat.Ammo, i] = 270;
@@ -259,7 +259,7 @@ weapon[# WeapStat.Mag, i] = 1;
 weapon[# WeapStat.Ammo, i] = 19;
 weapon[# WeapStat.Accuracy, i] = 0.95;
 weapon[# WeapStat.Range, i] = 1.5;
-weapon[# WeapStat.Reload, i] = 3;
+weapon[# WeapStat.Reload, i] = 2.5;
 weapon[# WeapStat.BulletSpeed, i] = 48;
 weapon[# WeapStat.xOffset, i] = 27;
 weapon[# WeapStat.yOffset, i] = 47;
@@ -291,7 +291,7 @@ weapon[# WeapStat.Sound, i] = noone;
 i++; //BioLauncher
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Four;
-weapon[# WeapStat.Damage, i] = 10;
+weapon[# WeapStat.Damage, i] = 5;
 weapon[# WeapStat.FireRate, i] = 0.25;
 weapon[# WeapStat.Mag, i] = 5;
 weapon[# WeapStat.Ammo, i] = 35;
@@ -342,7 +342,7 @@ weapon[# WeapStat.yOffset, i] = 34;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Purple;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 1;
-weapon[# WeapStat.Pierce, i] = 8;
+weapon[# WeapStat.Pierce, i] = 10;
 weapon[# WeapStat.Sound, i] = noone;
 
 i++; //Undead Drainer
@@ -367,10 +367,10 @@ weapon[# WeapStat.Sound, i] = noone;
 i++; //B.H. Darker
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Five;
-weapon[# WeapStat.Damage, i] = 3;
+weapon[# WeapStat.Damage, i] = 4;
 weapon[# WeapStat.FireRate, i] = 0.5;
 weapon[# WeapStat.Mag, i] = 5;
-weapon[# WeapStat.Ammo, i] = 10;
+weapon[# WeapStat.Ammo, i] = 30;
 weapon[# WeapStat.Accuracy, i] = 1;
 weapon[# WeapStat.Range, i] = 1;
 weapon[# WeapStat.Reload, i] = 4;

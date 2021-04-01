@@ -31,9 +31,9 @@ explosionPierce[2] = 8;
 
 //BH Bomber
 grenadeImpact[3] = 1;
-grenadeFuseTime[3] = 3;
+grenadeFuseTime[3] = 2;
 
-explosionDamage[3] = 4;
+explosionDamage[3] = 5;
 explosionSize[3] = spr_HBexplosionsmall;
 explosionPierce[3] = 3;
 
