@@ -95,7 +95,7 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 			event_perform(ev_other, ev_user1);
 	}
 	
-	GameSprayBlood(damageToHealth, x, y - (bbox_bottom - bbox_top) / 2, false, 0);
+	GameSprayBlood(damageToHealth, _player.x, _player.y - (_player.bbox_bottom - _player.bbox_top) / 2, false, 0);
 }
 
 ///@function DamagePlayerArmour(player, damage)

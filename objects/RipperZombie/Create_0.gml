@@ -14,3 +14,7 @@ hp = SetStat(50, 60, 70 , 90) * (1 + ((global.playerAmount - 1) * 0.5));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 attackRange = 16;
+
+specialUsed = false;
+specialCooldown = 0;
+cooldownTime = SetStat(8, 7, 6, 5);
