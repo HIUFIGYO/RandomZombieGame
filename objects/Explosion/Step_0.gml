@@ -41,11 +41,11 @@ for(var i=0; i<count; i++)
 			if(CheckBuff(playerID, Buff.Damage))
 				_damage += DataBase.damageBuffExplosive;
 		}
-	
-		DamageZombie(playerID, hits[| i], _damage, false);
 		
 		if(acid)
 			DebuffApply(hits[| i], DeBuff.Acid, playerID);
+		
+		DamageZombie(playerID, hits[| i], _damage, false);
 		
 		if(explosionType == ExplosionType.BHBomber and !spawnedBH and IsDead(hits[| i]))
 		{

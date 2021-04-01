@@ -168,6 +168,8 @@ function PlayerProcessReloading()
 	{
 		reloadTimer[currentWeapon] -= DeltaTimeSecond();
 		reloadSingleShot[currentWeapon] -= DeltaTimeSecond();
+		spriteArms = spr_playerReloadArms;
+		spriteGuns = spr_playerReloadGuns;
 		var clipSize;
 	
 		if(reloadSingleShot[currentWeapon] <= 0)
@@ -183,7 +185,9 @@ function PlayerProcessReloading()
 	
 		if(reloadTimer[currentWeapon] <= 0)
 		{
-			reloadTimer[currentWeapon] = 0;
+			reloadTimer[currentWeapon] = 0
+			spriteArms = spr_playerArms;
+			spriteGuns = spr_playerArmsGuns;
 			ammo[currentWeapon] += mag[currentWeapon];
 			clipSize = GetMaxMag(id, currentWeapon);
 			if(clipSize <= ammo[currentWeapon])

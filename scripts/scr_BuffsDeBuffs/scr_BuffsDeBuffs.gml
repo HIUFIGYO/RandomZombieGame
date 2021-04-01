@@ -53,12 +53,15 @@ function DebuffApply(_id, _debuff, _playerID)
 				break;
 			case DeBuff.Acid:
 				_id.color = c_lime;
+				_id.deBuffTimer[DeBuff.Acid] /= 2;
 				break;
 			case DeBuff.Bleed:
 				_id.color = c_red;
 				break;
 		}
 	}
+	else
+		_id.deBuffPlayerID = noone;
 	
 	if(_id.deBuff[_debuff])
 	{
@@ -161,6 +164,40 @@ function UpdateDebuffs(_id, _isPlayer)
 	
 	if(_id.deBuffTick == 0)
 		_id.deBuffTick = 1;
+}
+
+///@function DebuffRemoveZombie(id, debuff)
+
+function DebuffRemoveZombie(_id, _debuff)
+{
+	_id.deBuff[_debuff] = false;
+	_id.deBuffStack[_debuff] = 0;
+	_id.deBuffTimer[_debuff] = 0;
+	for(var i=0; i<DeBuff.count; i++)
+	{
+		if(!deBuff[i])
+			continue;
+			
+		if(i == DeBuff.Ignite)
+		{
+			_id.color = c_orange;
+			return;
+		}
+			
+		if(i == DeBuff.Acid)
+		{
+			_id.color = c_lime;
+			return;
+		}
+			
+		if(i == DeBuff.Bleed)
+		{
+			_id.color = c_red;
+			return;
+		}
+	}
+	
+	_id.color = c_white;
 }
 
 ///@function DrawDebuffs(id, view)

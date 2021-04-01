@@ -156,6 +156,8 @@ function PlayerInitSprites()
 	spriteTorso = spr_playertorso;
 	spriteArms = spr_playerArms;
 	spriteGuns = spr_playerArmsGuns;
+	spriteReloadArms = spr_playerReloadArms;
+	spriteReloadGuns = spr_playerReloadGuns;
 	spriteLegs = spr_playerlegs;
 	spriteJumping = spr_playerjumping;
 	spriteCosmetic = spr_playercosmetics;
