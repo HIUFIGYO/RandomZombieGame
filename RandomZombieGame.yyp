@@ -263,6 +263,7 @@
     {"id":{"name":"spr_twitcheratk1","path":"sprites/spr_twitcheratk1/spr_twitcheratk1.yy",},"order":2,},
     {"id":{"name":"spr_twitcherevade","path":"sprites/spr_twitcherevade/spr_twitcherevade.yy",},"order":3,},
     {"id":{"name":"spr_meleeShopIcon","path":"sprites/spr_meleeShopIcon/spr_meleeShopIcon.yy",},"order":30,},
+    {"id":{"name":"Sprite256","path":"sprites/Sprite256/Sprite256.yy",},"order":7,},
     {"id":{"name":"spr_twitcherpounch","path":"sprites/spr_twitcherpounch/spr_twitcherpounch.yy",},"order":4,},
     {"id":{"name":"rm_startUp","path":"rooms/rm_startUp/rm_startUp.yy",},"order":5,},
     {"id":{"name":"lighting_set_dirty","path":"scripts/lighting_set_dirty/lighting_set_dirty.yy",},"order":8,},

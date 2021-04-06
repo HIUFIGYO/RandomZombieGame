@@ -2,6 +2,8 @@ event_inherited();
 
 ZombieAttack();
 
+if (!isDead)
+{
 	var radAura = id;
 	with(Player)
 	{
@@ -12,3 +14,4 @@ ZombieAttack();
 				DebuffApply(id, DeBuff.Radiation);
 		}
 	}
+}
