@@ -2,7 +2,7 @@ event_inherited();
 
 //UI
 zombieSelect = 0;
-zombieMaxSelect = 12;
+zombieMaxSelect = 13;
 
 zombieSprite[0] = spr_limperidle;
 zombieSprite[1] = spr_rabididle;
@@ -14,9 +14,10 @@ zombieSprite[6] = spr_twitcheridle;
 zombieSprite[7] = spr_speweridle;
 zombieSprite[8] = spr_injectoridle;
 zombieSprite[9] = spr_bladeidle;
-zombieSprite[10] = spr_ripperidle;
-zombieSprite[11] = spr_Screeperidle;
-zombieSprite[12] = spr_Acreeperidle;
+zombieSprite[10] = spr_Screeperidle;
+zombieSprite[11] = spr_bioidle;
+zombieSprite[12] = spr_ripperidle;
+zombieSprite[13] = spr_Acreeperidle;
 
 zombie[0] = LimperZombie;
 zombie[1] = RabidZombie;
@@ -28,9 +29,10 @@ zombie[6] = TwitcherZombie;
 zombie[7] = SpewerZombie;
 zombie[8] = InjectorZombie;
 zombie[9] = BladeZombie;
-zombie[10] = RipperZombie;
-zombie[11] = StrayCreeperZombie;
-zombie[12] = AlphaCreeperZombie;
+zombie[10] = StrayCreeperZombie;
+zombie[11] = BioZombie;
+zombie[12] = RipperZombie;
+zombie[13] = AlphaCreeperZombie;
 
 weaponSelect = 0;
 

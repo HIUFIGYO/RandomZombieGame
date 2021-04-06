@@ -60,4 +60,8 @@ switch(totalKills + difficultyOffset)
 	case 250:
 		ds_list_add(zombieSpawnList, StrayCreeperZombie);
 		break;
+		
+	case 300:
+		ds_list_add(zombieSpawnList, BioZombie);
+		break;
 }

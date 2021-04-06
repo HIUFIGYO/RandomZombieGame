@@ -14,6 +14,9 @@ function PlayerInvincibilityTimer()
 
 function PlayerHealthRegeneration()
 {
+	if(deBuff[DeBuff.Radiation])
+		return;
+	
 	if(!isDead)
 		hpRegenTimer -= DeltaTimeSecond();
 	if(hpRegenTimer <= 0)

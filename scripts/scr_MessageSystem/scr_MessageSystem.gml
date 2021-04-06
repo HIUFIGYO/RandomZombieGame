@@ -123,6 +123,9 @@ function MessageGetDamageTag(_tag)
 		case "Poison":
 			return " succumbed to Injector poison";
 			
+		case "Radiation":
+			return " fell to radiation";
+			
 		case "Explosion":
 			return " was blown to bits";
 			

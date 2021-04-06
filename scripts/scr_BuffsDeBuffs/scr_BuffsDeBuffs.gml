@@ -4,6 +4,7 @@ enum DeBuff
 	Acid,
 	Bleed,
 	Poison,
+	Radiation,
 	count
 }
 
@@ -62,6 +63,10 @@ function DebuffApply(_id, _debuff, _playerID)
 				if(is_undefined(_playerID))
 					_id.bleedMaxTimer += 2;
 				break;
+				
+			case DeBuff.Radiation:
+				_id.deBuffTimer[_debuff] = DataBase.deBuffDuration[_debuff];
+				break;
 		}
 		_id.deBuffStack[_debuff] = clamp(_id.deBuffStack[_debuff], 0, 10);
 	}
@@ -95,6 +100,8 @@ function DebuffApply(_id, _debuff, _playerID)
 			case DeBuff.Bleed:
 				_id.color = c_red;
 				break;
+			case DeBuff.Radiation:
+				_id.color = c_yellow;
 		}
 	}
 }
@@ -146,6 +153,10 @@ function UpdateDebuffs(_id, _isPlayer)
 					
 				case DeBuff.Poison:
 					break;
+					
+				case DeBuff.Radiation:
+					if(_isPlayer)
+					break;
 			}
 		}
 		
@@ -191,6 +202,12 @@ function DebuffRemoveZombie(_id, _debuff)
 		if(i == DeBuff.Bleed)
 		{
 			_id.color = c_red;
+			return;
+		}
+		
+		if(i == DeBuff.Radiation)
+		{
+			_id.color = c_yellow;
 			return;
 		}
 	}

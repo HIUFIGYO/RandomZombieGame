@@ -81,3 +81,12 @@ deBuffDamageEasy = 33;
 deBuffDamageMed = 66;
 deBuffDamageHard = 99;
 deBuffDamageVeryHard = 9999;
+
+//debuff radiation
+deBuffStack[DeBuff.Radiation] = true;
+deBuffDuration[DeBuff.Radiation] = 7;
+deBuffCurable[DeBuff.Radiation] = true;
+deBuffPlayerHealth[DeBuff.Radiation] = 0.75;
+deBuffZombieHealth[DeBuff.Radiation] = 1.25;
+deBuffPlayerDamageTaken[DeBuff.Radiation] = 1.25;
+deBuffPlayerDamageTaken[DeBuff.Radiation] = 0.75;

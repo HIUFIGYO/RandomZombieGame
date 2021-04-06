@@ -72,13 +72,14 @@
     "eventStubScript": null,
     "parent": {"name":"spr_limpergibs","path":"sprites/spr_limpergibs/spr_limpergibs.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "spr_limpergibs",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"670581c9-9232-4517-a111-047cf1e8a980","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Limper",
     "path": "folders/Sprites/Zombies/Limper.yy",

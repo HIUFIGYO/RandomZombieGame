@@ -19,12 +19,13 @@ function HealDebuffs(_id, _healType)
 			break;
 			
 		case HealingType.Syringe:
-			_id.deBuff[DeBuff.Bleed] = false;
+			_id.deBuff[DeBuff.Radiation] = false;
 			_id.deBuff[DeBuff.Acid] = false;
 			_id.deBuff[DeBuff.Poison] = false;
 			break;
 			
 		case HealingType.MedKit:
+			_id.deBuff[DeBuff.Acid] = false;
 			_id.deBuff[DeBuff.Bleed] = false;
 			_id.deBuff[DeBuff.Poison] = false;
 			break;
@@ -164,7 +165,7 @@ function GetMaxHealth(_player)
 	
 	if(CheckBuff(_player, Buff.Health))
 		_value *= DataBase.healthBuffEffect;
-	
+		
 	return _value;
 }
 
