@@ -29,15 +29,18 @@ function ZombieFadeOut()
 
 function ZombieAddVelocity()
 {
-	if(instance_exists(target) and !isDead and !isAttacking and !specialActive)
+	if(!specialActive)
 	{
-		var dir = sign(target.x - x);
-		xSpeed += acceleration * dir;
-	}
-	else
-	{
-		if(xSpeed != 0 and instance_place(x, y+1, BlockParent))
-			xSpeed = lerp(0, xSpeed, friction);
+		if(instance_exists(target) and !isDead and !isAttacking)
+		{
+			var dir = sign(target.x - x);
+			xSpeed += acceleration * dir;
+		}
+		else
+		{
+			if(xSpeed != 0 and instance_place(x, y+1, BlockParent))
+				xSpeed = lerp(0, xSpeed, friction);
+		}
 	}
 
 	xSpeed = clamp(xSpeed, -moveSpeed, moveSpeed);

@@ -10,6 +10,7 @@ if(sprite_index == spriteAttack[0])
 			grabX = grabTarget.x;
 			image_speed = 0;
 			image_index = 8;
+			xSpeed = 0;
 		}
 		
 		if(deBuff[DeBuff.Ignite])

@@ -55,3 +55,19 @@ function HUDCreateMessageController(_player)
 	inst.player = _player;
 	return inst;
 }
+
+///@function DrawViewBorder()
+
+function DrawViewBorder()
+{
+	if(view_current != playerID)
+		return;
+	
+	var xx = camera_get_view_x(Window.camera[playerID]),
+		yy = camera_get_view_y(Window.camera[playerID]),
+		w = xx + camera_get_view_width(Window.camera[playerID]),
+		h = yy + camera_get_view_height(Window.camera[playerID]);
+	
+	draw_set_color(c_black);
+	draw_rectangle(xx+1, yy, w-1, h-1, true);
+}

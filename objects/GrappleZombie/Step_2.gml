@@ -1,5 +1,5 @@
 if(grabTarget == noone)
-	exit;
+	return;
 
 grabTarget.x = grabX;
 grabTarget.ySpeed = max(0, grabTarget.ySpeed);

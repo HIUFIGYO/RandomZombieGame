@@ -12,11 +12,15 @@ function HealZombie(_zombie, _amount)
 
 function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 {
-	if(IsDead(_zombie))
+	if(IsDead(_zombie)or _damage == 0)
 		return;
 	
-	if(_zombie.invincible or _damage == 0)
+	if(_zombie.invincible)
 		return;
+		
+	if(_zombie.name == "Twitcher")
+		if(TwitcherDodge(_zombie))
+			return;
 	
 	ignoreBuffs = is_undefined(ignoreBuffs) ? false : ignoreBuffs;
 	
@@ -56,6 +60,7 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 
 	if(_zombie.hp <= 0 and !_zombie.isDead)
 	{
+		_zombie.specialActive = false;
 		GameZombieDead(_zombie, _playerID);
 		GameSprayBlood(GameGetBloodAmount(), _zombie.x, _zombie.y - (_zombie.bbox_bottom - _zombie.bbox_top) / 2, _zombie.acid, 0);
 	}

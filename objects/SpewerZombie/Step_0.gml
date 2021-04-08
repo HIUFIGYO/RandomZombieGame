@@ -14,6 +14,7 @@ if(!specialUsed and specialCooldown == 0 and target != noone and !isDead)
 			sprite_index = spr_spewershoot;
 			image_index = 0;
 			image_speed = 0.5;
+			xSpeed = 0;
 		}
 	}
 }
