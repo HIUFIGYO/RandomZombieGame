@@ -157,11 +157,11 @@ shop[HealingType.Medicine, ShopKey.Description] = "Heals: 35 Health\nUses: 1\nCu
 shop[HealingType.Medicine, ShopKey.Price] = 250;
 
 shop[HealingType.Syringe, ShopKey.Name] = "Syringe";
-shop[HealingType.Syringe, ShopKey.Description] = "Heals: 50 Health\nUses: 2\nCures: Acid, Bleed and Poison";
+shop[HealingType.Syringe, ShopKey.Description] = "Heals: 50 Health\nUses: 2\nCures: Acid, Poison and Radiation";
 shop[HealingType.Syringe, ShopKey.Price] = 500;
 
 shop[HealingType.MedKit, ShopKey.Name] = "Med Kit";
-shop[HealingType.MedKit, ShopKey.Description] = "Heals: 80 Health\nUses: 2\nCures: Bleed and Poison";
+shop[HealingType.MedKit, ShopKey.Description] = "Heals: 80 Health\nUses: 2\nCures: Acid, Bleed and Poison";
 shop[HealingType.MedKit, ShopKey.Price] = 750;
 
 //VIALS
