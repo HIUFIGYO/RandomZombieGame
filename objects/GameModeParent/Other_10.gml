@@ -33,35 +33,35 @@ switch(totalKills + difficultyOffset)
 		ds_list_add(zombieSpawnList, GrappleZombie);
 		break;
 		
-	case 100:
+	case 105:
 		ds_list_add(zombieSpawnList, GhostZombie);
 		break;
 		
-	case 125:
+	case 135:
 		ds_list_add(zombieSpawnList, BursterZombie);
 		break;
 		
-	case 150:
+	case 165:
 		ds_list_add(zombieSpawnList, TwitcherZombie);
 		break;
 		
-	case 175:
+	case 200:
 		ds_list_add(zombieSpawnList, SpewerZombie);
 		break;
 		
-	case 200:
+	case 235:
 		ds_list_add(zombieSpawnList, InjectorZombie);
 		break;
 		
-	case 225:
+	case 275:
 		ds_list_add(zombieSpawnList, BladeZombie);
 		break;
 		
-	case 250:
+	case 315:
 		ds_list_add(zombieSpawnList, StrayCreeperZombie);
 		break;
 		
-	case 300:
+	case 360:
 		ds_list_add(zombieSpawnList, BioZombie);
 		break;
 }

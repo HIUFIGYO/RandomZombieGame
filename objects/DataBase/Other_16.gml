@@ -27,7 +27,7 @@ shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 
 shop[Weapon.Pistol2, ShopKey.Price] = 1250;
 
 shop[Weapon.Rifle2, ShopKey.Name] = "Advanced Rifle";
-shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.5\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
+shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.75\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
 shop[Weapon.Rifle2, ShopKey.Price] = 1500;
 
 shop[Weapon.Shotgun2, ShopKey.Name] = "Advanced Shotgun";
@@ -55,15 +55,15 @@ shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 0.5
 shop[Weapon.Flame, ShopKey.Price] = 3000;
 
 shop[Weapon.Rocket, ShopKey.Name] = "Rocket Launcher";
-shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-20 Explosion-10\nFirerate: 0.8\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 19\nReload Time: 3 Seconds\nPenetration: Impact-0 Explosion-8\nFire Mode: Semi-Auto\nOne of the strongest weapons here we have to offer. Just be mindful of when you fire, you will be reloading a lot.";
+shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-20 Explosion-10\nFirerate: 0.8\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 19\nReload Time: 2.5 Seconds\nPenetration: Impact-0 Explosion-8\nFire Mode: Semi-Auto\nOne of the strongest weapons here we have to offer. Just be mindful of when you fire, you will be reloading a lot.";
 shop[Weapon.Rocket, ShopKey.Price] = 3250;
 
 shop[Weapon.Tesla, ShopKey.Name] = "Tesla Rifle";
-shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 2\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 250\nReload Time: 2.5 Seconds\nPenetration: 2\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
+shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-2 Chain-Lightning-1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 250\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
 shop[Weapon.Tesla, ShopKey.Price] = 3500;
 
 shop[Weapon.Acid, ShopKey.Name] = "Bio Launcher";
-shop[Weapon.Acid, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-10 Explosion-5\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 5\nMax Ammo: 35\nReload Time: 3 Seconds\nPenetration: Impact-0 Explosion-5\nFire Mode: Semi-Auto\n100% chance to apply ACID on explosion\nWe modified a grenade launcher to fire acidic rounds to melt your enemies. It's shown to be less effective against acidic opponents though.";
+shop[Weapon.Acid, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-5 Explosion-5\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 5\nMax Ammo: 35\nReload Time: 3 Seconds\nPenetration: Impact-0 Explosion-5\nFire Mode: Semi-Auto\n100% chance to apply ACID on explosion\nWe modified a grenade launcher to fire acidic rounds to melt your enemies. It's shown to be less effective against acidic opponents though.";
 shop[Weapon.Acid, ShopKey.Price] = 3750;
 
 shop[Weapon.Knife4, ShopKey.Name] = "Heated Blade";
@@ -71,7 +71,7 @@ shop[Weapon.Knife4, ShopKey.Description] = "Tier Five Melee Weapon\nDamage: 9\nA
 shop[Weapon.Knife4, ShopKey.Price] = 4000;
 
 shop[Weapon.Purple, ShopKey.Name] = "Purple Gun";
-shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 0.66\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 3 Seconds\nPenetration: 8\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
+shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 0.66\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 3 Seconds\nPenetration: 9\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
 shop[Weapon.Purple, ShopKey.Price] = 4500;
 
 shop[Weapon.Drainer, ShopKey.Name] = "Undead Drainer";
@@ -79,7 +79,7 @@ shop[Weapon.Drainer, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 2
 shop[Weapon.Drainer, ShopKey.Price] = 4500;
 
 shop[Weapon.BHDarker, ShopKey.Name] = "B.H. Darker";
-shop[Weapon.BHDarker, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 3\nFirerate: 0.5\nAccuracy: 100%\nMag Size: 5\nMax Ammo: 10\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nThis weapon is without description...";
+shop[Weapon.BHDarker, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 4\nFirerate: 0.5\nAccuracy: 100%\nMag Size: 5\nMax Ammo: 25\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nThis weapon is without description...";
 shop[Weapon.BHDarker, ShopKey.Price] = 5000;
 
 //GRENADES
@@ -93,11 +93,11 @@ shop[GrenadeType.Incendiary, ShopKey.Description] = "Damage: Explosion-5 Ground 
 shop[GrenadeType.Incendiary, ShopKey.Price] = 650;
 
 shop[GrenadeType.Mine, ShopKey.Name] = "Land Mines";
-shop[GrenadeType.Mine, ShopKey.Description] = "Damage: 15\nFuse Time: 0.5 second\nPenetration: 8\n Explosion Size: Large";
+shop[GrenadeType.Mine, ShopKey.Description] = "Damage: 16\nFuse Time: 0.5 second\nPenetration: 8\n Explosion Size: Large";
 shop[GrenadeType.Mine, ShopKey.Price] = 650;
 
 shop[GrenadeType.BHBomber, ShopKey.Name] = "B.H. Bomber";
-shop[GrenadeType.BHBomber, ShopKey.Description] = "Damage: Impact-1 Explosion-5\nFuse Time: 3 seconds\nPenetration: 3\n Explosion Size: Small";
+shop[GrenadeType.BHBomber, ShopKey.Description] = "Damage: Impact-1 Explosion-5\nFuse Time: 2 seconds\nPenetration: 3\n Explosion Size: Small";
 shop[GrenadeType.BHBomber, ShopKey.Price] = 4250;
 
 //BUFFS
