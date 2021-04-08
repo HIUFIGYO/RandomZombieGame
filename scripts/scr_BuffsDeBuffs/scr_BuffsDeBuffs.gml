@@ -15,6 +15,13 @@ function CheckBuff(_player, _buff)
 	return(_player.buff[0] == _buff or _player.buff[1] == _buff);
 }
 
+///@function CheckDebuff(player, debuff)
+
+function CheckDebuff(_player, _debuff)
+{
+	return _player.deBuff[_debuff];
+}
+
 ///@function GetBuffSlot(player, buff)
 
 function GetBuffSlot(_player, _buff)
@@ -155,7 +162,10 @@ function UpdateDebuffs(_id, _isPlayer)
 					break;
 					
 				case DeBuff.Radiation:
-					if(_isPlayer)
+					if(!_isPlayer)
+					{
+						HealZombie(_id, 1);
+					}
 					break;
 			}
 		}
@@ -168,6 +178,8 @@ function UpdateDebuffs(_id, _isPlayer)
 				DamagePlayerHealth(_id, SetStat(DataBase.deBuffDamageEasy, DataBase.deBuffDamageMed, DataBase.deBuffDamageHard, DataBase.deBuffDamageVeryHard), "Poison");
 			if(!_isPlayer)
 				_id.color = c_white;
+			else if(i == DeBuff.Radiation)
+				HealPlayer(_id, GetMaxHealth(_id) * (1 - DataBase.deBuffPlayerHealth));
 		}
 	}
 	

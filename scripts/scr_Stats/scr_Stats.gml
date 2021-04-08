@@ -60,6 +60,9 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 	
 	if(CheckVialNegative(_player, VialType.TradeOff))
 		_damage *= 4;
+		
+	if(CheckDebuff(_player, DeBuff.Radiation))
+		_damage *= DataBase.deBuffPlayerDamageTaken;
 	
 	var damageToArmour = max(floor(_damage * 0.8), 1);
 	var damageToHealth = floor(_damage * 0.2);
@@ -165,6 +168,11 @@ function GetMaxHealth(_player)
 	
 	if(CheckBuff(_player, Buff.Health))
 		_value *= DataBase.healthBuffEffect;
+		
+	if(CheckDebuff(_player, DeBuff.Radiation))
+		_value *= DataBase.deBuffPlayerHealth;
+		
+	_player.hp = clamp(_player.hp, 0, _value);
 		
 	return _value;
 }

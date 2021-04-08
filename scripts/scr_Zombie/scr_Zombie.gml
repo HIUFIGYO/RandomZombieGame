@@ -1,3 +1,13 @@
+///@function HealZombie(zombie, amount)
+
+function HealZombie(_zombie, _amount)
+{
+	if(IsDead(_zombie))
+		return;
+	
+	_zombie.hp = clamp(_zombie.hp + _amount, 0, ZombieGetMaxHealth(_zombie));
+}
+
 ///@function DamageZombie(playerID, zombie, damage, ignoreBuffs)
 
 function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
@@ -29,6 +39,9 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 			//penalties
 			if(CheckVialNegative(_playerID, VialType.Survivalist))
 				_damage *= 0.25;
+				
+			if(CheckDebuff(_zombie, DeBuff.Radiation))
+				_damage *= DataBase.deBuffZombieDamageTaken;
 		}
 		
 		//money

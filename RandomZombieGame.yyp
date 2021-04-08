@@ -118,6 +118,7 @@
     {"id":{"name":"spr_menuRecords","path":"sprites/spr_menuRecords/spr_menuRecords.yy",},"order":4,},
     {"id":{"name":"spr_medicalShopIcon","path":"sprites/spr_medicalShopIcon/spr_medicalShopIcon.yy",},"order":17,},
     {"id":{"name":"spr_legswalk","path":"sprites/spr_legswalk/spr_legswalk.yy",},"order":12,},
+    {"id":{"name":"scr_ZombieAbilities","path":"scripts/scr_ZombieAbilities/scr_ZombieAbilities.yy",},"order":3,},
     {"id":{"name":"spr_shop","path":"sprites/spr_shop/spr_shop.yy",},"order":18,},
     {"id":{"name":"Music_Action2","path":"sounds/Music_Action2/Music_Action2.yy",},"order":1,},
     {"id":{"name":"CashDrop","path":"objects/CashDrop/CashDrop.yy",},"order":5,},

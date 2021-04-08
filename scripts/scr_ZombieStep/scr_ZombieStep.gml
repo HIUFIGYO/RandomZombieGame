@@ -7,7 +7,9 @@ function ZombieHealthDisplayTimer()
 		
 	showHealthTimer -= DeltaTimeSecond();
 	if(showHealthTimer <= 0)
+	{
 		showHealth = false;
+	}
 }
 
 ///@function ZombieFadeOut()

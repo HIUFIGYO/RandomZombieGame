@@ -15,5 +15,6 @@ moveSpeed = SetZombieSpeed(3);
 
 radRange = 256;
 radDamage = 2;
-radTimer = 30; //frames
-color = c_yellow;
+radTime = 0.5; //seconds
+radTimer = 0;
+radColor = c_yellow;

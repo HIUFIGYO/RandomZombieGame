@@ -3,7 +3,7 @@
 //WEAPONS
 
 shop[Weapon.Knife, ShopKey.Name] = "Standard Melee";
-shop[Weapon.Knife, ShopKey.Description] = "Tier One Melee Weapon\nDamage: 3\nAttack Speed: 0.25\nPenetration: 0\nA small knife provided free of charge to use only against the weakest of enemies.";
+shop[Weapon.Knife, ShopKey.Description] = "Tier One Melee Weapon\nDamage: 3\nAttackSpeed: 0.25\nPenetration: 0\nA small knife provided free of charge to use only against the weakest of enemies.";
 shop[Weapon.Knife, ShopKey.Price] = 0;
 
 shop[Weapon.Pistol, ShopKey.Name] = "Standard Pistol";

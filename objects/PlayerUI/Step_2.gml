@@ -24,7 +24,7 @@ UISetAlpha(dangerOverlay, dangerOverlayAlpha);
 	
 //health bar
 UIHealthbarSetValue(hpBar, player.hp/GetMaxHealth(player));
-UITextSet(hpText, string(round(player.hp)) + "/" + string(GetMaxHealth(player)));
+UITextSet(hpText, string(round(player.hp)) + "/" + string(round(GetMaxHealth(player))));
 	
 //armour bar
 UIHealthbarSetValue(armourBar, player.armour/GetMaxArmour(player));

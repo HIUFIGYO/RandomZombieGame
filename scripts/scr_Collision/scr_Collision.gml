@@ -38,3 +38,19 @@ function CollisionLineRect(x1, y1, x2, y2, rx, ry, rw, rh)
 		return true;
 	return false;
 }
+
+///@function CollisionCirleList(x, y, radius, object, hookFunction)
+
+function CollisionCirleList(_x, _y, _radius, _object, hookFunction)
+{
+	var hits = ds_list_create(), count, i;
+	
+	count = collision_circle_list(_x, _y, _radius, _object, false, true, hits, false);
+	
+	for(i=0; i<count; i++)
+	{
+		hookFunction(hits[| i]);
+	}
+	
+	ds_list_destroy(hits);
+}
