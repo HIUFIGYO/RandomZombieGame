@@ -112,14 +112,13 @@
     "eventStubScript": null,
     "parent": {"name":"spr_playerlegs","path":"sprites/spr_playerlegs/spr_playerlegs.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_playerlegs",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1174bb3e-a950-4eef-9686-42c698c28aa1","tags":[],"resourceType":"GMImageLayer",},
   ],
-  "nineSlice": null,
   "parent": {
     "name": "Player",
     "path": "folders/Sprites/Player.yy",

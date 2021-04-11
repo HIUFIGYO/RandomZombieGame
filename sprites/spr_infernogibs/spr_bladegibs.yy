@@ -76,14 +76,13 @@
     "eventStubScript": null,
     "parent": {"name":"spr_bladegibs","path":"sprites/spr_bladegibs/spr_bladegibs.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_bladegibs",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1ba93402-ba0e-4244-82ab-60da892e402c","tags":[],"resourceType":"GMImageLayer",},
   ],
-  "nineSlice": null,
   "parent": {
     "name": "Blade",
     "path": "folders/Sprites/Zombies/Blade.yy",
