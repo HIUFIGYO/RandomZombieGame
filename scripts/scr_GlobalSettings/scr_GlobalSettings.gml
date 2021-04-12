@@ -9,11 +9,11 @@ enum GameDifficulty
 
 global.worldUnit = 32; //in pixels
 
-global.startingPlayerAmount = 1;
+global.startingPlayerAmount = 2;
 global.maxPlayers = 4;
 global.playerAmount = 1;
 
-global.difficulty = GameDifficulty.Hard;
+global.difficulty = GameDifficulty.Medium;
 global.selectedGameMode = GM.Skirmish;
 
 global.playerName[0] = "Player 1";
@@ -23,7 +23,7 @@ global.playerName[3] = "Player 4";
 
 global.playerInput[0] = Controller.Keyboard;
 global.playerInput[1] = Controller.Gamepad1;
-global.playerInput[2] = Controller.Keyboard;
+global.playerInput[2] = Controller.Gamepad2;
 global.playerInput[3] = Controller.Gamepad1;
 
 global.bloodAmount = 1;

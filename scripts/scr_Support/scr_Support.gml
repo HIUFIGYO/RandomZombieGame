@@ -48,3 +48,12 @@ function TraceLaser(_flip, _startX, _startY)
 		return room_width;
 	return 0;
 }
+
+///@function DamageSupport(support, damage)
+
+function DamageSupport(_support, _damage)
+{
+	_support.hp -= _damage;
+	if(_support.hp < 0)
+		_support.hp = 0;
+}

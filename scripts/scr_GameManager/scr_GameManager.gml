@@ -31,7 +31,7 @@ function GameZombieDead(_id, _player)
 	{
 		_player.kills += 1;
 		GameManager.gameMode.totalKills += 1;
-		if(_id.name == "Ripper" or _id.name == "Alpha Creeper")
+		if(_id.name == "Ripper" or _id.name == "Alpha Creeper" or _id.name == "Inferno")
 		{
 			MessageAddAll(_player.name + " finished off a " + _id.name, MessageFilter.SpecialZombie);
 		}
@@ -74,7 +74,7 @@ function GameSpawnZombie()
 
 function GameSpawnSpecial()
 {
-	var _zombie = choose(RipperZombie, AlphaCreeperZombie);
+	var _zombie = choose(RipperZombie, AlphaCreeperZombie, InfernoZombie);
 	var spawnPoint = GameManager.spawn[irandom(GameManager.spawnNumber - 1)];
 	instance_create_layer(spawnPoint.x, spawnPoint.y, GameManager.layerZombie, _zombie);
 }

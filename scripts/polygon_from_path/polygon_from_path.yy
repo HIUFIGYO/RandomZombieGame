@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Misc",
-    "path": "folders/Scripts/Lighting/Misc.yy",
+    "path": "folders/Scripts/Player/Lighting/Misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "polygon_from_path",

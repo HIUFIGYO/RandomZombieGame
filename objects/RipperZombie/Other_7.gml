@@ -10,6 +10,7 @@ if(sprite_index == spr_ripperatk3)
 	else
 	{
 		specialActive = false;
+		isAttacking = false;
 		specialCooldown = cooldownTime;
 	}
 }

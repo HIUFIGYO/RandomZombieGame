@@ -31,6 +31,7 @@ damageBuffBullet = 1;
 damageBuffElectric = 1;
 damageBuffShotgun = 1;
 damageBuffMelee = 2;
+damageBuffMythic = 2.5;
 damageBuffExplosive = 3;
 
 //critical Buff

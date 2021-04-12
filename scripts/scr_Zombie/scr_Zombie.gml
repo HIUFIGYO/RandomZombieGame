@@ -81,15 +81,22 @@ function ZombieCreateBurst(_zombie, _amount)
 	}
 }
 
-///@function ZombieCreateSpewShot(zombie)
+///@function ZombieCreateSpewerExplosion(id)
 
-function ZombieCreateSpewShot(_zombie)
+function ZombieCreateSpewerExplosion(_id)
 {
-	var inst = instance_create_layer(_zombie.x, _zombie.y - (_zombie.bbox_bottom - _zombie.bbox_top) / 2, GameManager.layerObject, SpewerProjectile);
-	if(_zombie.target != noone)
+	instance_create_layer(_id.x, _id.y, GameManager.layerObject, SpewerExplosion);
+}
+
+///@function ZombieCreateProjectile(projectile)
+
+function ZombieCreateProjectile(_projectile)
+{
+	var inst = instance_create_layer(x, y - (bbox_bottom - bbox_top) / 2, GameManager.layerObject, _projectile);
+	if(target != noone)
 	{
-		inst.xSpeed = _zombie.target.x - _zombie.x;
-		inst.ySpeed = (_zombie.target.y - 16) - (_zombie.y - (_zombie.bbox_bottom - _zombie.bbox_top) / 2);
+		inst.xSpeed = target.x - x;
+		inst.ySpeed = (target.y - 16) - (y - (bbox_bottom - bbox_top) / 2);
 		var _length = sqrt(sqr(inst.xSpeed)+sqr(inst.ySpeed));
 		if(_length != 0)
 		{
@@ -101,16 +108,9 @@ function ZombieCreateSpewShot(_zombie)
 	}
 	else
 	{
-		inst.xSpeed = 28 * image_xscale;
+		inst.xSpeed = inst.moveSpeed * image_xscale;
 		inst.ySpeed = 0;
 	}
-}
-
-///@function ZombieCreateSpewerExplosion(id)
-
-function ZombieCreateSpewerExplosion(_id)
-{
-	instance_create_layer(_id.x, _id.y, GameManager.layerObject, SpewerExplosion);
 }
 
 ///@function ZombieFindTarget()
