@@ -11,4 +11,4 @@ ignoreBuffs = false;
 
 targetsHit = ds_list_create();
 
-teslaRadius = 64;
+teslaRadius = 2 * global.worldUnit;//radius in world units;

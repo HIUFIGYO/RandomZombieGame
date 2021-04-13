@@ -1,8 +1,10 @@
-///@desc Grenades
+///@desc Grenades/Explosions
 
 grenadeMaxAmmo = 5;
 
-//grenade
+//GRENADES
+
+//Explosive Genade
 grenadeImpact[0] = 0.5;
 grenadeFuseTime[0] = 1.5;
 
@@ -10,7 +12,7 @@ explosionDamage[0] = 12;
 explosionSize[0] = spr_HBexplosionmedium;
 explosionPierce[0] = 5;
 
-//incendiary
+//Incendiary Bomb
 incendiaryGroundFire = 1;
 incendiaryIgniteChance = 0.5;
 
@@ -21,7 +23,7 @@ explosionDamage[1] = 5;
 explosionSize[1] = spr_HBexplosionsmall;
 explosionPierce[1] = 3;
 
-//mines
+//Land Mines
 grenadeImpact[2] = 0;
 grenadeFuseTime[2] = 0.5;
 
@@ -37,12 +39,14 @@ explosionDamage[3] = 5;
 explosionSize[3] = spr_HBexplosionsmall;
 explosionPierce[3] = 3;
 
-//rocket
+//WEAPON EXPLOSIONS
+
+//Rocket Launcher
 explosionDamage[4] = 10;
 explosionSize[4] = spr_HBexplosionlarge;
 explosionPierce[4] = 8;
 
-//bio launcher
+//Bio Launcher
 explosionDamage[5] = 5;
 explosionSize[5] = spr_HBexplosionmedium;
 explosionPierce[5] = 5;

@@ -401,6 +401,7 @@
     {"id":{"name":"HealthBarUI","path":"objects/HealthBarUI/HealthBarUI.yy",},"order":0,},
     {"id":{"name":"spr_playerPinnedArms","path":"sprites/spr_playerPinnedArms/spr_playerPinnedArms.yy",},"order":37,},
     {"id":{"name":"ZombieParent","path":"objects/ZombieParent/ZombieParent.yy",},"order":11,},
+    {"id":{"name":"Music_Action4","path":"sounds/Music_Action4/Music_Action4.yy",},"order":5,},
     {"id":{"name":"GhostZombie","path":"objects/GhostZombie/GhostZombie.yy",},"order":4,},
     {"id":{"name":"spr_titleCard","path":"sprites/spr_titleCard/spr_titleCard.yy",},"order":9,},
     {"id":{"name":"spr_ForegroundPropTileSet","path":"sprites/spr_ForegroundPropTileSet/spr_ForegroundPropTileSet.yy",},"order":4,},

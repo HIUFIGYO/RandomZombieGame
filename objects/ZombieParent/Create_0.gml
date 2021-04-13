@@ -15,7 +15,7 @@ attackRange = 1;
 specialActive = false;
 
 grav = 0.981;
-acceleration = random_range(0.1, 0.15);
+acceleration = random_range(0.1, 0.2);
 moveSpeed = 2;
 jumpSpeed = 16;
 maxFallSpeed = 20;

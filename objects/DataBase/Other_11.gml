@@ -43,7 +43,7 @@ scoutBuffDamage = 0.5;
 scoutBuffShowHealthTime = 2.5;
 
 //medic Buff
-medicBuffRange = 5 *  global.worldUnit;//radius in world units
+medicBuffRange = 7 * global.worldUnit;//radius in world units
 medicBuffRegenHealth = 1;
 medicBuffChanceItemNotConsume = 0.5;
 medicBuffReviveFactor = 2;

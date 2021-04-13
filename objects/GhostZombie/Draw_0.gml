@@ -4,7 +4,8 @@ if(CheckBuff(_player, Buff.Scout))
 
 event_inherited();
 
-if(isDead or isAttacking)
+if(isDead or isAttacking or deCloakDamage)
 	image_alpha = 1;
+	
 else
 	image_alpha = cloak;

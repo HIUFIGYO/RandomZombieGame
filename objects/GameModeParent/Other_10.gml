@@ -21,11 +21,11 @@ if(totalKills mod 100 == 0)
 //add new zombies
 switch(totalKills + difficultyOffset)
 {
-	case 25:
+	case 20:
 		ds_list_add(zombieSpawnList, RabidZombie);
 		break;
 		
-	case 50:
+	case 45:
 		ds_list_add(zombieSpawnList, LardZombie);
 		break;
 		
@@ -33,35 +33,35 @@ switch(totalKills + difficultyOffset)
 		ds_list_add(zombieSpawnList, GrappleZombie);
 		break;
 		
-	case 105:
+	case 110:
 		ds_list_add(zombieSpawnList, GhostZombie);
 		break;
 		
-	case 135:
+	case 150:
 		ds_list_add(zombieSpawnList, BursterZombie);
 		break;
 		
-	case 165:
+	case 195:
 		ds_list_add(zombieSpawnList, TwitcherZombie);
 		break;
 		
-	case 200:
+	case 245:
 		ds_list_add(zombieSpawnList, SpewerZombie);
 		break;
 		
-	case 235:
+	case 300:
 		ds_list_add(zombieSpawnList, InjectorZombie);
 		break;
 		
-	case 275:
+	case 360:
 		ds_list_add(zombieSpawnList, BladeZombie);
 		break;
 		
-	case 315:
+	case 425:
 		ds_list_add(zombieSpawnList, StrayCreeperZombie);
 		break;
 		
-	case 360:
+	case 495:
 		ds_list_add(zombieSpawnList, BioZombie);
 		break;
 }

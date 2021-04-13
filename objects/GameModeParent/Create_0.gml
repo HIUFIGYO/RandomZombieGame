@@ -17,12 +17,12 @@ switch(global.difficulty)
 {
 	case GameDifficulty.Hard:
 		ds_list_add(zombieSpawnList, RabidZombie);
-		difficultyOffset = 25;
+		difficultyOffset = 20;
 		break;
 		
 	case GameDifficulty.VeryHard:
 		ds_list_add(zombieSpawnList, RabidZombie);
 		ds_list_add(zombieSpawnList, LardZombie);
-		difficultyOffset = 50;
+		difficultyOffset = 45;
 		break;
 }

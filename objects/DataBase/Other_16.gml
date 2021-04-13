@@ -131,7 +131,7 @@ shop[Buff.Ammo, ShopKey.Description] = "Increase mag size by 50%\nIncrease max a
 shop[Buff.Ammo, ShopKey.Price] = 1500;
 
 shop[Buff.Damage, ShopKey.Name] = "Damage Buff";
-shop[Buff.Damage, ShopKey.Description] = "Increase flame damage by 0.5\nIncrease bullet and electric damage by 1\nIncrease pellet count by 1\nIncrease melee damage by 2\nIncrease explosive damage by 3";
+shop[Buff.Damage, ShopKey.Description] = "Increase flame damage by 0.5\nIncrease bullet and electric damage by 1\nIncrease pellet count by 1\nIncrease melee damage by 2\nIncrease experimental weapon damage by 2.5\nIncrease explosive damage by 3";
 shop[Buff.Damage, ShopKey.Price] = 1500;
 
 shop[Buff.Critical, ShopKey.Name] = "Critical Buff";
