@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Collsion.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_BoundingBoxes",
+  "name": "scr_CollisionChecks",
   "tags": [],
   "resourceType": "GMScript",
 }

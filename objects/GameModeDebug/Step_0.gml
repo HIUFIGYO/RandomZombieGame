@@ -50,7 +50,11 @@ if(keyboard_check_pressed(vk_numpad2))
 
 //toggle god mode
 if(keyboard_check_pressed(vk_numpad7))
+{
 	godMode = !godMode;
+	var _str = godMode ? "On" : "Off";
+	MessageAddAll("God mode is " + _str);
+}
 	
 if(godMode)
 {

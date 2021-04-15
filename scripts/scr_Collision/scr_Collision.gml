@@ -1,3 +1,71 @@
+///@function CollisionList(object, collisionType, hookFunction)
+
+function CollisionList(_object, collisionType, hookFunction)
+{
+	var hits = ds_list_create(), i, count;
+	
+	count = instance_number(_object);
+	for(i=0; i<count; i++)
+	{
+		var otherObject = instance_find(_object, i);
+		if(collisionType(id, otherObject))
+			ds_list_add(hits, otherObject);
+	}
+	
+	count = ds_list_size(hits);
+	for(i=0; i<count; i++)
+	{
+		hookFunction(hits[| i]);
+	}
+	
+	ds_list_destroy(hits);
+}
+
+
+///@function CollisionListTargets(object, collisionType, targetsList, hookFunction)
+
+function CollisionListTargets(_object, _collisionType, _targetsList, hookFunction)
+{
+	var hits = ds_list_create(), count, i;
+	
+	count = instance_number(_object);
+	for(i=0; i<count; i++)
+	{
+		var otherObject = instance_find(_object, i);
+		if(_collisionType(id, otherObject))
+			ds_list_add(hits, otherObject);
+	}
+	
+	count = ds_list_size(hits);
+	for(i=0; i<count; i++)
+	{
+		if(!ds_exists(_targetsList, ds_type_list))
+			break;
+		
+		var alreadyHit = false;
+		for(var hit=0; hit<ds_list_size(_targetsList); hit++)
+		{
+			if(_targetsList[| hit] == hits[| i])
+				alreadyHit = true
+		}
+		
+		if(alreadyHit)
+			continue;
+		
+		if(hookFunction(hits[| i]))
+			ds_list_add(_targetsList, hits[| i]);
+	}
+	
+	ds_list_destroy(hits);
+}
+
+
+
+
+
+///============Obsolete functions===========
+
+
 ///@function CollisionCirleList(x, y, radius, object, hookFunction)
 
 function CollisionCirleList(_x, _y, _radius, _object, hookFunction)
