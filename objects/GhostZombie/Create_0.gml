@@ -13,7 +13,7 @@ hp = SetStat(4, 5, 6, 8);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(2.5);
 
-cloak = SetStat(0.1, 0.075, 0.05, 0.025);
+cloak = SetStat(0.1, 0.08, 0.06, 0.04);
 deCloakDamage = false;
 
 image_alpha = 0;

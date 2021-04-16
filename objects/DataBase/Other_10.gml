@@ -120,7 +120,7 @@ weapon[# WeapStat.Sound, i] = Sound_Pistol2;
 i++; //Advanced Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Two;
-weapon[# WeapStat.Damage, i] = 1.75;
+weapon[# WeapStat.Damage, i] = 1.5;
 weapon[# WeapStat.FireRate, i] = 0.12;
 weapon[# WeapStat.Mag, i] = 30;
 weapon[# WeapStat.Ammo, i] = 270;
@@ -196,10 +196,10 @@ weapon[# WeapStat.Sound, i] = Sound_Pistol3;
 i++; //Super Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Three;
-weapon[# WeapStat.Damage, i] = 2.5;
+weapon[# WeapStat.Damage, i] = 2;
 weapon[# WeapStat.FireRate, i] = 0.08;
-weapon[# WeapStat.Mag, i] = 20;
-weapon[# WeapStat.Ammo, i] = 280;
+weapon[# WeapStat.Mag, i] = 25;
+weapon[# WeapStat.Ammo, i] = 275;
 weapon[# WeapStat.Accuracy, i] = 0.95;
 weapon[# WeapStat.Range, i] = 1.5;
 weapon[# WeapStat.Reload, i] = 2.5;
@@ -310,7 +310,7 @@ weapon[# WeapStat.Sound, i] = noone;
 i++; //Heated Blade
 weapon[# WeapStat.Type, i] = WeapType.Melee;
 weapon[# WeapStat.Tier, i] = Tier.Five;
-weapon[# WeapStat.Damage, i] = 9;
+weapon[# WeapStat.Damage, i] = 10;
 weapon[# WeapStat.FireRate, i] = 0.25;
 weapon[# WeapStat.Mag, i] = noone;
 weapon[# WeapStat.Ammo, i] = noone;

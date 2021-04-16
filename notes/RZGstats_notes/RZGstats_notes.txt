@@ -920,11 +920,15 @@ Friendly Fire damage is rounded down. (minimum 1 damage)
 	[WARNING] Zombie strength has grown!
 
 	-Post Game Report-
-Most Kills
-Most Assists
-Money Gained
-Money Spent
-Most Damage Dealt
-Most Damage Taken
-Advanced Threat Kills
+Total Kills
+Primary Kills
+SideArm Kills
+Melee Kills
+Assists
+Damage Dealt
+Support Damage
 Damage To Major Threats
+Damage Taken
+Money Earned
+Money Spent
+Health Healed
