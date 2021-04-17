@@ -27,7 +27,7 @@ shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 
 shop[Weapon.Pistol2, ShopKey.Price] = 1000;
 
 shop[Weapon.Rifle2, ShopKey.Name] = "Advanced Rifle";
-shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.5\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
+shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.75\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
 shop[Weapon.Rifle2, ShopKey.Price] = 1250;
 
 shop[Weapon.Shotgun2, ShopKey.Name] = "Advanced Shotgun";
@@ -47,11 +47,11 @@ shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2
 shop[Weapon.Rifle3, ShopKey.Price] = 2000;
 
 shop[Weapon.Shotgun3, ShopKey.Name] = "Super Shotgun";
-shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*9\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 70\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
+shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*8\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 70\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
 shop[Weapon.Shotgun3, ShopKey.Price] = 2000;
 
 shop[Weapon.Flame, ShopKey.Name] = "Flame Thrower";
-shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 0.5\nFirerate: 0.1\nAccuracy: 85%\nMag Size: 50\nMax Ammo: 350\nReload Time: 3 Seconds\nPenetration: 1\nFire Mode: Full-Auto\n100% chance to apply IGNITE\nIf you like the smell of flesh burning then look no further than to buy this here Flame Thrower.";
+shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 0.75\nFirerate: 0.1\nAccuracy: 85%\nMag Size: 50\nMax Ammo: 350\nReload Time: 3 Seconds\nPenetration: 1\nFire Mode: Full-Auto\n100% chance to apply IGNITE\nIf you like the smell of flesh burning then look no further than to buy this here Flame Thrower.";
 shop[Weapon.Flame, ShopKey.Price] = 2500;
 
 shop[Weapon.Rocket, ShopKey.Name] = "Rocket Launcher";

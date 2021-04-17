@@ -47,7 +47,7 @@ function InfernoFireCollideZombie(_zombie)
 	if(_zombie.name == "Inferno")
 		return;
 	
-	if(!CheckDebuff(_zombie, DeBuff.Ignite))
+	if(!CheckDebuff(_zombie, DeBuff.Ignite) and (random(1) <= SetStat(0.25, 0.5, 0.75, 1)))
 		DebuffApply(_zombie, DeBuff.Ignite, noone);
 }
 

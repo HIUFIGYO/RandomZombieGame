@@ -20,7 +20,7 @@ function BioZombieRadiationAura()
 
 function BioZombieAuraCollisionPlayer(_player)
 {
-	DamagePlayer(_player, radDamage * radTime, "Radiation");
+	DamagePlayerHealth(_player, radDamage * radTime, "Radiation");
 	if random(1) <= SetStat(0.15, 0.3, 0.45, 0.6)
 		DebuffApply(_player, DeBuff.Radiation);
 }
