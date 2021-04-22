@@ -57,3 +57,14 @@ function DamageSupport(_support, _damage)
 	if(_support.hp < 0)
 		_support.hp = 0;
 }
+
+///@function DebuffHealGenCure(player)
+
+function DebuffHealGenCure(_player)
+{
+	for(var i=0; i<DeBuff.count; i++)
+	{
+		if(_player.deBuff[i] and DataBase.deBuffCurable[i])
+			_player.deBuff[i] = false;
+	}
+}

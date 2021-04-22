@@ -13,6 +13,7 @@ hp = SetStat(20, 24, 28, 36) * (1 + ((global.playerAmount - 1) * 0.25));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(3);
 
+hasRad = true;
 radRange = 6 * global.worldUnit;//radius in world units;
 radDamage = 2;
 radTime = 0.5; //seconds

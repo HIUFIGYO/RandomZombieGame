@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Scripts/Lighting.yy",
+    "name": "Maths",
+    "path": "folders/Scripts/Maths.yy",
   },
   "resourceVersion": "1.0",
-  "name": "composite_shadow_map",
+  "name": "scr_Vector2",
   "tags": [],
   "resourceType": "GMScript",
 }

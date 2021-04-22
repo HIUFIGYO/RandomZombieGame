@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Lighting",
-    "path": "folders/Scripts/Lighting.yy",
+    "name": "Player",
+    "path": "folders/Scripts/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "composite_shadow_map",
+  "name": "scr_PlayerInteractibles",
   "tags": [],
   "resourceType": "GMScript",
 }

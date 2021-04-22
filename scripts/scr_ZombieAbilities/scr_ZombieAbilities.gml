@@ -57,7 +57,7 @@ function TwitcherDodge(_zombie)
 
 function TwitcherProcessDodge()
 {
-	if(IsDead(id))
+	if(isDead)
 		return;
 	
 	if(dodgeCooldown > 0)
@@ -74,6 +74,7 @@ function TwitcherProcessDodge()
 	
 	sprite_index = spr_twitcherevade;
 	image_index = 0;
+	xSpeed = 0;
 	PhysicsObjectSetSpeed(id, choose(-1, 1) * 20, ySpeed);
 }
 

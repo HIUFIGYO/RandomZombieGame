@@ -193,31 +193,31 @@ shop[VialType.TradeOff, ShopKey.Price] = 1250;
 //SUPPORT ITEMS
 
 shop[SupportType.Barricade, ShopKey.Name] = "Barricade";
-shop[SupportType.Barricade, ShopKey.Description] = "Blocks oncoming enemies\nHealth: 250";
+shop[SupportType.Barricade, ShopKey.Description] = "Blocks oncoming enemies\n\nHealth: 250";
 shop[SupportType.Barricade, ShopKey.Price] = 500;
 
 shop[SupportType.AdvBarricade, ShopKey.Name] = "Advanced Barricade";
-shop[SupportType.AdvBarricade, ShopKey.Description] = "Blocks and damages oncoming enemies\nHealth 500\nDamage: 3";
+shop[SupportType.AdvBarricade, ShopKey.Description] = "Blocks and damages oncoming enemies\n\nHealth 500\nDamage: 3";
 shop[SupportType.AdvBarricade, ShopKey.Price] = 750;
 
 shop[SupportType.Turret, ShopKey.Name] = "Turret";
-shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\nHealth: 375\nDamage: 1\nFirerate: 0.2\n Accuracy: 95%\nMag Size: 50\nReload Time: 5 seconds";
+shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\n\nHealth: 375\nDamage: 1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nReload Time: 5 seconds";
 shop[SupportType.Turret, ShopKey.Price] = 1500;
 
 shop[SupportType.HealGenerator, ShopKey.Name] = "Heal Generator";
-shop[SupportType.HealGenerator, ShopKey.Description] = "Heals everyone within a small radius\nHeals: 1 health every 0.1 seconds\nDuration: 5 seconds";
+shop[SupportType.HealGenerator, ShopKey.Description] = "Heals everyone and damages zombies within a small radius\n\nHeals: 10 health per second\nCures: Acid, Bleed, Poison\nRemoves Radiation on both players and zombies\nDamage: 2 per second\nDuration: 20 seconds";
 shop[SupportType.HealGenerator, ShopKey.Price] = 1100;
 
 shop[SupportType.AmmoCrate, ShopKey.Name] = "Ammunition Crate";
-shop[SupportType.AmmoCrate, ShopKey.Description] = "Provides ammo for pistols, rifles, shotguns and explosives\nUses: 4";
+shop[SupportType.AmmoCrate, ShopKey.Description] = "Provides ammo for pistols, rifles, shotguns and explosives\n\nUses: 4";
 shop[SupportType.AmmoCrate, ShopKey.Price] = 1000;
 
 shop[SupportType.HeavyCrate, ShopKey.Name] = "Heavy Weapons Crate";
-shop[SupportType.HeavyCrate, ShopKey.Description] = "Provides ammo for launchers, beam weapons and explosives\nUses: 4";
+shop[SupportType.HeavyCrate, ShopKey.Description] = "Provides ammo for launchers, beam weapons and explosives\n\nUses: 4";
 shop[SupportType.HeavyCrate, ShopKey.Price] = 2000;
 
 shop[SupportType.MythicCrate, ShopKey.Name] = "Otherworldly Crate";
-shop[SupportType.MythicCrate, ShopKey.Description] = "Provides ammo for experimental weapons\nUses: 4";
+shop[SupportType.MythicCrate, ShopKey.Description] = "Provides ammo for experimental weapons\n\nUses: 4";
 shop[SupportType.MythicCrate, ShopKey.Price] = 3000;
 
 shop[SupportType.Armour, ShopKey.Name] = "Armour";

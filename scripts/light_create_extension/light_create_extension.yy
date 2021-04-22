@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Misc",
-    "path": "folders/Scripts/Player/Lighting/Lights/Misc.yy",
+    "path": "folders/Scripts/Lighting/Lights/Misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "light_create_extension",

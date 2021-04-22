@@ -4,5 +4,6 @@ event_inherited();
 
 if(isDead)
 {
-	//CreateExplosion(id, );
+	CreateExplosion(id, noone, ExplosionType.Grenade);
+	CreateGroundFire(noone, x, y - 32, 6);
 }

@@ -113,6 +113,7 @@ function DamagePlayerArmour(_player, _damage)
 		HUDCloseShop(_player);
 	
 	_player.armour -= _damage;
+	_player.UI.overlayAlpha = 1;
 	_player.armour = clamp(_player.armour, 0, GetMaxArmour(_player));
 }
 
@@ -133,8 +134,9 @@ function DamagePlayerHealth(_player, _damage, _tag, _zombieTag)
 		_damage *= 4;
 	
 	_player.hp -= _damage;
+	_player.UI.overlayAlpha = 1;
 	audio_play_sound(Sound_PlayerHurt, 0 , false);
-	GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) / 2, false, 0);
+	GameSprayBlood(GameGetBloodAmount(), _player.x, _player.y - (_player.bbox_bottom - _player.bbox_top) / 2, false, 0);
 	if(_player.hp <= 0)
 	{
 		_player.damageTag = _tag;

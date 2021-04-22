@@ -2,4 +2,5 @@ event_inherited();
 
 ZombieAttack();
 
-BioZombieRadiationAura();
+if(hasRad)
+	BioZombieRadiationAura();

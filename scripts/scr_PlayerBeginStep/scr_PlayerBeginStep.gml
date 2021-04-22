@@ -204,90 +204,33 @@ function PlayerCalculateSupportCollision()
 function PlayerInteractWithDoor()
 {
 	var _door = instance_nearest(x, y, WoodenDoor);
-	if(_door and DistanceToObject(id, _door, 32))
+	if(_door and DistanceToObject(id, _door, 48))
 		with(_door)
 			event_perform(ev_other, ev_user0);
 }
 
-///@function PlayerFindInteractible()
+///@function PlayerProcessInteractible()
 
-function PlayerFindInteractible()
+function PlayerProcessInteractible()
 {
-	var returnObject = noone;
-	var priority = 0;
-
-	var objList = ds_list_create();
-	var _count = collision_rectangle_list(bbox_left, y-32, bbox_right, y, all, false, true, objList, false);
-	
-	for(var i=0; i<_count; i++)
+	if(InputPlayerGetButtonDown(player_inputID, Button.Interact))
 	{
-		var _name = object_get_name(objList[| i].object_index);
-		if(_name == "Player" and IsDead(objList[| i]))
-		{
-			returnObject = objList[| i];
-			break;
-		}
-		else if(_name == "WeaponDrops")
-		{
-			if(priority < 2)
-			{
-				returnObject = objList[| i];
-				priority = 1;
-			}
-		}
-		else if(_name == "AmmoCrate" or _name == "HeavyCrate" or _name == "MythicCrate")
-		{
-			if(priority < 1)
-			{
-				returnObject = objList[| i];
-				priority = 2;
-			}
-		}
-		else if(_name == "Shop")
-		{
-			if(priority == 0)
-			{
-				returnObject = objList[| i];
-			}
-		}
-	}
-
-	ds_list_destroy(objList);
+		PlayerInteractWithDoor();
 	
-	return returnObject;
-}
-
-///@function PlayerProcessInteractible(interactible)
-
-function PlayerProcessInteractible(returnObject)
-{
-	switch(object_get_name(returnObject.object_index))
-		{
-		case "Player":
-			revivingPlayer = returnObject;
-			revivingPlayer.revivePlayerCount++;
-			break;
-				
-		case "WeaponDrops":
-			PlayerWeaponPickUp(returnObject);
-			break;
-				
-		case "AmmoCrate":
-		case "HeavyCrate":
-		case "MythicCrate":
-			returnObject.lastPlayerUse = id;
-			with(returnObject)
-				event_perform(ev_other, ev_user0);
-			break;
-				
-		case "Shop":
-			if(canMove)
-			{
-				canMove = false;
-				isInMenu = true;
-				HUDCreateShop(id);
-			}
-			break;
+		if(PlayerInteractible(Player, PlayerInteractPlayer))
+			return;
+		
+		if(PlayerInteractible(WeaponDrops, PlayerInteractWeaponDrop))
+			return;
+		
+		if(PlayerInteractible(HealGenerator, PlayerInteractHealGen))
+			return;
+		
+		if(PlayerInteractible(AmmoCrate, PlayerInteractAmmoCrate))
+			return;
+		
+		if(PlayerInteractible(Shop, PlayerInteractShop))
+			return;
 	}
 }
 

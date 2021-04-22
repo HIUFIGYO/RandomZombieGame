@@ -17,3 +17,7 @@ dodgeUsed = false;
 dodgeCooldownTime = SetStat(2.5, 2, 1.5, 1);
 dodgeCooldown = 0;
 
+pounceUsed = false;
+pounceDistance = 5 * global.worldUnit;
+pounceCooldownTime = SetStat(10, 8, 6, 4);
+pounceCooldown = 0;

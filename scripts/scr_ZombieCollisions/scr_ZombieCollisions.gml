@@ -3,7 +3,7 @@
 function BursterSpikeCollidePlayer(_player)
 {
 	DamagePlayer(_player, damage, "Zombie", "Burster");
-	if (random(1) <= SetStat(0.2, 0.3, 0.4, 0.5))
+	if _player.armour <= 0 and (random(1) <= SetStat(0.2, 0.3, 0.4, 0.5))
 		DebuffApply(_player,DeBuff.Bleed)
 	instance_destroy();
 }
@@ -23,6 +23,9 @@ function BursterSpikeCollideBarricade(_barricade)
 
 function InfernoFireCollidePlayer(_player)
 {
+	if(IsDead(_player))
+		return;
+	
 	DamagePlayer(_player, damage, "Zombie", "Inferno");
 	if (random(1) <= SetStat(0.25, 0.5, 0.75, 1))
 		DebuffApply(_player, DeBuff.Ignite);
@@ -44,7 +47,7 @@ function InfernoFireCollideBarricade(_barricade)
 
 function InfernoFireCollideZombie(_zombie)
 {
-	if(_zombie.name == "Inferno")
+	if(IsDead(_zombie)or _zombie.name == "Inferno")
 		return;
 	
 	if(!CheckDebuff(_zombie, DeBuff.Ignite) and (random(1) <= SetStat(0.25, 0.5, 0.75, 1)))

@@ -24,11 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c23971d8-73fa-49fd-9269-4a6ff9a450ec","path":"sprites/spr_healgen/spr_healgen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c23971d8-73fa-49fd-9269-4a6ff9a450ec","path":"sprites/spr_healgen/spr_healgen.yy",},"LayerId":{"name":"c3197a70-7220-4996-8af2-fd3374af6f34","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_healgen","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","name":"c23971d8-73fa-49fd-9269-4a6ff9a450ec","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"d97dc2d7-be99-4503-a728-43139902832d","path":"sprites/spr_healgen/spr_healgen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"d97dc2d7-be99-4503-a728-43139902832d","path":"sprites/spr_healgen/spr_healgen.yy",},"LayerId":{"name":"c3197a70-7220-4996-8af2-fd3374af6f34","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"d97dc2d7-be99-4503-a728-43139902832d","path":"sprites/spr_healgen/spr_healgen.yy",},"LayerId":{"name":"22419643-141e-4139-936e-3146bee726e6","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_healgen","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","name":"d97dc2d7-be99-4503-a728-43139902832d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -39,13 +37,12 @@
     "playbackSpeedType": 1,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 2.0,
+    "length": 1.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"63b1980d-176d-4ea1-8f15-8ba857ecb3a1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c23971d8-73fa-49fd-9269-4a6ff9a450ec","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"9482a649-5ba7-481b-af83-37ac61d4e68e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d97dc2d7-be99-4503-a728-43139902832d","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9482a649-5ba7-481b-af83-37ac61d4e68e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d97dc2d7-be99-4503-a728-43139902832d","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -71,6 +68,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c3197a70-7220-4996-8af2-fd3374af6f34","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Shop",
     "path": "folders/Sprites/Shop.yy",
