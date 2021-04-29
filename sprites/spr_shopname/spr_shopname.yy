@@ -71,9 +71,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"123b28bd-faed-4324-b373-fca181acd2d1","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Sprites/Shop.yy",
+    "name": "Props",
+    "path": "folders/Sprites/Props.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_shopname",

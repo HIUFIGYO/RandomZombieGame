@@ -79,9 +79,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6da51a65-b074-4103-96ef-b05a5c2efb3b","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Sprites/Shop.yy",
+    "name": "UI and HUD",
+    "path": "folders/Sprites/UI and HUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_secondaryShopIcon",

@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"294e08f7-9001-4ebb-90e7-3c037b1d25bd","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Unused",
+    "path": "folders/Sprites/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_supplydrop",

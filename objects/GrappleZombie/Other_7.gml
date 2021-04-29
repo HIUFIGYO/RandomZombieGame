@@ -5,7 +5,6 @@ if(sprite_index == spriteAttack[0])
 		if(!target.isGrabbed)
 		{
 			target.isGrabbed = true;
-			specialActive = true;
 			grabTarget = target;
 			grabX = grabTarget.x;
 			image_speed = 0;

@@ -75,9 +75,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"72fa9316-071a-4cea-b081-285b37c3f16c","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Sprites/Shop.yy",
+    "name": "UI and HUD",
+    "path": "folders/Sprites/UI and HUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_medicalShopIcon",

@@ -71,9 +71,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c420107d-30f4-41a2-a3e0-7ce43c0f526b","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Sprites/Shop.yy",
+    "name": "Support",
+    "path": "folders/Sprites/Support.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_advbarricadedebris",

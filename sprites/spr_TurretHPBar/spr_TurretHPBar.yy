@@ -123,9 +123,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8181e9a8-2835-43a7-bf03-2c55517bf62b","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Sprites/Shop.yy",
+    "name": "Support",
+    "path": "folders/Sprites/Support.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_TurretHPBar",

@@ -71,9 +71,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1bbda13a-b59c-4497-a5a8-d3bb1dc912c8","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "menu icons",
-    "path": "folders/Sprites/menu icons.yy",
+    "name": "Menu Icons",
+    "path": "folders/Sprites/Menu Icons.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_menuRecords",

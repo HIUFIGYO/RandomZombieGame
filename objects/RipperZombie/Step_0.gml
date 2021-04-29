@@ -7,4 +7,5 @@ if(isDead)
 
 RipperSawBladeAttack();
 
-ZombieAttack();
+if(ZombieCheckState(ZombieStateBehaviour))
+	ZombieAttack();

@@ -931,4 +931,4 @@ Damage To Major Threats
 Damage Taken
 Money Earned
 Money Spent
-Health Healed
+Healing Recieved

@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cbb02e31-e5c1-4002-a8c8-c75def897512","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "HitBoxes",
-    "path": "folders/Sprites/HitBoxes.yy",
+    "path": "folders/Sprites/Weapons/HitBoxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_melee1HB",

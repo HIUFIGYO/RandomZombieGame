@@ -159,9 +159,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3b1c8f2f-98f8-43cb-9d52-9250c25b6c84","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "HUD",
-    "path": "folders/Sprites/HUD.yy",
+    "name": "UI and HUD",
+    "path": "folders/Sprites/UI and HUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_reloadCircle",

@@ -87,9 +87,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ccd69375-c20e-45eb-82ab-56cf4ae14059","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Sprites/Shop.yy",
+    "name": "UI and HUD",
+    "path": "folders/Sprites/UI and HUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_vialShopIcon",

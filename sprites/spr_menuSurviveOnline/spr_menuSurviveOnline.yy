@@ -71,9 +71,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0f0c65b6-9ec1-42ea-8df5-fe177eb7f2c7","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "menu icons",
-    "path": "folders/Sprites/menu icons.yy",
+    "name": "Menu Icons",
+    "path": "folders/Sprites/Menu Icons.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_menuSurviveOnline",

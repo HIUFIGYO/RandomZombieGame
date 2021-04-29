@@ -60,13 +60,16 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 
 	if(_zombie.hp <= 0 and !_zombie.isDead)
 	{
-		_zombie.specialActive = false;
 		GameZombieDead(_zombie, _playerID);
 		GameSprayBlood(GameGetBloodAmount(), _zombie.x, _zombie.y - (_zombie.bbox_bottom - _zombie.bbox_top) / 2, _zombie.acid, 0);
 	}
 	
 	with(_zombie)
+	{
+		if(isDead)
+			ZombieChangeState(ZombieStateDead);
 		event_perform(ev_other, ev_user1);
+	}
 }
 
 ///@function ZombieCreateBurst(zombie, amount)

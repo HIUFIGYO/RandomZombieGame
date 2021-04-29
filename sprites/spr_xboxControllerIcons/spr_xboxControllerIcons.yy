@@ -167,9 +167,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4a6c2ba9-6ee8-4066-b1b5-826a82e4dc5f","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "UI and HUD",
+    "path": "folders/Sprites/UI and HUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_xboxControllerIcons",

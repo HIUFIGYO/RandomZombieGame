@@ -71,9 +71,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"910920d7-7be5-4cab-87d7-da28cbb1d143","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Unused",
-    "path": "folders/Sprites/menu icons/Unused.yy",
+    "path": "folders/Sprites/Menu Icons/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "extras_achievments",

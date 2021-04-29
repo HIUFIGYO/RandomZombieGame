@@ -162,9 +162,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"15d8522b-eb00-4cf7-9e37-b571f81ec209","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Player",
-    "path": "folders/Sprites/Player.yy",
+    "name": "Weapons",
+    "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_grenades",

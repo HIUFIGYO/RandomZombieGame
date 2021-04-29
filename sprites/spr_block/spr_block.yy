@@ -127,9 +127,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a15a6c4e-b708-4bdd-b5cb-a947eef7f313","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Props",
+    "path": "folders/Sprites/Props.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_block",

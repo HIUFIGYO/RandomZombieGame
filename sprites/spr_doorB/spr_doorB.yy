@@ -77,8 +77,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Misc",
-    "path": "folders/Sprites/Misc.yy",
+    "name": "Support",
+    "path": "folders/Sprites/Support.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_doorB",

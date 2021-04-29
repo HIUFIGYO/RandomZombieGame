@@ -12,7 +12,6 @@ fadeOutTime = 150;
 isAttacking = false;
 attackRange = 1;
 
-specialActive = false;
 
 grav = 0.981;
 acceleration = random_range(0.1, 0.2);
@@ -37,6 +36,10 @@ showHealth = false;
 showHealthTimer = 0;
 
 barricadeID = noone;
+
+currentState = ZombieStateDefault;
+nextState = noone;
+isChangingState = false;
 
 //game manager notify
 GameAddZombie();

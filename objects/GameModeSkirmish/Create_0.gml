@@ -4,6 +4,8 @@ additionalZombies = global.playerAmount * 4 + (global.difficulty * 2);
 zombieSpawnRate = 300;
 maxSpawnRate = zombieSpawnRate;
 
+lastZombieSpawned = noone;
+
 alarm[0] = maxSpawnRate - (global.playerAmount * 60);
 alarm[1] = 21600; //6 minutes
 

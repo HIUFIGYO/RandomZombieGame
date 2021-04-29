@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"37fe38c0-57cc-4181-aa37-a714a1ccae5c","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Props",
+    "path": "folders/Sprites/Props.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_oneWayBlock",

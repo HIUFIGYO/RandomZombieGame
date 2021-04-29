@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_soup",
-    "path": "sprites/spr_soup/spr_soup.yy",
+    "name": "spr_zombieSpawnNode",
+    "path": "sprites/spr_zombieSpawnNode/spr_zombieSpawnNode.yy",
   },
   "solid": false,
   "visible": false,

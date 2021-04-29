@@ -71,9 +71,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1e31a507-4729-425c-9c11-69814c7ffeac","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Sprites/Shop.yy",
+    "name": "Support",
+    "path": "folders/Sprites/Support.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ammocaseplace2",

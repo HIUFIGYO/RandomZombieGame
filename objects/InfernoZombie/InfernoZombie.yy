@@ -35,8 +35,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Zombies",
-    "path": "folders/Objects/Zombies.yy",
+    "name": "ThreatLvl5",
+    "path": "folders/Objects/Zombies/ThreatLvl5.yy",
   },
   "resourceVersion": "1.0",
   "name": "InfernoZombie",

@@ -35,8 +35,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Zombies",
-    "path": "folders/Objects/Zombies.yy",
+    "name": "ThreatLvl4",
+    "path": "folders/Objects/Zombies/ThreatLvl4.yy",
   },
   "resourceVersion": "1.0",
   "name": "BioZombie",

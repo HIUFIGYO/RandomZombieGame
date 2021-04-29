@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"00f6d92b-cb51-4f2f-a7c5-e38b196cc9d9","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "menu icons",
-    "path": "folders/Sprites/menu icons.yy",
+    "name": "Menu Icons",
+    "path": "folders/Sprites/Menu Icons.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_titleCard",

@@ -47,7 +47,6 @@ function TwitcherDodge(_zombie)
 	if(random(1) <= SetStat(0.2, 0.3, 0.4, 0.5))
 	{
 		_zombie.dodgeUsed = true;
-		_zombie.specialActive = true;
 		return true;
 	}
 	return false;
@@ -98,9 +97,133 @@ function RipperSawBladeAttack()
 		{
 			xSpeed = 0;
 			specialUsed = true;
-			specialActive = true;
 			sprite_index = spr_ripperatk3;
 			image_speed = 0.5;
+			ZombieChangeState(ZombieStateVoid);
 		}
+	}
+}
+
+///@function SpewerArmCannon()
+
+function SpewerArmCannon()
+{
+	if(specialUsed or specialCooldown > 0 or target == noone)
+		return; 
+
+	var range = sqr(x - target.x) + sqr(y - target.y);
+	if(range >= sqr(specialMinRange) and range <= sqr(specialMaxRange))
+	{	
+		if(collision_line(x, y - 32, target.x, target.y - 32, BlockParent, false, true))
+			return;
+			
+		var _noBarricades = true;
+		var _barricades = ds_list_create();
+		var _count = collision_line_list(x, y - 32, target.x, target.y - 32, Barricade, false, true, _barricades, false);
+		
+		for(var i=0; i<_count; i++)
+		{
+			if(_barricades[| i].canCollideZombie)
+			{
+				_noBarricades = false;
+				break;
+			}
+		}
+		
+		ds_list_destroy(_barricades);
+			
+		if(!_noBarricades)
+			return;
+			
+		specialUsed = true;
+		sprite_index = spr_spewershoot;
+		image_index = 0;
+		image_speed = 0.5;
+		xSpeed = 0;
+		ZombieChangeState(ZombieStateVoid);
+	}
+}
+
+///@function ZombieSpecialCooldown()
+
+function ZombieSpecialCooldown()
+{
+	if(specialCooldown <= 0)
+		return;
+	
+	specialCooldown -= DeltaTimeSecond();
+	if(specialCooldown <= 0)
+	{
+		specialCooldown = 0;
+		specialUsed = false;
+	}
+}
+
+///@function InfernoFlameThrower()
+
+function InfernoFlameThrower()
+{
+	if(specialUsed or specialCooldown > 0 or target == noone)
+		return;
+
+	var range = sqr(x - target.x) + sqr(y - target.y);
+	if(range >= sqr(specialMinRange) and range <= sqr(specialMaxRange))
+	{
+		if(collision_line(x, y - 32, target.x, target.y - 32, BlockParent, false, true))
+			return;
+		
+		var _noBarricades = true;
+		var _barricades = ds_list_create();
+		var _count = collision_line_list(x, y - 32, target.x, target.y - 32, Barricade, false, true, _barricades, false);
+		
+		for(var i=0; i<_count; i++)
+		{
+			if(_barricades[| i].canCollideZombie)
+			{
+				_noBarricades = false;
+				break;
+			}
+		}
+		
+		ds_list_destroy(_barricades);
+		
+		if(!_noBarricades)
+			return;
+			
+		specialAmmo = specialAmmoMax;
+		specialUsed = true;
+		sprite_index = spr_infernoatk2;
+		image_index = 0;
+		image_speed = 0.5;
+		xSpeed = 0;
+		ZombieChangeState(ZombieStateVoid);
+	}
+}
+
+///@function InfernoFlameThrowerActive()
+
+function InfernoFlameThrowerActive()
+{
+	if(specialUsed and image_speed = 0)
+	{
+		specialFireTimer += DeltaTimeSecond();
+	
+		if(target != noone)
+			image_xscale = target.x >= x ? 1 : -1;
+	
+		if(specialFireTimer < specialFireRate)
+			return;
+
+		specialFireTimer = 0;
+		specialAmmo--;
+		ZombieCreateProjectile(FireProjectile);
+		
+		if(specialAmmo > 0)
+			return;
+			
+		isAttacking = false;
+		sprite_index = spriteIdle;
+		specialCooldown = cooldownTime;
+		ZombieChangeState(ZombieStateDefault);
 	}
 }

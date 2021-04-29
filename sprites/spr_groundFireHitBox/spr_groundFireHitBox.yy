@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fe158f0a-794b-468b-b0fb-e22b32416d56","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "HitBoxes",
-    "path": "folders/Sprites/HitBoxes.yy",
+    "path": "folders/Sprites/Weapons/HitBoxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_groundFireHitBox",

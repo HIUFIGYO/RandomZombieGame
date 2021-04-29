@@ -82,10 +82,15 @@ function SpewerExplosionCollideBarricade(_barricade)
 
 function SpewerExplosionCollideZombie(_zombie)
 {
-	if (!IsDead(_zombie)) and (random(1) <= SetStat(0.25, 0.5,  0.75, 1))
+	if (!IsDead(_zombie))
 	{
-		DebuffApply(_zombie, DeBuff.Acid, noone);
 		instance_destroy();
+		
+		if(_zombie.name == "Lard" or _zombie.name == "Spewer")
+			return;
+		
+		if(random(1) <= SetStat(0.25, 0.5,  0.75, 1))
+			DebuffApply(_zombie, DeBuff.Acid, noone);
 	}
 }
 

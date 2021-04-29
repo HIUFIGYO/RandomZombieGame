@@ -26,7 +26,6 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"d97dc2d7-be99-4503-a728-43139902832d","path":"sprites/spr_healgen/spr_healgen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"d97dc2d7-be99-4503-a728-43139902832d","path":"sprites/spr_healgen/spr_healgen.yy",},"LayerId":{"name":"c3197a70-7220-4996-8af2-fd3374af6f34","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"d97dc2d7-be99-4503-a728-43139902832d","path":"sprites/spr_healgen/spr_healgen.yy",},"LayerId":{"name":"22419643-141e-4139-936e-3146bee726e6","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_healgen","path":"sprites/spr_healgen/spr_healgen.yy",},"resourceVersion":"1.0","name":"d97dc2d7-be99-4503-a728-43139902832d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -70,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Shop",
-    "path": "folders/Sprites/Shop.yy",
+    "name": "Support",
+    "path": "folders/Sprites/Support.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_healgen",

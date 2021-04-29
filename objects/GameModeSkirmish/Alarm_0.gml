@@ -4,4 +4,12 @@ alarm[0] = maxSpawnRate - (global.playerAmount * 60);
 if(totalZombies < totalKills + additionalZombies)
 {
 	GameSpawnZombie();
+	
+	if(global.difficulty == GameDifficulty.Easy)
+		return;
+	
+	with(lastZombieSpawned)
+	{
+		event_perform(ev_other, ev_user2);
+	}
 }

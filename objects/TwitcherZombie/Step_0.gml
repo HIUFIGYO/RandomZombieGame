@@ -10,11 +10,10 @@ if(isDead)
 if(pounceCooldown > 0)
 	pounceCooldown -= DeltaTimeSecond();
 
-if(!specialActive and pounceCooldown <= 0)
+if(pounceCooldown <= 0)
 {
 	if(target and DistanceToObject(id, target, pounceDistance))
 	{
-		specialActive = true;
 		xSpeed = 0;
 		image_speed = 0;
 		image_index = 0;
@@ -25,7 +24,6 @@ if(!specialActive and pounceCooldown <= 0)
 
 if(pounceUsed and place_meeting(x, y+1, BlockParent))
 {
-	specialActive = false;
 	pounceUsed = false;
 	pounceCooldown = pounceCooldownTime;
 }

@@ -71,9 +71,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2d5bad95-1f9b-44ed-acc3-294ea6bf7a44","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Unused",
-    "path": "folders/Sprites/menu icons/Unused.yy",
+    "path": "folders/Sprites/Menu Icons/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "menu_options",

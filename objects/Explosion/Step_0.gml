@@ -38,7 +38,7 @@ for(var i=0; i<count; i++)
 		if(_damage > 0)
 		{
 			GameSprayBlood(_damage, x, y, hits[| i].acid, 0);
-			if(CheckBuff(playerID, Buff.Damage))
+			if(playerID != noone and CheckBuff(playerID, Buff.Damage))
 				_damage += DataBase.damageBuffExplosive;
 		}
 		
@@ -99,7 +99,7 @@ for(var i=0; i<count; i++)
 		
 		var _damage = ExplosionGetDamage(explosionType);
 
-		if(CheckBuff(playerID, Buff.Damage) and _damage > 0)
+		if(playerID != noone and CheckBuff(playerID, Buff.Damage) and _damage > 0)
 			_damage += DataBase.damageBuffExplosive;
 		
 		DamagePlayer(hits[| i], _damage * SetStat(0.5, 1, 2, 4), "Explosion");

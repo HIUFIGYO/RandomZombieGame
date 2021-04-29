@@ -20,3 +20,5 @@ switchTargetMax = 5;
 switchTimer = random_range(switchTargetMin, switchTargetMax);
 
 alphaCreeperID = noone;
+
+currentState = ZombieStateCreeper;

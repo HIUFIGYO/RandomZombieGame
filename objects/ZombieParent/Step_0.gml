@@ -1,11 +1,10 @@
-ZombieHealthDisplayTimer();
+if(!isDead)
+	UpdateDebuffs(id, false);
 
-ZombieFadeOut();
+if(isChangingState)
+{
+	isChangingState = false;
+	currentState = nextState;
+}
 
-ZombieAddVelocity();
-
-ZombieAnimate();
-
-ZombieCheckCollision();
-
-ZombieTranslate();
+currentState();

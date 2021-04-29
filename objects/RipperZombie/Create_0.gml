@@ -18,3 +18,5 @@ attackRange = 16;
 specialUsed = false;
 specialCooldown = 0;
 cooldownTime = SetStat(8, 7, 6, 5);
+
+currentState = ZombieStateBehaviour;

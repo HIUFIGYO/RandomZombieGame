@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ceee2bcd-0e20-46b9-a33c-442785304e65","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Ripper",
+    "path": "folders/Sprites/Zombies/Ripper.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_zombieCollision",

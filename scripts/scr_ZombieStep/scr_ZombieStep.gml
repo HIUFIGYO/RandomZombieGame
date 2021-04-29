@@ -29,18 +29,15 @@ function ZombieFadeOut()
 
 function ZombieAddVelocity()
 {
-	if(!specialActive)
+	if(instance_exists(target) and !isDead and !isAttacking)
 	{
-		if(instance_exists(target) and !isDead and !isAttacking)
-		{
-			var dir = sign(target.x - x);
-			xSpeed += acceleration * dir;
-		}
-		else
-		{
-			if(xSpeed != 0 and instance_place(x, y+1, BlockParent))
-				xSpeed = lerp(0, xSpeed, friction);
-		}
+		var dir = sign(target.x - x);
+		xSpeed += acceleration * dir;
+	}
+	else
+	{
+		if(xSpeed != 0 and instance_place(x, y+1, BlockParent))
+			xSpeed = lerp(0, xSpeed, friction);
 	}
 
 	xSpeed = clamp(xSpeed, -moveSpeed, moveSpeed);
@@ -53,7 +50,7 @@ function ZombieAddVelocity()
 
 function ZombieAnimate()
 {
-	if(!isDead and !isAttacking and !specialActive)
+	if(!isAttacking)
 	{
 		if(xSpeed != 0)
 			image_xscale = sign(xSpeed);
@@ -122,7 +119,7 @@ function ZombieTranslate()
 
 function ZombieAttack()
 {
-	if(!isDead and !isAttacking and target != noone and !specialActive)
+	if(!isDead and !isAttacking and target != noone)
 	{
 		if(distance_to_object(target) <= attackRange or barricadeID != noone)
 		{

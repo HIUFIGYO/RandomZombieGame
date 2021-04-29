@@ -66,7 +66,7 @@ function GameSpawnZombie()
 	{
 		var spawnPoint = GameManager.spawn[irandom(GameManager.spawnNumber - 1)];
 		var zedIndex = irandom(ds_list_size(GameManager.gameMode.zombieSpawnList) - 1);
-		instance_create_layer(spawnPoint.x, spawnPoint.y, GameManager.layerZombie, GameManager.gameMode.zombieSpawnList[| zedIndex]);
+		lastZombieSpawned = instance_create_layer(spawnPoint.x, spawnPoint.y, GameManager.layerZombie, GameManager.gameMode.zombieSpawnList[| zedIndex]);
 	}
 }
 
@@ -159,5 +159,103 @@ function GameBloodGrinderDrawSelf(_id)
 		surface_set_target(BloodGrinder.bloodSurf);
 		draw_self();
 		surface_reset_target();
+	}
+}
+
+///@function GameSpawnZombieOrder()
+
+function GameSpawnZombieOrder()
+{
+	switch(totalKills + difficultyOffset)
+	{
+		case 20:
+			ds_list_add(zombieSpawnList, RabidZombie);
+			break;
+		
+		case 45:
+			ds_list_add(zombieSpawnList, LardZombie);
+			break;
+		
+		case 75:
+			ds_list_add(zombieSpawnList, GrappleZombie);
+			break;
+		
+		case 110:
+			ds_list_add(zombieSpawnList, GhostZombie);
+			break;
+		
+		case 150:
+			ds_list_add(zombieSpawnList, BursterZombie);
+			break;
+		
+		case 195:
+			ds_list_add(zombieSpawnList, TwitcherZombie);
+			break;
+		
+		case 245:
+			ds_list_add(zombieSpawnList, SpewerZombie);
+			break;
+		
+		case 300:
+			ds_list_add(zombieSpawnList, InjectorZombie);
+			break;
+		
+		case 360:
+			ds_list_add(zombieSpawnList, BladeZombie);
+			break;
+		
+		case 425:
+			ds_list_add(zombieSpawnList, StrayCreeperZombie);
+			break;
+		
+		case 495:
+			ds_list_add(zombieSpawnList, BioZombie);
+			break;
+	}
+}
+
+///@function GameSpawnZombieOrderShuffle()
+
+function GameSpawnZombieOrderShuffle()
+{
+	switch(totalKills + difficultyOffset)
+	{
+		case 20:
+		case 45:
+			ds_list_add(zombieSpawnList, zombieTierList1[| 0]);
+			ds_list_delete(zombieTierList1, 0);
+			if(ds_list_size(zombieTierList1) <= 0)
+				ds_list_destroy(zombieTierList1);
+			break;
+		
+		case 75:
+		case 110:
+		case 150:
+			ds_list_add(zombieSpawnList, zombieTierList2[| 0]);
+			ds_list_delete(zombieTierList2, 0);
+			if(ds_list_size(zombieTierList2) <= 0)
+				ds_list_destroy(zombieTierList2);
+			break;
+		
+		case 195:
+		case 245:		
+		case 300:
+			ds_list_add(zombieSpawnList, zombieTierList3[| 0]);
+			ds_list_delete(zombieTierList3, 0);
+			if(ds_list_size(zombieTierList3) <= 0)
+				ds_list_destroy(zombieTierList3);
+			break;
+		
+		case 360:
+		case 425:
+			ds_list_add(zombieSpawnList, zombieTierList4[| 0]);
+			ds_list_delete(zombieTierList4, 0);
+			if(ds_list_size(zombieTierList4) <= 0)
+				ds_list_destroy(zombieTierList4);
+			break;
+		
+		case 495:
+			ds_list_add(zombieSpawnList, BioZombie);
+			break;
 	}
 }

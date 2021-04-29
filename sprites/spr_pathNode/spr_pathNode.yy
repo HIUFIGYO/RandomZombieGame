@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4b79fa7f-605b-4b23-9768-84061fd2d3ce","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Control",
+    "path": "folders/Sprites/Control.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_pathNode",
