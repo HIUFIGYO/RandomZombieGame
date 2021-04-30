@@ -6,4 +6,5 @@ if(sprite_index == spr_twitcherevade)
 	dodgeUsed = false;
 	isAttacking = false;
 	dodgeCooldown = dodgeCooldownTime;
+	ZombieChangeState(ZombieStateTwitcher);
 }

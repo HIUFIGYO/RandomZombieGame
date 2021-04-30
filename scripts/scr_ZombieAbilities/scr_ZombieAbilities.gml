@@ -41,40 +41,65 @@ function BioZombieAuraCollisionZombie(_zombie)
 
 function TwitcherDodge(_zombie)
 {
-	if(_zombie.dodgeCooldown > 0 or _zombie.dodgeUsed or _zombie.isAttacking)
+	if(_zombie.dodgeCooldown > 0 or _zombie.isAttacking)
 		return false;
 		
-	if(random(1) <= SetStat(0.2, 0.3, 0.4, 0.5))
+	if(!ZombieCheckZombieState(_zombie, ZombieStateTwitcher))
+		return false;
+		
+	if(random(1) <= SetStat(0.45, 0.6, 0.75, 0.9))
 	{
+		ZombieChangeZombieState(_zombie, ZombieStateVoid);
 		_zombie.dodgeUsed = true;
+		_zombie.sprite_index = spr_twitcherevade;
+		_zombie.image_index = 0;
+		PhysicsObjectSetSpeed(_zombie, choose(-1, 1) * 20, _zombie.ySpeed);
 		return true;
 	}
 	return false;
 }
 
-///@function TwitcherProcessDodge()
+///@function TwitcherDodgeCooldown()
 
-function TwitcherProcessDodge()
-{
-	if(isDead)
-		return;
-	
+function TwitcherDodgeCooldown()
+{	
 	if(dodgeCooldown > 0)
 	{
 		dodgeCooldown -= DeltaTimeSecond();
 		if(dodgeCooldown <= 0)
 			dodgeCooldown = 0;
+	}	
+}
+
+///@function TwitcherPinButtonMash()
+
+function TwitcherPinButtonMash()
+{
+	var xInput = InputGetButtonDown(target.player_inputID, Button.Right) - InputGetButtonDown(target.player_inputID, Button.Left);
+	
+	if(xInput == 0)
+		return;
+		
+	if(pinButtonMash == 0)
+	{
+		pinButtonMash = xInput;
+		pinButtonCount++;
+		return;
 	}
 	
-	if(!dodgeUsed)
+	if(pinButtonMash == 1 and xInput == -1)
+	{
+		pinButtonMash = xInput;
+		pinButtonCount++;
 		return;
-	if(sprite_index == spr_twitcherevade)
-		return;
+	}
 	
-	sprite_index = spr_twitcherevade;
-	image_index = 0;
-	xSpeed = 0;
-	PhysicsObjectSetSpeed(id, choose(-1, 1) * 20, ySpeed);
+	if(pinButtonMash == -1 and xInput == 1)
+	{
+		pinButtonMash = xInput;
+		pinButtonCount++;
+		return;
+	}
 }
 
 ///@function RipperSawBladeAttack()

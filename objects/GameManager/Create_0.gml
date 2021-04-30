@@ -5,7 +5,7 @@ layerBackground = layer_create(50);
 instance_create_layer(0, 0, layerBackground, BackgroundController);
 
 //zombie spawns
-maxZombies = 1000;
+maxZombies = 250;
 spawnNumber = instance_number(ZombieSpawner);
 for(var i=0; i<spawnNumber; i++)
 {

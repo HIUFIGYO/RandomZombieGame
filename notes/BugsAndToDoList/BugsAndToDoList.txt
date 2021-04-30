@@ -1,6 +1,0 @@
--Weapon Accuracy
--Weapon ammo count and magazine
--Fall/ Jump animation for zombies
--Bullet collision Line
--Delta Time rework
--Plan out gamemodes

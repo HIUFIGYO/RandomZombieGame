@@ -4,6 +4,12 @@ if(isDead)
 	return;
 }
 
+if(isPinned)
+{
+	PlayerDrawPinned();
+	return;
+}
+
 var offset = 0;
 if(isCrouching)
 	offset = crouchOffset;

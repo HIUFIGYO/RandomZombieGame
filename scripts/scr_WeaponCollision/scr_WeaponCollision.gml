@@ -77,6 +77,9 @@ function BulletCollideZombie(_zombie)
 		_damage *= 2;
 				
 	DamageZombie(playerID, _zombie, _damage, ignoreBuffs);
+	
+	if(_zombie.name == "Twitcher" and _zombie.dodgeUsed)
+		return true;
 			
 	if(weapon == Weapon.BHDarker and IsDead(_zombie))
 	{

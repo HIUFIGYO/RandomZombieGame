@@ -1,16 +1,10 @@
 {
-  "spriteId": {
-    "name": "spr_menuSettingBox",
-    "path": "sprites/spr_menuSettingBox/spr_menuSettingBox.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "ButtonUI",
-    "path": "objects/ButtonUI/ButtonUI.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -29,11 +23,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "MainMenu",
-    "path": "folders/Objects/HUD/MainMenu.yy",
+    "name": "Networking",
+    "path": "folders/Objects/Networking.yy",
   },
   "resourceVersion": "1.0",
-  "name": "MenuDisplay",
+  "name": "Client",
   "tags": [],
   "resourceType": "GMObject",
 }

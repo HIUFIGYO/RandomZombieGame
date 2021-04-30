@@ -131,8 +131,9 @@ function PlayerInitControl()
 	shootTimer = 0;
 	player_inputID = Controller.Gamepad1;
 	playerID = 0;
+	
 	isGrabbed = false;
-
+	isPinned = false;
 	isWalking = false;
 	isJumping = false;
 	isGrounded = false;
@@ -169,6 +170,11 @@ function PlayerInitSprites()
 	spriteDeadTorso = spr_playerincapacitated_Torso;
 	spriteDeadArms = spr_playerincapacitated_Arms;
 	spriteDeadLegs = spr_playerincapacitated_Legs;
+	
+	spriteIncapHead = spr_playerdead_Head;
+	spriteIncapTorso = spr_playerdead_Torso;
+	spriteIncapArms = spr_playerPinnedArms;
+	spriteIncapLegs = spr_playerPinnedLegs;
 
 	spriteMelee[0] = spr_playerMelee1Arms;
 	spriteMelee[1] = spr_playerMelee2Arms;
@@ -183,6 +189,7 @@ function PlayerInitSprites()
 	torso_index = irandom(sprite_get_number(spriteTorso));
 	cosmetic_index = irandom(sprite_get_number(spriteCosmetic));
 	walking_index = 0;
+	incapIndex = 0;
 }
 
 ///@function PlayerInitColor()

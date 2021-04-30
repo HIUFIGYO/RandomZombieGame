@@ -8,6 +8,19 @@ function PlayerDrawDeadBody()
 	draw_sprite_ext(spriteDeadHead, head_index, x, y, image_xscale, 1, 0, head_color, 1);
 }
 
+///@function PlayerDrawPinned()
+
+function PlayerDrawPinned()
+{
+	draw_sprite_ext(spriteIncapLegs, incapIndex, x, y, image_xscale, 1, 0, leg_color, 1);
+	draw_sprite_ext(spriteIncapTorso, torso_index, x, y, image_xscale, 1, 0, torso_color, 1);
+	draw_sprite_ext(spriteIncapArms, incapIndex, x, y, image_xscale, 1, 0, arm_color, 1);
+	draw_sprite_ext(spriteIncapHead, head_index, x, y, image_xscale, 1, 0, head_color, 1);
+	incapIndex += DeltaTimeSecond() * 8;
+	if(incapIndex > sprite_get_number(spriteIncapArms) - 1)
+		incapIndex = 0;
+}
+
 ///@function PlayerDrawLegs()
 
 function PlayerDrawLegs()
