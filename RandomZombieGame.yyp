@@ -304,6 +304,7 @@
     {"id":{"name":"GameModeSkirmish","path":"objects/GameModeSkirmish/GameModeSkirmish.yy",},"order":0,},
     {"id":{"name":"spr_HBexplosionlarge","path":"sprites/spr_HBexplosionlarge/spr_HBexplosionlarge.yy",},"order":5,},
     {"id":{"name":"spr_injectoratk2","path":"sprites/spr_injectoratk2/spr_injectoratk2.yy",},"order":5,},
+    {"id":{"name":"AccessoryPickUp","path":"objects/AccessoryPickUp/AccessoryPickUp.yy",},"order":6,},
     {"id":{"name":"spr_injectordead","path":"sprites/spr_injectordead/spr_injectordead.yy",},"order":6,},
     {"id":{"name":"spr_injectorgibs","path":"sprites/spr_injectorgibs/spr_injectorgibs.yy",},"order":7,},
     {"id":{"name":"MenuSurviveOnline","path":"objects/MenuSurviveOnline/MenuSurviveOnline.yy",},"order":10,},

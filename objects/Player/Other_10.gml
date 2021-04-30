@@ -11,6 +11,12 @@ if(CheckBuff(id, Buff.Demo)and buffCooldown[_slot] <= 0)
 if(isDead)
 {
 	isGrabbed = false;
+	isPinned = false;
+	canMove = true;
+	isInMenu = false;
+	
+	CreateAccessoryPickUp(id);
+	
 	var _str = MessageGetDamageTag(damageTag);
 	MessageAddAll(name + _str + zombieTag, MessageFilter.PlayerDown);
 	ShopUpdateSpecials();

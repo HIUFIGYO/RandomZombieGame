@@ -109,3 +109,14 @@ function CreateBlackHole(player, damage)
 	inst.playerID = player;
 	inst.damage = damage;
 }
+
+///@function CreateAccessoryPickUp(player)
+
+function CreateAccessoryPickUp(_player)
+{
+	if(_player.cosmetic_index == 0)
+		return;
+	var inst = instance_create_layer(_player.x, _player.y, GameManager.layerObject, AccessoryPickUp);
+	inst.image_index = _player.cosmetic_index;
+	_player.cosmetic_index = 0;
+}

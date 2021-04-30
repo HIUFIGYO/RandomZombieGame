@@ -139,6 +139,7 @@ function ZombieStateTwitcherLeap()
 		target.isPinned = true;
 		target.canMove = false;
 		target.isInMenu = true;
+		CreateAccessoryPickUp(target);
 		ZombieChangeState(ZombieStateTwitcherPin);
 	}
 }
