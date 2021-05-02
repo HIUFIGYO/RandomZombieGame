@@ -19,7 +19,7 @@ dodgeCooldown = 0;
 
 pounceUsed = false;
 pounceDistance = 5 * global.worldUnit;
-pounceCooldownTime = SetStat(10, 8, 6, 4);
+pounceCooldownTime = SetStat(7, 6, 5, 4);
 pounceCooldown = 0;
 
 pinDamage = SetStat(1, 3, 6, 10)

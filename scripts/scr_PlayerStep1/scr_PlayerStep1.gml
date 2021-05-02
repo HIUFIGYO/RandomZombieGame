@@ -184,6 +184,10 @@ function WeaponReload(_weapon)
 		else
 			additionalTime = ammo[currentWeapon] - 1;
 	}
-	var bonus = CheckBuff(id, Buff.Reload);
-	reloadTimer[currentWeapon] = max(1, (DataBaseGetWeapon(_weapon, WeapStat.Reload) + additionalTime) - (bonus * DataBase.reloadBuffEffect));
+	var bonus = 1
+	if CheckBuff(id, Buff.Reload)
+		bonus = DataBase.reloadBuffEffect;
+	reloadTimer[currentWeapon] = (DataBaseGetWeapon(_weapon, WeapStat.Reload) + additionalTime) * bonus;
+	//var bonus = CheckBuff(id, Buff.Reload);
+	//reloadTimer[currentWeapon] = (DataBaseGetWeapon(_weapon, WeapStat.Reload) + additionalTime) - (bonus * DataBase.reloadBuffEffect);
 }

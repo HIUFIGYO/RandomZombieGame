@@ -15,7 +15,7 @@ shop[Weapon.Rifle, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1\nF
 shop[Weapon.Rifle, ShopKey.Price] = 500;
 
 shop[Weapon.Shotgun, ShopKey.Name] = "Standard Shotgun";
-shop[Weapon.Shotgun, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1*5\nFirerate: 0.75\nAccuracy: 80%\nMag Size: 8\nMax Ammo: 72\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nA strong but slow early weapon that deals with both singular enemies and groups.";
+shop[Weapon.Shotgun, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1*5\nFirerate: 0.75\nAccuracy: 80%\nMag Size: 8\nMax Ammo: 72\nReload Time: 0.5 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nA strong but slow early weapon that deals with both singular enemies and groups.";
 shop[Weapon.Shotgun, ShopKey.Price] = 500;
 
 shop[Weapon.Knife2, ShopKey.Name] = "Advanced Melee";
@@ -27,11 +27,11 @@ shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 
 shop[Weapon.Pistol2, ShopKey.Price] = 1000;
 
 shop[Weapon.Rifle2, ShopKey.Name] = "Advanced Rifle";
-shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.75\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
+shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.7\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
 shop[Weapon.Rifle2, ShopKey.Price] = 1250;
 
 shop[Weapon.Shotgun2, ShopKey.Name] = "Advanced Shotgun";
-shop[Weapon.Shotgun2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.5*7\nFirerate: 0.2\nAccuracy: 75%\nMag Size: 2\nMax Ammo: 58\nReload Time: 1.5 Seconds\nPenetration: 1\nFire Mode: Semi-Auto\nA powerful but slow double-barreled shotgun that can clear an entire room of enemies quickly.";
+shop[Weapon.Shotgun2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.5*7\nFirerate: 0.2\nAccuracy: 75%\nMag Size: 2\nMax Ammo: 58\nReload Time: 1.75 Seconds\nPenetration: 1\nFire Mode: Semi-Auto\nA powerful but slow double-barreled shotgun that can clear an entire room of enemies quickly.";
 shop[Weapon.Shotgun2, ShopKey.Price] = 1250;
 
 shop[Weapon.Knife3, ShopKey.Name] = "Super Melee";
@@ -39,7 +39,7 @@ shop[Weapon.Knife3, ShopKey.Description] = "Tier Three Melee Weapon\nDamage: 7\n
 shop[Weapon.Knife3, ShopKey.Price] = 1500;
 
 shop[Weapon.Pistol3, ShopKey.Name] = "Super Pistol";
-shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 8\nFirerate: 0.3\nAccuracy: 92.5%\nMag Size: 6\nMax Ammo: 84\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
+shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 8\nFirerate: 0.3\nAccuracy: 92.5%\nMag Size: 6\nMax Ammo: 84\nReload Time: 0.7 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
 shop[Weapon.Pistol3, ShopKey.Price] = 1750;
 
 shop[Weapon.Rifle3, ShopKey.Name] = "Super Rifle";
@@ -47,11 +47,11 @@ shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2
 shop[Weapon.Rifle3, ShopKey.Price] = 2000;
 
 shop[Weapon.Shotgun3, ShopKey.Name] = "Super Shotgun";
-shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*8\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 70\nReload Time: 1 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
+shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*8\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 70\nReload Time: 0.6 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
 shop[Weapon.Shotgun3, ShopKey.Price] = 2000;
 
 shop[Weapon.Flame, ShopKey.Name] = "Flame Thrower";
-shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 0.75\nFirerate: 0.1\nAccuracy: 85%\nMag Size: 50\nMax Ammo: 350\nReload Time: 3 Seconds\nPenetration: 1\nFire Mode: Full-Auto\n100% chance to apply IGNITE\nIf you like the smell of flesh burning then look no further than to buy this here Flame Thrower.";
+shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 1\nFirerate: 0.09\nAccuracy: 88%\nMag Size: 50\nMax Ammo: 350\nReload Time: 3 Seconds\nPenetration: 1\nFire Mode: Full-Auto\n100% chance to apply IGNITE\nIf you like the smell of flesh burning then look no further than to buy this here Flame Thrower.";
 shop[Weapon.Flame, ShopKey.Price] = 2500;
 
 shop[Weapon.Rocket, ShopKey.Name] = "Rocket Launcher";
@@ -123,7 +123,7 @@ shop[Buff.Agility, ShopKey.Description] = "Increase jog speed by 1\nIncrease spr
 shop[Buff.Agility, ShopKey.Price] = 1200;
 
 shop[Buff.Reload, ShopKey.Name] = "Reload Buff";
-shop[Buff.Reload, ShopKey.Description] = "Reduce weapon reload time by 1 second, down to a minimum of 1 second";
+shop[Buff.Reload, ShopKey.Description] = "Reduce reload time by 40%";
 shop[Buff.Reload, ShopKey.Price] = 1200;
 
 shop[Buff.Ammo, ShopKey.Name] = "Ammo Buff";

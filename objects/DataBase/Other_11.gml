@@ -19,7 +19,7 @@ agilityBuffJogSpeed = 1;
 agilityBuffSprintSpeed = 2;
 
 //reload Buff
-reloadBuffEffect = 1;
+reloadBuffEffect = 0.6;
 
 //ammo Buff
 ammoBuffAmmo = 1.3;
@@ -57,19 +57,19 @@ demoBuffCooldown = 180;//seconds
 
 //debuff ignite
 deBuffStack[DeBuff.Ignite] = true;
-deBuffDuration[DeBuff.Ignite] = 5;
+deBuffDuration[DeBuff.Ignite] = SetStat(3, 5, 7, 10);
 deBuffDamage[DeBuff.Ignite] = 1;
 deBuffCurable[DeBuff.Ignite] = false;
 
 //debuff acid
 deBuffStack[DeBuff.Acid] = true;
-deBuffDuration[DeBuff.Acid] = 10;
+deBuffDuration[DeBuff.Acid] = SetStat(8, 10, 12, 15);;
 deBuffDamage[DeBuff.Acid] = 1;
 deBuffCurable[DeBuff.Acid] = true;
 
 //debuff bleed
 deBuffStack[DeBuff.Bleed] = true;
-deBuffDuration[DeBuff.Bleed] = 4;
+deBuffDuration[DeBuff.Bleed] = SetStat(2, 4, 6, 9);;
 deBuffDamage[DeBuff.Bleed] = 2;
 deBuffCurable[DeBuff.Bleed] = true;
 
@@ -85,9 +85,9 @@ deBuffDamageVeryHard = 9999;
 
 //debuff radiation
 deBuffStack[DeBuff.Radiation] = true;
-deBuffDuration[DeBuff.Radiation] = 7;
+deBuffDuration[DeBuff.Radiation] = SetStat(5, 7, 9, 12);;
 deBuffCurable[DeBuff.Radiation] = true;
 deBuffPlayerHealth = 0.75;
 deBuffZombieHealth = 1.25;
-deBuffPlayerDamageTaken = 1.25;
-deBuffZombieDamageTaken = 0.75;
+deBuffPlayerDamageTaken = 1.20;
+deBuffZombieDamageTaken = 0.80;

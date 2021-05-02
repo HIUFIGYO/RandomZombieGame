@@ -9,7 +9,7 @@ spriteAttack[1] = spr_bioatk2;
 spriteDead = spr_biodead;
 
 damage = SetStat(9, 15, 22, 30);
-hp = SetStat(20, 24, 28, 36) * (1 + ((global.playerAmount - 1) * 0.25));
+hp = SetStat(20, 24, 28, 36) * (1 + ((global.playerAmount - 1) * 0.2));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(3);
 
