@@ -93,6 +93,7 @@ function ZombieStateInjector()
 	if(!specialUsed and target != noone and DistanceToObject(id, target, specialRange))
 	{
 		image_index = 0;
+		image_speed = 0.5;
 		sprite_index = spr_injectorGrabStartup;
 		ZombieChangeState(ZombieStateInjectorInject);
 	}

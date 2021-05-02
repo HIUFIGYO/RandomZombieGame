@@ -403,7 +403,7 @@
     {"id":{"name":"spr_shopIcons","path":"sprites/spr_shopIcons/spr_shopIcons.yy",},"order":5,},
     {"id":{"name":"ButtonUI","path":"objects/ButtonUI/ButtonUI.yy",},"order":4,},
     {"id":{"name":"spr_Acreeperdead","path":"sprites/spr_Acreeperdead/spr_Acreeperdead.yy",},"order":4,},
-    {"id":{"name":"Audio","path":"objects/Audio/Audio.yy",},"order":2,},
+    {"id":{"name":"AudioSystem","path":"objects/AudioSystem/AudioSystem.yy",},"order":2,},
     {"id":{"name":"srp_Acreepergibs","path":"sprites/srp_Acreepergibs/srp_Acreepergibs.yy",},"order":5,},
     {"id":{"name":"light_ignore_shadow_caster","path":"scripts/light_ignore_shadow_caster/light_ignore_shadow_caster.yy",},"order":4,},
     {"id":{"name":"spr_Screeperidle","path":"sprites/spr_Screeperidle/spr_Screeperidle.yy",},"order":0,},
