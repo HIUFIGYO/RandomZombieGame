@@ -119,7 +119,7 @@ function ZombieTranslate()
 
 function ZombieAttack()
 {
-	if(!isDead and !isAttacking and target != noone)
+	if(!isAttacking and target != noone)
 	{
 		if(distance_to_object(target) <= attackRange or barricadeID != noone)
 		{

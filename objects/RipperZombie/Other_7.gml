@@ -11,6 +11,6 @@ if(sprite_index == spr_ripperatk3)
 	{
 		isAttacking = false;
 		specialCooldown = cooldownTime;
-		ZombieChangeState(ZombieStateBehaviour);
+		ZombieChangeState(ZombieStateRipper);
 	}
 }

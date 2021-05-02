@@ -23,3 +23,5 @@ specialMinRange = 64;
 specialMaxRange = 256;
 specialFireRate = 0.1;
 specialFireTimer = 0;
+
+currentState = ZombieStateInferno;

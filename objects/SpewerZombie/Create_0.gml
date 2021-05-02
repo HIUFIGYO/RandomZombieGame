@@ -20,3 +20,5 @@ specialCooldown = 0;
 cooldownTime = SetStat(6, 5, 4, 3);
 specialMinRange = 128;
 specialMaxRange = 640;
+
+currentState = ZombieStateSpewer;

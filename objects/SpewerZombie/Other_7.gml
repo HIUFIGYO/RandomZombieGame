@@ -6,5 +6,5 @@ if(sprite_index = spr_spewershoot)
 	isAttacking = false;
 	specialCooldown = cooldownTime;
 	ZombieCreateProjectile(SpewerProjectile);
-	ZombieChangeState(ZombieStateDefault);
+	ZombieChangeState(ZombieStateSpewer);
 }

@@ -20,4 +20,4 @@ specialCooldown = 0;
 cooldownTime = SetStat(6, 5, 4, 3);
 sawDamage = SetStat(1, 3, 6, 10);
 
-currentState = ZombieStateBehaviour;
+currentState = ZombieStateRipper;

@@ -1,10 +1,7 @@
 ///@function BioZombieRadiationAura()
 
 function BioZombieRadiationAura()
-{
-	if(IsDead(id))
-		return;
-		
+{	
 	radTimer += DeltaTimeSecond();
 
 	if (radTimer < radTime)
@@ -106,26 +103,16 @@ function TwitcherPinButtonMash()
 
 function RipperSawBladeAttack()
 {
-	if(specialCooldown > 0)
+	if(specialUsed)
+		return;
+		
+	if(!isAttacking and target != noone and distance_to_object(target) <= attackRange)
 	{
-		specialCooldown -= DeltaTimeSecond();
-		if(specialCooldown <= 0)
-		{
-			specialCooldown = 0;
-			specialUsed = false;
-		}
-	}
-
-	if(!specialUsed)
-	{
-		if(!isAttacking and target != noone and distance_to_object(target) <= attackRange)
-		{
-			xSpeed = 0;
-			specialUsed = true;
-			sprite_index = spr_ripperatk3;
-			image_speed = 0.5;
-			ZombieChangeState(ZombieStateVoid);
-		}
+		isAttacking = true;
+		specialUsed = true;
+		sprite_index = spr_ripperatk3;
+		image_speed = 0.5;
+		ZombieChangeState(ZombieStateVoid);
 	}
 }
 
@@ -221,7 +208,7 @@ function InfernoFlameThrower()
 		image_index = 0;
 		image_speed = 0.5;
 		xSpeed = 0;
-		ZombieChangeState(ZombieStateVoid);
+		ZombieChangeState(ZombieStateInfernoFlame);
 	}
 }
 
@@ -249,6 +236,6 @@ function InfernoFlameThrowerActive()
 		isAttacking = false;
 		sprite_index = spriteIdle;
 		specialCooldown = cooldownTime;
-		ZombieChangeState(ZombieStateDefault);
+		ZombieChangeState(ZombieStateInferno);
 	}
 }

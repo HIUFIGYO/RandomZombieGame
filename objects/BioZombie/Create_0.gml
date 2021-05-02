@@ -19,3 +19,5 @@ radDamage = 2;
 radTime = 0.5; //seconds
 radTimer = 0;
 radColor = c_yellow;
+
+currentState = ZombieStateBio;

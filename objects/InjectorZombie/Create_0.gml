@@ -11,3 +11,9 @@ damage = SetStat(4, 9, 15, 22);
 hp = SetStat(12, 15, 18, 24);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
+
+specialUsed = false;
+specialCooldown = 0;
+specialRange = 128;
+
+currentState = ZombieStateInjector;

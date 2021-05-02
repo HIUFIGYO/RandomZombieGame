@@ -73,17 +73,38 @@ function ZombieStateDead()
 	ZombieTranslate();
 }
 
-///@function ZombieStateCreeper()
+///@function ZombieStateSpewer()
 
-function ZombieStateCreeper()
+function ZombieStateSpewer()
 {
-	ZombieHealthDisplayTimer();
-	ZombieAddVelocity();
-	ZombieAnimate();
-	ZombieCheckCollision();
-	ZombieTranslate();
-	if(target != alphaCreeperID)
-		ZombieAttack();
+	ZombieStateDefault();
+	ZombieSpecialCooldown();
+	SpewerArmCannon();
+}
+
+///@function ZombieStateInjector()
+
+function ZombieStateInjector()
+{
+	ZombieStateDefault();
+	
+	ZombieSpecialCooldown();
+	
+	if(!specialUsed and target != noone and DistanceToObject(id, target, specialRange))
+	{
+		image_index = 0;
+		sprite_index = spr_injectorGrabStartup;
+		ZombieChangeState(ZombieStateInjectorInject);
+	}
+}
+
+///@function ZombieStateInjectorInject()
+
+function ZombieStateInjectorInject()
+{
+	ZombieStateVoid();
+	
+	
 }
 
 ///@function ZombieStateTwitcher()
@@ -178,4 +199,70 @@ function ZombieStateTwitcherPin()
 	{
 		DamagePlayer(target, pinDamage, "Zombie", name);
 	}
+}
+
+///@function ZombieStateCreeper()
+
+function ZombieStateCreeper()
+{
+	//Timer
+	if(switchTimer > 0)
+	{
+		switchTimer -= DeltaTimeSecond();
+		if(switchTimer <= 0)
+		{
+			switchTimer = random_range(switchTargetMin, switchTargetMax);
+			protectAlpha = choose(false, true);
+		}
+	}
+	
+	//Find target
+	if(!protectAlpha)
+		ZombieFindTarget();
+	else
+		target = alphaCreeperID;
+	
+	ZombieHealthDisplayTimer();
+	ZombieAddVelocity();
+	ZombieAnimate();
+	ZombieCheckCollision();
+	ZombieTranslate();
+	if(target != alphaCreeperID)
+		ZombieAttack();
+}
+
+///@function ZombieStateBio()
+
+function ZombieStateBio()
+{
+	ZombieStateDefault();
+	if(hasRad)
+		BioZombieRadiationAura();
+}
+
+///@function ZombieStateInferno()
+
+function ZombieStateInferno()
+{
+	ZombieStateDefault();
+	ZombieSpecialCooldown();
+	InfernoFlameThrower();
+}
+
+///@function ZombieStateInfernoFlame()
+
+function ZombieStateInfernoFlame()
+{
+	ZombieStateVoid();
+	InfernoFlameThrowerActive();
+}
+
+///@function ZombieStateRipper()
+
+function ZombieStateRipper()
+{
+	ZombieStateBehaviour();
+	ZombieSpecialCooldown();
+	RipperSawBladeAttack();
+	ZombieAttack();
 }
