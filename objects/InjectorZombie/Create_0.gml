@@ -14,6 +14,20 @@ moveSpeed = SetZombieSpeed(4);
 
 specialUsed = false;
 specialCooldown = 0;
+specialCooldownTime = 10;
 specialRange = 128;
+
+clawOffset = 10;
+clawPos = clawOffset;
+clawSpeed = 4;
+clawReturnSpeed = 1
+clawMaxDist = 128;
+clawCanGrab = true;
+clawDraw = false;
+
+pinButtonMash = 0; // -1 is left, 1 is right, 0 is nuetral
+pinButtonCount = 0;
+
+grabTarget = noone;
 
 currentState = ZombieStateInjector;

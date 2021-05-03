@@ -1,14 +1,12 @@
 if(grabTarget == noone)
 	return;
 	
-grabTarget.x = x;
+grabTarget.x = x + (clawPos+clawOffset)*image_xscale;
 grabTarget.y = y;
 
 if(isDead)
 {
 	grabTarget.isGrabbed = false;
-	grabTarget.isPinned = false;
 	grabTarget.canMove = true;
-	grabTarget.isInMenu = false;
 	grabTarget = noone;
 }

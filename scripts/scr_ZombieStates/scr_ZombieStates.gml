@@ -90,22 +90,82 @@ function ZombieStateInjector()
 	
 	ZombieSpecialCooldown();
 	
-	if(!specialUsed and target != noone and DistanceToObject(id, target, specialRange))
+	if(!specialUsed and target != noone and !target.isGrabbed and DistanceToObject(id, target, specialRange))
 	{
+		specialUsed = true;
+		clawDraw = true;
+		sprite_index = spr_injectorGrabStartup;
 		image_index = 0;
 		image_speed = 0.5;
-		sprite_index = spr_injectorGrabStartup;
-		ZombieChangeState(ZombieStateInjectorInject);
+		ZombieChangeState(ZombieStateVoid);
 	}
 }
 
-///@function ZombieStateInjectorInject()
+///@function ZombieStateInjectorClaw()
 
-function ZombieStateInjectorInject()
+function ZombieStateInjectorClaw()
 {
 	ZombieStateVoid();
 	
+	if(clawCanGrab)
+	{
+		clawPos += clawSpeed;
+		if(clawPos >= clawMaxDist)
+		{
+			clawPos = clawMaxDist;
+			clawCanGrab = false;
+			grabTarget = noone;
+			return;
+		}
+		
+		var _player = collision_circle(x + clawPos*image_xscale, y, 3, Player, false, true);
+		if(_player and !_player.isGrabbed)
+		{
+			clawCanGrab = false;
+			grabTarget = _player;
+			grabTarget.isGrabbed = true;
+			grabTarget.canMove = false;
+		}
+	}
+	else
+	{
+		clawPos -= clawReturnSpeed;
+		
+		ZombiePinButtonMash();
 	
+		if(pinButtonCount >= hp)
+		{
+			specialCooldown = specialCooldownTime;
+			clawPos = clawOffset;
+			clawCanGrab = true;
+			grabTarget.isGrabbed = false;
+			grabTarget.canMove = true;
+			grabTarget = noone;
+			pinButtonMash = 0;
+			pinButtonCount = 0;
+			ZombieChangeState(ZombieStateInjector);
+		}
+		
+		if(clawPos > clawOffset)
+			return;
+		
+		clawPos = clawOffset;
+		clawDraw = false;
+		if(grabTarget == noone)
+		{
+			specialCooldown = specialCooldownTime;
+			clawPos = clawOffset;
+			clawCanGrab = true;
+			ZombieChangeState(ZombieStateInjector);
+		}
+		else
+		{
+			sprite_index = spr_injectoratk2;
+			image_index = 0;
+			image_speed = 0.5;
+			ZombieChangeState(ZombieStateVoid);
+		}
+	}
 }
 
 ///@function ZombieStateTwitcher()
@@ -172,7 +232,7 @@ function ZombieStateTwitcherPin()
 {
 	ZombieStateVoid();
 	
-	TwitcherPinButtonMash();
+	ZombiePinButtonMash();
 	
 	if(IsDead(target))
 	{

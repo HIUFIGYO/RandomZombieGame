@@ -68,9 +68,9 @@ function TwitcherDodgeCooldown()
 	}	
 }
 
-///@function TwitcherPinButtonMash()
+///@function ZombiePinButtonMash()
 
-function TwitcherPinButtonMash()
+function ZombiePinButtonMash()
 {
 	var xInput = InputGetButtonDown(target.player_inputID, Button.Right) - InputGetButtonDown(target.player_inputID, Button.Left);
 	

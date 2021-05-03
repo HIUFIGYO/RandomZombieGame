@@ -48,9 +48,6 @@
     {"compositeImage":{"FrameId":{"name":"9679b08d-d287-4bbe-b95e-b9f643facb6c","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"9679b08d-d287-4bbe-b95e-b9f643facb6c","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"LayerId":{"name":"0f0b5e33-d22b-404d-b3c1-c9dc0a49a3d0","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_injectorGrabStartup","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"resourceVersion":"1.0","name":"9679b08d-d287-4bbe-b95e-b9f643facb6c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b4456570-708b-4dbe-83c9-c482c99786f9","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b4456570-708b-4dbe-83c9-c482c99786f9","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"LayerId":{"name":"0f0b5e33-d22b-404d-b3c1-c9dc0a49a3d0","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_injectorGrabStartup","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"resourceVersion":"1.0","name":"b4456570-708b-4dbe-83c9-c482c99786f9","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_injectorGrabStartup","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},
@@ -60,7 +57,7 @@
     "playbackSpeedType": 1,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 9.0,
+    "length": 8.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
@@ -73,7 +70,6 @@
             {"id":"a93e1239-9740-4044-a2ad-db77bf2f053a","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"eaef1e6f-5ee3-4e23-a7c9-af1554e1ebeb","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"584a2b8d-8e51-46eb-85d4-3e0ad3dd51ab","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3f428829-0ba7-4d7d-8629-98e408863848","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"1a384b29-d64d-48ac-8514-17ed855cbf25","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9679b08d-d287-4bbe-b95e-b9f643facb6c","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"1cf2782c-377f-4658-aa78-98a8d2b9ef44","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b4456570-708b-4dbe-83c9-c482c99786f9","path":"sprites/spr_injectorGrabStartup/spr_injectorGrabStartup.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -99,6 +95,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0f0b5e33-d22b-404d-b3c1-c9dc0a49a3d0","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Injector",
     "path": "folders/Sprites/Zombies/Injector.yy",
