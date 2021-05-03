@@ -1,6 +1,6 @@
 /// @description Increase Spawn Rate.
 
-if(GameManager.gamePaused)
+if(GamePaused())
 {
 	alarm[1] = 1;
 	return;

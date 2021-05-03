@@ -233,3 +233,7 @@ shop[SpecialType.Bank, ShopKey.Price] = 2000;
 shop[SpecialType.Revive, ShopKey.Name] = "Player Revive";
 shop[SpecialType.Revive, ShopKey.Description] = "Revive a downed player to full health and teleport them to the spawn.\n Price increases by $500 after every purchase";
 shop[SpecialType.Revive, ShopKey.Price] = 2000;
+
+shop[SpecialType.CallExtract, ShopKey.Name] = "Call Extract";
+shop[SpecialType.CallExtract, ShopKey.Description] = "Every Player must order this thingy.";
+shop[SpecialType.CallExtract, ShopKey.Price] = 0;

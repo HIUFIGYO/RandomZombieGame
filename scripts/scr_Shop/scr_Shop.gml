@@ -124,6 +124,26 @@ function ShopBuyItem(_shop)
 					ShopUpdateSpecials();
 				}
 			}
+			else if(item == SpecialType.CallExtract)
+			{
+				global.shopID.hasCallExtract[_shop.player.playerID] = true;
+				var _count = 0;
+				for(var i=0; i<global.playerAmount; i++)
+				{
+					if(global.shopID.hasCallExtract[i])
+						_count++;
+				}
+				MessageAddAll(_shop.player.name + " has called for extraction: (" + string(_count) + "/" + string(global.playerAmount) + ")", MessageFilter.Notification);
+				if(_count == global.playerAmount)
+				{
+					MessageAddAll("Call Extraction Initiated!", MessageFilter.Notification);
+					_shop.hasControl = false;
+					with(global.shopID)
+						event_perform(ev_other, ev_user0);
+					return;
+				}
+				ShopUpdateSpecials();
+			}
 			break;
 	}
 	
@@ -345,6 +365,9 @@ function ShopBuildSpecialList(_shop)
 	
 	if(!global.shopID.hasBank and global.shopID.unlockBankOption)
 		ds_list_add(_list, SpecialType.Bank);
+		
+	if(!global.shopID.hasCallExtract[_shop.player.playerID] and global.shopID.unlockCallExtractOption)
+		ds_list_add(_list, SpecialType.CallExtract);
 	
 	if(_shop.tabSelect == ShopTab.Special)
 	{
@@ -357,4 +380,15 @@ function ShopBuildSpecialList(_shop)
 		if(_shop.listSelect > ds_list_size(_shop.itemList[_shop.tabSelect]) - 1)
 			_shop.listSelect = ds_list_size(_shop.itemList[_shop.tabSelect]) - 1;
 	}
+}
+
+///@function ShopMajorThreatDefeated()
+
+function ShopMajorThreatDefeated()
+{
+	if(global.shopID.unlockCallExtractOption)
+		return;
+		
+	global.shopID.unlockCallExtractOption = true;
+	MessageAddAll("Call Extract is availible in the shop", MessageFilter.Notification);
 }

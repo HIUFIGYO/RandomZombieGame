@@ -1,5 +1,5 @@
-if(isDead or other.pierce <= 0 or other.playerID == id or !CheckVialNegative(id, VialType.Mimicry))
-	exit;
+if(isDead or other.pierce <= 0 or other.playerID == id or !CheckVialNegative(id, VialType.Mimicry) or GameManager.gamePaused)
+	return;
 
 other.pierce -= 1;
 

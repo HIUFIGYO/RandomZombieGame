@@ -74,6 +74,7 @@ function ZombieStatePause()
 
 function ZombieStateDead()
 {
+	image_speed = 0;
 	ZombieFadeOut();
 	ZombieAddVelocity();
 	ZombieCheckCollision();

@@ -1,3 +1,6 @@
+if(GamePaused())
+	return;
+
 ySpeed += grav;
 ySpeed = min(ySpeed, maxFallSpeed);
 collision = false;

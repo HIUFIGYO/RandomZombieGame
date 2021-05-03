@@ -84,7 +84,8 @@ enum SupportType
 enum SpecialType
 {
 	Bank = SupportType.count,
-	Revive
+	Revive,
+	CallExtract
 }
 
 enum ExplosionType

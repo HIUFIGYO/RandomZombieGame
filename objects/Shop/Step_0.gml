@@ -1,3 +1,6 @@
+if(!isOpen)
+	return;
+
 var target = instance_nearest(x, y, Player);
 if(target)
 {

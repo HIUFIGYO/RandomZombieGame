@@ -2,7 +2,7 @@
 
 alarm[0] = maxSpawnRate - (global.playerAmount * 60);
 
-if(GameManager.gamePaused)
+if(GamePaused())
 {
 	alarm[0] = 1;
 	return;

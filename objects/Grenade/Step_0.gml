@@ -1,5 +1,8 @@
 event_inherited();
 
+if(GamePaused())
+	return;
+
 if(grenadeType == GrenadeType.Incendiary and collision)
 	instance_destroy();
 

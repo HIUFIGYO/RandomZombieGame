@@ -2,8 +2,17 @@ image_speed = 0;
 
 global.shopID = id;
 
+isOpen = true;
+
 hasBank = false;
+
+for(var i=0; i<global.playerAmount; i++)
+{
+	hasCallExtract[i] = false;
+}
+
 unlockBankOption = false;
+unlockCallExtractOption = false;
 
 restockTime = 10 * 60; //mins * 60 secs
 restockTimer = restockTime;
@@ -12,7 +21,7 @@ reviveList = ds_list_create();
 revivePriceAdd = 0;
 reviveAddAmount = 500;
 
-for(var i=0; i<SupportType.count; i++)
+for(i=0; i<SupportType.count; i++)
 {
 	if(i < Weapon.count)
 		stock[i] = DataBaseGetWeapon(i, WeapStat.Tier) == Tier.Five ? 1 : global.playerAmount;

@@ -1,5 +1,5 @@
-if(!other.isAcid)
-	exit;
+if(!other.isAcid or GameManager.gamePaused)
+	return;
 
 var _damage = SetStat(0, 1, 2, 4);
 

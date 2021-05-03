@@ -53,7 +53,7 @@ function PlayerInteractAmmoCrate(_ammoCrate)
 
 function PlayerInteractShop(shop)
 {
-	if(canMove)
+	if(canMove and global.shopID.isOpen)
 	{
 		canMove = false;
 		isInMenu = true;

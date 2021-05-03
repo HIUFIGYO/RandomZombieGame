@@ -4,6 +4,13 @@ enum GM
 	Skirmish
 }
 
+///@function GamePaused()
+
+function GamePaused()
+{
+	return GameManager.gamePaused;
+}
+
 ///@function GameZombieDead(id, player)
 
 function GameZombieDead(_id, _player)

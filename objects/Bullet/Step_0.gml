@@ -1,3 +1,6 @@
+if(GamePaused())
+	return;
+
 //range
 rangeTimer--;
 if(rangeTimer <= 0)

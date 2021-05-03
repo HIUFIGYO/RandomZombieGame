@@ -1,5 +1,5 @@
 if(view_current != player.playerID)
-	exit;
+	return;
 
 var xx = camera_get_view_x(Window.camera[player.playerID]),
 	yy = camera_get_view_y(Window.camera[player.playerID]);

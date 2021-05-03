@@ -1,5 +1,5 @@
-if(isDead or other.pierce <= 0)
-	exit;
+if(isDead or other.pierce <= 0 or GameManager.gamePaused)
+	return;
 
 other.pierce -= 1;
 

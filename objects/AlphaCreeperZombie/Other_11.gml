@@ -18,3 +18,6 @@ if(hp <= maxHp * 0.25 and speedBonus == 2)
 	moveSpeed += 1;
 	speedBonus = 3;
 }
+
+if(isDead)
+	ShopMajorThreatDefeated();

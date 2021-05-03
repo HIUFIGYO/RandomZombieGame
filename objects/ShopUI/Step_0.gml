@@ -1,5 +1,5 @@
-if(!hasControl)
-	exit;
+if(!hasControl or GamePaused())
+	return;
 	
 //calculate reload cost
 if(recalculateReloadCost)
@@ -130,6 +130,8 @@ if(listButtonDown)
 if(InputGetButtonDown(player.player_inputID, Button.Confirm))
 {
 	ShopProcessSelection(id);
+	if(!hasControl)
+		return;
 	ShopSetDescription(id);
 	recalculateReloadCost = true;
 }
