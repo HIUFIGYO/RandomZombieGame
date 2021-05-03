@@ -1,3 +1,6 @@
+if(GameManager.gamePaused)
+	return;
+
 PlayerInvincibilityTimer();
 
 PlayerHealthRegeneration();

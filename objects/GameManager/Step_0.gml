@@ -1,5 +1,5 @@
-if(gameOver)
-	exit;
+if(gameOver or gamePaused)
+	return;
 
 timeSeconds += DeltaTimeSecond();
 if(timeSeconds >= 60)

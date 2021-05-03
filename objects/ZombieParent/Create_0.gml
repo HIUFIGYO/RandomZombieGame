@@ -41,6 +41,9 @@ currentState = ZombieStateDefault;
 nextState = noone;
 isChangingState = false;
 
+pauseImageSpeed = 0;
+previousState = currentState;
+
 //game manager notify
 GameAddZombie();
 

@@ -1,6 +1,6 @@
 ///@desc Game Over Handler
 
-if(gameOverTimer > 0)
+if(gameOverTimer > 0 and !GameManager.gamePaused)
 {
 	gameOverTimer -= DeltaTimeSecond();
 	if(gameOverTimer <= 0)

@@ -1,5 +1,11 @@
 ///@desc Spawn Special zombies
 
+if(GameManager.gamePaused)
+{
+	alarm[2] = 1;
+	return;
+}
+
 specialSpawnCount--;
 GameSpawnSpecial();
 

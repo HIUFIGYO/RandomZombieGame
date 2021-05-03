@@ -120,6 +120,8 @@ function PlayerInitPhysics()
 	acceleration = 0.5;
 	grav = 0.981;
 	friction = 0.75;
+	pauseX = 0;
+	pauseY = 0;
 }
 
 ///@function PlayerInitControl()

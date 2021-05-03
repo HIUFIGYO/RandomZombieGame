@@ -1,3 +1,6 @@
+if(GameManager.gamePaused)
+	return;
+
 var xInput = (InputPlayerGetButton(player_inputID, Button.Right) - InputPlayerGetButton(player_inputID, Button.Left));
 var maxSpd = PlayerProcessSprint(xInput);
 

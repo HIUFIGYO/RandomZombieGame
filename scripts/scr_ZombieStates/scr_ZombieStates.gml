@@ -63,6 +63,13 @@ function ZombieStateVoid()
 	ZombieTranslate();
 }
 
+///@function ZombieStatePause()
+
+function ZombieStatePause()
+{
+	return;
+}
+
 ///@function ZombieStateDead()
 
 function ZombieStateDead()
