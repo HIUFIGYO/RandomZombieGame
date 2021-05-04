@@ -28,11 +28,11 @@ ammoBuffMag = 1.5;
 //damage Buff
 damageBuffFire = 0.5;
 damageBuffBullet = 1;
-damageBuffElectric = 1;
+damageBuffElectric = 0.5;
 damageBuffShotgun = 1;
-damageBuffMelee = 2;
-damageBuffMythic = 2.5;
-damageBuffExplosive = 3;
+damageBuffMelee = 3;
+damageBuffMythic = 2;
+damageBuffExplosive = 4;
 
 //critical Buff
 criticalBuffEffect = 0.1;

@@ -4,8 +4,9 @@ actionSong[0] = Music_Action1;
 actionSong[1] = Music_Action2;
 actionSong[2] = Music_Action3;
 actionSong[3] = Music_Action4;
+actionSong[4] = Music_Action5;
 
-actionSongMax = 4;
+actionSongMax = 5;
 
 currentMusic = Music_Menu1;
 
