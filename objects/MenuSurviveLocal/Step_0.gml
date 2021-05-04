@@ -13,7 +13,5 @@ if(isSelected and InputGetButtonDown(0, Button.Jump))
 
 if(buttonPressed)
 {
-	global.playerAmount = global.startingPlayerAmount;
-	AudioChangeMode(AudioModeGame);
-	RoomGoto(rm_stage01);
+	
 }

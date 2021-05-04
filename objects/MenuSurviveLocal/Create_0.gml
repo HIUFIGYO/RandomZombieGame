@@ -7,3 +7,5 @@ UIController.select[0] = id;
 
 UIUp = MenuQuit;
 UIDown = MenuSurviveOnline;
+
+UIButtonSetHook(id, OnClickSurviveLocal);

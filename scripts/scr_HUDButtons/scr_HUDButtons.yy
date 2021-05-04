@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "UISystem",
-    "path": "folders/Scripts/UISystem.yy",
+    "name": "HUD",
+    "path": "folders/Scripts/HUD.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_UI",
+  "name": "scr_HUDButtons",
   "tags": [],
   "resourceType": "GMScript",
 }

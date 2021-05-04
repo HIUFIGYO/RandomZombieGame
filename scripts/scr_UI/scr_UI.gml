@@ -15,7 +15,7 @@ enum RectAlign
 	Bottom
 }
 
-///@function UICreateText(x(option), y(option), text(option), drawTo(option))
+///@function UICreateText(x, y, text, drawTo)
 
 function UICreateText(_x, _y, _text, _drawTo)
 {
@@ -39,7 +39,7 @@ function UICreateText(_x, _y, _text, _drawTo)
 	return inst;
 }
 
-///@function UICreateImage(x(option), y(option), sprite(option), drawTo(option))
+///@function UICreateImage(x, y, sprite, drawTo)
 
 function UICreateImage(_x, _y, _sprite, _drawTo)
 {
@@ -68,7 +68,7 @@ function UICreateImage(_x, _y, _sprite, _drawTo)
 	return inst;
 }
 
-///@function UICreateButton(x(option), y(option), sprite(option), drawTo(option))
+///@function UICreateButton(x, y, sprite, drawTo)
 
 function UICreateButton(_x, _y, _sprite, _drawTo)
 {
@@ -92,7 +92,7 @@ function UICreateButton(_x, _y, _sprite, _drawTo)
 	return inst;
 }
 
-///@function UICreateHealthbar(x(option), y(option), drawTo(option))
+///@function UICreateHealthbar(x, y, drawTo)
 
 function UICreateHealthbar(_x, _y, _drawTo)
 {
@@ -114,7 +114,7 @@ function UICreateHealthbar(_x, _y, _drawTo)
 	return inst;
 }
 
-///@function UISetRect(UI, x, y, width, height, paddingX(option), paddingY(option))
+///@function UISetRect(UI, x, y, width, height, paddingX, paddingY)
 
 function UISetRect(_UI, _x, _y, _width, _height, _padX, _padY)
 {
@@ -256,7 +256,7 @@ function UISetAlign(_UI, _alignH, _alignV)
 	_UI.alignV = _alignV;
 }
 
-///@function UISetNeighbours(UI, left(option), right(option), up(option), down(option))
+///@function UISetNeighbours(UI, left, right, up, down)
 
 function UISetNeighbours(_UI, _left, _right, _up, _down)
 {
@@ -293,7 +293,7 @@ function UITextSetLineSep(_UI, _lineSep)
 	_UI.lineSeperation = _lineSep;
 }
 
-///@function UIImageSetSprite(UI, sprite, subImage(option), stretched(option))
+///@function UIImageSetSprite(UI, sprite, subImage, stretched)
 
 function UIImageSetSprite(_UI, _sprite, _sub, _stretched)
 {
@@ -328,11 +328,11 @@ function UIHealthbarSetValue(_UI, _value)
 	_UI.value = _value;
 }
 
-///@function UIGetMouseOver(UI)
+///@function UIButtonSetHook(UI, hook)
 
-function UIGetMouseOver(_UI)
+function UIButtonSetHook(_UI, _hook)
 {
-	return _UI.isMouseOver;
+	_UI.hook = _hook;
 }
 
 ///@function UIGetSelected(UI)
@@ -446,4 +446,35 @@ function UIForceSort()
 function UITextGetText(_UI)
 {
 	return _UI.text;
+}
+
+///@function UIMouseHover(UI)
+
+function UIMouseHover(_UI)
+{
+	var mouseX = -1, mouseY = -1;
+	switch(drawTo)
+	{
+		case UIDrawTo.GUI:
+			mouseX = device_mouse_x_to_gui(0);
+			mouseY = device_mouse_y_to_gui(0);
+			break;
+		case UIDrawTo.Room:
+			mouseX = mouse_x;
+			mouseY = mouse_y;
+			break;
+		case UIDrawTo.ViewPort:
+			mouseX = window_view_mouse_get_x(drawView);
+			mouseY = window_view_mouse_get_y(drawView);
+			break;
+		case UIDrawTo.ViewPortRoom:
+			if(view_current == drawView)
+			{
+				mouseX = mouse_x;
+				mouseY = mouse_y;
+			}
+			break;
+	}
+
+	return(point_in_rectangle(mouseX, mouseY, x, y, x+width, y+height));
 }
