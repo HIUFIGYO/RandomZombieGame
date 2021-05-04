@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_playercosmetics",
-    "path": "sprites/spr_playercosmetics/spr_playercosmetics.yy",
+    "name": "spr_cosmeticDrop",
+    "path": "sprites/spr_cosmeticDrop/spr_cosmeticDrop.yy",
   },
   "solid": false,
   "visible": true,
