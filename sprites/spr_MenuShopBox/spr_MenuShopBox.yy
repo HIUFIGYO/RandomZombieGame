@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ae2a6036-e237-4cf9-b386-6c89c316422b","path":"sprites/spr_MenuBack/spr_MenuBack.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ae2a6036-e237-4cf9-b386-6c89c316422b","path":"sprites/spr_MenuBack/spr_MenuBack.yy",},"LayerId":{"name":"c4f4d7fb-52e1-4018-8e8a-29dec2165ddb","path":"sprites/spr_MenuBack/spr_MenuBack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_MenuBack","path":"sprites/spr_MenuBack/spr_MenuBack.yy",},"resourceVersion":"1.0","name":"ae2a6036-e237-4cf9-b386-6c89c316422b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"55db088f-1839-40a1-881c-b1f9f2dcd684","path":"sprites/spr_MenuShopBox/spr_MenuShopBox.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"55db088f-1839-40a1-881c-b1f9f2dcd684","path":"sprites/spr_MenuShopBox/spr_MenuShopBox.yy",},"LayerId":{"name":"19791b10-93fd-4a5f-86d3-de1b07ab8a9e","path":"sprites/spr_MenuShopBox/spr_MenuShopBox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_MenuShopBox","path":"sprites/spr_MenuShopBox/spr_MenuShopBox.yy",},"resourceVersion":"1.0","name":"55db088f-1839-40a1-881c-b1f9f2dcd684","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_MenuBack","path":"sprites/spr_MenuBack/spr_MenuBack.yy",},
+    "spriteId": {"name":"spr_MenuShopBox","path":"sprites/spr_MenuShopBox/spr_MenuShopBox.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"11a4ca87-5beb-4ced-80c8-202d0760ea03","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae2a6036-e237-4cf9-b386-6c89c316422b","path":"sprites/spr_MenuBack/spr_MenuBack.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2e35040e-0a7c-4099-89dc-259cba8f6ba0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"55db088f-1839-40a1-881c-b1f9f2dcd684","path":"sprites/spr_MenuShopBox/spr_MenuShopBox.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,20 +58,20 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_MenuBack","path":"sprites/spr_MenuBack/spr_MenuBack.yy",},
+    "parent": {"name":"spr_MenuShopBox","path":"sprites/spr_MenuShopBox/spr_MenuShopBox.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_MenuBack",
+    "name": "spr_MenuShopBox",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c4f4d7fb-52e1-4018-8e8a-29dec2165ddb","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"19791b10-93fd-4a5f-86d3-de1b07ab8a9e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": {
-    "left": 4,
-    "top": 4,
-    "right": 4,
-    "bottom": 4,
+    "left": 8,
+    "top": 8,
+    "right": 8,
+    "bottom": 8,
     "guideColour": [
       4294902015,
       4294902015,
@@ -93,11 +93,11 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "Menu Icons",
-    "path": "folders/Sprites/Menu Icons.yy",
+    "name": "New",
+    "path": "folders/Sprites/Menu Icons/New.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_MenuBack",
+  "name": "spr_MenuShopBox",
   "tags": [],
   "resourceType": "GMSprite",
 }

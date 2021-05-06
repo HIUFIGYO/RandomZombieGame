@@ -11,8 +11,8 @@
   },
   "persistent": false,
   "parentObjectId": {
-    "name": "ZombieParent",
-    "path": "objects/ZombieParent/ZombieParent.yy",
+    "name": "ZombieBoss",
+    "path": "objects/ZombieBoss/ZombieBoss.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

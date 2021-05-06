@@ -1,5 +1,8 @@
 event_inherited();
 
+if(ZombieIsOnlyMajorThreat())
+	AudioStartBoss(Music_Boss1);
+
 name = "Alpha Creeper";
 MessageAddAll("Faint creepy groans begin to grow louder...", MessageFilter.SpecialZombie)
 
@@ -10,7 +13,7 @@ spriteAttack[1] = spr_Acreeperatk2;
 spriteDead = spr_Acreeperdead;
 
 damage = SetStat(20, 30, 40, 50);
-hp = SetStat(10, 10, 10, 10) * (1 + ((global.playerAmount - 1) * 0.4));;
+hp = 10 * (1 + ((global.playerAmount - 1) * 0.4));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 attackRange = 8;

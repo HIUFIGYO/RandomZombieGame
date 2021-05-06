@@ -38,4 +38,6 @@ for(i=0; i<SupportType.count; i++)
 	stockMax[i] = stock[i];
 }
 
-audio_play_sound(Sound_WindAmbience, 0 , true);
+flickerCount = 0;
+shopMaskIndex = 0;
+alarm[0] = 5 * 60;

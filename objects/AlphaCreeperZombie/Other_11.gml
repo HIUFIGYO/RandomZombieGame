@@ -20,4 +20,9 @@ if(hp <= maxHp * 0.25 and speedBonus == 2)
 }
 
 if(isDead)
+{
 	ShopMajorThreatDefeated();
+	
+	if(ZombieIsOnlyMajorThreat())
+		AudioEndBoss();
+}

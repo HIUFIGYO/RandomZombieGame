@@ -19,8 +19,6 @@ UILeft = noone;
 UIUp = noone;
 UIDown = noone
 isSelected = false;
-isMouseOver = false;
 
+alignFlag = true;
 UIController.sortFlag = true;
-
-event_perform(ev_other, ev_user0);

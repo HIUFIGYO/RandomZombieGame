@@ -143,8 +143,20 @@ function ZombieFindTarget()
 	ds_grid_destroy(targets);
 }
 
+///@function ZombieIsOnlyMajorThreat()
 
-
-
-
+function ZombieIsOnlyMajorThreat()
+{
+	var _count = 0;
+	var _bossCount = instance_number(ZombieBoss);
+	for(var i=0; i<_bossCount; i++)
+	{
+		var inst = instance_find(ZombieBoss, i);
+		if(inst.id == id)
+			continue;
+		if(!inst.isDead)
+			return false;
+	}
+	return true;
+}
 

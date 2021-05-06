@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_menuSettingBox",
-    "path": "sprites/spr_menuSettingBox/spr_menuSettingBox.yy",
+    "name": "spr_MenuSettingBox",
+    "path": "sprites/spr_MenuSettingBox/spr_MenuSettingBox.yy",
   },
   "solid": false,
   "visible": true,

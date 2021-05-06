@@ -4,5 +4,5 @@ if(UIGetSelected(id) or hover)
 else
 	subImage = 0;
 	
-if(mouse_check_button_pressed(mb_left))
+if(hover and mouse_check_button_pressed(mb_left))
 	hook();

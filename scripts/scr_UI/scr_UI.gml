@@ -148,6 +148,7 @@ function UISetPosition(_UI, _x, _y)
 	}
 	
 	ds_queue_destroy(_elements);
+	alignFlag = true;
 }
 
 ///@function UISetSize(UI, width, height)
@@ -156,6 +157,7 @@ function UISetSize(_UI, _width, _height)
 {
 	_UI.width = _width;
 	_UI.height = _height;
+	_UI.alignFlag = true;
 }
 
 ///@function UISetPadding(UI, paddingX, paddingY)
@@ -164,6 +166,7 @@ function UISetPadding(_UI, _padX, _padY)
 {
 	_UI.paddingX = _padX;
 	_UI.paddingY = _padY;
+	_UI.alignFlag = true;
 }
 
 ///@function UISetParent(parent, child)
@@ -172,6 +175,7 @@ function UISetParent(_parent, _child)
 {
 	_child.parent = _parent;
 	ds_list_add(_parent.children, _child);
+	_child.alignFlag = true;
 }
 
 ///@function UIRemoveParent(child)
@@ -180,6 +184,7 @@ function UIRemoveParent(_child)
 {
 	if(_child.parent != noone)
 	{
+		_UI.alignFlag = true;
 		for(var i=0; i<ds_list_size(_child.parent.children); i++)
 		{
 			if(_child.parent.children[| i] == _child)
@@ -239,6 +244,7 @@ function UISetAlpha(_UI, _alpha)
 function UISetDrawTo(_UI, _drawTo)
 {
 	_UI.drawTo = _drawTo;
+	_UI.alignFlag = true;
 }
 
 ///@function UISetView(UI, view)
@@ -254,6 +260,7 @@ function UISetAlign(_UI, _alignH, _alignV)
 {
 	_UI.alignH = _alignH;
 	_UI.alignV = _alignV;
+	_UI.alignFlag = true;
 }
 
 ///@function UISetNeighbours(UI, left, right, up, down)
@@ -453,7 +460,7 @@ function UITextGetText(_UI)
 function UIMouseHover(_UI)
 {
 	var mouseX = -1, mouseY = -1;
-	switch(drawTo)
+	switch(_UI.drawTo)
 	{
 		case UIDrawTo.GUI:
 			mouseX = device_mouse_x_to_gui(0);
@@ -464,11 +471,11 @@ function UIMouseHover(_UI)
 			mouseY = mouse_y;
 			break;
 		case UIDrawTo.ViewPort:
-			mouseX = window_view_mouse_get_x(drawView);
-			mouseY = window_view_mouse_get_y(drawView);
+			mouseX = window_view_mouse_get_x(_UI.drawView);
+			mouseY = window_view_mouse_get_y(_UI.drawView);
 			break;
 		case UIDrawTo.ViewPortRoom:
-			if(view_current == drawView)
+			if(view_current == _UI.drawView)
 			{
 				mouseX = mouse_x;
 				mouseY = mouse_y;
@@ -476,5 +483,5 @@ function UIMouseHover(_UI)
 			break;
 	}
 
-	return(point_in_rectangle(mouseX, mouseY, x, y, x+width, y+height));
+	return(point_in_rectangle(mouseX, mouseY, _UI.x, _UI.y, _UI.x+_UI.width, _UI.y+_UI.height));
 }

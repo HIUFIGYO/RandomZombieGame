@@ -1,5 +1,8 @@
 event_inherited();
 
+if(ZombieIsOnlyMajorThreat())
+	AudioStartBoss(Music_Boss1);
+
 name = "Ripper";
 MessageAddAll("A saw can be heard in the distance...", MessageFilter.SpecialZombie)
 

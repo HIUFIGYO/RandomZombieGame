@@ -13,8 +13,8 @@ else
 {
 	if(drawTo == UIDrawTo.GUI)
 	{
-		autoW = display_get_gui_width();
-		autoH = display_get_gui_height();
+		autoW = Window.width;
+		autoH = Window.height;
 	}
 	else if(drawTo == UIDrawTo.ViewPort or drawTo == UIDrawTo.ViewPortRoom)
 	{

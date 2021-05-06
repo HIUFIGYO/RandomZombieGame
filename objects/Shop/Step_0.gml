@@ -1,5 +1,14 @@
 if(!isOpen)
 	return;
+	
+if(flickerCount > 0)
+{
+	flickerCount--;
+	if(shopMaskIndex == 0)
+		shopMaskIndex = 1;
+	else
+		shopMaskIndex = 0;
+}
 
 var target = instance_nearest(x, y, Player);
 if(target)

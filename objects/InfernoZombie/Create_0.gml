@@ -1,5 +1,8 @@
 event_inherited();
 
+if(ZombieIsOnlyMajorThreat())
+	AudioStartBoss(Music_Boss1);
+
 name = "Inferno";
 MessageAddAll("The air feels like it's burning...", MessageFilter.SpecialZombie)
 

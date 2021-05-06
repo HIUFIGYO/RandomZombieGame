@@ -2,7 +2,7 @@
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
-  "origin": 9,
+  "origin": 7,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -30,6 +30,9 @@
     {"compositeImage":{"FrameId":{"name":"38c0b3e0-4a1f-4ff4-9c8f-f857ad553112","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"38c0b3e0-4a1f-4ff4-9c8f-f857ad553112","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"LayerId":{"name":"123b28bd-faed-4324-b373-fca181acd2d1","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_shopOpenClosed","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"resourceVersion":"1.0","name":"38c0b3e0-4a1f-4ff4-9c8f-f857ad553112","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7e413e95-c573-40e7-8e56-fe82bd0e2178","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7e413e95-c573-40e7-8e56-fe82bd0e2178","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"LayerId":{"name":"123b28bd-faed-4324-b373-fca181acd2d1","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_shopOpenClosed","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"resourceVersion":"1.0","name":"7e413e95-c573-40e7-8e56-fe82bd0e2178","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_shopOpenClosed","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},
@@ -39,13 +42,14 @@
     "playbackSpeedType": 1,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 2.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"da05de5e-eb65-48d8-9ec8-5432f0334caf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a4c5760c-0fec-44b8-b6a3-2ec77e8ea977","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"60b04bf2-15fe-430b-ac27-30daaafceb66","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"38c0b3e0-4a1f-4ff4-9c8f-f857ad553112","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"628d7cd5-993b-49ea-90e7-df8bcd5d1e90","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7e413e95-c573-40e7-8e56-fe82bd0e2178","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,8 +62,8 @@
     "backdropHeight": 1080,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": -271,
-    "yorigin": -90,
+    "xorigin": 48,
+    "yorigin": 96,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_shopOpenClosed","path":"sprites/spr_shopOpenClosed/spr_shopOpenClosed.yy",},
