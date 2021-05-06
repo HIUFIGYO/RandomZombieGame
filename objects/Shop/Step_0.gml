@@ -1,5 +1,25 @@
 if(!isOpen)
+{
+	var _tick = 1;
+	
+	with(Player)
+	{
+		if(distance_to_point(Shop.xstart, Shop.ystart) > Shop.extractRadius)
+			_tick -= 1 / global.playerAmount;
+	}
+	
+	objectiveTimeSec -= DeltaTimeSecond() * _tick;
+	if(objectiveTimeSec <= 0)
+	{
+		objectiveTimeSec = 0;
+		if(objectiveTimeMin > 0)
+		{
+			objectiveTimeSec = 60;
+			objectiveTimeMin -= 1;
+		}
+	}
 	return;
+}
 	
 if(flickerCount > 0)
 {

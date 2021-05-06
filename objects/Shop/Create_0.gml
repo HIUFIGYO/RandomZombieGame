@@ -45,3 +45,10 @@ alarm[0] = 5 * 60;
 //Call Extract
 
 extractRadius = 12 * global.worldUnit;
+
+objectiveTargetKills = 50 * (1 + (0.3 * (global.playerAmount - 1)));
+objectiveTargetTime = 90; // seconds.
+
+objectiveKills = 0;
+objectiveTimeSec = objectiveTargetTime mod 60;
+objectiveTimeMin = objectiveTargetTime div 60;

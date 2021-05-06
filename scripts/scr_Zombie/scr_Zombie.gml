@@ -67,7 +67,15 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 	with(_zombie)
 	{
 		if(isDead)
+		{
+			var _shop = new Vector2(Shop.xstart, Shop.ystart);
+			if(!Shop.isOpen and _playerID != noone and _shop.DistanceSqr(new Vector2(_playerID.x, _playerID.y)) <= sqr(Shop.extractRadius))
+			{
+				with(Shop)
+					event_perform(ev_other, ev_user1);
+			}
 			ZombieChangeState(ZombieStateDead);
+		}
 		event_perform(ev_other, ev_user1);
 	}
 }
