@@ -66,3 +66,12 @@ switch(alignV)
 		y = 0;
 		break;
 }
+
+if(ds_list_size(children) > 0)
+{
+	for(var i=0; i<ds_list_size(children); i++)
+	{
+		with(children[| i])
+			event_perform(ev_other, ev_user0);
+	}
+}

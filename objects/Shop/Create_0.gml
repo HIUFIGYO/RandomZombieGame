@@ -41,3 +41,7 @@ for(i=0; i<SupportType.count; i++)
 flickerCount = 0;
 shopMaskIndex = 0;
 alarm[0] = 5 * 60;
+
+//Call Extract
+
+extractRadius = 12 * global.worldUnit;

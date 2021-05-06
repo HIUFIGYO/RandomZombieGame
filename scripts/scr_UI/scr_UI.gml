@@ -148,7 +148,7 @@ function UISetPosition(_UI, _x, _y)
 	}
 	
 	ds_queue_destroy(_elements);
-	alignFlag = true;
+	_UI.alignFlag = true;
 }
 
 ///@function UISetSize(UI, width, height)

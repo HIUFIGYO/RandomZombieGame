@@ -177,7 +177,11 @@ function PlayerProcessReloading()
 				ammo[currentWeapon] -= 1;
 				mag[currentWeapon] += 1;
 				if(mag[currentWeapon] < GetMaxMag(id, currentWeapon))
-					reloadSingleShot[currentWeapon] = 1;
+				{
+					reloadSingleShot[currentWeapon] = DataBaseGetWeapon(weapon[currentWeapon], WeapStat.Reload);
+					if(CheckBuff(id, Buff.Reload))
+						reloadSingleShot[currentWeapon] *= DataBase.reloadBuffEffect;
+				}
 			}
 		}
 	

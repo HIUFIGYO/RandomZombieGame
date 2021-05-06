@@ -178,16 +178,18 @@ function WeaponReload(_weapon)
 	var additionalTime = 0;
 	if(CanCancelReload(_weapon))
 	{
-		reloadSingleShot[currentWeapon] = 1;
+		reloadSingleShot[currentWeapon] = DataBaseGetWeapon(weapon[currentWeapon], WeapStat.Reload);
 		if(DataBaseGetWeapon(_weapon, WeapStat.Mag) <= ammo[currentWeapon])
 			additionalTime = GetMaxMag(id, currentWeapon) - mag[currentWeapon] - 1;
 		else
 			additionalTime = ammo[currentWeapon] - 1;
+		additionalTime *= DataBaseGetWeapon(_weapon, WeapStat.Reload);
+		if(CheckBuff(id, Buff.Reload))
+			reloadSingleShot[currentWeapon] *= DataBase.reloadBuffEffect;
 	}
-	var bonus = 1
-	if CheckBuff(id, Buff.Reload)
+	
+	var bonus = 1;
+	if(CheckBuff(id, Buff.Reload))
 		bonus = DataBase.reloadBuffEffect;
 	reloadTimer[currentWeapon] = (DataBaseGetWeapon(_weapon, WeapStat.Reload) + additionalTime) * bonus;
-	//var bonus = CheckBuff(id, Buff.Reload);
-	//reloadTimer[currentWeapon] = (DataBaseGetWeapon(_weapon, WeapStat.Reload) + additionalTime) - (bonus * DataBase.reloadBuffEffect);
 }
