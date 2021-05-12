@@ -241,7 +241,6 @@ function ShopCanAffordAndBuy(_player, _itemIndex, _sellPrice)
 function ShopSetDescription(_shop)
 {
 	var item = ShopGetItemID(_shop);
-	show_debug_message(item);
 	_shop.itemIconIndex = item;
 	_shop.itemName = DataBaseShopGetInfo(item, ShopKey.Name);
 	_shop.itemDescription = DataBaseShopGetInfo(item, ShopKey.Description);

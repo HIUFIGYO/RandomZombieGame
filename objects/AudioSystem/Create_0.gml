@@ -7,6 +7,7 @@ ds_list_add(actionSongs, Music_Action2);
 ds_list_add(actionSongs, Music_Action3);
 ds_list_add(actionSongs, Music_Action4);
 ds_list_add(actionSongs, Music_Action5);
+ds_list_add(actionSongs, Music_Action6);
 
 ds_list_shuffle(actionSongs);
 
@@ -14,6 +15,7 @@ actionSongIndex = 0;
 
 currentMusic = Music_Menu1;
 bossMusic = Music_Boss1;
+callExtractMusic = Music_Extraction;
 
 soundFalloffDist = 360;
 

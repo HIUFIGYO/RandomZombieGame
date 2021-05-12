@@ -10,6 +10,22 @@ function PlayerInvincibilityTimer()
 	}
 }
 
+///@function PlayerFadeOut()
+
+function PlayerFadeOut()
+{
+	if(fadeOut >= 1 or fadeOut <= 0)
+		return;
+		
+	fadeOut -= DeltaTimeSecond();
+	if(fadeOut < 0)
+	{
+		fadeOut = 0;
+		if(evacPodInst != noone)
+			evacPodInst.image_speed = -0.5;
+	}
+}
+
 ///@function PlayerHealthRegeneration()
 
 function PlayerHealthRegeneration()
@@ -204,7 +220,7 @@ function PlayerCalculateSupportCollision()
 function PlayerInteractWithDoor()
 {
 	var _door = instance_nearest(x, y, WoodenDoor);
-	if(_door and DistanceToObject(id, _door, 48))
+	if(_door and DistanceToObject(id, _door, 64))
 		with(_door)
 			event_perform(ev_other, ev_user0);
 }
@@ -218,6 +234,9 @@ function PlayerProcessInteractible()
 		PlayerInteractWithDoor();
 	
 		if(PlayerInteractible(Player, PlayerInteractPlayer))
+			return;
+			
+		if(PlayerInteractible(EvacPod, PlayerInteractEvacPod))
 			return;
 		
 		if(PlayerInteractible(WeaponDrops, PlayerInteractWeaponDrop))

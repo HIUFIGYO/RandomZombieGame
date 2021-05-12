@@ -6,3 +6,4 @@ draw_set_font(font);
 draw_set_halign(textHAlign);
 draw_set_valign(textVAlign);
 draw_text_ext(x, y, text, lineSeperation, width);
+draw_set_alpha(1);

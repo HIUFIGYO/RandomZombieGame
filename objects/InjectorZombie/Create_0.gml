@@ -14,7 +14,7 @@ moveSpeed = SetZombieSpeed(4);
 
 specialUsed = false;
 specialCooldown = 0;
-specialCooldownTime = 10;
+specialCooldownTime = SetStat(12, 10, 8, 6);
 specialRange = 128;
 
 clawOffset = 10;

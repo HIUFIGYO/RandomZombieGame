@@ -27,28 +27,28 @@ function PlayerDrawLegs()
 {
 	if(isWalking and ySpeed == 0)
 	{
-		draw_sprite_ext(spriteLegs, round(walking_index), x, y, image_xscale, 1, 0, leg_color, 1);
+		draw_sprite_ext(spriteLegs, round(walking_index), x, y, image_xscale, 1, 0, leg_color, fadeOut);
 	}
 	else if(ySpeed != 0)
 	{
 		var index = 0;
 		if(ySpeed > 0)
 			index = 1;
-		draw_sprite_ext(spriteJumping, index, x, y, image_xscale, 1, 0, leg_color, 1);
+		draw_sprite_ext(spriteJumping, index, x, y, image_xscale, 1, 0, leg_color, fadeOut);
 	}
 	else if(isCrouching)
 	{
-		draw_sprite_ext(spriteCrouch, 0, x, y, image_xscale, 1, 0, leg_color, 1);
+		draw_sprite_ext(spriteCrouch, 0, x, y, image_xscale, 1, 0, leg_color, fadeOut);
 	}
 	else
-		draw_sprite_ext(spriteIdle, 0, x, y, image_xscale, 1, 0, leg_color, 1);
+		draw_sprite_ext(spriteIdle, 0, x, y, image_xscale, 1, 0, leg_color, fadeOut);
 }
 
 ///@function PlayerDrawTorso(offset)
 
 function PlayerDrawTorso(offset)
 {
-	draw_sprite_ext(spriteTorso, torso_index, x, y + offset, image_xscale, 1, 0, torso_color, 1);
+	draw_sprite_ext(spriteTorso, torso_index, x, y + offset, image_xscale, 1, 0, torso_color, fadeOut);
 }
 
 ///@function PlayerDrawArms(offset)
@@ -78,9 +78,7 @@ function PlayerDrawArms(offset)
 			
 		case EquipCycle.Support:
 			index = 21;
-			if(supportItem == "Flare")
-				index = 23;
-			draw_sprite_ext(DataBaseSupportGetSprite(supportItem), !canPlaceSupport, x+supportXOffset * image_xscale, y+supportYOffset, image_xscale, 1, 0, c_white, 0.7);			
+			draw_sprite_ext(DataBaseSupportGetSprite(supportItem), !canPlaceSupport, x+supportXOffset * image_xscale, y+supportYOffset, image_xscale, 1, 0, c_white, 0.7 * fadeOut);			
 			break;
 	}
 	
@@ -98,15 +96,15 @@ function PlayerDrawArms(offset)
 			index = 0;
 	}
 	
-	if(reloadTimer[currentWeapon] <= 0)
+	if(equipmentCycle == EquipCycle.Weapon and reloadTimer[currentWeapon] > 0)
 	{
-		draw_sprite_ext(spriteGuns, index, x, y + offset, image_xscale, 1, 0, c_white, 1);
-		draw_sprite_ext(spriteArms, index, x, y + offset, image_xscale, 1, 0, arm_color, 1);
+		draw_sprite_ext(spr_playerReloadGuns, index - 1, x, y + offset, image_xscale, 1, 0, c_white, fadeOut);
+		draw_sprite_ext(spr_playerReloadArms, index - 1, x, y + offset, image_xscale, 1, 0, arm_color, fadeOut);
 	}
 	else
 	{
-		draw_sprite_ext(spr_playerReloadGuns, index - 1, x, y + offset, image_xscale, 1, 0, c_white, 1);
-		draw_sprite_ext(spr_playerReloadArms, index - 1, x, y + offset, image_xscale, 1, 0, arm_color, 1);
+		draw_sprite_ext(spriteGuns, index, x, y + offset, image_xscale, 1, 0, c_white, fadeOut);
+		draw_sprite_ext(spriteArms, index, x, y + offset, image_xscale, 1, 0, arm_color, fadeOut);
 	}
 }
 
@@ -114,8 +112,8 @@ function PlayerDrawArms(offset)
 
 function PlayerDrawHead(offset)
 {
-	draw_sprite_ext(spriteHead, head_index, x, y + offset, image_xscale, 1, 0, head_color, 1);
-	draw_sprite_ext(spriteCosmetic, cosmetic_index, x, y + offset, image_xscale, 1, 0, c_white, 1);
+	draw_sprite_ext(spriteHead, head_index, x, y + offset, image_xscale, 1, 0, head_color, fadeOut);
+	draw_sprite_ext(spriteCosmetic, cosmetic_index, x, y + offset, image_xscale, 1, 0, c_white, fadeOut);
 }
 
 ///@function PlayerDrawMelee(offset)
@@ -129,13 +127,13 @@ function PlayerDrawMelee(offset)
 		index = 2;
 	else if(meleeWeapon == Weapon.Knife4)
 		index = 3;
-	draw_sprite_ext(spriteMelee[index], round(meleeSubImage), x, y + offset, image_xscale, 1, 0, arm_color, 1);
-	draw_sprite_ext(spriteMelee[4 + index], round(meleeSubImage), x, y + offset, image_xscale, 1, 0, c_white, 1);
+	draw_sprite_ext(spriteMelee[index], round(meleeSubImage), x, y + offset, image_xscale, 1, 0, arm_color, fadeOut);
+	draw_sprite_ext(spriteMelee[4 + index], round(meleeSubImage), x, y + offset, image_xscale, 1, 0, c_white, fadeOut);
 }
 
 ///@function PlayerDrawThrow(offset)
 
 function PlayerDrawThrow(offset)
 {
-	draw_sprite_ext(spriteThrow, throwSubImage, x, y + offset, image_xscale, 1, 0, arm_color, 1);
+	draw_sprite_ext(spriteThrow, throwSubImage, x, y + offset, image_xscale, 1, 0, arm_color, fadeOut);
 }

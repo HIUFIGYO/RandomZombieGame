@@ -71,6 +71,8 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 	{
 		damageToArmour = 0;
 		damageToHealth = _damage;
+		if (random(1) <= 0.1)
+			audio_play_sound(Sound_Hurt2, 0 , false);
 		audio_play_sound(Sound_PlayerHurt, 0 , false);
 	}
 	
@@ -135,7 +137,10 @@ function DamagePlayerHealth(_player, _damage, _tag, _zombieTag)
 	
 	_player.hp -= _damage;
 	_player.UI.overlayAlpha = 1;
+	if (random(1) <= 0.1)
+		audio_play_sound(Sound_Hurt2, 0 , false);
 	audio_play_sound(Sound_PlayerHurt, 0 , false);
+		
 	GameSprayBlood(GameGetBloodAmount(), _player.x, _player.y - (_player.bbox_bottom - _player.bbox_top) / 2, false, 0);
 	if(_player.hp <= 0)
 	{

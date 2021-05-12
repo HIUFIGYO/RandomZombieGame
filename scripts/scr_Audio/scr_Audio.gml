@@ -39,6 +39,24 @@ function AudioModeGame()
 	}
 }
 
+///@function AudioModeCallExtract()
+
+function AudioModeCallExtract()
+{
+	if(audio_sound_get_gain(currentMusic) >= 1)
+	{
+		audio_sound_gain(currentMusic, 0, 2000);
+	}
+	
+	if(audio_sound_get_gain(bossMusic) >= 1)
+	{
+		audio_sound_gain(bossMusic, 0, 2000);
+	}
+	
+	if(!audio_is_playing(callExtractMusic))
+		audio_play_sound(callExtractMusic, 0, true);
+}
+
 ///@function AudioModeBoss()
 
 function AudioModeBoss()

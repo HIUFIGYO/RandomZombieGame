@@ -20,3 +20,5 @@ else
 	if(view_current == drawView)
 		draw_text_ext(x, y, text, lineSeperation, width);
 }
+
+draw_set_alpha(1);

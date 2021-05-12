@@ -145,6 +145,9 @@ function PlayerInitControl()
 	isDead = false;
 	isInMenu = false;
 	canMove = true;
+	fadeOut = 1;
+	
+	evacPodInst = noone;
 
 	meleeSubImage = 0;
 	throwSubImage = 0;

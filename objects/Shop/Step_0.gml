@@ -8,6 +8,22 @@ if(!isOpen)
 			_tick -= 1 / global.playerAmount;
 	}
 	
+	if(GameManager.gamePaused)
+		_tick = 0;
+	
+	if(completedObjectives)
+	{
+		completeFade -= DeltaTimeSecond();
+		if(completeFade < 0)
+			completeFade = 0;
+	}
+	else
+	{
+		completeFade += DeltaTimeSecond();
+		if(completeFade > 1)
+			completeFade = 1;
+	}
+	
 	objectiveTimeSec -= DeltaTimeSecond() * _tick;
 	if(objectiveTimeSec <= 0)
 	{
@@ -16,6 +32,10 @@ if(!isOpen)
 		{
 			objectiveTimeSec = 60;
 			objectiveTimeMin -= 1;
+		}
+		else if(objectiveKills >= objectiveTargetKills)
+		{
+			event_perform(ev_other, ev_user2);
 		}
 	}
 	return;

@@ -14,7 +14,7 @@ for(var i=0; i<global.playerAmount; i++)
 unlockBankOption = false;
 unlockCallExtractOption = false;
 
-restockTime = 10 * 60; //mins * 60 secs
+restockTime = 8 * 60; //mins * 60 secs
 restockTimer = restockTime;
 
 reviveList = ds_list_create();
@@ -52,3 +52,6 @@ objectiveTargetTime = 90; // seconds.
 objectiveKills = 0;
 objectiveTimeSec = objectiveTargetTime mod 60;
 objectiveTimeMin = objectiveTargetTime div 60;
+
+completedObjectives = false;
+completeFade = 0;

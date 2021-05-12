@@ -34,4 +34,5 @@ if(_draw)
 		draw_set_color(merge_color(color1, color2, value));
 		draw_rectangle(_x, _y, _x + width*value, _y+height, false);
 	}
+	draw_set_alpha(1);
 }

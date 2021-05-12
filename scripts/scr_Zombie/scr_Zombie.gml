@@ -141,7 +141,7 @@ function ZombieFindTarget()
 	target = noone;
 	for(i=0; i<targetCount; i++)
 	{
-		if(!IsDead(targets[# 0, i]) and !CheckVialPositive(targets[# 0, i], VialType.Mimicry))
+		if(!IsDead(targets[# 0, i]) and !CheckVialPositive(targets[# 0, i], VialType.Mimicry)and targets[# 0, i].fadeOut >= 1)
 		{
 			target = targets[# 0, i];
 			break;

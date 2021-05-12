@@ -23,6 +23,26 @@ function PlayerInteractPlayer(_player)
 	return true;
 }
 
+///@function PlayerInteractEvacPod(evacPod)
+
+function PlayerInteractEvacPod(evacPod)
+{
+	if(!evacPod.open 
+	or evacPod.waitTime < 1
+	or evacPod.image_index < evacPod.image_number - 1
+	or !DistanceToObject(id, evacPod, 10))
+		return;
+		
+	evacPod.open = false;
+	evacPod.waitTime = 0;
+	evacPod.evacSuccess = true;
+	
+	canMove = false;
+	isInMenu = true;
+	fadeOut -= DeltaTimeSecond();
+	evacPodInst = evacPod;
+}
+
 ///@function PlayerInteractWeaponDrop(weaponDrop)
 
 function PlayerInteractWeaponDrop(_weaponDrop)

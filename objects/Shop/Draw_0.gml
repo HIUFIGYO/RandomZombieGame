@@ -1,10 +1,13 @@
+draw_set_alpha(1);
+
 draw_self();
 
 draw_sprite(spr_shopOpenClosed, shopMaskIndex, x, y);
 
-if(isOpen)
+if(isOpen or completeFade <= 0)
 	return;
-	
+
+draw_set_alpha(completeFade);
 draw_set_color(c_red);
 draw_circle(xstart, ystart + 48, extractRadius, true);
 
@@ -30,3 +33,5 @@ if(objectiveTimeSec <= 0 and objectiveTimeMin <= 0)
 	draw_set_color(c_lime);
 
 draw_text(xstart - string_width(str) / 2, ystart - 148, str);
+
+draw_set_alpha(1);

@@ -10,12 +10,12 @@
   "bbox_left": 0,
   "bbox_right": 327,
   "bbox_top": 0,
-  "bbox_bottom": 207,
+  "bbox_bottom": 114,
   "HTile": false,
   "VTile": false,
   "For3D": false,
   "width": 328,
-  "height": 208,
+  "height": 115,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -27,6 +27,27 @@
     {"compositeImage":{"FrameId":{"name":"c4e8272f-707c-4a5b-89bc-046b720250c2","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"c4e8272f-707c-4a5b-89bc-046b720250c2","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":{"name":"b5897578-f80c-4a2a-8ec7-abba16e7caab","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"c4e8272f-707c-4a5b-89bc-046b720250c2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"aaf8c01d-4459-434f-9010-cb19443725ed","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"aaf8c01d-4459-434f-9010-cb19443725ed","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":{"name":"b5897578-f80c-4a2a-8ec7-abba16e7caab","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"aaf8c01d-4459-434f-9010-cb19443725ed","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cba94bdb-da18-4e3a-95cf-df51abd3bea6","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cba94bdb-da18-4e3a-95cf-df51abd3bea6","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":{"name":"b5897578-f80c-4a2a-8ec7-abba16e7caab","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"cba94bdb-da18-4e3a-95cf-df51abd3bea6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3d88f964-7924-4820-841f-7d1286310536","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3d88f964-7924-4820-841f-7d1286310536","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":{"name":"b5897578-f80c-4a2a-8ec7-abba16e7caab","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"3d88f964-7924-4820-841f-7d1286310536","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d072b68d-d0d7-4d03-a757-9b984b28bf4a","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d072b68d-d0d7-4d03-a757-9b984b28bf4a","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":{"name":"b5897578-f80c-4a2a-8ec7-abba16e7caab","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"d072b68d-d0d7-4d03-a757-9b984b28bf4a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"db0b9962-05d5-4e88-92f7-bf42460b3d00","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"db0b9962-05d5-4e88-92f7-bf42460b3d00","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":{"name":"b5897578-f80c-4a2a-8ec7-abba16e7caab","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"db0b9962-05d5-4e88-92f7-bf42460b3d00","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"220fc928-7d8d-423e-b569-2f34d1b01f15","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"220fc928-7d8d-423e-b569-2f34d1b01f15","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":{"name":"b5897578-f80c-4a2a-8ec7-abba16e7caab","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"220fc928-7d8d-423e-b569-2f34d1b01f15","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c4aa5afa-1859-4ea5-8a05-b15bb8ec5f20","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c4aa5afa-1859-4ea5-8a05-b15bb8ec5f20","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"LayerId":{"name":"b5897578-f80c-4a2a-8ec7-abba16e7caab","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","name":"c4aa5afa-1859-4ea5-8a05-b15bb8ec5f20","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},
@@ -36,12 +57,19 @@
     "playbackSpeedType": 1,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 8.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c267bb43-44ce-42b4-a3d5-5d0641dea577","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4e8272f-707c-4a5b-89bc-046b720250c2","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"79473717-8446-43ab-b04c-5bb830630c9a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aaf8c01d-4459-434f-9010-cb19443725ed","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0dc769c2-b866-4c61-8acb-2618a66ab6b3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cba94bdb-da18-4e3a-95cf-df51abd3bea6","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2d45d8bf-f332-4657-b352-895efc5fbf11","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d88f964-7924-4820-841f-7d1286310536","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"04564308-d258-43c7-b1a8-043a641318e3","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d072b68d-d0d7-4d03-a757-9b984b28bf4a","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8b0e3cca-6eaf-4030-a2e1-9775071de0fa","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"db0b9962-05d5-4e88-92f7-bf42460b3d00","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"359f5fce-8df8-4abd-a67a-4c6721a348fc","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"220fc928-7d8d-423e-b569-2f34d1b01f15","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bc4c6ec6-8c44-42ce-985a-50c2e8bbd115","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4aa5afa-1859-4ea5-8a05-b15bb8ec5f20","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -55,7 +83,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 164,
-    "yorigin": 208,
+    "yorigin": 115,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_DroneShop","path":"sprites/spr_DroneShop/spr_DroneShop.yy",},

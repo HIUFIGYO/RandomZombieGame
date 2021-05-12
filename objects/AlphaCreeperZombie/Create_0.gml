@@ -1,7 +1,7 @@
 event_inherited();
 
 if(ZombieIsOnlyMajorThreat())
-	AudioStartBoss(Music_Boss1);
+	AudioStartBoss(Music_Boss2);
 
 name = "Alpha Creeper";
 MessageAddAll("Faint creepy groans begin to grow louder...", MessageFilter.SpecialZombie)

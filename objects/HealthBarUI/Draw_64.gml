@@ -8,3 +8,4 @@ if(value > 0)
 	merge_color(color1, color2, value);
 	draw_rectangle(x - width/2, y, x - width/2 + width*value, y+height, false);
 }
+draw_set_alpha(1);

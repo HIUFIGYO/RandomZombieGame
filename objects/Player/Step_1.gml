@@ -3,6 +3,8 @@ if(GameManager.gamePaused)
 
 PlayerInvincibilityTimer();
 
+PlayerFadeOut();
+
 PlayerHealthRegeneration();
 
 PlayerStaminaRegeneration();
