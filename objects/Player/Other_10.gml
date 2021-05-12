@@ -21,7 +21,7 @@ if(isDead)
 	MessageAddAll(name + _str + zombieTag, MessageFilter.PlayerDown);
 	ShopUpdateSpecials();
 	
-	money *= SetStat(0.7, 0.6, 0.5, 0.4);
+	money *= SetStat(1, 0.9, 0.8, 0.7);
 	
 	if(PlayerGetBuff(id, 1) != noone)
 		RemoveBuff(id, 1);
