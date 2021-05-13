@@ -42,7 +42,7 @@ explosionPierce[3] = 3;
 //WEAPON EXPLOSIONS
 
 //Rocket Launcher
-explosionDamage[4] = 10;
+explosionDamage[4] = 20;
 explosionSize[4] = spr_HBexplosionlarge;
 explosionPierce[4] = 8;
 

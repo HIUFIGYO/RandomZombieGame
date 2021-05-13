@@ -20,5 +20,4 @@ PlayerInitColor();
 
 GiveWeapon(id, Weapon.Pistol, 1);
 
-if(global.difficulty == GameDifficulty.Easy)
-	GiveMedical(id, HealingType.Medicine);
+GiveMedical(id, HealingType.Medicine);
