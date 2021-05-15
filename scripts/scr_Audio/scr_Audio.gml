@@ -13,7 +13,7 @@ function AudioModeMenu()
 	if(audio_is_playing(currentMusic))
 		return;
 		
-	currentMusic = audio_play_sound(Music_Menu1, 0, true);
+	currentMusic = audio_play_sound(Music_Menu1, AudioSystem.soundMusicPriority, true);
 	audio_sound_gain(currentMusic, 0, 0);
 	audio_sound_gain(currentMusic, 1, 2000);
 }
@@ -23,12 +23,12 @@ function AudioModeMenu()
 function AudioModeGame()
 {
 	if(!audio_is_playing(Sound_WindAmbience))
-		audio_play_sound(Sound_WindAmbience, 0 , true);
+		audio_play_sound(Sound_WindAmbience, AudioSystem.soundAmbientPriority, true);
 	if(audio_is_playing(currentMusic))
 		return;
 	
 	currentMusic = actionSongs[| actionSongIndex];
-	audio_play_sound(currentMusic, 0, false);
+	audio_play_sound(currentMusic, AudioSystem.soundMusicPriority, false);
 	audio_sound_gain(currentMusic, 0, 0);
 	audio_sound_gain(currentMusic, 1, 2000);
 	actionSongIndex ++;
@@ -54,7 +54,7 @@ function AudioModeCallExtract()
 	}
 	
 	if(!audio_is_playing(callExtractMusic))
-		audio_play_sound(callExtractMusic, 0, true);
+		audio_play_sound(callExtractMusic, AudioSystem.soundMusicPriority, true);
 }
 
 ///@function AudioModeBoss()
@@ -72,7 +72,7 @@ function AudioModeBoss()
 	if(audio_is_playing(bossMusic))
 		return;
 		
-	audio_play_sound(bossMusic, 0, true);
+	audio_play_sound(bossMusic, AudioSystem.soundMusicPriority, true);
 	audio_sound_gain(bossMusic, 0, 0);
 	audio_sound_gain(bossMusic, 1, 2000);
 }

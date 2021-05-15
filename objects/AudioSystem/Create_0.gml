@@ -22,3 +22,9 @@ soundFalloffDist = 360;
 audioMode = AudioModeMenu;
 audioNextMode = noone;
 isChangingModes = false;
+
+soundPlayerPriority = 4;
+soundEnemyPriority = 3;
+soundEnviornmentPriority = 2;
+soundAmbientPriority = 1;
+soundMusicPriority = 0;

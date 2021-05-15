@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 863,
-  "bbox_top": 206,
+  "bbox_right": 3455,
+  "bbox_top": 82,
   "bbox_bottom": 863,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 864,
+  "width": 3456,
   "height": 864,
   "textureGroupId": {
     "name": "Default",
@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"36dd75a6-5b90-4006-8626-fbbe82d6e363","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Backgrounds",
     "path": "folders/Sprites/Detail/Backgrounds.yy",

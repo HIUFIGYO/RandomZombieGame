@@ -25,6 +25,7 @@ friction = 0.3;
 
 color = c_white;
 image_speed = min(moveSpeed * 0.2, 0.5);
+image_alpha = 1;
 spriteIdle = noone;
 spriteWalk = noone;
 spriteRun = noone;

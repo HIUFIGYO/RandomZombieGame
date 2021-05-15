@@ -7,4 +7,4 @@ spawnedBH = false;
 
 InitDebuffs()
 
-audio_play_sound(Sound_Explosion1, 0 , false);
+audio_play_sound(Sound_Explosion1, AudioSystem.soundPlayerPriority, false);

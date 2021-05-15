@@ -7,7 +7,7 @@ maxSpawnRate = zombieSpawnRate;
 lastZombieSpawned = noone;
 
 alarm[0] = maxSpawnRate - (global.playerAmount * 60);
-alarm[1] = 21600; //6 minutes
+alarm[1] = 36000; //10 minutes
 
 killsTotalText = UICreateText(0, 0, "", UIDrawTo.GUI);
 UISetAlign(killsTotalText, RectAlign.Center, RectAlign.Top);

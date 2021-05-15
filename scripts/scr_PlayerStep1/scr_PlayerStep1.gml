@@ -41,7 +41,7 @@ function ProcessEquipment()
 					if(isCrouching)
 						offset = crouchOffset;
 					CreateBullet(id, x, y + offset, weapon[currentWeapon], image_xscale, isCrouching);
-					audio_play_sound(DataBaseGetWeapon(weapon[currentWeapon], WeapStat.Sound), 0, false);
+					audio_play_sound(DataBaseGetWeapon(weapon[currentWeapon], WeapStat.Sound), AudioSystem.soundPlayerPriority, false);
 				}
 				else
 				{
@@ -153,7 +153,7 @@ function CycleGear(_cycle)
 
 function PlayerMelee()
 {
-	audio_play_sound(DataBaseGetWeapon(meleeWeapon, WeapStat.Sound), 0, false);
+	audio_play_sound(DataBaseGetWeapon(meleeWeapon, WeapStat.Sound), AudioSystem.soundPlayerPriority, false);
 	if(!CheckVialPositive(id, VialType.Strength))
 		stamina -= 10;
 	canShoot = false;
