@@ -1,14 +1,20 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_light_point",
+    "path": "sprites/spr_light_point/spr_light_point.yy",
+  },
   "solid": false,
   "visible": false,
   "spriteMaskId": null,
-  "persistent": true,
-  "parentObjectId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "obj_light",
+    "path": "objects/obj_light/obj_light.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -17,10 +23,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -28,7 +31,7 @@
     "path": "folders/Objects/Lighting.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_lighting_init",
+  "name": "TestLight",
   "tags": [],
   "resourceType": "GMObject",
 }

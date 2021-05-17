@@ -222,6 +222,7 @@
     {"id":{"name":"scr_ParticleSystem","path":"scripts/scr_ParticleSystem/scr_ParticleSystem.yy",},"order":24,},
     {"id":{"name":"spr_meleeHitBoxes","path":"sprites/spr_meleeHitBoxes/spr_meleeHitBoxes.yy",},"order":6,},
     {"id":{"name":"Music_Boss2","path":"sounds/Music_Boss2/Music_Boss2.yy",},"order":11,},
+    {"id":{"name":"TestLight","path":"objects/TestLight/TestLight.yy",},"order":4,},
     {"id":{"name":"spr_grappledead","path":"sprites/spr_grappledead/spr_grappledead.yy",},"order":3,},
     {"id":{"name":"spr_grapplegibs","path":"sprites/spr_grapplegibs/spr_grapplegibs.yy",},"order":4,},
     {"id":{"name":"spr_ghostidle","path":"sprites/spr_ghostidle/spr_ghostidle.yy",},"order":0,},

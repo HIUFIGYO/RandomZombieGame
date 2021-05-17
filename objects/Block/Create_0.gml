@@ -1,3 +1,5 @@
+event_inherited();
+
 visible = debug_mode;
 
 image_speed = 0;
