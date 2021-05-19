@@ -1,3 +1,20 @@
+enum EndStat
+{
+	TotalKills,
+	PrimeKills,
+	SecondKills,
+	MeleeKills,
+	Assists,
+	DamageDealt,
+	SupportDamage,
+	DamageToBoss,
+	DamageTaken,
+	HealthHealed,
+	MoneyEarned,
+	MoneySpent,
+	count
+}
+
 ///@function HUDCreateShop(playerID)
 
 function HUDCreateShop(_playerID)
@@ -70,4 +87,71 @@ function DrawViewBorder()
 	
 	draw_set_color(c_black);
 	draw_rectangle(xx+1, yy, w-1, h-1, true);
+}
+
+///@function EndStatAdd(player, endStat, value)
+
+function EndStatAdd(_player, _endStat, _value)
+{
+	var inst = instance_find(EndGameResultsUI, 0);
+	if(inst)
+	{
+		inst.data[# _player, _endStat] += _value;
+	}
+}
+
+///@function EndGameTrigger()
+
+function EndGameTrigger()
+{
+	var inst = instance_find(EndGameResultsUI, 0);
+	if(inst)
+	{
+		if(inst.gameOver)
+			return;
+		inst.gameOver = true;
+		inst.dataHighest = ds_grid_create(global.playerAmount, EndStat.count);
+		EndGameCalculateHighestScores(inst);
+	}
+}
+
+///@function EndGameCalculateHighestScores(inst)
+
+function EndGameCalculateHighestScores(inst)
+{
+	var i, playerIndex;
+	for(i=0; i<EndStat.count; i++)
+	{
+		var highest = 0;
+		for(playerIndex=0; playerIndex<global.playerAmount; playerIndex++)
+		{
+			if(inst.data[# playerIndex, i] > highest)
+				highest = inst.data[# playerIndex, i];
+		}
+		
+		for(playerIndex=0; playerIndex<global.playerAmount; playerIndex++)
+		{
+			if(inst.data[# playerIndex, i] == 0)
+			{
+				inst.dataHighest[# playerIndex, i] = false;
+				continue;
+			}
+				
+			if(inst.data[# playerIndex, i] == highest)
+				inst.dataHighest[# playerIndex, i] = true;
+			else
+				inst.dataHighest[# playerIndex, i] = false;
+		}
+	}
+}
+
+///@function EndGameSetResult(result)
+
+function EndGameSetResult(result)
+{
+	var inst = instance_find(EndGameResultsUI, 0);
+	if(inst)
+	{
+		inst.resultIndex = result;
+	}
 }

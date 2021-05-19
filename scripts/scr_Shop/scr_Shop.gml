@@ -230,6 +230,7 @@ function ShopCanAffordAndBuy(_player, _itemIndex, _sellPrice)
 	if(PlayerGetMoney(_player) >= _price)
 	{
 		PlayerSpendMoney(_player, _price);
+		EndStatAdd(_player.playerID, EndStat.MoneySpent, _price);
 		ShopRemoveStock(_itemIndex);
 		return true;
 	}

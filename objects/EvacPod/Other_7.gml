@@ -17,6 +17,7 @@ else
 	
 	if(winCondition and !GameManager.gameOver)
 	{
+		EndGameSetResult(0);
 		with(GameManager)
 			event_perform(ev_other, ev_user0);
 		MessageAddAll("Congrates for winning the game RZ.... errr Exanimate!");

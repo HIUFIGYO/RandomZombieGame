@@ -98,7 +98,7 @@ function ZombieStateInjector()
 	
 	ZombieSpecialCooldown();
 	
-	if(!specialUsed and target != noone and !target.isGrabbed and DistanceToObject(id, target, specialRange))
+	if(!specialUsed and !isAttacking and target != noone and !target.isGrabbed and DistanceToObject(id, target, specialRange))
 	{
 		specialUsed = true;
 		clawDraw = true;
@@ -141,7 +141,7 @@ function ZombieStateInjectorClaw()
 		
 		ZombiePinButtonMash();
 	
-		if(pinButtonCount >= hp)
+		if(grabTarget != noone and pinButtonCount >= hp)
 		{
 			specialCooldown = specialCooldownTime;
 			clawPos = clawOffset;
@@ -152,6 +152,7 @@ function ZombieStateInjectorClaw()
 			pinButtonMash = 0;
 			pinButtonCount = 0;
 			ZombieChangeState(ZombieStateInjector);
+			return;
 		}
 		
 		if(clawPos > clawOffset)

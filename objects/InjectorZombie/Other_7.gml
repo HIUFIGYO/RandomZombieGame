@@ -9,6 +9,7 @@ if(sprite_index == spr_injectorGrabStartup)
 
 if(sprite_index == spr_injectoratk2)
 {
+	image_speed = 0;
 	specialCooldown = specialCooldownTime;
 	clawPos = clawOffset;
 	clawCanGrab = true;

@@ -8,3 +8,4 @@ for(var i=0; i<global.maxPlayers; i++)
 }
 
 layerUI = noone;
+layerUI2 = noone;

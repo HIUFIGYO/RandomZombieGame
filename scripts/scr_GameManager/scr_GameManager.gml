@@ -37,6 +37,7 @@ function GameZombieDead(_id, _player)
 	if(_player != noone)
 	{
 		_player.kills += 1;
+		EndStatAdd(_player.playerID, EndStat.TotalKills, 1);
 		GameManager.gameMode.totalKills += 1;
 		if(_id.name == "Ripper" or _id.name == "Alpha Creeper" or _id.name == "Inferno")
 		{

@@ -1,7 +1,7 @@
 event_inherited();
-additionalZombies = global.playerAmount * 4 + (global.difficulty * 2);
+additionalZombies = 10 - (global.playerAmount *2);
 
-zombieSpawnRate = 300;
+zombieSpawnRate = 360;
 maxSpawnRate = zombieSpawnRate;
 
 lastZombieSpawned = noone;

@@ -3,6 +3,7 @@ if(Window.viewsBuilt)
 	instance_create_layer(0, 0, layerBloodGrinder, BloodGrinder);
 	//game mode object
 	gameMode = GameSpawnGameMode();
+	instance_create_layer(0, 0, UIController.layerUI2, EndGameResultsUI);
 	
 	//players
 	var pos, inst_player;

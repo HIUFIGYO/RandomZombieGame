@@ -4,6 +4,19 @@ function HealPlayer(_player, _amount)
 {
 	if(IsDead(_player))
 		return;
+		
+	if(_player.hp >= GetMaxHealth(_player))
+		return;
+	
+	var _value;
+	if(_player.hp + _amount > GetMaxHealth(_player))
+	{
+		_value = _amount - ((_player.hp + _amount) - GetMaxHealth(_player));
+	}
+	else
+		_value = _amount;
+		
+	EndStatAdd(_player.playerID, EndStat.HealthHealed, _value);
 	_player.hp = clamp(_player.hp + _amount, 0, GetMaxHealth(_player));
 }
 
@@ -85,6 +98,7 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 		_player.armour = 0;
 	}
 	
+	EndStatAdd(_player.playerID, EndStat.DamageTaken, damageToHealth);
 	_player.hp -= damageToHealth;
 	_player.UI.overlayAlpha = 1;
 	
@@ -135,6 +149,7 @@ function DamagePlayerHealth(_player, _damage, _tag, _zombieTag)
 	if(CheckVialNegative(_player, VialType.TradeOff))
 		_damage *= 4;
 	
+	EndStatAdd(_player.playerID, EndStat.DamageTaken, _damage);
 	_player.hp -= _damage;
 	_player.UI.overlayAlpha = 1;
 	if (random(1) <= 0.1)

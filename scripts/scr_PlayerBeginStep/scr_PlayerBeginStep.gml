@@ -18,7 +18,7 @@ function PlayerFadeOut()
 		return;
 		
 	fadeOut -= DeltaTimeSecond();
-	if(fadeOut < 0)
+	if(fadeOut <= 0)
 	{
 		fadeOut = 0;
 		if(evacPodInst != noone)
@@ -45,6 +45,7 @@ function PlayerHealthRegeneration()
 			if(_player != id and CheckBuff(_player, Buff.Medic)and distance_to_object(_player) <= DataBaseBuffMedicRange())
 				bonus += DataBaseBuffRegenHealth();
 		}
+		
 		HealPlayer(id, hpRegenRate + bonus);
 		bonus = 1;
 		if(CheckBuff(id, Buff.Regeneration))

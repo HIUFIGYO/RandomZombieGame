@@ -13,6 +13,7 @@ with(Player)
 
 if(gameEnd)
 {
+	EndGameSetResult(1);
 	with(GameManager)
 		event_perform(ev_other, ev_user0);
 }
