@@ -73,7 +73,11 @@ function ZombieCheckCollision()
 	if(checkForBarricade and BarricadeCanCollideZombie(checkForBarricade))
 	{
 		if(barricadeID == noone)
+		{
 			DamageZombie(checkForBarricade.playerID, id, checkForBarricade.damage);
+			if(checkForBarricade.playerID != noone)
+				EndStatAdd(checkForBarricade.playerID.playerID, EndStat.SupportDamage, checkForBarricade.damage);
+		}
 		barricadeID = checkForBarricade;
 		while(xSpeed != 0 and !place_meeting(x + sign(xSpeed), y, Barricade))
 		{

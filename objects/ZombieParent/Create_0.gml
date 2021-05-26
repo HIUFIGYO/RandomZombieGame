@@ -45,9 +45,12 @@ isChangingState = false;
 pauseImageSpeed = 0;
 previousState = currentState;
 
-//game manager notify
 GameAddZombie();
 
-//debuffs
 deBuffPlayerID = noone;
 InitDebuffs();
+
+for(var i=global.playerAmount - 1; i>-1; --i)
+{
+	killAssistID[i] = noone;
+}

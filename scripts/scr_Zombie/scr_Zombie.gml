@@ -26,6 +26,8 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 	
 	if(_playerID != noone)
 	{
+		_zombie.killAssistID[_playerID.playerID] = _playerID;
+		
 		if(!ignoreBuffs)
 		{
 			//bonuses			
@@ -46,12 +48,12 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 				
 			if(CheckDebuff(_zombie, DeBuff.Radiation))
 				_damage *= DataBase.deBuffZombieDamageTaken;
-				
-			EndStatAdd(_playerID.playerID, EndStat.DamageDealt, _damage);
-			
-			if(object_is_ancestor(_zombie.object_index, ZombieBoss))
-				EndStatAdd(_playerID.playerID, EndStat.DamageToBoss, _damage);
 		}
+		
+		EndStatAdd(_playerID.playerID, EndStat.DamageDealt, _damage);
+			
+		if(object_is_ancestor(_zombie.object_index, ZombieBoss))
+			EndStatAdd(_playerID.playerID, EndStat.DamageToBoss, _damage);
 		
 		//money
 		var moneyGained = _damage;

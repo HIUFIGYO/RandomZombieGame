@@ -9,3 +9,5 @@ UIUp = MenuQuit;
 UIDown = MenuSurviveOnline;
 
 UIButtonSetHook(id, OnClickSurviveLocal);
+
+UIDirty(id);

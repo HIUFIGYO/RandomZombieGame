@@ -7,3 +7,4 @@ canCollideBullet = false;
 hp = 250;
 maxHp = hp;
 damage = 0;
+playerID = noone;

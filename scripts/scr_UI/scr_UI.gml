@@ -448,6 +448,14 @@ function UIForceSort()
 	UIController.sortFlag = true;
 }
 
+///@function UIDirty(UI)
+
+function UIDirty(_UI)
+{
+	_UI.alignFlag = true;
+	UIController.sortFlag = true;
+}
+
 ///@function UITextGetText(UI)
 
 function UITextGetText(_UI)

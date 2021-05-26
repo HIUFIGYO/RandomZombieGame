@@ -2,15 +2,18 @@ gameOver = false;
 
 resultIndex = 0;
 gameMode = GM.Skirmish;
+totalKills = 0;
+timeSurvived = "";
 
-headerHeight = 256;
+headerHeight = 320;
+footerHeight = 320;
 cellWidth = 128;
-sidePadding = 256;
+sidePadding = 320;
 
 data = ds_grid_create(global.playerAmount, EndStat.count);
 dataHighest = noone;
 
-endStatText[0] = "Total Kills";
+endStatText[0] = "Kills";
 endStatText[1] = "Primary Kills";
 endStatText[2] = "Secondary Kills";
 endStatText[3] = "Melee Kills";

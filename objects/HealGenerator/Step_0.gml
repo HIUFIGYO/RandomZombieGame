@@ -31,6 +31,7 @@ if(on and healingDuration > 0)
 				continue;
 			
 			DamageZombie(_healGen.playerID, id, _healGen.damage, true);
+			EndStatAdd(_healGen.playerID.playerID, EndStat.SupportDamage, _healGen.damage);
 			DebuffRemoveZombie(id, DeBuff.Radiation);
 			if(name == "Bio Zombie")
 				hasRad = false;

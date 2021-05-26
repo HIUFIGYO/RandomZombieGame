@@ -7,3 +7,5 @@ UIUp = MenuSettings;
 UIDown = MenuSurviveLocal;
 
 UIButtonSetHook(id, OnClickQuit);
+
+UIDirty(id);

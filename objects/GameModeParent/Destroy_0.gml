@@ -1,6 +1,8 @@
-
 if(ds_exists(zombieSpawnList, ds_type_list))
 	ds_list_destroy(zombieSpawnList);
+	
+if(global.difficulty == GameDifficulty.Easy)
+	return;
 	
 if(ds_exists(zombieTierList1, ds_type_list))
 	ds_list_destroy(zombieTierList1);

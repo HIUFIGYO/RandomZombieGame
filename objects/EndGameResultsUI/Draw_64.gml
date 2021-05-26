@@ -5,7 +5,7 @@ var i, playerIndex, xx, yy;
 var displayWidth = display_get_gui_width(),
 	displayHeight = display_get_gui_height();
 
-draw_set_font(Font_default);
+draw_set_font(Font_large);
 draw_set_alpha(1);
 
 draw_set_color(c_black);
@@ -13,6 +13,21 @@ draw_rectangle(0, 0, displayWidth, displayHeight, false);
 
 //draw result title
 draw_sprite_ext(spr_matchendMessage, resultIndex, displayWidth / 2, 64, 1, 1, 0, resultIndex == 0 ? c_green : c_red, 1);
+
+//difficulty
+xx = displayWidth / 2;
+draw_set_halign(fa_center);
+draw_set_color(DataBase.difficultyColor[global.difficulty]);
+draw_text(xx, 128, DataBase.difficultyText[global.difficulty]);
+
+//total kills
+yy = displayHeight - footerHeight;
+draw_set_color(c_white);
+draw_text(xx, yy, "Total Kills: " + string(totalKills));
+draw_text(xx, yy + 60, "Time Survived: " + timeSurvived);
+
+draw_set_halign(fa_left);
+draw_set_font(Font_default);
 
 //draw horizontal lines
 for(var i=0; i<EndStat.count; i++)

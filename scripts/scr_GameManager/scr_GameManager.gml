@@ -38,6 +38,13 @@ function GameZombieDead(_id, _player)
 	{
 		_player.kills += 1;
 		EndStatAdd(_player.playerID, EndStat.TotalKills, 1);
+		for(var i=0; i<global.playerAmount; i++)
+		{
+			if(_id.killAssistID[i] == noone or _id.killAssistID[i] == _player)
+				continue;
+				
+			EndStatAdd(i, EndStat.Assists, 1);
+		}
 		GameManager.gameMode.totalKills += 1;
 		if(_id.name == "Ripper" or _id.name == "Alpha Creeper" or _id.name == "Inferno")
 		{

@@ -78,6 +78,17 @@ function BulletCollideZombie(_zombie)
 				
 	DamageZombie(playerID, _zombie, _damage, ignoreBuffs);
 	
+	if(ignoreBuffs)
+		EndStatAdd(playerID.playerID, EndStat.SupportDamage, _damage);
+	
+	if(IsDead(_zombie) and !ignoreBuffs)
+	{
+		if(DataBaseGetWeapon(weapon, WeapStat.Type) == WeapType.Primary)
+			EndStatAdd(playerID.playerID, EndStat.PrimeKills, 1);
+		else if(DataBaseGetWeapon(weapon, WeapStat.Type) == WeapType.SideArm)
+			EndStatAdd(playerID.playerID, EndStat.SecondKills, 1);
+	}
+	
 	if(_zombie.name == "Twitcher" and _zombie.dodgeUsed)
 		return true;
 			

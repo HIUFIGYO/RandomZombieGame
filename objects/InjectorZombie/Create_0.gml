@@ -15,13 +15,13 @@ moveSpeed = SetZombieSpeed(4);
 specialUsed = false;
 specialCooldown = 0;
 specialCooldownTime = SetStat(12, 10, 8, 6);
-specialRange = 128;
+specialRange = SetStat(128, 128, 160, 192);
 
 clawOffset = 10;
 clawPos = clawOffset;
-clawSpeed = 4;
-clawReturnSpeed = 1;
-clawMaxDist = 128;
+clawSpeed = SetStat(4, 4, 5, 5);
+clawReturnSpeed = SetStat(1, 1, 1.5, 1.5);
+clawMaxDist = SetStat(128, 160, 192, 224);
 clawCanGrab = true;
 clawDraw = false;
 

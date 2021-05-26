@@ -94,7 +94,7 @@ function DrawViewBorder()
 function EndStatAdd(_player, _endStat, _value)
 {
 	var inst = instance_find(EndGameResultsUI, 0);
-	if(inst)
+	if(inst and !inst.gameOver)
 	{
 		inst.data[# _player, _endStat] += _value;
 	}
@@ -112,6 +112,17 @@ function EndGameTrigger()
 		inst.gameOver = true;
 		inst.dataHighest = ds_grid_create(global.playerAmount, EndStat.count);
 		EndGameCalculateHighestScores(inst);
+		inst.totalKills = GameManager.gameMode.totalKills;
+		inst.timeSurvived = GameManager.timeString;
+		
+		var xx, yy;
+		for(xx=0; xx<ds_grid_width(inst.data); xx++)
+		{
+			for(yy=0; yy<ds_grid_height(inst.data); yy++)
+			{
+				inst.data[# xx, yy] = round(inst.data[# xx, yy]);
+			}
+		}
 	}
 }
 
@@ -147,11 +158,11 @@ function EndGameCalculateHighestScores(inst)
 
 ///@function EndGameSetResult(result)
 
-function EndGameSetResult(result)
+function EndGameSetResult(_result)
 {
 	var inst = instance_find(EndGameResultsUI, 0);
 	if(inst)
 	{
-		inst.resultIndex = result;
+		inst.resultIndex = _result;
 	}
 }

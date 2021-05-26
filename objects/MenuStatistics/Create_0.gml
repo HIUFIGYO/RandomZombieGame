@@ -5,3 +5,5 @@ paddingY = 64;
 
 UIUp = MenuRecords;
 UIDown = MenuZombiology;
+
+UIDirty(id);

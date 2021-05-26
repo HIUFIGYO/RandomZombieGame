@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "Music_Boss3.mp3",
-  "duration": 236.7789,
+  "soundFile": "Music_Boss3.ogg",
+  "duration": 240.005,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

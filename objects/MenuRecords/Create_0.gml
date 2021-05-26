@@ -5,3 +5,5 @@ paddingY = 64;
 
 UIUp = MenuSurviveOnline;
 UIDown = MenuStatistics;
+
+UIDirty(id);

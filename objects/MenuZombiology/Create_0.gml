@@ -5,3 +5,5 @@ paddingY = 64;
 
 UIUp = MenuStatistics;
 UIDown = MenuSettings;
+
+UIDirty(id);

@@ -5,3 +5,5 @@ paddingY = 64;
 
 UIUp = MenuSurviveLocal;
 UIDown = MenuRecords;
+
+UIDirty(id);

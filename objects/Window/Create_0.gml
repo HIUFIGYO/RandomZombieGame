@@ -1,7 +1,7 @@
 aspectRatio = display_get_width() / display_get_height();
 guiZoom = 1;
 width = display_get_width();
-height = width / aspectRatio;
+height = display_get_height();
 
 for(var i=0; i<global.maxPlayers; i++)
 	camera[i] = noone;
