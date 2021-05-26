@@ -15,7 +15,7 @@ shop[Weapon.Rifle, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1\nF
 shop[Weapon.Rifle, ShopKey.Price] = 500;
 
 shop[Weapon.Shotgun, ShopKey.Name] = "Standard Shotgun";
-shop[Weapon.Shotgun, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1*5\nFirerate: 0.75\nAccuracy: 80%\nMag Size: 8\nMax Ammo: 72\nReload Time: 0.5 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nA strong but slow early weapon that deals with both singular enemies and groups.";
+shop[Weapon.Shotgun, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1*5\nFirerate: 0.75\nAccuracy: 80%\nMag Size: 8\nMax Ammo: 72\nReload Time: 0.6 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nA strong but slow early weapon that deals with both singular enemies and groups.";
 shop[Weapon.Shotgun, ShopKey.Price] = 500;
 
 shop[Weapon.Knife2, ShopKey.Name] = "Advanced Melee";
@@ -39,7 +39,7 @@ shop[Weapon.Knife3, ShopKey.Description] = "Tier Three Melee Weapon\nDamage: 7\n
 shop[Weapon.Knife3, ShopKey.Price] = 1500;
 
 shop[Weapon.Pistol3, ShopKey.Name] = "Super Pistol";
-shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 8\nFirerate: 0.3\nAccuracy: 92.5%\nMag Size: 6\nMax Ammo: 84\nReload Time: 0.7 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
+shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 8\nFirerate: 0.3\nAccuracy: 92.5%\nMag Size: 6\nMax Ammo: 84\nReload Time: 0.8 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
 shop[Weapon.Pistol3, ShopKey.Price] = 1750;
 
 shop[Weapon.Rifle3, ShopKey.Name] = "Super Rifle";
@@ -47,7 +47,7 @@ shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2
 shop[Weapon.Rifle3, ShopKey.Price] = 2000;
 
 shop[Weapon.Shotgun3, ShopKey.Name] = "Super Shotgun";
-shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*8\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 70\nReload Time: 0.6 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
+shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*8\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 70\nReload Time: 0.7 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
 shop[Weapon.Shotgun3, ShopKey.Price] = 2000;
 
 shop[Weapon.Flame, ShopKey.Name] = "Flame Thrower";
@@ -55,11 +55,11 @@ shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 1\n
 shop[Weapon.Flame, ShopKey.Price] = 2500;
 
 shop[Weapon.Rocket, ShopKey.Name] = "Rocket Launcher";
-shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-20 Explosion-10\nFirerate: 0.8\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 19\nReload Time: 2.5 Seconds\nPenetration: Impact-0 Explosion-8\nFire Mode: Semi-Auto\nOne of the strongest weapons here we have to offer. Just be mindful of when you fire, you will be reloading a lot.";
+shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-10 Explosion-20\nFirerate: 0.8\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 19\nReload Time: 2.5 Seconds\nPenetration: Impact-0 Explosion-8\nFire Mode: Semi-Auto\nOne of the strongest weapons here we have to offer. Just be mindful of when you fire, you will be reloading a lot.";
 shop[Weapon.Rocket, ShopKey.Price] = 3000;
 
 shop[Weapon.Tesla, ShopKey.Name] = "Tesla Rifle";
-shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-2 Chain-Lightning-1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 250\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
+shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-2 Chain-Lightning-1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 250\nReload Time: 2.75 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
 shop[Weapon.Tesla, ShopKey.Price] = 3000;
 
 shop[Weapon.Acid, ShopKey.Name] = "Bio Launcher";
@@ -71,7 +71,7 @@ shop[Weapon.Knife4, ShopKey.Description] = "Tier Five Melee Weapon\nDamage: 10\n
 shop[Weapon.Knife4, ShopKey.Price] = 3750;
 
 shop[Weapon.Purple, ShopKey.Name] = "Purple Gun";
-shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 0.66\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 3 Seconds\nPenetration: 9\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
+shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 0.66\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 2.75 Seconds\nPenetration: 9\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
 shop[Weapon.Purple, ShopKey.Price] = 4000;
 
 shop[Weapon.Drainer, ShopKey.Name] = "Undead Drainer";
@@ -235,5 +235,5 @@ shop[SpecialType.Revive, ShopKey.Description] = "Revive a downed player to full 
 shop[SpecialType.Revive, ShopKey.Price] = 500;
 
 shop[SpecialType.CallExtract, ShopKey.Name] = "Call Extract";
-shop[SpecialType.CallExtract, ShopKey.Description] = "Call for extraction and begin the escape sequence\nAll players must accept before extraction can begin\n\n[WARNING] Shop closes when extraction is call so prepare ahead of time";
+shop[SpecialType.CallExtract, ShopKey.Description] = "Call for extraction and begin the escape sequence\nAll players must accept before extraction can begin\n\n[WARNING] Shop closes when extraction is called so prepare ahead of time";
 shop[SpecialType.CallExtract, ShopKey.Price] = 0;
