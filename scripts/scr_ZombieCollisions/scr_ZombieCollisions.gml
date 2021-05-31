@@ -27,7 +27,7 @@ function InfernoFireCollidePlayer(_player)
 		return;
 	
 	DamagePlayer(_player, damage, "Zombie", "Inferno");
-	if (random(1) <= SetStat(0.25, 0.5, 0.75, 1))
+	if (random(1) <= SetStat(0.2, 0.4, 0.6, 0.8))
 		DebuffApply(_player, DeBuff.Ignite);
 	instance_destroy();
 }
@@ -50,7 +50,7 @@ function InfernoFireCollideZombie(_zombie)
 	if(IsDead(_zombie)or _zombie.name == "Inferno")
 		return;
 	
-	if(!CheckDebuff(_zombie, DeBuff.Ignite) and (random(1) <= SetStat(0.25, 0.5, 0.75, 1)))
+	if(!CheckDebuff(_zombie, DeBuff.Ignite) and (random(1) <= SetStat(0.2, 0.4, 0.6, 0.8)))
 		DebuffApply(_zombie, DeBuff.Ignite, noone);
 }
 

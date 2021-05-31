@@ -59,7 +59,8 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 		var moneyGained = _damage;
 		if(_damage > _zombie.hp)
 			moneyGained = _zombie.hp;
-		moneyGained *= (5 - global.difficulty);
+		moneyGained *= ((_zombie.bounty) / _zombie.hp);
+		_zombie.bounty -= moneyGained;
 		PlayerGiveMoney(_playerID, moneyGained);
 		EndStatAdd(_playerID.playerID, EndStat.MoneyEarned, moneyGained);
 	}

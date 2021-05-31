@@ -4,6 +4,7 @@ invincible = false;
 hp = 5;
 maxHp = 5;
 damage = 1;
+bounty = 25;
 acid = false;
 
 isDead = false;

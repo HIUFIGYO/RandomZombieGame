@@ -11,6 +11,7 @@ damage = SetStat(8, 15, 23, 32);
 hp = SetStat(14, 17, 20, 26);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(1.5);
+bounty = 70 * (SetStat(1.2, 1, 0.9, 0.8));
 attackRange = 4;
 
 acid = true;

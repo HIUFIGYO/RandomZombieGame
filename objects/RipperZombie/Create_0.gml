@@ -16,6 +16,7 @@ damage = SetStat(20, 30, 40, 50);
 hp = SetStat(50, 60, 70 , 90) * (1 + ((global.playerAmount - 1) * 0.4));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
+bounty = (500 * (SetStat(1.2, 1, 0.9, 0.8))) * (1+ ((global.playerAmount - 1) * 0.4));
 attackRange = 16;
 
 specialUsed = false;

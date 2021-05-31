@@ -25,7 +25,7 @@ function PlayerInitStats()
 	maxStamina = stamina;
 
 	kills = 0;
-	money = 250;
+	money = SetStat(300, 250, 250, 200);
 	bankedMoney = 0;
 }
 

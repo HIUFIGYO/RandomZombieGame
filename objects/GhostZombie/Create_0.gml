@@ -12,6 +12,7 @@ damage = SetStat(3, 7, 12, 18);
 hp = SetStat(4, 5, 6, 8);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(2.5);
+bounty =  25 * (SetStat(1.2, 1, 0.9, 0.8));
 
 cloak = SetStat(0.1, 0.08, 0.06, 0.04);
 deCloakDamage = false;

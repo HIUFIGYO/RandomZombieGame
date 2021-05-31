@@ -11,6 +11,7 @@ damage = SetStat(4, 9, 15, 22);
 hp = SetStat(12, 15, 18, 24);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
+bounty = 60 * (SetStat(1.2, 1, 0.9, 0.8));
 
 specialUsed = false;
 specialCooldown = 0;

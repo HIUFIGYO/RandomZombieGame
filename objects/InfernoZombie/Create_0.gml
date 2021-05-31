@@ -15,13 +15,14 @@ damage = SetStat(20, 30, 40, 50);
 hp = SetStat(50, 60, 70 , 90) * (1 + ((global.playerAmount - 1) * 0.4));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(3);
+bounty = (500 * (SetStat(1.2, 1, 0.9, 0.8))) * (1+ ((global.playerAmount - 1) * 0.4));
 attackRange = 8;
 
 specialUsed = false;
 specialCooldown = 0;
 specialAmmo = 20;
 specialAmmoMax = specialAmmo;
-cooldownTime = SetStat(3, 2.5, 2, 1);
+cooldownTime = SetStat(3, 2.5, 2, 1.5);
 specialMinRange = 64;
 specialMaxRange = 256;
 specialFireRate = 0.1;
