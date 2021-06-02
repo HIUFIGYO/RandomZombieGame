@@ -1,4 +1,5 @@
-if(drawTo == UIDrawTo.GUI or !global.drawUI) { exit; }
+if(!isActive or drawTo == UIDrawTo.GUI or !global.drawUI)
+	return;
 
 var _draw = false, _x = 0, _y = 0;
 

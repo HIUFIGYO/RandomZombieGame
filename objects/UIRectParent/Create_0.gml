@@ -13,6 +13,7 @@ drawTo = UIDrawTo.GUI;
 drawView = 0;
 children = ds_list_create();
 sortDepth = 0;
+isActive = true;
 
 UIRight = noone;
 UILeft = noone;

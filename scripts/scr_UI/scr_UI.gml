@@ -217,6 +217,13 @@ function UIDestroy(_UIElement)
 	ds_queue_destroy(listOfUIToDestroy);
 }
 
+///@function UISetActive(UI, active)
+
+function UISetActive(_UI, _active)
+{
+	_UI.isActive = _active;
+}
+
 ///@function UISetDepth(UI, depth)
 
 function UISetDepth(_UIElement, _depth)
@@ -266,12 +273,7 @@ function UISetAlign(_UI, _alignH, _alignV)
 ///@function UISetNeighbours(UI, left, right, up, down)
 
 function UISetNeighbours(_UI, _left, _right, _up, _down)
-{
-	_left = is_undefined(_left) ? _UI.UILeft : _left;
-	_right = is_undefined(_right) ? _UI.UIRight : _right;
-	_up = is_undefined(_up) ? _UI.UIUp : _up;
-	_down = is_undefined(_down) ? _UI.UIDown : _down;
-	
+{	
 	_UI.UILeft = _left;
 	_UI.UIRight = _right;
 	_UI.UIUp = _up;

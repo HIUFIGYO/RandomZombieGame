@@ -1,5 +1,4 @@
 /// @description Auto-Align
-
 var autoX = 0, autoY = 0, autoW, autoH;
 
 if(parent != noone)

@@ -56,11 +56,17 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 			EndStatAdd(_playerID.playerID, EndStat.DamageToBoss, _damage);
 		
 		//money
-		var moneyGained = _damage;
+		var moneyGained = _zombie.maxBounty * (_damage / _zombie.maxHp);
 		if(_damage > _zombie.hp)
-			moneyGained = _zombie.hp;
-		moneyGained *= ((_zombie.bounty) / _zombie.hp);
+			moneyGained = (_zombie.hp / _zombie.maxHp) * _zombie.maxBounty;
+			
+		if(moneyGained > _zombie.bounty)
+			moneyGained = _zombie.bounty;
+			
 		_zombie.bounty -= moneyGained;
+		if(_zombie.bounty < 0)
+			_zombie.bounty = 0;
+
 		PlayerGiveMoney(_playerID, moneyGained);
 		EndStatAdd(_playerID.playerID, EndStat.MoneyEarned, moneyGained);
 	}

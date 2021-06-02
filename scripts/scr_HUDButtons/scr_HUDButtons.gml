@@ -2,14 +2,12 @@
 
 function OnClickSurviveLocal()
 {
-	global.playerAmount = global.startingPlayerAmount;
-	AudioChangeMode(AudioModeGame);
-	RoomGoto(rm_stage01);
+	MenuControllerSelect(1, false);
 }
 
 ///@function OnClickQuit()
 
 function OnClickQuit()
 {
-	game_end();
+	MenuControllerSelect(3, false);
 }

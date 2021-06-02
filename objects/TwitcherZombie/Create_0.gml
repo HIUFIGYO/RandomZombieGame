@@ -13,6 +13,7 @@ hp = SetStat(10, 12, 14, 18);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 bounty = 50 * (SetStat(1.2, 1, 0.9, 0.8));
+maxBounty = bounty;
 attackRange = 4;
 
 dodgeUsed = false;

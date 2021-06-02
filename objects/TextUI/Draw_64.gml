@@ -1,4 +1,5 @@
-if(drawTo != UIDrawTo.GUI or !global.drawUI){ exit; }
+if(!isActive or drawTo != UIDrawTo.GUI or !global.drawUI)
+	return;
 
 draw_set_alpha(alpha);
 draw_set_color(color);

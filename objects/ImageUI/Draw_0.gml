@@ -1,4 +1,6 @@
-if(drawTo == UIDrawTo.GUI or !global.drawUI) { exit; }
+if(!isActive or drawTo == UIDrawTo.GUI or !global.drawUI)
+	return;
+
 var W = sprite_get_width(sprite), H = sprite_get_height(sprite);
 if(stretched)
 {
