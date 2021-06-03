@@ -18,12 +18,7 @@ enum RectAlign
 ///@function UICreateText(x, y, text, drawTo)
 
 function UICreateText(_x, _y, _text, _drawTo)
-{
-	_x = is_undefined(_x) ? 0 : _x;
-	_y = is_undefined(_y) ? 0 : _y;
-	_text = is_undefined(_text) ? 0 : _text;
-	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
-	
+{	
 	if(UIController.layerUI == noone)
 	{
 		with(UIController)
@@ -31,8 +26,9 @@ function UICreateText(_x, _y, _text, _drawTo)
 	}
 	
 	var inst = instance_create_layer(0, 0, UIController.layerUI, TextUI);
-	inst.xx = _x;
-	inst.yy = _y;
+	UISetPosition(inst, _x, _y);
+	if(string_length(_text) > 0)
+		UISetSize(inst, string_width(_text), string_height(_text));
 	inst.text = _text;
 	inst.drawTo = _drawTo;
 	
@@ -42,12 +38,7 @@ function UICreateText(_x, _y, _text, _drawTo)
 ///@function UICreateImage(x, y, sprite, drawTo)
 
 function UICreateImage(_x, _y, _sprite, _drawTo)
-{
-	_x = is_undefined(_x) ? 0 : _x;
-	_y = is_undefined(_y) ? 0 : _y;
-	_sprite = is_undefined(_sprite) ? noone : _sprite;
-	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
-	
+{	
 	if(UIController.layerUI == noone)
 	{
 		with(UIController)
@@ -55,14 +46,12 @@ function UICreateImage(_x, _y, _sprite, _drawTo)
 	}
 	
 	var inst = instance_create_layer(0, 0, UIController.layerUI, ImageUI);
-	inst.xx = _x;
-	inst.yy = _y;
+	UISetPosition(inst, _x, _y);
 	inst.sprite = _sprite;
 	inst.drawTo = _drawTo;
 	if(_sprite != noone)
 	{
-		inst.width = sprite_get_width(_sprite);
-		inst.height = sprite_get_height(_sprite);
+		UISetSize(inst, sprite_get_width(_sprite), sprite_get_height(_sprite));
 	}
 	
 	return inst;
@@ -71,12 +60,7 @@ function UICreateImage(_x, _y, _sprite, _drawTo)
 ///@function UICreateButton(x, y, sprite, drawTo)
 
 function UICreateButton(_x, _y, _sprite, _drawTo)
-{
-	_x = is_undefined(_x) ? 0 : _x;
-	_y = is_undefined(_y) ? 0 : _y;
-	_sprite = is_undefined(_sprite) ? 0 : _sprite;
-	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
-	
+{	
 	if(UIController.layerUI == noone)
 	{
 		with(UIController)
@@ -84,8 +68,7 @@ function UICreateButton(_x, _y, _sprite, _drawTo)
 	}
 	
 	var inst = instance_create_layer(0, 0, UIController.layerUI, ButtonUI);
-	inst.xx = _x;
-	inst.yy = _y;
+	UISetPosition(inst, _x, _y);
 	inst.sprite = _sprite;
 	inst.drawTo = _drawTo;
 	
@@ -95,11 +78,7 @@ function UICreateButton(_x, _y, _sprite, _drawTo)
 ///@function UICreateHealthbar(x, y, drawTo)
 
 function UICreateHealthbar(_x, _y, _drawTo)
-{
-	_x = is_undefined(_x) ? 0 : _x;
-	_y = is_undefined(_y) ? 0 : _y;
-	_drawTo = is_undefined(_drawTo) ? UIDrawTo.Room : _drawTo;
-	
+{	
 	if(UIController.layerUI == noone)
 	{
 		with(UIController)
@@ -107,31 +86,27 @@ function UICreateHealthbar(_x, _y, _drawTo)
 	}
 	
 	var inst = instance_create_layer(0, 0, UIController.layerUI, HealthBarUI);
-	inst.xx = _x;
-	inst.yy = _y;
+	UISetPosition(inst, _x, _y);
 	inst.drawTo = _drawTo;
 	
 	return inst;
 }
 
-///@function UISetRect(UI, x, y, width, height, paddingX, paddingY)
+///@function UISetRect(UI, x, y, width, height)
 
-function UISetRect(_UI, _x, _y, _width, _height, _padX, _padY)
-{
-	_padX = is_undefined(_padX) ? _UI.paddingX : _padX;
-	_padY = is_undefined(_padY) ? _UI.paddingY : _padY;
-	
+function UISetRect(_UI, _x, _y, _width, _height)
+{	
 	UISetPosition(_UI, _x, _y);
 	UISetSize(_UI, _width, _height);
-	UISetPadding(_UI, _padX, _padY);
 }
 
 ///@function UISetPosition(UI, x, y)
 
 function UISetPosition(_UI, _x, _y)
 {
-	_UI.xx = _x;
-	_UI.yy = _y;
+	var xx = (_x / UIController.targetWidth) * UIController.displayWidth,
+		yy = (_y / UIController.targetHeight) * UIController.displayHeight;
+	_UI.position.Set(xx, yy);
 	
 	var _elements = ds_queue_create();
 	ds_queue_enqueue(_elements, _UI);
@@ -155,17 +130,9 @@ function UISetPosition(_UI, _x, _y)
 
 function UISetSize(_UI, _width, _height)
 {
-	_UI.width = _width;
-	_UI.height = _height;
-	_UI.alignFlag = true;
-}
-
-///@function UISetPadding(UI, paddingX, paddingY)
-
-function UISetPadding(_UI, _padX, _padY)
-{
-	_UI.paddingX = _padX;
-	_UI.paddingY = _padY;
+	var w = (_width / UIController.targetWidth) * UIController.displayWidth,
+		h = (_height / UIController.targetHeight) * UIController.displayHeight;
+	_UI.size.Set(w, h);
 	_UI.alignFlag = true;
 }
 
@@ -270,16 +237,6 @@ function UISetAlign(_UI, _alignH, _alignV)
 	_UI.alignFlag = true;
 }
 
-///@function UISetNeighbours(UI, left, right, up, down)
-
-function UISetNeighbours(_UI, _left, _right, _up, _down)
-{	
-	_UI.UILeft = _left;
-	_UI.UIRight = _right;
-	_UI.UIUp = _up;
-	_UI.UIDown = _down;
-}
-
 ///@function UITextSet(UI, text)
 
 function UITextSet(_UI, _text)
@@ -305,10 +262,7 @@ function UITextSetLineSep(_UI, _lineSep)
 ///@function UIImageSetSprite(UI, sprite, subImage, stretched)
 
 function UIImageSetSprite(_UI, _sprite, _sub, _stretched)
-{
-	_sub = is_undefined(_sub) ? _UI.subImage : _sub;
-	_stretched = is_undefined(_stretched) ? _UI.stretched : _stretched;
-	
+{	
 	_UI.sprite = _sprite;
 	_UI.subImage = _sub;
 	_UI.stretched = _stretched;
@@ -355,28 +309,28 @@ function UIGetSelected(_UI)
 
 function UIGetPosX(_UI)
 {
-	return _UI.xx;
+	return _UI.position.x;
 }
 
 ///@function UIGetPosY(UI)
 
 function UIGetPosY(_UI)
 {
-	return _UI.yy;
+	return _UI.position.y;
 }
 
 ///@function UIGetWidth(UI)
 
 function UIGetWidth(_UI)
 {
-	return _UI.width;
+	return _UI.size.x;
 }
 
 ///@function UIGetHeight(UI)
 
 function UIGetHeight(_UI)
 {
-	return _UI.height;
+	return _UI.size.y;
 }
 
 ///@function UIGetColor(UI)
@@ -493,5 +447,5 @@ function UIMouseHover(_UI)
 			break;
 	}
 
-	return(point_in_rectangle(mouseX, mouseY, _UI.x, _UI.y, _UI.x+_UI.width, _UI.y+_UI.height));
+	return(point_in_rectangle(mouseX, mouseY, _UI.x, _UI.y, _UI.x+_UI.size.x, _UI.y+_UI.size.y));
 }

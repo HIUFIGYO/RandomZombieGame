@@ -1,29 +1,25 @@
 /// @description Auto-Align
-var autoX = 0, autoY = 0, autoW, autoH;
+var autoPos, autoSize;
 
 if(parent != noone)
 {
-	autoX = parent.x;
-	autoY = parent.y;
-	autoW = parent.width;
-	autoH = parent.height;
+	autoPos = parent.position;
+	autoSize = parent.size;
 }
 else
 {
+	autoPos = new Vector2(0, 0);
 	if(drawTo == UIDrawTo.GUI)
 	{
-		autoW = Window.width;
-		autoH = Window.height;
+		autoSize = new Vector2(Window.width, Window.height);
 	}
 	else if(drawTo == UIDrawTo.ViewPort or drawTo == UIDrawTo.ViewPortRoom)
 	{
-		autoW = view_wport[drawView];
-		autoH = view_hport[drawView];
+		autoSize = new Vector2(view_wport[drawView], view_hport[drawView]);
 	}
 	else
 	{
-		autoW = room_width;
-		autoH = room_height;
+		autoSize = new Vector2(room_width, room_height);
 	}
 }
 
@@ -31,15 +27,15 @@ else
 switch(alignH)
 {
 	case RectAlign.Left:
-		x = autoX + xx + paddingX;
+		x = autoPos.x + position.x;
 		break;
 			
 	case RectAlign.Center:
-		x = autoX + autoW/2 - width/2 + paddingX;
+		x = autoPos.x + autoSize.x/2 - size.x/2;
 		break;
 		
 	case RectAlign.Right:
-		x = autoX + autoW + xx - width - paddingX;
+		x = autoPos.x + autoSize.x - position.x - size.x;
 		break;
 		
 	default:
@@ -50,15 +46,15 @@ switch(alignH)
 switch(alignV)
 {
 	case RectAlign.Top:
-		y = autoY + yy + paddingY;
+		y = autoPos.y + position.y;
 		break;
 			
 	case RectAlign.Center:
-		y = autoY + autoH/2 - height/2 + paddingY;
+		y = autoPos.y + autoSize.y/2 - size.y/2;
 		break;
 		
 	case RectAlign.Bottom:
-		y = autoY + autoH + xx - height - paddingY;
+		y = autoPos.y + autoSize.y - position.y - size.y;
 		break;
 		
 	default:
@@ -70,7 +66,6 @@ if(ds_list_size(children) > 0)
 {
 	for(var i=0; i<ds_list_size(children); i++)
 	{
-		with(children[| i])
-			event_perform(ev_other, ev_user0);
+		UIDirty(children[| i]);
 	}
 }

@@ -2,6 +2,7 @@
 
 function OnClickSurviveLocal()
 {
+	RoomGoto(rm_stage01);
 	MenuControllerSelect(1, false);
 }
 

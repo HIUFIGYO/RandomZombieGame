@@ -4,8 +4,8 @@ if(!isActive or drawTo != UIDrawTo.GUI or !global.drawUI)
 var W = sprite_get_width(sprite), H = sprite_get_height(sprite);
 if(stretched)
 {
-	W = width;
-	H = height;
+	W = size.x;
+	H = size.y;
 }
 
 draw_sprite_stretched_ext(sprite, subImage, x, y, W, H, color, alpha);

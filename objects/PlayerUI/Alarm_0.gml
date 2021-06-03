@@ -69,10 +69,9 @@ UISetSize(healMeter, 64, 8);
 UISetAlpha(healMeter, 0);
 
 //damage overlay
-overlay = UICreateImage();
+overlay = UICreateImage(0, 0, spr_Damaged, UIDrawTo.ViewPort);
 overlayAlpha = 0;
 UIImageSetSprite(overlay, spr_Damaged, 0, true);
-UISetDrawTo(overlay, UIDrawTo.ViewPort);
 UISetDepth(overlay, 1);
 UISetView(overlay, playerID);
 UISetAlpha(overlay, 0);
@@ -80,10 +79,9 @@ UISetSize(overlay, view_wport[playerID], view_hport[playerID]);
 UISetColor(overlay, c_red);
 
 //danger overlay
-dangerOverlay = UICreateImage();
+dangerOverlay = UICreateImage(0, 0, spr_Damaged, UIDrawTo.ViewPort);
 dangerOverlayAlpha = 0;
 UIImageSetSprite(dangerOverlay, spr_Damaged, 0, true);
-UISetDrawTo(dangerOverlay, UIDrawTo.ViewPort);
 UISetDepth(dangerOverlay, 1);
 UISetView(dangerOverlay, playerID);
 UISetAlpha(dangerOverlay, 0);
@@ -94,20 +92,20 @@ UISetColor(dangerOverlay, c_black);
 grenadeText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
 UISetView(grenadeText, playerID);
 UISetAlign(grenadeText, RectAlign.Right, RectAlign.Bottom);
-UISetPadding(grenadeText, 8, 20);
+UISetPosition(grenadeText, 8, 20);
 UISetColor(grenadeText, c_yellow);
 
 grenadeIcon = UICreateImage(0, 0, spr_grenades, UIDrawTo.ViewPort);
 UISetView(grenadeIcon, playerID);
 UISetParent(grenadeText, grenadeIcon);
-UISetPadding(grenadeIcon, -16, 4);
+UISetPosition(grenadeIcon, -16, 4);
 
 //ammo/mag
 ammoText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
 UISetView(ammoText, playerID);
 UISetColor(ammoText, c_yellow);
 UISetAlign(ammoText, RectAlign.Right, RectAlign.Bottom);
-UISetPadding(ammoText, 8, 8);
+UISetPosition(ammoText, 8, 8);
 
 //reload circle
 reloadImage = UICreateImage(0, 0, spr_reloadCircle, UIDrawTo.ViewPort);
@@ -119,11 +117,11 @@ killsText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
 UISetView(killsText, playerID);
 UISetColor(killsText, c_yellow);
 UISetAlign(killsText, RectAlign.Left, RectAlign.Bottom);
-UISetPadding(killsText, 8, 24);
+UISetPosition(killsText, 8, 24);
 
 //money
 moneyText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
 UISetView(moneyText, playerID);
 UISetColor(moneyText, c_yellow);
 UISetAlign(moneyText, RectAlign.Left, RectAlign.Bottom);
-UISetPadding(moneyText, 8, 8);
+UISetPosition(moneyText, 8, 8);

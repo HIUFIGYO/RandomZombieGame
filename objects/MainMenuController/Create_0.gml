@@ -11,7 +11,7 @@ var xx = 128,
 for(var i=0; i<ds_list_size(buttons); i++)
 {
 	var inst = instance_create_layer(0, 0, "Instances", buttons[| i]);
-	UISetPosition(inst, xx, yy+i*spacing);
+	UISetRect(inst, xx, yy+i*spacing, inst.sprite_width, inst.sprite_height);
 	buttons[| i] = inst;
 }
 
@@ -33,7 +33,7 @@ description[2] = "Quit";
 var textUI = UICreateText(0, 0, "", UIDrawTo.GUI);
 UISetParent(menuDisplay, textUI);
 UISetPosition(textUI, 32, 32);
-UISetSize(textUI, menuDisplay.width - 64, menuDisplay.height - 64);
+UISetSize(textUI, menuDisplay.size.x - 64, menuDisplay.size.y - 64);
 UITextSetLineSep(textUI, 32);
 
 ds_list_add(groupUI[0], textUI);
@@ -88,9 +88,6 @@ UISetParent(menuDisplay, textUI);
 UISetSize(textUI, 300, 64);
 
 ds_list_add(groupUI[3], textUI);
-
-UISetNeighbours(textUI, noone, noone, groupUI[3][| 2], groupUI[3][| 2]);
-UISetNeighbours(textUI, noone, noone, groupUI[3][| 1], groupUI[3][| 1]);
 
 for(var i=0; i<ds_list_size(groupUI[3]); i++)
 {

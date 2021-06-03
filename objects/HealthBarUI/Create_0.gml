@@ -1,5 +1,4 @@
 event_inherited();
 
-value = 1;
-color1 = c_red;
-color2 = c_green;
+UIHealthbarSetValue(id, 1);
+UIHealthbarSetColor(id, UIGetColor(id), c_red, c_green);
