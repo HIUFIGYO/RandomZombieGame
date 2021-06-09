@@ -9,17 +9,17 @@ draw_set_valign(textVAlign);
 
 if(drawTo == UIDrawTo.Room)
 {
-	draw_text_ext_transformed(x, y, text, lineSeperation, size.x, size.x / UIController.displayWidth, size.y / UIController.displayHeight, 0);
+	draw_text_ext_transformed(x, y, text, lineSeperation, pixelSize.x, pixelSize.x / UIController.displayWidth, pixelSize.y / UIController.displayHeight, 0);
 }
 else if(drawTo == UIDrawTo.ViewPort)
 {
 	if(view_current == drawView)
-		draw_text_ext_transformed(camera_get_view_x(Window.camera[drawView]) + x, camera_get_view_y(Window.camera[drawView]) + y, text, lineSeperation, size.x, size.x / UIController.displayWidth, size.y / UIController.displayHeight, 0);
+		draw_text_ext_transformed(camera_get_view_x(Window.camera[drawView]) + x, camera_get_view_y(Window.camera[drawView]) + y, text, lineSeperation, pixelSize.x, pixelSize.x / UIController.displayWidth, pixelSize.y / UIController.displayHeight, 0);
 }
 else
 {
 	if(view_current == drawView)
-		draw_text_ext_transformed(x, y, text, lineSeperation, size.x, size.x / UIController.displayWidth, size.y / UIController.displayHeight, 0);
+		draw_text_ext_transformed(x, y, text, lineSeperation, pixelSize.x, size.x, size.y, 0);
 }
 
 draw_set_alpha(1);

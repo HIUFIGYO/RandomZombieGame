@@ -4,8 +4,8 @@ if(!isActive or drawTo == UIDrawTo.GUI or !global.drawUI)
 var W = sprite_get_width(sprite), H = sprite_get_height(sprite);
 if(stretched)
 {
-	W = size.x;
-	H = size.y;
+	W = pixelSize.x;
+	H = pixelSize.y;
 }
 
 if(drawTo == UIDrawTo.Room)

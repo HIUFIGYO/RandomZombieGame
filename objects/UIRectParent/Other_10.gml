@@ -1,27 +1,28 @@
 /// @description Auto-Align
 var autoPos, autoSize;
 
+context.Set(Window.width, Window.height);
+
+//switch(drawTo)
+//{	
+//	case UIDrawTo.ViewPort:
+//		contextPos.Set(view_wport[drawView], view_hport[drawView]);
+//		break;
+		
+//	case UIDrawTo.Room:
+//		context.Set(room_width, room_height);
+//		contextPos.Set(room_width, room_height);
+//		break;
+//}
+
+autoSize = new Vector2(context.x / UIController.targetWidth, context.y / UIController.targetHeight);
 if(parent != noone)
 {
 	autoPos = parent.position;
-	autoSize = parent.size;
+	//context.Set(UIGetPixelSize(parent).x, UIGetPixelSize(parent).y);
 }
 else
-{
 	autoPos = new Vector2(0, 0);
-	if(drawTo == UIDrawTo.GUI)
-	{
-		autoSize = new Vector2(Window.width, Window.height);
-	}
-	else if(drawTo == UIDrawTo.ViewPort or drawTo == UIDrawTo.ViewPortRoom)
-	{
-		autoSize = new Vector2(view_wport[drawView], view_hport[drawView]);
-	}
-	else
-	{
-		autoSize = new Vector2(room_width, room_height);
-	}
-}
 
 //auto align
 switch(alignH)
@@ -61,6 +62,12 @@ switch(alignV)
 		y = 0;
 		break;
 }
+
+x *= context.x;
+y *= context.y;
+
+pixelPosition.Set(x, y);
+pixelSize.Set(size.x * context.x, size.y * context.y);
 
 if(ds_list_size(children) > 0)
 {

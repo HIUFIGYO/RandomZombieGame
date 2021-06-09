@@ -45,31 +45,26 @@ showControls = true;
 textMessage[0] = "Press num8 to show controls";
 textMessage[1] = "Press num8 to show controls\nPress num 4 & 6 to toggle zombies\nPress num5 to spawn Zombie\nPress num 1 & 3 to toggle weapons\nPress num2 to spawn weapon\nPress num7 to toggle godmode\nPress num9 to cycle difficulty\nPress Delete to clear room";
 
-zombieImage = UICreateImage(0, 0, zombieSprite[0], UIDrawTo.GUI);
+zombieImage = UICreateImage(16, 16, zombieSprite[0], UIDrawTo.GUI);
 UISetAlign(zombieImage, RectAlign.Right, RectAlign.Top);
-UISetPadding(zombieImage, 16, 16);
 UISetSize(zombieImage, 64, 128);
 
-weaponImage = UICreateImage(0, 0, spr_weapons, UIDrawTo.GUI);
+weaponImage = UICreateImage(16, 144, spr_weapons, UIDrawTo.GUI);
 UISetAlign(weaponImage, RectAlign.Right, RectAlign.Top);
-UISetPadding(weaponImage, 16, 144);
 UISetSize(weaponImage, 64, 128);
 
-difficultyImage = UICreateImage(0, 0, spr_difficultyIcons, UIDrawTo.GUI);
+difficultyImage = UICreateImage(16, 176, spr_difficultyIcons, UIDrawTo.GUI);
 UIImageSetSubImage(difficultyImage, global.difficulty);
 UISetAlign(difficultyImage, RectAlign.Right, RectAlign.Top);
-UISetPadding(difficultyImage, 16, 176);
 UISetSize(difficultyImage, 64, 128);
 
-controlText = UICreateText(0, 0, textMessage[0], UIDrawTo.GUI);
+controlText = UICreateText(16, 48, textMessage[0], UIDrawTo.GUI);
 UISetAlign(controlText, RectAlign.Center, RectAlign.Top);
-UISetPadding(controlText, 16, 48);
 UISetSize(controlText, 480, 480);
 UITextSetAlign(controlText, fa_right, fa_top);
 UITextSetLineSep(controlText, 16);
 
-totalZombieText = UICreateText(0, 0, "", UIDrawTo.GUI);
+totalZombieText = UICreateText(16, 16, "", UIDrawTo.GUI);
 UISetAlign(totalZombieText, RectAlign.Center, RectAlign.Top);
-UISetPadding(totalZombieText, 16, 16);
 UISetSize(totalZombieText, 256, 32);
 UITextSetAlign(totalZombieText, fa_center, fa_top);

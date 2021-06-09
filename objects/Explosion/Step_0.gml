@@ -47,6 +47,9 @@ for(var i=0; i<count; i++)
 		
 		DamageZombie(playerID, hits[| i], _damage, false);
 		
+		if(IsDead(hits[| i]))
+			hits[| i].gibFlag = true;
+		
 		if(explosionType == ExplosionType.BHBomber and !spawnedBH and IsDead(hits[| i]))
 		{
 			spawnedBH = true;

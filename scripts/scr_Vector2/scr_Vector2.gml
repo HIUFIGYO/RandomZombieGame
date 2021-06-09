@@ -9,6 +9,12 @@ function Vector2(_x, _y) constructor
 		y = _y;
 	};
 	
+	static SetVector = function(_vec)
+	{
+		x = _vec.x;
+		y = _vec.y;
+	};
+	
     static Add = function(_other)
     {
         x += _other.x;
@@ -89,5 +95,10 @@ function Vector2(_x, _y) constructor
 	{
 		//r = d − 2*(d*n) * n
 		return self.Sub(_normal.Scale(self.Dot(_normal) * 2));
+	};
+	
+	static ToString = function()
+	{
+		return string(x) + ", " + string(y);
 	};
 }

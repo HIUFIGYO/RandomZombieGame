@@ -7,6 +7,7 @@ spriteWalk = spr_limperwalk;
 spriteAttack[0] = spr_limperatk1;
 spriteAttack[1] = spr_limperatk2;
 spriteDead = spr_limperdead;
+spriteGibs = spr_limpergibs;
 
 damage = SetStat(2, 5, 9, 14);
 hp = SetStat(4, 5, 6, 8);

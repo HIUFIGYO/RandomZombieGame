@@ -120,3 +120,24 @@ function CreateAccessoryPickUp(_player)
 	inst.image_index = _player.cosmetic_index;
 	_player.cosmetic_index = 0;
 }
+
+///@function CreateZombieGiblet(zombie)
+
+function CreateZombieGiblet(_zombie)
+{
+	var index = 0;
+	
+	_zombie.image_alpha = 0;
+	
+	repeat(6)
+	{
+		var inst = instance_create_layer(_zombie.x+irandom_range(-5, 5), _zombie.y - 32, GameManager.layerObject, Giblet);
+		inst.sprite_index = _zombie.spriteGibs;
+		inst.image_speed = 0;
+		inst.image_index = index;
+		PhysicsObjectSetSpeed(inst, irandom_range(-15, 15), -(10+irandom(10)));
+		
+		if(index < 4)
+			index++;
+	}
+}

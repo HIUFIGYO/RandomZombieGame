@@ -104,8 +104,8 @@ function UISetRect(_UI, _x, _y, _width, _height)
 
 function UISetPosition(_UI, _x, _y)
 {
-	var xx = (_x / UIController.targetWidth) * UIController.displayWidth,
-		yy = (_y / UIController.targetHeight) * UIController.displayHeight;
+	var xx = (_x / UIController.targetWidth),
+		yy = (_y / UIController.targetHeight);
 	_UI.position.Set(xx, yy);
 	
 	var _elements = ds_queue_create();
@@ -119,7 +119,7 @@ function UISetPosition(_UI, _x, _y)
 			ds_queue_enqueue(_elements, _child.children[| i]);
 		}
 		with(_child)
-			event_perform(ev_step, ev_step_end);
+			UIDirty(_child);
 	}
 	
 	ds_queue_destroy(_elements);
@@ -130,8 +130,8 @@ function UISetPosition(_UI, _x, _y)
 
 function UISetSize(_UI, _width, _height)
 {
-	var w = (_width / UIController.targetWidth) * UIController.displayWidth,
-		h = (_height / UIController.targetHeight) * UIController.displayHeight;
+	var w = (_width / UIController.targetWidth),
+		h = (_height / UIController.targetHeight);
 	_UI.size.Set(w, h);
 	_UI.alignFlag = true;
 }
@@ -305,32 +305,32 @@ function UIGetSelected(_UI)
 	return _UI.isSelected;
 }
 
-///@function UIGetPosX(UI)
+///@function UIGetPosition(UI)
 
-function UIGetPosX(_UI)
+function UIGetPosition(_UI)
 {
-	return _UI.position.x;
+	return _UI.position;
 }
 
-///@function UIGetPosY(UI)
+///@function UIGetSize(UI)
 
-function UIGetPosY(_UI)
+function UIGetSize(_UI)
 {
-	return _UI.position.y;
+	return _UI.size;
 }
 
-///@function UIGetWidth(UI)
+///@function UIGetPixelPosition(UI)
 
-function UIGetWidth(_UI)
+function UIGetPixelPosition(_UI)
 {
-	return _UI.size.x;
+	return _UI.pixelPosition;
 }
 
-///@function UIGetHeight(UI)
+///@function UIGetPixelSize(UI)
 
-function UIGetHeight(_UI)
+function UIGetPixelSize(_UI)
 {
-	return _UI.size.y;
+	return _UI.pixelSize;
 }
 
 ///@function UIGetColor(UI)
@@ -447,5 +447,5 @@ function UIMouseHover(_UI)
 			break;
 	}
 
-	return(point_in_rectangle(mouseX, mouseY, _UI.x, _UI.y, _UI.x+_UI.size.x, _UI.y+_UI.size.y));
+	return(point_in_rectangle(mouseX, mouseY, _UI.x, _UI.y, _UI.x+_UI.pixelSize.x, _UI.y+_UI.pixelSize.y));
 }

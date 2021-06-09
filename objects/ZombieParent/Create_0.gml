@@ -34,6 +34,9 @@ spriteRun = noone;
 spriteDead = noone;
 spriteAttack[0] = noone;
 spriteAttack[1] = noone;
+spriteGibs = noone;
+
+gibFlag = false;
 
 showHealth = false;
 showHealthTimer = 0;

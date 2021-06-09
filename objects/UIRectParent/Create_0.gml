@@ -1,6 +1,11 @@
 position = new Vector2(0, 0);
 size = new Vector2(32, 32);
 
+pixelPosition = new Vector2(position.x, position.y);
+pixelSize = new Vector2(size.x, size.y);
+
+context = new Vector2(0, 0);
+
 color = c_white;
 alpha = 1;
 parent = noone;

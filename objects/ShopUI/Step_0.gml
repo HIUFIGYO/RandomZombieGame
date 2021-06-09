@@ -34,7 +34,10 @@ if(recalculateReloadCost)
 
 //close shop
 if(InputGetButtonDown(player.player_inputID, Button.Cancel))
+{
 	HUDCloseShop(player);
+	return;
+}
 	
 //refill ammo
 if(InputGetButtonDown(player.player_inputID, Button.Reload))

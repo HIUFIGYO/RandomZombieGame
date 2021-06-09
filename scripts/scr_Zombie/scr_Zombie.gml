@@ -72,9 +72,14 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 	}
 	
 	_zombie.hp -= _damage;
+	
+	if(_zombie.hp <= -_zombie.maxHp)
+		_zombie.gibFlag = true;
 
 	if(_zombie.hp <= 0 and !_zombie.isDead)
 	{
+		if(_zombie.gibFlag)
+			CreateZombieGiblet(_zombie);
 		GameZombieDead(_zombie, _playerID);
 		GameSprayBlood(GameGetBloodAmount(), _zombie.x, _zombie.y - (_zombie.bbox_bottom - _zombie.bbox_top) / 2, _zombie.acid, 0);
 	}
