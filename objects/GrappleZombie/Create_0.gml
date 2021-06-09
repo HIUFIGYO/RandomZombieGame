@@ -6,6 +6,7 @@ spriteIdle = spr_grappleidle;
 spriteWalk = spr_grapplerun;
 spriteAttack[0] = spr_grappleatk1;
 spriteDead = spr_grappledead;
+spriteGibs = spr_grapplegibs;
 
 damage = SetStat(1, 3, 6, 10);
 hp =  SetStat(5, 6, 7, 9);

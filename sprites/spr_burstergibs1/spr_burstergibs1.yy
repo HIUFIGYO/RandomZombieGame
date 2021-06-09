@@ -1,8 +1,8 @@
 {
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 4,
   "type": 0,
-  "origin": 7,
+  "origin": 4,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -33,9 +33,9 @@
     {"compositeImage":{"FrameId":{"name":"7860a438-0144-4486-8967-2e58b41675b6","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"7860a438-0144-4486-8967-2e58b41675b6","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"LayerId":{"name":"794e3207-8e59-442f-bc3e-b6f1d70e3108","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_burstergibs1","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","name":"7860a438-0144-4486-8967-2e58b41675b6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e9980e7b-3ad0-4041-b2f3-a881a23ebd07","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e9980e7b-3ad0-4041-b2f3-a881a23ebd07","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"LayerId":{"name":"794e3207-8e59-442f-bc3e-b6f1d70e3108","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_burstergibs1","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","name":"e9980e7b-3ad0-4041-b2f3-a881a23ebd07","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"fcc37881-13f5-41d0-a211-be78b29d5697","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"fcc37881-13f5-41d0-a211-be78b29d5697","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"LayerId":{"name":"794e3207-8e59-442f-bc3e-b6f1d70e3108","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_burstergibs1","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","name":"fcc37881-13f5-41d0-a211-be78b29d5697","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"560c5ef5-289c-4558-ac9d-674e6b45d9c5","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"560c5ef5-289c-4558-ac9d-674e6b45d9c5","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"LayerId":{"name":"794e3207-8e59-442f-bc3e-b6f1d70e3108","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_burstergibs1","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","name":"560c5ef5-289c-4558-ac9d-674e6b45d9c5","tags":[],"resourceType":"GMSpriteFrame",},
@@ -56,7 +56,7 @@
             {"id":"cfe798a3-df77-4258-9153-e6636b8c0c7f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"16c8d9fa-40e9-4749-8263-ee37a94e2969","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a8835206-6c2f-40b7-b7dd-7d2e5408b65b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2b0e4b6b-7271-470d-833e-5b8e01f5050f","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ee2b03bd-0f84-4c72-833d-cabe1167ab99","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7860a438-0144-4486-8967-2e58b41675b6","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"a01f1693-b661-4bb5-a524-2e18d4375630","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e9980e7b-3ad0-4041-b2f3-a881a23ebd07","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9f77374a-b58d-4bb1-a0ab-232b3278c598","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fcc37881-13f5-41d0-a211-be78b29d5697","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"9629bbab-e1c7-4a1a-a388-a23e029824c1","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"560c5ef5-289c-4558-ac9d-674e6b45d9c5","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
@@ -71,7 +71,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 13,
-    "yorigin": 24,
+    "yorigin": 12,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_burstergibs1","path":"sprites/spr_burstergibs1/spr_burstergibs1.yy",},

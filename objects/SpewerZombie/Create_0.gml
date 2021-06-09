@@ -6,6 +6,7 @@ spriteIdle = spr_speweridle;
 spriteWalk = spr_spewerwalk;
 spriteAttack[0] = spr_spewermelee;
 spriteDead = spr_spewerdead;
+spriteGibs = spr_spewergibs;
 
 damage = SetStat(8, 15, 23, 32);
 hp = SetStat(14, 17, 20, 26);

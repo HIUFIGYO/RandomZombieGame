@@ -7,6 +7,7 @@ spriteWalk = spr_biowalk;
 spriteAttack[0] = spr_bioatk1;
 spriteAttack[1] = spr_bioatk2;
 spriteDead = spr_biodead;
+spriteGibs = spr_biogibs;
 
 damage = SetStat(9, 15, 22, 30);
 hp = SetStat(20, 24, 28, 36) * (1 + ((global.playerAmount - 1) * 0.2));

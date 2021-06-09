@@ -7,6 +7,7 @@ spriteWalk = spr_bladerun;
 spriteAttack[0] = spr_bladeatk1;
 spriteAttack[1] = spr_bladeatk2;
 spriteDead = spr_bladedead;
+spriteGibs = spr_bladegibs;
 
 damage = SetStat(10, 17, 25, 34);
 hp = SetStat(14, 17, 20, 26) * (1 + ((global.playerAmount - 1) * 0.2));

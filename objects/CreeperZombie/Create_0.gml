@@ -7,6 +7,7 @@ spriteWalk = spr_creeperrun;
 spriteAttack[0] = spr_creeperatk1;
 spriteAttack[1] = spr_creeperatk2;
 spriteDead = spr_creeperdead;
+spriteGibs = spr_creepergibs;
 
 damage = SetStat(10, 15, 20, 25);
 hp = 10 * (1 + ((global.playerAmount - 1) * 0.4));

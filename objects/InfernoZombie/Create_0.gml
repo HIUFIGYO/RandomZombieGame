@@ -10,6 +10,7 @@ spriteIdle = spr_infernoidle;
 spriteWalk = spr_infernowalk;
 spriteAttack[0] = spr_infernoatk1;
 spriteDead = spr_infernodead;
+spriteGibs = spr_infernogibs;
 
 damage = SetStat(20, 30, 40, 50);
 hp = SetStat(50, 60, 70 , 90) * (1 + ((global.playerAmount - 1) * 0.4));

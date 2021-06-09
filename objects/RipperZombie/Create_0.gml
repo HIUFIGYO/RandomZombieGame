@@ -11,6 +11,7 @@ spriteWalk = spr_ripperrun;
 spriteAttack[0] = spr_ripperatk1;
 spriteAttack[1] = spr_ripperatk2;
 spriteDead = spr_ripperdead;
+spriteGibs = spr_rippergibs;
 
 damage = SetStat(20, 30, 40, 50);
 hp = SetStat(50, 60, 70 , 90) * (1 + ((global.playerAmount - 1) * 0.4));

@@ -7,6 +7,7 @@ spriteWalk = spr_rabidrun;
 spriteAttack[0] = spr_rabidatk1;
 spriteAttack[1] = spr_rabidatk2;
 spriteDead = spr_rabiddead;
+spriteGibs = spr_rabidgibs;
 
 damage = SetStat(3, 7, 12, 18);
 hp =  SetStat(3, 4, 5, 7);

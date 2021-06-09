@@ -6,6 +6,7 @@ spriteIdle = spr_injectoridle;
 spriteWalk = spr_injectorrun;
 spriteAttack[0] = spr_injectoratk1;
 spriteDead = spr_injectordead;
+spriteGibs = spr_injectorgibs;
 
 damage = SetStat(4, 9, 15, 22);
 hp = SetStat(12, 15, 18, 24);

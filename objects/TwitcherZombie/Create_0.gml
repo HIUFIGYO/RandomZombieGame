@@ -6,6 +6,7 @@ spriteIdle = spr_twitcheridle;
 spriteWalk = spr_twitcherrun;
 spriteAttack[0] = spr_twitcheratk1;
 spriteDead = spr_twitcherdead;
+spriteGibs = spr_twitchergibs;
 
 grav = 0.881;
 damage = SetStat(2, 5, 9, 14);

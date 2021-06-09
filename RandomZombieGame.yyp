@@ -433,7 +433,7 @@
     {"id":{"name":"spr_Acreeperdead","path":"sprites/spr_Acreeperdead/spr_Acreeperdead.yy",},"order":4,},
     {"id":{"name":"AudioSystem","path":"objects/AudioSystem/AudioSystem.yy",},"order":2,},
     {"id":{"name":"scr_UIButton","path":"scripts/scr_UIButton/scr_UIButton.yy",},"order":1,},
-    {"id":{"name":"srp_Acreepergibs","path":"sprites/srp_Acreepergibs/srp_Acreepergibs.yy",},"order":5,},
+    {"id":{"name":"spr_Acreepergibs","path":"sprites/spr_Acreepergibs/spr_Acreepergibs.yy",},"order":5,},
     {"id":{"name":"light_ignore_shadow_caster","path":"scripts/light_ignore_shadow_caster/light_ignore_shadow_caster.yy",},"order":4,},
     {"id":{"name":"spr_Screeperidle","path":"sprites/spr_Screeperidle/spr_Screeperidle.yy",},"order":0,},
     {"id":{"name":"spr_spewerwalk2","path":"sprites/spr_spewerwalk2/spr_spewerwalk2.yy",},"order":8,},

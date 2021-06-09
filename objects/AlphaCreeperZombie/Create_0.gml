@@ -11,6 +11,7 @@ spriteWalk = spr_Acreeperrun;
 spriteAttack[0] = spr_Acreeperatk1;
 spriteAttack[1] = spr_Acreeperatk2;
 spriteDead = spr_Acreeperdead;
+spriteGibs = spr_Acreepergibs;
 
 damage = SetStat(20, 30, 40, 50);
 hp = 10 * (1 + ((global.playerAmount - 1) * 0.4));
