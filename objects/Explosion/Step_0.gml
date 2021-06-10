@@ -44,11 +44,11 @@ for(var i=0; i<count; i++)
 		
 		if(acid)
 			DebuffApply(hits[| i], DeBuff.Acid, playerID);
+			
+		if(hits[| i].hp - _damage <= 0)
+			hits[| i].gibFlag = true;
 		
 		DamageZombie(playerID, hits[| i], _damage, false);
-		
-		if(IsDead(hits[| i]))
-			hits[| i].gibFlag = true;
 		
 		if(explosionType == ExplosionType.BHBomber and !spawnedBH and IsDead(hits[| i]))
 		{

@@ -323,7 +323,7 @@ function UIGetSize(_UI)
 
 function UIGetPixelPosition(_UI)
 {
-	return _UI.pixelPosition;
+	return new Vector2(_UI.x, _UI.y);
 }
 
 ///@function UIGetPixelSize(UI)
