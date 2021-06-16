@@ -75,11 +75,11 @@ shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 
 shop[Weapon.Purple, ShopKey.Price] = 4000;
 
 shop[Weapon.Drainer, ShopKey.Name] = "Undead Drainer";
-shop[Weapon.Drainer, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 2\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 4\nMax Ammo: 56\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\n100% chance to apply BLEED\nThis experimental weapon fires modified projectiles that attach to and drain all the blood from their victim. Best used on single targets.";
+shop[Weapon.Drainer, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 4\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 4\nMax Ammo: 36\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\n100% chance to apply BLEED\nThis experimental weapon fires modified projectiles that attach to and drain all the blood from their victim. Best used on single targets.";
 shop[Weapon.Drainer, ShopKey.Price] = 4500;
 
 shop[Weapon.BHDarker, ShopKey.Name] = "B.H. Darker";
-shop[Weapon.BHDarker, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 4\nFirerate: 0.5\nAccuracy: 100%\nMag Size: 5\nMax Ammo: 25\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nThis weapon is without description...";
+shop[Weapon.BHDarker, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 6\nFirerate: 0.5\nAccuracy: 100%\nMag Size: 5\nMax Ammo: 25\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nThis weapon is without description...";
 shop[Weapon.BHDarker, ShopKey.Price] = 5000;
 
 //GRENADES
@@ -147,7 +147,7 @@ shop[Buff.Medic, ShopKey.Description] = "Increase nearby teammates health regene
 shop[Buff.Medic, ShopKey.Price] = 1000;
 
 shop[Buff.Demo, ShopKey.Name] = "Demo Buff";
-shop[Buff.Demo, ShopKey.Description] = "Increase maximum explosives by 2\n35% chance not to consume explosives\nIf hit with a lethal attack, explode and survive with 1 health (Cooldown: 180 seconds)";
+shop[Buff.Demo, ShopKey.Description] = "Increase maximum explosives by 2\n35% chance not to consume explosives\nIf hit with a lethal attack, explode and survive with 1 health (Cooldown: 150 seconds)";
 shop[Buff.Demo, ShopKey.Price] = 1100;
 
 //HEALING ITEMS

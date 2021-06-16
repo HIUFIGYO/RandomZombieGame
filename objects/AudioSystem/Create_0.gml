@@ -8,6 +8,9 @@ ds_list_add(actionSongs, Music_Action3);
 ds_list_add(actionSongs, Music_Action4);
 ds_list_add(actionSongs, Music_Action5);
 ds_list_add(actionSongs, Music_Action6);
+ds_list_add(actionSongs, Music_Action7);
+ds_list_add(actionSongs, Music_Action8);
+ds_list_add(actionSongs, Music_Action9);
 
 ds_list_shuffle(actionSongs);
 
