@@ -1,7 +1,8 @@
 enum GM
 {
 	Debug,
-	Skirmish
+	Skirmish,
+	count
 }
 
 ///@function GamePaused()

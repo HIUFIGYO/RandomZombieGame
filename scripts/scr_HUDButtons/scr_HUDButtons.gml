@@ -2,13 +2,14 @@
 
 function OnClickSurviveLocal()
 {
-	RoomGoto(rm_stage01);
-	MenuControllerSelect(1, false);
+	MenuControllerSelect(MenuGroup.Local, false);
+	MenuControllerScroll(MenuGroup.Local, 0);
 }
 
 ///@function OnClickQuit()
 
 function OnClickQuit()
 {
-	MenuControllerSelect(3, false);
+	MenuControllerSelect(MenuGroup.Quit, false);
+	MenuControllerScroll(MenuGroup.Quit, 1);
 }

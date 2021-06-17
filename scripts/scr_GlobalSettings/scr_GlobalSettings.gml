@@ -1,3 +1,9 @@
+enum GameStage
+{
+	City,
+	count
+}
+
 enum GameDifficulty
 {
 	Easy,
@@ -15,6 +21,7 @@ global.playerAmount = 1;
 
 global.difficulty = GameDifficulty.Hard;
 global.selectedGameMode = GM.Skirmish;
+global.selectedStage = GameStage.City;
 
 global.playerName[0] = "Player 1";
 global.playerName[1] = "Player 2";

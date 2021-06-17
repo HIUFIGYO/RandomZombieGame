@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "HUD",
-    "path": "folders/Objects/HUD.yy",
+    "name": "Game",
+    "path": "folders/Objects/HUD/Game.yy",
   },
   "resourceVersion": "1.0",
   "name": "EndGameResultsUI",
