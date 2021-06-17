@@ -89,23 +89,18 @@ UISetSize(dangerOverlay, view_wport[playerID], view_hport[playerID]);
 UISetColor(dangerOverlay, c_black);
 
 //grenades
-grenadeText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
+grenadeText = UICreateText(8, 20, "9", UIDrawTo.ViewPort);
 UISetView(grenadeText, playerID);
 UISetAlign(grenadeText, RectAlign.Right, RectAlign.Bottom);
-UISetPosition(grenadeText, 8, 20);
 UISetColor(grenadeText, c_yellow);
 
-grenadeIcon = UICreateImage(0, 0, spr_grenades, UIDrawTo.ViewPort);
-UISetView(grenadeIcon, playerID);
-UISetParent(grenadeText, grenadeIcon);
-UISetPosition(grenadeIcon, -16, 4);
-
 //ammo/mag
-ammoText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
+ammoText = UICreateText(8, 8, "999 / 999", UIDrawTo.ViewPort);
+UISetPosition(ammoText, 8 - string_width("999 / 999"), 8);
 UISetView(ammoText, playerID);
 UISetColor(ammoText, c_yellow);
 UISetAlign(ammoText, RectAlign.Right, RectAlign.Bottom);
-UISetPosition(ammoText, 8, 8);
+UITextSetAlign(ammoText, fa_right, fa_top);
 
 //reload circle
 reloadImage = UICreateImage(0, 0, spr_reloadCircle, UIDrawTo.ViewPort);
@@ -113,15 +108,13 @@ UISetView(reloadImage, playerID);
 UISetAlign(reloadImage, RectAlign.Center, RectAlign.Center);
 
 //kills
-killsText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
+killsText = UICreateText(8, 24, "", UIDrawTo.ViewPort);
 UISetView(killsText, playerID);
 UISetColor(killsText, c_yellow);
 UISetAlign(killsText, RectAlign.Left, RectAlign.Bottom);
-UISetPosition(killsText, 8, 24);
 
 //money
-moneyText = UICreateText(0, 0, "", UIDrawTo.ViewPort);
+moneyText = UICreateText(8, 8, "", UIDrawTo.ViewPort);
 UISetView(moneyText, playerID);
 UISetColor(moneyText, c_yellow);
 UISetAlign(moneyText, RectAlign.Left, RectAlign.Bottom);
-UISetPosition(moneyText, 8, 8);

@@ -111,3 +111,4 @@ if(updateText)
 }
 
 UITextSet(totalZombieText, "Total Zombies: " + string(totalZombies));
+UISetSize(totalZombieText, string_width("Total Zombies: " + string(totalZombies)), 32);

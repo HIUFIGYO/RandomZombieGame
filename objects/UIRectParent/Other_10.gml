@@ -2,25 +2,6 @@
 
 var autoPos, autoSize;
 
-//get context
-switch(drawTo)
-{
-	case UIDrawTo.ViewPortRoom:
-	case UIDrawTo.ViewPort:
-		//context.Set(view_wport[drawView], view_hport[drawView]);
-		context.Set(Window.width, Window.height);
-		autoSize = new Vector2(view_wport[drawView] / Window.width, view_hport[drawView] / Window.height);
-		break;
-		
-	case UIDrawTo.Room:
-		context.Set(room_width, room_height);
-		break;
-		
-	default:
-		context.Set(Window.width, Window.height);
-		break;
-}
-
 if(parent != noone)
 {
 	autoPos = parent.parentPosition;
@@ -30,6 +11,11 @@ else
 {
 	autoPos = new Vector2(0, 0);
 	autoSize = new Vector2(1, 1);
+}
+
+if(drawTo == UIDrawTo.ViewPort or drawTo == UIDrawTo.ViewPortRoom)
+{
+	autoSize.Set(view_wport[drawView] / Window.width, view_hport[drawView] / Window.height);
 }
 
 //auto align
@@ -59,7 +45,7 @@ switch(alignV)
 		break;
 			
 	case RectAlign.Center:
-		y = autoPos.y + autoSize.y/2 - size.y/2 + position.x;
+		y = autoPos.y + autoSize.y/2 - size.y/2 + position.y;
 		break;
 		
 	case RectAlign.Bottom:
@@ -73,10 +59,10 @@ switch(alignV)
 
 parentPosition.Set(x, y);
 
-x *= context.x;
-y *= context.y;
+x *= Window.width;
+y *= Window.height;
 
-pixelSize.Set(size.x * context.x, size.y * context.y);
+pixelSize.Set(size.x * Window.width, size.y * Window.height);
 
 if(ds_list_size(children) > 0)
 {

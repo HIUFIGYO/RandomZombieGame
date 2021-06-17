@@ -1,6 +1,8 @@
 if(view_current != playerID or ds_list_empty(messageList))
-	exit;
+	return;
 	
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
 	
 var camX = camera_get_view_x(Window.camera[playerID]),
 	camY = camera_get_view_y(Window.camera[playerID]);

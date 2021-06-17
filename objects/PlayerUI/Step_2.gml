@@ -100,15 +100,12 @@ if(player.healingItemTimer > 0)
 
 //grenades
 _alpha = player.grenadeType != noone;
-UIImageSetSubImage(grenadeIcon, player.grenadeType);
-UITextSet(grenadeText, " x " + string(player.grenadeAmount));
-UISetAlpha(grenadeIcon, _alpha);
+UITextSet(grenadeText, string(player.grenadeAmount));
 UISetAlpha(grenadeText, _alpha);
 	
 //Ammo text
 var _text = string(player.mag[player.currentWeapon]) + "/" + string(player.ammo[player.currentWeapon])
 UITextSet(ammoText, _text);
-UISetSize(ammoText, string_width(_text), 20);
 UISetAlpha(ammoText, player.weapon[player.currentWeapon] != noone);
 	
 //reload timer
