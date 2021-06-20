@@ -2,6 +2,21 @@ ready = false;
 
 gamePaused = false;
 
+drawSplitScreen = SplitScreen1;
+
+switch(global.playerAmount)
+{
+	case 2:
+		drawSplitScreen = SplitScreen2;
+		break;
+	case 3:
+		drawSplitScreen = SplitScreen3;
+		break;
+	case 4:
+		drawSplitScreen = SplitScreen4;
+		break;
+}
+
 //spawn background controller
 layerBackground = layer_create(50);
 instance_create_layer(0, 0, layerBackground, BackgroundController);

@@ -61,7 +61,7 @@ if(target)
 		image_index = 1;
 }
 
-if(restockTimer > 0)
+if(restockTimer > 0 and !GamePaused())
 {
 	restockTimer -= DeltaTimeSecond();
 	if(restockTimer <= 0)

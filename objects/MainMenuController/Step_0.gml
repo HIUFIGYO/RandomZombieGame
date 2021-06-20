@@ -47,6 +47,7 @@ if(InputGetButtonDown(0, Button.Confirm))
 					global.selectedGameMode = gameModeSelect;
 					global.selectedStage = stageSelect;
 					global.difficulty = difficultySelect;
+					global.playerAmount = 4;
 					RoomGoto(rm_PlayerSetUp);
 					break;
 			}

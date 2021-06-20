@@ -1,5 +1,7 @@
 /// @description Pause UI
 
+drawSplitScreen();
+
 if(!gamePaused)
 	return;
 	

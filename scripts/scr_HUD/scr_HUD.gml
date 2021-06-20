@@ -73,22 +73,6 @@ function HUDCreateMessageController(_player)
 	return inst;
 }
 
-///@function DrawViewBorder()
-
-function DrawViewBorder()
-{
-	if(view_current != playerID)
-		return;
-	
-	var xx = camera_get_view_x(Window.camera[playerID]),
-		yy = camera_get_view_y(Window.camera[playerID]),
-		w = xx + camera_get_view_width(Window.camera[playerID]),
-		h = yy + camera_get_view_height(Window.camera[playerID]);
-	
-	draw_set_color(c_black);
-	draw_rectangle(xx+1, yy, w-1, h-1, true);
-}
-
 ///@function EndStatAdd(player, endStat, value)
 
 function EndStatAdd(_player, _endStat, _value)
@@ -165,4 +149,46 @@ function EndGameSetResult(_result)
 	{
 		inst.resultIndex = _result;
 	}
+}
+
+///@function SplitScreen1()
+
+function SplitScreen1()
+{
+	return;	
+}
+
+///@function SplitScreen2()
+
+function SplitScreen2()
+{
+	var W = Window.width,
+		H = Window.height,
+	lineW = (W / UIController.targetWidth) * 4;
+
+	draw_line_width_color(0, H/2, W, H/2, lineW, c_grey, c_dkgray);
+}
+
+///@function SplitScreen3()
+
+function SplitScreen3()
+{
+	var W = Window.width,
+		H = Window.height,
+	lineW = (W / UIController.targetWidth) * 4;
+
+	draw_line_width_color(W/2, H/2, W/2, H, lineW, c_grey, c_dkgray);
+	draw_line_width_color(0, H/2, W, H/2, lineW, c_grey, c_dkgray);
+}
+
+///@function SplitScreen4()
+
+function SplitScreen4()
+{
+	var W = Window.width,
+		H = Window.height,
+	lineW = (W / UIController.targetWidth) * 4;
+
+	draw_line_width_color(W/2, 0, W/2, H, lineW, c_grey, c_dkgray);
+	draw_line_width_color(0, H/2, W, H/2, lineW, c_grey, c_dkgray);
 }

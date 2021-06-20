@@ -4,7 +4,7 @@ if(windowResize)
 {
 	//try again next frame
 	alarm[1] = 1;
-	exit;
+	return;
 }
 
 var w = window_get_width();
