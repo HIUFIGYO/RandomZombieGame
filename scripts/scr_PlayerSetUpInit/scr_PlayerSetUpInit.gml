@@ -114,3 +114,17 @@ function PlayerSetUpCreateCharacter(_index)
 	UISetAlign(textUI, RectAlign.Right, RectAlign.Top);
 	ds_list_add(groupUI[_index], textUI);
 }
+
+///@function PlayerSetUpCreateReady(index)
+
+function PlayerSetUpCreateReady(_index)
+{
+	screenSelect[_index] = PlayerSetUpUpdateReady;
+	
+	PlayerSetUpClearGroup(_index);
+	
+	var textUI = UICreateText(0, 0, "Ready", UIDrawTo.ViewPort);
+	UISetView(textUI, _index);
+	UISetAlign(textUI, RectAlign.Center, RectAlign.Center);
+	ds_list_add(groupUI[_index], textUI);
+}

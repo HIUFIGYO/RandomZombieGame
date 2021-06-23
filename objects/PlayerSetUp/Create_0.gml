@@ -7,6 +7,7 @@ loaded = false;
 loadProfiles = ds_list_create();
 
 startGame = false;
+countDown = 3;
 
 for(var i=0; i<4; i++)
 {
@@ -17,3 +18,8 @@ for(var i=0; i<4; i++)
 	
 	PlayerSetUpCreateEnter(i);
 }
+
+playerIndex[0] = noone;
+playerIndex[1] = noone;
+playerIndex[2] = noone;
+playerIndex[3] = noone;

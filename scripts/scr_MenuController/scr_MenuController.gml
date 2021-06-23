@@ -66,6 +66,11 @@ function MenuControllerUpdateLocal(_input)
 		stageSelect = ClampScroll(stageSelect + _input.x, 0, GameStage.count - 1);
 	else if(selection == 2)
 		difficultySelect = ClampScroll(difficultySelect + _input.x, 0, GameDifficulty.count - 1);
+	
+	UISetColor(groupUI[| 6], difficultyColor[difficultySelect]);
+	UITextSet(groupUI[| 4], gameModeText[gameModeSelect]);
+	UITextSet(groupUI[| 5], stageText[stageSelect]);
+	UITextSet(groupUI[| 6], difficultyText[difficultySelect]);
 		
 	if(InputGetButtonDown(0, Button.Confirm))
 	{

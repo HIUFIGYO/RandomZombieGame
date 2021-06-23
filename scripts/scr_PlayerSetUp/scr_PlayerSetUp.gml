@@ -23,8 +23,8 @@ function PlayerSetUpHighlight(_index)
 ///@function PlayerSetUpUpdateEnter(index, input)
 
 function PlayerSetUpUpdateEnter(i, _input)
-{
-	if(InputGetButtonDown(i, Button.Confirm))
+{	
+	if(!startGame and InputGetButtonDown(global.playerInput[i], Button.Confirm))
 	{
 		ready[i] = false;
 		playerAmount++;
@@ -61,7 +61,7 @@ function PlayerSetUpUpdateProfile(i, _input)
 	
 	PlayerSetUpHighlight(i);
 	
-	if(InputGetButtonDown(i, Button.Confirm))
+	if(InputGetButtonDown(global.playerInput[i], Button.Confirm))
 	{
 		switch(selection[i])
 		{
@@ -74,15 +74,17 @@ function PlayerSetUpUpdateProfile(i, _input)
 				break;
 			case 2://cancel
 				ready[i] = true;
+				playerIndex[i] = noone;
 				playerAmount--;
 				PlayerSetUpCreateEnter(i);
 				break;
 		}
 		selection[i] = 0;
 	}
-	else if(InputGetButtonDown(i, Button.Cancel))
+	else if(InputGetButtonDown(global.playerInput[i], Button.Cancel))
 	{
 		ready[i] = true;
+		playerIndex[i] = noone;
 		playerAmount--;
 		PlayerSetUpCreateEnter(i);
 	}
@@ -96,7 +98,7 @@ function PlayerSetUpUpdateLoad(i, _input)
 	
 	PlayerSetUpHighlight(i);
 	
-	if(InputGetButtonDown(i, Button.Confirm))
+	if(InputGetButtonDown(global.playerInput[i], Button.Confirm))
 	{
 		var fileName = "Profiles/" + loadProfiles[| selection[i]] + ".json";
 		if(file_exists(fileName))
@@ -106,7 +108,7 @@ function PlayerSetUpUpdateLoad(i, _input)
 		}
 		selection[i] = 0;
 	}
-	else if(InputGetButtonDown(i, Button.Cancel))
+	else if(InputGetButtonDown(global.playerInput[i], Button.Cancel))
 	{
 		PlayerSetUpCreateProfile(i);
 	}
@@ -120,7 +122,7 @@ function PlayerSetUpUpdateCharacter(i, _input)
 	
 	PlayerSetUpHighlight(i);
 	
-	if(InputGetButtonDown(i, Button.Confirm))
+	if(InputGetButtonDown(global.playerInput[i], Button.Confirm))
 	{
 		if(selection[i] == 0)//name
 		{
@@ -138,11 +140,13 @@ function PlayerSetUpUpdateCharacter(i, _input)
 		{
 			ready[i] = true;
 			
+			PlayerSetUpCreateReady(i);
+			
 			var allReady = true;
 			
 			for(var check=0; check<4; check++)
 			{
-				if(!ready[i])
+				if(!ready[check])
 					allReady = false;
 			}
 			
@@ -150,12 +154,11 @@ function PlayerSetUpUpdateCharacter(i, _input)
 			{
 				startGame = true;
 				global.playerAmount = playerAmount;
-				//Start count down.
 			}
 		}
 		selection[i] = 0;
 	}
-	else if(InputGetButtonDown(i, Button.Cancel))
+	else if(InputGetButtonDown(global.playerInput[i], Button.Cancel))
 	{
 		PlayerSetUpCreateProfile(i);
 		selection[i] = 0;
@@ -167,6 +170,17 @@ function PlayerSetUpUpdateCharacter(i, _input)
 function PlayerSetUpUpdateColor(i, _input)
 {
 	//pick a color you idiot.
+}
+
+///@function PlayerSetUpUpdateReady(index, input)
+
+function PlayerSetUpUpdateReady(i, _input)
+{
+	if(!startGame and InputGetButtonDown(global.playerInput[i], Button.Cancel))
+	{
+		ready[i] = false;
+		PlayerSetUpCreateCharacter(i);
+	}
 }
 
 

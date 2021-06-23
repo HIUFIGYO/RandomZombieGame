@@ -32,13 +32,13 @@ description[1] = "Settings";
 description[2] = "Quit";
 
 //local
-gameModeSelect = 1;
+gameModeSelect = 0;
 stageSelect = 0;
 difficultySelect = 0;
 
-gameModeText[0] = "Skirmish";
-gameModeText[1] = "Horde";
-gameModeText[2] = "Wave";
+gameModeText[1] = "Skirmish";
+gameModeText[2] = "Horde";
+gameModeText[3] = "Wave";
 
 stageText[0] = "City";
 stageText[1] = "Bridge";
@@ -50,6 +50,11 @@ difficultyText[0] = "Outbreak";
 difficultyText[1] = "Epidemic";
 difficultyText[2] = "Pandemic";
 difficultyText[3] = "Apocalypse";
+
+difficultyColor[0] = c_yellow;
+difficultyColor[1] = c_orange;
+difficultyColor[2] = c_red;
+difficultyColor[3] = c_purple;
 
 //settings
 

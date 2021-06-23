@@ -51,6 +51,18 @@ function MenuControllerCreateLocal()
 	UISetParent(menuDisplay, textUI);
 	UISetAlign(textUI, RectAlign.Left, RectAlign.Bottom);
 	ds_list_add(groupUI, textUI);
+	
+	textUI = UICreateText(256, 32, "GameMode", UIDrawTo.GUI);
+	UISetParent(menuDisplay, textUI);
+	ds_list_add(groupUI, textUI);
+	
+	textUI = UICreateText(256, 64, "City", UIDrawTo.GUI);
+	UISetParent(menuDisplay, textUI);
+	ds_list_add(groupUI, textUI);
+	
+	textUI = UICreateText(256, 96, "Difficulty", UIDrawTo.GUI);
+	UISetParent(menuDisplay, textUI);
+	ds_list_add(groupUI, textUI);
 }
 
 ///@function MenuControllerCreateQuit()
