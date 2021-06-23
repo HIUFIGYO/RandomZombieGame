@@ -147,6 +147,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"992256cf-a284-4938-8194-aee730dea9dc","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Unused",
     "path": "folders/Sprites/Unused.yy",

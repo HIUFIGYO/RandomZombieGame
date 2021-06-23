@@ -115,6 +115,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"050547ce-96eb-4ed1-94f4-2ba655e06ea6","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Limper",
     "path": "folders/Sprites/Zombies/Limper.yy",

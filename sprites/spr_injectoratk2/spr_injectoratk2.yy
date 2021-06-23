@@ -131,6 +131,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0eaf6642-9f3b-4cb7-8660-bfeaa7f6bc22","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Injector",
     "path": "folders/Sprites/Zombies/Injector.yy",

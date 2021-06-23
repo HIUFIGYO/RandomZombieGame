@@ -71,6 +71,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a9ff5a8c-5f29-41ef-8482-36569b53a0db","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "AlphaCreeper",
     "path": "folders/Sprites/Zombies/Creeper/AlphaCreeper.yy",

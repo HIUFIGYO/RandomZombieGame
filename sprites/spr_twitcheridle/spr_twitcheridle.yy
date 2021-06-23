@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c07eee9a-b3e0-410e-92c2-2bee99e73548","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Twitcher",
     "path": "folders/Sprites/Zombies/Twitcher.yy",

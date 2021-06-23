@@ -11,55 +11,95 @@ enum MenuGroup
 	count
 }
 
-///@function MenuControllerSelect(select, enable)
-
-function MenuControllerSelect(_select, _enable)
-{
-	with(MainMenuController)
-	{
-		for(var i=0; i<ds_list_size(groupUI[groupSelect]); i++)
-		{
-			UISetActive(groupUI[groupSelect][| i], false);
-		}
-	
-		groupSelect = _select;
-	
-		for(var i=0; i<ds_list_size(groupUI[groupSelect]); i++)
-		{
-			UISetActive(groupUI[groupSelect][| i], true);
-		}
-	
-		MenuControllerEnableButtons(_enable);
-	
-		menuSelect[_select] = 0;
-		
-		if(_select == MenuGroup.Quit)
-			menuSelect[_select] = 1;
-	}
-}
-
 ///@function MenuControllerEnableButtons(enable)
 
 function MenuControllerEnableButtons(_enable)
 {
-	for(var i=0; i<ds_list_size(MainMenuController.buttons); i++)
+	for(var i=0; i<ds_list_size(buttons); i++)
 	{
-		MainMenuController.buttons[| i].enabled = _enable;
+		buttons[| i].enabled = _enable;
 	}
 }
 
-///@function MenuControllerScroll(group, select)
+///@function MenuControllerHighlight()
 
-function MenuControllerScroll(_group, _select)
+function MenuControllerHighlight()
 {
-	with(MainMenuController)
+
+	for(var i=0; i<ds_list_size(groupUI); i++)
 	{
-		for(var i=0; i<ds_list_size(groupUI[_group]); i++)
+		var _color = defaultColor;
+		if(i == selection)
+			_color = selectColor;
+		UISetColor(groupUI[| i], _color);
+	}
+}
+
+///@function MenuControllerUpdateMain(input)
+
+function MenuControllerUpdateMain(_input)
+{
+	var _str = "";
+	for(var i=0; i<ds_list_size(buttons); i++)
+	{
+		if(buttons[| i].isSelected)
 		{
-			var _color = defaultColor;
-			if(i == _select)
-				_color = selectColor;
-			UISetColor(groupUI[_group][| i], _color);
+			_str = description[i];
+			break;
 		}
+	}
+	
+	UITextSet(groupUI[| 0], _str);
+}
+
+///@function MenuControllerUpdateLocal(input)
+
+function MenuControllerUpdateLocal(_input)
+{
+	selection = ClampScroll(selection + _input.y, 0, 3);
+	
+	MenuControllerHighlight();
+	
+	if(selection == 0)
+		gameModeSelect = ClampScroll(gameModeSelect + _input.x, 1, GM.count - 1);
+	else if(selection == 1)
+		stageSelect = ClampScroll(stageSelect + _input.x, 0, GameStage.count - 1);
+	else if(selection == 2)
+		difficultySelect = ClampScroll(difficultySelect + _input.x, 0, GameDifficulty.count - 1);
+		
+	if(InputGetButtonDown(0, Button.Confirm))
+	{
+		global.selectedGameMode = gameModeSelect;
+		global.selectedStage = stageSelect;
+		global.difficulty = difficultySelect;
+		global.playerAmount = 4;
+		RoomGoto(rm_PlayerSetUp);
+	}
+	else if(InputGetButtonDown(0, Button.Cancel))
+	{
+		MenuControllerCreateMain();
+	}
+}
+
+///@function MenuControllerUpdateQuit(input)
+
+function MenuControllerUpdateQuit(_input)
+{
+	selection = ClampScroll(selection + _input.y, 1, 2);
+	
+	MenuControllerHighlight();
+	
+	if(InputGetButtonDown(0, Button.Confirm))
+	{
+		if(selection == 1)
+		{
+			MenuControllerCreateMain();
+		}
+		else
+			game_end();
+	}
+	else if(InputGetButtonDown(0, Button.Cancel))
+	{
+		MenuControllerCreateMain();
 	}
 }

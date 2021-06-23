@@ -115,6 +115,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"069d93ba-b46c-4b13-b77f-f6d0d410cdc0","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Creeper",
     "path": "folders/Sprites/Zombies/Creeper.yy",

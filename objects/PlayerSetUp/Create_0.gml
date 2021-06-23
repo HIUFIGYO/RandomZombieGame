@@ -17,23 +17,3 @@ for(var i=0; i<4; i++)
 	
 	PlayerSetUpCreateEnter(i);
 }
-
-var doink = new Profile();
-
-doink.Randomize();
-
-doink.Save();
-
-
-doink = new Profile();
-doink.name = "Riley";
-
-doink.Randomize();
-
-doink.Save();
-
-doink = new Profile();
-doink.name = "Bman";
-doink.Randomize();
-
-doink.Save();

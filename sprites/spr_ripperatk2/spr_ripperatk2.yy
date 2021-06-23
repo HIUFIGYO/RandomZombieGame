@@ -115,6 +115,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7cb8eb56-5b2d-4b6a-b00b-b72c8cd6a290","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Ripper",
     "path": "folders/Sprites/Zombies/Ripper.yy",

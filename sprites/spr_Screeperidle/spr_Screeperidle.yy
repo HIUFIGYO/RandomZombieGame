@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b5bcc3e8-b551-49c2-981e-196707cd5999","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "StrayCreeper",
     "path": "folders/Sprites/Zombies/Creeper/StrayCreeper.yy",

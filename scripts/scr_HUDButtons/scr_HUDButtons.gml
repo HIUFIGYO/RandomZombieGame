@@ -2,14 +2,20 @@
 
 function OnClickSurviveLocal()
 {
-	MenuControllerSelect(MenuGroup.Local, false);
-	MenuControllerScroll(MenuGroup.Local, 0);
+	with(MainMenuController)
+	{
+		MenuControllerEnableButtons(false);
+		MenuControllerCreateLocal();
+	}
 }
 
 ///@function OnClickQuit()
 
 function OnClickQuit()
 {
-	MenuControllerSelect(MenuGroup.Quit, false);
-	MenuControllerScroll(MenuGroup.Quit, 1);
+	with(MainMenuController)
+	{
+		MenuControllerEnableButtons(false);
+		MenuControllerCreateQuit();
+	}
 }

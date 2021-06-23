@@ -111,6 +111,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7fa9155a-bf5c-4bd3-a57b-fcf2b8573655","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Grapple",
     "path": "folders/Sprites/Zombies/Grapple.yy",

@@ -119,6 +119,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bbfa6a87-3c0b-4c4c-bb50-a025ba7ef093","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Spewer",
     "path": "folders/Sprites/Zombies/Spewer.yy",
