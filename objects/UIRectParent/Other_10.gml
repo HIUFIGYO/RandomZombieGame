@@ -11,11 +11,10 @@ else
 {
 	autoPos = new Vector2(0, 0);
 	autoSize = new Vector2(1, 1);
-}
-
-if(drawTo == UIDrawTo.ViewPort or drawTo == UIDrawTo.ViewPortRoom)
-{
-	autoSize.Set(view_wport[drawView] / Window.width, view_hport[drawView] / Window.height);
+	if(drawTo == UIDrawTo.ViewPort or drawTo == UIDrawTo.ViewPortRoom)
+	{
+		autoSize.Set(view_wport[drawView] / Window.width, view_hport[drawView] / Window.height);
+	}
 }
 
 //auto align
@@ -68,6 +67,7 @@ if(ds_list_size(children) > 0)
 {
 	for(var i=0; i<ds_list_size(children); i++)
 	{
-		UIDirty(children[| i]);
+		with(children[| i])
+			event_perform(ev_other, ev_user0);
 	}
 }

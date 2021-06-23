@@ -7,6 +7,55 @@ enum SetUpScreen
 	Color
 }
 
+///@function PlayerSetUpKeyboardControl()
+
+function PlayerSetUpKeyboardControl()
+{
+	if(!isNaming)
+		return;
+		
+	if(keyboard_check_pressed(vk_enter))
+	{
+		isNaming = false;
+		profile[nameIndex].name = nameString;
+		return;
+	}
+	
+	if(keyboard_check_pressed(vk_backspace))
+	{
+		nameString = string_copy(nameString, 0, string_length(nameString) - 1);
+		return;
+	}
+	
+	if(string_length(nameString) >= maxCharacters)
+		return;
+		
+	if(keyboard_check_pressed(vk_space))
+	{
+		nameString += " ";
+		return;
+	}
+	
+	if(!keyboard_check_pressed(vk_anykey))
+		return;
+		
+	var _key = keyboard_lastkey;
+	
+	if(_key >= ord("A") and _key <= ord("Z"))
+	{
+		var offset = 0;
+		if(keyboard_check(vk_shift))
+			offset = 32;
+			
+		nameString += chr(_key + offset);
+	}
+	
+	if(_key >= ord("0") and _key <= ord("9"))
+	{
+		nameString += chr(_key);
+	}
+}
+
 ///@function PlayerSetUpHighlight(index)
 
 function PlayerSetUpHighlight(_index)
@@ -126,7 +175,12 @@ function PlayerSetUpUpdateCharacter(i, _input)
 	{
 		if(selection[i] == 0)//name
 		{
-			//edit name
+			if(!isNaming)
+			{
+				isNaming = true;
+				nameString = profile[i].name;
+				nameIndex = i;
+			}
 		}
 		else if(selection[i] == 5)//colors
 		{
@@ -154,6 +208,7 @@ function PlayerSetUpUpdateCharacter(i, _input)
 			{
 				startGame = true;
 				global.playerAmount = playerAmount;
+				UISetVisible(countDownUI, true);
 			}
 		}
 		selection[i] = 0;

@@ -1,14 +1,22 @@
-if(startGame and countDown > 0)
+if(startGame)
 {
+	if(countDown <= 0)
+		return;
+	
+	UITextSet(countDownUI, string(ceil(countDown)));
+	
 	countDown -= DeltaTimeSecond();
 	
 	if(countDown <= 0)
 	{
 		countDown = 0;
+		UITextSet(countDownUI, "Prepare Yourself");
 		RoomGoto(rm_stage01);
 	}
 	return;
 }
+
+PlayerSetUpKeyboardControl();
 
 var i;
 
@@ -16,6 +24,9 @@ if(playerAmount < 4)
 {
 	for(var controllerSlot=0; controllerSlot<5; controllerSlot++)
 	{
+		if(controllerSlot == 0 and isNaming)
+			continue;
+		
 		var checkController = false;
 		for(i=0; i<4; i++)
 		{
@@ -47,6 +58,9 @@ if(playerAmount < 4)
 for(i=0; i<4; i++)
 {
 	if(playerIndex[i] == noone)
+		continue;
+		
+	if(isNaming and global.playerInput == Controller.Keyboard)
 		continue;
 	
 	var _input = new Vector2(

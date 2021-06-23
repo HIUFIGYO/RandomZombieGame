@@ -19,7 +19,14 @@ for(var i=0; i<4; i++)
 	PlayerSetUpCreateEnter(i);
 }
 
+isNaming = false;
+nameString = "";
+nameIndex = 0;
+maxCharacters = 12;
+
 playerIndex[0] = noone;
 playerIndex[1] = noone;
 playerIndex[2] = noone;
 playerIndex[3] = noone;
+
+alarm[0] = 5;

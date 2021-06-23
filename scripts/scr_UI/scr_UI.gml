@@ -237,6 +237,13 @@ function UISetAlign(_UI, _alignH, _alignV)
 	_UI.alignFlag = true;
 }
 
+///@function UISetVisible(UI, visible)
+
+function UISetVisible(_UI, _visible)
+{
+	_UI.visible = _visible;
+}
+
 ///@function UITextSet(UI, text)
 
 function UITextSet(_UI, _text)
@@ -257,6 +264,13 @@ function UITextSetAlign(_UI, _hAlign, _vAlign)
 function UITextSetLineSep(_UI, _lineSep)
 {
 	_UI.lineSeperation = _lineSep;
+}
+
+///@function UITextSetFont(UI, font)
+
+function UITextSetFont(_UI, _font)
+{
+	_UI.font = _font;
 }
 
 ///@function UIImageSetSprite(UI, sprite, subImage, stretched)
