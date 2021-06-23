@@ -1,10 +1,27 @@
-if(isChangingRoom)
+if(!isChangingRoom)
+	return;
+
+if(!window_has_focus())
+	return;
+	
+if(fadeOut)
 {
-	if(window_has_focus())
+	fader += DeltaTimeSecond();
+		
+	if(fader >= fadeTime)
 	{
-		isChangingRoom = false;
+		fadeOut = false;
 		if(scene != noone)
 			room_goto(scene);
 		scene = noone;
+	}
+}
+else
+{
+	fader -= DeltaTimeSecond();
+	
+	if(fader <= 0)
+	{
+		isChangingRoom = false;
 	}
 }
