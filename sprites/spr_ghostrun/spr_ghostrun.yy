@@ -122,7 +122,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Ghost",
-    "path": "folders/Sprites/Zombies/Ghost.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl2/Ghost.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ghostrun",

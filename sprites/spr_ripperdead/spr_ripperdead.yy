@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Ripper",
-    "path": "folders/Sprites/Zombies/Ripper.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl5/Ripper.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_ripperdead",

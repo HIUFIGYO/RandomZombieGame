@@ -10,12 +10,14 @@ spriteGibs = spr_twitchergibs;
 
 grav = 0.881;
 damage = SetStat(2, 5, 9, 14);
+structureDamage = 5;
 hp = SetStat(10, 12, 14, 18);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 bounty = 50 * (SetStat(1.2, 1, 0.9, 0.8));
 maxBounty = bounty;
 attackRange = 4;
+attackSpeed = 0.5;
 
 dodgeUsed = false;
 dodgeCooldownTime = SetStat(2.5, 2, 1.5, 1);

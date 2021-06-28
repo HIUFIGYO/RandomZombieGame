@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Blade",
-    "path": "folders/Sprites/Zombies/Blade.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl4/Blade.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_bladeidle",

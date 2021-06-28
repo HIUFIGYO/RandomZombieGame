@@ -122,7 +122,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Rabid",
-    "path": "folders/Sprites/Zombies/Rabid.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl1/Rabid.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_rabidrun",

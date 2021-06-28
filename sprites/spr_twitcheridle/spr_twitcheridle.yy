@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Twitcher",
-    "path": "folders/Sprites/Zombies/Twitcher.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl3/Twitcher.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_twitcheridle",

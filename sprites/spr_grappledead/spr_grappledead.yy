@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Grapple",
-    "path": "folders/Sprites/Zombies/Grapple.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl2/Grapple.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_grappledead",

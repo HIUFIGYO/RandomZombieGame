@@ -15,7 +15,7 @@ if(sprite_index == spriteAttack[0] or sprite_index == spriteAttack[1])
 	
 	if(barricadeID != noone and instance_exists(barricadeID))
 	{
-		barricadeID.hp -= damage * structureBonusDamage;
+		barricadeID.hp -= structureDamage * structureBonusDamage;
 		if(barricadeID.hp <= 0)
 		{
 			barricadeID.hp = 0;

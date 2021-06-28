@@ -128,7 +128,7 @@ function ZombieAttack()
 		if(distance_to_object(target) <= attackRange or barricadeID != noone)
 		{
 			isAttacking = true;
-			image_speed  = 0.5;
+			image_speed  = attackSpeed;
 			var index = 0;
 			if(spriteAttack[1] != noone)
 				index = irandom(1);

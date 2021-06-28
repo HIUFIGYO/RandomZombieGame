@@ -94,7 +94,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Bio",
-    "path": "folders/Sprites/Zombies/Bio.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl4/Bio.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_bioatk1",

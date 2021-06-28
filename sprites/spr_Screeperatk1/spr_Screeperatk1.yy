@@ -118,7 +118,7 @@
   "nineSlice": null,
   "parent": {
     "name": "StrayCreeper",
-    "path": "folders/Sprites/Zombies/Creeper/StrayCreeper.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl4/StrayCreeper.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Screeperatk1",

@@ -2,6 +2,7 @@ event_inherited();
 
 moveSpeed = 20;
 damage = SetStat(1, 2, 4, 7);
+structureDamage = 2;
 grav = 0;
 
 image_speed = 0;

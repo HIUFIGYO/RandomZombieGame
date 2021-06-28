@@ -13,5 +13,5 @@ if(other.playerID.meleeWeapon == Weapon.Knife4 and random(1) <= 0.35)
 	DebuffApply(id, DeBuff.Ignite);
 }
 
-DamagePlayer(id, _damage * SetStat(0.5, 1, 2, 4), "FriendlyFire", other.playerID.name);
+DamagePlayer(id, _damage * SetStat(0.5, 1, 1.5, 2), "FriendlyFire", other.playerID.name);
 GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) /2, false, image_xscale);

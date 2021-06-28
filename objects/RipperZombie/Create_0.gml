@@ -14,12 +14,14 @@ spriteDead = spr_ripperdead;
 spriteGibs = spr_rippergibs;
 
 damage = SetStat(20, 30, 40, 50);
+structureDamage = 30;
 hp = SetStat(50, 60, 70 , 90) * (1 + ((global.playerAmount - 1) * 0.4));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4.5);
 bounty = (500 * (SetStat(1.2, 1, 0.9, 0.8))) * (1+ ((global.playerAmount - 1) * 0.4));
 maxBounty = bounty;
 attackRange = 16;
+attackSpeed = 0.4;
 
 specialUsed = false;
 specialCooldown = 0;

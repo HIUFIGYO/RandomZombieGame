@@ -15,7 +15,7 @@ function BursterSpikeCollideBarricade(_barricade)
 	if(!_barricade.canCollideZombie)
 		return;
 		
-	DamageSupport(_barricade, damage);
+	DamageSupport(_barricade, structureDamage);
 	instance_destroy();
 }
 
@@ -39,7 +39,7 @@ function InfernoFireCollideBarricade(_barricade)
 	if(!_barricade.canCollideZombie)
 		return;
 		
-	DamageSupport(_barricade, damage);
+	DamageSupport(_barricade, structureDamage);
 	instance_destroy();
 }
 
@@ -75,7 +75,7 @@ function SpewerExplosionCollideBarricade(_barricade)
 	if(!_barricade.canCollideZombie)
 		return;
 		
-	DamageSupport(_barricade, damage);
+	DamageSupport(_barricade, structureDamage);
 }
 
 ///@function SpewerExplosionCollideZombie(zombie)
@@ -113,6 +113,6 @@ function SpewerShotCollideBarricade(_barricade)
 	if(!_barricade.canCollideZombie)
 		return;
 		
-	DamageSupport(_barricade, damage);
+	DamageSupport(_barricade, structureDamage);
 	instance_destroy();
 }

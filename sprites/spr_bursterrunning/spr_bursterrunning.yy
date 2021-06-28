@@ -122,7 +122,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Burster",
-    "path": "folders/Sprites/Zombies/Burster.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl2/Burster.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_bursterrunning",

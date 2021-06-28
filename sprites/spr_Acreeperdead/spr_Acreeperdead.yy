@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "AlphaCreeper",
-    "path": "folders/Sprites/Zombies/Creeper/AlphaCreeper.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl5/CreeperClan/AlphaCreeper.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_Acreeperdead",

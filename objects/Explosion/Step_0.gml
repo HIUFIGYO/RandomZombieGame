@@ -105,7 +105,7 @@ for(var i=0; i<count; i++)
 		if(playerID != noone and CheckBuff(playerID, Buff.Damage) and _damage > 0)
 			_damage += DataBase.damageBuffExplosive;
 		
-		DamagePlayer(hits[| i], _damage * SetStat(0.5, 1, 2, 4), "Explosion");
+		DamagePlayer(hits[| i], _damage * SetStat(0.5, 1, 1.5, 2), "Explosion");
 
 		if(_damage > 0)
 			GameSprayBlood(_damage, x, y, false, 0);

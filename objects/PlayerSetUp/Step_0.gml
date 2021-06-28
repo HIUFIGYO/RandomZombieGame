@@ -12,6 +12,7 @@ if(startGame)
 		countDown = 0;
 		UITextSet(countDownUI, "Prepare Yourself");
 		RoomGoto(rm_stage01);
+		AudioChangeMode(AudioModeGame);
 	}
 	return;
 }

@@ -122,7 +122,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Creeper",
-    "path": "folders/Sprites/Zombies/Creeper.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl5/CreeperClan/Creeper.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_creeperrun",

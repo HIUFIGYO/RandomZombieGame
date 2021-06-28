@@ -27,7 +27,7 @@ function BulletCollidePlayer(_player)
 		if(weapon == Weapon.Drainer)
 			DebuffApply(_player, DeBuff.Bleed, playerID);
 				
-		DamagePlayer(_player, DataBaseGetWeapon(weapon, WeapStat.Damage) * SetStat(0.5, 1, 2, 4), "FriendlyFire", playerID.name);
+		DamagePlayer(_player, DataBaseGetWeapon(weapon, WeapStat.Damage) * SetStat(0.5, 1, 1.5, 2), "FriendlyFire", playerID.name);
 		GameSprayBlood(GameGetBloodAmount(), x, y, false, image_xscale);
 		return true;
 	}

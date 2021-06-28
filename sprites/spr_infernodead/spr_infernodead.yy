@@ -74,7 +74,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Inferno",
-    "path": "folders/Sprites/Zombies/Inferno.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl5/Inferno.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_infernodead",

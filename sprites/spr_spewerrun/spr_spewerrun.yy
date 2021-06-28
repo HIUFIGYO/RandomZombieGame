@@ -122,7 +122,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Spewer",
-    "path": "folders/Sprites/Zombies/Spewer.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl3/Spewer.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_spewerrun",

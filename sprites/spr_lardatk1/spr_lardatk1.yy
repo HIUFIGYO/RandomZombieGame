@@ -138,7 +138,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Lard",
-    "path": "folders/Sprites/Zombies/Lard.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl1/Lard.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_lardatk1",

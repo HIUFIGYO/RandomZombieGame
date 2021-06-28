@@ -118,7 +118,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Limper",
-    "path": "folders/Sprites/Zombies/Limper.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl1/Limper.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_limperatk1",

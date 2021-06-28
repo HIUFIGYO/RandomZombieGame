@@ -7,12 +7,14 @@ damage = 1;
 bounty = 25;
 maxBounty = 25;
 acid = false;
+structureDamage = 1;
 
 isDead = false;
 fadeOut = 0;
 fadeOutTime = 150;
 isAttacking = false;
 attackRange = 1;
+attackSpeed = 0.5;
 
 
 grav = 0.981;

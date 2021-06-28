@@ -90,7 +90,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Injector",
-    "path": "folders/Sprites/Zombies/Injector.yy",
+    "path": "folders/Sprites/Zombies/ThreatLvl3/Injector.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_injectorGrabEnd",
