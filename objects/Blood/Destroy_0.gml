@@ -1,4 +1,4 @@
 if(dontDraw)
-	exit;
+	return;
 
 GameBloodGrinderDrawSelf(id);

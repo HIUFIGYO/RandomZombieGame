@@ -1,4 +1,4 @@
-if(GameManager.gamePaused)
+if(GamePaused())
 	return;
 
 PlayerInvincibilityTimer();

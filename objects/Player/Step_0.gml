@@ -1,4 +1,4 @@
-if(GameManager.gamePaused)
+if(GamePaused())
 	return;
 
 var xInput = (InputPlayerGetButton(player_inputID, Button.Right) - InputPlayerGetButton(player_inputID, Button.Left));

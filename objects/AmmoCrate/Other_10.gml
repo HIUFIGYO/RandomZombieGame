@@ -1,6 +1,6 @@
 /// @description OnUse
 if(uses <= 0)
-	exit;
+	return;
 
 event_perform(ev_other, ev_user1);
 lastPlayerUse = noone;

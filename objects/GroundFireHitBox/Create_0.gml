@@ -1,9 +1,7 @@
 event_inherited();
 
-alarm[0] = 3 * 60; // seconds * fps
-
-fadeOutTime = 2 * 60; //seconds * fps
-fadeOut = fadeOutTime;
+fadeOutTime = 2; //seconds
+fadeOut = 5;
 
 canPush = false;
 

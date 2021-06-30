@@ -10,6 +10,7 @@ if(lastPlayerUse.grenadeType != GrenadeType.BHBomber and lastPlayerUse.grenadeAm
 
 if(DataBaseGetWeapon(lastPlayerUse.weapon[0], WeapStat.Tier) == Tier.Four)
 {
+	lastPlayerUse.reloadTimer[0] = 0;
 	if(lastPlayerUse.mag[0] < GetMaxMag(lastPlayerUse, 0))
 	{
 		lastPlayerUse.mag[0] = GetMaxMag(lastPlayerUse, 0);
@@ -24,6 +25,7 @@ if(DataBaseGetWeapon(lastPlayerUse.weapon[0], WeapStat.Tier) == Tier.Four)
 
 if(DataBaseGetWeapon(lastPlayerUse.weapon[1], WeapStat.Tier) == Tier.Four)
 {
+	lastPlayerUse.reloadTimer[1] = 0;
 	if(lastPlayerUse.mag[1] < GetMaxMag(lastPlayerUse, 1))
 	{
 		lastPlayerUse.mag[1] = GetMaxMag(lastPlayerUse, 1);

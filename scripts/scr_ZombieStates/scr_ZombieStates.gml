@@ -40,6 +40,7 @@ function ZombieStateDefault()
 
 function ZombieStateBehaviour()
 {
+	UpdateDebuffs(id, false);
 	ZombieFindTarget();
 	ZombieHealthDisplayTimer();
 	ZombieAddVelocity();
@@ -52,6 +53,7 @@ function ZombieStateBehaviour()
 
 function ZombieStateVoid()
 {
+	UpdateDebuffs(id, false);
 	ZombieHealthDisplayTimer();
 	
 	if(xSpeed != 0 and instance_place(x, y+1, BlockParent))
@@ -275,6 +277,7 @@ function ZombieStateTwitcherPin()
 
 function ZombieStateCreeper()
 {
+	UpdateDebuffs(id, false);
 	//Timer
 	if(switchTimer > 0)
 	{

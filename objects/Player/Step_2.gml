@@ -1,6 +1,6 @@
 /// @description Paused
 
-if(!GameManager.gamePaused)
+if(!GamePaused())
 	return;
 	
 x = pauseX;
