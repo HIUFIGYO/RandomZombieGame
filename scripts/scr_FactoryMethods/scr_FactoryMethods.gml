@@ -127,7 +127,7 @@ function CreateZombieGiblet(_zombie)
 {
 	var index = 0;
 	
-	_zombie.image_alpha = 0;
+	_zombie.visible = false;
 	
 	repeat(6)
 	{

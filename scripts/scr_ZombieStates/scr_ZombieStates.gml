@@ -77,6 +77,8 @@ function ZombieStatePause()
 function ZombieStateDead()
 {
 	image_speed = 0;
+	sprite_index = spriteDead;
+	color = c_white;
 	ZombieFadeOut();
 	ZombieAddVelocity();
 	ZombieCheckCollision();
@@ -102,6 +104,9 @@ function ZombieStateInjector()
 	
 	if(!specialUsed and !isAttacking and target != noone and !target.isGrabbed and DistanceToObject(id, target, specialRange))
 	{
+		if(ZombieCheckLineOfSite())
+			return;
+		
 		specialUsed = true;
 		clawDraw = true;
 		sprite_index = spr_injectorGrabStartup;
@@ -197,12 +202,15 @@ function ZombieStateTwitcher()
 	{
 		if(target and DistanceToObject(id, target, pounceDistance))
 		{
+			if(ZombieCheckLineOfSite())
+			return;
+			
 			ZombieChangeState(ZombieStateTwitcherLeap);
 			pounceUsed = false;
 			image_speed = 0;
 			image_index = 0;
 			sprite_index = spr_twitcherpounce;
-			alarm[0] = 30;
+			leapTimer = 0.5;
 		}
 	}
 }

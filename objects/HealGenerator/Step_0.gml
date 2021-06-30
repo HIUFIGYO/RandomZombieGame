@@ -1,5 +1,8 @@
 event_inherited();
 
+if(GamePaused())
+	return;
+
 if(on and healingDuration > 0)
 {
 	healingDuration -= DeltaTimeSecond();
@@ -14,7 +17,7 @@ if(on and healingDuration > 0)
 	}
 	if(healingDuration <= 0)
 	{
-		alarm[0] = game_get_speed(gamespeed_fps) * fadeOutTime;
+		fade = fadeOutTime;
 	}
 	
 	tick += DeltaTimeSecond();
@@ -41,8 +44,11 @@ if(on and healingDuration > 0)
 
 if(fade > 0)
 {
-	image_alpha = fade;
 	fade -= DeltaTimeSecond();
+	
+	if(fade <= fadeOut)
+		image_alpha = fade / fadeOut;
+	
 	if(fade <= 0)
 		instance_destroy();
 }

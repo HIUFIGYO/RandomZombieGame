@@ -9,6 +9,7 @@ gameOverTime = 5;
 gameOverTimer = 0;
 
 specialSpawnCount = 0;
+specialSpawnTimer = 0;
 specialSpawnDelay = irandom_range(60, 180); // frames
 
 spawnHook = GameSpawnZombieOrder;

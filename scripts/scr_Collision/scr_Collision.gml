@@ -90,6 +90,9 @@ function CollisionCirleListTargets(_x, _y, _radius, _object, _targetsHit, hookFu
 	
 	for(i=0; i<count; i++)
 	{
+		if(!ds_exists(_targetsHit, ds_type_list))
+			break;
+		
 		var alreadyHit = false;
 		for(var hit=0; hit<ds_list_size(_targetsHit); hit++)
 		{
@@ -140,6 +143,9 @@ function CollisionRectListTargets(_x1, _y1, _x2, y2, _object, _targetsHit, hookF
 	
 	for(i=0; i<count; i++)
 	{
+		if(!ds_exists(_targetsHit, ds_type_list))
+			break;
+		
 		var alreadyHit = false;
 		for(var hit=0; hit<ds_list_size(_targetsHit); hit++)
 		{
@@ -190,6 +196,9 @@ function CollisionLineListTargets(_x1, _y1, _x2, _y2, _object, _targetsHit, hook
 	
 	for(i=0; i<count; i++)
 	{		
+		if(!ds_exists(_targetsHit, ds_type_list))
+			break;
+		
 		var alreadyHit = false;
 		for(var hit=0; hit<ds_list_size(_targetsHit); hit++)
 		{
@@ -240,6 +249,9 @@ function CollisionInstanceListTargets(_x, _y, _object, _targetsHit, hookFunction
 	
 	for(i=0; i<count; i++)
 	{
+		if(!ds_exists(_targetsHit, ds_type_list))
+			break;
+		
 		var alreadyHit = false;
 		for(var hit=0; hit<ds_list_size(_targetsHit); hit++)
 		{

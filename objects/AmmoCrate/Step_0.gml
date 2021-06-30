@@ -1,9 +1,15 @@
 event_inherited();
 
+if(GamePaused())
+	return;
+
 if(fade > 0)
 {
-	image_alpha = fade;
 	fade -= DeltaTimeSecond();
+	
+	if(fade <= fadeOut)
+		image_alpha = fade / fadeOut;
+	
 	if(fade <= 0)
 		instance_destroy();
 }

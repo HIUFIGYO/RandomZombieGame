@@ -2,8 +2,10 @@ event_inherited();
 
 image_angle += xSpeed;
 
-if(ySpeed > 0 and place_meeting(x, y+1, BlockParent))
+fadeOut -= DeltaTimeSecond();
+if(fadeOut <= fadeOutTime)
 {
-	GameBloodGrinderDrawSelf(id);
-	instance_destroy();
+	image_alpha = fadeOut / fadeOutTime;
+	if(fadeOut <= 0)
+		instance_destroy();
 }

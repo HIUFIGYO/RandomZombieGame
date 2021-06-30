@@ -34,3 +34,5 @@ pinButtonCount = 0;
 grabTarget = noone;
 
 currentState = ZombieStateTwitcher;
+
+leapTimer = 0;

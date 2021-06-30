@@ -15,7 +15,7 @@ if(totalKills mod 100 == 0)
 		specialSpawnCount++;
 		
 	if(specialSpawnCount > 0)
-		alarm[2] = specialSpawnDelay;
+		specialSpawnTimer = specialSpawnDelay;
 }
 
 spawnHook();

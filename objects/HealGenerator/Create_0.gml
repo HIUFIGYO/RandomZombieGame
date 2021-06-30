@@ -12,6 +12,7 @@ fluidColor1 = c_blue;
 fluidColor2 = c_aqua;
 
 fade = 0;
+fadeOut = 5;
 fadeOutTime = 120;
 
 damage = 2;

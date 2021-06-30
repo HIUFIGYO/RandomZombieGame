@@ -1,5 +1,5 @@
 if (isDead)
-	exit;
+	return;
 
 image_alpha = cloak;
 deCloakDamage = false;

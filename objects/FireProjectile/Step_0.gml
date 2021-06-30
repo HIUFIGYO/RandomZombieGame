@@ -1,5 +1,15 @@
 event_inherited();
 
+if(GamePaused())
+	return;
+	
+lifeTimer -= DeltaTimeSecond();
+if(lifeTimer <= 0)
+{
+	instance_destroy();
+	return;
+}
+
 if(PhysicsObjectGetCollision())
 	instance_destroy();
 	

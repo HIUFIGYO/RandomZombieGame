@@ -1,4 +1,4 @@
-alarm[0] = 5;
+lifeTimer = 5/60;
 
 targetsHit = ds_list_create();
 maxHits = 5;

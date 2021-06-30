@@ -5,4 +5,4 @@ targetsHit = ds_list_create();
 if(Debugger.isDebugging)
 	visible = true;
 
-alarm[0] = 4;
+lifeTimer = 4/60;

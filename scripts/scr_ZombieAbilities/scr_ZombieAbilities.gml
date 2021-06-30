@@ -1,3 +1,31 @@
+///@function ZombieCheckLineOfSite()
+
+function ZombieCheckLineOfSite()
+{
+	if(collision_line(x, y - 32, target.x, target.y - 32, BlockParent, false, true))
+		return true;
+			
+	var _noBarricades = true;
+	var _barricades = ds_list_create();
+	var _count = collision_line_list(x, y - 32, target.x, target.y - 32, Barricade, false, true, _barricades, false);
+		
+	for(var i=0; i<_count; i++)
+	{
+		if(_barricades[| i].canCollideZombie)
+		{
+			_noBarricades = false;
+			break;
+		}
+	}
+		
+	ds_list_destroy(_barricades);
+			
+	if(!_noBarricades)
+		return true;
+	
+	return false;
+}
+
 ///@function BioZombieRadiationAura()
 
 function BioZombieRadiationAura()
@@ -108,6 +136,9 @@ function RipperSawBladeAttack()
 		
 	if(!isAttacking and target != noone and distance_to_object(target) <= attackRange)
 	{
+		if(ZombieCheckLineOfSite())
+			return;
+		
 		isAttacking = true;
 		specialUsed = true;
 		sprite_index = spr_ripperatk3;
@@ -126,25 +157,7 @@ function SpewerArmCannon()
 	var range = sqr(x - target.x) + sqr(y - target.y);
 	if(range >= sqr(specialMinRange) and range <= sqr(specialMaxRange))
 	{	
-		if(collision_line(x, y - 32, target.x, target.y - 32, BlockParent, false, true))
-			return;
-			
-		var _noBarricades = true;
-		var _barricades = ds_list_create();
-		var _count = collision_line_list(x, y - 32, target.x, target.y - 32, Barricade, false, true, _barricades, false);
-		
-		for(var i=0; i<_count; i++)
-		{
-			if(_barricades[| i].canCollideZombie)
-			{
-				_noBarricades = false;
-				break;
-			}
-		}
-		
-		ds_list_destroy(_barricades);
-			
-		if(!_noBarricades)
+		if(ZombieCheckLineOfSite())
 			return;
 			
 		specialUsed = true;
@@ -181,25 +194,7 @@ function InfernoFlameThrower()
 	var range = sqr(x - target.x) + sqr(y - target.y);
 	if(range >= sqr(specialMinRange) and range <= sqr(specialMaxRange))
 	{
-		if(collision_line(x, y - 32, target.x, target.y - 32, BlockParent, false, true))
-			return;
-		
-		var _noBarricades = true;
-		var _barricades = ds_list_create();
-		var _count = collision_line_list(x, y - 32, target.x, target.y - 32, Barricade, false, true, _barricades, false);
-		
-		for(var i=0; i<_count; i++)
-		{
-			if(_barricades[| i].canCollideZombie)
-			{
-				_noBarricades = false;
-				break;
-			}
-		}
-		
-		ds_list_destroy(_barricades);
-		
-		if(!_noBarricades)
+		if(ZombieCheckLineOfSite())
 			return;
 			
 		specialAmmo = specialAmmoMax;

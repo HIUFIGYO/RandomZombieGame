@@ -10,5 +10,6 @@ pierce = 1;
 ignoreBuffs = false;
 
 targetsHit = ds_list_create();
+lastHit = noone;
 
 teslaRadius = 2 * global.worldUnit;//radius in world units;

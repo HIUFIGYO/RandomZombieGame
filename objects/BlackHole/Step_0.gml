@@ -1,6 +1,16 @@
 PartEmitStream(0, emitter, ParticleSystem.particleTypes[| 0]);
 PartEmitStream(0, emitter2, ParticleSystem.particleTypes[| 1]);
 
+if(GamePaused())
+	return;
+	
+lifeTimer -= DeltaTimeSecond();
+if(lifeTimer <= 0)
+{
+	instance_destroy();
+	return;
+}
+
 var hits = ds_list_create();
 
 var count = collision_circle_list(x, y, pullRadius, all, false, true, hits, false);

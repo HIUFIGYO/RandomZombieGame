@@ -75,7 +75,8 @@ function BulletCollideZombie(_zombie)
 				
 	if(!ignoreBuffs and CheckVialPositive(playerID, VialType.TradeOff))
 		_damage *= 2;
-				
+	
+	lastHit = _zombie;
 	DamageZombie(playerID, _zombie, _damage, ignoreBuffs);
 	
 	if(ignoreBuffs)
