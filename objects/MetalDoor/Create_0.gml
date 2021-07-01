@@ -1,6 +1,6 @@
 event_inherited();
 
-hp = 400;
+hp = 500;
 maxHp = hp;
 toggle = true;
 canCollidePlayer = true;

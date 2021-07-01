@@ -7,11 +7,11 @@ shop[Weapon.Knife, ShopKey.Description] = "Tier One Melee Weapon\nDamage: 3\nAtt
 shop[Weapon.Knife, ShopKey.Price] = 0;
 
 shop[Weapon.Pistol, ShopKey.Name] = "Standard Pistol";
-shop[Weapon.Pistol, ShopKey.Description] = "Tier One Secondary Weapon\nDamage: 1\nFirerate: 0.1\nAccuracy: 95%\nMag Size: 12\nMax Ammo: 168\nReload Time: 1.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA cheap and reliable side arm capable of dealing with weak singular enemies.";
+shop[Weapon.Pistol, ShopKey.Description] = "Tier One Secondary Weapon\nDamage: 1\nFirerate: 0.1\nAccuracy: 95%\nMag Size: 12\nMax Ammo: 192\nReload Time: 1.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA cheap and reliable side arm capable of dealing with weak singular enemies.";
 shop[Weapon.Pistol, ShopKey.Price] = 250;
 
 shop[Weapon.Rifle, ShopKey.Name] = "Standard Rifle";
-shop[Weapon.Rifle, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1\nFirerate: 0.1\nAccuracy: 95%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA versatile assault rifle most capable of dealing with large groups of weaker enemies.";
+shop[Weapon.Rifle, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1\nFirerate: 0.1\nAccuracy: 95%\nMag Size: 30\nMax Ammo: 330\nReload Time: 2 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA versatile assault rifle most capable of dealing with large groups of weaker enemies.";
 shop[Weapon.Rifle, ShopKey.Price] = 500;
 
 shop[Weapon.Shotgun, ShopKey.Name] = "Standard Shotgun";
@@ -23,11 +23,11 @@ shop[Weapon.Knife2, ShopKey.Description] = "Tier Two Melee Weapon\nDamage: 5\nAt
 shop[Weapon.Knife2, ShopKey.Price] = 750;
 
 shop[Weapon.Pistol2, ShopKey.Name] = "Advanced Pistol";
-shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 4\nFirerate: 0.15\nAccuracy: 95%\nMag Size: 8\nMax Ammo: 112\nReload Time: 2 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA strong sidearm that can dispatch most weak enemies in only a couple shots.";
+shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 4\nFirerate: 0.15\nAccuracy: 95%\nMag Size: 8\nMax Ammo: 128\nReload Time: 2 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA strong sidearm that can dispatch most weak enemies in only a couple shots.";
 shop[Weapon.Pistol2, ShopKey.Price] = 1000;
 
 shop[Weapon.Rifle2, ShopKey.Name] = "Advanced Rifle";
-shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.7\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
+shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.7\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 330\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
 shop[Weapon.Rifle2, ShopKey.Price] = 1250;
 
 shop[Weapon.Shotgun2, ShopKey.Name] = "Advanced Shotgun";
@@ -39,15 +39,15 @@ shop[Weapon.Knife3, ShopKey.Description] = "Tier Three Melee Weapon\nDamage: 7\n
 shop[Weapon.Knife3, ShopKey.Price] = 1500;
 
 shop[Weapon.Pistol3, ShopKey.Name] = "Super Pistol";
-shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 8\nFirerate: 0.3\nAccuracy: 92.5%\nMag Size: 6\nMax Ammo: 84\nReload Time: 0.8 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
+shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 8\nFirerate: 0.3\nAccuracy: 92.5%\nMag Size: 6\nMax Ammo: 96\nReload Time: 0.8 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
 shop[Weapon.Pistol3, ShopKey.Price] = 1750;
 
 shop[Weapon.Rifle3, ShopKey.Name] = "Super Rifle";
-shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2\nFirerate: 0.08\nAccuracy: 95%\nMag Size: 25\nMax Ammo: 275\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nThe best assault rifle we got for you, with excellent cround control and single target damage.";
+shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2\nFirerate: 0.08\nAccuracy: 95%\nMag Size: 25\nMax Ammo: 375\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nThe best assault rifle we got for you, with excellent cround control and single target damage.";
 shop[Weapon.Rifle3, ShopKey.Price] = 2000;
 
 shop[Weapon.Shotgun3, ShopKey.Name] = "Super Shotgun";
-shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*8\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 70\nReload Time: 0.7 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
+shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*8\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 77\nReload Time: 0.7 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
 shop[Weapon.Shotgun3, ShopKey.Price] = 2000;
 
 shop[Weapon.Flame, ShopKey.Name] = "Flame Thrower";
@@ -59,7 +59,7 @@ shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Im
 shop[Weapon.Rocket, ShopKey.Price] = 3000;
 
 shop[Weapon.Tesla, ShopKey.Name] = "Tesla Rifle";
-shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-2 Chain-Lightning-1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 250\nReload Time: 2.75 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
+shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-2 Chain-Lightning-1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 300\nReload Time: 2.75 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
 shop[Weapon.Tesla, ShopKey.Price] = 3000;
 
 shop[Weapon.Acid, ShopKey.Name] = "Bio Launcher";
@@ -75,11 +75,11 @@ shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 
 shop[Weapon.Purple, ShopKey.Price] = 4000;
 
 shop[Weapon.Drainer, ShopKey.Name] = "Undead Drainer";
-shop[Weapon.Drainer, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 4\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 4\nMax Ammo: 36\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\n100% chance to apply BLEED\nThis experimental weapon fires modified projectiles that attach to and drain all the blood from their victim. Best used on single targets.";
+shop[Weapon.Drainer, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 4\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 4\nMax Ammo: 44\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\n100% chance to apply BLEED\nThis experimental weapon fires modified projectiles that attach to and drain all the blood from their victim. Best used on single targets.";
 shop[Weapon.Drainer, ShopKey.Price] = 4500;
 
 shop[Weapon.BHDarker, ShopKey.Name] = "B.H. Darker";
-shop[Weapon.BHDarker, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 6\nFirerate: 0.5\nAccuracy: 100%\nMag Size: 5\nMax Ammo: 25\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nThis weapon is without description...";
+shop[Weapon.BHDarker, ShopKey.Description] = "Tier Five Primary Weapon\nDamage: 6\nFirerate: 0.5\nAccuracy: 100%\nMag Size: 5\nMax Ammo: 30\nReload Time: 4 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nThis weapon is without description...";
 shop[Weapon.BHDarker, ShopKey.Price] = 5000;
 
 //GRENADES
@@ -179,7 +179,7 @@ shop[VialType.Mimicry, ShopKey.Description] = "Enemies will not target you for 6
 shop[VialType.Mimicry, ShopKey.Price] = 700;
 
 shop[VialType.Survivalist, ShopKey.Name] = "Survivalist Vial";
-shop[VialType.Survivalist, ShopKey.Description] = "Become immune to all damage for 8 seconds\nDamage dealt is reduced by 75% for 16 seconds\nCooldown 120 seconds";
+shop[VialType.Survivalist, ShopKey.Description] = "Become immune to all damage for 8 seconds\nDamage dealt is reduced by 50% for 16 seconds\nCooldown 120 seconds";
 shop[VialType.Survivalist, ShopKey.Price] = 700;
 
 shop[VialType.Rapid, ShopKey.Name] = "Rapid Vial";
@@ -187,21 +187,21 @@ shop[VialType.Rapid, ShopKey.Description] = "Firerate and attack speed is double
 shop[VialType.Rapid, ShopKey.Price] = 1000;
 
 shop[VialType.TradeOff, ShopKey.Name] = "Trade-Off Vial";
-shop[VialType.TradeOff, ShopKey.Description] = "Damage dealt is doubled for 7 seconds\nDamage taken is quadrupled for 14 seconds\nCooldown 120 seconds";
+shop[VialType.TradeOff, ShopKey.Description] = "Damage dealt is doubled for 7 seconds\nDamage taken is also doubled for 14 seconds\nCooldown 120 seconds";
 shop[VialType.TradeOff, ShopKey.Price] = 1000;
 
 //SUPPORT ITEMS
 
 shop[SupportType.Barricade, ShopKey.Name] = "Barricade";
-shop[SupportType.Barricade, ShopKey.Description] = "Blocks oncoming enemies\n\nHealth: 250";
+shop[SupportType.Barricade, ShopKey.Description] = "Blocks oncoming enemies\n\nHealth: 300";
 shop[SupportType.Barricade, ShopKey.Price] = 375;
 
 shop[SupportType.AdvBarricade, ShopKey.Name] = "Advanced Barricade";
-shop[SupportType.AdvBarricade, ShopKey.Description] = "Blocks and damages oncoming enemies\n\nHealth 500\nDamage: 3";
+shop[SupportType.AdvBarricade, ShopKey.Description] = "Blocks and damages oncoming enemies\n\nHealth 600\nDamage: 3";
 shop[SupportType.AdvBarricade, ShopKey.Price] = 750;
 
 shop[SupportType.Turret, ShopKey.Name] = "Turret";
-shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\n\nHealth: 375\nDamage: 1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nReload Time: 5 seconds";
+shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\n\nHealth: 450\nDamage: 1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nReload Time: 5 seconds";
 shop[SupportType.Turret, ShopKey.Price] = 1500;
 
 shop[SupportType.HealGenerator, ShopKey.Name] = "Heal Generator";

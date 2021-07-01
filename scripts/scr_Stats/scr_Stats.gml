@@ -72,7 +72,7 @@ function DamagePlayer(_player, _damage, _tag, _zombieTag)
 	}
 	
 	if(CheckVialNegative(_player, VialType.TradeOff))
-		_damage *= 4;
+		_damage *= 2;
 		
 	if(CheckDebuff(_player, DeBuff.Radiation))
 		_damage *= DataBase.deBuffPlayerDamageTaken;
@@ -147,7 +147,7 @@ function DamagePlayerHealth(_player, _damage, _tag, _zombieTag)
 		HUDCloseShop(_player);
 		
 	if(CheckVialNegative(_player, VialType.TradeOff))
-		_damage *= 4;
+		_damage *= 2;
 	
 	EndStatAdd(_player.playerID, EndStat.DamageTaken, _damage);
 	_player.hp -= _damage;

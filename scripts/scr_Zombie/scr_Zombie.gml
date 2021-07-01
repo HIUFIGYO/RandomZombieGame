@@ -44,7 +44,7 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 		
 			//penalties
 			if(CheckVialNegative(_playerID, VialType.Survivalist))
-				_damage *= 0.25;
+				_damage *= 0.5;
 				
 			if(CheckDebuff(_zombie, DeBuff.Radiation))
 				_damage *= DataBase.deBuffZombieDamageTaken;

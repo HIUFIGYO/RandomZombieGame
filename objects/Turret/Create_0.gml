@@ -1,6 +1,6 @@
 event_inherited();
 
-hp = 375;
+hp = 450;
 accuracy = 0.95;
 fireRate = 0.20;
 fireTimer = fireRate;
