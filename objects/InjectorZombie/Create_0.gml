@@ -10,7 +10,7 @@ spriteGibs = spr_injectorgibs;
 
 damage = SetStat(4, 9, 15, 22);
 structureDamage = 9;
-hp = SetStat(12, 15, 18, 24);
+hp = SetStat(10, 12, 14, 18);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 bounty = 60 * (SetStat(1.2, 1, 0.9, 0.8));
@@ -20,14 +20,14 @@ attackSpeed = 0.5;
 
 specialUsed = false;
 specialCooldown = 0;
-specialCooldownTime = SetStat(12, 10, 8, 6);
-specialRange = SetStat(128, 128, 160, 192);
+specialCooldownTime = SetStat(10, 6, 8, 6);
+specialRange = SetStat(128, 160, 160, 192);
 
 clawOffset = 10;
 clawPos = clawOffset;
-clawSpeed = SetStat(4, 4, 5, 5);
-clawReturnSpeed = SetStat(1, 1, 1.5, 1.5);
-clawMaxDist = SetStat(128, 160, 192, 224);
+clawSpeed = SetStat(2.67, 3.2, 3.73, 4.8);
+clawReturnSpeed = SetStat(0.89, 1.067, 1.24, 1.6);
+clawMaxDist = SetStat(160, 192, 224, 288);
 clawCanGrab = true;
 clawDraw = false;
 
