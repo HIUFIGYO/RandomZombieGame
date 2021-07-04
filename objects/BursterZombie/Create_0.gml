@@ -19,3 +19,4 @@ attackSpeed = 0.4;
 
 
 specialUsed = false;
+startSpecial = false;

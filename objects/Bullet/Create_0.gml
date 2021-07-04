@@ -13,3 +13,5 @@ targetsHit = ds_list_create();
 lastHit = noone;
 
 teslaRadius = 2 * global.worldUnit;//radius in world units;
+
+color = c_yellow;

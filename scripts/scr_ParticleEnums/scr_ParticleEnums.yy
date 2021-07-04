@@ -6,7 +6,7 @@
     "path": "folders/Scripts/ParticleSystem.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_ParticleSystem",
+  "name": "scr_ParticleEnums",
   "tags": [],
   "resourceType": "GMScript",
 }

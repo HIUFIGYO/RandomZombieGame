@@ -57,7 +57,7 @@ function ZombieStateVoid()
 	ZombieHealthDisplayTimer();
 	
 	if(xSpeed != 0 and instance_place(x, y+1, BlockParent))
-			xSpeed = lerp(0, xSpeed, friction);
+		xSpeed = lerp(0, xSpeed, friction);
 	ySpeed += grav;
 	ySpeed = min(ySpeed, maxFallSpeed);
 	
@@ -133,7 +133,23 @@ function ZombieStateInjectorClaw()
 			return;
 		}
 		
-		var _player = collision_circle(x + clawPos*image_xscale, y, 3, Player, false, true);
+		var _collision = collision_circle(x + clawPos*image_xscale, y - 32, 3, BlockParent, false, true);
+		if(_collision)
+		{
+			clawCanGrab = false;
+			grabTarget = noone;
+			return;
+		}
+		
+		_collision = collision_circle(x + clawPos*image_xscale, y - 32, 3, Barricade, false, true);
+		if(_collision and BarricadeCanCollideZombie(_collision))
+		{
+			clawCanGrab = false;
+			grabTarget = noone;
+			return;
+		}
+		
+		var _player = collision_circle(x + clawPos*image_xscale, y - 32, 3, Player, false, true);
 		if(_player and !_player.isGrabbed)
 		{
 			clawCanGrab = false;
@@ -144,7 +160,7 @@ function ZombieStateInjectorClaw()
 	}
 	else
 	{
-		clawPos -= clawReturnSpeed;
+		clawPos -= grabTarget != noone ? clawReturnSpeed : clawSpeed;
 		
 		ZombiePinButtonMash();
 	

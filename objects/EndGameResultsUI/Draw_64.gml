@@ -40,9 +40,9 @@ for(var i=0; i<EndStat.count; i++)
 	
 	//draw stats
 	draw_set_halign(fa_center);
-	for(playerIndex=0; playerIndex<global.playerAmount; playerIndex++)
+	for(playerIndex=0; playerIndex<playerAmount; playerIndex++)
 	{
-		xx = ((displayWidth - sidePadding - (global.playerAmount * cellWidth)) + (cellWidth / 2)) + (playerIndex * cellWidth);
+		xx = ((displayWidth - sidePadding - (playerAmount * cellWidth)) + (cellWidth / 2)) + (playerIndex * cellWidth);
 		draw_set_color(dataHighest[# playerIndex, i] ? c_yellow : c_white);
 		draw_text(xx, yy, string(data[# playerIndex, i]));
 	}
@@ -51,9 +51,9 @@ for(var i=0; i<EndStat.count; i++)
 
 //draw vertical
 draw_set_halign(fa_center);
-for(i=0; i<global.playerAmount; i++)
+for(i=0; i<playerAmount; i++)
 {
-	xx = ((displayWidth - sidePadding - (global.playerAmount * cellWidth))) + (i * cellWidth);
+	xx = ((displayWidth - sidePadding - (playerAmount * cellWidth))) + (i * cellWidth);
 	yy = headerHeight - 64;
 	draw_set_color(c_white);
 	draw_text(xx + cellWidth / 2, yy, instance_find(Player, i).name);

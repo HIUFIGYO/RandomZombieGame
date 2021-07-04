@@ -143,8 +143,8 @@ function UpdateDebuffs(_id, _isPlayer)
 						DamagePlayer(_id, _id.deBuffStack[i], _tag);
 					else
 					{
-						//if(deBuffPlayerID != noone)
 						DamageZombie(deBuffPlayerID, _id, _id.deBuffStack[i], true);
+						GameSprayBlood(GameGetBloodAmount(), x, y - (bbox_bottom - bbox_top) / 2, _id.acid, 0);
 					}
 					break;
 					

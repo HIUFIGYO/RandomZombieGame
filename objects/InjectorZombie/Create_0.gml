@@ -20,7 +20,7 @@ attackSpeed = 0.5;
 
 specialUsed = false;
 specialCooldown = 0;
-specialCooldownTime = SetStat(10, 6, 8, 6);
+specialCooldownTime = SetStat(10, 8, 6, 5);
 specialRange = SetStat(128, 160, 160, 192);
 
 clawOffset = 10;

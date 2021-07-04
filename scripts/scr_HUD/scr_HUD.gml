@@ -88,6 +88,8 @@ function EndStatAdd(_player, _endStat, _value)
 
 function EndGameTrigger()
 {
+	GameManager.drawSplitScreen = SplitScreen1;
+	
 	var inst = instance_find(EndGameResultsUI, 0);
 	if(inst)
 	{

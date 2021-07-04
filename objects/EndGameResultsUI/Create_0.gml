@@ -1,5 +1,7 @@
 gameOver = false;
 
+playerAmount = global.playerAmount;
+
 resultIndex = 0;
 gameMode = GM.Skirmish;
 totalKills = 0;
@@ -10,7 +12,7 @@ footerHeight = 320;
 cellWidth = 128;
 sidePadding = 320;
 
-data = ds_grid_create(global.playerAmount, EndStat.count);
+data = ds_grid_create(playerAmount, EndStat.count);
 dataHighest = noone;
 
 endStatText[0] = "Kills";

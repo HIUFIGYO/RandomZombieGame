@@ -153,7 +153,7 @@ shop[Buff.Demo, ShopKey.Price] = 1100;
 //HEALING ITEMS
 
 shop[HealingType.Medicine, ShopKey.Name] = "Medicine";
-shop[HealingType.Medicine, ShopKey.Description] = "Heals: 35 Health\nUses: 1\nCures: Bleed and Poison";
+shop[HealingType.Medicine, ShopKey.Description] = "Heals: 35 Health\nUses: 1\nCures: Bleed, Poison and Radiation";
 shop[HealingType.Medicine, ShopKey.Price] = 200;
 
 shop[HealingType.Syringe, ShopKey.Name] = "Syringe";

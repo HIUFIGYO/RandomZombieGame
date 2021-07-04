@@ -76,7 +76,7 @@ deBuffCurable[DeBuff.Bleed] = true;
 //debuff poison
 deBuffStack[DeBuff.Poison] = false;
 deBuffDuration[DeBuff.Poison] = 120;
-deBuffCurable[DeBuff.Poison] = true;
+deBuffCurable[DeBuff.Poison] = false;
 
 deBuffDamageEasy = 33;
 deBuffDamageMed = 66;

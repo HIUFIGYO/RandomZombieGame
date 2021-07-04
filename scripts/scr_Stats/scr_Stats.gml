@@ -29,6 +29,7 @@ function HealDebuffs(_id, _healType)
 		case HealingType.Medicine:
 			_id.deBuff[DeBuff.Bleed] = false;
 			_id.deBuff[DeBuff.Poison] = false;
+			_id.deBuff[DeBuff.Radiation] = false;
 			break;
 			
 		case HealingType.Syringe:

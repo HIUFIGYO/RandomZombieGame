@@ -50,19 +50,20 @@ function ZombieAddVelocity()
 
 function ZombieAnimate()
 {
-	if(!isAttacking)
+	if(isAttacking)
+		return;
+
+	if(xSpeed != 0)
+		image_xscale = sign(xSpeed);
+	image_speed = min(moveSpeed * 0.2, 0.5);
+	if(xSpeed == 0)
 	{
-		if(xSpeed != 0)
-			image_xscale = sign(xSpeed);
-		image_speed = min(moveSpeed * 0.2, 0.5);
-		if(xSpeed == 0)
-		{
-			image_speed = 0;
-			sprite_index = spriteIdle;
-		}
-		else
-			sprite_index = spriteWalk;
+		image_speed = 0;
+		sprite_index = spriteIdle;
 	}
+	else
+		sprite_index = spriteWalk;
+
 }
 
 ///@function ZombieCheckCollision()

@@ -1,2 +1,1 @@
-PartDestroyEmitter(0, emitter);
-PartDestroyEmitter(0, emitter2);
+instance_destroy(effect);
