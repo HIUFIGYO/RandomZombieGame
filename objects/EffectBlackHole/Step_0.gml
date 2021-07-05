@@ -1,2 +1,2 @@
-PartEmitStream(PartType.BlackHoleBody, 1);
-PartEmitStream(PartType.BlackHoleParticles, 1);
+PartEmitStream(body, PartType.BlackHoleBody, 1);
+PartEmitStream(particles, PartType.BlackHoleParticles, 1);

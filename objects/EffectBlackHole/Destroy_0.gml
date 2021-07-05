@@ -1,0 +1,2 @@
+PartEmitterDestroy(body);
+PartEmitterDestroy(particles);
