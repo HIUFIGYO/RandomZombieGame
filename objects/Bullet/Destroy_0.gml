@@ -5,4 +5,9 @@ if(weapon == Weapon.Rocket)
 else if(weapon == Weapon.Acid)
 	CreateExplosion(id, playerID, ExplosionType.Acid);
 else if(weapon == Weapon.Tesla)
+{
+	instance_destroy(effect);
 	TeslaDealDamage();
+}
+else if(weapon == Weapon.Flame)
+	instance_destroy(effect);

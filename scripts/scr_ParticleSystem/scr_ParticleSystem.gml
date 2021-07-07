@@ -8,6 +8,10 @@
 	
 		PartDefineBlackHole();
 		PartDefineExplosion();
+		PartDefineFlameThrower();
+		PartDefineGroundFire();
+		PartDefineTeslaShot();
+		PartDefineShock();
 	}
 
 	///@function PartSystemInit()
@@ -53,12 +57,30 @@
 		distribution = _distribution;
 		part_emitter_region(ParticleSystem.particleSystem, emitter, xMin, xMax, yMin, yMax, shape, distribution);
 		
-		SetRegion = function(_xMin, _xMax, _yMin, _yMax)
+		static SetRegion = function(_xMin, _xMax, _yMin, _yMax)
 		{
 			xMin = _xMin;
 			xMax = _xMax;
 			yMin = _yMin;
 			yMax = _yMax;
+			part_emitter_region(ParticleSystem.particleSystem, emitter, xMin, xMax, yMin, yMax, shape, distribution);
+		};
+		
+		static AddRegionSqr = function(_value)
+		{
+			xMin -= _value;
+			xMax += _value;
+			yMin -= _value;
+			yMax += _value;
+			part_emitter_region(ParticleSystem.particleSystem, emitter, xMin, xMax, yMin, yMax, shape, distribution);
+		};
+		
+		static TranslateRegion = function(_x, _y)
+		{
+			var sizeX = (xMax - xMin) / 2,
+				sizeY = (yMax - yMin) / 2;
+				
+			SetRegion(_x - sizeX, _x + sizeX, _y - sizeY, _y + sizeY);
 			part_emitter_region(ParticleSystem.particleSystem, emitter, xMin, xMax, yMin, yMax, shape, distribution);
 		};
 	}
@@ -78,13 +100,6 @@
 	{
 		part_emitter_destroy(ParticleSystem.particleSystem, emitterStruct.emitter);
 		delete emitterStruct;
-	}
-	
-	///@funtion PartEmitterSetRegion(emitter, xMin, xMax, yMin, yMax)
-	
-	function PartEmitterSetRegion(emitterStruct, xMin, xMax, yMin, yMax)
-	{
-		emitterStruct.SetRegion(xMin, xMax, yMin, yMax);
 	}
 
 	///@function PartEmitStream(emitter, partType, amount)
@@ -216,6 +231,243 @@
 		part_type_gravity(partType, 0.20, 90);
 	
 		ds_map_add(particleTypes, PartType.ExplosionSmoke, partType);
+	}
+	
+	///@function PartDefineFlameThrower()
+	
+
+function PartDefineFlameThrower()
+	{
+		var partType;
+		//Ball
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_sphere);
+		part_type_size(partType, 0.50, 0.50, 0, 0);
+		part_type_scale(partType, 0.75, 0.75);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 65535, 4235519, 255);
+		part_type_alpha3(partType, 1, 1, 1);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 2, 2);
+		part_type_speed(partType, 0, 0, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.FlameThrowerBall, partType);
+
+		//Beam
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_smoke);
+		part_type_size(partType, 0.50, 0.50, 0, 0.10);
+		part_type_scale(partType, 0.75, 0.75);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 8454143, 65535, 4227327);
+		part_type_alpha3(partType, 1, 0.50, 0.20);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 7, 21);
+		part_type_speed(partType, 0, 0, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0.20, 90);
+		
+		ds_map_add(particleTypes, PartType.FlameThrowerBeam, partType);
+
+		//Spark
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_pixel);
+		part_type_size(partType, 1, 1, 0, 0.10);
+		part_type_scale(partType, 1, 1);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 8454143, 65535, 4227327);
+		part_type_alpha3(partType, 1, 1, 1);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 10, 10);
+		part_type_speed(partType, 5, 5, 0, 0);
+		part_type_direction(partType, 0, 180, 0, 0);
+		part_type_gravity(partType, 0.10, 90);
+		
+		ds_map_add(particleTypes, PartType.FlameThrowerSpark, partType);
+	}
+	
+	
+	///@function PartDefineGroundFire()
+	
+	function PartDefineGroundFire()
+	{
+		var partType;
+		//Flame
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_smoke);
+		part_type_size(partType, 0.25, 0.75, -0.01, 0);
+		part_type_scale(partType, 0.5, 0.5);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 8454143, 65535, 4227327);
+		part_type_alpha3(partType, 0.50, 1, 0.25);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 30, 40);
+		part_type_speed(partType, 2, 5, 0, 0);
+		part_type_direction(partType, 70, 110, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.GroundFireFlame, partType);
+
+		//FirePit
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_sphere);
+		part_type_size(partType, 0.50, 0.50, 0, 0.10);
+		part_type_scale(partType, 0.6, 0.6);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 16777215, 8454143, 65535);
+		part_type_alpha3(partType, 0.05, 0.05, 0.05);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 80, 80);
+		part_type_speed(partType, 0, 1, 0, 0);
+		part_type_direction(partType, 70, 110, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.GroundFireFirePit, partType);
+
+		//Smoke
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_cloud);
+		part_type_size(partType, 1, 1, 0, 0);
+		part_type_scale(partType, 0.5, 0.5);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 16777215, 16777215, 16777215);
+		part_type_alpha3(partType, 0.10, 0.10, 0.10);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 0, 120);
+		part_type_speed(partType, 1, 5, 0, 0);
+		part_type_direction(partType, 90, 90, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.GroundFireSmoke, partType);
+
+		//Spark
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_pixel);
+		part_type_size(partType, 0.50, 0.50, 0, 0.50);
+		part_type_scale(partType, 0.5, 0.5);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 8454143, 65535, 4227327);
+		part_type_alpha3(partType, 1, 1, 1);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 0, 80);
+		part_type_speed(partType, 5, 5, 0, 0);
+		part_type_direction(partType, 70, 110, 0, 0);
+		part_type_gravity(partType, 0.05, 270);
+		
+		ds_map_add(particleTypes, PartType.GroundFireSpark, partType);
+	}
+	
+	///@function PartDefineTeslaShot()
+
+	function PartDefineTeslaShot()
+	{
+		var partType;
+		//Electricity
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_line);
+		part_type_sprite(partType, spr_Zap, 1, 0, 0);
+		part_type_size(partType, 1, 1, 0, 0.50);
+		part_type_scale(partType, 0.75, 0.75);
+		part_type_orientation(partType, 0, 360, 0.50, 0.50, 0);
+		part_type_color3(partType, 16776960, 8404992, 16777215);
+		part_type_alpha3(partType, 1, 1, 1);
+		part_type_blend(partType, 1);
+		part_type_life(partType, 10, 20);
+		part_type_speed(partType, 1, 2, 0, 1);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.TeslaShotElectricity, partType);
+
+		//Spark
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_pixel);
+		part_type_size(partType, 1, 1, 0, 0);
+		part_type_scale(partType, 1, 1);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 16776960, 8404992, 16777215);
+		part_type_alpha3(partType, 1, 1, 1);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 5, 5);
+		part_type_speed(partType, 20, 40, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.TeslaShotSpark, partType);
+
+		//Trail
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_sphere);
+		part_type_size(partType, 0.50, 0.50, -0.50, 0.50);
+		part_type_scale(partType, 0.75, 0.75);
+		part_type_orientation(partType, 0, 360, 0, 0.50, 0);
+		part_type_color3(partType, 16777088, 16776960, 8404992);
+		part_type_alpha3(partType, 1, 1, 0);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 10, 20);
+		part_type_speed(partType, 0, 0, 0, 0.50);
+		part_type_direction(partType, 0, 360, 0, 0.50);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.TeslaShotTrail, partType);
+	}
+	
+	///@function PartDefineShock()
+	
+	function PartDefineShock()
+	{
+		var partType;
+		
+		//Shock
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_pixel);
+		part_type_sprite(partType, spr_Zap, 1, 0, 0);
+		part_type_size(partType, 1, 1, 0, 0.50);
+		part_type_scale(partType, 0.5, 0.5);
+		part_type_orientation(partType, 0, 360, 0, 0, 0);
+		part_type_color3(partType, 16776960, 8404992, 16777215);
+		part_type_alpha3(partType, 1, 1, 0.50);
+		part_type_blend(partType, 1);
+		part_type_life(partType, 15, 15);
+		part_type_speed(partType, 1, 2, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.ShockShock, partType);
+
+		//Spark1
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_spark);
+		part_type_size(partType, 0.50, 0.50, 0, 0);
+		part_type_scale(partType, 0.5, 0.5);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 16777088, 16776960, 8404992);
+		part_type_alpha3(partType, 1, 0.50, 0);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 10, 20);
+		part_type_speed(partType, 20, 20, 0, 0);
+		part_type_direction(partType, 31, 151, 0, 0);
+		part_type_gravity(partType, 1, 270);
+		
+		ds_map_add(particleTypes, PartType.ShockSpark1, partType);
+
+		//Spark2
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_pixel);
+		part_type_size(partType, 1, 1, 0, 0);
+		part_type_scale(partType, 1, 1);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 16776960, 8404992, 16777215);
+		part_type_alpha3(partType, 1, 1, 0);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 15, 30);
+		part_type_speed(partType, 20, 20, 0, 0);
+		part_type_direction(partType, 0, 180, 0, 0);
+		part_type_gravity(partType, 0.50, 270);
+		
+		ds_map_add(particleTypes, PartType.ShockSpark2, partType);
 	}
 
 #endregion

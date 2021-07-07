@@ -119,11 +119,11 @@ function TeslaDealDamage()
 	
 	for(var i=0; i<count; i++)
 	{
-		if(hits[| i] == lastHit)
+		if(IsDead(hits[| i]) or hits[| i] == lastHit)
 			continue;
 		
 		DamageZombie(playerID, hits[| i], DataBaseGetWeapon(Weapon.Tesla, WeapStat.Damage) / 2, false);
-		//CreateTelsaZappyEffect();
+		CreateEffect(hits[| i].x, hits[| i].y-32, EffectShock);
 	}
 	
 	ds_list_destroy(hits);

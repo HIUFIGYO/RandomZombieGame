@@ -87,6 +87,8 @@ function CreateBullet(_id, xx, yy, _weapon, flip, crouch)
 		inst.ySpeed = sin(bulletAngle * pi / 180) * choose(-1, 1);
 		inst.xPrevious = _id.x;
 		inst.yPrevious = _id.y;
+		with(inst)
+			event_perform(ev_other, ev_user0);
 	}
 }
 
@@ -140,4 +142,11 @@ function CreateZombieGiblet(_zombie)
 		if(index < 4)
 			index++;
 	}
+}
+
+///@function CreateEffect(x, y, effect)
+
+function CreateEffect(_x, _y, _effect)
+{
+	return instance_create_layer(_x, _y, GameManager.layerObject, _effect);
 }

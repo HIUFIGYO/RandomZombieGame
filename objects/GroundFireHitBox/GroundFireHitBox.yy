@@ -4,7 +4,7 @@
     "path": "sprites/spr_groundFireHitBox/spr_groundFireHitBox.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
