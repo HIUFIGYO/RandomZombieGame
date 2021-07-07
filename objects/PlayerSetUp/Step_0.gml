@@ -10,7 +10,9 @@ if(startGame)
 	if(countDown <= 0)
 	{
 		countDown = 0;
-		UITextSet(countDownUI, "Prepare Yourself");
+		var str = "Prepare Yourself";
+		UITextSet(countDownUI, str);
+		UISetSize(countDownUI, string_width(str), string_height(str));
 		RoomGoto(rm_stage01);
 		AudioChangeMode(AudioModeGame);
 	}
