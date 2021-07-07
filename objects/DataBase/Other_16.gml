@@ -4,11 +4,11 @@
 
 shop[Weapon.Knife, ShopKey.Name] = "Standard Melee";
 shop[Weapon.Knife, ShopKey.Description] = "Tier One Melee Weapon\nDamage: 3\nAttackSpeed: 0.25\nPenetration: 0\nA small knife provided free of charge to use only against the weakest of enemies.";
-shop[Weapon.Knife, ShopKey.Price] = 0;
+shop[Weapon.Knife, ShopKey.Price] = 100;
 
 shop[Weapon.Pistol, ShopKey.Name] = "Standard Pistol";
 shop[Weapon.Pistol, ShopKey.Description] = "Tier One Secondary Weapon\nDamage: 1\nFirerate: 0.1\nAccuracy: 95%\nMag Size: 12\nMax Ammo: 192\nReload Time: 1.5 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA cheap and reliable side arm capable of dealing with weak singular enemies.";
-shop[Weapon.Pistol, ShopKey.Price] = 250;
+shop[Weapon.Pistol, ShopKey.Price] = 200;
 
 shop[Weapon.Rifle, ShopKey.Name] = "Standard Rifle";
 shop[Weapon.Rifle, ShopKey.Description] = "Tier One Primary Weapon\nDamage: 1\nFirerate: 0.1\nAccuracy: 95%\nMag Size: 30\nMax Ammo: 330\nReload Time: 2 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA versatile assault rifle most capable of dealing with large groups of weaker enemies.";
@@ -20,55 +20,55 @@ shop[Weapon.Shotgun, ShopKey.Price] = 500;
 
 shop[Weapon.Knife2, ShopKey.Name] = "Advanced Melee";
 shop[Weapon.Knife2, ShopKey.Description] = "Tier Two Melee Weapon\nDamage: 6\nAttack Speed: 0.25\nPenetration: 1\nA machete that can deal with most weak enemies in a single strike and has improved cleave.";
-shop[Weapon.Knife2, ShopKey.Price] = 750;
+shop[Weapon.Knife2, ShopKey.Price] = 700;
 
 shop[Weapon.Pistol2, ShopKey.Name] = "Advanced Pistol";
-shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 4\nFirerate: 0.15\nAccuracy: 95%\nMag Size: 8\nMax Ammo: 128\nReload Time: 2 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA strong sidearm that can dispatch most weak enemies in only a couple shots.";
-shop[Weapon.Pistol2, ShopKey.Price] = 1000;
+shop[Weapon.Pistol2, ShopKey.Description] = "Tier Two Secondary Weapon\nDamage: 3\nFirerate: 0.15\nAccuracy: 95%\nMag Size: 8\nMax Ammo: 128\nReload Time: 2 Seconds\nPenetration: 0\nFire Mode: Semi-Auto\nA strong sidearm that can dispatch most weak enemies in only a couple shots.";
+shop[Weapon.Pistol2, ShopKey.Price] = 800;
 
 shop[Weapon.Rifle2, ShopKey.Name] = "Advanced Rifle";
-shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 2\nFirerate: 0.11\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 330\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
-shop[Weapon.Rifle2, ShopKey.Price] = 1250;
+shop[Weapon.Rifle2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 2\nFirerate: 0.12\nAccuracy: 90%\nMag Size: 30\nMax Ammo: 270\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nA slower but stronger assault rifle that excels at both single target and cround control damage.";
+shop[Weapon.Rifle2, ShopKey.Price] = 1100;
 
 shop[Weapon.Shotgun2, ShopKey.Name] = "Advanced Shotgun";
 shop[Weapon.Shotgun2, ShopKey.Description] = "Tier Two Primary Weapon\nDamage: 1.5*7\nFirerate: 0.2\nAccuracy: 75%\nMag Size: 2\nMax Ammo: 58\nReload Time: 1.75 Seconds\nPenetration: 1\nFire Mode: Semi-Auto\nA powerful but slow double-barreled shotgun that can clear an entire room of enemies quickly.";
-shop[Weapon.Shotgun2, ShopKey.Price] = 1250;
+shop[Weapon.Shotgun2, ShopKey.Price] = 1100;
 
 shop[Weapon.Knife3, ShopKey.Name] = "Super Melee";
 shop[Weapon.Knife3, ShopKey.Description] = "Tier Three Melee Weapon\nDamage: 9\nAttack Speed: 0.25\nPenetration: 2\nA sword with even better cleave and damage that can easily dispatch all weak and most moderate strengthened enemies.";
-shop[Weapon.Knife3, ShopKey.Price] = 1500;
+shop[Weapon.Knife3, ShopKey.Price] = 1400;
 
 shop[Weapon.Pistol3, ShopKey.Name] = "Super Pistol";
-shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 8\nFirerate: 0.3\nAccuracy: 92.5%\nMag Size: 6\nMax Ammo: 96\nReload Time: 0.8 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
-shop[Weapon.Pistol3, ShopKey.Price] = 1750;
+shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage: 6\nFirerate: 0.3\nAccuracy: 92.5%\nMag Size: 6\nMax Ammo: 96\nReload Time: 0.8 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nThe strongest pistol we have to offer, can clear a path and deal heavy damage to strong enemies, but be weary of your reload.";
+shop[Weapon.Pistol3, ShopKey.Price] = 1500;
 
 shop[Weapon.Rifle3, ShopKey.Name] = "Super Rifle";
-shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2.4\nFirerate: 0.08\nAccuracy: 95%\nMag Size: 25\nMax Ammo: 375\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nThe best assault rifle we got for you, with excellent cround control and single target damage.";
-shop[Weapon.Rifle3, ShopKey.Price] = 2000;
+shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2.4\nFirerate: 0.08\nAccuracy: 95%\nMag Size: 25\nMax Ammo: 350\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nThe best assault rifle we got for you, with excellent cround control and single target damage.";
+shop[Weapon.Rifle3, ShopKey.Price] = 1800;
 
 shop[Weapon.Shotgun3, ShopKey.Name] = "Super Shotgun";
-shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*8\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 77\nReload Time: 0.7 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
-shop[Weapon.Shotgun3, ShopKey.Price] = 2000;
+shop[Weapon.Shotgun3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 1*9\nFirerate: 0.25\nAccuracy: 80%\nMag Size: 7\nMax Ammo: 77\nReload Time: 0.7 Second per missing shot\nPenetration: 1\nFire Mode: Semi-Auto\nYou will never have to worry about being over run when you unload this semi-auto shotgun in a group of enemies, weak or strong.";
+shop[Weapon.Shotgun3, ShopKey.Price] = 1800;
 
 shop[Weapon.Flame, ShopKey.Name] = "Flame Thrower";
 shop[Weapon.Flame, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: 1\nFirerate: 0.1\nAccuracy: 88%\nMag Size: 50\nMax Ammo: 350\nReload Time: 3 Seconds\nPenetration: 1\nFire Mode: Full-Auto\n100% chance to apply IGNITE\nIf you like the smell of flesh burning then look no further than to buy this here Flame Thrower.";
-shop[Weapon.Flame, ShopKey.Price] = 2500;
+shop[Weapon.Flame, ShopKey.Price] = 2400;
 
 shop[Weapon.Rocket, ShopKey.Name] = "Rocket Launcher";
 shop[Weapon.Rocket, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-10 Explosion-20\nFirerate: 0.8\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 19\nReload Time: 2.5 Seconds\nPenetration: Impact-0 Explosion-8\nFire Mode: Semi-Auto\nOne of the strongest weapons here we have to offer. Just be mindful of when you fire, you will be reloading a lot.";
-shop[Weapon.Rocket, ShopKey.Price] = 3000;
+shop[Weapon.Rocket, ShopKey.Price] = 2600;
 
 shop[Weapon.Tesla, ShopKey.Name] = "Tesla Rifle";
 shop[Weapon.Tesla, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-2 Chain-Lightning-1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nMax Ammo: 300\nReload Time: 2.75 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nLacking croud control and want to microwave your enemies from the inside out? This weapons for you and it comes pre-packaged with chain lightning.";
-shop[Weapon.Tesla, ShopKey.Price] = 3000;
+shop[Weapon.Tesla, ShopKey.Price] = 2800;
 
 shop[Weapon.Acid, ShopKey.Name] = "Bio Launcher";
 shop[Weapon.Acid, ShopKey.Description] = "Tier Four Primary Weapon\nDamage: Impact-5 Explosion-5\nFirerate: 0.25\nAccuracy: 95%\nMag Size: 5\nMax Ammo: 35\nReload Time: 3 Seconds\nPenetration: Impact-0 Explosion-5\nFire Mode: Semi-Auto\n100% chance to apply ACID on explosion\nWe modified a grenade launcher to fire acidic rounds to melt your enemies. It's shown to be less effective against acidic opponents though.";
-shop[Weapon.Acid, ShopKey.Price] = 3500;
+shop[Weapon.Acid, ShopKey.Price] = 3000;
 
 shop[Weapon.Knife4, ShopKey.Name] = "Heated Blade";
 shop[Weapon.Knife4, ShopKey.Description] = "Tier Five Melee Weapon\nDamage: 12\nAttack Speed: 0.25\nPenetration: 2\n35% chance to apply IGNITE\nA powerful experimental blade so hot it can cut through flesh easily, and if it doesn't the heat will cause their flesh to burn.";
-shop[Weapon.Knife4, ShopKey.Price] = 3750;
+shop[Weapon.Knife4, ShopKey.Price] = 3500;
 
 shop[Weapon.Purple, ShopKey.Name] = "Purple Gun";
 shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 0.66\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 2.75 Seconds\nPenetration: 9\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";

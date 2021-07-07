@@ -25,7 +25,7 @@ specialRange = SetStat(128, 160, 160, 192);
 
 clawOffset = 10;
 clawPos = clawOffset;
-clawSpeed = SetStat(2.67, 3.2, 3.73, 4.8);
+clawSpeed = SetStat(3.556, 4.267, 4.978, 6.4);
 clawReturnSpeed = SetStat(0.89, 1.067, 1.24, 1.6);
 clawMaxDist = SetStat(160, 192, 224, 288);
 clawCanGrab = true;

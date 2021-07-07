@@ -101,7 +101,7 @@ weapon[# WeapStat.Sound, i] = Sound_Melee2;
 i++; //Advanced Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
 weapon[# WeapStat.Tier, i] = Tier.Two;
-weapon[# WeapStat.Damage, i] = 4;
+weapon[# WeapStat.Damage, i] = 3;
 weapon[# WeapStat.FireRate, i] = 0.15;
 weapon[# WeapStat.Mag, i] = 8;
 weapon[# WeapStat.Ammo, i] = 128;
@@ -121,9 +121,9 @@ i++; //Advanced Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Two;
 weapon[# WeapStat.Damage, i] = 2;
-weapon[# WeapStat.FireRate, i] = 0.11;
+weapon[# WeapStat.FireRate, i] = 0.12;
 weapon[# WeapStat.Mag, i] = 30;
-weapon[# WeapStat.Ammo, i] = 330;
+weapon[# WeapStat.Ammo, i] = 270;
 weapon[# WeapStat.Accuracy, i] = 0.9;
 weapon[# WeapStat.Range, i] = 1;
 weapon[# WeapStat.Reload, i] = 2.5;
@@ -177,7 +177,7 @@ weapon[# WeapStat.Sound, i] = Sound_Melee3;
 i++; //Super Pistol
 weapon[# WeapStat.Type, i] = WeapType.SideArm;
 weapon[# WeapStat.Tier, i] = Tier.Three;
-weapon[# WeapStat.Damage, i] = 8;
+weapon[# WeapStat.Damage, i] = 6;
 weapon[# WeapStat.FireRate, i] = 0.3;
 weapon[# WeapStat.Mag, i] = 6;
 weapon[# WeapStat.Ammo, i] = 96;
@@ -199,7 +199,7 @@ weapon[# WeapStat.Tier, i] = Tier.Three;
 weapon[# WeapStat.Damage, i] = 2.4;
 weapon[# WeapStat.FireRate, i] = 0.08;
 weapon[# WeapStat.Mag, i] = 25;
-weapon[# WeapStat.Ammo, i] = 375;
+weapon[# WeapStat.Ammo, i] = 350;
 weapon[# WeapStat.Accuracy, i] = 0.95;
 weapon[# WeapStat.Range, i] = 1.5;
 weapon[# WeapStat.Reload, i] = 2.5;
@@ -227,7 +227,7 @@ weapon[# WeapStat.xOffset, i] = 23;
 weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Shotgun;
 weapon[# WeapStat.Auto, i] = false;
-weapon[# WeapStat.Burst, i] = 8;
+weapon[# WeapStat.Burst, i] = 9;
 weapon[# WeapStat.Pierce, i] = 2;
 weapon[# WeapStat.Sound, i] = Sound_ShotGun3;
 
