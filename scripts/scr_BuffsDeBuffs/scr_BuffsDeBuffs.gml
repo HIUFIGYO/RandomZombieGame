@@ -58,10 +58,12 @@ function DebuffApply(_id, _debuff, _playerID)
 			case DeBuff.Ignite:
 				_id.deBuffStack[_debuff] += 1;
 				_id.deBuffTimer[_debuff] = DataBase.deBuffDuration[_debuff];
+				_id.deBuffStack[_debuff] = clamp(_id.deBuffStack[_debuff], 0, 5)
 				break;
 				
 			case DeBuff.Acid:
 				_id.deBuffTimer[_debuff] = DataBase.deBuffDuration[_debuff];
+				_id.deBuffStack[_debuff] = clamp(_id.deBuffStack[_debuff], 0, 1)
 				break;
 				
 			case DeBuff.Bleed:
@@ -69,13 +71,15 @@ function DebuffApply(_id, _debuff, _playerID)
 				_id.deBuffTimer[_debuff] += 2;
 				if(is_undefined(_playerID))
 					_id.bleedMaxTimer += 2;
+				_id.deBuffStack[_debuff] = clamp(_id.deBuffStack[_debuff], 0, 11)
 				break;
 				
 			case DeBuff.Radiation:
 				_id.deBuffTimer[_debuff] = DataBase.deBuffDuration[_debuff];
+				_id.deBuffStack[_debuff] = clamp(_id.deBuffStack[_debuff], 0, 1)
 				break;
 		}
-		_id.deBuffStack[_debuff] = clamp(_id.deBuffStack[_debuff], 0, 10);
+		//_id.deBuffStack[_debuff] = clamp(_id.deBuffStack[_debuff], 0, 10);
 	}
 	else
 	{

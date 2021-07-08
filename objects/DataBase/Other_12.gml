@@ -13,7 +13,7 @@ explosionSize[0] = spr_HBexplosionmedium;
 explosionPierce[0] = 5;
 
 //Incendiary Bomb
-incendiaryGroundFire = 1;
+incendiaryGroundFire = 0.5;
 incendiaryIgniteChance = 0.5;
 
 grenadeImpact[1] = 0;

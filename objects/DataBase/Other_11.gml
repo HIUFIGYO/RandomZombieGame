@@ -89,5 +89,5 @@ deBuffDuration[DeBuff.Radiation] = SetStat(irandom_range(5, 7), irandom_range(7,
 deBuffCurable[DeBuff.Radiation] = true;
 deBuffPlayerHealth = 0.75;
 deBuffZombieHealth = 1.25;
-deBuffPlayerDamageTaken = 1.20;
-deBuffZombieDamageTaken = 0.80;
+deBuffPlayerDamageTaken = 1.25;
+deBuffZombieDamageTaken = 0.75;

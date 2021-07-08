@@ -10,7 +10,7 @@ spriteGibs = spr_injectorgibs;
 
 damage = SetStat(4, 9, 15, 22);
 structureDamage = 9;
-hp = SetStat(10, 12, 14, 18);
+hp = SetStat(12, 15, 18, 24);
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 bounty = 60 * (SetStat(1.2, 1, 0.9, 0.8));

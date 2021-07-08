@@ -1,7 +1,7 @@
 event_inherited();
 
 moveSpeed = 20;
-damage = SetStat(1, 2, 4, 7);
+damage = SetStat(1, 3, 6, 10);
 structureDamage = 2;
 grav = 0;
 

@@ -9,6 +9,8 @@ lastZombieSpawned = noone;
 zombieSpawnTimer = maxSpawnRate - global.playerAmount;
 spawnRateIncreaseTimer = 600; //10 minutes
 
+maxZombiesIncreaseTimer = 3600; // 1 hour
+
 killsTotalText = UICreateText(0, 16, "", UIDrawTo.GUI);
 UISetAlign(killsTotalText, RectAlign.Center, RectAlign.Top);
 UITextSetAlign(killsTotalText, fa_center, fa_top);

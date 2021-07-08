@@ -46,3 +46,15 @@ if(spawnRateIncreaseTimer > 0)
 		}
 	}
 }
+
+//Increase max zombies
+
+if(maxZombiesIncreaseTimer > 0)
+{
+	maxZombiesIncreaseTimer -= DeltaTimeSecond();
+	if(maxZombiesIncreaseTimer <= 0)
+	{
+		MessageAddAll("The horde becomes larger...", MessageFilter.SpecialZombie)
+		GameManager.maxZombies += 250;
+	}
+}

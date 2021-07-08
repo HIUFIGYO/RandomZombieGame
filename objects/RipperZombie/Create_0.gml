@@ -26,6 +26,6 @@ attackSpeed = 0.4;
 specialUsed = false;
 specialCooldown = 0;
 cooldownTime = SetStat(6, 5, 4, 3);
-sawDamage = SetStat(1, 3, 6, 10);
+sawDamage = SetStat(2, 5, 9, 14);
 
 currentState = ZombieStateRipper;

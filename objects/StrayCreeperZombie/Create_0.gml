@@ -11,7 +11,7 @@ spriteGibs = spr_Screepergibs;
 
 damage = SetStat(15, 22, 30, 39);
 structureDamage = 22;
-hp = SetStat(14, 17, 20, 26) * (1 + ((global.playerAmount - 1) * 0.2));
+hp = SetStat(15, 18, 21, 27) * (1 + ((global.playerAmount - 1) * 0.2));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 bounty = (80 * (SetStat(1.2, 1, 0.9, 0.8))) * (1+ ((global.playerAmount -1) * 0.2));

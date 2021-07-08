@@ -196,7 +196,7 @@ weapon[# WeapStat.Sound, i] = Sound_Pistol3;
 i++; //Super Rifle
 weapon[# WeapStat.Type, i] = WeapType.Primary;
 weapon[# WeapStat.Tier, i] = Tier.Three;
-weapon[# WeapStat.Damage, i] = 2.4;
+weapon[# WeapStat.Damage, i] = 2;
 weapon[# WeapStat.FireRate, i] = 0.08;
 weapon[# WeapStat.Mag, i] = 25;
 weapon[# WeapStat.Ammo, i] = 350;
@@ -335,7 +335,7 @@ weapon[# WeapStat.Mag, i] = 1;
 weapon[# WeapStat.Ammo, i] = 39;
 weapon[# WeapStat.Accuracy, i] = 0.95;
 weapon[# WeapStat.Range, i] = 1;
-weapon[# WeapStat.Reload, i] = 2.75;
+weapon[# WeapStat.Reload, i] = 2.25;
 weapon[# WeapStat.BulletSpeed, i] = 80;
 weapon[# WeapStat.xOffset, i] = 15;
 weapon[# WeapStat.yOffset, i] = 34;
