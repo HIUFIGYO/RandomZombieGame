@@ -6,7 +6,7 @@ regenBuffEffect = 0.5;
 //health Buff
 healthBuffEffect = 1.5;
 
-//resistenceBuff
+//resistanceBuff
 resistBuffEffect = 0.2;
 resistBuffCooldown = 2.5;
 resistBuffEffectDuration = 2.5;
@@ -57,19 +57,19 @@ demoBuffCooldown = 150;//seconds
 
 //debuff ignite
 deBuffStack[DeBuff.Ignite] = true;
-deBuffDuration[DeBuff.Ignite] = SetStat(irandom_range(3, 5), irandom_range(5, 7), irandom_range(5, 7), irandom_range(5, 7));
+deBuffDuration[DeBuff.Ignite] = 6
 deBuffDamage[DeBuff.Ignite] = 1;
 deBuffCurable[DeBuff.Ignite] = false;
 
 //debuff acid
 deBuffStack[DeBuff.Acid] = true;
-deBuffDuration[DeBuff.Acid] = SetStat(irandom_range(8, 10), irandom_range(10, 12), irandom_range(10, 12), irandom_range(10, 12));
+deBuffDuration[DeBuff.Acid] = 10;
 deBuffDamage[DeBuff.Acid] = 1;
 deBuffCurable[DeBuff.Acid] = true;
 
 //debuff bleed
 deBuffStack[DeBuff.Bleed] = true;
-deBuffDuration[DeBuff.Bleed] = SetStat(irandom_range(2, 4), irandom_range(4, 6), irandom_range(4, 6), irandom_range(4, 6));
+deBuffDuration[DeBuff.Bleed] = 4;
 deBuffDamage[DeBuff.Bleed] = 2;
 deBuffCurable[DeBuff.Bleed] = true;
 
@@ -85,7 +85,7 @@ deBuffDamageVeryHard = 9999;
 
 //debuff radiation
 deBuffStack[DeBuff.Radiation] = true;
-deBuffDuration[DeBuff.Radiation] = SetStat(irandom_range(5, 7), irandom_range(7, 9), irandom_range(7, 9), irandom_range(7, 9));;
+deBuffDuration[DeBuff.Radiation] = 7;
 deBuffCurable[DeBuff.Radiation] = true;
 deBuffPlayerHealth = 0.75;
 deBuffZombieHealth = 1.25;

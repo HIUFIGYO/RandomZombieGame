@@ -103,6 +103,7 @@ function DebuffApply(_id, _debuff, _playerID)
 		{
 			case DeBuff.Ignite:
 				_id.color = c_orange;
+				_id.deBuffTimer[DeBuff.Ignite] /= 2;
 				break;
 			case DeBuff.Acid:
 				_id.color = c_lime;

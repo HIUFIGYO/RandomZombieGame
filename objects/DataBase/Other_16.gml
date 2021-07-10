@@ -43,7 +43,7 @@ shop[Weapon.Pistol3, ShopKey.Description] = "Tier Three Secondary Weapon\nDamage
 shop[Weapon.Pistol3, ShopKey.Price] = 1500;
 
 shop[Weapon.Rifle3, ShopKey.Name] = "Super Rifle";
-shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2.4\nFirerate: 0.08\nAccuracy: 95%\nMag Size: 25\nMax Ammo: 350\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nThe best assault rifle we got for you, with excellent cround control and single target damage.";
+shop[Weapon.Rifle3, ShopKey.Description] = "Tier Three Primary Weapon\nDamage: 2\nFirerate: 0.08\nAccuracy: 95%\nMag Size: 25\nMax Ammo: 350\nReload Time: 2.5 Seconds\nPenetration: 0\nFire Mode: Full-Auto\nThe best assault rifle we got for you, with excellent cround control and single target damage.";
 shop[Weapon.Rifle3, ShopKey.Price] = 1800;
 
 shop[Weapon.Shotgun3, ShopKey.Name] = "Super Shotgun";
@@ -71,7 +71,7 @@ shop[Weapon.Knife4, ShopKey.Description] = "Tier Five Melee Weapon\nDamage: 12\n
 shop[Weapon.Knife4, ShopKey.Price] = 3500;
 
 shop[Weapon.Purple, ShopKey.Name] = "Purple Gun";
-shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 0.66\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 2.75 Seconds\nPenetration: 9\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
+shop[Weapon.Purple, ShopKey.Description] = "Tier Five Secondary Weapon\nDamage: 10\nFirerate: 0.66\nAccuracy: 95%\nMag Size: 1\nMax Ammo: 39\nReload Time: 2.25 Seconds\nPenetration: 9\nFire Mode: Semi-Auto\nAn experimental sidearm that fires large sharp projectiles really quickly capable of piercing many foes.";
 shop[Weapon.Purple, ShopKey.Price] = 4000;
 
 shop[Weapon.Drainer, ShopKey.Name] = "Undead Drainer";
@@ -89,7 +89,7 @@ shop[GrenadeType.Grenade, ShopKey.Description] = "Damage: Impact-0.5 Explosion-1
 shop[GrenadeType.Grenade, ShopKey.Price] = 600;
 
 shop[GrenadeType.Incendiary, ShopKey.Name] = "Incendiary Bombs";
-shop[GrenadeType.Incendiary, ShopKey.Description] = "Damage: Explosion-5 Ground Fire-1\nFuse Time: 0 seconds\nPenetration: 3\n Explosion Size: Small";
+shop[GrenadeType.Incendiary, ShopKey.Description] = "Damage: Impact-2 Explosion-2 Ground Fire-0.5\nFuse Time: 0 seconds\nPenetration: 3\n Explosion Size: Small";
 shop[GrenadeType.Incendiary, ShopKey.Price] = 800;
 
 shop[GrenadeType.Mine, ShopKey.Name] = "Land Mines";
@@ -197,15 +197,15 @@ shop[SupportType.Barricade, ShopKey.Description] = "Blocks oncoming enemies\n\nH
 shop[SupportType.Barricade, ShopKey.Price] = 375;
 
 shop[SupportType.AdvBarricade, ShopKey.Name] = "Advanced Barricade";
-shop[SupportType.AdvBarricade, ShopKey.Description] = "Blocks and damages oncoming enemies\n\nHealth 600\nDamage: 3";
+shop[SupportType.AdvBarricade, ShopKey.Description] = "Blocks and damages oncoming enemies\n\nHealth 500\nDamage: 3";
 shop[SupportType.AdvBarricade, ShopKey.Price] = 750;
 
 shop[SupportType.Turret, ShopKey.Name] = "Turret";
-shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\n\nHealth: 450\nDamage: 1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nReload Time: 5 seconds";
+shop[SupportType.Turret, ShopKey.Description] = "Blocks and shoots oncoming enemies\n\nHealth: 400\nDamage: 1\nFirerate: 0.2\nAccuracy: 95%\nMag Size: 50\nReload Time: 5 seconds";
 shop[SupportType.Turret, ShopKey.Price] = 1500;
 
 shop[SupportType.HealGenerator, ShopKey.Name] = "Heal Generator";
-shop[SupportType.HealGenerator, ShopKey.Description] = "Heals everyone and damages zombies within a small radius\n\nHeals: 10 health per second\nCures: Acid, Bleed, Poison\nRemoves Radiation on both players and zombies\nDamage: 2 per second\nDuration: 20 seconds";
+shop[SupportType.HealGenerator, ShopKey.Description] = "Heals everyone and damages zombies within a small radius\n\nHeals: 10 health per second\nCures: Acid, and bleed \nRemoves Radiation on both players and zombies\nDamage: 2 per second\nDuration: 20 seconds";
 shop[SupportType.HealGenerator, ShopKey.Price] = 1125;
 
 shop[SupportType.AmmoCrate, ShopKey.Name] = "Ammunition Crate";
@@ -231,9 +231,9 @@ shop[SpecialType.Bank, ShopKey.Description] = "Adds banking functionality to the
 shop[SpecialType.Bank, ShopKey.Price] = 2000;
 
 shop[SpecialType.Revive, ShopKey.Name] = "Player Revive";
-shop[SpecialType.Revive, ShopKey.Description] = "Revive a downed player to full health and teleport them to the spawn.\n Price increases by $500 after every purchase";
+shop[SpecialType.Revive, ShopKey.Description] = "Revive a downed player to full health and teleport them to their spawn.\nPrice increases by $500 after every purchase";
 shop[SpecialType.Revive, ShopKey.Price] = 500;
 
 shop[SpecialType.CallExtract, ShopKey.Name] = "Call Extract";
-shop[SpecialType.CallExtract, ShopKey.Description] = "Call for extraction and begin the escape sequence\nAll players must accept before extraction can begin\n\n[WARNING] Shop closes when extraction is called so prepare ahead of time";
+shop[SpecialType.CallExtract, ShopKey.Description] = "Call for extraction and begin the escape sequence\nAll players must accept before extraction can begin\n\n[WARNING] Shop closes when extraction is called so prepare ahead of time \n\nEvac Pods won't stick around forever upon arrival so escape as soon as possible";
 shop[SpecialType.CallExtract, ShopKey.Price] = 0;
