@@ -12,6 +12,9 @@
 		PartDefineGroundFire();
 		PartDefineTeslaShot();
 		PartDefineShock();
+		PartDefineAlphaShield();
+		PartDefineBlood();
+		PartDefineBHShot();
 	}
 
 	///@function PartSystemInit()
@@ -236,7 +239,7 @@
 	///@function PartDefineFlameThrower()
 	
 
-function PartDefineFlameThrower()
+	function PartDefineFlameThrower()
 	{
 		var partType;
 		//Ball
@@ -468,6 +471,157 @@ function PartDefineFlameThrower()
 		part_type_gravity(partType, 0.50, 270);
 		
 		ds_map_add(particleTypes, PartType.ShockSpark2, partType);
+	}
+	
+	///@PartDefineAlphaShield()
+	
+	function PartDefineAlphaShield()
+	{
+		var partType;
+		
+		//Shield
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_ring);
+		part_type_size(partType, 2.50, 2.50, 0, 0);
+		part_type_scale(partType, 0.25, 0.5);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 255, 255, 255);
+		part_type_alpha3(partType, 0.5, 0.25, 0);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 1, 0);
+		part_type_speed(partType, 0, 0, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+
+		ds_map_add(particleTypes, PartType.AlphaShield, partType);
+		
+		//Center
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_line);
+		part_type_size(partType, 2.50, 2.50, 0, 0);
+		part_type_scale(partType, 0.33, 0.33);
+		part_type_orientation(partType, 0, 0, 0, 0, 1);
+		part_type_color3(partType, 255, 255, 255);
+		part_type_alpha3(partType, 0.5, 0.25, 0);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 5, 5);
+		part_type_speed(partType, 3, 3, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+	ds_map_add(particleTypes, PartType.AlphaCenter, partType);
+
+	}
+	
+	///@function PartDefineBlood()
+	
+	function PartDefineBlood()
+	{
+		var partType;
+		
+		//Blood
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_pixel);
+		part_type_size(partType, 1, 1, 0, 0);
+		part_type_scale(partType, 1, 1);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 255, 255, 255);
+		part_type_alpha3(partType, 1, 1, 1);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 10, 30);
+		part_type_speed(partType, 10, 30, 0, 0);
+		part_type_direction(partType, 10, 170, 0, 0);
+		part_type_gravity(partType, 0.50, 270);
+		
+		ds_map_add(particleTypes, PartType.BloodBlood, partType);
+
+		//Mist
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_explosion);
+		part_type_size(partType, 1, 1, 0, 0);
+		part_type_scale(partType, 1, 1);
+		part_type_orientation(partType, 0, 0, 0, 0, 1);
+		part_type_color3(partType, 255, 255, 255);
+		part_type_alpha3(partType, 1, 0.50, 0);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 10, 40);
+		part_type_speed(partType, 0, 3, 0, 1);
+		part_type_direction(partType, 80, 100, 0, 0);
+		part_type_gravity(partType, 0, 90);
+		
+		ds_map_add(particleTypes, PartType.BloodMist, partType);
+
+	}
+	
+	///@functionPartDefineBHShot()
+	
+	function PartDefineBHShot()
+	{
+		var partType;
+		
+		//Bullet
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_disk);
+		part_type_size(partType, 0.50, 0.50, 0, 0);
+		part_type_scale(partType, 1, 1);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 0, 4194368, 4194368);
+		part_type_alpha3(partType, 1, 0.50, 0);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 5, 5);
+		part_type_speed(partType, 0, 0, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.BHBullet, partType);
+
+		//Center
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_circle);
+		part_type_size(partType, 0.55, 0.55, 0, 0);
+		part_type_scale(partType, 1, 1);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 16777215, 16777215, 16777215);
+		part_type_alpha3(partType, 1, 0.50, 0);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 5, 5);
+		part_type_speed(partType, 0, 0, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.BHCenter, partType);
+
+		//Trail
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_ring);
+		part_type_size(partType, 1, 1, 0.02, 0);
+		part_type_scale(partType, 1, 0.50);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 0, 4194368, 4194368);
+		part_type_alpha3(partType, 1, 1, 0);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 20, 20);
+		part_type_speed(partType, 0, 0, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.BHTrail, partType);
+
+		//Particles
+		partType = part_type_create();
+		part_type_shape(partType, pt_shape_pixel);
+		part_type_size(partType, 1, 1, 0, 0);
+		part_type_scale(partType, 1, 1);
+		part_type_orientation(partType, 0, 0, 0, 0, 0);
+		part_type_color3(partType, 16777215, 16777215, 16777215);
+		part_type_alpha3(partType, 1, 1, 1);
+		part_type_blend(partType, 0);
+		part_type_life(partType, 10, 20);
+		part_type_speed(partType, 5, 5, 0, 0);
+		part_type_direction(partType, 0, 360, 0, 0);
+		part_type_gravity(partType, 0, 0);
+		
+		ds_map_add(particleTypes, PartType.BHParticles, partType);
 	}
 
 #endregion

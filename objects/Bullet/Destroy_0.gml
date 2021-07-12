@@ -11,3 +11,5 @@ else if(weapon == Weapon.Tesla)
 }
 else if(weapon == Weapon.Flame)
 	instance_destroy(effect);
+else if(weapon == Weapon.BHDarker)
+	instance_destroy(effect);

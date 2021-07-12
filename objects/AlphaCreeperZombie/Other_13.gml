@@ -24,4 +24,5 @@ for(i=0; i<creeperCount; i++)
 if(lostAllMinions)
 {
 	invincible = false;
+	instance_destroy(effect);
 }

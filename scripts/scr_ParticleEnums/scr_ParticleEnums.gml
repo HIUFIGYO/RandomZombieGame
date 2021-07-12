@@ -25,5 +25,16 @@ enum PartType
 	ShockSpark1,
 	ShockSpark2,
 
+	AlphaShield,
+	AlphaCenter,
+	
+	BloodBlood,
+	BloodMist,
+	
+	BHBullet,
+	BHCenter,
+	BHTrail,
+	BHParticles,
+
 	count
 }

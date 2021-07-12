@@ -1,0 +1,2 @@
+PartEmitterDestroy(shield);
+PartEmitterDestroy(center);

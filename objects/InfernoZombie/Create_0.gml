@@ -14,9 +14,9 @@ spriteGibs = spr_infernogibs;
 
 damage = SetStat(20, 30, 40, 50);
 structureDamage = 30;
-hp = SetStat(50, 60, 70 , 90) * (1 + ((global.playerAmount - 1) * 0.4));
+hp = SetStat(45, 54, 63 , 81) * (1 + ((global.playerAmount - 1) * 0.4));
 maxHp = hp;
-moveSpeed = SetZombieSpeed(3);
+moveSpeed = SetZombieSpeed(3.5);
 bounty = (500 * (SetStat(1.2, 1, 0.9, 0.8))) * (1+ ((global.playerAmount - 1) * 0.4));
 maxBounty = bounty;
 attackRange = 8;

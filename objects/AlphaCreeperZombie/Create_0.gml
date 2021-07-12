@@ -15,7 +15,7 @@ spriteGibs = spr_Acreepergibs;
 
 damage = SetStat(20, 30, 40, 50);
 structureDamage = 30;
-hp = 10 * (1 + ((global.playerAmount - 1) * 0.4));
+hp = SetStat(10, 12, 14, 18) * (1 + ((global.playerAmount - 1) * 0.4));
 maxHp = hp;
 moveSpeed = SetZombieSpeed(4);
 bounty = (SetStat(120, 83.33, 64.29, 44.44)) * (1 + ((global.playerAmount -1) * 0.4));
@@ -41,3 +41,6 @@ for(var i=0; i<creeperCount; i++)
 		}
 	}
 }
+
+effect = CreateEffect(x, y-32, EffectAlphaShield);
+effect.follow = id;

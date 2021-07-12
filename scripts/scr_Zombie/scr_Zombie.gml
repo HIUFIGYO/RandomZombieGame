@@ -82,6 +82,7 @@ function DamageZombie(_playerID, _zombie, _damage, ignoreBuffs)
 			CreateZombieGiblet(_zombie);
 		GameZombieDead(_zombie, _playerID);
 		GameSprayBlood(GameGetBloodAmount(), _zombie.x, _zombie.y - (_zombie.bbox_bottom - _zombie.bbox_top) / 2, _zombie.acid, 0);
+		CreateEffect(x, y, EffectBlood);
 	}
 	
 	with(_zombie)

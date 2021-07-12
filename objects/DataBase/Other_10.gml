@@ -152,7 +152,7 @@ weapon[# WeapStat.yOffset, i] = 36;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Shotgun;
 weapon[# WeapStat.Auto, i] = false;
 weapon[# WeapStat.Burst, i] = 7;
-weapon[# WeapStat.Pierce, i] = 2;
+weapon[# WeapStat.Pierce, i] = 3;
 weapon[# WeapStat.Sound, i] = Sound_ShotGun2;
 
 i++; //Super Melee
@@ -227,7 +227,7 @@ weapon[# WeapStat.xOffset, i] = 23;
 weapon[# WeapStat.yOffset, i] = 32;
 weapon[# WeapStat.BulletImage, i] = BulletImage.Shotgun;
 weapon[# WeapStat.Auto, i] = false;
-weapon[# WeapStat.Burst, i] = 9;
+weapon[# WeapStat.Burst, i] = 8;
 weapon[# WeapStat.Pierce, i] = 2;
 weapon[# WeapStat.Sound, i] = Sound_ShotGun3;
 

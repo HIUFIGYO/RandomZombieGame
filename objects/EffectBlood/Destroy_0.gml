@@ -1,0 +1,2 @@
+PartEmitterDestroy(blood);
+PartEmitterDestroy(mist);
